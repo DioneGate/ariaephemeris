@@ -1,10 +1,12 @@
 # Aria Ephemeris
 
-**Product and technical specification · Version 0.1 · 10 October 2026**
+**Product and technical specification · Version 0.2 · 10 October 2026**
 
-Aria Ephemeris is a planned proprietary calculation engine for an astrology suite. It will provide planetary positions, chart angles, houses, calculated points and astronomical event searches using independently developed Aria code and commercially usable astronomical data.
+Aria Ephemeris is a planned commercially usable open-source calculation engine for an astrology suite. It will provide planetary positions, chart angles, houses, calculated points and astronomical event searches using independently developed Aria code and commercially usable astronomical data.
 
-The objective is to support a closed-source commercial product without a Swiss Ephemeris professional licence or a dependency requiring publication of Aria source code. Permissively licensed components may be used where their terms allow this.
+The objective is to provide a reusable engine that can support a closed-source commercial astrology suite without a Swiss Ephemeris professional licence. Apache License 2.0 with author attribution in NOTICE is the proposed implementation licence. The existing MIT LICENSE remains effective until that proposal is adopted and implemented; this README does not itself change it.
+
+The [implementation prompt](docs/implementation-prompt.md) defines the proposed repository organisation, prospective licence migration and initial implementation stages. No engine implementation is included in this documentation update.
 
 **Status:** specification only. No engine, datasets, packages or API described below have been implemented or validated yet. Accuracy, performance and size figures are acceptance targets unless explicitly identified as published source-file characteristics.
 
@@ -12,7 +14,7 @@ The objective is to support a closed-source commercial product without a Swiss E
 
 | Area | Decision |
 | --- | --- |
-| Ownership | Aria implementation is intended to remain proprietary |
+| Licensing direction | Open-source library; proposed Apache-2.0 with NOTICE; closed-source consumers permitted |
 | Astronomical foundation | Official JPL Development Ephemeris trajectories, initially DE442 |
 | Baseline dataset | Official `de442s.bsp`; approximately 32 MB |
 | Initial supported interval | 1900-01-01 through 2100-12-31, with sufficient source padding for corrections |
@@ -25,7 +27,7 @@ The objective is to support a closed-source commercial product without a Swiss E
 
 "Own ephemeris" means an Aria engine and, optionally, an Aria representation of JPL trajectories. It does not mean claiming ownership of JPL data or initially developing a new gravitational integration and observational orbit-fitting programme.
 
-Repository visibility and software licensing are separate. A public repository exposes its contents even without an open-source licence. Keep proprietary implementation and build artefacts in a private repository if confidentiality is required. The current scaffold includes an MIT `LICENSE`. This README does not override that licence. Replace it with the chosen proprietary terms before adding proprietary implementation; rights already granted for earlier published material are not retroactively revoked.
+Repository visibility and software licensing are separate. Keep the reusable engine here and the commercial application's private business logic in a separate application repository. Current repository material is MIT-licensed. A prospective move to Apache-2.0 must preserve earlier grants and applicable notices; it cannot revoke MIT rights already granted.
 
 ## 2. Scope and phased capabilities
 
@@ -110,15 +112,15 @@ Every source and derived pack must record:
 
 Original kernels are immutable. Dataset acquisition occurs through an explicit build/update operation. Runtime requests must not download data or change model versions automatically.
 
-## 4. Licensing and proprietary boundaries
+## 4. Licensing, attribution and commercial consumers
 
-The implementation must use original Aria code or dependencies whose exact licences permit the intended closed-source deployment and distribution. This requirement applies to transitive dependencies, generators and redistributed data, not only the top-level package.
+The implementation must use original Aria code or dependencies whose exact licences permit the proposed Apache-2.0 library and intended use by closed-source commercial consumers. This requirement applies to transitive dependencies, generators and redistributed data, not only the top-level package.
 
 [NAIF's published rules](https://naif.jpl.nasa.gov/naif/rules.html) allow commercial use of SPICE components without fees and permit kernel redistribution. Modified kernels require changed filenames, suitable metadata and updated producer attribution. Retain JPL provenance separately; never present an Aria-derived pack as an official JPL release. Toolkit redistribution has additional rules that must be observed if included.
 
 | Component | Policy |
 | --- | --- |
-| Original Aria source | Proprietary; no open-source grant intended |
+| Original Aria source | Proposed Apache-2.0 for new implementation; retain applicable rights for earlier MIT material |
 | Official JPL/NAIF kernels | Preserve source identity and comply with the relevant usage terms |
 | Aria-derived packs | Record producer, provenance and applicable upstream terms |
 | NumPy and other numerical dependencies | Pin versions and retain applicable notices |
@@ -129,7 +131,9 @@ The implementation must use original Aria code or dependencies whose exact licen
 
 Using raw JPL files with Swiss Ephemeris does not remove Swiss Ephemeris licensing obligations. Do not copy or translate Swiss implementation code into Aria. Implement mathematics from independently documented sources and keep algorithm provenance.
 
-Required before distributing an implementation: a proprietary `LICENSE`, `THIRD_PARTY_NOTICES`, dependency inventory and data-source manifest. This README expresses product intent; it is not a complete software licence. A proprietary licence must not purport to override third-party rights.
+Proposed Apache-2.0 distribution requires the standard LICENSE, a NOTICE naming Marek as original project author, THIRD_PARTY_NOTICES, a dependency inventory and data-source manifests. Preserve the existing DioneGate copyright-holder identity. This README expresses the recommended policy and does not override the current MIT licence or third-party rights.
+
+Apache-2.0 allows commercial use and closed-source consumers. Redistributors must preserve the licence and relevant notices, mark modifications and carry relevant NOTICE attribution. It provides an express patent grant. It does not mandate a visible badge on every application screen or hosted website. Do not add branding requirements to the standard licence. MIT also permits commercial use and requires retained copyright/licence notices; Apache's explicit NOTICE mechanism is the reason for the recommendation. See the [Apache-2.0 terms](https://www.apache.org/licenses/LICENSE-2.0) and [MIT terms](https://opensource.org/license/mit).
 
 Relevant candidate terms: [Skyfield MIT licence](https://github.com/skyfielders/python-skyfield/blob/master/LICENSE), [jplephem MIT licence](https://github.com/brandon-rhodes/python-jplephem/blob/master/LICENSE.txt), and [ERFA licence](https://github.com/liberfa/erfa/blob/master/LICENSE).
 
@@ -330,47 +334,42 @@ Validation must separate source-model differences, coordinate-convention differe
 
 Each release must include measured qualification reports, checksums, notices, dependency inventory and a reproducibility manifest. No compact pack may be labelled qualified solely because its generator completed successfully.
 
-## 13. Suggested repository layout
+## 13. Proposed repository organisation
 
-This is a planned structure; the current repository contains a README and an MIT licence, with no engine implementation.
+Use one installable Python library with a src layout. Keep reusable astrology modules alongside the numerical engine initially; extract additional packages only when independent releases justify them.
 
-```text
-src/ariaephemeris/
-  time/
-  sources/
-  numerics/
-  frames/
-  positions/
-  astrology/
-  events/
-  datasets/
-  adapters/
-builders/
-tests/
-  reference/
-  regression/
-  properties/
-docs/
-  algorithms/
-  conventions/
-  data-sources/
-  validation/
-data/
-  manifests/
-benchmarks/
-LICENSE
-THIRD_PARTY_NOTICES
-pyproject.toml
-README.md
-```
+| Repository/storage | Purpose |
+| --- | --- |
+| DioneGate/ariaephemeris | Public engine, reusable astrology calculations, tools, examples and validation |
+| Separate application repository | Commercial UI, interpretation and private business logic |
+| Versioned artefact storage | Large original kernels, generated packs and full qualification outputs |
 
-Large source kernels and generated packs belong in a versioned artefact store or controlled release distribution rather than ordinary Git history. Manifests and retrieval/build definitions belong in the repository.
+| Path | Purpose |
+| --- | --- |
+| src/ariaephemeris/models.py and errors.py | Shared typed contracts and stable errors |
+| src/ariaephemeris/time/, sources/, numerics/, frames/ | Time, source evaluation and numerical foundations |
+| src/ariaephemeris/positions/, astrology/, events/ | Astronomical outputs, chart calculations and searches |
+| src/ariaephemeris/datasets/, cli/ | Data lifecycle and thin command-line adapter |
+| tools/datasets/ | Explicit acquisition, qualification and later compact-pack generation |
+| tests/unit/, integration/, reference/, regression/ | Layered numerical, independent-reference and behavioural verification |
+| tests/data/ | Tiny redistributable fixtures |
+| docs/ | Specification, algorithms, conventions, licensing and validation guidance |
+| data/manifests/ and schemas/ | Dataset provenance and versioned contracts |
+| examples/ and benchmarks/ | Working usage and reproducible measurements |
+| .github/workflows/ | Fast CI, real-kernel qualification and packaging checks |
+| pyproject.toml | Package metadata, dependencies, extras and tools |
+| LICENSE, NOTICE, THIRD_PARTY_NOTICES, AUTHORS.md | Legal terms and project/contributor attribution |
+| CONTRIBUTING.md and CHANGELOG.md | Contribution and release conventions |
+
+This is a proposed structure. The current repository contains documentation and an MIT licence; the engine has not been implemented. Create modules when they have real functionality rather than filling planned features with stubs.
+
+Large kernels and packs belong outside ordinary Git history. Commit manifests and reproducible build definitions. The [implementation prompt](docs/implementation-prompt.md) gives the detailed organisation and moves the full specification into docs/specification.md when implementation begins.
 
 ## 14. Delivery milestones and exit gates
 
 | Milestone | Deliverable | Exit gate |
 | --- | --- | --- |
-| M0: Foundations | Licence inventory, frozen conventions, source/time manifests | Dependencies and sources meet proprietary deployment requirements |
+| M0: Foundations | Licence inventory, frozen conventions, source/time manifests | Dependencies and sources meet Apache-2.0 and commercial-consumer requirements |
 | M1: Reference positions | JPL evaluator, time conversions, coordinate modes and batch API | Raw-state and apparent-position accuracy gates pass |
 | M2: Initial charts | Angles, equal/whole-sign houses, aspects and topocentric mode | Independent chart validation and explicit edge-case handling pass |
 | M3: Events | Ingress, aspects and stations | Completeness, timing and conditioning qualification pass |
