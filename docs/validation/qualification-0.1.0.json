@@ -1,0 +1,748 @@
+{
+  "status": "passed",
+  "sampling_seed": 20261010,
+  "scope": "empirical reference qualification",
+  "release_qualification": true,
+  "runtime": "3.12.14",
+  "versions": {
+    "numpy": "2.5.3",
+    "jplephem": "2.24",
+    "pyerfa": "2.0.1.5",
+    "skyfield": "1.55",
+    "spiceypy": "8.2.0",
+    "scipy": "1.18.1"
+  },
+  "per_body": {
+    "sun": {
+      "raw_position_m": 7.672820730732791e-06,
+      "raw_velocity_mm_s": 1.4119626124634462e-10,
+      "direction_arcsec": 7.514212877578837e-07,
+      "longitude_rate_deg_day": 1.9184653865522705e-10
+    },
+    "moon": {
+      "raw_position_m": 0.014965733304489548,
+      "raw_velocity_mm_s": 4.406651558135166e-06,
+      "direction_arcsec": 4.793995923378374e-06,
+      "longitude_rate_deg_day": 8.415195651423346e-09
+    },
+    "mercury": {
+      "raw_position_m": 0.028132828256632398,
+      "raw_velocity_mm_s": 2.990538269822161e-05,
+      "direction_arcsec": 1.034768886090678e-06,
+      "longitude_rate_deg_day": 1.9066215273255693e-10
+    },
+    "venus": {
+      "raw_position_m": 0.016829355883553127,
+      "raw_velocity_mm_s": 5.484750497881749e-06,
+      "direction_arcsec": 8.294340523740818e-07,
+      "longitude_rate_deg_day": 1.9303070253329224e-10
+    },
+    "mars": {
+      "raw_position_m": 0.01264971018572147,
+      "raw_velocity_mm_s": 1.4848313827266004e-06,
+      "direction_arcsec": 6.336488353210657e-07,
+      "longitude_rate_deg_day": 2.1789969828489575e-10
+    },
+    "jupiter": {
+      "raw_position_m": 0.006590357570098592,
+      "raw_velocity_mm_s": 1.162564144000304e-07,
+      "direction_arcsec": 4.7252458099439936e-07,
+      "longitude_rate_deg_day": 1.9184653865522705e-10
+    },
+    "saturn": {
+      "raw_position_m": 0.0050067901611328125,
+      "raw_velocity_mm_s": 3.5696044278858676e-08,
+      "direction_arcsec": 4.465089553890005e-07,
+      "longitude_rate_deg_day": 1.9421501906702332e-10
+    },
+    "uranus": {
+      "raw_position_m": 0.0037031709115526836,
+      "raw_velocity_mm_s": 9.339080995124633e-09,
+      "direction_arcsec": 4.334324609998151e-07,
+      "longitude_rate_deg_day": 2.0250467969162855e-10
+    },
+    "neptune": {
+      "raw_position_m": 0.0029394216551632767,
+      "raw_velocity_mm_s": 4.242156220644677e-09,
+      "direction_arcsec": 4.2462354583197344e-07,
+      "longitude_rate_deg_day": 2.2618943870678088e-10
+    },
+    "pluto": {
+      "raw_position_m": 0.0029897537717782146,
+      "raw_velocity_mm_s": 4.189529226675416e-09,
+      "direction_arcsec": 4.258512232294235e-07,
+      "longitude_rate_deg_day": 1.8710958823997537e-10
+    }
+  },
+  "gates": {
+    "raw_position": true,
+    "raw_velocity": true,
+    "apparent_direction": true,
+    "longitude_rate": true,
+    "angles_houses": true,
+    "event_timing": true,
+    "event_completeness": true
+  },
+  "reference_convention": "Skyfield independent pipeline with separately implemented finite-source deflection and Aria-matched limiter",
+  "deflection_limits": {
+    "Sun": 1e-06,
+    "Jupiter": 3e-09,
+    "Saturn": 3e-10
+  },
+  "dataset_sha256": "54d97562a5b094d298b1b8eafa5a2e17e3e010ce85e1a366d07f003ad159323c",
+  "operating_interval_tt": [
+    2415020.5,
+    2488434.5
+  ],
+  "epoch_count": 4712,
+  "unmatched_skyfield_direction_max_arcsec": {
+    "sun": 7.514212877578837e-07,
+    "moon": 4.793995923378374e-06,
+    "mercury": 1.034768886090678e-06,
+    "venus": 8.294340523740818e-07,
+    "mars": 6.336488353210657e-07,
+    "jupiter": 9.228512296001151e-07,
+    "saturn": 4.465089553890005e-07,
+    "uranus": 5.3774045798612224,
+    "neptune": 19.66339035558088,
+    "pluto": 4.258512232294235e-07
+  },
+  "distributions": {
+    "sun": {
+      "raw_position_m": {
+        "rms": 2.4058931141944965e-06,
+        "p95": 6.43540772210907e-06
+      },
+      "raw_velocity_mm_s": {
+        "rms": 4.044420111144913e-11,
+        "p95": 1.0389261270006687e-10
+      },
+      "direction_arcsec": {
+        "rms": 4.7567049998422013e-07,
+        "p95": 6.244548192771013e-07
+      },
+      "longitude_rate_deg_day": {
+        "rms": 4.2279485192894475e-11,
+        "p95": 8.763356706964487e-11
+      }
+    },
+    "moon": {
+      "raw_position_m": {
+        "rms": 0.0055682277606338435,
+        "p95": 0.014245269178541575
+      },
+      "raw_velocity_mm_s": {
+        "rms": 1.2169589255312795e-06,
+        "p95": 3.341040575223072e-06
+      },
+      "direction_arcsec": {
+        "rms": 1.5154184167106037e-06,
+        "p95": 2.9690303414619473e-06
+      },
+      "longitude_rate_deg_day": {
+        "rms": 1.6638781209857083e-09,
+        "p95": 3.312846175163031e-09
+      }
+    },
+    "mercury": {
+      "raw_position_m": {
+        "rms": 0.008955617078040575,
+        "p95": 0.022643116470719853
+      },
+      "raw_velocity_mm_s": {
+        "rms": 7.909674361630573e-06,
+        "p95": 1.986773599029117e-05
+      },
+      "direction_arcsec": {
+        "rms": 4.747185901256599e-07,
+        "p95": 7.214133487672657e-07
+      },
+      "longitude_rate_deg_day": {
+        "rms": 4.30848493654453e-11,
+        "p95": 8.763377801201955e-11
+      }
+    },
+    "venus": {
+      "raw_position_m": {
+        "rms": 0.006547038055561423,
+        "p95": 0.016711029135787286
+      },
+      "raw_velocity_mm_s": {
+        "rms": 2.1191008878831556e-06,
+        "p95": 5.4142521826718525e-06
+      },
+      "direction_arcsec": {
+        "rms": 4.2362196773068087e-07,
+        "p95": 6.189024118331672e-07
+      },
+      "longitude_rate_deg_day": {
+        "rms": 4.275991201135224e-11,
+        "p95": 8.881784197001252e-11
+      }
+    },
+    "mars": {
+      "raw_position_m": {
+        "rms": 0.004510921018002907,
+        "p95": 0.01140717088475116
+      },
+      "raw_velocity_mm_s": {
+        "rms": 4.840952841699004e-07,
+        "p95": 1.2273408467400798e-06
+      },
+      "direction_arcsec": {
+        "rms": 3.2316370145912714e-07,
+        "p95": 4.968445043499716e-07
+      },
+      "longitude_rate_deg_day": {
+        "rms": 4.3252515858655026e-11,
+        "p95": 9.000211687038018e-11
+      }
+    },
+    "jupiter": {
+      "raw_position_m": {
+        "rms": 0.002437165351119365,
+        "p95": 0.0062187608904164995
+      },
+      "raw_velocity_mm_s": {
+        "rms": 4.1021682587284874e-08,
+        "p95": 1.0411745803419313e-07
+      },
+      "direction_arcsec": {
+        "rms": 2.947407137620107e-07,
+        "p95": 4.2302926656904593e-07
+      },
+      "longitude_rate_deg_day": {
+        "rms": 4.236857244820056e-11,
+        "p95": 8.763359482522048e-11
+      }
+    },
+    "saturn": {
+      "raw_position_m": {
+        "rms": 0.0018047644700030095,
+        "p95": 0.004605010015068105
+      },
+      "raw_velocity_mm_s": {
+        "rms": 1.2259861202572604e-08,
+        "p95": 3.1205404447029443e-08
+      },
+      "direction_arcsec": {
+        "rms": 2.933981591562611e-07,
+        "p95": 4.1500726852519404e-07
+      },
+      "longitude_rate_deg_day": {
+        "rms": 4.256762772720877e-11,
+        "p95": 8.763360488661664e-11
+      }
+    },
+    "uranus": {
+      "raw_position_m": {
+        "rms": 0.001269720625015486,
+        "p95": 0.003236263265728528
+      },
+      "raw_velocity_mm_s": {
+        "rms": 3.0330153872574826e-09,
+        "p95": 7.687471328191526e-09
+      },
+      "direction_arcsec": {
+        "rms": 2.872028226710497e-07,
+        "p95": 4.1007025469176947e-07
+      },
+      "longitude_rate_deg_day": {
+        "rms": 4.3152517010497846e-11,
+        "p95": 9.000207523701675e-11
+      }
+    },
+    "neptune": {
+      "raw_position_m": {
+        "rms": 0.0010263673263994453,
+        "p95": 0.002606638622959838
+      },
+      "raw_velocity_mm_s": {
+        "rms": 1.2804825099709586e-09,
+        "p95": 3.244542244378659e-09
+      },
+      "direction_arcsec": {
+        "rms": 2.864245114230533e-07,
+        "p95": 4.0858315825405053e-07
+      },
+      "longitude_rate_deg_day": {
+        "rms": 4.289021972702394e-11,
+        "p95": 8.698227346726185e-11
+      }
+    },
+    "pluto": {
+      "raw_position_m": {
+        "rms": 0.0009312736542387444,
+        "p95": 0.002249236376775885
+      },
+      "raw_velocity_mm_s": {
+        "rms": 8.756459624489383e-10,
+        "p95": 2.220446049250313e-09
+      },
+      "direction_arcsec": {
+        "rms": 2.918319861538734e-07,
+        "p95": 4.0806269997489274e-07
+      },
+      "longitude_rate_deg_day": {
+        "rms": 4.280261903041195e-11,
+        "p95": 8.698227346726185e-11
+      }
+    }
+  },
+  "angles_max_arcsec": 0.00013343085356609663,
+  "events": [
+    {
+      "year": 1900,
+      "kind": "ingress",
+      "body": "moon",
+      "other": null,
+      "angle": 0,
+      "count": 160,
+      "max_timing_error_seconds": 0.04003196954727173,
+      "reference_scan_days": 0.0078125,
+      "station_seed_policy": null
+    },
+    {
+      "year": 1900,
+      "kind": "ingress",
+      "body": "sun",
+      "other": null,
+      "angle": 0,
+      "count": 12,
+      "max_timing_error_seconds": 0.04148036241531372,
+      "reference_scan_days": 0.0078125,
+      "station_seed_policy": null
+    },
+    {
+      "year": 1900,
+      "kind": "conjunction",
+      "body": "moon",
+      "other": "sun",
+      "angle": 0,
+      "count": 13,
+      "max_timing_error_seconds": 0.039187073707580566,
+      "reference_scan_days": 0.0078125,
+      "station_seed_policy": null
+    },
+    {
+      "year": 1900,
+      "kind": "aspect",
+      "body": "mercury",
+      "other": "sun",
+      "angle": 15,
+      "count": 13,
+      "max_timing_error_seconds": 0.039830803871154785,
+      "reference_scan_days": 0.0078125,
+      "station_seed_policy": null
+    },
+    {
+      "year": 1900,
+      "kind": "station",
+      "body": "mercury",
+      "other": null,
+      "angle": 0,
+      "count": 6,
+      "max_timing_error_seconds": 0.03749728202819824,
+      "reference_scan_days": 0.0078125,
+      "station_seed_policy": "full matched apparent rate"
+    },
+    {
+      "year": 1900,
+      "kind": "station",
+      "body": "venus",
+      "other": null,
+      "angle": 0,
+      "count": 2,
+      "max_timing_error_seconds": 0.02333521842956543,
+      "reference_scan_days": 0.0078125,
+      "station_seed_policy": "full matched apparent rate"
+    },
+    {
+      "year": 1900,
+      "kind": "station",
+      "body": "mars",
+      "other": null,
+      "angle": 0,
+      "count": 0,
+      "max_timing_error_seconds": 0,
+      "reference_scan_days": 0.0078125,
+      "station_seed_policy": "full matched apparent rate"
+    },
+    {
+      "year": 1900,
+      "kind": "station",
+      "body": "jupiter",
+      "other": null,
+      "angle": 0,
+      "count": 2,
+      "max_timing_error_seconds": 0.029933452606201172,
+      "reference_scan_days": 0.0078125,
+      "station_seed_policy": "full matched apparent rate"
+    },
+    {
+      "year": 1900,
+      "kind": "station",
+      "body": "saturn",
+      "other": null,
+      "angle": 0,
+      "count": 2,
+      "max_timing_error_seconds": 0.0390663743019104,
+      "reference_scan_days": 0.0078125,
+      "station_seed_policy": "full matched apparent rate"
+    },
+    {
+      "year": 1900,
+      "kind": "station",
+      "body": "uranus",
+      "other": null,
+      "angle": 0,
+      "count": 2,
+      "max_timing_error_seconds": 0.012955069541931152,
+      "reference_scan_days": 0.0078125,
+      "station_seed_policy": "full matched apparent rate"
+    },
+    {
+      "year": 1900,
+      "kind": "station",
+      "body": "neptune",
+      "other": null,
+      "angle": 0,
+      "count": 2,
+      "max_timing_error_seconds": 0.0351637601852417,
+      "reference_scan_days": 0.0078125,
+      "station_seed_policy": "full matched apparent rate"
+    },
+    {
+      "year": 1900,
+      "kind": "station",
+      "body": "pluto",
+      "other": null,
+      "angle": 0,
+      "count": 2,
+      "max_timing_error_seconds": 0.04063546657562256,
+      "reference_scan_days": 0.0078125,
+      "station_seed_policy": "full matched apparent rate"
+    },
+    {
+      "year": 2000,
+      "kind": "ingress",
+      "body": "moon",
+      "other": null,
+      "angle": 0,
+      "count": 160,
+      "max_timing_error_seconds": 0.04079639911651611,
+      "reference_scan_days": 0.0078125,
+      "station_seed_policy": null
+    },
+    {
+      "year": 2000,
+      "kind": "ingress",
+      "body": "sun",
+      "other": null,
+      "angle": 0,
+      "count": 12,
+      "max_timing_error_seconds": 0.04003196954727173,
+      "reference_scan_days": 0.0078125,
+      "station_seed_policy": null
+    },
+    {
+      "year": 2000,
+      "kind": "conjunction",
+      "body": "moon",
+      "other": "sun",
+      "angle": 0,
+      "count": 13,
+      "max_timing_error_seconds": 0.04051476716995239,
+      "reference_scan_days": 0.0078125,
+      "station_seed_policy": null
+    },
+    {
+      "year": 2000,
+      "kind": "aspect",
+      "body": "mercury",
+      "other": "sun",
+      "angle": 15,
+      "count": 12,
+      "max_timing_error_seconds": 0.0408366322517395,
+      "reference_scan_days": 0.0078125,
+      "station_seed_policy": null
+    },
+    {
+      "year": 2000,
+      "kind": "station",
+      "body": "mercury",
+      "other": null,
+      "angle": 0,
+      "count": 6,
+      "max_timing_error_seconds": 0.03789961338043213,
+      "reference_scan_days": 0.0078125,
+      "station_seed_policy": "full matched apparent rate"
+    },
+    {
+      "year": 2000,
+      "kind": "station",
+      "body": "venus",
+      "other": null,
+      "angle": 0,
+      "count": 0,
+      "max_timing_error_seconds": 0,
+      "reference_scan_days": 0.0078125,
+      "station_seed_policy": "full matched apparent rate"
+    },
+    {
+      "year": 2000,
+      "kind": "station",
+      "body": "mars",
+      "other": null,
+      "angle": 0,
+      "count": 0,
+      "max_timing_error_seconds": 0,
+      "reference_scan_days": 0.0078125,
+      "station_seed_policy": "full matched apparent rate"
+    },
+    {
+      "year": 2000,
+      "kind": "station",
+      "body": "jupiter",
+      "other": null,
+      "angle": 0,
+      "count": 1,
+      "max_timing_error_seconds": 0.008408725261688232,
+      "reference_scan_days": 0.0078125,
+      "station_seed_policy": "full matched apparent rate"
+    },
+    {
+      "year": 2000,
+      "kind": "station",
+      "body": "saturn",
+      "other": null,
+      "angle": 0,
+      "count": 2,
+      "max_timing_error_seconds": 0.023818016052246094,
+      "reference_scan_days": 0.0078125,
+      "station_seed_policy": "full matched apparent rate"
+    },
+    {
+      "year": 2000,
+      "kind": "station",
+      "body": "uranus",
+      "other": null,
+      "angle": 0,
+      "count": 2,
+      "max_timing_error_seconds": 0.023174285888671875,
+      "reference_scan_days": 0.0078125,
+      "station_seed_policy": "full matched apparent rate"
+    },
+    {
+      "year": 2000,
+      "kind": "station",
+      "body": "neptune",
+      "other": null,
+      "angle": 0,
+      "count": 2,
+      "max_timing_error_seconds": 0.016415119171142578,
+      "reference_scan_days": 0.0078125,
+      "station_seed_policy": "full matched apparent rate"
+    },
+    {
+      "year": 2000,
+      "kind": "station",
+      "body": "pluto",
+      "other": null,
+      "angle": 0,
+      "count": 2,
+      "max_timing_error_seconds": 0.027036666870117188,
+      "reference_scan_days": 0.0078125,
+      "station_seed_policy": "full matched apparent rate"
+    },
+    {
+      "year": 2099,
+      "kind": "ingress",
+      "body": "moon",
+      "other": null,
+      "angle": 0,
+      "count": 161,
+      "max_timing_error_seconds": 0.04095733165740967,
+      "reference_scan_days": 0.0078125,
+      "station_seed_policy": null
+    },
+    {
+      "year": 2099,
+      "kind": "ingress",
+      "body": "sun",
+      "other": null,
+      "angle": 0,
+      "count": 12,
+      "max_timing_error_seconds": 0.038664042949676514,
+      "reference_scan_days": 0.0078125,
+      "station_seed_policy": null
+    },
+    {
+      "year": 2099,
+      "kind": "conjunction",
+      "body": "moon",
+      "other": "sun",
+      "angle": 0,
+      "count": 12,
+      "max_timing_error_seconds": 0.03608912229537964,
+      "reference_scan_days": 0.0078125,
+      "station_seed_policy": null
+    },
+    {
+      "year": 2099,
+      "kind": "aspect",
+      "body": "mercury",
+      "other": "sun",
+      "angle": 15,
+      "count": 12,
+      "max_timing_error_seconds": 0.037094950675964355,
+      "reference_scan_days": 0.0078125,
+      "station_seed_policy": null
+    },
+    {
+      "year": 2099,
+      "kind": "station",
+      "body": "mercury",
+      "other": null,
+      "angle": 0,
+      "count": 6,
+      "max_timing_error_seconds": 0.03415793180465698,
+      "reference_scan_days": 0.0078125,
+      "station_seed_policy": "full matched apparent rate"
+    },
+    {
+      "year": 2099,
+      "kind": "station",
+      "body": "venus",
+      "other": null,
+      "angle": 0,
+      "count": 0,
+      "max_timing_error_seconds": 0,
+      "reference_scan_days": 0.0078125,
+      "station_seed_policy": "full matched apparent rate"
+    },
+    {
+      "year": 2099,
+      "kind": "station",
+      "body": "mars",
+      "other": null,
+      "angle": 0,
+      "count": 2,
+      "max_timing_error_seconds": 0.013880431652069092,
+      "reference_scan_days": 0.0078125,
+      "station_seed_policy": "full matched apparent rate"
+    },
+    {
+      "year": 2099,
+      "kind": "station",
+      "body": "jupiter",
+      "other": null,
+      "angle": 0,
+      "count": 2,
+      "max_timing_error_seconds": 0.03299117088317871,
+      "reference_scan_days": 0.0078125,
+      "station_seed_policy": "full matched apparent rate"
+    },
+    {
+      "year": 2099,
+      "kind": "station",
+      "body": "saturn",
+      "other": null,
+      "angle": 0,
+      "count": 2,
+      "max_timing_error_seconds": 0.025588274002075195,
+      "reference_scan_days": 0.0078125,
+      "station_seed_policy": "full matched apparent rate"
+    },
+    {
+      "year": 2099,
+      "kind": "station",
+      "body": "uranus",
+      "other": null,
+      "angle": 0,
+      "count": 2,
+      "max_timing_error_seconds": 0.013236701488494873,
+      "reference_scan_days": 0.0078125,
+      "station_seed_policy": "full matched apparent rate"
+    },
+    {
+      "year": 2099,
+      "kind": "station",
+      "body": "neptune",
+      "other": null,
+      "angle": 0,
+      "count": 2,
+      "max_timing_error_seconds": 0.028927624225616455,
+      "reference_scan_days": 0.0078125,
+      "station_seed_policy": "full matched apparent rate"
+    },
+    {
+      "year": 2099,
+      "kind": "station",
+      "body": "pluto",
+      "other": null,
+      "angle": 0,
+      "count": 2,
+      "max_timing_error_seconds": 0.025869905948638916,
+      "reference_scan_days": 0.0078125,
+      "station_seed_policy": "full matched apparent rate"
+    },
+    {
+      "year": 1900,
+      "kind": "opposition",
+      "body": "moon",
+      "other": "sun",
+      "angle": 180,
+      "count": 12,
+      "max_timing_error_seconds": 0.04039406776428223,
+      "reference_scan_days": 0.0078125,
+      "station_seed_policy": null
+    },
+    {
+      "year": 2000,
+      "kind": "opposition",
+      "body": "moon",
+      "other": "sun",
+      "angle": 180,
+      "count": 12,
+      "max_timing_error_seconds": 0.04039406776428223,
+      "reference_scan_days": 0.0078125,
+      "station_seed_policy": null
+    },
+    {
+      "year": 2099,
+      "kind": "opposition",
+      "body": "moon",
+      "other": "sun",
+      "angle": 180,
+      "count": 13,
+      "max_timing_error_seconds": 0.04111826419830322,
+      "reference_scan_days": 0.0078125,
+      "station_seed_policy": null
+    }
+  ],
+  "elapsed_seconds": 517.3774301079998,
+  "limitations": [
+    "Empirical samples do not establish a continuous mathematical bound.",
+    "Absolute Earth rotation depends on supplied time inputs.",
+    "Planetary barycentres are explicitly exposed; minor bodies/compact packs are not implemented.",
+    "Event completeness qualified on reported year/type windows, not every possible interval.",
+    "Unmodified Skyfield has a different near-alignment deflection convention; those differences are recorded separately, not accepted as convention-matched error."
+  ],
+  "evidence_commands": [
+    "ruff check .",
+    "ruff format --check .",
+    "mypy",
+    "python tools/audit.py",
+    "ARIA_KERNEL=.artifacts/de442s.bsp pytest -q",
+    "python tools/datasets/qualify.py --kernel .artifacts/de442s.bsp --output .artifacts/release-qualification.json",
+    "python tools/datasets/qualify_oppositions.py --kernel .artifacts/de442s.bsp --output .artifacts/oppositions.json",
+    "python -m build",
+    "ARIA_KERNEL=.artifacts/de442s.bsp python tools/package_smoke.py",
+    "python benchmarks/run.py --kernel .artifacts/de442s.bsp --output .artifacts/benchmark.json"
+  ],
+  "combined_stages": [
+    "primary grid/off-grid/source-boundaries/charts/events",
+    "supplementary whole-year oppositions"
+  ]
+}

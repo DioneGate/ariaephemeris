@@ -1,0 +1,36 @@
+name: Real kernel qualification
+on:
+  workflow_dispatch:
+  pull_request:
+    paths: ['src/**', 'data/**', 'tools/datasets/**', 'requirements/**', 'pyproject.toml']
+permissions:
+  contents: read
+jobs:
+  qualify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install -r requirements/development.lock
+      - run: python -m pip install --no-deps -e .
+      - uses: actions/cache@v4
+        with:
+          path: .artifacts/de442s.bsp
+          key: de442s-54d97562a5b094d298b1b8eafa5a2e17e3e010ce85e1a366d07f003ad159323c
+      - run: ariaephemeris install-data .artifacts
+      - run: pytest
+        env:
+          ARIA_KERNEL: .artifacts/de442s.bsp
+      - run: python tools/datasets/qualify.py --kernel .artifacts/de442s.bsp --output .artifacts/qualification.json
+      - run: python tools/datasets/qualify_oppositions.py --kernel .artifacts/de442s.bsp --output .artifacts/oppositions.json
+      - if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: qualification-result
+          path: |
+            .artifacts/qualification.json
+            .artifacts/oppositions.json
+          if-no-files-found: error

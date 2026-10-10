@@ -1,0 +1,47 @@
+[build-system]
+requires = ["setuptools==84.0.0", "wheel==0.48.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ariaephemeris"
+version = "0.1.0"
+description = "Offline JPL-based planetary and astrology calculations"
+readme = "README.md"
+requires-python = ">=3.12"
+license = "Apache-2.0"
+license-files = ["LICENSE", "NOTICE", "THIRD_PARTY_NOTICES", "docs/licenses/*.txt", "docs/licenses/*.html", "docs/licenses/dependencies/*/*"]
+authors = [{name = "Marek"}]
+dependencies = ["numpy==2.5.3", "pyerfa==2.0.1.5", "jplephem==2.24"]
+
+[project.optional-dependencies]
+dev = ["pytest==9.1.1", "ruff==0.17.0", "mypy==2.4.0", "build==1.6.1", "jsonschema==4.26.0"]
+reference = ["skyfield==1.55", "spiceypy==8.2.0", "scipy==1.18.1"]
+
+[project.scripts]
+ariaephemeris = "ariaephemeris.cli:main"
+
+[project.urls]
+Repository = "https://github.com/DioneGate/ariaephemeris"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+ariaephemeris = ["py.typed", "resources/*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = ["kernel: requires explicitly installed JPL data", "reference: independent evaluator qualification"]
+
+[tool.ruff]
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F", "I"]
+
+[tool.mypy]
+python_version = "3.12"
+files = ["src"]
+check_untyped_defs = true
+disallow_untyped_defs = true
+ignore_missing_imports = true

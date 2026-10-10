@@ -1,0 +1,93 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/DioneGate/ariaephemeris/schemas/positions-result-v1.json",
+  "type": "object",
+  "required": [
+    "metadata",
+    "bodies"
+  ],
+  "properties": {
+    "metadata": {
+      "type": "object",
+      "required": [
+        "engine_version",
+        "dataset_id",
+        "dataset_sha256",
+        "time",
+        "frame",
+        "origin",
+        "corrections",
+        "qualification"
+      ]
+    },
+    "bodies": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "longitude_deg": {
+            "type": "number"
+          },
+          "latitude_deg": {
+            "type": "number"
+          },
+          "distance_au": {
+            "type": "number"
+          },
+          "right_ascension_deg": {
+            "type": "number"
+          },
+          "declination_deg": {
+            "type": "number"
+          },
+          "longitude_rate_deg_day": {
+            "type": "number"
+          },
+          "body": {
+            "type": "string"
+          },
+          "target_id": {
+            "type": "integer"
+          },
+          "centre_id": {
+            "type": "integer"
+          },
+          "target_kind": {
+            "type": "string"
+          },
+          "motion": {
+            "enum": [
+              "direct",
+              "retrograde",
+              "stationary"
+            ]
+          },
+          "vector_icrs_au": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            },
+            "minItems": 3,
+            "maxItems": 3
+          }
+        },
+        "required": [
+          "longitude_deg",
+          "latitude_deg",
+          "distance_au",
+          "right_ascension_deg",
+          "declination_deg",
+          "longitude_rate_deg_day",
+          "body",
+          "target_id",
+          "centre_id",
+          "target_kind",
+          "motion",
+          "vector_icrs_au"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

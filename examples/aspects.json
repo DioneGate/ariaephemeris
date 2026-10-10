@@ -1,0 +1,23 @@
+{
+  "time": {
+    "jd": [
+      2451545,
+      0
+    ],
+    "scale": "TT"
+  },
+  "aspect_rules": [
+    {
+      "angle_deg": 0,
+      "orb_deg": 8
+    },
+    {
+      "angle_deg": 90,
+      "orb_deg": 6
+    },
+    {
+      "angle_deg": 120,
+      "orb_deg": 6
+    }
+  ]
+}

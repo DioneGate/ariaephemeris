@@ -1,6 +1,8 @@
 # Aria Ephemeris implementation prompt
 
-**Version 0.1 · 10 October 2026 · Proposed implementation plan**
+**Version 0.1 · 10 October 2026 · Adopted initial implementation plan**
+
+Implementation status is maintained in [README](../README.md). References below to the previous MIT repository describe the starting state; the migration is recorded in [CHANGELOG](../CHANGELOG.md).
 
 Implement Aria Ephemeris in `DioneGate/ariaephemeris` according to the technical specification in `README.md` and the decisions below.
 
@@ -235,7 +237,7 @@ At completion, report implemented features, file changes, exact verification com
 
 ## 10. Primary references
 
-- [Current detailed Aria specification](../README.md) (move it to docs/specification.md during Stage A and update this link)
+- [Detailed Aria specification](specification.md)
 - [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0)
 - [MIT licence and retained earlier rights](https://opensource.org/license/mit)
 - [NAIF data/software usage rules](https://naif.jpl.nasa.gov/naif/rules.html)

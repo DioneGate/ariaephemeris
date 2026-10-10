@@ -1,0 +1,9 @@
+Aria Ephemeris
+Copyright 2026 DioneGate
+Original project author: Marek
+https://github.com/DioneGate/ariaephemeris
+
+Earlier documentation was published under MIT. Its licence and attribution
+are preserved in docs/licenses/MIT-original.txt. New Aria implementation is
+licensed under Apache-2.0. Astronomical data and dependencies retain their
+separate terms; see THIRD_PARTY_NOTICES.

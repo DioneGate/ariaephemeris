@@ -1,0 +1,222 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/DioneGate/ariaephemeris/schemas/event-request-v1.json",
+  "type": "object",
+  "properties": {
+    "start": {
+      "oneOf": [
+        {
+          "type": "object",
+          "properties": {
+            "value": {
+              "type": "string"
+            },
+            "jd": {
+              "type": "array",
+              "items": {
+                "type": "number"
+              },
+              "minItems": 2,
+              "maxItems": 2
+            },
+            "scale": {
+              "enum": [
+                "UTC",
+                "TT",
+                "TDB",
+                "UT1"
+              ]
+            },
+            "timezone": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "fold": {
+              "enum": [
+                0,
+                1,
+                null
+              ]
+            },
+            "dut1_seconds": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "delta_t_seconds": {
+              "type": [
+                "number",
+                "null"
+              ]
+            }
+          },
+          "oneOf": [
+            {
+              "required": [
+                "value"
+              ],
+              "not": {
+                "required": [
+                  "jd"
+                ]
+              }
+            },
+            {
+              "required": [
+                "jd"
+              ],
+              "not": {
+                "required": [
+                  "value"
+                ]
+              }
+            }
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "string"
+        }
+      ]
+    },
+    "end": {
+      "oneOf": [
+        {
+          "type": "object",
+          "properties": {
+            "value": {
+              "type": "string"
+            },
+            "jd": {
+              "type": "array",
+              "items": {
+                "type": "number"
+              },
+              "minItems": 2,
+              "maxItems": 2
+            },
+            "scale": {
+              "enum": [
+                "UTC",
+                "TT",
+                "TDB",
+                "UT1"
+              ]
+            },
+            "timezone": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "fold": {
+              "enum": [
+                0,
+                1,
+                null
+              ]
+            },
+            "dut1_seconds": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "delta_t_seconds": {
+              "type": [
+                "number",
+                "null"
+              ]
+            }
+          },
+          "oneOf": [
+            {
+              "required": [
+                "value"
+              ],
+              "not": {
+                "required": [
+                  "jd"
+                ]
+              }
+            },
+            {
+              "required": [
+                "jd"
+              ],
+              "not": {
+                "required": [
+                  "value"
+                ]
+              }
+            }
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "string"
+        }
+      ]
+    },
+    "kind": {
+      "enum": [
+        "ingress",
+        "aspect",
+        "conjunction",
+        "opposition",
+        "station"
+      ]
+    },
+    "body": {
+      "enum": [
+        "sun",
+        "moon",
+        "mercury",
+        "venus",
+        "earth",
+        "mars",
+        "jupiter",
+        "saturn",
+        "uranus",
+        "neptune",
+        "pluto"
+      ]
+    },
+    "other_body": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "angle_deg": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 180
+    },
+    "tolerance_seconds": {
+      "type": "number",
+      "exclusiveMinimum": 0
+    },
+    "max_step_days": {
+      "type": "number",
+      "exclusiveMinimum": 0
+    },
+    "max_evaluations": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "strict": {
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "start",
+    "end",
+    "kind",
+    "body"
+  ],
+  "additionalProperties": false
+}

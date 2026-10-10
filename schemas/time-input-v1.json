@@ -1,0 +1,74 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/DioneGate/ariaephemeris/schemas/time-input-v1.json",
+  "type": "object",
+  "properties": {
+    "value": {
+      "type": "string"
+    },
+    "jd": {
+      "type": "array",
+      "items": {
+        "type": "number"
+      },
+      "minItems": 2,
+      "maxItems": 2
+    },
+    "scale": {
+      "enum": [
+        "UTC",
+        "TT",
+        "TDB",
+        "UT1"
+      ]
+    },
+    "timezone": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "fold": {
+      "enum": [
+        0,
+        1,
+        null
+      ]
+    },
+    "dut1_seconds": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "delta_t_seconds": {
+      "type": [
+        "number",
+        "null"
+      ]
+    }
+  },
+  "oneOf": [
+    {
+      "required": [
+        "value"
+      ],
+      "not": {
+        "required": [
+          "jd"
+        ]
+      }
+    },
+    {
+      "required": [
+        "jd"
+      ],
+      "not": {
+        "required": [
+          "value"
+        ]
+      }
+    }
+  ],
+  "additionalProperties": false
+}

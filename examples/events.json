@@ -1,0 +1,19 @@
+{
+  "start": {
+    "jd": [
+      2451545,
+      0
+    ],
+    "scale": "TT"
+  },
+  "end": {
+    "jd": [
+      2451576,
+      0
+    ],
+    "scale": "TT"
+  },
+  "kind": "conjunction",
+  "body": "moon",
+  "other_body": "sun"
+}

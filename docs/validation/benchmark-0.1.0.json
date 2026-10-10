@@ -1,0 +1,22 @@
+{
+  "python": "3.12.14",
+  "platform": "Linux-6.18.44-x86_64-with-glibc2.39",
+  "cpu": "AMD EPYC 9V74 80-Core Processor",
+  "dataset_sha256": "54d97562a5b094d298b1b8eafa5a2e17e3e010ce85e1a366d07f003ad159323c",
+  "versions": {
+    "numpy": "2.5.3",
+    "pyerfa": "2.0.1.5",
+    "jplephem": "2.24"
+  },
+  "cold_open_and_first_positions_seconds": 0.10203655000009348,
+  "cold_policy": "new engine; OS page cache not purged",
+  "warm_positions_median_seconds": 0.07744082599992907,
+  "warm_positions_max_seconds": 0.12096362599982058,
+  "batch_epochs": 10000,
+  "bodies_per_epoch": 10,
+  "batch_seconds": 67.62734436400001,
+  "chunk_size": 512,
+  "process_peak_rss_kib": 43968,
+  "provisional_warm_latency_target_met": true,
+  "provisional_10000_epoch_2s_target_met": false
+}

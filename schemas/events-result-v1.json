@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/DioneGate/ariaephemeris/schemas/events-result-v1.json",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": [
+      "kind",
+      "body",
+      "jd_tt",
+      "residual",
+      "iterations",
+      "time_bracket_seconds",
+      "conditioning",
+      "metadata"
+    ],
+    "properties": {
+      "jd_tt": {
+        "type": "array",
+        "items": {
+          "type": "number"
+        },
+        "minItems": 2,
+        "maxItems": 2
+      },
+      "conditioning": {
+        "enum": [
+          "well-conditioned",
+          "ill-conditioned"
+        ]
+      },
+      "metadata": {
+        "type": "object",
+        "required": [
+          "timing_qualified",
+          "dataset_sha256",
+          "algorithm"
+        ]
+      }
+    }
+  }
+}

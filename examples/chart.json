@@ -1,0 +1,15 @@
+{
+  "time": {
+    "jd": [
+      2451545,
+      0
+    ],
+    "scale": "TT",
+    "delta_t_seconds": 64
+  },
+  "observer": {
+    "latitude_deg": 51.5,
+    "longitude_deg": -0.1
+  },
+  "house_system": "whole_sign"
+}

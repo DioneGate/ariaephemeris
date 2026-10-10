@@ -1,0 +1,25 @@
+name: Fast checks and distribution
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+          cache-dependency-path: requirements/development.lock
+      - run: python -m pip install -r requirements/development.lock
+      - run: python -m pip install --no-deps -e .
+      - run: ruff check . && ruff format --check . && mypy
+      - run: python tools/audit.py
+      - run: pytest -m 'not kernel'
+      - run: python -m build
+      - run: python tools/package_smoke.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: distributions
+          path: dist/

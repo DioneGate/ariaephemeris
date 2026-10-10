@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/DioneGate/ariaephemeris/schemas/aspects-result-v1.json",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": [
+      "body_a",
+      "body_b",
+      "angle_deg",
+      "separation_deg",
+      "residual_deg",
+      "status"
+    ],
+    "properties": {
+      "status": {
+        "enum": [
+          "applying",
+          "separating",
+          "indeterminate"
+        ]
+      }
+    }
+  }
+}

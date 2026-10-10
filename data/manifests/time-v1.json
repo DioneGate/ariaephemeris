@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "leap_table": {
+    "source_url": "https://hpiers.obspm.fr/iers/bul/bulc/Leap_Second.dat",
+    "sha256": "6cb6f5d4b819f2e568e25db4b0b26d89dedf031fdffb18bc94d40f4e94e268d7",
+    "version": "IERS Bulletin C 72, July 2026",
+    "expiry": "2027-06-28",
+    "last_leap_date": "2017-01-01",
+    "last_tai_minus_utc_seconds": 37
+  },
+  "standards": "ERFA 2.0.1 / PyERFA 2.0.1.5; IAU 2006/2000A",
+  "delta_t_model": "Espenak/Meeus 2006, NASA eclipse polynomials 1900-2149",
+  "eop": "User-supplied DUT1/delta-T and polar motion; no bundled EOP predictions",
+  "timezone": "Host IANA tzdb; independently pin for civil-time reproducibility"
+}

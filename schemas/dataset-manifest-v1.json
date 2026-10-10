@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/DioneGate/ariaephemeris/schemas/dataset-manifest-v1.json",
+  "type": "object",
+  "required": [
+    "dataset_id",
+    "sha256",
+    "size_bytes",
+    "source_url",
+    "source_coverage_tdb",
+    "operating_interval_tt",
+    "qualification",
+    "source_comments",
+    "source_terms_url"
+  ],
+  "properties": {
+    "sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "size_bytes": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "qualification": {
+      "type": "object",
+      "required": [
+        "status"
+      ],
+      "properties": {
+        "status": {
+          "enum": [
+            "not-run",
+            "passed",
+            "failed"
+          ]
+        }
+      }
+    }
+  }
+}

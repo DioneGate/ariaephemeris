@@ -1,0 +1,45 @@
+Aria Ephemeris third-party notices (reviewed 10 October 2026)
+
+Aria-owned implementation: Apache-2.0. Copyright 2026 DioneGate.
+Original project author: Marek. Earlier MIT material: docs/licenses/MIT-original.txt.
+
+Runtime software:
+* NumPy 2.5.3: Copyright (c) 2005-2025, NumPy Developers; BSD-3-Clause.
+  Its tested Linux wheel also includes OpenBLAS/LAPACK (BSD), GCC runtime
+  (GPL with GCC Runtime Library Exception), libquadmath (LGPL-2.1-or-later)
+  and other component notices. See docs/licenses/dependencies/numpy/.
+* PyERFA 2.0.1.5: Copyright (c) 2011-2023, PyERFA Developers; BSD-3-Clause.
+  Bundled ERFA: Copyright (C) 2013-2021, NumFOCUS Foundation; BSD-style terms
+  derived from SOFA. Preserve the original notices and non-endorsement clause.
+  See docs/licenses/dependencies/pyerfa/ and docs/licenses/ERFA.txt.
+* jplephem 2.24: Copyright 2012-2018 Brandon Rhodes; MIT.
+  See docs/licenses/dependencies/jplephem/ for authoritative copyright text.
+
+Reference software (not runtime dependencies): Skyfield 1.55 (MIT),
+SpiceyPy 8.2.0 (MIT wrapper; CSPICE has separate NAIF rules), SciPy 1.18.1
+(BSD and bundled library terms), sgp4 2.27 (MIT), certifi 2026.7.22
+(MPL-2.0 certificate data). Certifi's file-level terms do not require the
+consuming application to be open source. Its unchanged files remain under MPL.
+
+Development/build tools and transitive components have separate terms.
+In particular, pathspec 1.1.1 (used by mypy) has MPL-2.0 file-level terms.
+Exact tested versions, declarations and unmodified notice files are recorded
+in docs/licenses/dependency-inventory.json and docs/licenses/dependencies/.
+requirements/development.lock pins the tested Python 3.12 environment.
+
+Aria wheels depend on these projects; they do not embed their binary wheels.
+If distributing a frozen application or container including dependency binaries,
+retain their supplied notices and satisfy any applicable component source-offer,
+source-availability and relinking requirements, including libquadmath. Apache
+licensing of Aria does not replace those terms. Check the specific platform wheel.
+
+Data: official JPL/NAIF de442s.bsp, unchanged, obtained 10 October 2026.
+NAIF permits fee-free commercial use and kernel redistribution subject to its
+published rules. Modified kernels require distinct filenames and updated producer
+metadata. No NASA/JPL endorsement is implied. Kernel source comments and the
+recorded usage-page hash are in data/manifests/de442s.json; the archived rules
+are docs/licenses/NAIF-rules.html. CSPICE toolkit redistribution has further terms.
+
+Time: IERS Leap_Second.dat, Bulletin C 72, July 2026, expires 28 June 2027;
+retained source header and provenance in package resources. Earth orientation
+is user-supplied; historical/future delta-T is explicitly modelled when selected.

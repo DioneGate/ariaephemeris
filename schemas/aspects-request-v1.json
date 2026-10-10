@@ -1,0 +1,225 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/DioneGate/ariaephemeris/schemas/aspects-request-v1.json",
+  "type": "object",
+  "properties": {
+    "time": {
+      "oneOf": [
+        {
+          "type": "object",
+          "properties": {
+            "value": {
+              "type": "string"
+            },
+            "jd": {
+              "type": "array",
+              "items": {
+                "type": "number"
+              },
+              "minItems": 2,
+              "maxItems": 2
+            },
+            "scale": {
+              "enum": [
+                "UTC",
+                "TT",
+                "TDB",
+                "UT1"
+              ]
+            },
+            "timezone": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "fold": {
+              "enum": [
+                0,
+                1,
+                null
+              ]
+            },
+            "dut1_seconds": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "delta_t_seconds": {
+              "type": [
+                "number",
+                "null"
+              ]
+            }
+          },
+          "oneOf": [
+            {
+              "required": [
+                "value"
+              ],
+              "not": {
+                "required": [
+                  "jd"
+                ]
+              }
+            },
+            {
+              "required": [
+                "jd"
+              ],
+              "not": {
+                "required": [
+                  "value"
+                ]
+              }
+            }
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "string"
+        }
+      ]
+    },
+    "bodies": {
+      "type": "array",
+      "items": {
+        "enum": [
+          "sun",
+          "moon",
+          "mercury",
+          "venus",
+          "earth",
+          "mars",
+          "jupiter",
+          "saturn",
+          "uranus",
+          "neptune",
+          "pluto"
+        ]
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "origin": {
+      "enum": [
+        "geocentric",
+        "topocentric",
+        "heliocentric"
+      ]
+    },
+    "frame": {
+      "enum": [
+        "icrs",
+        "ecliptic_j2000",
+        "mean_ecliptic_of_date",
+        "true_ecliptic_of_date"
+      ]
+    },
+    "position_mode": {
+      "enum": [
+        "geometric",
+        "apparent"
+      ]
+    },
+    "observer": {
+      "type": "object",
+      "properties": {
+        "latitude_deg": {
+          "type": "number"
+        },
+        "longitude_deg": {
+          "type": "number"
+        },
+        "elevation_m": {
+          "type": "number"
+        },
+        "xp_arcsec": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "yp_arcsec": {
+          "type": [
+            "number",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "latitude_deg",
+        "longitude_deg"
+      ],
+      "additionalProperties": false
+    },
+    "strict": {
+      "type": "boolean"
+    },
+    "stationary_band_deg_day": {
+      "type": "number",
+      "minimum": 0
+    },
+    "zodiac": {
+      "oneOf": [
+        {
+          "enum": [
+            "tropical"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "type": {
+              "enum": [
+                "tropical"
+              ]
+            }
+          },
+          "required": [
+            "type"
+          ],
+          "additionalProperties": false
+        }
+      ]
+    },
+    "dataset_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "profile": {
+      "enum": [
+        "reference"
+      ]
+    },
+    "aspect_rules": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "angle_deg": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 180
+          },
+          "orb_deg": {
+            "type": "number",
+            "minimum": 0,
+            "exclusiveMaximum": 90
+          }
+        },
+        "required": [
+          "angle_deg"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": [
+    "time"
+  ],
+  "additionalProperties": false
+}
