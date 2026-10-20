@@ -42,6 +42,13 @@ Sidereal ayanamsas, lunar nodes/apogees, minor bodies, additional houses, eclips
 
 Event searches split brackets at rate extrema, include endpoints and report conditioning, budgets and cancellation. The reference report records tested completeness windows; arbitrary intervals are not guaranteed complete by a formal proof. Ill-conditioned contacts carry no universal timing guarantee.
 
+## Development roadmap
+
+See the [roadmap register](docs/roadmaps/README.md) for phased development plans,
+status conventions and reusable templates. The first roadmap covers
+[engine development and commercial application readiness](docs/roadmaps/001-engine-development/README.md).
+Its phases remain Planned; delivery prompts will be created when requested.
+
 ## Development and licences
 
 ```bash
