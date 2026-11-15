@@ -3,22 +3,22 @@
 | Field | Value |
 | --- | --- |
 | Product owner | Marek / DioneGate |
-| Last reviewed | 2026-10-20 |
+| Last reviewed | 2026-11-15 (commercial-readiness review; no phase implementation) |
 | Inspected implementation baseline | [`39b25ae`](https://github.com/DioneGate/ariaephemeris/commit/39b25aec9023bcc79172a0f0cf7aed373efafc89), package 0.1.0 |
 | Progress and evidence | [progress.md](progress.md) |
 | Implementation prompts | [Prompt register](prompts/README.md) |
 | Framework | [Roadmap register and conventions](../README.md) |
+| Agent working rules | [Repository AGENTS.md](../../../AGENTS.md) |
+| Current main checked | [`0791564`](https://github.com/DioneGate/ariaephemeris/commit/079156477e57959877c63b4047ca1b7163f498de), 2026-11-15 |
 
 ## Outcome
 
 Develop Aria Ephemeris into a dependable, independently maintained astronomical
 calculation platform for the commercial Aria application. Prioritise trustworthy
 everyday chart calculations and efficient activation timelines, then expand
-techniques, historical coverage and deployment options.
+techniques, historical coverage and deployment options. **The commercial milestone is the ability to run the agreed Aria Astrology offering using Aria Ephemeris as its sole declared astronomical provider, with reproducible numerical and application evidence.**
 
-This roadmap records the standalone development plan prepared on 20 October 2026.
-It does not start numerical implementation, generate a phase prompt, authorise
-a package release or confirm a production deployment.
+This roadmap preserves the standalone development plan prepared on 20 October 2026 and formalises the commercial integration and performance decision gates on 15 November 2026. It does not start numerical implementation, generate a phase prompt, authorise changes in the application repository, a merge, package release or production deployment.
 
 ## Scope and boundaries
 
@@ -30,6 +30,8 @@ a package release or confirm a production deployment.
 - First paid use need not await all long-range or specialist work. Resolve the
   advertised calculation scope before treating optional capabilities as release blockers.
 - Existing 0.1.0 features are reusable foundations, not completion of these phases.
+- Keep Python as the baseline and scientific validation implementation; investigate Rust only through measured, qualified proof-of-concept work, not as an assumed launch dependency.
+- **MVP commercial release:** P1–P6 gates apply only to the explicitly selected launch scope. P7–P8 remain optional unless a requirement makes them mandatory.
 - All eight phases below are Planned. No delivery prompt has been generated.
 - The earlier outline's AE-01 through AE-08 map in order to RM-001-P1 through
   RM-001-P8. Use the repository-scoped RM identifiers for future work.
@@ -78,6 +80,9 @@ Deliverables:
 - Qualification plan with independent references, justified acceptance limits and unsupported cases.
 - Reproducible baseline commands, results and missing-evidence register.
 - Prioritised implementation backlog and decision log.
+- Read-only inspection of current Aria Astrology backend ephemeris calls and feature dependencies; a **Swiss-to-Aria capability/contract matrix** distinguishing positions, signed rates, chart angles/houses, calculated points, time conversion, batches and events. Record which astrological aspects are already calculated by the application, rather than assuming the ephemeris must reproduce their policy.
+- Explicit launch, beta and deferred feature list; each unsupported chart setting must have a specified UI/API behaviour. No cross-repository implementation is authorised by inventory work.
+- A written decision on whether the first service will remain Python-only (recommended baseline), the profiling workload and the later Rust proof-of-concept trigger.
 
 Exit: every launch capability has an owner, definition, evidence requirement and delivery phase. No unimplemented feature is labelled supported.
 
@@ -125,6 +130,8 @@ Deliverables:
 - Cache identity includes dataset, engine version, numerical conventions and all relevant inputs. Presentation settings do not invalidate numerical results.
 - Cancellation, stale-response protection, request budgets and private internal network access.
 - Integration checks for wheel, position table, aspect matrix, activation curves and clock mode.
+- Provider comparison fixtures with matching astronomical conventions, explicit planetary-system barycentre targets versus physical centres, and justified numerical tolerances. Capture the differences rather than claiming byte-for-byte parity.
+- A separate authorised change/PR in the Aria Astrology repository when production provider switching is implemented; this roadmap does not itself authorise that code change.
 
 Exit: one accepted snapshot drives all chart views; apparent/geometric semantics remain intact. Saved documents are recalculated deliberately, never silently reinterpreted. Unsupported features are visible rather than hidden behind invented results.
 
@@ -139,6 +146,7 @@ Deliverables:
 - Bounded background batch jobs, queue limits, cancellation and reusable activation-series caches.
 - Clock scheduling that prevents overlapping work, pauses when not needed and does not restart the engine each second.
 - Concurrency and soak tests; memory/CPU budgets and recovery from worker failure.
+- A decision record on Python-first optimisation and any **Rust native-core proof of concept**: compare representative end-to-end workloads, implementation maintenance cost, memory and numerical agreement; adopt native code only after independent requalification and demonstrated value. The Rust path must not delay a sufficiently performing Python commercial release.
 
 Proposed initial targets, to approve in RM-001-P1: warm single-chart p95 below 250 ms; ten-body 10,000-epoch batch below 10 seconds on the chosen deployment host; stable one-second clock updates at a declared concurrent-user load. These are engineering targets, not current capabilities. Define body count, corrections, rates, cache state, hardware and sample policy for every measurement.
 
@@ -153,6 +161,7 @@ Deliverables:
 - Separate dependencies for runtime versus development/reference work; complete software/data inventory and redistribution notices for the actual shipped platform.
 - Security review of service exposure, validation, request budgets and resource exhaustion.
 - Operational health, numerical-error monitoring, controlled data updates and rollback to a qualified Aria version.
+- Evidence from the **actual production application build** that every advertised chart/activation route uses the qualified Aria provider, with no hidden dependency on or fallback to the previous provider. This requires authorised changes and verification in the separate application repository.
 - Deployment verification and accountable release sign-off. Package publication is optional; a pinned private deployment is acceptable.
 
 Exit: all advertised launch features are qualified in the deployed configuration; required failures fail safely; no runtime path silently invokes an undeclared provider. Application authentication, billing, privacy and asset rights remain separate launch checks.
@@ -199,6 +208,9 @@ Go/no-go checklist:
 - [ ] Performance and concurrency limits are measured on deployment hardware.
 - [ ] The actual runtime dependency/data inventory has passed redistribution review.
 - [ ] Full qualification and deployed end-to-end evidence refer to the shipped version.
+- [ ] A verified application-level provider inventory demonstrates that no production calculation path uses an undeclared ephemeris or fallback.
+- [ ] Explicit launch-scope exclusions are honoured in chart settings, saved documents and API errors.
+- [ ] A measured Python-versus-native decision exists; a Rust rewrite is not assumed necessary.
 - [ ] Monitoring, controlled updates and rollback have been exercised.
 
 
@@ -221,7 +233,8 @@ All proposals below remain open unless explicitly recorded as resolved by the ow
 | First commercial dates, bodies, points, houses and zodiac | Marek | P1 launch contract | Propose a 1900–2100 tropical core; decide which additional current application options must be retained or explicitly unavailable |
 | Historical civil time, unknown birth time and Earth-rotation assumptions | Marek; implementer proposes technical policy | P2 | Document observed/modelled data, uncertainty and specialist overrides before implementation |
 | Numerical acceptance limits and reference-model conventions | Marek; implementer supplies evidence | P1/P3 | Approve scoped gates; keep model uncertainty distinct from evaluator residuals |
-| Integration topology and cross-repository delivery scope | Marek | P4 | Persistent private Python worker/service behind the existing Express API is proposed, not yet mandated |
+| Integration topology and cross-repository delivery scope | Marek | P4 | Persistent private Python worker/service behind the existing Express API is proposed, not yet mandated; application-repository changes need separate authorisation |
+| Python optimisation versus Rust migration | Marek; implementer benchmarks | P5 | Profile and optimise Python first; approve a bounded Rust PoC only if measured constraints require it; native rewrite is not a launch prerequisite |
 | Hardware, concurrency and performance targets | Marek | P5 | Review the proposed chart p95 and batch targets using representative workloads |
 | Feature additions versus deliberately reduced initial scope | Marek | P3/P6 | Explicit product decision; never silently downgrade saved-chart settings |
 | Historical-range launch dependency | Marek | P1/P7 | Defer until after initial release unless historical research makes it essential |
