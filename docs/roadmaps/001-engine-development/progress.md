@@ -46,11 +46,19 @@ No numerical tests, kernel download, qualification, benchmark or production chec
 was rerun to create the roadmap framework. All P1–P8 phase status remains Planned.
 Saving this framework does not complete the P1 calculation-contract/baseline gate.
 
+
+## Planning review — 2026-11-15
+
+The latest checked `main` is [`0791564`](https://github.com/DioneGate/ariaephemeris/commit/079156477e57959877c63b4047ca1b7163f498de); package version remains 0.1.0. The 20 October baseline above is retained as historical evidence.
+
+This **documentation-only** review adds repository agent governance and makes the existing RM-001 commercial-release boundary more explicit: provider-call inventory, application migration evidence, planetary barycentre/centre compatibility, staged Python performance optimisation and a benchmark-gated Rust proof of concept. No P1–P8 delivery phase was implemented or accepted. No tests, kernel qualification, benchmarks, application integration, release or deployment were executed as part of this review. The documentation changes are committed on a dedicated branch and proposed in [PR #1](https://github.com/DioneGate/ariaephemeris/pull/1); the PR is not merged and no implementation phase status changed.
+
 ## Delivery log
 
 | Date | Phase/prompt | Change and evidence | Validation | Deployment |
 | --- | --- | --- | --- | --- |
 | 2026-10-20 | Planning administration only | Saved the standalone eight-phase plan, roadmap register, reusable templates and empty prompt register | Existing framework/source inspection; new document links, identifiers, status consistency and scope checked | Documentation only; no runtime deployment |
+| 2026-11-15 | RM-001 documentation review | Added AGENTS.md and refined RM-001 on [docs branch](https://github.com/DioneGate/ariaephemeris/tree/docs/agents-rm001-commercial-readiness-20261115); [PR #1](https://github.com/DioneGate/ariaephemeris/pull/1) opened for review (not merged) | GitHub repository and documentation inspection only; numerical tests not run | Documentation only; no runtime deployment |
 
 Record subsequent increments here with exact phase/prompt ID, branch/PR,
 review/merge evidence, commands/results, remaining gaps and deployed-version

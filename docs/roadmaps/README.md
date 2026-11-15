@@ -2,12 +2,13 @@
 
 Versioned delivery plans for Aria Ephemeris initiatives spanning several bounded
 implementation prompts. Keep these records in Markdown alongside the code.
+AI contributors must first follow the repository [AGENTS.md](../../AGENTS.md).
 
 ## Roadmap register
 
 | ID | Roadmap | Progress and evidence | Current focus |
 | --- | --- | --- | --- |
-| RM-001 | [Engine development and commercial application readiness](001-engine-development/README.md) | [Progress](001-engine-development/progress.md) | All eight phases Planned. Generate the first P1 prompt only when requested. |
+| RM-001 | [Engine development and commercial application readiness](001-engine-development/README.md) | [Progress](001-engine-development/progress.md) | All eight phases Planned; P1 commercial compatibility inventory and launch scope are next. Generate the first P1 prompt only when requested. |
 
 This register is for discovery. Each roadmap's README owns phase status; its
 progress log owns implementation evidence; its prompt register owns prompt status.
