@@ -94,6 +94,16 @@ Branch: [`docs/rm-001-001-commercial-calculation-contract-20261118`](https://git
 
 **Status:** Jupiter WP1/WP2 **completed with passing evidence**, remaining five centre source kernels and six-body packaging source feasibility **Blocked**; RM-001-P1 **Planned**, RM-001/002 overall not Done, PR #4 draft and unmerged.
 
+## RM-001/002 WP3 five-source pinned qualification — 2026-11-18
+
+**Baseline and delivery:** [PR #4 was merged](https://github.com/DioneGate/ariaephemeris/commit/03af9337d073dbe424b534de829619cc6a4e301e). Began WP3 on fresh branch `feature/rm-001-002-wp3-five-centres-20261118`, [draft PR #5](https://github.com/DioneGate/ariaephemeris/pull/5). Added `tools/datasets/qualify_planet_centres.py`, kernel-independent tests, a parallel GH Actions matrix, official NAIF [five-source manifest](planet-centre-source-manifest.json), [retained result JSON](p1-five-centres-evidence.json) and [narrative qualification report](p1-five-centres-qualification.md). Did not change existing `src/`, calculated body targets, Aria Galaxy or distributed SPK files.
+
+**Source discovery run:** [#44410136973](https://github.com/DioneGate/ariaephemeris/actions/runs/44410136973) passed for Mars, Saturn, Uranus, Neptune and Pluto. Original satellite kernels matched NAIF published MD5s. Observed SHA-256 digests were recorded separately in the committed manifest; the initial workflow's wildcard artifact upload did not include hidden `.artifacts/` reports (detected in actual job logs), later fixed. Fast CI initially flagged Ruff formatting; corrected.
+
+**Pinned replay:** [#44410508647](https://github.com/DioneGate/ariaephemeris/actions/runs/44410508647) **all five jobs PASS** with the **previously committed** SHA-256 pins, MD5 and DE442s checks, direct target-to-barycentre segment inspection and eleven matched TDB epoch CSPICE evaluator comparisons per planet. All five have **two direct type-2/frame-1 segments and zero gaps** in the audited 1900–2100 interval; all pass the provisional 1 m / 1 mm/s same-source evaluator bounds. Position max residuals (m): Mars 0.0114078, Saturn 0.0045663, Uranus 0.0032164, Neptune 0.0027392, Pluto 0.0022310. No SPK binaries in uploaded artifacts; JSON files were downloaded and inspected to generate the repository's machine-readable evidence. [Fast CI #44410508459](https://github.com/DioneGate/ariaephemeris/actions/runs/44410508459) **PASS** (lint, formatting, mypy, audit, non-kernel tests, build, smoke). Existing general DE442s qualification is separate.
+
+**Acceptance boundary:** Jupiter's separately qualified 599/5 and all five WP3 sources establish **six SHA-pinned, compatible physical-centre offset sources** and numerical same-kernel evaluator checks. This does not independently certify their physical model accuracy, differential dynamical model consistency, geocentric apparent horoscope positions, civil-time handling, commercial pack redistribution or Aria Galaxy provider replacement. Production multi-kernel resolver and `planet-centres-v1` calculation profile remain **unimplemented** and require a new, scoped code work package. PR #5 **draft/unmerged**; RM-001/002 **In review** for sources; RM-001-P1 remains **Planned**.
+
 ## Delivery log
 
 | Date | Phase/prompt | Change and evidence | Validation | Deployment |
@@ -105,6 +115,8 @@ Branch: [`docs/rm-001-001-commercial-calculation-contract-20261118`](https://git
 
 | 2026-11-18 | RM-001/002 started; **Blocked** on real-kernel evidence | Source matrix, offline audit and synthetic coverage tests on dedicated feature branch; draft PR for review | Official summaries reviewed, binary source checks and independent Jupiter comparison **NOT RUN**; CI separately pending | No engine runtime changes, no app changes, no merge, release or deployment |
 
+| 2026-11-18 | RM-001/002 WP3; **source/evaluator gates in review** | Five-source manifest, CSPICE qualification matrix, 5 pinned JSON reports, PR #5 draft | [Pinned matrix #44410508647](https://github.com/DioneGate/ariaephemeris/actions/runs/44410508647) **5/5 pass**; fast CI #44410508459 **passed** | No runtime change, no app change, no merge/release/deployment |
+
 Record subsequent increments here with exact phase/prompt ID, branch/PR,
 review/merge evidence, commands/results, remaining gaps and deployed-version
 status. Do not mark work Done until its merge and acceptance are verified.
@@ -112,4 +124,4 @@ The roadmap README owns phase status; this log owns evidence.
 
 ## Next action
 
-Run [RM-001/002's six-source audit and Jupiter independent comparison](p1-centre-source-feasibility.md) on a host with pinned local SPK files; do not mark binary source feasibility or numerical acceptance as passed from the NAIF text inventory. Separately review [RM-001/001 execution PR #3](https://github.com/DioneGate/ariaephemeris/pull/3), resolve owner decisions D01–D14 in the [launch decisions](p1-launch-scope-and-decisions.md), and run the [pinned numerical replay](p1-qualification-baseline.md) on a host with checkout, dependencies and checksum-verified DE442s data. A further implementation prompt may be warranted for each unresolved P2/P3 gate but must be explicitly requested. **Do not merge PR #3 without separate authorisation.** RM-001/001 remains In review; RM-001-P1 is Planned pending full owner acceptance and numerical evidence.
+Review [draft PR #5](https://github.com/DioneGate/ariaephemeris/pull/5) and the [all-six source evidence](p1-centre-source-feasibility.md). The physical source-binary, coverage and same-source evaluator gates passed; an implementation-ready follow-up can now be scoped for the **production multi-kernel resolver** and named `planet-centres-v1` calculation profile, protecting the existing barycentre default. Separately review JPL model compatibility, compact dataset packaging and modified-kernel attribution before redistribution or commercial release. RM-001-P1 and other broader D02–D14 decisions remain open; no approval to merge PR #5 or deploy is implied.
