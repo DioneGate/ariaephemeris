@@ -1,0 +1,82 @@
+name: RM-001-002 Jupiter physical-centre source qualification
+
+on:
+  push:
+    branches:
+      - feature/rm-001-002-centre-source-feasibility-20261118
+    paths:
+      - '.github/workflows/jupiter-centre-qualification.yml'
+      - 'tools/datasets/audit_planet_centres.py'
+      - 'tools/datasets/qualify_jupiter_centre.py'
+      - 'tests/unit/test_planet_centre_audit.py'
+  pull_request:
+    paths:
+      - '.github/workflows/jupiter-centre-qualification.yml'
+      - 'tools/datasets/audit_planet_centres.py'
+      - 'tools/datasets/qualify_jupiter_centre.py'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  jupiter-source-and-cspice:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+          cache-dependency-path: requirements/development.lock
+      - name: Install pinned numerical and independent evaluator dependencies
+        run: |
+          python -m pip install -r requirements/development.lock
+          python -m pip install --no-deps -e .
+      - name: Install and verify original Aria DE442s source
+        run: ariaephemeris install-data .artifacts
+      - name: Fetch official JUP349 and validate published JPL MD5
+        run: |
+          set -euo pipefail
+          mkdir -p .artifacts/planet-centres
+          curl --fail --location --show-error --silent \
+            --retry 4 --retry-delay 4 --connect-timeout 25 --max-time 480 \
+            https://naif.jpl.nasa.gov/pub/naif/generic_kernels/spk/satellites/jup349.bsp \
+            -o .artifacts/planet-centres/jup349.bsp
+          echo 'c7ef9d1829bb39bbbc2ba30d4a5a8a05  .artifacts/planet-centres/jup349.bsp' | md5sum --check --status
+          echo 'Official JPL MD5 matched. Discovered SHA-256 (requires independent commit/pin):'
+          sha256sum .artifacts/planet-centres/jup349.bsp
+      - name: Run source segment coverage and DE442s-composition audit
+        run: |
+          set -euo pipefail
+          # Discovery pass: SHA-256 not yet independently approved. The audit
+          # intentionally returns 1, never reporting this as a pinned source.
+          set +e
+          python tools/datasets/audit_planet_centres.py \
+            --kernel jupiter=.artifacts/planet-centres/jup349.bsp \
+            --base .artifacts/de442s.bsp --sample-jd-tdb 2451545.0 \
+            --output .artifacts/jupiter-segment-audit.json
+          status=$?
+          set -e
+          test "$status" -eq 1
+          python -c 'import json; r=json.load(open(".artifacts/jupiter-segment-audit.json")); j=r["source_checks"]["jupiter"]; assert r["coverage_pass"] and j["reader_and_coverage_pass"] and "sample" in j; assert not r["source_identity_pinned"]'
+      - name: Compare Jupiter physical centres with independently evaluated CSPICE
+        run: |
+          python tools/datasets/qualify_jupiter_centre.py \
+            --base .artifacts/de442s.bsp \
+            --jupiter .artifacts/planet-centres/jup349.bsp \
+            --output .artifacts/jupiter-cspice-comparison.json
+      - name: Validate report structure and preserve source digest
+        run: |
+          python -c 'import json; r=json.load(open(".artifacts/jupiter-cspice-comparison.json")); assert r["evaluator_agreement_pass"]; assert r["source"]["satellite_md5_checked"]==r["source"]["satellite_published_md5"]; assert not r["source"]["satellite_sha256_pinned_independently"]; print("JUP349 independent evaluator pass; SHA-256 awaiting source-manifest approval")'
+      - name: Upload evidence (never upload production SPK binaries)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: rm-001-002-jupiter-qualification-evidence
+          path: |
+            .artifacts/jupiter-segment-audit.json
+            .artifacts/jupiter-cspice-comparison.json
+          if-no-files-found: warn
+          retention-days: 30
