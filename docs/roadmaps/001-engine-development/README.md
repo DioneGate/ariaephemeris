@@ -52,7 +52,7 @@ This roadmap preserves the standalone development plan prepared on 20 October 20
 
 ## RM-001/002 — D01 physical planet-centre source feasibility (started, blocked)
 
-The owner has selected **physical planet centres for Mars–Pluto as the intended commercial target identity**, while preserving the existing barycentre profile. [RM-001/002](prompts/002-physical-planet-centres-source-feasibility.md) adds an [official NAIF source matrix and qualification gates](p1-centre-source-feasibility.md), [offline SPK probe](../../../tools/datasets/audit_planet_centres.py) and kernel-independent tests. **Source discovery is not numerical qualification**: the current execution host cannot download/read the actual satellite files and no independent Jupiter state comparison has run. RM-001/002 is **Blocked** pending a verified-kernel runner; RM-001-P1 remains Planned, and the wider D01–D14 review remains open on PR #3.
+The owner has selected **physical planet centres for Mars–Pluto as the intended commercial target identity**, while preserving the existing barycentre profile. [RM-001/002](prompts/002-physical-planet-centres-source-feasibility.md) adds an [official NAIF source matrix and qualification gates](p1-centre-source-feasibility.md), [offline SPK probe](../../../tools/datasets/audit_planet_centres.py) and kernel-independent tests. **Source discovery is not numerical qualification**: the current execution host cannot download/read the actual satellite files and no independent Jupiter state comparison has run. RM-001/002 is **Blocked** pending a verified-kernel runner; RM-001-P1 remains Planned, and the wider D01–D14 review remains open for owner decisions after PR #3's merge.
 
 ## Delivery plan
 
@@ -80,7 +80,7 @@ requirement. Each advertised capability must pass its own gate.
 - [Candidate commercial launch scope and 14 owner decisions](p1-launch-scope-and-decisions.md) — **all decisions Open**; no launch exclusions approved.
 - [Qualification baseline and replay record](p1-qualification-baseline.md) — historical October evidence identified, current November source inspection verified; **numerical replay NOT RUN** because this shell has no repository checkout/network/kernel.
 
-The [RM-001/001 prompt](prompts/001-commercial-calculation-contract-and-baseline.md) is **In review** on [PR #3](https://github.com/DioneGate/ariaephemeris/pull/3), unmerged. These documentation deliverables **do not make P1 Done**: owner scope/gates and a new real-kernel replay remain necessary. P1–P8 are still Planned.
+The [RM-001/001 prompt](prompts/001-commercial-calculation-contract-and-baseline.md) was delivered via [PR #3](https://github.com/DioneGate/ariaephemeris/pull/3), **merged** at `df96380`; its documentation does not close the broader P1 qualification gate. These documentation deliverables **do not make P1 Done**: owner scope/gates and a new real-kernel replay remain necessary. P1–P8 are still Planned.
 
 
 Create an authoritative capability inventory shared by the engine team and application integration work. Define the first commercial calculation offering and identify any application capabilities that must initially be unavailable.
