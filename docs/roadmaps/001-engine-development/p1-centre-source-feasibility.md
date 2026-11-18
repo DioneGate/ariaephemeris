@@ -2,7 +2,7 @@
 
 **Date:** 18 November 2026  
 **Programme:** [RM-001](README.md), P1 decision D01 / P3 source prerequisite  
-**Repository baseline:** Aria Ephemeris `main` at `36a9cec742e8248fdee599b7cf620b2b19d12cc7` (package 0.1.0).  
+**Repository branch base:** Aria Ephemeris `main` at `df96380ee851e3aeac1962ec6010807342f3b7da` (merged PR #3, package 0.1.0; numerical implementation unchanged from the inspected `36a9cec` baseline).  
 **Work branch:** `feature/rm-001-002-centre-source-feasibility-20261118`  
 **State:** source discovery **documented**; live SPK segment audit / reference calculation **BLOCKED / NOT RUN**. Not production qualification.
 
