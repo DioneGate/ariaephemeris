@@ -19,7 +19,8 @@ from typing import Any
 # Inclusive 1900-01-01 through 2100-12-31, expressed as a half-open
 # numerical window. These are TDB-style SPK JDs, NOT civil UTC input limits.
 # TDB minus TT is < 2 ms; live source auditing must retain a boundary margin.
-# Enlarge both endpoints by one second: a conservative margin for TT/TDB.\nWINDOW_JD_TDB = (2415020.5 - 1 / 86400, 2488434.5 + 1 / 86400)
+# Enlarge both endpoints by one second: a conservative margin for TT/TDB.
+WINDOW_JD_TDB = (2415020.5 - 1 / 86400, 2488434.5 + 1 / 86400)
 TARGETS = {
     "mars": (499, 4),
     "jupiter": (599, 5),
@@ -134,7 +135,9 @@ def sample_state(
     return {
         "jd_tdb": jd,
         "selected_segment_index": selected["segment_index"],
-        "base_kernel": str(base_kernel),\n        "base_dataset_id": base_manifest["dataset_id"],\n        "base_sha256_verified": base_manifest["sha256"],
+        "base_kernel": str(base_kernel),
+        "base_dataset_id": base_manifest["dataset_id"],
+        "base_sha256_verified": base_manifest["sha256"],
         "offset_position_km": offset_p,
         "offset_velocity_km_day": offset_v,
         "base_barycentre_position_km": barycentre_p,
