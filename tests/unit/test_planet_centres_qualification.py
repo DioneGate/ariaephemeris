@@ -11,7 +11,9 @@ import pytest
 
 SOURCE = Path(__file__).resolve().parents[2] / "tools/datasets"
 sys.path.insert(0, str(SOURCE))
-SPEC = importlib.util.spec_from_file_location("qualify_planet_centres", SOURCE / "qualify_planet_centres.py")
+SPEC = importlib.util.spec_from_file_location(
+    "qualify_planet_centres", SOURCE / "qualify_planet_centres.py"
+)
 assert SPEC is not None and SPEC.loader is not None
 qualify = importlib.util.module_from_spec(SPEC)
 SPEC.loader.exec_module(qualify)
