@@ -1,0 +1,89 @@
+name: RM-001-002 Five physical-planet centre source qualification
+
+on:
+  push:
+    branches:
+      - feature/rm-001-002-centre-source-feasibility-20261118
+    paths:
+      - '.github/workflows/planet-centre-qualification.yml'
+      - 'tools/datasets/qualify_planet_centres.py'
+      - 'tools/datasets/audit_planet_centres.py'
+      - 'docs/roadmaps/001-engine-development/planet-centre-source-manifest.json'
+  pull_request:
+    paths:
+      - '.github/workflows/planet-centre-qualification.yml'
+      - 'tools/datasets/qualify_planet_centres.py'
+      - 'docs/roadmaps/001-engine-development/planet-centre-source-manifest.json'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  qualify-source:
+    runs-on: ubuntu-latest
+    timeout-minutes: 55
+    strategy:
+      fail-fast: false
+      max-parallel: 3
+      matrix:
+        planet: [mars, saturn, uranus, neptune, pluto]
+    env:
+      PLANET: ${{ matrix.planet }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+          cache-dependency-path: requirements/development.lock
+      - name: Install pinned engine and independent evaluator dependencies
+        run: |
+          python -m pip install -r requirements/development.lock
+          python -m pip install --no-deps -e .
+      - name: Acquire and checksum-verify Aria DE442s base
+        run: ariaephemeris install-data .artifacts
+      - name: Download selected official JPL satellite SPK
+        run: |
+          set -euo pipefail
+          mkdir -p .artifacts/planet-centres
+          source_url=$(python -c 'import json,os; m=json.load(open("docs/roadmaps/001-engine-development/planet-centre-source-manifest.json")); print(m["sources"][os.environ["PLANET"]]["source_url"])')
+          filename=$(python -c 'import json,os; m=json.load(open("docs/roadmaps/001-engine-development/planet-centre-source-manifest.json")); print(m["sources"][os.environ["PLANET"]]["source_file"])')
+          curl --fail --location --show-error --silent --retry 4 \
+            --retry-delay 6 --connect-timeout 30 --max-time 1800 \
+            "$source_url" -o ".artifacts/planet-centres/$filename"
+          echo "Selected $PLANET ($filename):"
+          sha256sum ".artifacts/planet-centres/$filename"
+      - name: Inspect centre segments and compare against independent CSPICE
+        run: |
+          set -euo pipefail
+          filename=$(python -c 'import json,os; m=json.load(open("docs/roadmaps/001-engine-development/planet-centre-source-manifest.json")); print(m["sources"][os.environ["PLANET"]]["source_file"])')
+          python tools/datasets/qualify_planet_centres.py \
+            --planet "$PLANET" \
+            --base .artifacts/de442s.bsp \
+            --satellite ".artifacts/planet-centres/$filename" \
+            --manifest docs/roadmaps/001-engine-development/planet-centre-source-manifest.json \
+            --output ".artifacts/$PLANET-centre-qualification.json"
+      - name: Distinguish source discovery from SHA-pinned qualification
+        run: |
+          python - <<'PY'
+          import json, os
+          p = os.environ["PLANET"]
+          report = json.load(open(f".artifacts/{p}-centre-qualification.json"))
+          assert report["coverage"]["reader_and_coverage_pass"], p
+          assert report["evaluator_agreement_pass"], p
+          if report["source"]["sha256_precommitted"]:
+              assert report["source_gate_pass"], p
+              print(f"{p}: PINNED SOURCE qualified for covered geometric evaluator samples")
+          else:
+              assert not report["source_gate_pass"], p
+              print(f"{p}: DISCOVERY PASS only; source SHA-256 must be committed independently and rerun")
+          PY
+      - name: Upload small JSON evidence only (never redistribute SPK binaries)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: rm-001-002-${{ matrix.planet }}-source-evidence
+          path: .artifacts/*-centre-qualification.json
+          if-no-files-found: warn
+          retention-days: 30
