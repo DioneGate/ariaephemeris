@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "status": "candidate-pinned-for-evaluator-qualification",
+  "source_name": "JUP349",
+  "source_file": "jup349.bsp",
+  "source_url": "https://naif.jpl.nasa.gov/pub/naif/generic_kernels/spk/satellites/jup349.bsp",
+  "source_catalogue": "https://naif.jpl.nasa.gov/pub/naif/generic_kernels/spk/satellites/aa_summaries.txt",
+  "published_md5_url": "https://naif.jpl.nasa.gov/pub/naif/generic_kernels/spk/satellites/aa_checksums.txt",
+  "published_md5": "c7ef9d1829bb39bbbc2ba30d4a5a8a05",
+  "observed_sha256_pinned": "a8f682fd0f156db47ee9672e0276f0842eb70d3ade8533fed59e38b6d5032971",
+  "sha256_discovered_from": "https://github.com/DioneGate/ariaephemeris/actions/runs/44402646337",
+  "sha256_first_observed_at_utc": "2026-11-18",
+  "target_id": 599,
+  "centre_id": 5,
+  "composition_base": "aria-de442-reference-v1",
+  "composition_base_sha256": "54d97562a5b094d298b1b8eafa5a2e17e3e010ce85e1a366d07f003ad159323c",
+  "precision_claim": "none; independent evaluator agreement is not source-model accuracy",
+  "redistribution_status": "not approved; do not commit SPK"
+}
