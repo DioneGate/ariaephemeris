@@ -89,12 +89,8 @@ def run(base: Path, satellite: Path, expected_sha256: str | None = None) -> dict
                     if segment.data_type == 3:
                         offset_p, offset_v = offset_p[:3], offset_v[3:] * 86400
                     base_p, base_v = base_source.state(5, jd)
-                    proposed_p = np.asarray(base_p, dtype=float) + np.asarray(
-                        offset_p, dtype=float
-                    )
-                    proposed_v = np.asarray(base_v, dtype=float) + np.asarray(
-                        offset_v, dtype=float
-                    )
+                    proposed_p = np.asarray(base_p, dtype=float) + np.asarray(offset_p, dtype=float)
+                    proposed_v = np.asarray(base_v, dtype=float) + np.asarray(offset_v, dtype=float)
 
                     et = (jd - 2451545.0) * 86400.0
                     direct_spice, _ = spice.spkgeo(599, et, "J2000", 5)
@@ -104,18 +100,12 @@ def run(base: Path, satellite: Path, expected_sha256: str | None = None) -> dict
                     base_spice = np.asarray(base_spice, dtype=float)
                     centre_spice = np.asarray(centre_spice, dtype=float)
                     expected_from_components = base_spice + direct_spice
-                    pos_residual_m = float(
-                        np.linalg.norm(proposed_p - centre_spice[:3]) * 1000
-                    )
+                    pos_residual_m = float(np.linalg.norm(proposed_p - centre_spice[:3]) * 1000)
                     vel_residual_mm_s = float(
                         np.linalg.norm(proposed_v / 86400 - centre_spice[3:]) * 1e6
                     )
-                    base_residual_m = float(
-                        np.linalg.norm(base_p - base_spice[:3]) * 1000
-                    )
-                    offset_residual_m = float(
-                        np.linalg.norm(offset_p - direct_spice[:3]) * 1000
-                    )
+                    base_residual_m = float(np.linalg.norm(base_p - base_spice[:3]) * 1000)
+                    offset_residual_m = float(np.linalg.norm(offset_p - direct_spice[:3]) * 1000)
                     compose_residual_m = float(
                         np.linalg.norm(expected_from_components - centre_spice) * 1000
                     )
@@ -137,9 +127,7 @@ def run(base: Path, satellite: Path, expected_sha256: str | None = None) -> dict
                             "aria_centre_position_km": proposed_p.tolist(),
                             "aria_centre_velocity_km_day": proposed_v.tolist(),
                             "cspice_centre_position_km": centre_spice[:3].tolist(),
-                            "cspice_centre_velocity_km_day": (
-                                centre_spice[3:] * 86400
-                            ).tolist(),
+                            "cspice_centre_velocity_km_day": (centre_spice[3:] * 86400).tolist(),
                             "position_residual_m": pos_residual_m,
                             "velocity_residual_mm_s": vel_residual_mm_s,
                             "base_barycentre_residual_m": base_residual_m,
