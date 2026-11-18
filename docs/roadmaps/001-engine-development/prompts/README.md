@@ -3,25 +3,25 @@
 [Roadmap](../README.md) · [Progress and evidence](../progress.md) ·
 [Prompt template](../../templates/implementation-prompt.md)
 
-No delivery prompts have been generated or implemented for this roadmap.
-The generic template is a planning aid, not an executable task.
+RM-001/001 has been prepared as a bounded P1 **planning document**; its delivery has not
+been authorised or implemented. The generic template is a planning aid, not an
+executable task. All P1–P8 phase statuses remain Planned.
 
 ## Register
 
 | Prompt ID | File | Phase | Status | Dependencies/blocker | Implementation evidence |
 | --- | --- | --- | --- | --- | --- |
+| RM-001/001 | [Commercial calculation contract, capability inventory and reproducible baseline](001-commercial-calculation-contract-and-baseline.md) | RM-001-P1 | Planned | Owner launch/date/target choices, acceptance limits, provider/schema approach and execution authority remain open | Prompt document authored on `docs/rm-001-001-commercial-calculation-contract-20261118`; no P1 implementation or qualification | |
 
-The empty table is intentional. Add a row only when a concrete prompt file is
-generated at the owner's request. Do not create numbered placeholder files.
+Create subsequent rows only for concrete prompts at the owner's request. Do not
+create numbered placeholder files.
 
-## Next prompt to prepare
+## Next action
 
-- Reserved next identifier: RM-001/001; no prompt file yet.
-- Parent phase: RM-001-P1 — Scope, conventions and baseline.
-- Intended outcome: define the calculation contract, inventory actual capabilities,
-  propose launch scope and qualification gates, and reproduce a safe baseline.
-- Preparation: recheck current main, relevant application contracts and P1 decisions.
-- No implementation, merge, release or deployment is authorised by this register.
+- Review [RM-001/001](001-commercial-calculation-contract-and-baseline.md), resolve or explicitly retain open owner decisions, and authorise execution separately.
+- Parent phase RM-001-P1 remains Planned; authoring the prompt is not P1 completion.
+- On execution, recheck current main of **both** repositories, preserve newer changes and record actual validation/evidence.
+- The next identifier RM-001/002 is reserved only for a subsequently requested bounded prompt. No implementation, merge, release or deployment is authorised by this register.
 
 Number subsequent prompts consecutively across the roadmap, not separately per
 phase. Link each generated prompt to its phase, source baseline and dependencies.
