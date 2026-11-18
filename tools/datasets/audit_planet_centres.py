@@ -112,8 +112,7 @@ def sample_state(
     rows = [
         row
         for row in report["direct_segments"]
-        if row["supported_by_current_reader"]
-        and row["start_jd_tdb"] <= jd <= row["end_jd_tdb"]
+        if row["supported_by_current_reader"] and row["start_jd_tdb"] <= jd <= row["end_jd_tdb"]
     ]
     if not rows:
         raise ValueError("No supported direct centre offset covers the sample TDB JD")
@@ -157,9 +156,7 @@ def key_value(text: str) -> tuple[str, str]:
         raise argparse.ArgumentTypeError("Expected body=value")
     name, value = text.split("=", 1)
     if name not in TARGETS or not value:
-        raise argparse.ArgumentTypeError(
-            "Expected mars|jupiter|saturn|uranus|neptune|pluto=value"
-        )
+        raise argparse.ArgumentTypeError("Expected mars|jupiter|saturn|uranus|neptune|pluto=value")
     return name, value
 
 
