@@ -50,11 +50,15 @@ This roadmap preserves the standalone development plan prepared on 20 October 20
 10. Retain explicit offline calculation: any data update is a controlled, versioned operation.
 
 
+## RM-001/002 — D01 physical planet-centre source feasibility (started, blocked)
+
+The owner has selected **physical planet centres for Mars–Pluto as the intended commercial target identity**, while preserving the existing barycentre profile. [RM-001/002](prompts/002-physical-planet-centres-source-feasibility.md) adds an [official NAIF source matrix and qualification gates](p1-centre-source-feasibility.md), [offline SPK probe](../../../tools/datasets/audit_planet_centres.py) and kernel-independent tests. **Source discovery is not numerical qualification**: the local shell could not read the files, but GitHub Actions has since qualified **Jupiter's** source integrity, direct segments and nine-epoch CSPICE evaluator agreement in [the Jupiter evidence record](p1-jupiter-centre-qualification.md). The other five planet-centre sources and commercial source/accuracy qualification remain open. RM-001/002 is **Blocked** pending a verified-kernel runner; RM-001-P1 remains Planned, and the wider D01–D14 review remains open for owner decisions after PR #3's merge.
+
 ## Delivery plan
 
 | Phase | Outcome | Depends on | Status | Next action |
 | --- | --- | --- | --- | --- |
-| RM-001-P1 | Scope, calculation contracts and reproducible baseline | Existing source | Planned | RM-001/001 documents submitted for review on PR #3; resolve D01–D14 and rerun kernel qualification before full phase acceptance |
+| RM-001-P1 | Scope, calculation contracts and reproducible baseline | Existing source | Planned | RM-001/001 evidence in PR #3; RM-001/002 physical centre source audit blocked on real kernels; review D01–D14 and qualification before phase acceptance |
 | RM-001-P2 | Reliable everyday date/time entry | P1 | Planned | Define historical civil-time and managed time-data policies |
 | RM-001-P3 | Launch calculation capabilities | P1; P2 for civil-time qualification | Planned | Prioritise angle rates, nodes and derived points, then selected houses/zodiac/minor bodies |
 | RM-001-P4 | Integration with the Aria application | P1; applicable P2/P3 capabilities | Planned | Specify the persistent service and provider-neutral adapter contract |
@@ -76,7 +80,7 @@ requirement. Each advertised capability must pass its own gate.
 - [Candidate commercial launch scope and 14 owner decisions](p1-launch-scope-and-decisions.md) — **all decisions Open**; no launch exclusions approved.
 - [Qualification baseline and replay record](p1-qualification-baseline.md) — historical October evidence identified, current November source inspection verified; **numerical replay NOT RUN** because this shell has no repository checkout/network/kernel.
 
-The [RM-001/001 prompt](prompts/001-commercial-calculation-contract-and-baseline.md) is **In review** on [PR #3](https://github.com/DioneGate/ariaephemeris/pull/3), unmerged. These documentation deliverables **do not make P1 Done**: owner scope/gates and a new real-kernel replay remain necessary. P1–P8 are still Planned.
+The [RM-001/001 prompt](prompts/001-commercial-calculation-contract-and-baseline.md) was delivered via [PR #3](https://github.com/DioneGate/ariaephemeris/pull/3), **merged** at `df96380`; its documentation does not close the broader P1 qualification gate. These documentation deliverables **do not make P1 Done**: owner scope/gates and a new real-kernel replay remain necessary. P1–P8 are still Planned.
 
 
 Create an authoritative capability inventory shared by the engine team and application integration work. Define the first commercial calculation offering and identify any application capabilities that must initially be unavailable.
