@@ -9,7 +9,7 @@
 | Implementation prompts | [Prompt register](prompts/README.md) |
 | Framework | [Roadmap register and conventions](../README.md) |
 | Agent working rules | [Repository AGENTS.md](../../../AGENTS.md) |
-| Current main checked | [`22b8cdf`](https://github.com/DioneGate/ariaephemeris/commit/22b8cdfc321dccf05d2683e57728e8e49897f830), 2026-11-18 (prompt-authoring baseline) |
+| Current main checked | [`36a9cec`](https://github.com/DioneGate/ariaephemeris/commit/36a9cec742e8248fdee599b7cf620b2b19d12cc7), 2026-11-18 (RM-001/001 execution baseline; app main `4ab5f99`) |
 
 ## Outcome
 
@@ -54,7 +54,7 @@ This roadmap preserves the standalone development plan prepared on 20 October 20
 
 | Phase | Outcome | Depends on | Status | Next action |
 | --- | --- | --- | --- | --- |
-| RM-001-P1 | Scope, calculation contracts and reproducible baseline | Existing source | Planned | RM-001/001 prepared; review owner decisions and separately authorise delivery |
+| RM-001-P1 | Scope, calculation contracts and reproducible baseline | Existing source | Planned | RM-001/001 documents submitted for review on PR #3; resolve D01–D14 and rerun kernel qualification before full phase acceptance |
 | RM-001-P2 | Reliable everyday date/time entry | P1 | Planned | Define historical civil-time and managed time-data policies |
 | RM-001-P3 | Launch calculation capabilities | P1; P2 for civil-time qualification | Planned | Prioritise angle rates, nodes and derived points, then selected houses/zodiac/minor bodies |
 | RM-001-P4 | Integration with the Aria application | P1; applicable P2/P3 capabilities | Planned | Specify the persistent service and provider-neutral adapter contract |
@@ -68,6 +68,16 @@ unless historical research outside the initial interval is selected as a launch
 requirement. Each advertised capability must pass its own gate.
 
 ## RM-001-P1 — Scope, conventions and baseline
+
+### RM-001/001 execution deliverables (reviewable, not phase acceptance)
+
+- [Full 29-object and consumer capability matrix](p1-capability-matrix.md) — source-mapped app/engine differences and future fixtures.
+- [Proposed calculation contract](p1-calculation-contract.md) — target IDs, centres vs barycentres, time/frame/correction semantics, provider and error contracts.
+- [Candidate commercial launch scope and 14 owner decisions](p1-launch-scope-and-decisions.md) — **all decisions Open**; no launch exclusions approved.
+- [Qualification baseline and replay record](p1-qualification-baseline.md) — historical October evidence identified, current November source inspection verified; **numerical replay NOT RUN** because this shell has no repository checkout/network/kernel.
+
+The [RM-001/001 prompt](prompts/001-commercial-calculation-contract-and-baseline.md) is **In review** on [PR #3](https://github.com/DioneGate/ariaephemeris/pull/3), unmerged. These documentation deliverables **do not make P1 Done**: owner scope/gates and a new real-kernel replay remain necessary. P1–P8 are still Planned.
+
 
 Create an authoritative capability inventory shared by the engine team and application integration work. Define the first commercial calculation offering and identify any application capabilities that must initially be unavailable.
 
@@ -242,6 +252,4 @@ All proposals below remain open unless explicitly recorded as resolved by the ow
 
 ## Next planning action
 
-Review the prepared [RM-001/001 P1 implementation prompt](prompts/001-commercial-calculation-contract-and-baseline.md), resolve or explicitly track owner launch-scope and qualification choices, and separately authorise execution when appropriate. The planned first increment will document a calculation contract, capability inventory, qualification plan and reproducible baseline—not new astronomical algorithms.
-
-Preparing the prompt is roadmap administration only. Detailed capability, launch-scope and qualification deliverables remain outstanding; RM-001-P1 and the other phases stay Planned.
+Review [PR #3](https://github.com/DioneGate/ariaephemeris/pull/3) and its [RM-001/001 source/evidence deliverables](p1-capability-matrix.md); seek owner decisions D01–D14 from the [scope/decision register](p1-launch-scope-and-decisions.md), and arrange a network-enabled pinned runner for the [real-kernel replay](p1-qualification-baseline.md). The execution PR is a documentation-only submission and **must not be merged without explicit authorisation**. RM-001-P1 stays Planned until its calculation-contract/baseline gate is accepted; P2–P8 remain Planned.
