@@ -54,7 +54,7 @@ This roadmap preserves the standalone development plan prepared on 20 October 20
 
 | Phase | Outcome | Depends on | Status | Next action |
 | --- | --- | --- | --- | --- |
-| RM-001-P1 | Scope, calculation contracts and reproducible baseline | Existing source | Planned | RM-001/001 prepared; review owner decisions and separately authorise delivery |
+| RM-001-P1 | Scope, calculation contracts and reproducible baseline | Existing source | Planned | RM-001/001 documents submitted for review on PR #3; resolve D01–D14 and rerun kernel qualification before full phase acceptance |
 | RM-001-P2 | Reliable everyday date/time entry | P1 | Planned | Define historical civil-time and managed time-data policies |
 | RM-001-P3 | Launch calculation capabilities | P1; P2 for civil-time qualification | Planned | Prioritise angle rates, nodes and derived points, then selected houses/zodiac/minor bodies |
 | RM-001-P4 | Integration with the Aria application | P1; applicable P2/P3 capabilities | Planned | Specify the persistent service and provider-neutral adapter contract |
@@ -76,7 +76,7 @@ requirement. Each advertised capability must pass its own gate.
 - [Candidate commercial launch scope and 14 owner decisions](p1-launch-scope-and-decisions.md) — **all decisions Open**; no launch exclusions approved.
 - [Qualification baseline and replay record](p1-qualification-baseline.md) — historical October evidence identified, current November source inspection verified; **numerical replay NOT RUN** because this shell has no repository checkout/network/kernel.
 
-The [RM-001/001 prompt](prompts/001-commercial-calculation-contract-and-baseline.md) is in execution review. These documentation deliverables **do not make P1 Done**: owner scope/gates and a new real-kernel replay remain necessary. P1–P8 are still Planned.
+The [RM-001/001 prompt](prompts/001-commercial-calculation-contract-and-baseline.md) is **In review** on [PR #3](https://github.com/DioneGate/ariaephemeris/pull/3), unmerged. These documentation deliverables **do not make P1 Done**: owner scope/gates and a new real-kernel replay remain necessary. P1–P8 are still Planned.
 
 
 Create an authoritative capability inventory shared by the engine team and application integration work. Define the first commercial calculation offering and identify any application capabilities that must initially be unavailable.
@@ -252,4 +252,4 @@ All proposals below remain open unless explicitly recorded as resolved by the ow
 
 ## Next planning action
 
-Review the [RM-001/001 source/evidence deliverables](p1-capability-matrix.md), seek owner decisions D01–D14 from the [scope/decision register](p1-launch-scope-and-decisions.md), and arrange a network-enabled pinned runner for the [real-kernel replay](p1-qualification-baseline.md). The execution PR is a documentation-only submission and **must not be merged without explicit authorisation**. RM-001-P1 stays Planned until its calculation-contract/baseline gate is accepted; P2–P8 remain Planned.
+Review [PR #3](https://github.com/DioneGate/ariaephemeris/pull/3) and its [RM-001/001 source/evidence deliverables](p1-capability-matrix.md); seek owner decisions D01–D14 from the [scope/decision register](p1-launch-scope-and-decisions.md), and arrange a network-enabled pinned runner for the [real-kernel replay](p1-qualification-baseline.md). The execution PR is a documentation-only submission and **must not be merged without explicit authorisation**. RM-001-P1 stays Planned until its calculation-contract/baseline gate is accepted; P2–P8 remain Planned.
