@@ -1,0 +1,154 @@
+{
+  "schema_version": 1,
+  "date_utc": "2026-11-18",
+  "run_url": "https://github.com/DioneGate/ariaephemeris/actions/runs/44410508647",
+  "evidence_kind": "official-MD5-and-precommitted-SHA256-pinned source integrity, direct centre offset SPK segment coverage and independent CSPICE evaluator agreement from same source models",
+  "operating_window": "1900–2100 TT engine numerical interval, audited in TDB with one-second guard; not civil UTC date availability",
+  "thresholds": {
+    "position_residual_m": 1,
+    "velocity_residual_mm_s": 1
+  },
+  "accuracy_statement": "Observed CSPICE/jplephem agreement on selected source data, not the physical uncertainty of underlying JPL models and not full commercial release acceptance",
+  "sources": {
+    "mars": {
+      "target_id": 499,
+      "centre_id": 4,
+      "file": "mar099.bsp",
+      "bytes": 1227574272,
+      "sha256": "9991e57b196bae1a096acc6e2afc6718102ee420d684695de0f0333064c046bc",
+      "sample_count": 11,
+      "max_position_residual_m": 0.011407751322363319,
+      "max_velocity_residual_mm_s": 0.0000011987819510790463,
+      "segments": [
+        {
+          "index": 5,
+          "type": 2,
+          "frame": 1,
+          "start_jd_tdb": 2305447.5,
+          "end_jd_tdb": 2447575.5
+        },
+        {
+          "index": 2,
+          "type": 2,
+          "frame": 1,
+          "start_jd_tdb": 2447575.5,
+          "end_jd_tdb": 2670691.5
+        }
+      ],
+      "gaps": [],
+      "source_gate_pass": true
+    },
+    "saturn": {
+      "target_id": 699,
+      "centre_id": 6,
+      "file": "sat456.bsp",
+      "bytes": 120824832,
+      "sha256": "55ea388b1e60e0a8f11fdc12e53a245d653e3f1cbf6f7886209c7d5281f6f811",
+      "sample_count": 11,
+      "max_position_residual_m": 0.004566276007960988,
+      "max_velocity_residual_mm_s": 2.8494474669639488e-8,
+      "segments": [
+        {
+          "index": 89,
+          "type": 2,
+          "frame": 1,
+          "start_jd_tdb": 2360232.5,
+          "end_jd_tdb": 2456928.5
+        },
+        {
+          "index": 88,
+          "type": 2,
+          "frame": 1,
+          "start_jd_tdb": 2456928.5,
+          "end_jd_tdb": 2506338.5
+        }
+      ],
+      "gaps": [],
+      "source_gate_pass": true
+    },
+    "uranus": {
+      "target_id": 799,
+      "centre_id": 7,
+      "file": "ura184_part-3.bsp",
+      "bytes": 386885632,
+      "sha256": "273cd4ccc470d1098562cd4e94fa48fc2b4c6b1c2896308e473c949b87937c53",
+      "sample_count": 11,
+      "max_position_residual_m": 0.003216442480857859,
+      "max_velocity_residual_mm_s": 6.89411847443645e-9,
+      "segments": [
+        {
+          "index": 11,
+          "type": 2,
+          "frame": 1,
+          "start_jd_tdb": 2305450.5,
+          "end_jd_tdb": 2446278.5
+        },
+        {
+          "index": 5,
+          "type": 2,
+          "frame": 1,
+          "start_jd_tdb": 2446278.5,
+          "end_jd_tdb": 2597626.5
+        }
+      ],
+      "gaps": [],
+      "source_gate_pass": true
+    },
+    "neptune": {
+      "target_id": 899,
+      "centre_id": 8,
+      "file": "nep105.bsp",
+      "bytes": 210456576,
+      "sha256": "be2ea8cd16658c957e803c7896731c81ad1a8afe2caca6fbf87d7b68bc4392c7",
+      "sample_count": 11,
+      "max_position_residual_m": 0.0027392209274950162,
+      "max_velocity_residual_mm_s": 5.127800341738166e-9,
+      "segments": [
+        {
+          "index": 2,
+          "type": 2,
+          "frame": 1,
+          "start_jd_tdb": 2305450.5,
+          "end_jd_tdb": 2447830.5
+        },
+        {
+          "index": 3,
+          "type": 2,
+          "frame": 1,
+          "start_jd_tdb": 2447830.5,
+          "end_jd_tdb": 2597642.5
+        }
+      ],
+      "gaps": [],
+      "source_gate_pass": true
+    },
+    "pluto": {
+      "target_id": 999,
+      "centre_id": 9,
+      "file": "plu060.bsp",
+      "bytes": 135207936,
+      "sha256": "dfbb102491a26ed41ae08ca3f8963f22f0219df1d8f265ab87b9ad825a826fc6",
+      "sample_count": 11,
+      "max_position_residual_m": 0.0022309979524866227,
+      "max_velocity_residual_mm_s": 1.680008101867417e-8,
+      "segments": [
+        {
+          "index": 11,
+          "type": 2,
+          "frame": 1,
+          "start_jd_tdb": 2378497.5,
+          "end_jd_tdb": 2456293.5
+        },
+        {
+          "index": 5,
+          "type": 2,
+          "frame": 1,
+          "start_jd_tdb": 2456293.5,
+          "end_jd_tdb": 2524591.5
+        }
+      ],
+      "gaps": [],
+      "source_gate_pass": true
+    }
+  }
+}
