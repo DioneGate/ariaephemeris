@@ -18,12 +18,11 @@ from typing import Any
 
 import numpy as np
 import spiceypy as spice
+from audit_planet_centres import WINDOW_JD_TDB, inspect_segments, sha256
 from jplephem.spk import SPK
 
 from ariaephemeris.datasets import verify
 from ariaephemeris.sources import Kernel
-
-from audit_planet_centres import WINDOW_JD_TDB, inspect_segments, sha256
 
 JUPITER_MD5 = "c7ef9d1829bb39bbbc2ba30d4a5a8a05"
 MAX_POSITION_RESIDUAL_M = 1.0  # Initial evaluator-agreement gate, NOT physical model accuracy.
