@@ -9,6 +9,7 @@ on:
       - 'tools/datasets/audit_planet_centres.py'
       - 'tools/datasets/qualify_jupiter_centre.py'
       - 'tests/unit/test_planet_centre_audit.py'
+      - 'docs/roadmaps/001-engine-development/jupiter-source-manifest.json'
   pull_request:
     paths:
       - '.github/workflows/jupiter-centre-qualification.yml'
@@ -36,7 +37,7 @@ jobs:
           python -m pip install --no-deps -e .
       - name: Install and verify original Aria DE442s source
         run: ariaephemeris install-data .artifacts
-      - name: Fetch official JUP349 and validate published JPL MD5
+      - name: Fetch official JUP349 and validate independently pinned checksums
         run: |
           set -euo pipefail
           mkdir -p .artifacts/planet-centres
@@ -44,32 +45,41 @@ jobs:
             --retry 4 --retry-delay 4 --connect-timeout 25 --max-time 480 \
             https://naif.jpl.nasa.gov/pub/naif/generic_kernels/spk/satellites/jup349.bsp \
             -o .artifacts/planet-centres/jup349.bsp
-          echo 'c7ef9d1829bb39bbbc2ba30d4a5a8a05  .artifacts/planet-centres/jup349.bsp' | md5sum --check --status
-          echo 'Official JPL MD5 matched. Discovered SHA-256 (requires independent commit/pin):'
-          sha256sum .artifacts/planet-centres/jup349.bsp
-      - name: Run source segment coverage and DE442s-composition audit
+          python - <<'PY'
+          import hashlib, json
+          from pathlib import Path
+          m = json.loads(Path("docs/roadmaps/001-engine-development/jupiter-source-manifest.json").read_text())
+          p = Path(".artifacts/planet-centres/jup349.bsp")
+          for algo, expected in (("md5", m["published_md5"]), ("sha256", m["observed_sha256_pinned"])):
+              d = hashlib.new(algo)
+              with p.open("rb") as f:
+                  for block in iter(lambda: f.read(1024 * 1024), b""):
+                      d.update(block)
+              if d.hexdigest() != expected:
+                  raise SystemExit(f"JUP349 {algo} mismatch")
+          print(f"JUP349 source verified: {p.stat().st_size} bytes, SHA256 {m['observed_sha256_pinned']}")
+          PY
+      - name: Run pinned SPK segment coverage and DE442s-composition audit
         run: |
           set -euo pipefail
-          # Discovery pass: SHA-256 not yet independently approved. The audit
-          # intentionally returns 1, never reporting this as a pinned source.
-          set +e
+          source_sha=$(python -c 'import json; print(json.load(open("docs/roadmaps/001-engine-development/jupiter-source-manifest.json"))["observed_sha256_pinned"])')
           python tools/datasets/audit_planet_centres.py \
             --kernel jupiter=.artifacts/planet-centres/jup349.bsp \
+            --expected-sha256 "jupiter=$source_sha" \
             --base .artifacts/de442s.bsp --sample-jd-tdb 2451545.0 \
             --output .artifacts/jupiter-segment-audit.json
-          status=$?
-          set -e
-          test "$status" -eq 1
-          python -c 'import json; r=json.load(open(".artifacts/jupiter-segment-audit.json")); j=r["source_checks"]["jupiter"]; assert r["coverage_pass"] and j["reader_and_coverage_pass"] and "sample" in j; assert not r["source_identity_pinned"]'
-      - name: Compare Jupiter physical centres with independently evaluated CSPICE
+          python -c 'import json; r=json.load(open(".artifacts/jupiter-segment-audit.json")); j=r["source_checks"]["jupiter"]; assert r["coverage_pass"] and r["source_identity_pinned"] and j["reader_and_coverage_pass"] and "sample" in j'
+      - name: Compare physical centres with independently evaluated CSPICE
         run: |
+          source_sha=$(python -c 'import json; print(json.load(open("docs/roadmaps/001-engine-development/jupiter-source-manifest.json"))["observed_sha256_pinned"])')
           python tools/datasets/qualify_jupiter_centre.py \
             --base .artifacts/de442s.bsp \
             --jupiter .artifacts/planet-centres/jup349.bsp \
+            --expected-sha256 "$source_sha" \
             --output .artifacts/jupiter-cspice-comparison.json
-      - name: Validate report structure and preserve source digest
+      - name: Validate qualification output
         run: |
-          python -c 'import json; r=json.load(open(".artifacts/jupiter-cspice-comparison.json")); assert r["evaluator_agreement_pass"]; assert r["source"]["satellite_md5_checked"]==r["source"]["satellite_published_md5"]; assert not r["source"]["satellite_sha256_pinned_independently"]; print("JUP349 independent evaluator pass; SHA-256 awaiting source-manifest approval")'
+          python -c 'import json; r=json.load(open(".artifacts/jupiter-cspice-comparison.json")); assert r["evaluator_agreement_pass"]; assert r["source"]["satellite_md5_checked"]==r["source"]["satellite_published_md5"]; assert r["source"]["satellite_sha256_pinned_independently"]; print("JUP349 pinned-source and evaluator qualification passed")'
       - name: Upload evidence (never upload production SPK binaries)
         if: always()
         uses: actions/upload-artifact@v4
