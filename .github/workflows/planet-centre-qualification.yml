@@ -86,4 +86,5 @@ jobs:
           name: rm-001-002-${{ matrix.planet }}-source-evidence
           path: .artifacts/*-centre-qualification.json
           if-no-files-found: warn
+          include-hidden-files: true
           retention-days: 30
