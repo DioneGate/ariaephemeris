@@ -57,7 +57,7 @@ CSPICE loads `jup349.bsp` **first** and verified `de442s.bsp` **second** so the 
 | Barycentric geometric velocity | **9.54658 × 10⁻⁸ mm/s** | 1 mm/s | **Pass** |
 
 - Initial run: [GitHub Actions #44402646337](https://github.com/DioneGate/ariaephemeris/actions/runs/44402646337) — discovery MD5 check, coverage and nine-epoch CSPICE comparison passed; SHA-256 was recorded but not yet pre-pinned for that run.
-- Pinned-source run: [GitHub Actions #44402922404](https://github.com/DioneGate/ariaephemeris/actions/runs/44402922404) — subsequent workflow validates **committed SHA-256** and reruns coverage and CSPICE comparison. The qualification steps passed; use workflow's terminal status when citing its complete CI outcome.
+- Pinned-source run: [GitHub Actions #44402922404](https://github.com/DioneGate/ariaephemeris/actions/runs/44402922404) — subsequent workflow validates **committed SHA-256** and reruns coverage and CSPICE comparison. **Workflow completed successfully** (pinned MD5/SHA-256, audit, CSPICE comparison and evidence upload).
 - Audit evidence is uploaded in a **non-SPK** JSON artifact attached to each workflow run, not in the repository or the production application.
 
 **Meaning of 'independent':** this tests two separate computational implementations on the **same source kernels**, not two independent planetary theories. It does **not** establish physical source accuracy, equivalence to a separately configured Horizons solution, apparent/geocentric chart accuracy, interpolation continuity for every instant, or a claim beyond the nine sampled epochs.
