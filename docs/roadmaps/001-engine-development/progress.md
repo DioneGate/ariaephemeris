@@ -86,6 +86,14 @@ Branch: [`docs/rm-001-001-commercial-calculation-contract-20261118`](https://git
 
 **Actual limitations:** shell `curl` to NAIF/JPL failed DNS (`Could not resolve host`); host lacks `jplephem`, `spiceypy`, DE442s and six supplementary SPKs. **All real-kernel centre inspection, composed Jupiter state, reference residual, compact-pack measurement and independent numerical qualification NOT RUN.** The synthetic tests are subject to CI reporting and cannot substitute for numerical evidence. Prompt **Blocked** pending a controlled runner; RM-001-P1 **Planned**; no merge, release or deployment approved.
 
+## RM-001/002 WP1/WP2 Jupiter real-kernel execution — 2026-11-18
+
+**Passing evidence:** [initial Jupiter workflow #44402646337](https://github.com/DioneGate/ariaephemeris/actions/runs/44402646337) downloaded `jup349.bsp` (97,525,760 bytes), verified NAIF published MD5 `c7ef9d1829bb39bbbc2ba30d4a5a8a05`, observed SHA-256 `a8f682fd0f156db47ee9672e0276f0842eb70d3ade8533fed59e38b6d5032971` and verified two 599/5 type-2/frame-1 SPK segments with no gaps across 1900–2100. A separate commit pinned SHA-256 in [source manifest](jupiter-source-manifest.json); [pinned workflow #44402922404](https://github.com/DioneGate/ariaephemeris/actions/runs/44402922404) **completed successfully**, including both checksums, pinned auditor, nine geometric/J2000 TDB samples compared with CSPICE, and artifact upload.
+
+**Measured residuals:** maximum position disagreement **0.0059855203 m**, velocity disagreement **9.54658e-8 mm/s**, against provisional same-source evaluator limits of 1 m and 1 mm/s. Details including J2000 state, direct segment spans and limitations in [Jupiter qualification record](p1-jupiter-centre-qualification.md). **This is same-kernel independent evaluator agreement, NOT physical astronomical model accuracy nor commercial launch qualification.** The local shell DNS obstacle was bypassed by a GitHub Actions runner. Existing engine outputs and Aria Galaxy code unchanged.
+
+**Status:** Jupiter WP1/WP2 **completed with passing evidence**, remaining five centre source kernels and six-body packaging source feasibility **Blocked**; RM-001-P1 **Planned**, RM-001/002 overall not Done, PR #4 draft and unmerged.
+
 ## Delivery log
 
 | Date | Phase/prompt | Change and evidence | Validation | Deployment |
