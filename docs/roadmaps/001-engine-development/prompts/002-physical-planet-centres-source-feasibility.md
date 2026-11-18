@@ -5,12 +5,12 @@
 | Roadmap | [RM-001 — Engine development and commercial readiness](../README.md) |
 | Phase | RM-001-P1 (D01 source feasibility); prerequisite for selected RM-001-P3 calculations |
 | Generated / started | 2026-11-18 |
-| Baseline | Aria Ephemeris main `36a9cec742e8248fdee599b7cf620b2b19d12cc7`; Aria Galaxy unchanged |
+| Baseline | Aria Ephemeris main `df96380ee851e3aeac1962ec6010807342f3b7da` (PR #3 merged; engine still 0.1.0); Aria Galaxy unchanged |
 | Product direction | Physical planet centres for Mars–Pluto, retain original barycentre mode; selected source/kernels and numeric standards require evidence and approval |
 | Working branch | `feature/rm-001-002-centre-source-feasibility-20261118` |
 | Prompt status | **Blocked** for real-kernel source qualification; code and documentary evidence committed for review |
 
-Follow [AGENTS.md](../../../../AGENTS.md) and the [source feasibility evidence](../p1-centre-source-feasibility.md). RM-001/001's separate [PR #3](https://github.com/DioneGate/ariaephemeris/pull/3) remains unmerged; this task does not silently accept its remaining D02–D14 decisions.
+Follow [AGENTS.md](../../../../AGENTS.md) and the [source feasibility evidence](../p1-centre-source-feasibility.md). RM-001/001's separate [PR #3](https://github.com/DioneGate/ariaephemeris/pull/3) has merged into main at `df96380`; this task does not silently accept the outstanding D02–D14 decisions.
 
 ## Objective and expected behaviour
 
