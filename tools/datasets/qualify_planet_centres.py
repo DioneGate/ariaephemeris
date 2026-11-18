@@ -77,8 +77,7 @@ def choose_segment(rows: list[dict[str, Any]], jd: float) -> dict[str, Any]:
     candidates = [
         row
         for row in rows
-        if row["supported_by_current_reader"]
-        and row["start_jd_tdb"] <= jd <= row["end_jd_tdb"]
+        if row["supported_by_current_reader"] and row["start_jd_tdb"] <= jd <= row["end_jd_tdb"]
     ]
     if not candidates:
         raise ValueError(f"No supported direct centre offset covering JD TDB {jd}")
@@ -180,8 +179,7 @@ def qualify(
                     base_m = float(np.linalg.norm(base_p - base_ref[:3]) * 1000)
                     offset_m = float(np.linalg.norm(offset_p - offset_ref[:3]) * 1000)
                     composition_m = float(
-                        np.linalg.norm(base_ref[:3] + offset_ref[:3] - physical_ref[:3])
-                        * 1000
+                        np.linalg.norm(base_ref[:3] + offset_ref[:3] - physical_ref[:3]) * 1000
                     )
                     if not all(
                         math.isfinite(x)
