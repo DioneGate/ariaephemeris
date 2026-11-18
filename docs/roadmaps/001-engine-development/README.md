@@ -3,13 +3,13 @@
 | Field | Value |
 | --- | --- |
 | Product owner | Marek / DioneGate |
-| Last reviewed | 2026-11-15 (commercial-readiness review; no phase implementation) |
+| Last reviewed | 2026-11-18 (RM-001/001 prompt preparation; no phase implementation) |
 | Inspected implementation baseline | [`39b25ae`](https://github.com/DioneGate/ariaephemeris/commit/39b25aec9023bcc79172a0f0cf7aed373efafc89), package 0.1.0 |
 | Progress and evidence | [progress.md](progress.md) |
 | Implementation prompts | [Prompt register](prompts/README.md) |
 | Framework | [Roadmap register and conventions](../README.md) |
 | Agent working rules | [Repository AGENTS.md](../../../AGENTS.md) |
-| Current main checked | [`0791564`](https://github.com/DioneGate/ariaephemeris/commit/079156477e57959877c63b4047ca1b7163f498de), 2026-11-15 |
+| Current main checked | [`22b8cdf`](https://github.com/DioneGate/ariaephemeris/commit/22b8cdfc321dccf05d2683e57728e8e49897f830), 2026-11-18 (prompt-authoring baseline) |
 
 ## Outcome
 
@@ -32,7 +32,7 @@ This roadmap preserves the standalone development plan prepared on 20 October 20
 - Existing 0.1.0 features are reusable foundations, not completion of these phases.
 - Keep Python as the baseline and scientific validation implementation; investigate Rust only through measured, qualified proof-of-concept work, not as an assumed launch dependency.
 - **MVP commercial release:** P1–P6 gates apply only to the explicitly selected launch scope. P7–P8 remain optional unless a requirement makes them mandatory.
-- All eight phases below are Planned. No delivery prompt has been generated.
+- All eight phases below are Planned. [RM-001/001](prompts/001-commercial-calculation-contract-and-baseline.md) has been prepared as a documentation-only task definition; it is not executed.
 - The earlier outline's AE-01 through AE-08 map in order to RM-001-P1 through
   RM-001-P8. Use the repository-scoped RM identifiers for future work.
 
@@ -54,7 +54,7 @@ This roadmap preserves the standalone development plan prepared on 20 October 20
 
 | Phase | Outcome | Depends on | Status | Next action |
 | --- | --- | --- | --- | --- |
-| RM-001-P1 | Scope, calculation contracts and reproducible baseline | Existing source | Planned | When requested, generate RM-001/001 for a bounded contract/baseline increment |
+| RM-001-P1 | Scope, calculation contracts and reproducible baseline | Existing source | Planned | RM-001/001 prepared; review owner decisions and separately authorise delivery |
 | RM-001-P2 | Reliable everyday date/time entry | P1 | Planned | Define historical civil-time and managed time-data policies |
 | RM-001-P3 | Launch calculation capabilities | P1; P2 for civil-time qualification | Planned | Prioritise angle rates, nodes and derived points, then selected houses/zodiac/minor bodies |
 | RM-001-P4 | Integration with the Aria application | P1; applicable P2/P3 capabilities | Planned | Specify the persistent service and provider-neutral adapter contract |
@@ -242,11 +242,6 @@ All proposals below remain open unless explicitly recorded as resolved by the ow
 
 ## Next planning action
 
-When requested, generate the first bounded P1 prompt using the
-[implementation prompt template](../templates/implementation-prompt.md).
-Its intended outcome is a calculation contract, capability inventory, qualification
-plan and safely reproduced baseline—not new astronomical algorithms.
+Review the prepared [RM-001/001 P1 implementation prompt](prompts/001-commercial-calculation-contract-and-baseline.md), resolve or explicitly track owner launch-scope and qualification choices, and separately authorise execution when appropriate. The planned first increment will document a calculation contract, capability inventory, qualification plan and reproducible baseline—not new astronomical algorithms.
 
-The initial records created here are roadmap administration only. Detailed
-capability, launch-scope and qualification documents should be added by their
-authorised phase increments; their absence must not be mistaken for completed P1.
+Preparing the prompt is roadmap administration only. Detailed capability, launch-scope and qualification deliverables remain outstanding; RM-001-P1 and the other phases stay Planned.
