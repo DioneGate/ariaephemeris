@@ -53,12 +53,23 @@ The latest checked `main` is [`0791564`](https://github.com/DioneGate/ariaepheme
 
 This **documentation-only** review adds repository agent governance and makes the existing RM-001 commercial-release boundary more explicit: provider-call inventory, application migration evidence, planetary barycentre/centre compatibility, staged Python performance optimisation and a benchmark-gated Rust proof of concept. No P1–P8 delivery phase was implemented or accepted. No tests, kernel qualification, benchmarks, application integration, release or deployment were executed as part of this review. The documentation changes are committed on a dedicated branch and proposed in [PR #1](https://github.com/DioneGate/ariaephemeris/pull/1); the PR is not merged and no implementation phase status changed.
 
+## Prompt preparation — 2026-11-18
+
+Rechecked **Aria Ephemeris main** at [`22b8cdf`](https://github.com/DioneGate/ariaephemeris/commit/22b8cdfc321dccf05d2683e57728e8e49897f830), package 0.1.0, and inspected **Aria Galaxy (DioneGate/archetypal-activation) main** read-only at [`4ab5f99`](https://github.com/DioneGate/archetypal-activation/commit/4ab5f99f277d9c9a221bcf911a820fd9eda50972).
+
+Created [RM-001/001](prompts/001-commercial-calculation-contract-and-baseline.md) from the standard implementation-prompt template. It is an **unexecuted** bounded P1 source/contract inventory, proposed launch-scope and repeatable baseline task. Inspected the engine's models, conventions, qualification, architecture, licence documentation and the application's frontend ephemeris adapter, native backend ephemeris and chart call paths, chart data/analysis contracts, object registry, local time resolution and activation ownership. Explicit differences include Aria planetary-system barycentres versus centre-sensitive chart expectations; current application provider/provenance schema literals; apparent chart versus true-position activation defaults; 0001–2999 application date contract versus the engine's 1900–2100 TT operational interval and narrower civil time; unsupported nodes, Placidus, Lahiri and optional derived points.
+
+Branch: [`docs/rm-001-001-commercial-calculation-contract-20261118`](https://github.com/DioneGate/ariaephemeris/tree/docs/rm-001-001-commercial-calculation-contract-20261118); [PR #2](https://github.com/DioneGate/ariaephemeris/pull/2) **open, not merged**. Prompt status is **Planned**; RM-001-P1 through P8 remain Planned. Owner launch scope and accuracy/date/provider/schema choices remain open; future prompt execution requires separate authorisation.
+
+**Verification boundary:** GitHub source/Markdown inspection and read-back only; no numerical code change, tests, kernel download, qualification, benchmark, HTTP service, application commit, release or deployment. Historical numerical/test results above are not rerun or promoted to contemporary passes. Separately verified [PR #1's 15 November merge](https://github.com/DioneGate/ariaephemeris/commit/22b8cdfc321dccf05d2683e57728e8e49897f830); the preceding review entry described PR #1 as open *at that earlier review time*.
+
 ## Delivery log
 
 | Date | Phase/prompt | Change and evidence | Validation | Deployment |
 | --- | --- | --- | --- | --- |
 | 2026-10-20 | Planning administration only | Saved the standalone eight-phase plan, roadmap register, reusable templates and empty prompt register | Existing framework/source inspection; new document links, identifiers, status consistency and scope checked | Documentation only; no runtime deployment |
-| 2026-11-15 | RM-001 documentation review | Added AGENTS.md and refined RM-001 on [docs branch](https://github.com/DioneGate/ariaephemeris/tree/docs/agents-rm001-commercial-readiness-20261115); [PR #1](https://github.com/DioneGate/ariaephemeris/pull/1) opened for review (not merged) | GitHub repository and documentation inspection only; numerical tests not run | Documentation only; no runtime deployment |
+| 2026-11-15 | RM-001 documentation review | Added AGENTS.md and refined RM-001 on [docs branch](https://github.com/DioneGate/ariaephemeris/tree/docs/agents-rm001-commercial-readiness-20261115); [PR #1](https://github.com/DioneGate/ariaephemeris/pull/1) opened for review then merged at `22b8cdf` on 15 November | GitHub repository and documentation inspection only; numerical tests not run | Documentation only; no runtime deployment |
+| 2026-11-18 | RM-001/001 prompt preparation (not execution) | Authored P1 [prompt](prompts/001-commercial-calculation-contract-and-baseline.md), updated registers/index; [PR #2](https://github.com/DioneGate/ariaephemeris/pull/2) open for review, unmerged | Both repository heads and relevant source/contracts inspected read-only; Markdown read-back pending, numerical tests and kernel checks not run | Documentation only; no application/runtime deployment |
 
 Record subsequent increments here with exact phase/prompt ID, branch/PR,
 review/merge evidence, commands/results, remaining gaps and deployed-version
@@ -67,7 +78,4 @@ The roadmap README owns phase status; this log owns evidence.
 
 ## Next action
 
-Await the owner's request to generate the first bounded P1 implementation prompt.
-Then recheck main, inspect current contracts and register RM-001/001 with its
-actual readiness, dependencies and source baseline. No delivery prompt is created
-or executed by the roadmap-registration task.
+Review and approve or amend the [RM-001/001 prompt](prompts/001-commercial-calculation-contract-and-baseline.md) in [PR #2](https://github.com/DioneGate/ariaephemeris/pull/2). Resolve or track outstanding scope/conventions/qualification owner decisions and separately authorise P1 execution. Recheck both `main` branches before any implementation or evidence runs. Do **not** mark RM-001/001 or RM-001-P1 Done from prompt generation, documentation merge, or unexecuted test instructions.
