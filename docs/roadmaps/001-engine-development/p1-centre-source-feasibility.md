@@ -4,7 +4,7 @@
 **Programme:** [RM-001](README.md), P1 decision D01 / P3 source prerequisite  
 **Repository branch base:** Aria Ephemeris `main` at `df96380ee851e3aeac1962ec6010807342f3b7da` (merged PR #3, package 0.1.0; numerical implementation unchanged from the inspected `36a9cec` baseline).  
 **Work branch:** `feature/rm-001-002-centre-source-feasibility-20261118`  
-**State:** Jupiter WP1/WP2 **completed with passing pinned-source binary and CSPICE checks** on GitHub Actions; source qualification for the **other five planets remains NOT RUN**. No commercial release qualification.
+**State:** **All six** physical planet-centre candidate SPK sources have passed original-source integrity, direct-segment binary coverage and independent **same-source CSPICE evaluator** checks across selected epochs. Jupiter [WP1/WP2](p1-jupiter-centre-qualification.md); remaining five [WP3](p1-five-centres-qualification.md). **No commercial release or absolute physical-accuracy qualification.**
 
 ## Objective and explicit product decision
 
@@ -21,20 +21,20 @@ The immediate RM-001/002 objective is not to change `BODY_IDS` or replace chart 
 - Horizons explanation of centre-offset dependence on satellite solutions: https://ssd.jpl.nasa.gov/horizons/manual.html
 - Data-use and modified-kernel responsibilities: https://naif.jpl.nasa.gov/naif/rules.html
 
-**Evidence classification:** the six-source matrix below reflects official published summaries. **Jupiter now additionally has actual binary, pinned-source, composed-state and CSPICE evidence** in [the Jupiter qualification record](p1-jupiter-centre-qualification.md). The other five sources still have only publication-summary evidence. NAIF's `BRIEF` summary coverage may cover many segments; the target's **exact segment continuity/type/frame must be inspected from the actual bytes**.
+**Evidence classification:** original source candidates and MD5 values were discovered from NAIF's published summaries. Actual downloaded files, SHA-256 pins, compatible direct segments, continuous interval coverage and CSPICE same-source evaluator results are established for **all six** in [Jupiter evidence](p1-jupiter-centre-qualification.md) and [WP3 five-source evidence](p1-five-centres-qualification.md). This remains a bounded numerical evaluator test, not independent physical-model accuracy. NAIF's `BRIEF` summary coverage may cover many segments; the target's **exact segment continuity/type/frame must be inspected from the actual bytes**.
 
 ## Candidate source matrix
 
 | Body | Aria v0.1.0 barycentre | Required physical centre | Candidate satellite SPK (NAIF) | Published `BRIEF` range (ET) | Published MD5 | Work status |
 | --- | ---: | ---: | --- | --- | --- | --- |
-| Mars | 4 | 499 | `mar099.bsp` (~1.1 GB) | 1600-01-01 to 2600-01-02 | `46f5740f86ec78b978ab96a82f0e42b7` | Target pair and nominal range documented; binary not read |
+| Mars | 4 | 499 | `mar099.bsp` (~1.1 GB) | 1600-01-01 to 2600-01-02 | `46f5740f86ec78b978ab96a82f0e42b7` | **WP3 PASS** — real binary/type/frame/coverage and CSPICE evidence; [record](p1-five-centres-qualification.md) |
 | Jupiter | 5 | 599 | `jup349.bsp` (~93 MB) | 1799-01-16 to 2199-12-15 | `c7ef9d1829bb39bbbc2ba30d4a5a8a05` | **WP1/WP2 verified**, pinned 97,525,760-byte SPK, two type-2/frame-1 segments, zero gaps, 9-epoch CSPICE agreement; [evidence](p1-jupiter-centre-qualification.md) |
-| Saturn | 6 | 699 | `sat456.bsp` (~115 MB) | 1749-12-12 to 2150-01-08; centre's `BRIEF` range starts 1749-12-30 | `4c66748ca3209d0e66ff29954ab1ee64` | Per-target range needs audit; binary not read |
-| Uranus | 7 | 799 | `ura184_part-3.bsp` (~369 MB) | 1600-01-04 to 2399-12-17 | `cf24471fb9037543cdbe168bc0fd4c2e` | Newer URA184 centre target listed; binary not read |
-| Neptune | 8 | 899 | `nep105.bsp` (~201 MB) | 1600-01-04 to 2400-01-02 | `2c32f77dd972c1a7d80e0c57d9cde2e9` | Target pair and nominal range documented; binary not read |
-| Pluto | 9 | 999 | `plu060.bsp` (~129 MB) | 1800-01-02 to 2199-12-30 | `9e8d40339d583273feb94bbf8c95cae4` | Target pair and nominal range documented; binary not read |
+| Saturn | 6 | 699 | `sat456.bsp` (~115 MB) | 1749-12-12 to 2150-01-08; centre's `BRIEF` range starts 1749-12-30 | `4c66748ca3209d0e66ff29954ab1ee64` | **WP3 PASS** — per-target binary coverage independently audited; [record](p1-five-centres-qualification.md) |
+| Uranus | 7 | 799 | `ura184_part-3.bsp` (~369 MB) | 1600-01-04 to 2399-12-17 | `cf24471fb9037543cdbe168bc0fd4c2e` | **WP3 PASS** — real binary/type/frame/coverage and CSPICE evidence; [record](p1-five-centres-qualification.md) |
+| Neptune | 8 | 899 | `nep105.bsp` (~201 MB) | 1600-01-04 to 2400-01-02 | `2c32f77dd972c1a7d80e0c57d9cde2e9` | **WP3 PASS** — real binary/type/frame/coverage and CSPICE evidence; [record](p1-five-centres-qualification.md) |
+| Pluto | 9 | 999 | `plu060.bsp` (~129 MB) | 1800-01-02 to 2199-12-30 | `9e8d40339d583273feb94bbf8c95cae4` | **WP3 PASS** — real binary/type/frame/coverage and CSPICE evidence; [record](p1-five-centres-qualification.md) |
 
-For every row, `aa_summaries.txt` explicitly reports `centre target w.r.t. parent planetary barycentre`. **These candidates appear capable of spanning 1900–2100** according to the published text, but a definitive continuous, supported-segment conclusion is **not yet verified**. JPL's catalogue lists 1900–2100 nominally for other sources too; we favour the candidate solutions above for the starting audit, not as a frozen commercial selection.
+For every row, `aa_summaries.txt` explicitly reports `centre target w.r.t. parent planetary barycentre`. **The selected direct centre segments have now been confirmed by binary inspection to cover 1900–2100** without gaps in their type-2, frame-1 records (with a small TDB boundary guard). JPL's catalogue lists 1900–2100 nominally for other sources too; we favour the candidate solutions above for the starting audit, not as a frozen commercial selection.
 
 **Alternatives:** `mar099s.bsp` is only 1995–2050 (pilot only); `jup348.bsp` (~57 MB) is an additional candidate; `sat441.bsp` (~631 MB) and `ura184_part-1/2.bsp` are alternatives. `ura184_part-3` has the broader `BRIEF` interval and reports the 799/7 relation. No undocumented assumptions about one solution being more accurate than another have been made.
 
@@ -82,21 +82,21 @@ Independent oracle step: using **CSPICE** with exactly the same chosen planetary
 | Gate | Required observable evidence | Status 2026-11-18 |
 | --- | --- | --- |
 | F1 — source discovery | Six centre IDs, parent IDs, named kernels, nominal intervals, published checksums and official URLs | **Documented from NAIF text** |
-| F2 — binary compatibility | For every source, real SPK segment IDs/types/frames, complete 1900–2100 centre-only continuity, source SHA-256 pinned | **Jupiter PASS; five other planets NOT RUN** |
+| F2 — binary compatibility | For every source, real SPK segment IDs/types/frames, complete 1900–2100 centre-only continuity, source SHA-256 pinned | **ALL SIX PASS** — [Jupiter](p1-jupiter-centre-qualification.md), [WP3](p1-five-centres-qualification.md) |
 | F3 — Jupiter sample | One centre state and velocity = verified DE442s Jupiter barycentre + JUP349 direct offset; numerical values recorded | **PASS — recorded J2000 TDB state** in [qualification evidence](p1-jupiter-centre-qualification.md) |
-| F4 — independence | CSPICE/Horizons appropriately matched epoch/source comparison with explicit residuals and tolerances | **Jupiter CSPICE evaluator PASS** at 9 sampled epochs, with limits and full source identity; separate physical-model/Horizons accuracy NOT established |
+| F4 — independence | CSPICE/Horizons appropriately matched epoch/source comparison with explicit residuals and tolerances | **ALL SIX pass same-kernel CSPICE evaluator gates** (Jupiter 9 samples, others 11 each); *physical model accuracy and independently modelled Horizons comparisons not established* |
 | F5 — packaging feasibility | Exactly required SPK records, measured size and reproducible compact generation, modified-kernel metadata/credits review | **DESIGN ONLY; no pack built** |
 | F6 — regression safety | Audit unit checks and existing `pytest -m 'not kernel'`, lint, type/package checks on real development runner | **Fast CI passed** previously; [Jupiter pinned workflow](https://github.com/DioneGate/ariaephemeris/actions/runs/44402922404) **passed**. Further revisions require CI review |
 
 ## Environment and blockers
 
-The **local command-line shell** could not resolve JPL hosts and lacked the numerical dependencies. However **GitHub Actions did successfully install DE442s, download published-MD5-verified JUP349, inspect its binary, pin source SHA-256 in a separate commit, evaluate a J2000 composed state and compare nine epochs with CSPICE**. See [Jupiter qualification](p1-jupiter-centre-qualification.md) and [passing pinned workflow](https://github.com/DioneGate/ariaephemeris/actions/runs/44402922404). The distinction matters: Jupiter source/evaluator checks passed; other-five-source SPK checks and physical-model accuracy remain unverified. The repo's historical Oct 2026 qualification applies to its original barycentre targets only.
+The local command-line shell could not resolve JPL hosts, but **GitHub Actions** obtained and checksum-pinned all six source files, audited direct segment coverage and ran matched-convention CSPICE evaluator comparisons. See [Jupiter](p1-jupiter-centre-qualification.md) and [all five WP3 records](p1-five-centres-qualification.md), including the [successful five-source pinned run](https://github.com/DioneGate/ariaephemeris/actions/runs/44410508647). Absolute physical ephemeris accuracy and model compatibility between all chosen JPL solutions and DE442s remain distinct gates. October v0.1.0 numerical qualifications cover original barycentre targets only.
 
 ## Next implementation step
 
 1. **Completed:** downloaded and MD5/SHA-256 pinned JUP349, audited both 599/5 segments and the full operating window, and sampled a DE442s-composed J2000 state.
-2. **Completed for evaluator agreement:** CSPICE comparison at nine TDB epochs passed the candidate 1 m / 1 mm/s limits; independent physical accuracy is not claimed. Run full six-source audit and qualify the five remaining planet-centre offsets.
+2. **Completed for all six source/evaluator gates:** Jupiter 9 epochs and five other planets 11 epochs each pass the candidate 1 m / 1 mm/s same-source evaluator thresholds. [WP3 qualification report](p1-five-centres-qualification.md). Independent physical accuracy is not claimed.
 3. Assess actual centre-only SPK extraction size and redistribution obligations (NAIF requires renamed producer-attributed modified kernels, comments and validation). Avoid a commercial distribution decision until measured.
-4. With successful and reviewed evidence, authorise WP2 multi-kernel resolution and WP3 named `planet-centres-v1` calculation profile; preserve the original v0.1.0 barycentre behaviour.
+4. **Next code workstream (separate authorisation):** implement multi-kernel resolution and the named `planet-centres-v1` calculation profile, preserving original v0.1.0 barycentre behaviour. Production packaging and broader model compatibility/release qualification remain open.
 
-**No engine targets, chart output defaults, Aria Galaxy code, package, release or deployment have been changed by RM-001/002.**
+**No engine targets, chart output defaults, Aria Galaxy code, package, release or deployment have been changed by RM-001/002 WP1–WP3.**
