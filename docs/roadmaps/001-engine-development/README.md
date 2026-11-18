@@ -50,11 +50,15 @@ This roadmap preserves the standalone development plan prepared on 20 October 20
 10. Retain explicit offline calculation: any data update is a controlled, versioned operation.
 
 
+## RM-001/002 — D01 physical planet-centre source feasibility (started, blocked)
+
+The owner has selected **physical planet centres for Mars–Pluto as the intended commercial target identity**, while preserving the existing barycentre profile. [RM-001/002](prompts/002-physical-planet-centres-source-feasibility.md) adds an [official NAIF source matrix and qualification gates](p1-centre-source-feasibility.md), [offline SPK probe](../../../tools/datasets/audit_planet_centres.py) and kernel-independent tests. **Source discovery is not numerical qualification**: the current execution host cannot download/read the actual satellite files and no independent Jupiter state comparison has run. RM-001/002 is **Blocked** pending a verified-kernel runner; RM-001-P1 remains Planned, and the wider D01–D14 review remains open on PR #3.
+
 ## Delivery plan
 
 | Phase | Outcome | Depends on | Status | Next action |
 | --- | --- | --- | --- | --- |
-| RM-001-P1 | Scope, calculation contracts and reproducible baseline | Existing source | Planned | RM-001/001 documents submitted for review on PR #3; resolve D01–D14 and rerun kernel qualification before full phase acceptance |
+| RM-001-P1 | Scope, calculation contracts and reproducible baseline | Existing source | Planned | RM-001/001 evidence in PR #3; RM-001/002 physical centre source audit blocked on real kernels; review D01–D14 and qualification before phase acceptance |
 | RM-001-P2 | Reliable everyday date/time entry | P1 | Planned | Define historical civil-time and managed time-data policies |
 | RM-001-P3 | Launch calculation capabilities | P1; P2 for civil-time qualification | Planned | Prioritise angle rates, nodes and derived points, then selected houses/zodiac/minor bodies |
 | RM-001-P4 | Integration with the Aria application | P1; applicable P2/P3 capabilities | Planned | Specify the persistent service and provider-neutral adapter contract |
