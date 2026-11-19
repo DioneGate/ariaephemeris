@@ -21,7 +21,7 @@ BODY_IDS = {
     "neptune": 8,
     "pluto": 9,
 }
-DEFAULT_BODIES = tuple(b for b in BODY_IDS if b != "earth")
+PHYSICAL_BODY_IDS = {\n    **BODY_IDS,\n    "mars": 499,\n    "jupiter": 599,\n    "saturn": 699,\n    "uranus": 799,\n    "neptune": 899,\n    "pluto": 999,\n}\nDEFAULT_BODIES = tuple(b for b in BODY_IDS if b != "earth")
 
 
 @dataclass(frozen=True)
@@ -183,6 +183,7 @@ class EventRequest:
     max_step_days: float = 0.25
     max_evaluations: int = 200000
     strict: bool = True
+    profile: str = "reference"
 
     def __post_init__(self) -> None:
         if not isinstance(self.strict, bool):
