@@ -9,9 +9,34 @@ import tempfile
 import urllib.request
 from importlib.resources import files
 from pathlib import Path
+from collections.abc import Mapping
 from typing import Any
 
 from ..errors import AriaError
+
+
+def centres_manifest() -> dict[str, Any]:
+    """Pinned package metadata for six official, unmodified JPL satellite kernels."""
+    return json.loads(files("ariaephemeris.resources").joinpath("planet-centres.json").read_text())
+
+
+def verify_centre_sources(paths: Mapping[str, str | Path]) -> dict[str, dict[str, Any]]:
+    """Verify explicit local centre sources. No network, approximation or fallback."""
+    m = centres_manifest()
+    if m["base_sha256"] != manifest()["sha256"]:
+        raise AriaError("DATA_INTEGRITY_ERROR", "Centre manifest base DE442s identity mismatch")
+    selected: dict[str, dict[str, Any]] = {}
+    for body, value in paths.items():
+        expected = m["sources"].get(body)
+        if expected is None:
+            raise AriaError("INVALID_REQUEST", f"Unrecognised physical-centre source: {body}")
+        path = Path(value)
+        if not path.is_file():
+            raise AriaError("DATA_UNAVAILABLE", f"Physical-centre source missing: {body}")
+        if path.stat().st_size != expected["size_bytes"] or sha256(path) != expected["sha256"]:
+            raise AriaError("DATA_INTEGRITY_ERROR", f"Physical-centre checksum mismatch: {body}")
+        selected[body] = dict(expected)
+    return selected
 
 
 def manifest() -> dict[str, Any]:
