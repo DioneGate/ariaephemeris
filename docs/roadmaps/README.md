@@ -8,7 +8,7 @@ AI contributors must first follow the repository [AGENTS.md](../../AGENTS.md).
 
 | ID | Roadmap | Progress and evidence | Current focus |
 | --- | --- | --- | --- |
-| RM-001 | [Engine development and commercial application readiness](001-engine-development/README.md) | [Progress](001-engine-development/progress.md) | Eight phases remain Planned. Physical-centre engine WP4 merged; [WP5.1 independent reference fixtures](001-engine-development/p1-independent-horizons-fixtures.md) completed in PR #7; [WP5.2 300-case geometric/apparent comparison](001-engine-development/p1-external-horizons-comparison.md) in PR #9 review, with source-model reconciliation still open. |
+| RM-001 | [Engine development and commercial application readiness](001-engine-development/README.md) | [Progress](001-engine-development/progress.md) | Eight phases remain Planned. Physical-centre engine WP4 merged; [WP5.1 independent reference fixtures](001-engine-development/p1-independent-horizons-fixtures.md) completed in PR #7; [WP5.2 300-case geometric/apparent comparison](001-engine-development/p1-external-horizons-comparison.md) merged in PR #9; source-model reconciliation and release accuracy acceptance still open. |
 
 This register is for discovery. Each roadmap's README owns phase status; its
 progress log owns implementation evidence; its prompt register owns prompt status.
