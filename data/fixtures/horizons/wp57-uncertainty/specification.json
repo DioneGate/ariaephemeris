@@ -1,0 +1,337 @@
+{
+  "aria_association_seconds": 60,
+  "aria_derivative_steps_days": [
+    0.0005,
+    0.001,
+    0.002,
+    0.004
+  ],
+  "baseline": "02020a9",
+  "component_epoch_policy": "existing WP5.1 25 TDB epochs per body",
+  "physical_accuracy_certified": false,
+  "reference_convergence_seconds": 30,
+  "remaining_parents": {
+    "mars": 4,
+    "neptune": 8,
+    "saturn": 6,
+    "uranus": 7
+  },
+  "schema_version": 1,
+  "specification_id": "aria-model-uncertainty-v1",
+  "station_centres": [
+    {
+      "body": "mars",
+      "direction": "retrograde-to-direct",
+      "id": "2023-2025:station:mars:None:0:0",
+      "jd_tt": 2459957.3732499,
+      "reference_index": 0,
+      "workload_id": "2023-2025:station:mars:None:0"
+    },
+    {
+      "body": "mars",
+      "direction": "direct-to-retrograde",
+      "id": "2023-2025:station:mars:None:0:1",
+      "jd_tt": 2460651.4821596,
+      "reference_index": 1,
+      "workload_id": "2023-2025:station:mars:None:0"
+    },
+    {
+      "body": "mars",
+      "direction": "retrograde-to-direct",
+      "id": "2023-2025:station:mars:None:0:2",
+      "jd_tt": 2460730.5840165,
+      "reference_index": 2,
+      "workload_id": "2023-2025:station:mars:None:0"
+    },
+    {
+      "body": "jupiter",
+      "direction": "direct-to-retrograde",
+      "id": "2023-2025:station:jupiter:None:0:0",
+      "jd_tt": 2460192.0917511,
+      "reference_index": 0,
+      "workload_id": "2023-2025:station:jupiter:None:0"
+    },
+    {
+      "body": "jupiter",
+      "direction": "retrograde-to-direct",
+      "id": "2023-2025:station:jupiter:None:0:1",
+      "jd_tt": 2460309.6108147,
+      "reference_index": 1,
+      "workload_id": "2023-2025:station:jupiter:None:0"
+    },
+    {
+      "body": "jupiter",
+      "direction": "direct-to-retrograde",
+      "id": "2023-2025:station:jupiter:None:0:2",
+      "jd_tt": 2460592.791233,
+      "reference_index": 2,
+      "workload_id": "2023-2025:station:jupiter:None:0"
+    },
+    {
+      "body": "jupiter",
+      "direction": "retrograde-to-direct",
+      "id": "2023-2025:station:jupiter:None:0:3",
+      "jd_tt": 2460710.9023227,
+      "reference_index": 3,
+      "workload_id": "2023-2025:station:jupiter:None:0"
+    },
+    {
+      "body": "jupiter",
+      "direction": "direct-to-retrograde",
+      "id": "2023-2025:station:jupiter:None:0:4",
+      "jd_tt": 2460991.195994,
+      "reference_index": 4,
+      "workload_id": "2023-2025:station:jupiter:None:0"
+    },
+    {
+      "body": "saturn",
+      "direction": "direct-to-retrograde",
+      "id": "2023-2025:station:saturn:None:0:0",
+      "jd_tt": 2460113.2276291,
+      "reference_index": 0,
+      "workload_id": "2023-2025:station:saturn:None:0"
+    },
+    {
+      "body": "saturn",
+      "direction": "retrograde-to-direct",
+      "id": "2023-2025:station:saturn:None:0:1",
+      "jd_tt": 2460252.792329,
+      "reference_index": 1,
+      "workload_id": "2023-2025:station:saturn:None:0"
+    },
+    {
+      "body": "saturn",
+      "direction": "direct-to-retrograde",
+      "id": "2023-2025:station:saturn:None:0:2",
+      "jd_tt": 2460491.2992154,
+      "reference_index": 2,
+      "workload_id": "2023-2025:station:saturn:None:0"
+    },
+    {
+      "body": "saturn",
+      "direction": "retrograde-to-direct",
+      "id": "2023-2025:station:saturn:None:0:3",
+      "jd_tt": 2460630.0988284,
+      "reference_index": 3,
+      "workload_id": "2023-2025:station:saturn:None:0"
+    },
+    {
+      "body": "saturn",
+      "direction": "direct-to-retrograde",
+      "id": "2023-2025:station:saturn:None:0:4",
+      "jd_tt": 2460869.670777,
+      "reference_index": 4,
+      "workload_id": "2023-2025:station:saturn:None:0"
+    },
+    {
+      "body": "saturn",
+      "direction": "retrograde-to-direct",
+      "id": "2023-2025:station:saturn:None:0:5",
+      "jd_tt": 2461007.662914,
+      "reference_index": 5,
+      "workload_id": "2023-2025:station:saturn:None:0"
+    },
+    {
+      "body": "uranus",
+      "direction": "retrograde-to-direct",
+      "id": "2023-2025:station:uranus:None:0:0",
+      "jd_tt": 2459967.4577075,
+      "reference_index": 0,
+      "workload_id": "2023-2025:station:uranus:None:0"
+    },
+    {
+      "body": "uranus",
+      "direction": "direct-to-retrograde",
+      "id": "2023-2025:station:uranus:None:0:1",
+      "jd_tt": 2460185.6108338,
+      "reference_index": 1,
+      "workload_id": "2023-2025:station:uranus:None:0"
+    },
+    {
+      "body": "uranus",
+      "direction": "retrograde-to-direct",
+      "id": "2023-2025:station:uranus:None:0:2",
+      "jd_tt": 2460336.817294,
+      "reference_index": 2,
+      "workload_id": "2023-2025:station:uranus:None:0"
+    },
+    {
+      "body": "uranus",
+      "direction": "direct-to-retrograde",
+      "id": "2023-2025:station:uranus:None:0:3",
+      "jd_tt": 2460555.1380063,
+      "reference_index": 3,
+      "workload_id": "2023-2025:station:uranus:None:0"
+    },
+    {
+      "body": "uranus",
+      "direction": "retrograde-to-direct",
+      "id": "2023-2025:station:uranus:None:0:4",
+      "jd_tt": 2460706.1825868,
+      "reference_index": 4,
+      "workload_id": "2023-2025:station:uranus:None:0"
+    },
+    {
+      "body": "uranus",
+      "direction": "direct-to-retrograde",
+      "id": "2023-2025:station:uranus:None:0:5",
+      "jd_tt": 2460924.7031287,
+      "reference_index": 5,
+      "workload_id": "2023-2025:station:uranus:None:0"
+    },
+    {
+      "body": "neptune",
+      "direction": "direct-to-retrograde",
+      "id": "2023-2025:station:neptune:None:0:0",
+      "jd_tt": 2460126.3806232,
+      "reference_index": 0,
+      "workload_id": "2023-2025:station:neptune:None:0"
+    },
+    {
+      "body": "neptune",
+      "direction": "retrograde-to-direct",
+      "id": "2023-2025:station:neptune:None:0:1",
+      "jd_tt": 2460285.0581745,
+      "reference_index": 1,
+      "workload_id": "2023-2025:station:neptune:None:0"
+    },
+    {
+      "body": "neptune",
+      "direction": "direct-to-retrograde",
+      "id": "2023-2025:station:neptune:None:0:2",
+      "jd_tt": 2460493.9458668,
+      "reference_index": 2,
+      "workload_id": "2023-2025:station:neptune:None:0"
+    },
+    {
+      "body": "neptune",
+      "direction": "retrograde-to-direct",
+      "id": "2023-2025:station:neptune:None:0:3",
+      "jd_tt": 2460652.4892837,
+      "reference_index": 3,
+      "workload_id": "2023-2025:station:neptune:None:0"
+    },
+    {
+      "body": "neptune",
+      "direction": "direct-to-retrograde",
+      "id": "2023-2025:station:neptune:None:0:4",
+      "jd_tt": 2460861.3997776,
+      "reference_index": 4,
+      "workload_id": "2023-2025:station:neptune:None:0"
+    },
+    {
+      "body": "neptune",
+      "direction": "retrograde-to-direct",
+      "id": "2023-2025:station:neptune:None:0:5",
+      "jd_tt": 2461020.0169138,
+      "reference_index": 5,
+      "workload_id": "2023-2025:station:neptune:None:0"
+    },
+    {
+      "body": "pluto",
+      "direction": "direct-to-retrograde",
+      "id": "2023-2025:station:pluto:None:0:0",
+      "jd_tt": 2460066.2302302,
+      "reference_index": 0,
+      "workload_id": "2023-2025:station:pluto:None:0"
+    },
+    {
+      "body": "pluto",
+      "direction": "retrograde-to-direct",
+      "id": "2023-2025:station:pluto:None:0:1",
+      "jd_tt": 2460228.5845847,
+      "reference_index": 1,
+      "workload_id": "2023-2025:station:pluto:None:0"
+    },
+    {
+      "body": "pluto",
+      "direction": "direct-to-retrograde",
+      "id": "2023-2025:station:pluto:None:0:2",
+      "jd_tt": 2460433.215454,
+      "reference_index": 2,
+      "workload_id": "2023-2025:station:pluto:None:0"
+    },
+    {
+      "body": "pluto",
+      "direction": "retrograde-to-direct",
+      "id": "2023-2025:station:pluto:None:0:3",
+      "jd_tt": 2460595.4796729,
+      "reference_index": 3,
+      "workload_id": "2023-2025:station:pluto:None:0"
+    },
+    {
+      "body": "pluto",
+      "direction": "direct-to-retrograde",
+      "id": "2023-2025:station:pluto:None:0:4",
+      "jd_tt": 2460800.1798288,
+      "reference_index": 4,
+      "workload_id": "2023-2025:station:pluto:None:0"
+    },
+    {
+      "body": "pluto",
+      "direction": "retrograde-to-direct",
+      "id": "2023-2025:station:pluto:None:0:5",
+      "jd_tt": 2460962.6668206,
+      "reference_index": 5,
+      "workload_id": "2023-2025:station:pluto:None:0"
+    },
+    {
+      "body": "mars",
+      "direction": "direct-to-retrograde",
+      "id": "historical-1901:station:mars:None:0:0",
+      "jd_tt": 2415397.7942537,
+      "reference_index": 0,
+      "workload_id": "historical-1901:station:mars:None:0"
+    },
+    {
+      "body": "saturn",
+      "direction": "retrograde-to-direct",
+      "id": "historical-2000:station:saturn:None:0:0",
+      "jd_tt": 2451555.7107597,
+      "reference_index": 0,
+      "workload_id": "historical-2000:station:saturn:None:0"
+    },
+    {
+      "body": "jupiter",
+      "direction": "direct-to-retrograde",
+      "id": "historical-2099:station:jupiter:None:0:0",
+      "jd_tt": 2487710.8894288,
+      "reference_index": 0,
+      "workload_id": "historical-2099:station:jupiter:None:0"
+    },
+    {
+      "body": "pluto",
+      "direction": "retrograde-to-direct",
+      "id": "historical-2099:station:pluto:None:0:0",
+      "jd_tt": 2487718.1303103,
+      "reference_index": 0,
+      "workload_id": "historical-2099:station:pluto:None:0"
+    }
+  ],
+  "station_grids": [
+    {
+      "name": "45-minute",
+      "offset": 0,
+      "stride": 2
+    },
+    {
+      "name": "shifted-45-minute",
+      "offset": 1,
+      "stride": 2
+    },
+    {
+      "name": "90-minute",
+      "offset": 0,
+      "stride": 4
+    },
+    {
+      "name": "3-hour",
+      "offset": 0,
+      "stride": 8
+    }
+  ],
+  "station_radius_days": 0.5,
+  "station_search_radius_days": 0.25,
+  "station_source_step_days": 0.015625,
+  "wp56_report_sha256": "f3f70a0befb55988ff776a50e8d60fa12754d99d93af775cc0eebf721a09f357"
+}

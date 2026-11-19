@@ -229,3 +229,53 @@ No Aria Galaxy change, package release or deployment is included.
 Complete RM-001/009 independent catalogues, compare every returned event, execute
 fast/source/real-kernel checks and merge only after their recorded gates pass.
 Then prepare RM-001/010 separately when requested. Parent P3/P6 remain Planned.
+
+## RM-001/009 execution baseline — 19 November 2026
+
+[PR #14](https://github.com/DioneGate/ariaephemeris/pull/14), branch
+`feature/rm-001-009-independent-event-discovery`. The complete machine-readable
+specification was committed **before acquiring JPL source** at
+`09593cf21efffa8c7c0079b9eeb4014f3cf49cdd`: 237 workloads, 11 fixed TT windows,
+6 physical bodies and 15 pairs; full 2023–2025 plus four historical windows and
+six source-seam windows. Additional Mars-pair aspects include 60°, 90° and 120°.
+Reference discovery uses local cubic source rays and three coarser/shifted grids;
+full-list matching never silently selects just the nearest returned event.
+
+Executed locally with the exact development lock: Ruff check/format, mypy, source
+notice audit, 108 non-kernel tests (20 deselected), distribution build and clean
+wheel/sdist package smoke **PASS**. Thirteen new analytic/source-contract tests
+cover hidden recrossings, tangency, close roots, wrap, half-open endpoints,
+corrupted sources, duplicate/ambiguous matching and search budget failure.
+Original JPL acquisition and real-kernel comparison are separate pending gates;
+no source-model or commercial accuracy pass is inferred from fast checks.
+
+**Separate legacy numerical regression:** [real-kernel qualification
+#44582272663](https://github.com/DioneGate/ariaephemeris/actions/runs/44582272663)
+**PASS**, including 125 tests passed / 3 explicitly skipped, full
+`tools/datasets/qualify.py` (all seven raw-state, apparent-direction, rate,
+angle/house, timing and declared-window completeness gates true), and
+`tools/datasets/qualify_oppositions.py`. This is the existing DE442s reference
+profile regression, not a substitute for 009's independent physical-centre gate.
+
+**Review hardening:** raw JPL headers must independently state GEOCENTRIC,
+AIRLESS, ICRF apparent RA/Dec and JDTT; a recomputed digest cannot legitimise a
+mislabelled frame. Local non-kernel suite now **109 passed / 20 deselected**
+(14 new tests). The replay runner can use two isolated calculation processes,
+with separate verified kernel handles and exact serial result ordering; the
+frozen serial report remains the byte-for-byte acceptance target. This is a
+qualification-runner option, not an engine performance or capacity claim.
+
+## RM-001/009 final result and 010 baseline — 19 November 2026
+
+PR #14 was merged into main at `02020a9` after source capture. The acquisition
+run #44582263949 **failed its numerical gate**: all 142 Aria/reference events
+matched (zero missing/additional/duplicate/ambiguous), but six station workloads
+failed the 30-second coarse-reference convergence test. All 237 workloads were
+executed; 193 were empty. The failure is reference interpolation sensitivity,
+not observed missed Aria events; it remains unresolved rather than a pass.
+
+010 is now authorised for implementation. The specification fixes 400 new
+geometric JPL source components at the pre-existing 25 epochs for each remaining
+planet, and a JPL-only refinement around all 36 independently discovered stations.
+The original 009 source and failed report remain immutable. Physical uncertainty
+is not inferred from model disagreement. Parent P3/P6 remain Planned.
