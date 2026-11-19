@@ -19,8 +19,7 @@ def test_all_six_sources_in_one_complete_chart_and_batch():
     if not base or not root:
         pytest.skip("Provide verified ARIA_KERNEL and ARIA_CENTRES_DIR")
     sources = {
-        body: Path(root) / row["filename"]
-        for body, row in centres_manifest()["sources"].items()
+        body: Path(root) / row["filename"] for body, row in centres_manifest()["sources"].items()
     }
     t = TimeInput(jd=(2451545.0, 0.0), scale="TT", delta_t_seconds=64.0)
     physical = PositionRequest(t, profile="planet-centres-v1")
