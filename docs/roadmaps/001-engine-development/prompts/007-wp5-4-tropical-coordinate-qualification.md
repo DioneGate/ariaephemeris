@@ -7,7 +7,7 @@
 | Main baseline | WP5.1 external references, WP5.2 geometric/apparent comparison, WP5.3 JPL source reconciliation PR #11 merged |
 | Branch | `feature/rm-001-007-wp5-4-astrological-coordinate-qualification-20261119` |
 | Review | [Draft PR #12](https://github.com/DioneGate/ariaephemeris/pull/12) |
-| Status | **In progress** until real-source acquisition and CI evidence; **In review** once reviewable; **Done only on authorised merge** |
+| Status | **In review** — external source capture, 186 numerical comparisons and independent source-integrity checks completed; owner-approved merge and commercial scientific sign-off outstanding |
 
 ## Objective
 
@@ -43,12 +43,12 @@ The **provisional diagnostic** `0.05 arcseconds` absolute longitude/latitude dif
 
 ## Acceptance checklist
 
-- [ ] Immutable JPL original-source acquisition includes exactly **780 new external reference rays**, reuses 150 original WP5.1 rays, and reconstructs **930 independently sourced time-stencil points**, 186 chart cases.
-- [ ] Six physical centres each have **25 historical/segment** and **3 station + 3 ingress** chart cases; independent rate direction and moving-frame computations validated.
-- [ ] Complete, truthful per-planet measured residual statistics: longitude/latitude arcsec and signed rate deg/TT day; motion/sign disagreements reported, including ambiguous conditions.
-- [ ] Original-source hashes, no stale/missing measurements, 100% defined coverage, semantic source conventions and no commercial accuracy overclaims.
-- [ ] Offline mathematical/unit tests, fast CI, pinned six-source real comparison, immutable numerical replay and existing qualification regressions verified, with actual CI evidence.
-- [ ] Brief measured report and progress/register produced; PR #12 prepared for review, **not merged** without separate owner instruction.
+- [x] Independent Horizons source capture obtained **780 new rays** plus 150 original WP5.1 rays, reconstructing **930 original-source stencil directions** across **186 chart cases**. Original data SHA-256 verified; [recovery run #44485106448](https://github.com/DioneGate/ariaephemeris/actions/runs/44485106448) successful.
+- [x] Each of six physical centres has 25 baseline samples, 3 nominated station-neighbourhood samples, and 3 nominated ingress-neighbourhood samples; true-of-date IAU 2006 motion and five-point JPL rate verified.
+- [x] [Full 186-case evidence](../../../validation/wp54-tropical-coordinate-comparison.json) and [per-planet report](../p1-wp54-tropical-coordinate-qualification.md) contain max/RMS/p95 tropical longitude, latitude, signed rate, station/cusp ambiguities and motion/sign classifications. Maximum longitude 0.004433″ (Mars), latitude 0.004786″ (Jupiter), rate 6.228 × 10⁻⁸ deg/TT-day (Mars); **0 robust motion/sign disagreements** in sample.
+- [x] Every original Horizons response rechecked offline for exact JPL source conventions, SHA-256 and full TT/physical centre completeness. No commercial physical accuracy or event timing certification claimed.
+- [ ] Offline source, mathematical/unit and pinned six-source numeric capture passed ([artefact recovery #44485106448](https://github.com/DioneGate/ariaephemeris/actions/runs/44485106448)); verify **new PR-scoped hermetic and real-kernel byte-for-byte replay**, final fast CI and older DE442s qualification at final PR head before recording all tests complete.
+- [x] [Measured scientific report](../p1-wp54-tropical-coordinate-qualification.md) and [full JSON](../../../validation/wp54-tropical-coordinate-comparison.json) delivered on [draft PR #12](https://github.com/DioneGate/ariaephemeris/pull/12). No merge, release or Aria Galaxy deployment authorised.
 
 ## Evidence and expected reproducibility
 
