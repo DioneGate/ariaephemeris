@@ -1,18 +1,20 @@
 name: RM-001-006 Decompose Jupiter and Pluto Horizons model residuals
 
+# Frozen results are validated in PRs; no CI job may silently rewrite evidence.
 on:
-  push:
-    branches:
-      - feature/rm-001-006-jpl-source-model-reconciliation-20261119
+  pull_request:
     paths:
       - '.github/workflows/jpl-model-attribution.yml'
       - 'tools/datasets/attribute_jpl_source_models.py'
+      - 'tools/datasets/acquire_horizons_model_components.py'
+      - 'tools/datasets/verify_horizons_model_components.py'
       - 'data/fixtures/horizons/model-components/**'
+      - 'docs/validation/wp5-3-jpl-source-attribution.json'
       - 'tests/unit/test_horizons_source_attribution.py'
   workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: read
 
 jobs:
   genuine-source-attribution:
@@ -87,18 +89,10 @@ jobs:
           assert not d["commercial_release_accuracy_certified"]
           print("50/50 decomposition identities pass; actual model uncertainty remains not certified")
           PY
-      - name: Commit measured source-component attribution evidence, never binary kernels
+      - name: Prove regenerated report equals committed immutable numerical evidence
         run: |
-          set -euo pipefail
-          git config user.name 'github-actions[bot]'
-          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add docs/validation/wp5-3-jpl-source-attribution.json
-          if git diff --cached --quiet; then
-            echo "Same numerical report already frozen"
-          else
-            git commit -m 'data(RM-001/006): retain measured Pluto/Jupiter source-model attribution and checks'
-            git push origin HEAD:feature/rm-001-006-jpl-source-model-reconciliation-20261119
-          fi
+          git diff --exit-code -- docs/validation/wp5-3-jpl-source-attribution.json
+          echo "Pinned report reproduced byte-for-byte from JPL and Aria originals"
       - name: Preserve comparison evidence as downloadable workflow artifact
         if: always()
         uses: actions/upload-artifact@v4
