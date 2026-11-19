@@ -1,0 +1,744 @@
+{
+  "absolute_astronomical_accuracy_certified": false,
+  "aria_within_verified_inner_bracket_count": 22,
+  "commercial_release_qualified": false,
+  "dataset_id": "aria-jpl-planetary-event-fine-root-bracketing-v1",
+  "event_count": 22,
+  "events": [
+    {
+      "aria_root_within_verified_15_second_source_bracket": true,
+      "body": "mars",
+      "continuous_unique_root_not_proven": true,
+      "event_id": "station-mars",
+      "fine_sampled_equation": [
+        {
+          "source_equation": -4.462901112371279e-06,
+          "tt_jd": 2459957.3729002
+        },
+        {
+          "source_equation": -2.2627570691232295e-06,
+          "tt_jd": 2459957.3730738
+        },
+        {
+          "source_equation": 2.2213350803212957e-06,
+          "tt_jd": 2459957.373421
+        },
+        {
+          "source_equation": 4.405571303323085e-06,
+          "tt_jd": 2459957.3735946
+        }
+      ],
+      "independent_local_sign_change_bracket_seconds": 30,
+      "kind": "station",
+      "model_physical_accuracy_not_proven": true,
+      "observed_sign_change_within_plus_minus_15_seconds": true,
+      "observed_sign_change_within_plus_minus_30_seconds": true,
+      "original_aria_minus_jpl_seconds": 0.26578009128570557,
+      "original_jpl_interpolated_jd_tt": 2459957.37324741,
+      "original_source_grid_bracket_seconds": 2700.0,
+      "other_body": null
+    },
+    {
+      "aria_root_within_verified_15_second_source_bracket": true,
+      "body": "mars",
+      "continuous_unique_root_not_proven": true,
+      "event_id": "ingress-mars",
+      "fine_sampled_equation": [
+        {
+          "source_equation": -0.00016789800940841815,
+          "tt_jd": 2460028.9903066
+        },
+        {
+          "source_equation": -8.394499400310451e-05,
+          "tt_jd": 2460028.9904802
+        },
+        {
+          "source_equation": 8.395924194815052e-05,
+          "tt_jd": 2460028.9908274
+        },
+        {
+          "source_equation": 0.0001679122653399645,
+          "tt_jd": 2460028.991001
+        }
+      ],
+      "independent_local_sign_change_bracket_seconds": 30,
+      "kind": "ingress",
+      "model_physical_accuracy_not_proven": true,
+      "observed_sign_change_within_plus_minus_15_seconds": true,
+      "observed_sign_change_within_plus_minus_30_seconds": true,
+      "original_aria_minus_jpl_seconds": -0.02365708351135254,
+      "original_jpl_interpolated_jd_tt": 2460028.990653785,
+      "original_source_grid_bracket_seconds": 2700.0,
+      "other_body": null
+    },
+    {
+      "aria_root_within_verified_15_second_source_bracket": true,
+      "body": "jupiter",
+      "continuous_unique_root_not_proven": true,
+      "event_id": "station-jupiter",
+      "fine_sampled_equation": [
+        {
+          "source_equation": 1.2065868304489411e-06,
+          "tt_jd": 2460192.0914228
+        },
+        {
+          "source_equation": 6.422023564785679e-07,
+          "tt_jd": 2460192.0915964
+        },
+        {
+          "source_equation": -5.726593599320039e-07,
+          "tt_jd": 2460192.0919436
+        },
+        {
+          "source_equation": -1.1412684367921124e-06,
+          "tt_jd": 2460192.0921172
+        }
+      ],
+      "independent_local_sign_change_bracket_seconds": 30,
+      "kind": "station",
+      "model_physical_accuracy_not_proven": true,
+      "observed_sign_change_within_plus_minus_15_seconds": true,
+      "observed_sign_change_within_plus_minus_30_seconds": true,
+      "original_aria_minus_jpl_seconds": 0.8858934044837952,
+      "original_jpl_interpolated_jd_tt": 2460192.0917699747,
+      "original_source_grid_bracket_seconds": 2700.0,
+      "other_body": null
+    },
+    {
+      "aria_root_within_verified_15_second_source_bracket": true,
+      "body": "jupiter",
+      "continuous_unique_root_not_proven": true,
+      "event_id": "ingress-jupiter",
+      "fine_sampled_equation": [
+        {
+          "source_equation": -7.937325270290785e-05,
+          "tt_jd": 2460081.2227157
+        },
+        {
+          "source_equation": -3.969195532249614e-05,
+          "tt_jd": 2460081.2228893
+        },
+        {
+          "source_equation": 3.969371431367108e-05,
+          "tt_jd": 2460081.2232366
+        },
+        {
+          "source_equation": 7.937535940527596e-05,
+          "tt_jd": 2460081.2234102
+        }
+      ],
+      "independent_local_sign_change_bracket_seconds": 30,
+      "kind": "ingress",
+      "model_physical_accuracy_not_proven": true,
+      "observed_sign_change_within_plus_minus_15_seconds": true,
+      "observed_sign_change_within_plus_minus_30_seconds": true,
+      "original_aria_minus_jpl_seconds": 0.005713105201721191,
+      "original_jpl_interpolated_jd_tt": 2460081.2230629474,
+      "original_source_grid_bracket_seconds": 2700.0,
+      "other_body": null
+    },
+    {
+      "aria_root_within_verified_15_second_source_bracket": true,
+      "body": "saturn",
+      "continuous_unique_root_not_proven": true,
+      "event_id": "station-saturn",
+      "fine_sampled_equation": [
+        {
+          "source_equation": 5.94969075488431e-07,
+          "tt_jd": 2460113.227255
+        },
+        {
+          "source_equation": 3.414625856142568e-07,
+          "tt_jd": 2460113.2274286
+        },
+        {
+          "source_equation": -2.467140802764333e-07,
+          "tt_jd": 2460113.2277758
+        },
+        {
+          "source_equation": -5.29078079125611e-07,
+          "tt_jd": 2460113.2279494
+        }
+      ],
+      "independent_local_sign_change_bracket_seconds": 30,
+      "kind": "station",
+      "model_physical_accuracy_not_proven": true,
+      "observed_sign_change_within_plus_minus_15_seconds": true,
+      "observed_sign_change_within_plus_minus_30_seconds": true,
+      "original_aria_minus_jpl_seconds": 2.328251302242279,
+      "original_jpl_interpolated_jd_tt": 2460113.227602222,
+      "original_source_grid_bracket_seconds": 2700.0,
+      "other_body": null
+    },
+    {
+      "aria_root_within_verified_15_second_source_bracket": true,
+      "body": "saturn",
+      "continuous_unique_root_not_proven": true,
+      "event_id": "ingress-saturn",
+      "fine_sampled_equation": [
+        {
+          "source_equation": -4.083530490106568e-05,
+          "tt_jd": 2460011.0663651
+        },
+        {
+          "source_equation": -2.0418590452209173e-05,
+          "tt_jd": 2460011.0665387
+        },
+        {
+          "source_equation": 2.0415752203462034e-05,
+          "tt_jd": 2460011.0668859
+        },
+        {
+          "source_equation": 4.083246750496983e-05,
+          "tt_jd": 2460011.0670595
+        }
+      ],
+      "independent_local_sign_change_bracket_seconds": 30,
+      "kind": "ingress",
+      "model_physical_accuracy_not_proven": true,
+      "observed_sign_change_within_plus_minus_15_seconds": true,
+      "observed_sign_change_within_plus_minus_30_seconds": true,
+      "original_aria_minus_jpl_seconds": 0.04357248544692993,
+      "original_jpl_interpolated_jd_tt": 2460011.0667123087,
+      "original_source_grid_bracket_seconds": 2700.0,
+      "other_body": null
+    },
+    {
+      "aria_root_within_verified_15_second_source_bracket": true,
+      "body": "uranus",
+      "continuous_unique_root_not_proven": true,
+      "event_id": "station-uranus",
+      "fine_sampled_equation": [
+        {
+          "source_equation": -2.8561468449576444e-07,
+          "tt_jd": 2459967.4573896
+        },
+        {
+          "source_equation": -1.3081281243406312e-07,
+          "tt_jd": 2459967.4575632
+        },
+        {
+          "source_equation": 1.9865183276124296e-07,
+          "tt_jd": 2459967.4579104
+        },
+        {
+          "source_equation": 3.0442739292387455e-07,
+          "tt_jd": 2459967.458084
+        }
+      ],
+      "independent_local_sign_change_bracket_seconds": 30,
+      "kind": "station",
+      "model_physical_accuracy_not_proven": true,
+      "observed_sign_change_within_plus_minus_15_seconds": true,
+      "observed_sign_change_within_plus_minus_30_seconds": true,
+      "original_aria_minus_jpl_seconds": -1.9198447465896606,
+      "original_jpl_interpolated_jd_tt": 2459967.4577368237,
+      "original_source_grid_bracket_seconds": 2700.0,
+      "other_body": null
+    },
+    {
+      "aria_root_within_verified_15_second_source_bracket": true,
+      "body": "uranus",
+      "continuous_unique_root_not_proven": true,
+      "event_id": "ingress-uranus",
+      "fine_sampled_equation": [
+        {
+          "source_equation": -1.55124984644317e-05,
+          "tt_jd": 2460863.824739
+        },
+        {
+          "source_equation": -7.75600528868381e-06,
+          "tt_jd": 2460863.8249126
+        },
+        {
+          "source_equation": 7.756276602322032e-06,
+          "tt_jd": 2460863.8252598
+        },
+        {
+          "source_equation": 1.551277040334753e-05,
+          "tt_jd": 2460863.8254334
+        }
+      ],
+      "independent_local_sign_change_bracket_seconds": 30,
+      "kind": "ingress",
+      "model_physical_accuracy_not_proven": true,
+      "observed_sign_change_within_plus_minus_15_seconds": true,
+      "observed_sign_change_within_plus_minus_30_seconds": true,
+      "original_aria_minus_jpl_seconds": -0.003299117088317871,
+      "original_jpl_interpolated_jd_tt": 2460863.825086195,
+      "original_source_grid_bracket_seconds": 2700.0,
+      "other_body": null
+    },
+    {
+      "aria_root_within_verified_15_second_source_bracket": true,
+      "body": "neptune",
+      "continuous_unique_root_not_proven": true,
+      "event_id": "station-neptune",
+      "fine_sampled_equation": [
+        {
+          "source_equation": 1.4291155518246038e-07,
+          "tt_jd": 2460126.3803296
+        },
+        {
+          "source_equation": 6.278090343888228e-08,
+          "tt_jd": 2460126.3805032
+        },
+        {
+          "source_equation": -1.1236579666729084e-07,
+          "tt_jd": 2460126.3808504
+        },
+        {
+          "source_equation": -1.986131792364176e-07,
+          "tt_jd": 2460126.381024
+        }
+      ],
+      "independent_local_sign_change_bracket_seconds": 30,
+      "kind": "station",
+      "model_physical_accuracy_not_proven": true,
+      "observed_sign_change_within_plus_minus_15_seconds": true,
+      "observed_sign_change_within_plus_minus_30_seconds": true,
+      "original_aria_minus_jpl_seconds": -4.613573849201202,
+      "original_jpl_interpolated_jd_tt": 2460126.3806767864,
+      "original_source_grid_bracket_seconds": 2700.0,
+      "other_body": null
+    },
+    {
+      "aria_root_within_verified_15_second_source_bracket": true,
+      "body": "neptune",
+      "continuous_unique_root_not_proven": true,
+      "event_id": "ingress-neptune",
+      "fine_sampled_equation": [
+        {
+          "source_equation": -1.301100076034345e-05,
+          "tt_jd": 2460764.9990662
+        },
+        {
+          "source_equation": -6.505316264338035e-06,
+          "tt_jd": 2460764.9992398
+        },
+        {
+          "source_equation": 6.506452365329096e-06,
+          "tt_jd": 2460764.999587
+        },
+        {
+          "source_equation": 1.3012138509793658e-05,
+          "tt_jd": 2460764.9997606
+        }
+      ],
+      "independent_local_sign_change_bracket_seconds": 30,
+      "kind": "ingress",
+      "model_physical_accuracy_not_proven": true,
+      "observed_sign_change_within_plus_minus_15_seconds": true,
+      "observed_sign_change_within_plus_minus_30_seconds": true,
+      "original_aria_minus_jpl_seconds": -0.03029555082321167,
+      "original_jpl_interpolated_jd_tt": 2460764.999413398,
+      "original_source_grid_bracket_seconds": 2700.0,
+      "other_body": null
+    },
+    {
+      "aria_root_within_verified_15_second_source_bracket": true,
+      "body": "pluto",
+      "continuous_unique_root_not_proven": true,
+      "event_id": "station-pluto",
+      "fine_sampled_equation": [
+        {
+          "source_equation": 1.7991358921184048e-07,
+          "tt_jd": 2460066.2298257
+        },
+        {
+          "source_equation": 5.4897858111265415e-08,
+          "tt_jd": 2460066.2299993
+        },
+        {
+          "source_equation": -3.373656909388955e-08,
+          "tt_jd": 2460066.2303465
+        },
+        {
+          "source_equation": -1.6621470422251147e-07,
+          "tt_jd": 2460066.2305201
+        }
+      ],
+      "independent_local_sign_change_bracket_seconds": 30,
+      "kind": "station",
+      "model_physical_accuracy_not_proven": true,
+      "observed_sign_change_within_plus_minus_15_seconds": true,
+      "observed_sign_change_within_plus_minus_30_seconds": true,
+      "original_aria_minus_jpl_seconds": 0.8819103240966797,
+      "original_jpl_interpolated_jd_tt": 2460066.2301729256,
+      "original_source_grid_bracket_seconds": 2700.0,
+      "other_body": null
+    },
+    {
+      "aria_root_within_verified_15_second_source_bracket": true,
+      "body": "pluto",
+      "continuous_unique_root_not_proven": true,
+      "event_id": "ingress-pluto",
+      "fine_sampled_equation": [
+        {
+          "source_equation": -6.300889708654722e-06,
+          "tt_jd": 2460027.0157664
+        },
+        {
+          "source_equation": -3.150419615849387e-06,
+          "tt_jd": 2460027.01594
+        },
+        {
+          "source_equation": 3.1507350968240644e-06,
+          "tt_jd": 2460027.0162872
+        },
+        {
+          "source_equation": 6.301206383341196e-06,
+          "tt_jd": 2460027.0164608
+        }
+      ],
+      "independent_local_sign_change_bracket_seconds": 30,
+      "kind": "ingress",
+      "model_physical_accuracy_not_proven": true,
+      "observed_sign_change_within_plus_minus_15_seconds": true,
+      "observed_sign_change_within_plus_minus_30_seconds": true,
+      "original_aria_minus_jpl_seconds": 0.012914836406707764,
+      "original_jpl_interpolated_jd_tt": 2460027.01611361,
+      "original_source_grid_bracket_seconds": 2700.0,
+      "other_body": null
+    },
+    {
+      "aria_root_within_verified_15_second_source_bracket": true,
+      "body": "mars",
+      "continuous_unique_root_not_proven": true,
+      "event_id": "conjunction-mars-jupiter",
+      "fine_sampled_equation": [
+        {
+          "source_equation": -0.00017252764612862848,
+          "tt_jd": 2460537.1404089
+        },
+        {
+          "source_equation": -8.62626567652569e-05,
+          "tt_jd": 2460537.1405825
+        },
+        {
+          "source_equation": 8.626902123864966e-05,
+          "tt_jd": 2460537.1409297
+        },
+        {
+          "source_equation": 0.00017253581359000236,
+          "tt_jd": 2460537.1411033
+        }
+      ],
+      "independent_local_sign_change_bracket_seconds": 30,
+      "kind": "conjunction",
+      "model_physical_accuracy_not_proven": true,
+      "observed_sign_change_within_plus_minus_15_seconds": true,
+      "observed_sign_change_within_plus_minus_30_seconds": true,
+      "original_aria_minus_jpl_seconds": 0.009334087371826172,
+      "original_jpl_interpolated_jd_tt": 2460537.140756092,
+      "original_source_grid_bracket_seconds": 2700.0,
+      "other_body": "jupiter"
+    },
+    {
+      "aria_root_within_verified_15_second_source_bracket": true,
+      "body": "mars",
+      "continuous_unique_root_not_proven": true,
+      "event_id": "opposition-mars-jupiter",
+      "fine_sampled_equation": [
+        {
+          "source_equation": -0.0002859266423911322,
+          "tt_jd": 2460246.1693229
+        },
+        {
+          "source_equation": -0.00014297603433988115,
+          "tt_jd": 2460246.1694965
+        },
+        {
+          "source_equation": 0.00014292572905105771,
+          "tt_jd": 2460246.1698437
+        },
+        {
+          "source_equation": 0.0002859597072983888,
+          "tt_jd": 2460246.1700174
+        }
+      ],
+      "independent_local_sign_change_bracket_seconds": 30,
+      "kind": "opposition",
+      "model_physical_accuracy_not_proven": true,
+      "observed_sign_change_within_plus_minus_15_seconds": true,
+      "observed_sign_change_within_plus_minus_30_seconds": true,
+      "original_aria_minus_jpl_seconds": 0.0059545040130615234,
+      "original_jpl_interpolated_jd_tt": 2460246.169670131,
+      "original_source_grid_bracket_seconds": 2700.0,
+      "other_body": "jupiter"
+    },
+    {
+      "aria_root_within_verified_15_second_source_bracket": true,
+      "body": "mars",
+      "continuous_unique_root_not_proven": true,
+      "event_id": "conjunction-mars-saturn",
+      "fine_sampled_equation": [
+        {
+          "source_equation": -0.00023295457555150278,
+          "tt_jd": 2460411.3588416
+        },
+        {
+          "source_equation": -0.00011647068600950661,
+          "tt_jd": 2460411.3590152
+        },
+        {
+          "source_equation": 0.00011649737666630244,
+          "tt_jd": 2460411.3593624
+        },
+        {
+          "source_equation": 0.00023298169134022828,
+          "tt_jd": 2460411.359536
+        }
+      ],
+      "independent_local_sign_change_bracket_seconds": 30,
+      "kind": "conjunction",
+      "model_physical_accuracy_not_proven": true,
+      "observed_sign_change_within_plus_minus_15_seconds": true,
+      "observed_sign_change_within_plus_minus_30_seconds": true,
+      "original_aria_minus_jpl_seconds": -0.039549171924591064,
+      "original_jpl_interpolated_jd_tt": 2460411.359188781,
+      "original_source_grid_bracket_seconds": 2700.0,
+      "other_body": "saturn"
+    },
+    {
+      "aria_root_within_verified_15_second_source_bracket": true,
+      "body": "mars",
+      "continuous_unique_root_not_proven": true,
+      "event_id": "opposition-mars-saturn",
+      "fine_sampled_equation": [
+        {
+          "source_equation": -0.00023098444466995716,
+          "tt_jd": 2460146.3609587
+        },
+        {
+          "source_equation": -0.00011550383595704261,
+          "tt_jd": 2460146.3611323
+        },
+        {
+          "source_equation": 0.00011545961274350702,
+          "tt_jd": 2460146.3614795
+        },
+        {
+          "source_equation": 0.00023100747404214417,
+          "tt_jd": 2460146.3616532
+        }
+      ],
+      "independent_local_sign_change_bracket_seconds": 30,
+      "kind": "opposition",
+      "model_physical_accuracy_not_proven": true,
+      "observed_sign_change_within_plus_minus_15_seconds": true,
+      "observed_sign_change_within_plus_minus_30_seconds": true,
+      "original_aria_minus_jpl_seconds": -0.0028967857360839844,
+      "original_jpl_interpolated_jd_tt": 2460146.3613059334,
+      "original_source_grid_bracket_seconds": 2700.0,
+      "other_body": "saturn"
+    },
+    {
+      "aria_root_within_verified_15_second_source_bracket": true,
+      "body": "mars",
+      "continuous_unique_root_not_proven": true,
+      "event_id": "conjunction-mars-uranus",
+      "fine_sampled_equation": [
+        {
+          "source_equation": -0.00023030082638797467,
+          "tt_jd": 2460507.0871347
+        },
+        {
+          "source_equation": -0.0001151466412920854,
+          "tt_jd": 2460507.0873083
+        },
+        {
+          "source_equation": 0.00011515845204712605,
+          "tt_jd": 2460507.0876555
+        },
+        {
+          "source_equation": 0.0002303107314389763,
+          "tt_jd": 2460507.0878291
+        }
+      ],
+      "independent_local_sign_change_bracket_seconds": 30,
+      "kind": "conjunction",
+      "model_physical_accuracy_not_proven": true,
+      "observed_sign_change_within_plus_minus_15_seconds": true,
+      "observed_sign_change_within_plus_minus_30_seconds": true,
+      "original_aria_minus_jpl_seconds": 0.0008046627044677734,
+      "original_jpl_interpolated_jd_tt": 2460507.087481891,
+      "original_source_grid_bracket_seconds": 2700.0,
+      "other_body": "uranus"
+    },
+    {
+      "aria_root_within_verified_15_second_source_bracket": true,
+      "body": "mars",
+      "continuous_unique_root_not_proven": true,
+      "event_id": "opposition-mars-uranus",
+      "fine_sampled_equation": [
+        {
+          "source_equation": -0.0002579138336500364,
+          "tt_jd": 2460260.383299
+        },
+        {
+          "source_equation": -0.0001289660601742071,
+          "tt_jd": 2460260.3834726
+        },
+        {
+          "source_equation": 0.0001289291548687288,
+          "tt_jd": 2460260.3838198
+        },
+        {
+          "source_equation": 0.0002578768602461423,
+          "tt_jd": 2460260.3839934
+        }
+      ],
+      "independent_local_sign_change_bracket_seconds": 30,
+      "kind": "opposition",
+      "model_physical_accuracy_not_proven": true,
+      "observed_sign_change_within_plus_minus_15_seconds": true,
+      "observed_sign_change_within_plus_minus_30_seconds": true,
+      "original_aria_minus_jpl_seconds": -0.0021323561668395996,
+      "original_jpl_interpolated_jd_tt": 2460260.3836462246,
+      "original_source_grid_bracket_seconds": 2700.0,
+      "other_body": "uranus"
+    },
+    {
+      "aria_root_within_verified_15_second_source_bracket": true,
+      "body": "mars",
+      "continuous_unique_root_not_proven": true,
+      "event_id": "conjunction-mars-neptune",
+      "fine_sampled_equation": [
+        {
+          "source_equation": -0.0002572357120129709,
+          "tt_jd": 2460429.6886289
+        },
+        {
+          "source_equation": -0.00012863135918905755,
+          "tt_jd": 2460429.6888025
+        },
+        {
+          "source_equation": 0.00012857671509891588,
+          "tt_jd": 2460429.6891497
+        },
+        {
+          "source_equation": 0.0002572544715917502,
+          "tt_jd": 2460429.6893234
+        }
+      ],
+      "independent_local_sign_change_bracket_seconds": 30,
+      "kind": "conjunction",
+      "model_physical_accuracy_not_proven": true,
+      "observed_sign_change_within_plus_minus_15_seconds": true,
+      "observed_sign_change_within_plus_minus_30_seconds": true,
+      "original_aria_minus_jpl_seconds": -0.03576725721359253,
+      "original_jpl_interpolated_jd_tt": 2460429.688976137,
+      "original_source_grid_bracket_seconds": 2700.0,
+      "other_body": "neptune"
+    },
+    {
+      "aria_root_within_verified_15_second_source_bracket": true,
+      "body": "mars",
+      "continuous_unique_root_not_proven": true,
+      "event_id": "opposition-mars-neptune",
+      "fine_sampled_equation": [
+        {
+          "source_equation": -0.00022949597689603252,
+          "tt_jd": 2460179.3572661
+        },
+        {
+          "source_equation": -0.0001147394588087991,
+          "tt_jd": 2460179.3574397
+        },
+        {
+          "source_equation": 0.00011477175064555922,
+          "tt_jd": 2460179.3577869
+        },
+        {
+          "source_equation": 0.0002295260446771863,
+          "tt_jd": 2460179.3579605
+        }
+      ],
+      "independent_local_sign_change_bracket_seconds": 30,
+      "kind": "opposition",
+      "model_physical_accuracy_not_proven": true,
+      "observed_sign_change_within_plus_minus_15_seconds": true,
+      "observed_sign_change_within_plus_minus_30_seconds": true,
+      "original_aria_minus_jpl_seconds": -0.039187073707580566,
+      "original_jpl_interpolated_jd_tt": 2460179.3576132767,
+      "original_source_grid_bracket_seconds": 2700.0,
+      "other_body": "neptune"
+    },
+    {
+      "aria_root_within_verified_15_second_source_bracket": true,
+      "body": "mars",
+      "continuous_unique_root_not_proven": true,
+      "event_id": "conjunction-mars-pluto",
+      "fine_sampled_equation": [
+        {
+          "source_equation": -0.0002563779552815504,
+          "tt_jd": 2460354.754458
+        },
+        {
+          "source_equation": -0.00012820210463360127,
+          "tt_jd": 2460354.7546316
+        },
+        {
+          "source_equation": 0.00012815104946639622,
+          "tt_jd": 2460354.7549788
+        },
+        {
+          "source_equation": 0.00025640135731919145,
+          "tt_jd": 2460354.7551525
+        }
+      ],
+      "independent_local_sign_change_bracket_seconds": 30,
+      "kind": "conjunction",
+      "model_physical_accuracy_not_proven": true,
+      "observed_sign_change_within_plus_minus_15_seconds": true,
+      "observed_sign_change_within_plus_minus_30_seconds": true,
+      "original_aria_minus_jpl_seconds": -0.0029772520065307617,
+      "original_jpl_interpolated_jd_tt": 2460354.7548052343,
+      "original_source_grid_bracket_seconds": 2700.0,
+      "other_body": "pluto"
+    },
+    {
+      "aria_root_within_verified_15_second_source_bracket": true,
+      "body": "mars",
+      "continuous_unique_root_not_proven": true,
+      "event_id": "opposition-mars-pluto",
+      "fine_sampled_equation": [
+        {
+          "source_equation": -0.0002012343908290859,
+          "tt_jd": 2460085.6336577
+        },
+        {
+          "source_equation": -0.00010058028937010022,
+          "tt_jd": 2460085.6338314
+        },
+        {
+          "source_equation": 0.00010061525483706646,
+          "tt_jd": 2460085.6341786
+        },
+        {
+          "source_equation": 0.00020121214765822515,
+          "tt_jd": 2460085.6343522
+        }
+      ],
+      "independent_local_sign_change_bracket_seconds": 30,
+      "kind": "opposition",
+      "model_physical_accuracy_not_proven": true,
+      "observed_sign_change_within_plus_minus_15_seconds": true,
+      "observed_sign_change_within_plus_minus_30_seconds": true,
+      "original_aria_minus_jpl_seconds": -0.038623809814453125,
+      "original_jpl_interpolated_jd_tt": 2460085.63400497,
+      "original_source_grid_bracket_seconds": 2700.0,
+      "other_body": "pluto"
+    }
+  ],
+  "independent_full_interval_root_completeness_certified": false,
+  "inner_30_second_sign_bracket_count": 22,
+  "new_independent_jpl_rays": 224,
+  "original_event_report_sha256": "44b06cdd15dddb7264debb5ba6b3cf746a620e7c75c52e1327c3ad3642f40098",
+  "outer_60_second_sign_bracket_count": 22,
+  "report_id": "aria-wp55-independent-jpl-fine-source-root-bracket-check-v1",
+  "rigorous_root_uniqueness_or_continuous_error_bound_certified": false,
+  "schema_version": 1,
+  "verified_original_jpl_source_responses": 7
+}

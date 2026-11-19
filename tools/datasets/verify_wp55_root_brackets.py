@@ -18,7 +18,7 @@ from acquire_horizons_fixtures import TARGETS, parse_table, query, sha256, sourc
 from acquire_wp55_root_brackets import OFFSETS_SECONDS, sample_days
 from compare_wp54_tropical import reference_rate, true_tropical_from_icrf
 from verify_wp55_events import validate as validate_wp55
-from wp55_event_math import BODY_ORDER, signed_angle, station_stencil
+from wp55_event_math import signed_angle, station_stencil
 
 
 def verify(root: Path, original: Path, wp54: Path, comparison: Path) -> dict[str, Any]:
@@ -134,9 +134,7 @@ def verify(root: Path, original: Path, wp54: Path, comparison: Path) -> dict[str
             body = case["body"]
             if case["kind"] == "station":
                 dates = case["station_rate_stencils_jd_tt"][index]
-                reference = [
-                    true_tropical_from_icrf(*mapping[(body, t)], t) for t in dates
-                ]
+                reference = [true_tropical_from_icrf(*mapping[(body, t)], t) for t in dates]
                 rate = reference_rate(reference)
                 value = rate
                 source_uses.update((body, t) for t in dates)
@@ -218,11 +216,17 @@ def verify(root: Path, original: Path, wp54: Path, comparison: Path) -> dict[str
 
 def main() -> int:
     p = argparse.ArgumentParser(description=__doc__)
-    p.add_argument("--source", type=Path, default=Path("data/fixtures/horizons/wp55-root-refinement"))
+    p.add_argument(
+        "--source", type=Path, default=Path("data/fixtures/horizons/wp55-root-refinement")
+    )
     p.add_argument("--original", type=Path, default=Path("data/fixtures/horizons/wp55-events"))
     p.add_argument("--wp54", type=Path, default=Path("data/fixtures/horizons/wp54-tropical"))
-    p.add_argument("--comparison", type=Path, default=Path("docs/validation/wp55-independent-event-roots.json"))
-    p.add_argument("--output", type=Path, default=Path("docs/validation/wp55-jpl-fine-root-brackets.json"))
+    p.add_argument(
+        "--comparison", type=Path, default=Path("docs/validation/wp55-independent-event-roots.json")
+    )
+    p.add_argument(
+        "--output", type=Path, default=Path("docs/validation/wp55-jpl-fine-root-brackets.json")
+    )
     a = p.parse_args()
     report = verify(a.source, a.original, a.wp54, a.comparison)
     a.output.parent.mkdir(parents=True, exist_ok=True)

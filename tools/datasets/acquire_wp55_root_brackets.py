@@ -104,7 +104,10 @@ def acquire(source: Path, wp54: Path, measured: Path, output: Path) -> dict[str,
                 }
             )
             rays.extend({"body": body, "raw_file": filename, **row} for row in records)
-            print(f"JPL fine-root {body}: {len(records)} new independently sampled directions", flush=True)
+            print(
+                f"JPL fine-root {body}: {len(records)} new independently sampled directions",
+                flush=True,
+            )
             if body != BODY_ORDER[-1] or start + CHUNK < len(dates):
                 time.sleep(3)
     expected = sum(len(v) for v in wanted.values())
@@ -139,8 +142,12 @@ def main() -> int:
     p = argparse.ArgumentParser(description=__doc__)
     p.add_argument("--source", type=Path, default=Path("data/fixtures/horizons/wp55-events"))
     p.add_argument("--wp54", type=Path, default=Path("data/fixtures/horizons/wp54-tropical"))
-    p.add_argument("--comparison", type=Path, default=Path("docs/validation/wp55-independent-event-roots.json"))
-    p.add_argument("--output", type=Path, default=Path("data/fixtures/horizons/wp55-root-refinement"))
+    p.add_argument(
+        "--comparison", type=Path, default=Path("docs/validation/wp55-independent-event-roots.json")
+    )
+    p.add_argument(
+        "--output", type=Path, default=Path("data/fixtures/horizons/wp55-root-refinement")
+    )
     a = p.parse_args()
     result = acquire(a.source, a.wp54, a.comparison, a.output)
     print(f"New original JPL fine-root directions: {result['ray_count']}")
