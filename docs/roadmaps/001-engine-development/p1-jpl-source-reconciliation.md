@@ -25,7 +25,7 @@ Each planet's effective offset calculated from independent Horizons centre-versu
 | Original total geocentric velocity difference | **0.00025145 m/s** | **0.00002784 m/s** |
 | Effective centre-offset velocity discrepancy | **3.55 × 10⁻¹⁰ m/s** | **3.61 × 10⁻¹⁰ m/s** |
 
-**Interpretation of maxima:** maxima for different components can occur at *different epochs and in different directions*. They **must not** be added as scalar errors. The machine report retains each 3D Cartesian component and reconstructs the residual vector for **every one of 50 matched dates**, with a maximum closure residual below **0.0005 millimetres** of position (and explicit velocity decompositions). The result is an algebraic source-model attribution, not a statistical physical uncertainty estimate.
+**Interpretation of maxima:** maxima for different components can occur at *different epochs and in different directions*. They **must not** be added as scalar errors. The machine report retains each 3D Cartesian component and reconstructs the residual vector for **every one of 50 matched dates**, with a maximum closure residual below **0.5 millimetres** of position (and explicit velocity decompositions). The result is an algebraic source-model attribution, not a statistical physical uncertainty estimate.
 
 ## Reconciliation method
 
