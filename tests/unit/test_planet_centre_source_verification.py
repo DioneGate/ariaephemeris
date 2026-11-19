@@ -6,8 +6,7 @@ import hashlib
 
 import pytest
 
-from ariaephemeris import AriaError
-from ariaephemeris import datasets
+from ariaephemeris import AriaError, datasets
 
 
 def test_centre_source_verification_checks_identity_size_and_hash(tmp_path, monkeypatch):
