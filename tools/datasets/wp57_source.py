@@ -296,12 +296,119 @@ def verify(root: Path) -> tuple[dict[str, Any], dict[tuple[str, float], dict[str
     ), mapping
 
 
+def load_offset_spec(root: Path) -> dict[str, Any]:
+    spec = json.loads((root / "direct-offset-specification.json").read_text())
+    expected = [
+        dict(body=b, target=p * 100 + 99, observer=p, epochs_jd_tdb=epochs(b))
+        for b, p in REMAINING.items()
+    ]
+    if (
+        spec.get("schema_version") != 1
+        or spec.get("specification_id") != "aria-four-planet-direct-offsets-v1"
+        or spec["queries"] != expected
+    ):
+        raise ValueError("Changed direct-offset source specification")
+    if spec["original_specification_sha256"] != sha256(
+        (root / "specification.json").read_bytes()
+    ) or spec["original_source_sha256"] != sha256((root / "source.json").read_bytes()):
+        raise ValueError("Direct-offset study is not bound to original evidence")
+    if spec["absolute_physical_uncertainty_bound"] is not None:
+        raise ValueError("Unsupported physical uncertainty bound")
+    return spec
+
+
+def offset_query(body: str) -> dict[str, str]:
+    params = specification(body, "centre_ssb", REMAINING)
+    params["CENTER"] = f"'500@{REMAINING[body]}'"
+    return params
+
+
+def acquire_offsets(root: Path) -> None:
+    if (root / "direct-offset-source.json").exists():
+        raise FileExistsError("Direct-offset source is immutable; refuse refresh")
+    verify(root)
+    spec = load_offset_spec(root)
+    records = []
+    for item in spec["queries"]:
+        body = item["body"]
+        record, _ = capture(
+            root,
+            f"{body}-direct-offset",
+            offset_query(body),
+            item["target"],
+            "geometric",
+            item["epochs_jd_tdb"],
+        )
+        records.append(dict(body=body, **record))
+    data = dict(
+        schema_version=1,
+        dataset_id="aria-four-planet-direct-offset-reference-v1",
+        specification_sha256=sha256((root / "direct-offset-specification.json").read_bytes()),
+        responses=records,
+        absolute_physical_uncertainty_bound=None,
+    )
+    (root / "direct-offset-source.json").write_text(
+        json.dumps(data, indent=2, sort_keys=True) + "\n"
+    )
+    verify_offsets(root)
+
+
+def verify_offsets(root: Path) -> tuple[dict[str, Any], dict[tuple[str, float], dict[str, Any]]]:
+    spec = load_offset_spec(root)
+    data = json.loads((root / "direct-offset-source.json").read_text())
+    if (
+        data.get("schema_version") != 1
+        or data.get("dataset_id") != "aria-four-planet-direct-offset-reference-v1"
+    ):
+        raise ValueError("Unknown direct-offset source identity")
+    if (
+        data["specification_sha256"]
+        != sha256((root / "direct-offset-specification.json").read_bytes())
+        or data["absolute_physical_uncertainty_bound"] is not None
+    ):
+        raise ValueError("Changed direct-offset specification or uncertainty claim")
+    wanted = {q["body"]: q for q in spec["queries"]}
+    seen = set()
+    mapping = {}
+    for record in data["responses"]:
+        body = record["body"]
+        if body not in wanted or body in seen:
+            raise ValueError("Duplicate or unexpected direct-offset request")
+        seen.add(body)
+        rows = validate_receipt(
+            root,
+            record,
+            offset_query(body),
+            wanted[body]["target"],
+            "geometric",
+            wanted[body]["epochs_jd_tdb"],
+        )
+        for row in rows:
+            mapping[(body, row["jd_tdb"])] = dict(
+                **row, raw_file=record["raw_file"], raw_sha256=record["raw_sha256"]
+            )
+    if seen != set(REMAINING) or len(mapping) != 100:
+        raise ValueError("Missing direct-offset source rows")
+    return dict(
+        direct_offset_states=len(mapping),
+        direct_offset_responses=len(seen),
+        direct_offset_source_sha256=sha256((root / "direct-offset-source.json").read_bytes()),
+        direct_offset_specification_sha256=data["specification_sha256"],
+    ), mapping
+
+
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("action", choices=("acquire", "verify"))
+    parser.add_argument(
+        "action", choices=("acquire", "verify", "acquire-offsets", "verify-offsets")
+    )
     parser.add_argument("--source", type=Path, default=DEFAULT_ROOT)
     args = parser.parse_args()
     if args.action == "acquire":
         acquire(args.source)
+    elif args.action == "acquire-offsets":
+        acquire_offsets(args.source)
+    elif args.action == "verify-offsets":
+        print(json.dumps(verify_offsets(args.source)[0], indent=2, sort_keys=True))
     else:
         print(json.dumps(verify(args.source)[0], indent=2, sort_keys=True))

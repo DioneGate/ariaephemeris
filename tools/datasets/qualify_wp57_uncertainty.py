@@ -15,14 +15,22 @@ from ariaephemeris.datasets import centres_manifest
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from acquire_horizons_fixtures import sha256
-from attribute_jpl_source_models import evaluate, stats
+from attribute_jpl_source_models import evaluate, norm, stats
 from verify_horizons_fixtures import validate as verify_wp51
-from wp57_source import DEFAULT_ROOT, REMAINING, WP56_REPORT, load_spec, verify
-from wp57_uncertainty import refine_stations, sensitivity_seconds, signed_rate, uncertainty_register
+from wp57_source import DEFAULT_ROOT, REMAINING, WP56_REPORT, load_spec, verify, verify_offsets
+from wp57_uncertainty import (
+    refine_stations,
+    sensitivity_seconds,
+    separate_offset_context,
+    signed_rate,
+    uncertainty_register,
+)
 
 
 def qualify(root: Path, base: Path, centres: Path, output: Path) -> dict[str, Any]:
     proof, sources = verify(root)
+    offset_proof, direct_offsets = verify_offsets(root)
+    proof.update(offset_proof)
     spec = load_spec(root)
     if verify_wp51(Path("data/fixtures/horizons"))["fixture_rows_verified"] != 300:
         raise ValueError("Original WP5.1 source unverified")
@@ -56,6 +64,50 @@ def qualify(root: Path, base: Path, centres: Path, output: Path) -> dict[str, An
                 )
             ):
                 raise ValueError("Velocity component closure exceeds 1e-10 km/s")
+        previous_vectors = {
+            (r["body"], r["metrics"]["jd_tdb"]): r["metrics"]
+            for r in original["rows"]
+            if r["kind"] == "geometric"
+        }
+        parents = {
+            (r["body"], r["jd_tdb"]): r for r in components["cases"] if r["role"] == "parent_geo"
+        }
+        for sample in attribution["samples"]:
+            key = sample["body"], sample["jd_tdb"]
+            original_vector = previous_vectors[key]
+            parent = parents[key]
+            direct = direct_offsets[key]
+            position = separate_offset_context(
+                sample["model_component_position"],
+                original_vector["reference_position_km"],
+                parent["position_km"],
+                direct["position_km"],
+            )
+            velocity = separate_offset_context(
+                sample["model_component_velocity_km_s"],
+                original_vector["reference_velocity_km_s"],
+                parent["velocity_km_s"],
+                direct["velocity_km_s"],
+            )
+            if position["reconstruction_error"] > 2e-4 or velocity["reconstruction_error"] > 1e-10:
+                raise ValueError("Direct-offset/context vector decomposition failed closure")
+            sample["direct_offset_attribution"] = dict(
+                position_km=position,
+                velocity_km_s=velocity,
+                direct_source_sha256=direct["raw_sha256"],
+            )
+        for body, metrics in attribution["per_body"].items():
+            selected = [
+                r["direct_offset_attribution"] for r in attribution["samples"] if r["body"] == body
+            ]
+            for name in ("direct_physical_offset_difference", "reference_chain_offset_mixing"):
+                metrics[name + "_km"] = stats([norm(r["position_km"][name]) for r in selected])
+                metrics[name + "_velocity_m_s"] = stats(
+                    [norm(r["velocity_km_s"][name]) * 1000 for r in selected]
+                )
+        attribution["direct_offset_interpretation"] = (
+            "Total = parent geocentric difference + direct physical-offset difference - reference-chain offset mixing; component maxima are not additive uncertainty bounds"
+        )
         for case, row in zip(spec["station_centres"], stations, strict=True):
             t = case["jd_tt"]
             rates = {}
@@ -116,6 +168,10 @@ def qualify(root: Path, base: Path, centres: Path, output: Path) -> dict[str, An
     result = dict(
         schema_version=1,
         report_id="aria-model-uncertainty-qualification-v1",
+        reference_interpolant="C2 not-a-knot cubic spline; continuous first/second derivatives",
+        initial_local_cubic_diagnostic_sha256=sha256(
+            Path("docs/validation/wp57-initial-local-cubic-diagnostic.json").read_bytes()
+        ),
         source_integrity=proof,
         original_wp52_sha256=sha256(original_path.read_bytes()),
         original_wp56_sha256=sha256(WP56_REPORT.read_bytes()),

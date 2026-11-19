@@ -175,6 +175,33 @@ def refine_stations(
     return records
 
 
+def separate_offset_context(
+    components: dict[str, Any],
+    target_geo: list[float],
+    parent_geo: list[float],
+    direct_offset: list[float],
+) -> dict[str, Any]:
+    """Vector identity, with position OR velocity units supplied consistently.
+
+    Total = parent difference + true direct-offset difference - query-path mixing.
+    An effective centre offset inferred from different parent chains is not a
+    pure physical-centre offset. Cancellation is retained at each exact epoch.
+    """
+    from attribute_jpl_source_models import add, norm, sub
+
+    mixing = sub(sub(target_geo, parent_geo), direct_offset)
+    physical = add(components["effective_offset_difference"], mixing)
+    closure = sub(
+        components["total_difference"],
+        sub(add(components["parent_geocentric_difference"], physical), mixing),
+    )
+    return dict(
+        direct_physical_offset_difference=physical,
+        reference_chain_offset_mixing=mixing,
+        reconstruction_error=norm(closure),
+    )
+
+
 def uncertainty_register() -> list[dict[str, Any]]:
     entries = [
         (
@@ -195,7 +222,7 @@ def uncertainty_register() -> list[dict[str, Any]]:
             "U03",
             "Horizons query paths",
             "measured context gaps",
-            "Direct centre, parent and SSB paths may select different chains; retain signed closure",
+            "Direct centre, parent and SSB paths may select different chains; direct centre-to-parent queries isolate offset mixing",
             "Independently matched chain and frame/source identity",
         ),
         (

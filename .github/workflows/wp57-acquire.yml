@@ -39,6 +39,13 @@ jobs:
             python tools/datasets/wp57_source.py acquire
           fi
           python tools/datasets/wp57_source.py verify
+          git fetch origin a2272bc4936bdeb708d0a7d66b216a90546f67a4
+          git show a2272bc4936bdeb708d0a7d66b216a90546f67a4:data/fixtures/horizons/wp57-uncertainty/direct-offset-specification.json > /tmp/wp57-offset-spec.json
+          cmp /tmp/wp57-offset-spec.json data/fixtures/horizons/wp57-uncertainty/direct-offset-specification.json
+          if [ ! -f data/fixtures/horizons/wp57-uncertainty/direct-offset-source.json ]; then
+            python tools/datasets/wp57_source.py acquire-offsets
+          fi
+          python tools/datasets/wp57_source.py verify-offsets
       - uses: actions/cache@v4
         with:
           path: |

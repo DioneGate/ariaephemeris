@@ -159,3 +159,52 @@ def test_corrupt_or_mislabelled_original_source_fails(tmp_path):
     record["raw_sha256"] = hashlib.sha256(bad.encode()).hexdigest()
     with pytest.raises(ValueError, match="convention"):
         validate_receipt(tmp_path, record, params, 8, "geometric", dates)
+
+
+def test_reference_chain_mixing_is_separated_before_offset_interpretation():
+    from wp57_uncertainty import separate_offset_context
+
+    components = dict(
+        total_difference=[0.1, 0, 0],
+        parent_geocentric_difference=[4000, 0, 0],
+        effective_offset_difference=[-3999.9, 0, 0],
+    )
+    result = separate_offset_context(components, [5000.2, 0, 0], [1000.1, 0, 0], [0.1, 0, 0])
+    assert result["reference_chain_offset_mixing"] == pytest.approx([4000, 0, 0])
+    assert result["direct_physical_offset_difference"] == pytest.approx([0.1, 0, 0])
+    assert result["reconstruction_error"] < 1e-9
+    from wp57_source import offset_query
+
+    assert offset_query("uranus")["CENTER"] == "'500@7'"
+    assert offset_query("uranus")["COMMAND"] == "'799'"
+
+
+def test_continuous_reference_resolves_the_recorded_knot_artifacts():
+    from wp57_source import WP56_REPORT, verify
+
+    _, rays = verify(DEFAULT_ROOT)
+    previous = json.loads(WP56_REPORT.read_text())
+    initial = json.loads(
+        (
+            Path(__file__).resolve().parents[2]
+            / "docs/validation/wp57-initial-local-cubic-diagnostic.json"
+        ).read_text()
+    )
+    assert initial["passed"] is False and initial["resolved_station_count"] == 17
+    rows = refine_stations(load_spec(DEFAULT_ROOT), rays, previous)
+    assert len(rows) == 36 and all(r["passed"] for r in rows)
+    assert all(len(r["roots_by_grid"]["45-minute"]) == 1 for r in rows)
+    assert previous["passed"] is False and previous["unresolved_reference_workloads"] == 6
+    assert all(r["physical_time_uncertainty_seconds"] is None for r in rows)
+
+
+def test_continuous_reference_refuses_a_plateau_and_missing_epochs():
+    from wp57_uncertainty import continuous_station_roots
+
+    times = JD + np.arange(-1, 1.01, 0.125)
+    with pytest.raises(ValueError, match="plateau"):
+        continuous_station_roots(times, np.full_like(times, 100), "mars", (JD - 0.25, JD + 0.25))
+    with pytest.raises(ValueError, match="nonuniform"):
+        continuous_station_roots(
+            np.delete(times, 3), np.delete(times - JD, 3), "mars", (JD - 0.25, JD + 0.25)
+        )
