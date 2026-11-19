@@ -100,7 +100,7 @@ def vectors(
 
 
 def coordinates(
-    kernel: Kernel,
+    kernel: Kernel | PhysicalCentreKernel,
     body: str,
     times: list[ResolvedTime],
     origin: str,
