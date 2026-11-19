@@ -42,8 +42,8 @@ production release and deployment are excluded.
   Preserve existing Jupiter/Pluto output byte-for-byte after helper generalisation.
 - Predeclare a source-only refinement around all 36 stations discovered in 009.
   Candidate centres come from the JPL-only fine catalogue, never Aria times.
-  Acquire independent quantity-45 airless ICRF rays at explicit TT; compare local
-  cubic stationary roots at 3h/90m/45m and shifted 45m grids. Retain the original
+  Acquire independent quantity-45 airless ICRF rays at explicit TT; compare continuous
+  cubic-spline stationary roots at 3h/90m/45m and shifted 45m grids. Retain the original
   coarse failures and quantify the refinement with the same 30-second diagnostic.
 - Compare refined independent station times with frozen 009 Aria events using the
   existing 60-second association diagnostic. Retain every root and ambiguity.
@@ -96,3 +96,19 @@ Owner requested carrying on with 010 on 19 November 2026. Dedicated branch:
 `feature/rm-001-010-model-uncertainty`. Implement and test the bounded evidence;
 record actual commands, source hashes, scientific limitations and PR in progress.
 Keep parent P3/P6 open. No publication or deployment is included.
+
+## Evidence-driven refinement — 19 November 2026
+
+The initial 400-state attribution and 2,340 station-ray capture are frozen in
+commit `221ecf1`. Initial independent local cubic panels have derivative jumps
+at knots, producing artificial double/missing stationary roots; the failed
+report is retained in Git and a separate compact diagnostic. A C2 not-a-knot
+cubic spline resolves all 36 captured stations locally with the original
+30-second convergence criterion. No runtime event algorithm changes.
+
+Large cancelling Uranus/Neptune terms require 100 additional direct physical
+centre-to-parent vectors (25 existing TDB dates per remaining body). These use a
+separate predeclared specification and immutable source identity, preserving
+the original 400 components. Distinguish true direct-offset disagreement from
+reference-chain mixing; never call the large effective-offset term a pure
+physical-offset error. Preserve vector closure and explicit velocity units.

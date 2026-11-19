@@ -11,7 +11,8 @@ import math
 from typing import Any
 
 import numpy as np
-from wp56_discovery import SECONDS, discover, match_catalogues, tropical_longitudes
+from scipy.interpolate import CubicSpline
+from wp56_discovery import SECONDS, match_catalogues, tropical_longitudes
 
 
 def signed_rate(longitudes: list[float], step_days: float) -> float:
@@ -42,6 +43,68 @@ def sensitivity_seconds(residual: float, slope_per_tt_day: float) -> float | Non
     return value if math.isfinite(value) else None
 
 
+def continuous_station_roots(
+    times: np.ndarray, longitudes: np.ndarray, body: str, interval: tuple[float, float]
+) -> list[dict[str, Any]]:
+    """All stationary roots of a C2 source spline; no derivative jumps at knots.
+
+    Piecewise independent four-node cubics are only C0 and can produce double or
+    missing derivative roots around a knot. The original failed evidence remains
+    frozen; this is a separately identified continuous reference interpolant.
+    """
+    if (
+        len(times) < 6
+        or times.shape != longitudes.shape
+        or not np.isfinite([times, longitudes]).all()
+    ):
+        raise ValueError("Complete finite source station grid required")
+    differences = np.diff(times)
+    if np.any(differences <= 0) or not np.allclose(differences, differences[0], atol=1e-9, rtol=0):
+        raise ValueError("Missing or nonuniform station samples")
+    if not times[1] <= interval[0] < interval[1] <= times[-2]:
+        raise ValueError("Insufficient station source padding")
+    changes = (np.diff(longitudes) + 180) % 360 - 180
+    if np.any(np.abs(changes) >= 90):
+        raise ValueError("Unresolved circular station jump")
+    y = np.degrees(np.unwrap(np.radians(longitudes)))
+    origin = float(times[len(times) // 2])
+    spline = CubicSpline(
+        times - origin, y - y[len(y) // 2], bc_type="not-a-knot", extrapolate=False
+    )
+    derivative = spline.derivative()
+    roots = derivative.roots(extrapolate=False)
+    if not np.isfinite(roots).all():
+        raise ValueError("Unresolved stationary plateau")
+    output = []
+    for local in sorted(roots):
+        jd = origin + float(local)
+        if not interval[0] <= jd < interval[1]:
+            continue
+        acceleration = float(spline(float(local), 2))
+        ambiguous = abs(acceleration) < 1e-7
+        i = int(np.clip(np.searchsorted(times, jd) - 1, 0, len(times) - 2))
+        event = dict(
+            kind="station",
+            body=body,
+            other=None,
+            goal_deg=None,
+            jd_tt=jd,
+            direction="grazing"
+            if ambiguous
+            else "retrograde-to-direct"
+            if acceleration > 0
+            else "direct-to-retrograde",
+            equation_slope_per_tt_day=acceleration,
+            source_panel_jd_tt=[float(times[i]), float(times[i + 1])],
+            ambiguous=ambiguous,
+            interpolation_error_bound_established=False,
+            interpolant="C2 not-a-knot cubic spline of original JPL tropical longitudes",
+        )
+        if not output or abs(output[-1]["jd_tt"] - jd) > 1e-8:
+            output.append(event)
+    return output
+
+
 def refine_stations(
     spec: dict[str, Any], sources: dict[tuple[str, float], dict[str, Any]], previous: dict[str, Any]
 ) -> list[dict[str, Any]]:
@@ -60,7 +123,9 @@ def refine_stations(
         grids = {}
         for grid in spec["station_grids"]:
             sl = slice(grid["offset"], None, grid["stride"])
-            grids[grid["name"]] = discover(times[sl], lon[sl], original["workload"], interval)
+            grids[grid["name"]] = continuous_station_roots(
+                times[sl], lon[sl], case["body"], interval
+            )
         fine = grids["45-minute"]
         comparisons = {
             name: match_catalogues(fine, roots, spec["reference_convergence_seconds"])
