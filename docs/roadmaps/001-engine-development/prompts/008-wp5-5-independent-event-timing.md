@@ -7,7 +7,7 @@
 | Verified baseline | Main after [WP5.4 PR #12 merged](https://github.com/DioneGate/ariaephemeris/pull/12); original SHA-verified Horizons apparent directions and numerical report |
 | Dedicated branch | `feature/rm-001-008-wp5-5-independent-event-timing-20261119` |
 | Review | [Draft PR #13](https://github.com/DioneGate/ariaephemeris/pull/13) |
-| Status | **In progress** until independent original JPL rays, numerical report and reproducible CI are archived; no merge authority |
+| Status | **In review** — 22/22 source event roots and near-root JPL sign brackets measured, full PR replay pending; no merge authority |
 
 ## Objective
 
@@ -43,11 +43,11 @@ Provisional **60 seconds** external comparative discrepancy is a research diagno
 
 ## Acceptance
 
-- [ ] Exactly 22 nominated source windows (6 stations, 6 ingresses, 5 conjunctions, 5 oppositions) independently populated from raw SHA-verified Horizons directions, with 9-node observed sign brackets and complete station 5-point rate stencils.
-- [ ] Fail-closed independent sample provenance, TT frame convention, source target/observer identities, no missing records or substituted Aria reference values.
-- [ ] 22 original source-derived reference roots calculated; signed Aria minus JPL event-time differences and method/conditioning/provisional exceedances recorded per event and kind.
-- [ ] Synthetic rate, wrap, interpolation and event-kind tests; pinned original-source six-kernel real comparison, test/ruff/mypy/package gate and byte-for-byte numerical replay passed with actual run links.
-- [ ] Scientific report, roadmap prompt register and progress record written; [PR #13](https://github.com/DioneGate/ariaephemeris/pull/13) prepared for owner review, **not merged**.
+- [x] Exactly 22 candidate windows (6 stations, 6 ingresses, 5 conjunctions, 5 oppositions), all 504 original JPL event-grid rays SHA-verified across 14 responses; 9-node source sign brackets and complete five-point station-rate stencils verified.
+- [x] Fail-closed source provenance, physical target/Earth 399/airless apparent ICRF TT conventions, missing/duplicate source detection, and independent JPL-only reference values verified, without Aria-substituted expected values.
+- [x] 22/22 JPL-only roots and 22/22 corresponding Aria event times compared in [machine report](../../../validation/wp55-independent-event-roots.json), with signed errors, bracket width, cubic–linear sensitivity, conditioning and provisional diagnostic exceedances. Independently sourced 224 further near-root JPL rays confirmed **22/22 sign changes within ±15 seconds**, with **22/22 Aria times also inside those source brackets** in [fine-time report](../../../validation/wp55-jpl-fine-root-brackets.json).
+- [ ] Pure synthetic rate, angle wrap, interpolation and event-kind tests passed; [real six-kernel JPL capture #44534617647](https://github.com/DioneGate/ariaephemeris/actions/runs/44534617647) **PASS** and [JPL-only 15-second confirmation #44535411289](https://github.com/DioneGate/ariaephemeris/actions/runs/44535411289) **PASS**. Final **PR-scoped offline integrity, pinned six-kernel byte-for-byte reproduction and project fast CI** must be checked at final code head.
+- [x] [Scientific event-timing report](../p1-wp55-independent-event-timing.md), [22-case numerical evidence](../../../validation/wp55-independent-event-roots.json), [fine-source sign-bracket evidence](../../../validation/wp55-jpl-fine-root-brackets.json), source registry and roadmap progress prepared in [draft PR #13](https://github.com/DioneGate/ariaephemeris/pull/13). **No merge or deployment authorised.**
 
 ## Reproducibility and science boundary
 
