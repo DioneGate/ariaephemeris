@@ -1,0 +1,112 @@
+name: RM-001-007 WP5.4 immutable tropical-coordinate review gates
+
+on:
+  pull_request:
+    paths:
+      - '.github/workflows/wp54-review-validation.yml'
+      - 'tools/datasets/acquire_wp54_tropical.py'
+      - 'tools/datasets/verify_wp54_tropical.py'
+      - 'tools/datasets/compare_wp54_tropical.py'
+      - 'tests/unit/test_wp54_tropical_qualification.py'
+      - 'data/fixtures/horizons/wp54-tropical/**'
+      - 'docs/validation/wp54-tropical-coordinate-comparison.json'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  hermetic-source:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+          cache-dependency-path: requirements/development.lock
+      - name: Install pinned scientific reference environment
+        run: |
+          python -m pip install -r requirements/development.lock
+          python -m pip install --no-deps -e .
+      - name: Independently validate every original Horizons source SHA and sample
+        run: |
+          python tools/datasets/verify_wp54_tropical.py \
+            --root data/fixtures/horizons/wp54-tropical \
+            --wp51 data/fixtures/horizons
+      - name: Verify independent moving-ecliptic mathematics and source naming
+        run: |
+          pytest -q tests/unit/test_wp54_tropical_qualification.py
+          ruff check tools/datasets/acquire_wp54_tropical.py tools/datasets/verify_wp54_tropical.py tools/datasets/compare_wp54_tropical.py tests/unit/test_wp54_tropical_qualification.py
+          ruff format --check tools/datasets/acquire_wp54_tropical.py tools/datasets/verify_wp54_tropical.py tools/datasets/compare_wp54_tropical.py tests/unit/test_wp54_tropical_qualification.py
+      - name: Verify reported extrema and no false commercial acceptance
+        run: |
+          python - <<'PY'
+          import json, math
+          from pathlib import Path
+          refs=json.loads(Path("data/fixtures/horizons/wp54-tropical/wp54-horizons-tropical-stencils-v1.json").read_text())
+          report=json.loads(Path("docs/validation/wp54-tropical-coordinate-comparison.json").read_text())
+          assert refs["new_jpl_reference_rows"] == 780 and refs["ray_count"] == 930
+          assert refs["case_count"] == report["sample_count"] == 186
+          assert all(report["per_planet"][b]["longitude_arcsec"]["count"] == 31 for b in report["per_planet"])
+          assert len(report["per_planet"]) == 6
+          for body, summary in report["per_planet"].items():
+              rows=[r for r in report["rows"] if r["body"] == body]
+              assert len(rows) == 31
+              for label, key in (("longitude_arcsec","longitude_arcsec_signed"),("latitude_arcsec","latitude_arcsec_signed"),("signed_longitude_rate_deg_tt_day","longitude_rate_deg_tt_day_signed")):
+                  maximum=max(abs(r["residual"][key]) for r in rows)
+                  assert math.isfinite(maximum) and maximum == summary[label]["max"]
+          assert report["absolute_astronomical_accuracy_certified"] is False
+          assert report["commercial_release_qualified"] is False
+          print("930 original external rays, 186 charts, per-planet extrema; no false accuracy claims")
+          PY
+
+  real-kernel-replay:
+    needs: hermetic-source
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+          cache-dependency-path: requirements/development.lock
+      - name: Install project-pinned requirements
+        run: |
+          python -m pip install -r requirements/development.lock
+          python -m pip install --no-deps -e .
+      - name: Acquire DE442s and validate SHA
+        run: ariaephemeris install-data .artifacts
+      - name: Download and independently verify six original supplementary JPL SPKs
+        run: |
+          set -euo pipefail
+          mkdir -p .artifacts/planet-centres
+          python - <<'PY' > .artifacts/centres.tsv
+          from ariaephemeris.datasets import centres_manifest
+          for body, record in centres_manifest()["sources"].items():
+              print(body, record["filename"], record["source_url"], sep="\t")
+          PY
+          while IFS=$'\t' read -r body filename url; do
+            curl --fail --location --show-error --silent --retry 4 --retry-delay 5 \
+              --connect-timeout 30 --max-time 1800 "$url" -o ".artifacts/planet-centres/$filename"
+          done < .artifacts/centres.tsv
+          python - <<'PY'
+          from pathlib import Path
+          from ariaephemeris.datasets import centres_manifest, verify_centre_sources
+          s=centres_manifest()["sources"]
+          assert len(verify_centre_sources({b:Path(".artifacts/planet-centres")/r["filename"] for b,r in s.items()}))==6
+          PY
+      - name: Recompute full independent 186-case tropical position and rate report
+        run: |
+          python tools/datasets/compare_wp54_tropical.py \
+            --fixtures data/fixtures/horizons/wp54-tropical \
+            --wp51 data/fixtures/horizons \
+            --base .artifacts/de442s.bsp \
+            --centres-dir .artifacts/planet-centres \
+            --output docs/validation/wp54-tropical-coordinate-comparison.json
+      - name: Ensure numerical report reproduces byte-for-byte from pinned source
+        run: |
+          git diff --exit-code -- docs/validation/wp54-tropical-coordinate-comparison.json
+          echo "All 186 physical-centre chart comparisons reproduce exactly"
