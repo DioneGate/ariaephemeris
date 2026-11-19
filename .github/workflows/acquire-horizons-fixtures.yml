@@ -1,13 +1,7 @@
 name: RM-001-004 Acquire independent JPL Horizons fixtures
 
+# One-shot, manually authorised refresh only; routine CI never calls live Horizons.
 on:
-  push:
-    branches:
-      - feature/rm-001-004-independent-horizons-fixtures-20261119
-    paths:
-      - '.github/workflows/acquire-horizons-fixtures.yml'
-      - 'tools/datasets/acquire_horizons_fixtures.py'
-      - 'tools/datasets/verify_horizons_fixtures.py'
   workflow_dispatch:
 
 permissions:
