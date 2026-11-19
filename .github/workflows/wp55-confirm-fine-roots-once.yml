@@ -1,0 +1,94 @@
+name: RM-001-008 One-shot independent JPL near-root observations
+
+on:
+  push:
+    branches:
+      - feature/rm-001-008-wp5-5-independent-event-timing-20261119
+    paths:
+      - '.github/workflows/wp55-confirm-fine-roots-once.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  independently-confirm-source:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+          cache-dependency-path: requirements/development.lock
+      - name: Install pinned scientific dependencies, never foreign engine or service
+        run: |
+          python -m pip install -r requirements/development.lock
+          python -m pip install --no-deps -e .
+      - name: Apply pinned formatter and verify original 22 event roots
+        run: |
+          set -euo pipefail
+          ruff check --fix tools/datasets/acquire_wp55_root_brackets.py tools/datasets/verify_wp55_root_brackets.py
+          ruff format tools/datasets/acquire_wp55_root_brackets.py tools/datasets/verify_wp55_root_brackets.py
+          ruff check tools/datasets/acquire_wp55_root_brackets.py tools/datasets/verify_wp55_root_brackets.py
+          python tools/datasets/verify_wp55_events.py --source data/fixtures/horizons/wp55-events --wp54 data/fixtures/horizons/wp54-tropical
+          pytest -q tests/unit/test_wp55_independent_event_timing.py
+      - name: Acquire additional original Horizons TT event-root observations (NO Aria engine)
+        run: |
+          set -euo pipefail
+          if [ -f data/fixtures/horizons/wp55-root-refinement/wp55-jpl-fine-root-brackets-v1.json ]; then
+            echo "Existing immutable source; refuse JPL refresh"
+          else
+            python tools/datasets/acquire_wp55_root_brackets.py \
+              --source data/fixtures/horizons/wp55-events \
+              --wp54 data/fixtures/horizons/wp54-tropical \
+              --comparison docs/validation/wp55-independent-event-roots.json \
+              --output data/fixtures/horizons/wp55-root-refinement
+          fi
+      - name: Verify every new original JPL response and independently observed fine-time sign change
+        run: |
+          python tools/datasets/verify_wp55_root_brackets.py \
+            --source data/fixtures/horizons/wp55-root-refinement \
+            --original data/fixtures/horizons/wp55-events \
+            --wp54 data/fixtures/horizons/wp54-tropical \
+            --comparison docs/validation/wp55-independent-event-roots.json \
+            --output docs/validation/wp55-jpl-fine-root-brackets.json
+      - name: Require complete source data and explicit uncertainty disclaimers
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          source=json.loads(Path("data/fixtures/horizons/wp55-root-refinement/wp55-jpl-fine-root-brackets-v1.json").read_text())
+          report=json.loads(Path("docs/validation/wp55-jpl-fine-root-brackets.json").read_text())
+          assert source["event_count"]==report["event_count"]==22
+          assert source["ray_count"]==report["new_independent_jpl_rays"]==224
+          assert set(r["kind"] for r in report["events"])=={"station","ingress","conjunction","opposition"}
+          assert all(r["independent_local_sign_change_bracket_seconds"] in (30,60,None)
+                     for r in report["events"])
+          assert report["absolute_astronomical_accuracy_certified"] is False
+          assert report["commercial_release_qualified"] is False
+          assert report["rigorous_root_uniqueness_or_continuous_error_bound_certified"] is False
+          print("22 JPL source-refined root neighbourhoods: complete immutable scientific evidence")
+          PY
+      - name: Freeze only external original source and numerical proof; retire one-shot job
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git rm .github/workflows/wp55-confirm-fine-roots-once.yml
+          git add data/fixtures/horizons/wp55-root-refinement docs/validation/wp55-jpl-fine-root-brackets.json \
+            tools/datasets/acquire_wp55_root_brackets.py tools/datasets/verify_wp55_root_brackets.py
+          git commit -m "data(RM-001/008): freeze independently verified 15/30-second JPL event-root brackets"
+          git push origin HEAD:feature/rm-001-008-wp5-5-independent-event-timing-20261119
+      - name: Preserve original source responses and exact refinement evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: wp55-fine-time-independent-jpl-root-brackets
+          path: |
+            data/fixtures/horizons/wp55-root-refinement/
+            docs/validation/wp55-jpl-fine-root-brackets.json
+          if-no-files-found: warn
+          retention-days: 60
