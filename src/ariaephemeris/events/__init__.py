@@ -50,7 +50,9 @@ def find_events(
     if n > r.max_evaluations:
         raise AriaError("REQUEST_LIMIT", "Event interval exceeds evaluation budget")
     bodies = (r.body,) if not r.other_body else (r.body, r.other_body)
-    base = PositionRequest(TimeInput(jd=(start, 0), scale="TT"), bodies=bodies, strict=r.strict)
+    base = PositionRequest(
+        TimeInput(jd=(start, 0), scale="TT"), bodies=bodies, strict=r.strict, profile=r.profile
+    )
     cache: dict[float, tuple[float, float]] = {}
     evaluations = 0
 
@@ -86,7 +88,10 @@ def find_events(
             cache[j] = extract(
                 engine.positions(
                     PositionRequest(
-                        TimeInput(jd=(j, 0), scale="TT"), bodies=bodies, strict=r.strict
+                        TimeInput(jd=(j, 0), scale="TT"),
+                        bodies=bodies,
+                        strict=r.strict,
+                        profile=r.profile,
                     )
                 )
             )
@@ -204,6 +209,7 @@ def find_events(
         qualification = engine.manifest.get("qualification", {})
         timing_qualified = (
             condition == "well-conditioned"
+            and r.profile == "reference"
             and qualification.get("status") == "passed"
             and any(
                 w["kind"] == r.kind
@@ -219,7 +225,12 @@ def find_events(
             "dataset_id": engine.manifest["dataset_id"],
             "dataset_sha256": engine.manifest["sha256"],
             "engine_version": "0.1.0",
-            "profile": "reference",
+            "profile": r.profile,
+            **(
+                {"physical_centre_sources": engine._physical_provenance(bodies)}
+                if r.profile == "planet-centres-v1"
+                else {}
+            ),
             "algorithm": "extrema-aware-bracket-v1",
             "scale": "TT",
             "origin": "geocentric",
@@ -231,7 +242,11 @@ def find_events(
             "timing_qualified": timing_qualified,
             "timing_qualification_basis": "empirical matching-window reference agreement"
             if timing_qualified
-            else "unqualified interval or conditioning",
+            else (
+                "unqualified interval or conditioning"
+                if r.profile == "reference"
+                else "physical-centre event timing not qualified"
+            ),
             "residual_units": "deg/day" if r.kind == "station" else "deg",
             "coverage_claim": "empirical physical-body scan; not a formal root-completeness proof",
             "event_direction": "stationary"

@@ -7,12 +7,16 @@ on:
     paths:
       - '.github/workflows/planet-centre-qualification.yml'
       - 'tools/datasets/qualify_planet_centres.py'
+      - 'src/**'
+      - 'tests/integration/test_physical_centres.py'
       - 'tools/datasets/audit_planet_centres.py'
       - 'docs/roadmaps/001-engine-development/planet-centre-source-manifest.json'
   pull_request:
     paths:
       - '.github/workflows/planet-centre-qualification.yml'
       - 'tools/datasets/qualify_planet_centres.py'
+      - 'src/**'
+      - 'tests/integration/test_physical_centres.py'
       - 'docs/roadmaps/001-engine-development/planet-centre-source-manifest.json'
   workflow_dispatch:
 
@@ -79,6 +83,13 @@ jobs:
               assert not report["source_gate_pass"], p
               print(f"{p}: DISCOVERY PASS only; source SHA-256 must be committed independently and rerun")
           PY
+      - name: Verify runtime opt-in physical-centre profile (real source)
+        run: |
+          set -euo pipefail
+          filename=$(python -c 'import json,os; m=json.load(open("docs/roadmaps/001-engine-development/planet-centre-source-manifest.json")); print(m["sources"][os.environ["PLANET"]]["source_file"])')
+          ARIA_KERNEL=.artifacts/de442s.bsp ARIA_CENTRE_BODY="$PLANET" \
+          ARIA_CENTRE_KERNEL=".artifacts/planet-centres/$filename" \
+            pytest -q tests/integration/test_physical_centres.py
       - name: Upload small JSON evidence only (never redistribute SPK binaries)
         if: always()
         uses: actions/upload-artifact@v4

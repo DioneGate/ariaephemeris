@@ -36,6 +36,31 @@ with Ephemeris(".artifacts/de442s.bsp") as engine:
 
 Time inputs accept explicit UTC, TT, TDB or UT1 and two-part Julian dates. Unresolved DST folds/gaps are rejected. Strict chart calculations require supplied DUT1 or delta-T; strict topocentric calculations also require polar motion. Pre-1972 civil UTC is rejected; use explicit TT or UT1. Future UTC beyond the pinned leap-table expiry is rejected in strict mode. Non-strict assumptions are reported in metadata. See [conventions](docs/conventions.md).
 
+## Opt-in physical planet-centres (WP4 preview)
+
+The original `reference` calculation profile remains the **default**, including its explicitly identified Mars–Pluto **system barycentres**. The separate `planet-centres-v1` profile uses physical centres for Mars (499), Jupiter (599), Saturn (699), Uranus (799), Neptune (899) and Pluto (999). Its numerical source profile and observed dataset SHA-256 are recorded in every physical-profile response. **This profile has not been approved for commercial release.**
+
+Download the **original** relevant JPL satellite SPK files from the [NAIF source directory](https://naif.jpl.nasa.gov/pub/naif/generic_kernels/spk/satellites/) separately, retain their original filenames/comments, and provide their local paths explicitly. The engine verifies each file's exact byte count and SHA-256 against the versioned `resources/planet-centres.json` manifest; it does not download new data during calculations. For a complete default all-bodies chart, all six files are required (around 2.18 GB in total); missing physical-centre sources are an error, never a barycentre fallback.
+
+For example, once the pinned original JUP349 source is installed:
+
+```python
+from ariaephemeris import Ephemeris, PositionRequest, TimeInput
+
+t = TimeInput(jd=(2451545.0, 0.0), scale="TT")
+with Ephemeris(
+    ".artifacts/de442s.bsp",
+    centre_kernels={"jupiter": ".artifacts/planet-centres/jup349.bsp"},
+) as e:
+    result = e.positions(PositionRequest(t, bodies=("jupiter",), profile="planet-centres-v1"))
+    assert result.bodies[0].target_id == 599
+    print(result.metadata["physical_centre_sources"]["jupiter"]["source_sha256"])
+```
+
+The same opt-in profile is accepted by `positions`, `positions_batch`, `chart`, `raw_state(..., profile="planet-centres-v1")`, and event searches via `EventRequest(profile="planet-centres-v1")`. For the CLI, repeat `--centre-kernel BODY=FILE` for each required source and set `"profile": "planet-centres-v1"` in the JSON request. A partial source installation is possible for targeted testing, but requests requiring an omitted body **fail explicitly**. None of these options changes the default provider or Aria Galaxy.
+
+The source files have passed checksum/segment and same-source CSPICE evaluator checks. **Independent physical-model uncertainty, overall chart accuracy, data redistribution, commercial performance, and application parity remain separate gates.** See [numerical conventions](docs/conventions.md) and [RM-001 source results](docs/roadmaps/001-engine-development/p1-centre-source-feasibility.md).
+
 ## Current limits
 
 Sidereal ayanamsas, lunar nodes/apogees, minor bodies, additional houses, eclipses, compact packs, HTTP and browser/native runtimes are planned. They are not approximated by placeholders. Compact pack size targets remain unmeasured. Apparent longitude rates use a documented, independently checked five-point derivative of the complete correction pipeline; geometric rates use source velocity and frame motion.

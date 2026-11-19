@@ -2,7 +2,7 @@
 # Copyright 2026 DioneGate
 """Public API orchestrating independent numerical and astrology modules."""
 
-from collections.abc import Callable, Sequence
+from collections.abc import Callable, Mapping, Sequence
 from copy import deepcopy
 from dataclasses import asdict, replace
 from pathlib import Path
@@ -14,6 +14,7 @@ from . import astrology, datasets
 from .errors import AriaError
 from .models import (
     BODY_IDS,
+    PHYSICAL_BODY_IDS,
     Aspect,
     AspectRule,
     BodyPosition,
@@ -27,13 +28,33 @@ from .models import (
 )
 from .positions import coordinates
 from .sources import Kernel
+from .sources.centres import PhysicalCentreKernel
 from .time import ResolvedTime, resolve
 
 
 class Ephemeris:
-    def __init__(self, kernel: str | Path) -> None:
+    def __init__(
+        self,
+        kernel: str | Path,
+        *,
+        centre_kernels: Mapping[str, str | Path] | None = None,
+    ) -> None:
         self._manifest = datasets.verify(kernel)
         self.kernel = Kernel(Path(kernel))
+        self._centre_kernel: PhysicalCentreKernel | None = None
+        if centre_kernels:
+            try:
+                records = datasets.verify_centre_sources(centre_kernels)
+                sources = datasets.centres_manifest()
+                self._centre_kernel = PhysicalCentreKernel(
+                    self.kernel,
+                    centre_kernels,
+                    records,
+                    tuple(sources["qualified_interval_jd_tdb"]),
+                )
+            except Exception:
+                self.kernel.close()
+                raise
         # Detect missing centre dependencies up front, rather than on a chart request.
         for target in BODY_IDS.values():
             self.kernel.state(
@@ -59,28 +80,59 @@ class Ephemeris:
         self.close()
 
     def close(self) -> None:
+        if self._centre_kernel is not None:
+            self._centre_kernel.close()
         self.kernel.close()
 
     def dataset_info(self, dataset_id: str | None = None) -> dict[str, Any]:
         if dataset_id is not None and dataset_id != self._manifest["dataset_id"]:
             raise AriaError("DATA_UNAVAILABLE", "Requested dataset is not installed")
-        return {**deepcopy(self._manifest), "segments": self.kernel.segments()}
+        result = {**deepcopy(self._manifest), "segments": self.kernel.segments()}
+        if self._centre_kernel is not None:
+            result["physical_centres"] = self._centre_kernel.provenance(
+                tuple(datasets.centres_manifest()["sources"])
+            )
+        return result
 
-    def raw_state(self, body: str, time: TimeInput) -> dict[str, Any]:
+    def _physical_provenance(self, bodies: tuple[str, ...]) -> dict[str, dict[str, Any]]:
+        if self._centre_kernel is None:
+            raise AriaError("DATA_UNAVAILABLE", "Physical planet-centre sources are not installed")
+        return self._centre_kernel.provenance(bodies)
+
+    def _profile_kernel(self, profile: str) -> tuple[Kernel | PhysicalCentreKernel, dict[str, int]]:
+        if profile == "reference":
+            return self.kernel, BODY_IDS
+        if profile == "planet-centres-v1":
+            if self._centre_kernel is None:
+                raise AriaError(
+                    "DATA_UNAVAILABLE", "Physical planet-centre sources are not installed"
+                )
+            return self._centre_kernel, PHYSICAL_BODY_IDS
+        raise AriaError("UNSUPPORTED_PROFILE", f"Unknown calculation profile: {profile}")
+
+    def raw_state(
+        self, body: str, time: TimeInput, *, profile: str = "reference"
+    ) -> dict[str, Any]:
         if body not in BODY_IDS:
             raise AriaError("UNSUPPORTED_BODY", body)
+        active, ids = self._profile_kernel(profile)
         t = resolve(time)
         self._coverage([t])
-        p, v = self.kernel.state(BODY_IDS[body], t.tdb1, t.tdb2)
-        return {
+        p, v = active.state(ids[body], t.tdb1, t.tdb2)
+        result: dict[str, Any] = {
             "position_km": p.tolist(),
             "velocity_km_day": v.tolist(),
-            "target_id": BODY_IDS[body],
+            "target_id": ids[body],
             "centre_id": 0,
             "time": t.metadata(),
             "dataset_id": self._manifest["dataset_id"],
             "dataset_sha256": self._manifest["sha256"],
         }
+        if profile != "reference":
+            result["profile"] = profile
+            result["physical_centre_sources"] = self._physical_provenance((body,))
+            result["qualification"] = "not-qualified-for-commercial-release"
+        return result
 
     def _coverage(self, times: list[ResolvedTime]) -> None:
         lo, hi = self._manifest["operating_interval_tt"]
@@ -88,8 +140,7 @@ class Ephemeris:
             raise AriaError("OUT_OF_RANGE", "Operating interval: 1900-01-01 through 2100-12-31 TT")
 
     def _validate(self, r: PositionRequest) -> None:
-        if r.profile != "reference":
-            raise AriaError("UNSUPPORTED_PROFILE", "Compact profiles are not implemented")
+        self._profile_kernel(r.profile)
         if r.zodiac != "tropical":
             raise AriaError("UNSUPPORTED_ZODIAC", "Sidereal models are not implemented")
         if r.dataset_id not in (None, self._manifest["dataset_id"]):
@@ -114,11 +165,12 @@ class Ephemeris:
     ) -> tuple[PositionsResult, ...]:
         self._validate(request)
         self._coverage(times)
+        active, target_ids = self._profile_kernel(request.profile)
         rows: list[list[BodyPosition]] = [[] for _ in times]
         notes = []
         for body in request.bodies:
             lon, lat, dist, ra, dec, (vec, rate), ns = coordinates(
-                self.kernel,
+                active,
                 body,
                 times,
                 request.origin,
@@ -126,6 +178,7 @@ class Ephemeris:
                 request.frame,
                 request.observer,
                 request.strict,
+                target_ids[body],
             )
             notes.extend(ns)
             if rate is None:
@@ -135,7 +188,7 @@ class Ephemeris:
                 ls = []
                 for shift in (-2 * h, -h, h, 2 * h):
                     ll, *_ = coordinates(
-                        self.kernel,
+                        active,
                         body,
                         [t.shift(shift) for t in times],
                         request.origin,
@@ -143,6 +196,7 @@ class Ephemeris:
                         request.frame,
                         request.observer,
                         request.strict,
+                        target_ids[body],
                     )
                     ls.append((ll - lon + 180) % 360 - 180)
                 rate = (ls[0] - 8 * ls[1] + 8 * ls[2] - ls[3]) / (12 * h)
@@ -153,7 +207,7 @@ class Ephemeris:
                     if abs(rr) <= request.stationary_band_deg_day
                     else ("retrograde" if rr < 0 else "direct")
                 )
-                tid = BODY_IDS[body]
+                tid = target_ids[body]
                 rows[i].append(
                     BodyPosition(
                         body,
@@ -176,9 +230,11 @@ class Ephemeris:
                     "engine_version": "0.1.0",
                     "dataset_id": self._manifest["dataset_id"],
                     "dataset_sha256": self._manifest["sha256"],
-                    "profile": "reference",
+                    "profile": request.profile,
                     "operating_interval_tt": self._manifest["operating_interval_tt"][:],
-                    "qualification": self._manifest["qualification"]["status"],
+                    "qualification": self._manifest["qualification"]["status"]
+                    if request.profile == "reference"
+                    else "not-qualified-for-commercial-release",
                     "origin": request.origin,
                     "observer": None if request.observer is None else asdict(request.observer),
                     "frame": request.frame,
@@ -197,7 +253,17 @@ class Ephemeris:
                     else "state-velocity-plus-frame-derivative",
                     "standards": "IAU-2006/2000A",
                     "deflection_limiter": {"Sun": 1e-6, "Jupiter": 3e-9, "Saturn": 3e-10},
-                    "qualification_scope": self._manifest["qualification"].get("scope", "not-run"),
+                    "qualification_scope": self._manifest["qualification"].get("scope", "not-run")
+                    if request.profile == "reference"
+                    else "same-kernel centre-source/CSPICE evaluator agreement only",
+                    **(
+                        {
+                            "physical_centre_sources": self._physical_provenance(request.bodies),
+                            "physical_centre_dataset_id": datasets.centres_manifest()["dataset_id"],
+                        }
+                        if request.profile == "planet-centres-v1"
+                        else {}
+                    ),
                     "time": t.metadata(),
                     "warnings": sorted(set(notes + t.quality["warnings"])),
                 },

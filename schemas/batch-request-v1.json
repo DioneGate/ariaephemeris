@@ -192,7 +192,8 @@
     },
     "profile": {
       "enum": [
-        "reference"
+        "reference",
+        "planet-centres-v1"
       ]
     },
     "times": {
