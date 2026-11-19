@@ -53,7 +53,10 @@ jobs:
           assert proof['component_states']==400 and proof['direct_offset_states']==100
           assert frozen['source_attribution']['sample_count']==100
           for a,b in zip(generated,frozen['station_refinement'],strict=True):
-              assert all(a[k]==b[k] for k in a),a['id']
+              differences={k:dict(actual=a[k],frozen=b[k]) for k in a if a[k]!=b[k]}
+              if differences:
+                  print(json.dumps(dict(station=a['id'],differences=differences),indent=2),flush=True)
+              assert not differences,a['id']
           assert frozen['passed'] and frozen['resolved_station_count']==frozen['matched_station_count']==36
           assert frozen['original_wp56_passed'] is False
           assert len(frozen['original_wp56_failed_reference_workloads'])==6
