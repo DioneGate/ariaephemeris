@@ -44,11 +44,11 @@ Even if these technical checks pass, **absolute/source-model uncertainty, full i
 
 ## Actual runtime/verification sources
 
-- [Six-source package manifest](../../../src/ariaephemeris/resources/planet-centres.json)
-- [Physical-centre resolver](../../../src/ariaephemeris/sources/centres.py)
-- [Python engine orchestration](../../../src/ariaephemeris/engine.py)
-- [WP4 six-file integration workflow](../../../.github/workflows/full-centres-integration.yml)
-- [WP4 real source matrix](../../../.github/workflows/planet-centre-qualification.yml) and [Jupiter workflow](../../../.github/workflows/jupiter-centre-qualification.yml)
-- [WP4 numerical conventions](../../../docs/conventions.md) and [standalone usage](../../../README.md)
+- [Six-source package manifest](../../../../src/ariaephemeris/resources/planet-centres.json)
+- [Physical-centre resolver](../../../../src/ariaephemeris/sources/centres.py)
+- [Python engine orchestration](../../../../src/ariaephemeris/engine.py)
+- [WP4 six-file integration workflow](../../../../.github/workflows/full-centres-integration.yml)
+- [WP4 real source matrix](../../../../.github/workflows/planet-centre-qualification.yml) and [Jupiter workflow](../../../../.github/workflows/jupiter-centre-qualification.yml)
+- [WP4 numerical conventions](../../../conventions.md) and [standalone usage](../../../../README.md)
 
 The above files remain **in the open draft PR until merged**. Record measured CI evidence and any failing gate in [progress.md](../progress.md); never infer test success from the existence of a workflow.
