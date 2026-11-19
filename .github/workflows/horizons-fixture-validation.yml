@@ -1,0 +1,37 @@
+name: RM-001-004 Offline Horizons source-fixture integrity
+
+on:
+  pull_request:
+    paths:
+      - 'tools/datasets/acquire_horizons_fixtures.py'
+      - 'tools/datasets/verify_horizons_fixtures.py'
+      - 'tests/unit/test_horizons_fixture_contracts.py'
+      - 'data/fixtures/horizons/**'
+      - '.github/workflows/horizons-fixture-validation.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'tools/datasets/acquire_horizons_fixtures.py'
+      - 'tools/datasets/verify_horizons_fixtures.py'
+      - 'data/fixtures/horizons/**'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify-no-network:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Verify immutable NASA/JPL response hashes and astronomical conventions
+        run: python tools/datasets/verify_horizons_fixtures.py --directory data/fixtures/horizons
+      - name: Verify fixture acquisition parser is deterministic without network
+        run: |
+          python -m pip install -r requirements/development.lock
+          python -m pip install --no-deps -e .
+          pytest -q tests/unit/test_horizons_fixture_contracts.py
