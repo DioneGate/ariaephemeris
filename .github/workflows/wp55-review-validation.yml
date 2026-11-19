@@ -1,0 +1,142 @@
+name: RM-001-008 WP5.5 independent JPL event-time review and replay
+
+on:
+  pull_request:
+    paths:
+      - '.github/workflows/wp55-review-validation.yml'
+      - 'tools/datasets/wp55_event_math.py'
+      - 'tools/datasets/acquire_wp55_events.py'
+      - 'tools/datasets/verify_wp55_events.py'
+      - 'tools/datasets/compare_wp55_events.py'
+      - 'tools/datasets/acquire_wp55_root_brackets.py'
+      - 'tools/datasets/verify_wp55_root_brackets.py'
+      - 'tests/unit/test_wp55_independent_event_timing.py'
+      - 'data/fixtures/horizons/wp55-events/**'
+      - 'data/fixtures/horizons/wp55-root-refinement/**'
+      - 'docs/validation/wp55-independent-event-roots.json'
+      - 'docs/validation/wp55-jpl-fine-root-brackets.json'
+  workflow_dispatch:
+
+concurrency:
+  group: wp55-replay-pr-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  independently-verified-source:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+          cache-dependency-path: requirements/development.lock
+      - name: Install pinned source-verification environment
+        run: |
+          python -m pip install -r requirements/development.lock
+          python -m pip install --no-deps -e .
+      - name: Prove all physical-centre original JPL source rays are authentic, finite and complete
+        run: |
+          python tools/datasets/verify_wp55_events.py \
+            --source data/fixtures/horizons/wp55-events \
+            --wp54 data/fixtures/horizons/wp54-tropical
+      - name: Reconstruct all independent 30-second source sign brackets from original raw JPL
+        run: |
+          python tools/datasets/verify_wp55_root_brackets.py \
+            --source data/fixtures/horizons/wp55-root-refinement \
+            --original data/fixtures/horizons/wp55-events \
+            --wp54 data/fixtures/horizons/wp54-tropical \
+            --comparison docs/validation/wp55-independent-event-roots.json \
+            --output docs/validation/wp55-jpl-fine-root-brackets.json
+          git diff --exit-code -- docs/validation/wp55-jpl-fine-root-brackets.json
+      - name: Run pure independent root-math and four-kind event tests
+        run: |
+          pytest -q tests/unit/test_wp55_independent_event_timing.py
+          ruff check tools/datasets/wp55_event_math.py tools/datasets/acquire_wp55_events.py tools/datasets/verify_wp55_events.py tools/datasets/compare_wp55_events.py tools/datasets/acquire_wp55_root_brackets.py tools/datasets/verify_wp55_root_brackets.py tests/unit/test_wp55_independent_event_timing.py
+          ruff format --check tools/datasets/wp55_event_math.py tools/datasets/acquire_wp55_events.py tools/datasets/verify_wp55_events.py tools/datasets/compare_wp55_events.py tools/datasets/acquire_wp55_root_brackets.py tools/datasets/verify_wp55_root_brackets.py tests/unit/test_wp55_independent_event_timing.py
+      - name: Refuse incomplete event data or implied commercial certification
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          data=json.loads(Path("docs/validation/wp55-independent-event-roots.json").read_text())
+          proof=json.loads(Path("docs/validation/wp55-jpl-fine-root-brackets.json").read_text())
+          assert data["event_case_count"]==proof["event_count"]==22
+          assert proof["new_independent_jpl_rays"]==224
+          assert proof["inner_30_second_sign_bracket_count"]==22
+          assert proof["aria_within_verified_inner_bracket_count"]==22
+          assert all(data["per_kind"][kind]["missing_aria_event_search_count"]==0
+                     for kind in ("station","ingress","conjunction","opposition"))
+          assert all(not data[k] for k in (
+              "independently_verified_root_completeness",
+              "reference_interpolation_error_bound_established",
+              "commercial_event_timing_qualified",
+              "absolute_astronomical_accuracy_certified",
+          ))
+          assert not proof["commercial_release_qualified"]
+          assert not proof["rigorous_root_uniqueness_or_continuous_error_bound_certified"]
+          print("Original JPL signed-root brackets: 22/22, with no unsupported physical accuracy claims")
+          PY
+
+  pinned-real-kernel-numerical-replay:
+    needs: independently-verified-source
+    runs-on: ubuntu-latest
+    timeout-minutes: 50
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+          cache-dependency-path: requirements/development.lock
+      - name: Install exactly pinned reproducibility tools
+        run: |
+          python -m pip install -r requirements/development.lock
+          python -m pip install --no-deps -e .
+      - name: Acquire and validate original JPL DE442s base source
+        run: ariaephemeris install-data .artifacts
+      - name: Download and SHA-verify all six original physical-centre SPKs
+        run: |
+          set -euo pipefail
+          mkdir -p .artifacts/planet-centres
+          python - <<'PY' > .artifacts/centres.tsv
+          from ariaephemeris.datasets import centres_manifest
+          for body, r in centres_manifest()["sources"].items():
+              print(body,r["filename"],r["source_url"],sep="\t")
+          PY
+          while IFS=$'\t' read -r body filename url; do
+            curl --fail --location --show-error --silent --retry 4 --retry-delay 5 \
+              --connect-timeout 30 --max-time 1800 "$url" \
+              -o ".artifacts/planet-centres/$filename"
+          done < .artifacts/centres.tsv
+          python - <<'PY'
+          from pathlib import Path
+          from ariaephemeris.datasets import centres_manifest, verify_centre_sources
+          rows=centres_manifest()["sources"]
+          assert len(verify_centre_sources({
+              k:Path(".artifacts/planet-centres")/v["filename"] for k,v in rows.items()
+          }))==6
+          PY
+      - name: Reproduce all 22 full Aria event searches and JPL-only cubic reference roots
+        run: |
+          python tools/datasets/compare_wp55_events.py \
+            --source data/fixtures/horizons/wp55-events \
+            --wp54 data/fixtures/horizons/wp54-tropical \
+            --base .artifacts/de442s.bsp \
+            --centres-dir .artifacts/planet-centres \
+            --output docs/validation/wp55-independent-event-roots.json
+      - name: Require byte-for-byte reproducible signed TT timing residuals
+        run: |
+          git diff --exit-code -- docs/validation/wp55-independent-event-roots.json
+          python tools/datasets/verify_wp55_root_brackets.py \
+            --source data/fixtures/horizons/wp55-root-refinement \
+            --original data/fixtures/horizons/wp55-events \
+            --wp54 data/fixtures/horizons/wp54-tropical \
+            --comparison docs/validation/wp55-independent-event-roots.json \
+            --output docs/validation/wp55-jpl-fine-root-brackets.json
+          git diff --exit-code -- docs/validation/wp55-jpl-fine-root-brackets.json
+          echo "Original JPL roots and all 22 Aria event searches exactly reproduced from pinned SPKs"

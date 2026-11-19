@@ -61,6 +61,8 @@ The same opt-in profile is accepted by `positions`, `positions_batch`, `chart`, 
 
 For independent external comparison of the opt-in physical-centre profile, see the [WP5.4 tropical longitude, latitude and signed-rate qualification report](docs/roadmaps/001-engine-development/p1-wp54-tropical-coordinate-qualification.md). It uses 186 externally anchored geocentric apparent chart cases, including stations and zodiac ingresses, but **does not yet qualify a commercial accuracy guarantee**; this is [draft PR #12](https://github.com/DioneGate/ariaephemeris/pull/12), not a published release.
 
+A separate [WP5.5 event-time comparison](docs/roadmaps/001-engine-development/p1-wp55-independent-event-timing.md) measures 22 independently sourced JPL Horizons planetary stations, tropical ingresses, conjunctions and oppositions. Original JPL reference samples and additional ±15-second source checks confirm each **observed** root crossing neighbourhood, but **not global event discovery, absolute observational time uncertainty or commercial release accuracy**. The evidence is on [PR #13](https://github.com/DioneGate/ariaephemeris/pull/13) and does not change the production event algorithm.
+
 The source files have passed checksum/segment and same-source CSPICE evaluator checks. **Independent physical-model uncertainty, overall chart accuracy, data redistribution, commercial performance, and application parity remain separate gates.** See [numerical conventions](docs/conventions.md) and [RM-001 source results](docs/roadmaps/001-engine-development/p1-centre-source-feasibility.md).
 
 ## Current limits

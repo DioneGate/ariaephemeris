@@ -8,7 +8,7 @@ AI contributors must first follow the repository [AGENTS.md](../../AGENTS.md).
 
 | ID | Roadmap | Progress and evidence | Current focus |
 | --- | --- | --- | --- |
-| RM-001 | [Engine development and commercial application readiness](001-engine-development/README.md) | [Progress](001-engine-development/progress.md) | Eight parent phases remain Planned. WP4 physical-centre profile and [WP5.1–5.3 independent reference, source and model attribution](001-engine-development/p1-jpl-source-reconciliation.md) are merged. [WP5.4 tropical longitude/latitude/signed rate comparison](001-engine-development/p1-wp54-tropical-coordinate-qualification.md): 186 independently sourced chart cases on [draft PR #12](https://github.com/DioneGate/ariaephemeris/pull/12); scientific event timing, source uncertainty and release acceptance still open. |
+| RM-001 | [Engine development and commercial application readiness](001-engine-development/README.md) | [Progress](001-engine-development/progress.md) | Parent P1–P8 remain Planned; WP4 and WP5.1–WP5.4 external physical-centre sources/coordinates merged. [WP5.5 external event timing](001-engine-development/p1-wp55-independent-event-timing.md) on [unmerged PR #13](https://github.com/DioneGate/ariaephemeris/pull/13): 22/22 event times measured versus original JPL with independently observed ±15-second source roots; absolute model uncertainty, discovery completeness and commercial release unqualified. |
 
 This register is for discovery. Each roadmap's README owns phase status; its
 progress log owns implementation evidence; its prompt register owns prompt status.
