@@ -1,0 +1,68 @@
+name: RM-001-002 WP4 complete six-kernel engine integration
+
+on:
+  push:
+    branches:
+      - feature/rm-001-002-wp4-multi-kernel-centres-20261119
+    paths:
+      - '.github/workflows/full-centres-integration.yml'
+      - 'src/**'
+      - 'tests/integration/test_full_six_planet_centres.py'
+  pull_request:
+    paths:
+      - '.github/workflows/full-centres-integration.yml'
+      - 'src/**'
+      - 'tests/integration/test_full_six_planet_centres.py'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  six-source-integration:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+          cache-dependency-path: requirements/development.lock
+      - name: Install pinned package and test environment
+        run: |
+          python -m pip install -r requirements/development.lock
+          python -m pip install --no-deps -e .
+      - name: Fetch and verify Aria's immutable planetary base
+        run: ariaephemeris install-data .artifacts
+      - name: Fetch six pinned, unmodified NAIF centre sources
+        run: |
+          set -euo pipefail
+          mkdir -p .artifacts/planet-centres
+          python - <<'PY' > .artifacts/sources.tsv
+          from ariaephemeris.datasets import centres_manifest
+          for body, source in centres_manifest()["sources"].items():
+              print(body, source["filename"], source["source_url"], sep="\t")
+          PY
+          while IFS=$'\t' read -r body filename url; do
+            echo "Acquiring verified source for $body"
+            curl --fail --location --show-error --silent \
+              --retry 4 --retry-delay 5 --connect-timeout 30 --max-time 1800 \
+              "$url" -o ".artifacts/planet-centres/$filename"
+          done < .artifacts/sources.tsv
+          python - <<'PY'
+          from pathlib import Path
+          from ariaephemeris.datasets import centres_manifest, verify_centre_sources
+          paths = {
+              body: Path(".artifacts/planet-centres") / source["filename"]
+              for body, source in centres_manifest()["sources"].items()
+          }
+          checked = verify_centre_sources(paths)
+          assert len(checked) == 6
+          print("All six original sources match independently pinned SHA-256 and sizes")
+          PY
+      - name: Exercise actual complete-chart and batch engine profile
+        run: |
+          ARIA_KERNEL=.artifacts/de442s.bsp \
+          ARIA_CENTRES_DIR=.artifacts/planet-centres \
+            pytest -q tests/integration/test_full_six_planet_centres.py
