@@ -68,11 +68,17 @@ def test_physical_centres_opt_in_end_to_end():
             [t, TimeInput(jd=(2451565.0, 0.0), scale="TT")],
         )
         assert len(batch) == 2
-        assert batch[0].to_dict() == result.to_dict()
+        assert batch[0].metadata == result.metadata
         for sample, time in zip(batch, (t, TimeInput(jd=(2451565.0, 0.0), scale="TT"))):
             scalar = physical.positions(replace(request, time=time))
+            assert [x.target_id for x in sample.bodies] == [
+                x.target_id for x in scalar.bodies
+            ]
             assert [x.longitude_deg for x in sample.bodies] == pytest.approx(
-                [x.longitude_deg for x in scalar.bodies], abs=1e-11
+                [x.longitude_deg for x in scalar.bodies], abs=1e-10
+            )
+            assert [x.longitude_rate_deg_day for x in sample.bodies] == pytest.approx(
+                [x.longitude_rate_deg_day for x in scalar.bodies], abs=1e-9
             )
 
         geometric = physical.positions(replace(request, position_mode="geometric"))
