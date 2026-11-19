@@ -223,6 +223,11 @@ def find_events(
             "dataset_sha256": engine.manifest["sha256"],
             "engine_version": "0.1.0",
             "profile": r.profile,
+            **(
+                {"physical_centre_sources": engine._physical_provenance(bodies)}
+                if r.profile == "planet-centres-v1"
+                else {}
+            ),
             "algorithm": "extrema-aware-bracket-v1",
             "scale": "TT",
             "origin": "geocentric",
@@ -234,7 +239,11 @@ def find_events(
             "timing_qualified": timing_qualified,
             "timing_qualification_basis": "empirical matching-window reference agreement"
             if timing_qualified
-            else "unqualified interval, profile or conditioning",
+            else (
+                "unqualified interval or conditioning"
+                if r.profile == "reference"
+                else "physical-centre event timing not qualified"
+            ),
             "residual_units": "deg/day" if r.kind == "station" else "deg",
             "coverage_claim": "empirical physical-body scan; not a formal root-completeness proof",
             "event_direction": "stationary"
