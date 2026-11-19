@@ -129,24 +129,36 @@ def _case_lookup(source: dict[str, Any]) -> dict[tuple[str, str, float], dict[st
     return {(case["body"], case["role"], case["jd_tdb"]): case for case in source["cases"]}
 
 
-def _reference_lookup(source: dict[str, Any]) -> dict[tuple[str, float], dict[str, Any]]:
+def _reference_lookup(
+    source: dict[str, Any], selected: dict[str, int]
+) -> dict[tuple[str, float], dict[str, Any]]:
     return {
         (case["body"], case["metrics"]["jd_tdb"]): case
         for case in source["rows"]
-        if case["body"] in SELECTED and case["kind"] == "geometric"
+        if case["body"] in selected and case["kind"] == "geometric"
     }
 
 
-def evaluate(engine: Ephemeris, original: dict[str, Any], source: dict[str, Any]) -> dict[str, Any]:
+def evaluate(
+    engine: Ephemeris,
+    original: dict[str, Any],
+    source: dict[str, Any],
+    selected: dict[str, int] | None = None,
+) -> dict[str, Any]:
+    selected = SELECTED if selected is None else selected
     observed = _case_lookup(source)
-    frozen = _reference_lookup(original)
+    frozen = _reference_lookup(original, selected)
     meta = {(r["body"], r["role"]): r for r in source["responses"]}
-    if len(observed) != 200 or len(frozen) != 50 or len(meta) != 8:
+    if (
+        len(observed) != 100 * len(selected)
+        or len(frozen) != 25 * len(selected)
+        or len(meta) != 4 * len(selected)
+    ):
         raise ValueError("Incomplete or ambiguous independently sourced model evidence")
 
     rows: list[dict[str, Any]] = []
     per_body: dict[str, Any] = {}
-    for body, parent in SELECTED.items():
+    for body, parent in selected.items():
         for jd in sorted(jd for b, jd in frozen if b == body):
             original_case = frozen[(body, jd)]["metrics"]
             time = TimeInput(jd=(jd, 0.0), scale="TDB")
@@ -215,8 +227,8 @@ def evaluate(engine: Ephemeris, original: dict[str, Any], source: dict[str, Any]
                     },
                 }
             )
-        selected = [r for r in rows if r["body"] == body]
-        if len(selected) != 25:
+        body_samples = [r for r in rows if r["body"] == body]
+        if len(body_samples) != 25:
             raise ValueError("Incomplete source diagnostic for body")
         categories = {
             "total_geocentric_km": "total_difference",
@@ -230,32 +242,35 @@ def evaluate(engine: Ephemeris, original: dict[str, Any], source: dict[str, Any]
             "horizons_centre_query_context_gap_km": "horizons_centre_query_context_gap",
         }
         fields = {
-            key: stats([norm(r["model_component_position"][name]) for r in selected])
+            key: stats([norm(r["model_component_position"][name]) for r in body_samples])
             for key, name in categories.items()
         }
         fields["total_geocentric_velocity_m_s"] = stats(
-            [norm(r["model_component_velocity_km_s"]["total_difference"]) * 1000 for r in selected]
+            [
+                norm(r["model_component_velocity_km_s"]["total_difference"]) * 1000
+                for r in body_samples
+            ]
         )
         fields["parent_geocentric_velocity_m_s"] = stats(
             [
                 norm(r["model_component_velocity_km_s"]["parent_geocentric_difference"]) * 1000
-                for r in selected
+                for r in body_samples
             ]
         )
         fields["effective_offset_velocity_m_s"] = stats(
             [
                 norm(r["model_component_velocity_km_s"]["effective_offset_difference"]) * 1000
-                for r in selected
+                for r in body_samples
             ]
         )
         fields["max_reconstruction_error_km"] = max(
-            r["model_component_position"]["total_reconstruction_error_km"] for r in selected
+            r["model_component_position"]["total_reconstruction_error_km"] for r in body_samples
         )
         fields["source_labels_by_role"] = {
             role: meta[(body, role)]["source_header"]["source_solution_labels"] for role in ROLES
         }
         fields["largest_total_fixture_id"] = max(
-            selected, key=lambda r: r["measured_original_total_difference_km"]
+            body_samples, key=lambda r: r["measured_original_total_difference_km"]
         )["fixture_id"]
         per_body[body] = fields
     return {

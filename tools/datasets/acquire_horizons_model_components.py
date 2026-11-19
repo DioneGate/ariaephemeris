@@ -34,17 +34,18 @@ CENTRES = {"jupiter": 599, "pluto": 999}
 ROLES = ("parent_geo", "parent_ssb", "earth_ssb", "centre_ssb")
 
 
-def specification(body: str, role: str) -> dict[str, str]:
+def specification(body: str, role: str, parents: dict[str, int] | None = None) -> dict[str, str]:
     """Explicit JPL source target/observer, TDB, reference frame and units."""
-    if body not in PARENTS or role not in ROLES:
+    parents = PARENTS if parents is None else parents
+    if body not in parents or role not in ROLES:
         raise ValueError("Unsupported source-decomposition body or target role")
     params = query(body, "geometric", epochs(body))
     target = (
-        PARENTS[body]
+        parents[body]
         if role.startswith("parent")
         else 399
         if role == "earth_ssb"
-        else CENTRES[body]
+        else parents[body] * 100 + 99
     )
     params["COMMAND"] = quoted(str(target))
     params["CENTER"] = quoted("500@399" if role == "parent_geo" else "500@0")

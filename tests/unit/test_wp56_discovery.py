@@ -141,7 +141,7 @@ def test_reference_discovery_has_no_engine_or_runtime_imports():
 
 def test_original_source_semantics_and_digest(tmp_path):
     times = [JD, JD + 0.25]
-    raw = f"Target body name: Mars (499) {{source:DE441}}\nCenter body name: Earth (399) {{source:DE441}}\n$$SOE\n{JD},,,1,2,\n{JD + 0.25},,,3,4,\n$$EOE\n"
+    raw = f"Target body name: Mars (499) {{source:DE441}}\nCenter body name: Earth (399) {{source:DE441}}\nCenter-site name: GEOCENTRIC\nAtmos refraction: NO (AIRLESS)\nRA format : DEG\nDate_________JDTT, , , RA_(ICRF-a-app), DEC_(ICRF-a-app),\n$$SOE\n{JD},,,1,2,\n{JD + 0.25},,,3,4,\n$$EOE\n"
     (tmp_path / "raw.txt").write_text(raw)
     params = range_query("mars", times)
     record = dict(

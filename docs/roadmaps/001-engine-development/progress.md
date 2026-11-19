@@ -267,7 +267,7 @@ qualification-runner option, not an engine performance or capacity claim.
 
 ## RM-001/009 final result and 010 baseline — 19 November 2026
 
-PR #14 was merged into main at `02020a9` after source capture. The acquisition
+PR #14 was merged into main at `02020a9415d7e71e6c2e5601bf93d32096c94fe0` after source capture. The acquisition
 run #44582263949 **failed its numerical gate**: all 142 Aria/reference events
 matched (zero missing/additional/duplicate/ambiguous), but six station workloads
 failed the 30-second coarse-reference convergence test. All 237 workloads were

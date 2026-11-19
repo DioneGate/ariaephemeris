@@ -14,29 +14,39 @@ from acquire_horizons_fixtures import epochs, parse_table, sha256, source_header
 from acquire_horizons_model_components import PARENTS, ROLES, specification
 
 
-def verify(root: Path) -> dict[str, Any]:
-    dataset = json.loads((root / "jpl-model-components-v1.json").read_text(encoding="utf-8"))
-    if dataset.get("schema_version") != 1 or dataset.get("sample_count") != 200:
+def verify(
+    root: Path,
+    parents: dict[str, int] | None = None,
+    filename: str = "jpl-model-components-v1.json",
+) -> dict[str, Any]:
+    parents = PARENTS if parents is None else parents
+    count = len(parents) * len(ROLES) * 25
+    requests_count = len(parents) * len(ROLES)
+    dataset = json.loads((root / filename).read_text(encoding="utf-8"))
+    if dataset.get("schema_version") != 1 or dataset.get("sample_count") != count:
         raise ValueError("Unexpected or incomplete JPL model component dataset")
     if dataset.get("model_matching_claim") is not False:
         raise ValueError("Source acquisition cannot certify a matched physical model")
     if dataset.get("numerical_commercial_qualification") is not False:
         raise ValueError("Source acquisition cannot certify commercial accuracy")
-    expected = {(body, role) for body in PARENTS for role in ROLES}
+    expected = {(body, role) for body in parents for role in ROLES}
     requests = dataset["responses"]
-    if len(requests) != 8 or len({(x["body"], x["role"]) for x in requests}) != 8:
+    if (
+        len(requests) != requests_count
+        or len({(x["body"], x["role"]) for x in requests}) != requests_count
+    ):
         raise ValueError("Missing or duplicate Horizons component query")
     cases = dataset["cases"]
     counts = Counter((case["body"], case["role"]) for case in cases)
     if set(counts) != expected or any(x != 25 for x in counts.values()):
         raise ValueError("Expected exactly 25 independently obtained epochs per component")
-    if len({x["id"] for x in cases}) != 200:
+    if len({x["id"] for x in cases}) != count:
         raise ValueError("Duplicate component fixture IDs")
     for record in requests:
         body, role = record["body"], record["role"]
         if (body, role) not in expected:
             raise ValueError("Unknown source component request")
-        params = specification(body, role)
+        params = specification(body, role, parents)
         if record["reference_parameters"] != params:
             raise ValueError("Requested JPL source vector convention has changed")
         if not record["reference_url"].startswith("https://ssd.jpl.nasa.gov/api/horizons.api?"):
