@@ -43,6 +43,7 @@ jobs:
           sys.path.insert(0,'tools/datasets')
           from wp57_source import DEFAULT_ROOT,WP56_REPORT,load_spec,verify,verify_offsets
           from wp57_uncertainty import refine_stations,uncertainty_register
+          from wp57_replay import assert_replay_equal
           proof,rays=verify(DEFAULT_ROOT)
           offsets,_=verify_offsets(DEFAULT_ROOT)
           proof.update(offsets)
@@ -53,10 +54,9 @@ jobs:
           assert proof['component_states']==400 and proof['direct_offset_states']==100
           assert frozen['source_attribution']['sample_count']==100
           for a,b in zip(generated,frozen['station_refinement'],strict=True):
-              differences={k:dict(actual=a[k],frozen=b[k]) for k in a if a[k]!=b[k]}
-              if differences:
-                  print(json.dumps(dict(station=a['id'],differences=differences),indent=2),flush=True)
-              assert not differences,a['id']
+              proof=assert_replay_equal(a,{k:b[k] for k in a},'station_refinement')
+              if proof['nonidentical_floats']:
+                  print(a['id'],proof,flush=True)
           assert frozen['passed'] and frozen['resolved_station_count']==frozen['matched_station_count']==36
           assert frozen['original_wp56_passed'] is False
           assert len(frozen['original_wp56_failed_reference_workloads'])==6
@@ -106,10 +106,10 @@ jobs:
           from ariaephemeris.datasets import centres_manifest,verify_centre_sources
           assert len(verify_centre_sources({b:Path('.artifacts/planet-centres')/r['filename'] for b,r in centres_manifest()['sources'].items()}))==6
           PY
-      - name: Reproduce old and new attribution and all numerical sensitivities exactly
+      - name: Require exact source/vector identities and declared station numerical precision
         run: |
           python tools/datasets/attribute_jpl_source_models.py --base .artifacts/de442s.bsp \
             --centres-dir .artifacts/planet-centres --output .artifacts/wp53-replay.json
           cmp .artifacts/wp53-replay.json docs/validation/wp5-3-jpl-source-attribution.json
-          python tools/datasets/qualify_wp57_uncertainty.py --base .artifacts/de442s.bsp --centres-dir .artifacts/planet-centres
-          git diff --exit-code -- docs/validation/wp57-model-uncertainty.json
+          python tools/datasets/qualify_wp57_uncertainty.py --base .artifacts/de442s.bsp --centres-dir .artifacts/planet-centres --output .artifacts/wp57-replayed.json
+          python tools/datasets/wp57_replay.py --actual .artifacts/wp57-replayed.json

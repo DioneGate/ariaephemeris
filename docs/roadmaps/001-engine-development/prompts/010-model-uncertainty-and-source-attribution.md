@@ -112,3 +112,8 @@ separate predeclared specification and immutable source identity, preserving
 the original 400 components. Distinguish true direct-offset disagreement from
 reference-chain mixing; never call the large effective-offset term a pure
 physical-offset error. Preserve vector closure and explicit velocity units.
+
+Numerical portability refinement: exact comparisons remain mandatory for original
+source bytes/identity, vector attribution, schemas, topology and scientific flags.
+Derived station floating values use explicitly documented unit-aware numerical
+replay precision; this does not change the station 30/60-second diagnostics.

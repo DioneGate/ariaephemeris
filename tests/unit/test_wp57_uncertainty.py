@@ -208,3 +208,61 @@ def test_continuous_reference_refuses_a_plateau_and_missing_epochs():
         continuous_station_roots(
             np.delete(times, 3), np.delete(times - JD, 3), "mars", (JD - 0.25, JD + 0.25)
         )
+
+
+def test_replay_precision_is_narrow_unit_aware_and_preserves_scientific_flags():
+    from wp57_replay import assert_replay_equal
+
+    frozen = dict(
+        station_refinement=[
+            dict(
+                jd_tt=JD,
+                source_rates_deg_tt_day={"0.03125": 0.1},
+                passed=True,
+                physical_time_uncertainty_seconds=None,
+            )
+        ],
+        source_integrity=dict(sha="original"),
+    )
+    import copy
+
+    tiny = copy.deepcopy(frozen)
+    tiny["station_refinement"][0]["jd_tt"] += 1e-9
+    assert assert_replay_equal(tiny, frozen)["nonidentical_floats"] == 1
+    wrong = copy.deepcopy(frozen)
+    wrong["station_refinement"][0]["jd_tt"] += 1 / 86400
+    with pytest.raises(AssertionError, match="numerical"):
+        assert_replay_equal(wrong, frozen)
+    for key, value in [("passed", False), ("physical_time_uncertainty_seconds", 0)]:
+        wrong = copy.deepcopy(frozen)
+        wrong["station_refinement"][0][key] = value
+        with pytest.raises(AssertionError, match="identity/flag"):
+            assert_replay_equal(wrong, frozen)
+    wrong = copy.deepcopy(frozen)
+    wrong["source_integrity"]["sha"] = "changed"
+    with pytest.raises(AssertionError):
+        assert_replay_equal(wrong, frozen)
+    with pytest.raises(AssertionError, match="numerical"):
+        assert_replay_equal(dict(position_km=1.0000000001), dict(position_km=1.0))
+
+
+def test_replay_conditioning_proxies_must_reconstruct_from_their_primitives():
+    import copy
+
+    from wp57_replay import assert_replay_equal
+
+    row = dict(
+        equation_acceleration_deg_tt_day2=0.001,
+        aria_derivative_step_spread_deg_tt_day=1e-11,
+        aria_derivative_spread_timing_proxy_seconds=abs(1e-11 / 0.001) * 86400,
+    )
+    frozen = dict(station_refinement=[row])
+    changed = copy.deepcopy(frozen)
+    changed["station_refinement"][0]["aria_derivative_step_spread_deg_tt_day"] = 2e-11
+    changed["station_refinement"][0]["aria_derivative_spread_timing_proxy_seconds"] = (
+        abs(2e-11 / 0.001) * 86400
+    )
+    assert assert_replay_equal(changed, frozen)["nonidentical_floats"] == 2
+    changed["station_refinement"][0]["aria_derivative_spread_timing_proxy_seconds"] += 1e-6
+    with pytest.raises(AssertionError, match="proxy is inconsistent"):
+        assert_replay_equal(changed, frozen)

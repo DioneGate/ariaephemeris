@@ -305,3 +305,20 @@ and 118 non-kernel tests (20 kernel tests deselected) **PASS**. Full pinned-kern
 replay and final PR checks remain pending. All physical uncertainty bounds remain
 null where applicable observational evidence is absent; 009's failed coarse
 report remains immutable. New acquisition workflows are now explicit/read-only.
+
+**Numerical portability diagnosis:** source-only replay #44606319071 failed
+strict equality for a derived station field. Independent source reconstruction
+then passed at #44607131524, while its full replay differed only in 171 derived
+station floating values; all source/vector identities and scientific flags were
+unchanged. The largest solved-root difference was **0.00004024 seconds**.
+The exact Git diff was checked against the frozen report locally.
+
+A structured replay contract now keeps source hashes, vector attribution,
+schemas, topology, counts, acceptance flags and unknown physical bounds exact.
+Derived station times/rates/accelerations use the explicit numerical precision
+in the scientific report; conditioning proxies must exactly reconstruct from
+their independently checked inputs. The observed CI replay satisfies this
+contract. The 30/60-second scientific criteria are unchanged. Unit tests also
+reject a one-second root change, altered source identity, changed acceptance
+flags, a zero substituted for unknown uncertainty, and inconsistent proxies.
+Local non-kernel suite: **120 passed / 20 deselected**. Final CI replay pending.

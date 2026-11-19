@@ -61,3 +61,22 @@ Per-station Aria rate sensitivity is measured with complete-pipeline five-point 
 The evidence supports reporting reproducible agreement with explicitly named, convention-matched references in the sampled windows. It does not support an absolute “accurate to X” promise over 1900–2100, a new approved product threshold or a commercial release. Decision D07, applicable physical uncertainty evidence, civil-time/EOP qualification, deployment and remaining launch capabilities stay open.
 
 Primary references: [Horizons manual](https://ssd.jpl.nasa.gov/horizons/manual.html), [JPL satellite source inventory](https://ssd.jpl.nasa.gov/sats/ephem/files.html), [NAIF Geometry Finder](https://naif.jpl.nasa.gov/pub/naif/toolkit_docs/C/req/gf.html), [SciPy CubicSpline](https://docs.scipy.org/doc/scipy/reference/generated/scipy.interpolate.CubicSpline.html). The latter documents the continuously differentiable reference interpolator, not astronomical physical uncertainty.
+
+## Numerical replay precision
+
+A source-only replay failed exact equality for a derived station record on one
+CI runner, while local reconstruction and a subsequent independent run matched.
+Source identity and the 36-station regression remained valid; this indicates
+numerical portability needs an explicit precision contract. Replay therefore
+keeps exact schemas, source/vector identities, counts, flags, null physical
+bounds and legacy Jupiter/Pluto bytes. Derived station roots use 1e-7 TT day
+(8.64 ms, the source query timestamp precision), timing aggregates 10 ms, rates
+1e-10 deg/TT day and accelerations 1e-10 deg/TT day². Rate spreads use twice
+the rate tolerance. Illustrative conditioning proxies must exactly reconstruct from their own
+rate/acceleration inputs; those primitives have the explicit tolerances above. These are numerical
+replay tolerances, not physical uncertainty bounds; the 30/60-second scientific
+criteria, unique root counts and missing/duplicate/ambiguity gates remain exact.
+
+The acceleration replay allowance accounts for second differentiation of F64
+angular samples on the 0.03125-day grid (roundoff is amplified by inverse step
+squared). It is a numerical portability allowance, not an ephemeris model bound.
