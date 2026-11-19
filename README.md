@@ -59,6 +59,8 @@ with Ephemeris(
 
 The same opt-in profile is accepted by `positions`, `positions_batch`, `chart`, `raw_state(..., profile="planet-centres-v1")`, and event searches via `EventRequest(profile="planet-centres-v1")`. For the CLI, repeat `--centre-kernel BODY=FILE` for each required source and set `"profile": "planet-centres-v1"` in the JSON request. A partial source installation is possible for targeted testing, but requests requiring an omitted body **fail explicitly**. None of these options changes the default provider or Aria Galaxy.
 
+For independent external comparison of the opt-in physical-centre profile, see the [WP5.4 tropical longitude, latitude and signed-rate qualification report](docs/roadmaps/001-engine-development/p1-wp54-tropical-coordinate-qualification.md). It uses 186 externally anchored geocentric apparent chart cases, including stations and zodiac ingresses, but **does not yet qualify a commercial accuracy guarantee**; this is [draft PR #12](https://github.com/DioneGate/ariaephemeris/pull/12), not a published release.
+
 The source files have passed checksum/segment and same-source CSPICE evaluator checks. **Independent physical-model uncertainty, overall chart accuracy, data redistribution, commercial performance, and application parity remain separate gates.** See [numerical conventions](docs/conventions.md) and [RM-001 source results](docs/roadmaps/001-engine-development/p1-centre-source-feasibility.md).
 
 ## Current limits
