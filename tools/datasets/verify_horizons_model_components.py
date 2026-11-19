@@ -11,7 +11,7 @@ from pathlib import Path
 from typing import Any
 
 from acquire_horizons_fixtures import epochs, parse_table, sha256, source_header
-from acquire_horizons_model_components import CENTRES, PARENTS, ROLES, specification
+from acquire_horizons_model_components import PARENTS, ROLES, specification
 
 
 def verify(root: Path) -> dict[str, Any]:
@@ -55,9 +55,7 @@ def verify(root: Path) -> dict[str, Any]:
         if source_header(raw) != record["source_header"]:
             raise ValueError("Horizons source provenance changed")
         reconstructed = parse_table(raw, target, "geometric", epochs(body))
-        selected = [
-            case for case in cases if case["body"] == body and case["role"] == role
-        ]
+        selected = [case for case in cases if case["body"] == body and case["role"] == role]
         if len(selected) != 25 or record["rows"] != 25:
             raise ValueError("Incomplete source component rows")
         for original, case in zip(reconstructed, selected, strict=True):

@@ -69,9 +69,9 @@ def test_projection_accounts_for_cancelled_residual_components():
     parent = [5.0, 0.0, 0.0]
     offset = a.sub(t, parent)
     assert a.direction_projection(parent, t) == pytest.approx(3)
-    assert (
-        a.direction_projection(parent, t) + a.direction_projection(offset, t)
-    ) == pytest.approx(5)
+    assert (a.direction_projection(parent, t) + a.direction_projection(offset, t)) == pytest.approx(
+        5
+    )
     assert a.stats([0.0, 1.0, 2.0, 3.0])["p95"] == pytest.approx(2.85)
 
 

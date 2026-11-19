@@ -71,9 +71,7 @@ def stats(values: list[float]) -> dict[str, float | int]:
     }
 
 
-def attribute(
-    aria: dict[str, list[float]], horizon: dict[str, list[float]]
-) -> dict[str, Any]:
+def attribute(aria: dict[str, list[float]], horizon: dict[str, list[float]]) -> dict[str, Any]:
     """Full, non-overlapping exact arithmetic decomposition (ICRF, km).
 
     A physical centre relative to Earth = AparentSSB - AearthSSB + Aoffset;
@@ -104,12 +102,8 @@ def attribute(
     # H parent and centre may follow different SPK paths on different queries.
     # Their non-zero context gaps are not silently labelled "planet-offset error".
     residual = sub(total, add(parent_geo, offset_effective))
-    parent_residual = sub(
-        parent_geo, add(sub(parent_ssb_model, earth_ssb_model), h_parent_chain)
-    )
-    centre_residual = sub(
-        total, add(sub(centre_ssb_model, earth_ssb_model), h_centre_chain)
-    )
+    parent_residual = sub(parent_geo, add(sub(parent_ssb_model, earth_ssb_model), h_parent_chain))
+    centre_residual = sub(total, add(sub(centre_ssb_model, earth_ssb_model), h_centre_chain))
     if any(norm(x) > 2e-4 for x in (residual, parent_residual, centre_residual)):
         raise ValueError("Source decomposition failed identity reconstruction")
 
@@ -132,9 +126,7 @@ def attribute(
 
 
 def _case_lookup(source: dict[str, Any]) -> dict[tuple[str, str, float], dict[str, Any]]:
-    return {
-        (case["body"], case["role"], case["jd_tdb"]): case for case in source["cases"]
-    }
+    return {(case["body"], case["role"], case["jd_tdb"]): case for case in source["cases"]}
 
 
 def _reference_lookup(source: dict[str, Any]) -> dict[tuple[str, float], dict[str, Any]]:
@@ -145,9 +137,7 @@ def _reference_lookup(source: dict[str, Any]) -> dict[tuple[str, float], dict[st
     }
 
 
-def evaluate(
-    engine: Ephemeris, original: dict[str, Any], source: dict[str, Any]
-) -> dict[str, Any]:
+def evaluate(engine: Ephemeris, original: dict[str, Any], source: dict[str, Any]) -> dict[str, Any]:
     observed = _case_lookup(source)
     frozen = _reference_lookup(original)
     meta = {(r["body"], r["role"]): r for r in source["responses"]}
@@ -199,7 +189,10 @@ def evaluate(
             )
             if norm(sub(reported_delta, position["total_difference"])) > 2e-4:
                 raise ValueError("Re-evaluation changed the previously frozen WP5.2 state")
-            if abs(norm(position["total_difference"]) - original_case["position_residual_km"]) > 2e-4:
+            if (
+                abs(norm(position["total_difference"]) - original_case["position_residual_km"])
+                > 2e-4
+            ):
                 raise ValueError("New measurement disagrees with prior WP5.2 norm")
             rows.append(
                 {
@@ -244,10 +237,16 @@ def evaluate(
             [norm(r["model_component_velocity_km_s"]["total_difference"]) * 1000 for r in selected]
         )
         fields["parent_geocentric_velocity_m_s"] = stats(
-            [norm(r["model_component_velocity_km_s"]["parent_geocentric_difference"]) * 1000 for r in selected]
+            [
+                norm(r["model_component_velocity_km_s"]["parent_geocentric_difference"]) * 1000
+                for r in selected
+            ]
         )
         fields["effective_offset_velocity_m_s"] = stats(
-            [norm(r["model_component_velocity_km_s"]["effective_offset_difference"]) * 1000 for r in selected]
+            [
+                norm(r["model_component_velocity_km_s"]["effective_offset_difference"]) * 1000
+                for r in selected
+            ]
         )
         fields["max_reconstruction_error_km"] = max(
             r["model_component_position"]["total_reconstruction_error_km"] for r in selected
@@ -286,9 +285,13 @@ def evaluate(
 
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--original", type=Path, default=Path("docs/validation/wp5-2-horizons-comparison.json"))
+    parser.add_argument(
+        "--original", type=Path, default=Path("docs/validation/wp5-2-horizons-comparison.json")
+    )
     parser.add_argument("--original-fixtures", type=Path, default=Path("data/fixtures/horizons"))
-    parser.add_argument("--components", type=Path, default=Path("data/fixtures/horizons/model-components"))
+    parser.add_argument(
+        "--components", type=Path, default=Path("data/fixtures/horizons/model-components")
+    )
     parser.add_argument("--base", type=Path, required=True)
     parser.add_argument("--centres-dir", type=Path, required=True)
     parser.add_argument("--output", type=Path, required=True)

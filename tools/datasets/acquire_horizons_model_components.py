@@ -55,9 +55,7 @@ def acquire(root: Path) -> dict[str, Any]:
     root.mkdir(parents=True, exist_ok=True)
     destination = root / "jpl-model-components-v1.json"
     if destination.exists():
-        raise FileExistsError(
-            "Frozen JPL model components already exist; refuse silent refresh"
-        )
+        raise FileExistsError("Frozen JPL model components already exist; refuse silent refresh")
     raw_dir = root / "raw"
     raw_dir.mkdir(parents=True, exist_ok=True)
     responses: list[dict[str, Any]] = []
