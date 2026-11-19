@@ -1,0 +1,110 @@
+
+
+*******************************************************************************
+Ephemeris / API_USER Thu Nov 19 11:57:48 2026 Pasadena, USA      / Horizons    
+*******************************************************************************
+Target body name: Saturn (699)                    {source: sat441l}
+Center body name: Earth (399)                     {source: DE441}
+Center-site name: GEOCENTRIC
+*******************************************************************************
+Start time      : A.D. 2025-Nov-28 14:24:35.7700 TT      
+Stop  time      : A.D. 2025-Nov-28 15:54:35.7696 TT      
+Step-size       : DISCRETE TIME-LIST
+*******************************************************************************
+Target pole/equ : IAU_SATURN                      {West-longitude positive}
+Target radii    : 60268.0, 60268.0, 54364.0 km    {Equator_a, b, pole_c}       
+Center geodetic : 0.0, 0.0, -6378.137             {E-lon(deg),Lat(deg),Alt(km)}
+Center cylindric: 0.0, 0.0, 0.0                   {E-lon(deg),Dxy(km),Dz(km)}
+Center pole/equ : ITRF93                          {East-longitude positive}
+Center radii    : 6378.137, 6378.137, 6356.752 km {Equator_a, b, pole_c}       
+Target primary  : Sun
+Vis. interferer : MOON (R_eq= 1737.400) km        {source: DE441}
+Rel. light bend : Sun                             {source: DE441}
+Rel. lght bnd GM: 1.3271E+11 km^3/s^2                                          
+Atmos refraction: NO (AIRLESS)
+RA format       : DEG
+Time format     : JD  
+Calendar mode   : Mixed Julian/Gregorian
+EOP file        : eop.261118.p270214                                           
+EOP coverage    : DATA-BASED 1962-JAN-20 TO 2026-NOV-18. PREDICTS-> 2027-FEB-13
+Units conversion: 1 au= 149597870.700 km, c= 299792.458 km/s, 1 day= 86400.0 s 
+Table cut-offs 1: Elevation (-90.0deg=NO ),Airmass (>38.000=NO), Daylight (NO )
+Table cut-offs 2: Solar elongation (  0.0,180.0=NO ),Local Hour Angle( 0.0=NO )
+Table cut-offs 3: RA/DEC angular rate (     0.0=NO )                           
+Table format    : Comma Separated Values (spreadsheet)
+*******************************************************************************
+Date_________JDTT, , , RA_(ICRF-a-app), DEC_(ICRF-a-app),
+*********************************************************
+$$SOE
+2461008.100414000, , ,   356.166508910,     -4.249616623,
+2461008.116039000, , ,   356.166497814,     -4.249560735,
+2461008.131664000, , ,   356.166487121,     -4.249504671,
+2461008.147289000, , ,   356.166476831,     -4.249448429,
+2461008.162914000, , ,   356.166466943,     -4.249392010,
+$$EOE
+*******************************************************************************
+Column meaning:
+ 
+TIME
+
+  Terrestrial Time ("TT") output was requested. This continuous timescale
+is the relativistic proper time of a clock at rest on the Earth's geoid (at
+"mean sea level"), but defined for a specified gravitational time dilation,
+so a coordinate time. It is appropriate for observations and measurements
+from the surface of the Earth.
+
+  TT runs at a uniform rate of one SI second per second and is independent of
+irregularities in Earth's rotation. It is a theoretical ideal, approximated
+(with a constant offset of 32.184 seconds) by the measured International Atomic
+Time (TAI) after 1955.  TT is the relativistic successor to the now deprecated
+non-relativistic Ephemeris Time (ET).
+
+  The TT scale requested here is a time-scale conversion from internal
+Barycentric Dynamical Time (TDB) and differs periodically from TDB with an
+amplitude less than 2 ms for several thousand years centered on present.
+The time-scale conversion for Earth is used regardless of observer location
+within the solar system, although clock rates may differ due to the local
+gravity field.
+
+  Any 'b' symbol in the 1st-column denotes a B.C. date. First-column blank
+(" ") denotes an A.D. date.
+ 
+CALENDAR SYSTEM
+
+  Mixed calendar mode was active such that calendar dates after AD 1582-Oct-15
+(if any) are in the modern Gregorian system. Dates prior to 1582-Oct-5 (if any)
+are in the Julian calendar system, which is automatically extended for dates
+prior to its adoption on 45-Jan-1 BC.  The Julian calendar is useful for
+matching historical dates. The Gregorian calendar more accurately corresponds
+to the Earth's orbital motion and seasons. A "Gregorian-only" calendar mode is
+available if such physical events are the primary interest.
+
+  NOTE: "n.a." in output means quantity "not available" at the print-time.
+ 
+ 'RA_(ICRF-a-app), DEC_(ICRF-a-app),' =
+   Airless apparent right ascension and declination coordinates of the target
+in the ICRF reference frame, with down-leg light-time, gravitational deflection
+of light, and stellar aberration.
+
+   Units:
+          RA : ddd.ddddd{dddd}   (degrees)
+          DEC: sdd.ddddd{dddd}   (degrees)
+
+Computations by ...
+
+    Solar System Dynamics Group, Horizons On-Line Ephemeris System
+    4800 Oak Grove Drive, Jet Propulsion Laboratory
+    Pasadena, CA  91109   USA
+
+    General site: https://ssd.jpl.nasa.gov/
+    Mailing list: https://ssd.jpl.nasa.gov/email_list.html
+    System news : https://ssd.jpl.nasa.gov/horizons/news.html
+    User Guide  : https://ssd.jpl.nasa.gov/horizons/manual.html
+    Connect     : browser        https://ssd.jpl.nasa.gov/horizons/app.html#/x
+                  API            https://ssd-api.jpl.nasa.gov/doc/horizons.html
+                  command-line   telnet ssd.jpl.nasa.gov 6775
+                  e-mail/batch   https://ssd.jpl.nasa.gov/ftp/ssd/horizons_batch.txt
+                  scripts        https://ssd.jpl.nasa.gov/ftp/ssd/SCRIPTS
+    Inquiries   : Jon.D.Giorgini@jpl.nasa.gov
+
+*******************************************************************************
