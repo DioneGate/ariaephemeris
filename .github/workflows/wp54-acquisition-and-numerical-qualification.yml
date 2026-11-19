@@ -1,11 +1,7 @@
 name: RM-001-007 WP5.4 acquire Horizons tropical-chart reference and qualify
 
+# Source acquisition is never part of routine builds; only deliberate dispatch.
 on:
-  push:
-    branches:
-      - feature/rm-001-007-wp5-4-astrological-coordinate-qualification-20261119
-    paths:
-      - '.github/workflows/wp54-acquisition-and-numerical-qualification.yml'
   workflow_dispatch:
 
 permissions:
