@@ -301,8 +301,8 @@ byte-for-byte attribution and complete new 100-case / 36-station numerical gates
 The final report was frozen at `4c109c0`. No source default or runtime changed.
 
 Executed locally: Ruff, format, mypy, source audit, build, clean wheel/sdist smoke,
-and 118 non-kernel tests (20 kernel tests deselected) **PASS**. Full pinned-kernel
-replay and final PR checks remain pending. All physical uncertainty bounds remain
+and initially 118 non-kernel tests (20 kernel tests deselected) **PASS**. Final
+validation evidence follows below. All physical uncertainty bounds remain
 null where applicable observational evidence is absent; 009's failed coarse
 report remains immutable. New acquisition workflows are now explicit/read-only.
 
@@ -321,4 +321,13 @@ their independently checked inputs. The observed CI replay satisfies this
 contract. The 30/60-second scientific criteria are unchanged. Unit tests also
 reject a one-second root change, altered source identity, changed acceptance
 flags, a zero substituted for unknown uncertainty, and inconsistent proxies.
-Local non-kernel suite: **120 passed / 20 deselected**. Final CI replay pending.
+Local non-kernel suite: **120 passed / 20 deselected**. Final CI replay passed.
+
+
+**Final implementation validation (`5dc4a0d`):**
+[original-source and pinned six-kernel replay #44608488208](https://github.com/DioneGate/ariaephemeris/actions/runs/44608488208) **PASS**; all 36 stations and all 100 component decompositions pass. This runner reproduced all 9,629 numerical report leaves exactly; the separately tested numerical portability contract also accepts the observed 40-microsecond replay difference.
+[Legacy Jupiter/Pluto attribution #44608488096](https://github.com/DioneGate/ariaephemeris/actions/runs/44608488096) **PASS**, byte-for-byte.
+[Real-kernel baseline #44608488076](https://github.com/DioneGate/ariaephemeris/actions/runs/44608488076) **PASS**: **137 tests passed, 3 skipped**; all raw position/velocity, apparent direction, longitude rate, angles/houses, event timing and bounded completeness gates pass, plus supplementary oppositions. Skipped tests do not count as qualified cases.
+[Fast checks/distribution #44608488090](https://github.com/DioneGate/ariaephemeris/actions/runs/44608488090) **PASS**: Ruff, formatting, mypy, source audit, 120 non-kernel tests and build/package smoke. Existing Horizons source integrity #44608488217 also **PASS**.
+
+The final documentation-only follow-up records these checks and aligns the written acceleration replay tolerance with the implemented **1e-9 deg/TT day²**. It does not change code, frozen source data, the numerical report or scientific gates. Prompt 010 remains **In review**, PR #15 open/unmerged; P3/P6 remain Planned. No release or deployment was performed.

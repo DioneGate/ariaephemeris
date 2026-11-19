@@ -71,7 +71,7 @@ numerical portability needs an explicit precision contract. Replay therefore
 keeps exact schemas, source/vector identities, counts, flags, null physical
 bounds and legacy Jupiter/Pluto bytes. Derived station roots use 1e-7 TT day
 (8.64 ms, the source query timestamp precision), timing aggregates 10 ms, rates
-1e-10 deg/TT day and accelerations 1e-10 deg/TT day². Rate spreads use twice
+1e-10 deg/TT day and accelerations 1e-9 deg/TT day². Rate spreads use twice
 the rate tolerance. Illustrative conditioning proxies must exactly reconstruct from their own
 rate/acceleration inputs; those primitives have the explicit tolerances above. These are numerical
 replay tolerances, not physical uncertainty bounds; the 30/60-second scientific
