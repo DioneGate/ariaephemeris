@@ -1,0 +1,69 @@
+name: RM-001-007 Recover verified WP5.4 JPL source artefact (one-shot)
+
+on:
+  push:
+    branches:
+      - feature/rm-001-007-wp5-4-astrological-coordinate-qualification-20261119
+    paths:
+      - '.github/workflows/wp54-recover-artefact-once.yml'
+
+permissions:
+  actions: read
+  contents: write
+
+jobs:
+  recover:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Recover exact source data from successful acquisition-stage artefact
+        uses: actions/download-artifact@v4
+        with:
+          name: wp54-independent-jpl-tropical-reference-and-diagnostics
+          run-id: 44484461235
+          github-token: ${{ github.token }}
+          path: .
+      - name: Install pinned packages for independent offline source re-verification
+        run: |
+          python -m pip install -r requirements/development.lock
+          python -m pip install --no-deps -e .
+      - name: Format and retest recovered source and new WP5.4 implementation
+        run: |
+          set -euo pipefail
+          ruff check --fix tools/datasets/acquire_wp54_tropical.py tools/datasets/verify_wp54_tropical.py tools/datasets/compare_wp54_tropical.py tests/unit/test_wp54_tropical_qualification.py
+          ruff format tools/datasets/acquire_wp54_tropical.py tools/datasets/verify_wp54_tropical.py tools/datasets/compare_wp54_tropical.py tests/unit/test_wp54_tropical_qualification.py
+          ruff check .
+          ruff format --check .
+          pytest -q tests/unit/test_wp54_tropical_qualification.py
+          python tools/datasets/verify_wp54_tropical.py \
+            --root data/fixtures/horizons/wp54-tropical \
+            --wp51 data/fixtures/horizons
+          python - <<'PY'
+          import json, pathlib
+          raw = json.loads(pathlib.Path('data/fixtures/horizons/wp54-tropical/wp54-horizons-tropical-stencils-v1.json').read_text())
+          result = json.loads(pathlib.Path('docs/validation/wp54-tropical-coordinate-comparison.json').read_text())
+          assert raw['case_count'] == result['sample_count'] == 186
+          assert raw['ray_count'] == 930
+          assert raw['new_jpl_reference_rows'] == 780
+          assert len(raw['source_requests']) == 18
+          assert result['commercial_release_qualified'] is False
+          assert result['absolute_astronomical_accuracy_certified'] is False
+          print("Recovered true 780 new JPL rays, 150 original rays, 186 chart cases")
+          PY
+      - name: Freeze authentic artefact and remove one-shot recovery workflow
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git rm .github/workflows/wp54-recover-artefact-once.yml
+          git add data/fixtures/horizons/wp54-tropical/ docs/validation/wp54-tropical-coordinate-comparison.json \
+            tools/datasets/acquire_wp54_tropical.py tools/datasets/verify_wp54_tropical.py \
+            tools/datasets/compare_wp54_tropical.py tests/unit/test_wp54_tropical_qualification.py
+          git commit -m "data(RM-001/007): recover frozen, verified 930 JPL tropical rays and 186 chart comparisons"
+          git push origin HEAD:feature/rm-001-007-wp5-4-astrological-coordinate-qualification-20261119
