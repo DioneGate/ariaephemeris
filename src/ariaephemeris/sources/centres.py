@@ -60,6 +60,7 @@ class PhysicalCentreKernel:
                             "UNSUPPORTED_FRAME",
                             f"{body}: physical-centre SPK frame {segment.frame} unsupported",
                         )
+                    segment.load_array()  # Only the direct centre records; safe concurrent reads.
                     chosen.append(segment)
                 if not chosen:
                     raise AriaError("DATA_INTEGRITY_ERROR", f"{body}: no direct {target}/{parent} offset")
