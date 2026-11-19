@@ -1,0 +1,3578 @@
+{
+  "absolute_astronomical_accuracy_certified": false,
+  "commercial_event_timing_qualified": false,
+  "diagnostic_limits": {
+    "event_timing_candidate_seconds": 60.0,
+    "interpolation_vs_linear_diagnostic_is_not_error_certificate": true,
+    "not_an_approved_reliable_timing_bound": true
+  },
+  "event_case_count": 22,
+  "external_rays_verified_offline": true,
+  "independently_verified_root_completeness": false,
+  "per_kind": {
+    "conjunction": {
+      "abs_timing_difference_seconds": {
+        "count": 5,
+        "max": 0.039549171924591064,
+        "p95": 0.03879278898239136,
+        "rms": 0.02424900157593045
+      },
+      "candidate_60_seconds_exceedances": 0,
+      "compared_count": 5,
+      "individual_event_brackets_not_continuous_completeness": true,
+      "max_abs_cubic_vs_linear_seconds": 4.023313522338867e-05,
+      "missing_aria_event_search_count": 0,
+      "reference_interpolation_error_bound_derived": false,
+      "sample_count": 5
+    },
+    "ingress": {
+      "abs_timing_difference_seconds": {
+        "count": 6,
+        "max": 0.04357248544692993,
+        "p95": 0.040253251791000366,
+        "rms": 0.02444843632350959
+      },
+      "candidate_60_seconds_exceedances": 0,
+      "compared_count": 6,
+      "individual_event_brackets_not_continuous_completeness": true,
+      "max_abs_cubic_vs_linear_seconds": 0.0009655952453613281,
+      "missing_aria_event_search_count": 0,
+      "reference_interpolation_error_bound_derived": false,
+      "sample_count": 6
+    },
+    "opposition": {
+      "abs_timing_difference_seconds": {
+        "count": 5,
+        "max": 0.039187073707580566,
+        "p95": 0.03907442092895508,
+        "rms": 0.024802499304751535
+      },
+      "candidate_60_seconds_exceedances": 0,
+      "compared_count": 5,
+      "individual_event_brackets_not_continuous_completeness": true,
+      "max_abs_cubic_vs_linear_seconds": 4.023313522338867e-05,
+      "missing_aria_event_search_count": 0,
+      "reference_interpolation_error_bound_derived": false,
+      "sample_count": 5
+    },
+    "station": {
+      "abs_timing_difference_seconds": {
+        "count": 6,
+        "max": 4.613573849201202,
+        "p95": 4.042243212461472,
+        "rms": 2.3102970097736364
+      },
+      "candidate_60_seconds_exceedances": 0,
+      "compared_count": 6,
+      "individual_event_brackets_not_continuous_completeness": true,
+      "max_abs_cubic_vs_linear_seconds": 0.002816319465637207,
+      "missing_aria_event_search_count": 0,
+      "reference_interpolation_error_bound_derived": false,
+      "sample_count": 6
+    }
+  },
+  "physical_profile": "planet-centres-v1",
+  "reference_interpolation_error_bound_established": false,
+  "reference_models": {
+    "frame": "true tropical ecliptic/equinox of date IAU 2006/2000A",
+    "observer": "Earth (399), JPL Horizons-selected source (usually DE441)",
+    "physical_target": "Mars\u2013Pluto original Horizons physical planet centres",
+    "reference_rate": "five-point Horizons \u00b10.0125 and \u00b10.025 TT-day stencil",
+    "reference_root": "four-point cubic within nine independent JPL time samples",
+    "shared_standard_dependency": "PyERFA 2.0.1.5 (both sides IAU 2006/2000A)",
+    "source_independence": "external original Horizons ICRF directions",
+    "time": "TT Julian Date; signed error in seconds"
+  },
+  "report_id": "aria-wp55-independent-jpl-event-root-comparison-v1",
+  "rows": [
+    {
+      "aria_events_in_half_day": [
+        {
+          "condition": "well-conditioned",
+          "event_direction": "stationary",
+          "jd_tt": 2459957.3732504863,
+          "time_bracket_seconds": 0.0823974609375,
+          "timing_qualified": false
+        }
+      ],
+      "aria_minus_independently_interpolated_jpl_seconds": 0.26578009128570557,
+      "aria_nearest_event": {
+        "condition": "well-conditioned",
+        "event_direction": "stationary",
+        "jd_tt": 2459957.3732504863,
+        "time_bracket_seconds": 0.0823974609375,
+        "timing_qualified": false
+      },
+      "body": "mars",
+      "candidate_60_seconds_exceeded": false,
+      "conditioning": {
+        "interpolation_is_not_certified_exact_event_time": true,
+        "jpl_equation_slope_abs_per_tt_day": 0.012823086953257543,
+        "max_position_or_rate_difference_time_proxy_seconds": 673.7847159185891,
+        "proxy_is_not_certified_error_bound": true,
+        "source_model_uncertainty_unresolved": true
+      },
+      "event_id": "station-mars",
+      "goal_deg": null,
+      "jpl_reference": {
+        "cubic_minus_linear_seconds": -0.0002816319465637207,
+        "interpolation_error_bound_established": false,
+        "interpolation_method": "four-point local cubic inside observed JPL sign-change bracket",
+        "jd_tt": 2459957.37324741,
+        "linear_root_jd_tt": 2459957.3732474134,
+        "local_signed_slope_per_tt_day": 0.012823086953257543,
+        "reference_bracket_jd_tt": [
+          2459957.3420105,
+          2459957.3732605
+        ],
+        "reference_bracket_width_seconds": 2700.0,
+        "sampled_reference_root_unique_in_grid": true
+      },
+      "jpl_sampled_equation": [
+        {
+          "event_equation": -0.001603675494076621,
+          "jd_tt": 2459957.2482605,
+          "reference": {
+            "independent_rate_deg_tt_day": -0.001603675494076621,
+            "rate_stencil_tt": [
+              2459957.2232605,
+              2459957.2357605,
+              2459957.2482605,
+              2459957.2607605,
+              2459957.2732605
+            ]
+          }
+        },
+        {
+          "event_equation": -0.001202512096559379,
+          "jd_tt": 2459957.2795105,
+          "reference": {
+            "independent_rate_deg_tt_day": -0.001202512096559379,
+            "rate_stencil_tt": [
+              2459957.2545105,
+              2459957.2670105,
+              2459957.2795105,
+              2459957.2920105,
+              2459957.3045105
+            ]
+          }
+        },
+        {
+          "event_equation": -0.0008014882447090106,
+          "jd_tt": 2459957.3107605,
+          "reference": {
+            "independent_rate_deg_tt_day": -0.0008014882447090106,
+            "rate_stencil_tt": [
+              2459957.2857605,
+              2459957.2982605,
+              2459957.3107605,
+              2459957.3232605,
+              2459957.3357605
+            ]
+          }
+        },
+        {
+          "event_equation": -0.00040064367283321184,
+          "jd_tt": 2459957.3420105,
+          "reference": {
+            "independent_rate_deg_tt_day": -0.00040064367283321184,
+            "rate_stencil_tt": [
+              2459957.3170105,
+              2459957.3295105,
+              2459957.3420105,
+              2459957.3545105,
+              2459957.3670105
+            ]
+          }
+        },
+        {
+          "event_equation": 1.6784667877800527e-07,
+          "jd_tt": 2459957.3732605,
+          "reference": {
+            "independent_rate_deg_tt_day": 1.6784667877800527e-07,
+            "rate_stencil_tt": [
+              2459957.3482605,
+              2459957.3607605,
+              2459957.3732605,
+              2459957.3857605,
+              2459957.3982605
+            ]
+          }
+        },
+        {
+          "event_equation": 0.00040072746249582747,
+          "jd_tt": 2459957.4045105,
+          "reference": {
+            "independent_rate_deg_tt_day": 0.00040072746249582747,
+            "rate_stencil_tt": [
+              2459957.3795105,
+              2459957.3920105,
+              2459957.4045105,
+              2459957.4170105,
+              2459957.4295105
+            ]
+          }
+        },
+        {
+          "event_equation": 0.0008012137002803379,
+          "jd_tt": 2459957.4357605,
+          "reference": {
+            "independent_rate_deg_tt_day": 0.0008012137002803379,
+            "rate_stencil_tt": [
+              2459957.4107605,
+              2459957.4232605,
+              2459957.4357605,
+              2459957.4482605,
+              2459957.4607605
+            ]
+          }
+        },
+        {
+          "event_equation": 0.0012015043576714863,
+          "jd_tt": 2459957.4670105,
+          "reference": {
+            "independent_rate_deg_tt_day": 0.0012015043576714863,
+            "rate_stencil_tt": [
+              2459957.4420105,
+              2459957.4545105,
+              2459957.4670105,
+              2459957.4795105,
+              2459957.4920105
+            ]
+          }
+        },
+        {
+          "event_equation": 0.0016017106755346804,
+          "jd_tt": 2459957.4982605,
+          "reference": {
+            "independent_rate_deg_tt_day": 0.0016017106755346804,
+            "rate_stencil_tt": [
+              2459957.4732605,
+              2459957.4857605,
+              2459957.4982605,
+              2459957.5107605,
+              2459957.5232605
+            ]
+          }
+        }
+      ],
+      "kind": "station",
+      "nominated_jd_tt": 2459957.3732605,
+      "other_body": null,
+      "selection": {
+        "blind_independent_discovery": false,
+        "nomination_method": "Aria-nominated WP5.4 critical date; no independently timed root",
+        "nomination_window_jd_tt": [
+          2459953.5,
+          2459957.5
+        ]
+      }
+    },
+    {
+      "aria_events_in_half_day": [
+        {
+          "condition": "well-conditioned",
+          "event_direction": "direct",
+          "jd_tt": 2460028.990653511,
+          "time_bracket_seconds": 0.0823974609375,
+          "timing_qualified": false
+        }
+      ],
+      "aria_minus_independently_interpolated_jpl_seconds": -0.02365708351135254,
+      "aria_nearest_event": {
+        "condition": "well-conditioned",
+        "event_direction": "direct",
+        "jd_tt": 2460028.990653511,
+        "time_bracket_seconds": 0.0823974609375,
+        "timing_qualified": false
+      },
+      "body": "mars",
+      "candidate_60_seconds_exceeded": false,
+      "conditioning": {
+        "interpolation_is_not_certified_exact_event_time": true,
+        "jpl_equation_slope_abs_per_tt_day": 0.4835964045700735,
+        "max_position_or_rate_difference_time_proxy_seconds": 2.4814080267342415,
+        "proxy_is_not_certified_error_bound": true,
+        "source_model_uncertainty_unresolved": true
+      },
+      "event_id": "ingress-mars",
+      "goal_deg": 90,
+      "jpl_reference": {
+        "cubic_minus_linear_seconds": 0.00020116567611694336,
+        "interpolation_error_bound_established": false,
+        "interpolation_method": "four-point local cubic inside observed JPL sign-change bracket",
+        "jd_tt": 2460028.990653785,
+        "linear_root_jd_tt": 2460028.9906537826,
+        "local_signed_slope_per_tt_day": 0.4835964045700735,
+        "reference_bracket_jd_tt": [
+          2460028.9906311,
+          2460029.0218811
+        ],
+        "reference_bracket_width_seconds": 2700.0,
+        "sampled_reference_root_unique_in_grid": true
+      },
+      "jpl_sampled_equation": [
+        {
+          "event_equation": -0.06044001437277302,
+          "jd_tt": 2460028.8656311,
+          "reference": {
+            "cusp_residual_deg": -0.06044001437277302,
+            "independent_latitude_deg": 2.138905026324833,
+            "independent_longitude_deg": 89.93955998562721
+          }
+        },
+        {
+          "event_equation": -0.04533661949452039,
+          "jd_tt": 2460028.8968811,
+          "reference": {
+            "cusp_residual_deg": -0.04533661949452039,
+            "independent_latitude_deg": 2.1385690529787955,
+            "independent_longitude_deg": 89.95466338050548
+          }
+        },
+        {
+          "event_equation": -0.030230645770927822,
+          "jd_tt": 2460028.9281311,
+          "reference": {
+            "cusp_residual_deg": -0.030230645770927822,
+            "independent_latitude_deg": 2.138233110844197,
+            "independent_longitude_deg": 89.96976935422907
+          }
+        },
+        {
+          "event_equation": -0.015122095581602935,
+          "jd_tt": 2460028.9593811,
+          "reference": {
+            "cusp_residual_deg": -0.015122095581602935,
+            "independent_latitude_deg": 2.1378971968121308,
+            "independent_longitude_deg": 89.9848779044184
+          }
+        },
+        {
+          "event_equation": -1.0970391628006837e-05,
+          "jd_tt": 2460028.9906311,
+          "reference": {
+            "cusp_residual_deg": -1.0970391628006837e-05,
+            "independent_latitude_deg": 2.13756131277031,
+            "independent_longitude_deg": 89.99998902960837
+          }
+        },
+        {
+          "event_equation": 0.015102726521035947,
+          "jd_tt": 2460029.0218811,
+          "reference": {
+            "cusp_residual_deg": 0.015102726521035947,
+            "independent_latitude_deg": 2.137225458610057,
+            "independent_longitude_deg": 90.01510272652102
+          }
+        },
+        {
+          "event_equation": 0.030218992776980258,
+          "jd_tt": 2460029.0531311,
+          "reference": {
+            "cusp_residual_deg": 0.030218992776980258,
+            "independent_latitude_deg": 2.1368896332191336,
+            "independent_longitude_deg": 90.03021899277698
+          }
+        },
+        {
+          "event_equation": 0.04533782690253929,
+          "jd_tt": 2460029.0843811,
+          "reference": {
+            "cusp_residual_deg": 0.04533782690253929,
+            "independent_latitude_deg": 2.1365538374822424,
+            "independent_longitude_deg": 90.04533782690254
+          }
+        },
+        {
+          "event_equation": 0.060459226516940134,
+          "jd_tt": 2460029.1156311,
+          "reference": {
+            "cusp_residual_deg": 0.060459226516940134,
+            "independent_latitude_deg": 2.136218071285243,
+            "independent_longitude_deg": 90.06045922651694
+          }
+        }
+      ],
+      "kind": "ingress",
+      "nominated_jd_tt": 2460028.9906311,
+      "other_body": null,
+      "selection": {
+        "blind_independent_discovery": false,
+        "nomination_method": "Aria-nominated WP5.4 critical date; no independently timed root",
+        "nomination_window_jd_tt": [
+          2460025.5,
+          2460029.5
+        ]
+      }
+    },
+    {
+      "aria_events_in_half_day": [
+        {
+          "condition": "well-conditioned",
+          "event_direction": "stationary",
+          "jd_tt": 2460192.091780228,
+          "time_bracket_seconds": 0.0823974609375,
+          "timing_qualified": false
+        }
+      ],
+      "aria_minus_independently_interpolated_jpl_seconds": 0.8858934044837952,
+      "aria_nearest_event": {
+        "condition": "well-conditioned",
+        "event_direction": "stationary",
+        "jd_tt": 2460192.091780228,
+        "time_bracket_seconds": 0.0823974609375,
+        "timing_qualified": false
+      },
+      "body": "jupiter",
+      "candidate_60_seconds_exceeded": false,
+      "conditioning": {
+        "interpolation_is_not_certified_exact_event_time": true,
+        "jpl_equation_slope_abs_per_tt_day": 0.003339080575853003,
+        "max_position_or_rate_difference_time_proxy_seconds": 2587.5386363783155,
+        "proxy_is_not_certified_error_bound": true,
+        "source_model_uncertainty_unresolved": true
+      },
+      "event_id": "station-jupiter",
+      "goal_deg": null,
+      "jpl_reference": {
+        "cubic_minus_linear_seconds": 8.046627044677734e-05,
+        "interpolation_error_bound_established": false,
+        "interpolation_method": "four-point local cubic inside observed JPL sign-change bracket",
+        "jd_tt": 2460192.0917699747,
+        "linear_root_jd_tt": 2460192.0917699737,
+        "local_signed_slope_per_tt_day": -0.003339080575853003,
+        "reference_bracket_jd_tt": [
+          2460192.0917664,
+          2460192.1230164
+        ],
+        "reference_bracket_width_seconds": 2700.0,
+        "sampled_reference_root_unique_in_grid": true
+      },
+      "jpl_sampled_equation": [
+        {
+          "event_equation": 0.00041694549035279727,
+          "jd_tt": 2460191.9667664,
+          "reference": {
+            "independent_rate_deg_tt_day": 0.00041694549035279727,
+            "rate_stencil_tt": [
+              2460191.9417664,
+              2460191.9542664,
+              2460191.9667664,
+              2460191.9792664,
+              2460191.9917664
+            ]
+          }
+        },
+        {
+          "event_equation": 0.00031283372625997186,
+          "jd_tt": 2460191.9980164,
+          "reference": {
+            "independent_rate_deg_tt_day": 0.00031283372625997186,
+            "rate_stencil_tt": [
+              2460191.9730164,
+              2460191.9855164,
+              2460191.9980164,
+              2460192.0105164,
+              2460192.0230164
+            ]
+          }
+        },
+        {
+          "event_equation": 0.00020860547427522153,
+          "jd_tt": 2460192.0292664,
+          "reference": {
+            "independent_rate_deg_tt_day": 0.00020860547427522153,
+            "rate_stencil_tt": [
+              2460192.0042664,
+              2460192.0167664,
+              2460192.0292664,
+              2460192.0417664,
+              2460192.0542664
+            ]
+          }
+        },
+        {
+          "event_equation": 0.0001043593298769944,
+          "jd_tt": 2460192.0605164,
+          "reference": {
+            "independent_rate_deg_tt_day": 0.0001043593298769944,
+            "rate_stencil_tt": [
+              2460192.0355164,
+              2460192.0480164,
+              2460192.0605164,
+              2460192.0730164,
+              2460192.0855164
+            ]
+          }
+        },
+        {
+          "event_equation": 1.1935602136266727e-08,
+          "jd_tt": 2460192.0917664,
+          "reference": {
+            "independent_rate_deg_tt_day": 1.1935602136266727e-08,
+            "rate_stencil_tt": [
+              2460192.0667664,
+              2460192.0792664,
+              2460192.0917664,
+              2460192.1042664,
+              2460192.1167664
+            ]
+          }
+        },
+        {
+          "event_equation": -0.0001043481389236452,
+          "jd_tt": 2460192.1230164,
+          "reference": {
+            "independent_rate_deg_tt_day": -0.0001043481389236452,
+            "rate_stencil_tt": [
+              2460192.0980164,
+              2460192.1105164,
+              2460192.1230164,
+              2460192.1355164,
+              2460192.1480164
+            ]
+          }
+        },
+        {
+          "event_equation": -0.0002087646377428124,
+          "jd_tt": 2460192.1542664,
+          "reference": {
+            "independent_rate_deg_tt_day": -0.0002087646377428124,
+            "rate_stencil_tt": [
+              2460192.1292664,
+              2460192.1417664,
+              2460192.1542664,
+              2460192.1667664,
+              2460192.1792664
+            ]
+          }
+        },
+        {
+          "event_equation": -0.0003132630259491027,
+          "jd_tt": 2460192.1855164,
+          "reference": {
+            "independent_rate_deg_tt_day": -0.0003132630259491027,
+            "rate_stencil_tt": [
+              2460192.1605164,
+              2460192.1730164,
+              2460192.1855164,
+              2460192.1980164,
+              2460192.2105164
+            ]
+          }
+        },
+        {
+          "event_equation": -0.0004177416949839122,
+          "jd_tt": 2460192.2167664,
+          "reference": {
+            "independent_rate_deg_tt_day": -0.0004177416949839122,
+            "rate_stencil_tt": [
+              2460192.1917664,
+              2460192.2042664,
+              2460192.2167664,
+              2460192.2292664,
+              2460192.2417664
+            ]
+          }
+        }
+      ],
+      "kind": "station",
+      "nominated_jd_tt": 2460192.0917664,
+      "other_body": null,
+      "selection": {
+        "blind_independent_discovery": false,
+        "nomination_method": "Aria-nominated WP5.4 critical date; no independently timed root",
+        "nomination_window_jd_tt": [
+          2460189.5,
+          2460193.5
+        ]
+      }
+    },
+    {
+      "aria_events_in_half_day": [
+        {
+          "condition": "well-conditioned",
+          "event_direction": "direct",
+          "jd_tt": 2460081.2230630135,
+          "time_bracket_seconds": 0.0823974609375,
+          "timing_qualified": false
+        }
+      ],
+      "aria_minus_independently_interpolated_jpl_seconds": 0.005713105201721191,
+      "aria_nearest_event": {
+        "condition": "well-conditioned",
+        "event_direction": "direct",
+        "jd_tt": 2460081.2230630135,
+        "time_bracket_seconds": 0.0823974609375,
+        "timing_qualified": false
+      },
+      "body": "jupiter",
+      "candidate_60_seconds_exceeded": false,
+      "conditioning": {
+        "interpolation_is_not_certified_exact_event_time": true,
+        "jpl_equation_slope_abs_per_tt_day": 0.22857927648966322,
+        "max_position_or_rate_difference_time_proxy_seconds": 5.249819749316891,
+        "proxy_is_not_certified_error_bound": true,
+        "source_model_uncertainty_unresolved": true
+      },
+      "event_id": "ingress-jupiter",
+      "goal_deg": 30,
+      "jpl_reference": {
+        "cubic_minus_linear_seconds": -4.023313522338867e-05,
+        "interpolation_error_bound_established": false,
+        "interpolation_method": "four-point local cubic inside observed JPL sign-change bracket",
+        "jd_tt": 2460081.2230629474,
+        "linear_root_jd_tt": 2460081.223062948,
+        "local_signed_slope_per_tt_day": 0.22857927648966322,
+        "reference_bracket_jd_tt": [
+          2460081.223053,
+          2460081.254303
+        ],
+        "reference_bracket_width_seconds": 2700.0,
+        "sampled_reference_root_unique_in_grid": true
+      },
+      "jpl_sampled_equation": [
+        {
+          "event_equation": -0.02858020726483801,
+          "jd_tt": 2460081.098053,
+          "reference": {
+            "cusp_residual_deg": -0.02858020726483801,
+            "independent_latitude_deg": -1.0698880698516586,
+            "independent_longitude_deg": 29.97141979273517
+          }
+        },
+        {
+          "event_equation": -0.021434695100225554,
+          "jd_tt": 2460081.129303,
+          "reference": {
+            "cusp_residual_deg": -0.021434695100225554,
+            "independent_latitude_deg": -1.0699111654031936,
+            "independent_longitude_deg": 29.978565304899764
+          }
+        },
+        {
+          "event_equation": -0.014289870395060689,
+          "jd_tt": 2460081.160553,
+          "reference": {
+            "cusp_residual_deg": -0.014289870395060689,
+            "independent_latitude_deg": -1.0699342917408405,
+            "independent_longitude_deg": 29.98571012960494
+          }
+        },
+        {
+          "event_equation": -0.007145729476349061,
+          "jd_tt": 2460081.191803,
+          "reference": {
+            "cusp_residual_deg": -0.007145729476349061,
+            "independent_latitude_deg": -1.0699574480406364,
+            "independent_longitude_deg": 29.992854270523647
+          }
+        },
+        {
+          "event_equation": -2.2737642098036304e-06,
+          "jd_tt": 2460081.223053,
+          "reference": {
+            "cusp_residual_deg": -2.2737642098036304e-06,
+            "independent_latitude_deg": -1.069980635841105,
+            "independent_longitude_deg": 29.999997726235794
+          }
+        },
+        {
+          "event_equation": 0.0071404998387833984,
+          "jd_tt": 2460081.254303,
+          "reference": {
+            "cusp_residual_deg": 0.0071404998387833984,
+            "independent_latitude_deg": -1.0700038530361715,
+            "independent_longitude_deg": 30.007140499838783
+          }
+        },
+        {
+          "event_equation": 0.014282590828003094,
+          "jd_tt": 2460081.285553,
+          "reference": {
+            "cusp_residual_deg": 0.014282590828003094,
+            "independent_latitude_deg": -1.0700271015099045,
+            "independent_longitude_deg": 30.014282590828007
+          }
+        },
+        {
+          "event_equation": 0.021424000671117938,
+          "jd_tt": 2460081.316803,
+          "reference": {
+            "cusp_residual_deg": 0.021424000671117938,
+            "independent_latitude_deg": -1.0700503806830575,
+            "independent_longitude_deg": 30.02142400067112
+          }
+        },
+        {
+          "event_equation": 0.02856473083275546,
+          "jd_tt": 2460081.348053,
+          "reference": {
+            "cusp_residual_deg": 0.02856473083275546,
+            "independent_latitude_deg": -1.0700736899762673,
+            "independent_longitude_deg": 30.02856473083276
+          }
+        }
+      ],
+      "kind": "ingress",
+      "nominated_jd_tt": 2460081.223053,
+      "other_body": null,
+      "selection": {
+        "blind_independent_discovery": false,
+        "nomination_method": "Aria-nominated WP5.4 critical date; no independently timed root",
+        "nomination_window_jd_tt": [
+          2460077.5,
+          2460081.5
+        ]
+      }
+    },
+    {
+      "aria_events_in_half_day": [
+        {
+          "condition": "well-conditioned",
+          "event_direction": "stationary",
+          "jd_tt": 2460113.2276291694,
+          "time_bracket_seconds": 0.0823974609375,
+          "timing_qualified": false
+        }
+      ],
+      "aria_minus_independently_interpolated_jpl_seconds": 2.328251302242279,
+      "aria_nearest_event": {
+        "condition": "well-conditioned",
+        "event_direction": "stationary",
+        "jd_tt": 2460113.2276291694,
+        "time_bracket_seconds": 0.0823974609375,
+        "timing_qualified": false
+      },
+      "body": "saturn",
+      "candidate_60_seconds_exceeded": false,
+      "conditioning": {
+        "interpolation_is_not_certified_exact_event_time": true,
+        "jpl_equation_slope_abs_per_tt_day": 0.0016563402338533573,
+        "max_position_or_rate_difference_time_proxy_seconds": 5216.319584231591,
+        "proxy_is_not_certified_error_bound": true,
+        "source_model_uncertainty_unresolved": true
+      },
+      "event_id": "station-saturn",
+      "goal_deg": null,
+      "jpl_reference": {
+        "cubic_minus_linear_seconds": -0.0010460615158081055,
+        "interpolation_error_bound_established": false,
+        "interpolation_method": "four-point local cubic inside observed JPL sign-change bracket",
+        "jd_tt": 2460113.227602222,
+        "linear_root_jd_tt": 2460113.227602234,
+        "local_signed_slope_per_tt_day": -0.0016563402338533573,
+        "reference_bracket_jd_tt": [
+          2460113.1963806,
+          2460113.2276306
+        ],
+        "reference_bracket_width_seconds": 2700.0,
+        "sampled_reference_root_unique_in_grid": true
+      },
+      "jpl_sampled_equation": [
+        {
+          "event_equation": 0.00020698643803977268,
+          "jd_tt": 2460113.1026306,
+          "reference": {
+            "independent_rate_deg_tt_day": 0.00020698643803977268,
+            "rate_stencil_tt": [
+              2460113.0776306,
+              2460113.0901306,
+              2460113.1026306,
+              2460113.1151306,
+              2460113.1276306
+            ]
+          }
+        },
+        {
+          "event_equation": 0.00015528823761693877,
+          "jd_tt": 2460113.1338806,
+          "reference": {
+            "independent_rate_deg_tt_day": 0.00015528823761693877,
+            "rate_stencil_tt": [
+              2460113.1088806,
+              2460113.1213806,
+              2460113.1338806,
+              2460113.1463806,
+              2460113.1588806
+            ]
+          }
+        },
+        {
+          "event_equation": 0.0001035196809577125,
+          "jd_tt": 2460113.1651306,
+          "reference": {
+            "independent_rate_deg_tt_day": 0.0001035196809577125,
+            "rate_stencil_tt": [
+              2460113.1401306,
+              2460113.1526306,
+              2460113.1651306,
+              2460113.1776306,
+              2460113.1901306
+            ]
+          }
+        },
+        {
+          "event_equation": 5.1736008496542724e-05,
+          "jd_tt": 2460113.1963806,
+          "reference": {
+            "independent_rate_deg_tt_day": 5.1736008496542724e-05,
+            "rate_stencil_tt": [
+              2460113.1713806,
+              2460113.1838806,
+              2460113.1963806,
+              2460113.2088806,
+              2460113.2213806
+            ]
+          }
+        },
+        {
+          "event_equation": -4.7003444099876404e-08,
+          "jd_tt": 2460113.2276306,
+          "reference": {
+            "independent_rate_deg_tt_day": -4.7003444099876404e-08,
+            "rate_stencil_tt": [
+              2460113.2026306,
+              2460113.2151306,
+              2460113.2276306,
+              2460113.2401306,
+              2460113.2526306
+            ]
+          }
+        },
+        {
+          "event_equation": -5.176328916907853e-05,
+          "jd_tt": 2460113.2588806,
+          "reference": {
+            "independent_rate_deg_tt_day": -5.176328916907853e-05,
+            "rate_stencil_tt": [
+              2460113.2338806,
+              2460113.2463806,
+              2460113.2588806,
+              2460113.2713806,
+              2460113.2838806
+            ]
+          }
+        },
+        {
+          "event_equation": -0.00010351703508604258,
+          "jd_tt": 2460113.2901306,
+          "reference": {
+            "independent_rate_deg_tt_day": -0.00010351703508604258,
+            "rate_stencil_tt": [
+              2460113.2651306,
+              2460113.2776306,
+              2460113.2901306,
+              2460113.3026306,
+              2460113.3151306
+            ]
+          }
+        },
+        {
+          "event_equation": -0.00015524419723078606,
+          "jd_tt": 2460113.3213806,
+          "reference": {
+            "independent_rate_deg_tt_day": -0.00015524419723078606,
+            "rate_stencil_tt": [
+              2460113.2963806,
+              2460113.3088806,
+              2460113.3213806,
+              2460113.3338806,
+              2460113.3463806
+            ]
+          }
+        },
+        {
+          "event_equation": -0.00020705752831418065,
+          "jd_tt": 2460113.3526306,
+          "reference": {
+            "independent_rate_deg_tt_day": -0.00020705752831418065,
+            "rate_stencil_tt": [
+              2460113.3276306,
+              2460113.3401306,
+              2460113.3526306,
+              2460113.3651306,
+              2460113.3776306
+            ]
+          }
+        }
+      ],
+      "kind": "station",
+      "nominated_jd_tt": 2460113.2276306,
+      "other_body": null,
+      "selection": {
+        "blind_independent_discovery": false,
+        "nomination_method": "Aria-nominated WP5.4 critical date; no independently timed root",
+        "nomination_window_jd_tt": [
+          2460109.5,
+          2460113.5
+        ]
+      }
+    },
+    {
+      "aria_events_in_half_day": [
+        {
+          "condition": "well-conditioned",
+          "event_direction": "direct",
+          "jd_tt": 2460011.066712813,
+          "time_bracket_seconds": 0.0823974609375,
+          "timing_qualified": false
+        }
+      ],
+      "aria_minus_independently_interpolated_jpl_seconds": 0.04357248544692993,
+      "aria_nearest_event": {
+        "condition": "well-conditioned",
+        "event_direction": "direct",
+        "jd_tt": 2460011.066712813,
+        "time_bracket_seconds": 0.0823974609375,
+        "timing_qualified": false
+      },
+      "body": "saturn",
+      "candidate_60_seconds_exceeded": false,
+      "conditioning": {
+        "interpolation_is_not_certified_exact_event_time": true,
+        "jpl_equation_slope_abs_per_tt_day": 0.11760955191865174,
+        "max_position_or_rate_difference_time_proxy_seconds": 10.203252885701128,
+        "proxy_is_not_certified_error_bound": true,
+        "source_model_uncertainty_unresolved": true
+      },
+      "event_id": "ingress-saturn",
+      "goal_deg": 330,
+      "jpl_reference": {
+        "cubic_minus_linear_seconds": -8.046627044677734e-05,
+        "interpolation_error_bound_established": false,
+        "interpolation_method": "four-point local cubic inside observed JPL sign-change bracket",
+        "jd_tt": 2460011.0667123087,
+        "linear_root_jd_tt": 2460011.0667123096,
+        "local_signed_slope_per_tt_day": 0.11760955191865174,
+        "reference_bracket_jd_tt": [
+          2460011.0354919,
+          2460011.0667419
+        ],
+        "reference_bracket_width_seconds": 2700.0,
+        "sampled_reference_root_unique_in_grid": true
+      },
+      "jpl_sampled_equation": [
+        {
+          "event_equation": -0.01470051395210703,
+          "jd_tt": 2460010.9417419,
+          "reference": {
+            "cusp_residual_deg": -0.01470051395210703,
+            "independent_latitude_deg": -1.2835846391075647,
+            "independent_longitude_deg": 329.9852994860479
+          }
+        },
+        {
+          "event_equation": -0.011023995193340852,
+          "jd_tt": 2460010.9729919,
+          "reference": {
+            "cusp_residual_deg": -0.011023995193340852,
+            "independent_latitude_deg": -1.283633741333575,
+            "independent_longitude_deg": 329.98897600480666
+          }
+        },
+        {
+          "event_equation": -0.00734782332915529,
+          "jd_tt": 2460011.0042419,
+          "reference": {
+            "cusp_residual_deg": -0.00734782332915529,
+            "independent_latitude_deg": -1.2836828731098737,
+            "independent_longitude_deg": 329.99265217667084
+          }
+        },
+        {
+          "event_equation": -0.003671998030483792,
+          "jd_tt": 2460011.0354919,
+          "reference": {
+            "cusp_residual_deg": -0.003671998030483792,
+            "independent_latitude_deg": -1.283732036631626,
+            "independent_longitude_deg": 329.9963280019695
+          }
+        },
+        {
+          "event_equation": 3.4802636150743638e-06,
+          "jd_tt": 2460011.0667419,
+          "reference": {
+            "cusp_residual_deg": 3.4802636150743638e-06,
+            "independent_latitude_deg": -1.2837812305994523,
+            "independent_longitude_deg": 330.0000034802636
+          }
+        },
+        {
+          "event_equation": 0.003678610411157024,
+          "jd_tt": 2460011.0979919,
+          "reference": {
+            "cusp_residual_deg": 0.003678610411157024,
+            "independent_latitude_deg": -1.2838304555859041,
+            "independent_longitude_deg": 330.00367861041116
+          }
+        },
+        {
+          "event_equation": 0.007353391976039347,
+          "jd_tt": 2460011.1292419,
+          "reference": {
+            "cusp_residual_deg": 0.007353391976039347,
+            "independent_latitude_deg": -1.28387971029149,
+            "independent_longitude_deg": 330.00735339197604
+          }
+        },
+        {
+          "event_equation": 0.011027825644987388,
+          "jd_tt": 2460011.1604919,
+          "reference": {
+            "cusp_residual_deg": 0.011027825644987388,
+            "independent_latitude_deg": -1.283928995975353,
+            "independent_longitude_deg": 330.011027825645
+          }
+        },
+        {
+          "event_equation": 0.01470190971986085,
+          "jd_tt": 2460011.1917419,
+          "reference": {
+            "cusp_residual_deg": 0.01470190971986085,
+            "independent_latitude_deg": -1.2839783119306747,
+            "independent_longitude_deg": 330.01470190971986
+          }
+        }
+      ],
+      "kind": "ingress",
+      "nominated_jd_tt": 2460011.0667419,
+      "other_body": null,
+      "selection": {
+        "blind_independent_discovery": false,
+        "nomination_method": "Aria-nominated WP5.4 critical date; no independently timed root",
+        "nomination_window_jd_tt": [
+          2460009.5,
+          2460013.5
+        ]
+      }
+    },
+    {
+      "aria_events_in_half_day": [
+        {
+          "condition": "well-conditioned",
+          "event_direction": "stationary",
+          "jd_tt": 2459967.4577146033,
+          "time_bracket_seconds": 0.0823974609375,
+          "timing_qualified": false
+        }
+      ],
+      "aria_minus_independently_interpolated_jpl_seconds": -1.9198447465896606,
+      "aria_nearest_event": {
+        "condition": "well-conditioned",
+        "event_direction": "stationary",
+        "jd_tt": 2459967.4577146033,
+        "time_bracket_seconds": 0.0823974609375,
+        "timing_qualified": false
+      },
+      "body": "uranus",
+      "candidate_60_seconds_exceeded": false,
+      "conditioning": {
+        "interpolation_is_not_certified_exact_event_time": true,
+        "jpl_equation_slope_abs_per_tt_day": 0.0008629412361879956,
+        "max_position_or_rate_difference_time_proxy_seconds": 10012.269245779487,
+        "proxy_is_not_certified_error_bound": true,
+        "source_model_uncertainty_unresolved": true
+      },
+      "event_id": "station-uranus",
+      "goal_deg": null,
+      "jpl_reference": {
+        "cubic_minus_linear_seconds": 0.0001609325408935547,
+        "interpolation_error_bound_established": false,
+        "interpolation_method": "four-point local cubic inside observed JPL sign-change bracket",
+        "jd_tt": 2459967.4577368237,
+        "linear_root_jd_tt": 2459967.457736822,
+        "local_signed_slope_per_tt_day": 0.0008629412361879956,
+        "reference_bracket_jd_tt": [
+          2459967.4577332,
+          2459967.4889832
+        ],
+        "reference_bracket_width_seconds": 2700.0,
+        "sampled_reference_root_unique_in_grid": true
+      },
+      "jpl_sampled_equation": [
+        {
+          "event_equation": -0.00010772622791440273,
+          "jd_tt": 2459967.3327332,
+          "reference": {
+            "independent_rate_deg_tt_day": -0.00010772622791440273,
+            "rate_stencil_tt": [
+              2459967.3077332,
+              2459967.3202332,
+              2459967.3327332,
+              2459967.3452332,
+              2459967.3577332
+            ]
+          }
+        },
+        {
+          "event_equation": -8.077661902916587e-05,
+          "jd_tt": 2459967.3639832,
+          "reference": {
+            "independent_rate_deg_tt_day": -8.077661902916587e-05,
+            "rate_stencil_tt": [
+              2459967.3389832,
+              2459967.3514832,
+              2459967.3639832,
+              2459967.3764832,
+              2459967.3889832
+            ]
+          }
+        },
+        {
+          "event_equation": -5.3852848319972197e-05,
+          "jd_tt": 2459967.3952332,
+          "reference": {
+            "independent_rate_deg_tt_day": -5.3852848319972197e-05,
+            "rate_stencil_tt": [
+              2459967.3702332,
+              2459967.3827332,
+              2459967.3952332,
+              2459967.4077332,
+              2459967.4202332
+            ]
+          }
+        },
+        {
+          "event_equation": -2.6900729229358447e-05,
+          "jd_tt": 2459967.4264832,
+          "reference": {
+            "independent_rate_deg_tt_day": -2.6900729229358447e-05,
+            "rate_stencil_tt": [
+              2459967.4014832,
+              2459967.4139832,
+              2459967.4264832,
+              2459967.4389832,
+              2459967.4514832
+            ]
+          }
+        },
+        {
+          "event_equation": -3.1269564715330485e-09,
+          "jd_tt": 2459967.4577332,
+          "reference": {
+            "independent_rate_deg_tt_day": -3.1269564715330485e-09,
+            "rate_stencil_tt": [
+              2459967.4327332,
+              2459967.4452332,
+              2459967.4577332,
+              2459967.4702332,
+              2459967.4827332
+            ]
+          }
+        },
+        {
+          "event_equation": 2.697769502901792e-05,
+          "jd_tt": 2459967.4889832,
+          "reference": {
+            "independent_rate_deg_tt_day": 2.697769502901792e-05,
+            "rate_stencil_tt": [
+              2459967.4639832,
+              2459967.4764832,
+              2459967.4889832,
+              2459967.5014832,
+              2459967.5139832
+            ]
+          }
+        },
+        {
+          "event_equation": 5.387530904954473e-05,
+          "jd_tt": 2459967.5202332,
+          "reference": {
+            "independent_rate_deg_tt_day": 5.387530904954473e-05,
+            "rate_stencil_tt": [
+              2459967.4952332,
+              2459967.5077332,
+              2459967.5202332,
+              2459967.5327332,
+              2459967.5452332
+            ]
+          }
+        },
+        {
+          "event_equation": 8.081764462986028e-05,
+          "jd_tt": 2459967.5514832,
+          "reference": {
+            "independent_rate_deg_tt_day": 8.081764462986028e-05,
+            "rate_stencil_tt": [
+              2459967.5264832,
+              2459967.5389832,
+              2459967.5514832,
+              2459967.5639832,
+              2459967.5764832
+            ]
+          }
+        },
+        {
+          "event_equation": 0.0001078162237414896,
+          "jd_tt": 2459967.5827332,
+          "reference": {
+            "independent_rate_deg_tt_day": 0.0001078162237414896,
+            "rate_stencil_tt": [
+              2459967.5577332,
+              2459967.5702332,
+              2459967.5827332,
+              2459967.5952332,
+              2459967.6077332
+            ]
+          }
+        }
+      ],
+      "kind": "station",
+      "nominated_jd_tt": 2459967.4577332,
+      "other_body": null,
+      "selection": {
+        "blind_independent_discovery": false,
+        "nomination_method": "Aria-nominated WP5.4 critical date; no independently timed root",
+        "nomination_window_jd_tt": [
+          2459965.5,
+          2459969.5
+        ]
+      }
+    },
+    {
+      "aria_events_in_half_day": [
+        {
+          "condition": "well-conditioned",
+          "event_direction": "direct",
+          "jd_tt": 2460863.825086157,
+          "time_bracket_seconds": 0.0823974609375,
+          "timing_qualified": false
+        }
+      ],
+      "aria_minus_independently_interpolated_jpl_seconds": -0.003299117088317871,
+      "aria_nearest_event": {
+        "condition": "well-conditioned",
+        "event_direction": "direct",
+        "jd_tt": 2460863.825086157,
+        "time_bracket_seconds": 0.0823974609375,
+        "timing_qualified": false
+      },
+      "body": "uranus",
+      "candidate_60_seconds_exceeded": false,
+      "conditioning": {
+        "interpolation_is_not_certified_exact_event_time": true,
+        "jpl_equation_slope_abs_per_tt_day": 0.04467896561826181,
+        "max_position_or_rate_difference_time_proxy_seconds": 26.85827622449521,
+        "proxy_is_not_certified_error_bound": true,
+        "source_model_uncertainty_unresolved": true
+      },
+      "event_id": "ingress-uranus",
+      "goal_deg": 60,
+      "jpl_reference": {
+        "cubic_minus_linear_seconds": -0.00024139881134033203,
+        "interpolation_error_bound_established": false,
+        "interpolation_method": "four-point local cubic inside observed JPL sign-change bracket",
+        "jd_tt": 2460863.825086195,
+        "linear_root_jd_tt": 2460863.825086198,
+        "local_signed_slope_per_tt_day": 0.04467896561826181,
+        "reference_bracket_jd_tt": [
+          2460863.7938538,
+          2460863.8251038
+        ],
+        "reference_bracket_width_seconds": 2700.0,
+        "sampled_reference_root_unique_in_grid": true
+      },
+      "jpl_sampled_equation": [
+        {
+          "event_equation": -0.005588099414410408,
+          "jd_tt": 2460863.7001038,
+          "reference": {
+            "cusp_residual_deg": -0.005588099414410408,
+            "independent_latitude_deg": -0.20900366814224752,
+            "independent_longitude_deg": 59.99441190058558
+          }
+        },
+        {
+          "event_equation": -0.004190127220027762,
+          "jd_tt": 2460863.7313538,
+          "reference": {
+            "cusp_residual_deg": -0.004190127220027762,
+            "independent_latitude_deg": -0.20900308246966964,
+            "independent_longitude_deg": 59.99580987277998
+          }
+        },
+        {
+          "event_equation": -0.0027926550991423937,
+          "jd_tt": 2460863.7626038,
+          "reference": {
+            "cusp_residual_deg": -0.0027926550991423937,
+            "independent_latitude_deg": -0.20900249796285558,
+            "independent_longitude_deg": 59.99720734490084
+          }
+        },
+        {
+          "event_equation": -0.00139568404378565,
+          "jd_tt": 2460863.7938538,
+          "reference": {
+            "cusp_residual_deg": -0.00139568404378565,
+            "independent_latitude_deg": -0.209001914434463,
+            "independent_longitude_deg": 59.99860431595621
+          }
+        },
+        {
+          "event_equation": 7.865762654546415e-07,
+          "jd_tt": 2460863.8251038,
+          "reference": {
+            "cusp_residual_deg": 7.865762654546415e-07,
+            "independent_latitude_deg": -0.20900133307608512,
+            "independent_longitude_deg": 60.00000078657626
+          }
+        },
+        {
+          "event_equation": 0.0013967548469508984,
+          "jd_tt": 2460863.8563538,
+          "reference": {
+            "cusp_residual_deg": 0.0013967548469508984,
+            "independent_latitude_deg": -0.20900075349941488,
+            "independent_longitude_deg": 60.00139675484695
+          }
+        },
+        {
+          "event_equation": 0.0027922220362199823,
+          "jd_tt": 2460863.8876038,
+          "reference": {
+            "cusp_residual_deg": 0.0027922220362199823,
+            "independent_latitude_deg": -0.20900017396535805,
+            "independent_longitude_deg": 60.00279222203622
+          }
+        },
+        {
+          "event_equation": 0.004187187422928673,
+          "jd_tt": 2460863.9188538,
+          "reference": {
+            "cusp_residual_deg": 0.004187187422928673,
+            "independent_latitude_deg": -0.20899959741830412,
+            "independent_longitude_deg": 60.004187187422936
+          }
+        },
+        {
+          "event_equation": 0.005581650647798142,
+          "jd_tt": 2460863.9501038,
+          "reference": {
+            "cusp_residual_deg": 0.005581650647798142,
+            "independent_latitude_deg": -0.20899902074026128,
+            "independent_longitude_deg": 60.00558165064779
+          }
+        }
+      ],
+      "kind": "ingress",
+      "nominated_jd_tt": 2460863.8251038,
+      "other_body": null,
+      "selection": {
+        "blind_independent_discovery": false,
+        "nomination_method": "Aria-nominated WP5.4 critical date; no independently timed root",
+        "nomination_window_jd_tt": [
+          2460861.5,
+          2460865.5
+        ]
+      }
+    },
+    {
+      "aria_events_in_half_day": [
+        {
+          "condition": "well-conditioned",
+          "event_direction": "stationary",
+          "jd_tt": 2460126.3806233886,
+          "time_bracket_seconds": 0.0823974609375,
+          "timing_qualified": false
+        }
+      ],
+      "aria_minus_independently_interpolated_jpl_seconds": -4.613573849201202,
+      "aria_nearest_event": {
+        "condition": "well-conditioned",
+        "event_direction": "stationary",
+        "jd_tt": 2460126.3806233886,
+        "time_bracket_seconds": 0.0823974609375,
+        "timing_qualified": false
+      },
+      "body": "neptune",
+      "candidate_60_seconds_exceeded": false,
+      "conditioning": {
+        "interpolation_is_not_certified_exact_event_time": true,
+        "jpl_equation_slope_abs_per_tt_day": 0.0005208584531637228,
+        "max_position_or_rate_difference_time_proxy_seconds": 16587.99995952867,
+        "proxy_is_not_certified_error_bound": true,
+        "source_model_uncertainty_unresolved": true
+      },
+      "event_id": "station-neptune",
+      "goal_deg": null,
+      "jpl_reference": {
+        "cubic_minus_linear_seconds": 0.002816319465637207,
+        "interpolation_error_bound_established": false,
+        "interpolation_method": "four-point local cubic inside observed JPL sign-change bracket",
+        "jd_tt": 2460126.3806767864,
+        "linear_root_jd_tt": 2460126.380676754,
+        "local_signed_slope_per_tt_day": -0.0005208584531637228,
+        "reference_bracket_jd_tt": [
+          2460126.3806458,
+          2460126.4118958
+        ],
+        "reference_bracket_width_seconds": 2700.0,
+        "sampled_reference_root_unique_in_grid": true
+      },
+      "jpl_sampled_equation": [
+        {
+          "event_equation": 6.509590737853917e-05,
+          "jd_tt": 2460126.2556458,
+          "reference": {
+            "independent_rate_deg_tt_day": 6.509590737853917e-05,
+            "rate_stencil_tt": [
+              2460126.2306458,
+              2460126.2431458,
+              2460126.2556458,
+              2460126.2681458,
+              2460126.2806458
+            ]
+          }
+        },
+        {
+          "event_equation": 4.881558159771278e-05,
+          "jd_tt": 2460126.2868958,
+          "reference": {
+            "independent_rate_deg_tt_day": 4.881558159771278e-05,
+            "rate_stencil_tt": [
+              2460126.2618958,
+              2460126.2743958,
+              2460126.2868958,
+              2460126.2993958,
+              2460126.3118958
+            ]
+          }
+        },
+        {
+          "event_equation": 3.2527498963948645e-05,
+          "jd_tt": 2460126.3181458,
+          "reference": {
+            "independent_rate_deg_tt_day": 3.2527498963948645e-05,
+            "rate_stencil_tt": [
+              2460126.2931458,
+              2460126.3056458,
+              2460126.3181458,
+              2460126.3306458,
+              2460126.3431458
+            ]
+          }
+        },
+        {
+          "event_equation": 1.626067804257521e-05,
+          "jd_tt": 2460126.3493958,
+          "reference": {
+            "independent_rate_deg_tt_day": 1.626067804257521e-05,
+            "rate_stencil_tt": [
+              2460126.3243958,
+              2460126.3368958,
+              2460126.3493958,
+              2460126.3618958,
+              2460126.3743958
+            ]
+          }
+        },
+        {
+          "event_equation": 1.6139362439086348e-08,
+          "jd_tt": 2460126.3806458,
+          "reference": {
+            "independent_rate_deg_tt_day": 1.6139362439086348e-08,
+            "rate_stencil_tt": [
+              2460126.3556458,
+              2460126.3681458,
+              2460126.3806458,
+              2460126.3931458,
+              2460126.4056458
+            ]
+          }
+        },
+        {
+          "event_equation": -1.6277569253967762e-05,
+          "jd_tt": 2460126.4118958,
+          "reference": {
+            "independent_rate_deg_tt_day": -1.6277569253967762e-05,
+            "rate_stencil_tt": [
+              2460126.3868958,
+              2460126.3993958,
+              2460126.4118958,
+              2460126.4243958,
+              2460126.4368958
+            ]
+          }
+        },
+        {
+          "event_equation": -3.257435575202786e-05,
+          "jd_tt": 2460126.4431458,
+          "reference": {
+            "independent_rate_deg_tt_day": -3.257435575202786e-05,
+            "rate_stencil_tt": [
+              2460126.4181458,
+              2460126.4306458,
+              2460126.4431458,
+              2460126.4556458,
+              2460126.4681458
+            ]
+          }
+        },
+        {
+          "event_equation": -4.8904722689258044e-05,
+          "jd_tt": 2460126.4743958,
+          "reference": {
+            "independent_rate_deg_tt_day": -4.8904722689258044e-05,
+            "rate_stencil_tt": [
+              2460126.4493958,
+              2460126.4618958,
+              2460126.4743958,
+              2460126.4868958,
+              2460126.4993958
+            ]
+          }
+        },
+        {
+          "event_equation": -6.518652602001869e-05,
+          "jd_tt": 2460126.5056458,
+          "reference": {
+            "independent_rate_deg_tt_day": -6.518652602001869e-05,
+            "rate_stencil_tt": [
+              2460126.4806458,
+              2460126.4931458,
+              2460126.5056458,
+              2460126.5181458,
+              2460126.5306458
+            ]
+          }
+        }
+      ],
+      "kind": "station",
+      "nominated_jd_tt": 2460126.3806458,
+      "other_body": null,
+      "selection": {
+        "blind_independent_discovery": false,
+        "nomination_method": "Aria-nominated WP5.4 critical date; no independently timed root",
+        "nomination_window_jd_tt": [
+          2460125.5,
+          2460129.5
+        ]
+      }
+    },
+    {
+      "aria_events_in_half_day": [
+        {
+          "condition": "well-conditioned",
+          "event_direction": "direct",
+          "jd_tt": 2460764.9994130475,
+          "time_bracket_seconds": 0.0823974609375,
+          "timing_qualified": false
+        }
+      ],
+      "aria_minus_independently_interpolated_jpl_seconds": -0.03029555082321167,
+      "aria_nearest_event": {
+        "condition": "well-conditioned",
+        "event_direction": "direct",
+        "jd_tt": 2460764.9994130475,
+        "time_bracket_seconds": 0.0823974609375,
+        "timing_qualified": false
+      },
+      "body": "neptune",
+      "candidate_60_seconds_exceeded": false,
+      "conditioning": {
+        "interpolation_is_not_certified_exact_event_time": true,
+        "jpl_equation_slope_abs_per_tt_day": 0.03747615265893545,
+        "max_position_or_rate_difference_time_proxy_seconds": 32.020362680262586,
+        "proxy_is_not_certified_error_bound": true,
+        "source_model_uncertainty_unresolved": true
+      },
+      "event_id": "ingress-neptune",
+      "goal_deg": 0,
+      "jpl_reference": {
+        "cubic_minus_linear_seconds": 0.0,
+        "interpolation_error_bound_established": false,
+        "interpolation_method": "four-point local cubic inside observed JPL sign-change bracket",
+        "jd_tt": 2460764.999413398,
+        "linear_root_jd_tt": 2460764.999413398,
+        "local_signed_slope_per_tt_day": 0.03747615265893545,
+        "reference_bracket_jd_tt": [
+          2460764.9681702,
+          2460764.9994202
+        ],
+        "reference_bracket_width_seconds": 2700.0,
+        "sampled_reference_root_unique_in_grid": true
+      },
+      "jpl_sampled_equation": [
+        {
+          "event_equation": -0.004684836627347977,
+          "jd_tt": 2460764.8744202,
+          "reference": {
+            "cusp_residual_deg": -0.004684836627347977,
+            "independent_latitude_deg": -1.2641253951330143,
+            "independent_longitude_deg": 359.9953151633727
+          }
+        },
+        {
+          "event_equation": -0.003513458048018947,
+          "jd_tt": 2460764.9056702,
+          "reference": {
+            "cusp_residual_deg": -0.003513458048018947,
+            "independent_latitude_deg": -1.2641325351052686,
+            "independent_longitude_deg": 359.9964865419519
+          }
+        },
+        {
+          "event_equation": -0.0023421496309765644,
+          "jd_tt": 2460764.9369202,
+          "reference": {
+            "cusp_residual_deg": -0.0023421496309765644,
+            "independent_latitude_deg": -1.264139686584395,
+            "independent_longitude_deg": 359.9976578503691
+          }
+        },
+        {
+          "event_equation": -0.0011709120535670081,
+          "jd_tt": 2460764.9681702,
+          "reference": {
+            "cusp_residual_deg": -0.0011709120535670081,
+            "independent_latitude_deg": -1.2641468491724595,
+            "independent_longitude_deg": 359.9988290879465
+          }
+        },
+        {
+          "event_equation": 2.549180067035195e-07,
+          "jd_tt": 2460764.9994202,
+          "reference": {
+            "cusp_residual_deg": 2.549180067035195e-07,
+            "independent_latitude_deg": -1.2641540228692458,
+            "independent_longitude_deg": 2.5491801084451704e-07
+          }
+        },
+        {
+          "event_equation": 0.0011713515119140538,
+          "jd_tt": 2460765.0306702,
+          "reference": {
+            "cusp_residual_deg": 0.0011713515119140538,
+            "independent_latitude_deg": -1.2641612076745357,
+            "independent_longitude_deg": 0.0011713515119022326
+          }
+        },
+        {
+          "event_equation": 0.0023423779504128106,
+          "jd_tt": 2460765.0619202,
+          "reference": {
+            "cusp_residual_deg": 0.0023423779504128106,
+            "independent_latitude_deg": -1.2641684035881138,
+            "independent_longitude_deg": 0.0023423779504198844
+          }
+        },
+        {
+          "event_equation": 0.0035133331344923135,
+          "jd_tt": 2460765.0931702,
+          "reference": {
+            "cusp_residual_deg": 0.0035133331344923135,
+            "independent_latitude_deg": -1.264175611129509,
+            "independent_longitude_deg": 0.0035133331344886845
+          }
+        },
+        {
+          "event_equation": 0.004684217274331104,
+          "jd_tt": 2460765.1244202,
+          "reference": {
+            "cusp_residual_deg": 0.004684217274331104,
+            "independent_latitude_deg": -1.264182830298505,
+            "independent_longitude_deg": 0.004684217274330661
+          }
+        }
+      ],
+      "kind": "ingress",
+      "nominated_jd_tt": 2460764.9994202,
+      "other_body": null,
+      "selection": {
+        "blind_independent_discovery": false,
+        "nomination_method": "Aria-nominated WP5.4 critical date; no independently timed root",
+        "nomination_window_jd_tt": [
+          2460761.5,
+          2460765.5
+        ]
+      }
+    },
+    {
+      "aria_events_in_half_day": [
+        {
+          "condition": "well-conditioned",
+          "event_direction": "stationary",
+          "jd_tt": 2460066.230183133,
+          "time_bracket_seconds": 0.0823974609375,
+          "timing_qualified": false
+        }
+      ],
+      "aria_minus_independently_interpolated_jpl_seconds": 0.8819103240966797,
+      "aria_nearest_event": {
+        "condition": "well-conditioned",
+        "event_direction": "stationary",
+        "jd_tt": 2460066.230183133,
+        "time_bracket_seconds": 0.0823974609375,
+        "timing_qualified": false
+      },
+      "body": "pluto",
+      "candidate_60_seconds_exceeded": false,
+      "conditioning": {
+        "interpolation_is_not_certified_exact_event_time": true,
+        "jpl_equation_slope_abs_per_tt_day": 0.0004985779130657614,
+        "max_position_or_rate_difference_time_proxy_seconds": 17329.287506685843,
+        "proxy_is_not_certified_error_bound": true,
+        "source_model_uncertainty_unresolved": true
+      },
+      "event_id": "station-pluto",
+      "goal_deg": null,
+      "jpl_reference": {
+        "cubic_minus_linear_seconds": 0.00036209821701049805,
+        "interpolation_error_bound_established": false,
+        "interpolation_method": "four-point local cubic inside observed JPL sign-change bracket",
+        "jd_tt": 2460066.2301729256,
+        "linear_root_jd_tt": 2460066.2301729214,
+        "local_signed_slope_per_tt_day": -0.0004985779130657614,
+        "reference_bracket_jd_tt": [
+          2460066.1989441,
+          2460066.2301941
+        ],
+        "reference_bracket_width_seconds": 2700.0,
+        "sampled_reference_root_unique_in_grid": true
+      },
+      "jpl_sampled_equation": [
+        {
+          "event_equation": 6.227502846437952e-05,
+          "jd_tt": 2460066.1051941,
+          "reference": {
+            "independent_rate_deg_tt_day": 6.227502846437952e-05,
+            "rate_stencil_tt": [
+              2460066.0801941,
+              2460066.0926941,
+              2460066.1051941,
+              2460066.1176941,
+              2460066.1301941
+            ]
+          }
+        },
+        {
+          "event_equation": 4.6741577837868434e-05,
+          "jd_tt": 2460066.1364441,
+          "reference": {
+            "independent_rate_deg_tt_day": 4.6741577837868434e-05,
+            "rate_stencil_tt": [
+              2460066.1114441,
+              2460066.1239441,
+              2460066.1364441,
+              2460066.1489441,
+              2460066.1614441
+            ]
+          }
+        },
+        {
+          "event_equation": 3.1116604759517934e-05,
+          "jd_tt": 2460066.1676941,
+          "reference": {
+            "independent_rate_deg_tt_day": 3.1116604759517934e-05,
+            "rate_stencil_tt": [
+              2460066.1426941,
+              2460066.1551941,
+              2460066.1676941,
+              2460066.1801941,
+              2460066.1926941
+            ]
+          }
+        },
+        {
+          "event_equation": 1.5566632403836895e-05,
+          "jd_tt": 2460066.1989441,
+          "reference": {
+            "independent_rate_deg_tt_day": 1.5566632403836895e-05,
+            "rate_stencil_tt": [
+              2460066.1739441,
+              2460066.1864441,
+              2460066.1989441,
+              2460066.2114441,
+              2460066.2239441
+            ]
+          }
+        },
+        {
+          "event_equation": -1.0556959750829263e-08,
+          "jd_tt": 2460066.2301941,
+          "reference": {
+            "independent_rate_deg_tt_day": -1.0556959750829263e-08,
+            "rate_stencil_tt": [
+              2460066.2051941,
+              2460066.2176941,
+              2460066.2301941,
+              2460066.2426941,
+              2460066.2551941
+            ]
+          }
+        },
+        {
+          "event_equation": -1.558432169683025e-05,
+          "jd_tt": 2460066.2614441,
+          "reference": {
+            "independent_rate_deg_tt_day": -1.558432169683025e-05,
+            "rate_stencil_tt": [
+              2460066.2364441,
+              2460066.2489441,
+              2460066.2614441,
+              2460066.2739441,
+              2460066.2864441
+            ]
+          }
+        },
+        {
+          "event_equation": -3.1105055692629925e-05,
+          "jd_tt": 2460066.2926941,
+          "reference": {
+            "independent_rate_deg_tt_day": -3.1105055692629925e-05,
+            "rate_stencil_tt": [
+              2460066.2676941,
+              2460066.2801941,
+              2460066.2926941,
+              2460066.3051941,
+              2460066.3176941
+            ]
+          }
+        },
+        {
+          "event_equation": -4.6745081287250884e-05,
+          "jd_tt": 2460066.3239441,
+          "reference": {
+            "independent_rate_deg_tt_day": -4.6745081287250884e-05,
+            "rate_stencil_tt": [
+              2460066.2989441,
+              2460066.3114441,
+              2460066.3239441,
+              2460066.3364441,
+              2460066.3489441
+            ]
+          }
+        },
+        {
+          "event_equation": -6.229628297660382e-05,
+          "jd_tt": 2460066.3551941,
+          "reference": {
+            "independent_rate_deg_tt_day": -6.229628297660382e-05,
+            "rate_stencil_tt": [
+              2460066.3301941,
+              2460066.3426941,
+              2460066.3551941,
+              2460066.3676941,
+              2460066.3801941
+            ]
+          }
+        }
+      ],
+      "kind": "station",
+      "nominated_jd_tt": 2460066.2301941,
+      "other_body": null,
+      "selection": {
+        "blind_independent_discovery": false,
+        "nomination_method": "Aria-nominated WP5.4 critical date; no independently timed root",
+        "nomination_window_jd_tt": [
+          2460065.5,
+          2460069.5
+        ]
+      }
+    },
+    {
+      "aria_events_in_half_day": [
+        {
+          "condition": "well-conditioned",
+          "event_direction": "direct",
+          "jd_tt": 2460027.0161137595,
+          "time_bracket_seconds": 0.0823974609375,
+          "timing_qualified": false
+        }
+      ],
+      "aria_minus_independently_interpolated_jpl_seconds": 0.012914836406707764,
+      "aria_nearest_event": {
+        "condition": "well-conditioned",
+        "event_direction": "direct",
+        "jd_tt": 2460027.0161137595,
+        "time_bracket_seconds": 0.0823974609375,
+        "timing_qualified": false
+      },
+      "body": "pluto",
+      "candidate_60_seconds_exceeded": false,
+      "conditioning": {
+        "interpolation_is_not_certified_exact_event_time": true,
+        "jpl_equation_slope_abs_per_tt_day": 0.018147675243714467,
+        "max_position_or_rate_difference_time_proxy_seconds": 66.12417204322772,
+        "proxy_is_not_certified_error_bound": true,
+        "source_model_uncertainty_unresolved": true
+      },
+      "event_id": "ingress-pluto",
+      "goal_deg": 300,
+      "jpl_reference": {
+        "cubic_minus_linear_seconds": -0.0009655952453613281,
+        "interpolation_error_bound_established": false,
+        "interpolation_method": "four-point local cubic inside observed JPL sign-change bracket",
+        "jd_tt": 2460027.01611361,
+        "linear_root_jd_tt": 2460027.016113621,
+        "local_signed_slope_per_tt_day": 0.018147675243714467,
+        "reference_bracket_jd_tt": [
+          2460026.9848938,
+          2460027.0161438
+        ],
+        "reference_bracket_width_seconds": 2700.0,
+        "sampled_reference_root_unique_in_grid": true
+      },
+      "jpl_sampled_equation": [
+        {
+          "event_equation": -0.0022711335133749344,
+          "jd_tt": 2460026.8911438,
+          "reference": {
+            "cusp_residual_deg": -0.0022711335133749344,
+            "independent_latitude_deg": -2.4001443161752998,
+            "independent_longitude_deg": 299.9977288664866
+          }
+        },
+        {
+          "event_equation": -0.0017026097729058165,
+          "jd_tt": 2460026.9223938,
+          "reference": {
+            "cusp_residual_deg": -0.0017026097729058165,
+            "independent_latitude_deg": -2.4002215424991036,
+            "independent_longitude_deg": 299.9982973902271
+          }
+        },
+        {
+          "event_equation": -0.0011344883423589636,
+          "jd_tt": 2460026.9536438,
+          "reference": {
+            "cusp_residual_deg": -0.0011344883423589636,
+            "independent_latitude_deg": -2.4002987982662147,
+            "independent_longitude_deg": 299.99886551165764
+          }
+        },
+        {
+          "event_equation": -0.0005667688698167694,
+          "jd_tt": 2460026.9848938,
+          "reference": {
+            "cusp_residual_deg": -0.0005667688698167694,
+            "independent_latitude_deg": -2.4003760824948945,
+            "independent_longitude_deg": 299.9994332311302
+          }
+        },
+        {
+          "event_equation": 5.478760840560426e-07,
+          "jd_tt": 2460027.0161438,
+          "reference": {
+            "cusp_residual_deg": 5.478760840560426e-07,
+            "independent_latitude_deg": -2.4004533949835105,
+            "independent_longitude_deg": 300.0000005478761
+          }
+        },
+        {
+          "event_equation": 0.0005674620250033513,
+          "jd_tt": 2460027.0473938,
+          "reference": {
+            "cusp_residual_deg": 0.0005674620250033513,
+            "independent_latitude_deg": -2.4005307357273007,
+            "independent_longitude_deg": 300.000567462025
+          }
+        },
+        {
+          "event_equation": 0.0011339716830889301,
+          "jd_tt": 2460027.0786438,
+          "reference": {
+            "cusp_residual_deg": 0.0011339716830889301,
+            "independent_latitude_deg": -2.4006081053047184,
+            "independent_longitude_deg": 300.0011339716831
+          }
+        },
+        {
+          "event_equation": 0.0017000773981976636,
+          "jd_tt": 2460027.1098938,
+          "reference": {
+            "cusp_residual_deg": 0.0017000773981976636,
+            "independent_latitude_deg": -2.4006855017570157,
+            "independent_longitude_deg": 300.0017000773982
+          }
+        },
+        {
+          "event_equation": 0.002265777957120463,
+          "jd_tt": 2460027.1411438,
+          "reference": {
+            "cusp_residual_deg": 0.002265777957120463,
+            "independent_latitude_deg": -2.400762926836512,
+            "independent_longitude_deg": 300.0022657779571
+          }
+        }
+      ],
+      "kind": "ingress",
+      "nominated_jd_tt": 2460027.0161438,
+      "other_body": null,
+      "selection": {
+        "blind_independent_discovery": false,
+        "nomination_method": "Aria-nominated WP5.4 critical date; no independently timed root",
+        "nomination_window_jd_tt": [
+          2460025.5,
+          2460029.5
+        ]
+      }
+    },
+    {
+      "aria_events_in_half_day": [
+        {
+          "condition": "well-conditioned",
+          "event_direction": "direct",
+          "jd_tt": 2460537.1407562,
+          "time_bracket_seconds": 0.1,
+          "timing_qualified": false
+        }
+      ],
+      "aria_minus_independently_interpolated_jpl_seconds": 0.009334087371826172,
+      "aria_nearest_event": {
+        "condition": "well-conditioned",
+        "event_direction": "direct",
+        "jd_tt": 2460537.1407562,
+        "time_bracket_seconds": 0.1,
+        "timing_qualified": false
+      },
+      "body": "mars",
+      "candidate_60_seconds_exceeded": false,
+      "conditioning": {
+        "interpolation_is_not_certified_exact_event_time": true,
+        "jpl_equation_slope_abs_per_tt_day": 0.4969220408455662,
+        "max_position_or_rate_difference_time_proxy_seconds": 2.414865716075043,
+        "proxy_is_not_certified_error_bound": true,
+        "source_model_uncertainty_unresolved": true
+      },
+      "event_id": "conjunction-mars-jupiter",
+      "goal_deg": 0,
+      "jpl_reference": {
+        "cubic_minus_linear_seconds": 0.0,
+        "interpolation_error_bound_established": false,
+        "interpolation_method": "four-point local cubic inside observed JPL sign-change bracket",
+        "jd_tt": 2460537.140756092,
+        "linear_root_jd_tt": 2460537.140756092,
+        "local_signed_slope_per_tt_day": 0.4969220408455662,
+        "reference_bracket_jd_tt": [
+          2460537.1095062,
+          2460537.1407562
+        ],
+        "reference_bracket_width_seconds": 2700.0,
+        "sampled_reference_root_unique_in_grid": true
+      },
+      "jpl_sampled_equation": [
+        {
+          "event_equation": -0.06211478718506669,
+          "jd_tt": 2460537.0157562,
+          "reference": {
+            "ecliptic_latitude_a_deg": -0.3893558159548655,
+            "ecliptic_latitude_b_deg": -0.6939758255038654,
+            "longitude_a_deg": 76.5932274404909,
+            "longitude_b_deg": 76.65534222767597,
+            "pair_phase_residual_deg": -0.06211478718506669
+          }
+        },
+        {
+          "event_equation": -0.04658617138392174,
+          "jd_tt": 2460537.0470062,
+          "reference": {
+            "ecliptic_latitude_a_deg": -0.38886822242298713,
+            "ecliptic_latitude_b_deg": -0.6939844060101339,
+            "longitude_a_deg": 76.6135754608113,
+            "longitude_b_deg": 76.66016163219521,
+            "pair_phase_residual_deg": -0.04658617138392174
+          }
+        },
+        {
+          "event_equation": -0.031057493548132697,
+          "jd_tt": 2460537.0782562,
+          "reference": {
+            "ecliptic_latitude_a_deg": -0.38838048829488914,
+            "ecliptic_latitude_b_deg": -0.6939929973364087,
+            "longitude_a_deg": 76.63392161144343,
+            "longitude_b_deg": 76.66497910499155,
+            "pair_phase_residual_deg": -0.031057493548132697
+          }
+        },
+        {
+          "event_equation": -0.015528752871034612,
+          "jd_tt": 2460537.1095062,
+          "reference": {
+            "ecliptic_latitude_a_deg": -0.3878926129801759,
+            "ecliptic_latitude_b_deg": -0.6940015985948943,
+            "longitude_a_deg": 76.65426589227741,
+            "longitude_b_deg": 76.66979464514843,
+            "pair_phase_residual_deg": -0.015528752871034612
+          }
+        },
+        {
+          "event_equation": 5.3604480854119174e-08,
+          "jd_tt": 2460537.1407562,
+          "reference": {
+            "ecliptic_latitude_a_deg": -0.3874045957950972,
+            "ecliptic_latitude_b_deg": -0.694010211600456,
+            "longitude_a_deg": 76.67460830228033,
+            "longitude_b_deg": 76.67460824867587,
+            "pair_phase_residual_deg": 5.3604480854119174e-08
+          }
+        },
+        {
+          "event_equation": 0.015528928222238392,
+          "jd_tt": 2460537.1720062,
+          "reference": {
+            "ecliptic_latitude_a_deg": -0.38691643823447935,
+            "ecliptic_latitude_b_deg": -0.6940188343769084,
+            "longitude_a_deg": 76.6949488420536,
+            "longitude_b_deg": 76.67941991383137,
+            "pair_phase_residual_deg": 0.015528928222238392
+          }
+        },
+        {
+          "event_equation": 0.031057872915937423,
+          "jd_tt": 2460537.2032562,
+          "reference": {
+            "ecliptic_latitude_a_deg": -0.38642813961621003,
+            "ecliptic_latitude_b_deg": -0.6940274678388586,
+            "longitude_a_deg": 76.71528751055928,
+            "longitude_b_deg": 76.68422963764333,
+            "pair_phase_residual_deg": 0.031057872915937423
+          }
+        },
+        {
+          "event_equation": 0.04658689043964159,
+          "jd_tt": 2460537.2345062,
+          "reference": {
+            "ecliptic_latitude_a_deg": -0.38593969925934707,
+            "ecliptic_latitude_b_deg": -0.6940361118125052,
+            "longitude_a_deg": 76.7356243067564,
+            "longitude_b_deg": 76.68903741631676,
+            "pair_phase_residual_deg": 0.04658689043964159
+          }
+        },
+        {
+          "event_equation": 0.06211598149644715,
+          "jd_tt": 2460537.2657562,
+          "reference": {
+            "ecliptic_latitude_a_deg": -0.3854511186608002,
+            "ecliptic_latitude_b_deg": -0.6940447664999335,
+            "longitude_a_deg": 76.75595923123927,
+            "longitude_b_deg": 76.69384324974283,
+            "pair_phase_residual_deg": 0.06211598149644715
+          }
+        }
+      ],
+      "kind": "conjunction",
+      "nominated_jd_tt": 2460537.1407562,
+      "other_body": "jupiter",
+      "selection": {
+        "blind_independent_discovery": false,
+        "nomination_method": "Aria physical-centre phase sign-change scan and bisection ONLY",
+        "nomination_window_jd_tt": [
+          2460535.5,
+          2460537.5
+        ]
+      }
+    },
+    {
+      "aria_events_in_half_day": [
+        {
+          "condition": "well-conditioned",
+          "event_direction": "direct",
+          "jd_tt": 2460246.1696702,
+          "time_bracket_seconds": 0.1,
+          "timing_qualified": false
+        }
+      ],
+      "aria_minus_independently_interpolated_jpl_seconds": 0.0059545040130615234,
+      "aria_nearest_event": {
+        "condition": "well-conditioned",
+        "event_direction": "direct",
+        "jd_tt": 2460246.1696702,
+        "time_bracket_seconds": 0.1,
+        "timing_qualified": false
+      },
+      "body": "mars",
+      "candidate_60_seconds_exceeded": false,
+      "conditioning": {
+        "interpolation_is_not_certified_exact_event_time": true,
+        "jpl_equation_slope_abs_per_tt_day": 0.8234488226741333,
+        "max_position_or_rate_difference_time_proxy_seconds": 1.4572854644482027,
+        "proxy_is_not_certified_error_bound": true,
+        "source_model_uncertainty_unresolved": true
+      },
+      "event_id": "opposition-mars-jupiter",
+      "goal_deg": 180,
+      "jpl_reference": {
+        "cubic_minus_linear_seconds": 4.023313522338867e-05,
+        "interpolation_error_bound_established": false,
+        "interpolation_method": "four-point local cubic inside observed JPL sign-change bracket",
+        "jd_tt": 2460246.169670131,
+        "linear_root_jd_tt": 2460246.1696701306,
+        "local_signed_slope_per_tt_day": 0.8234488226741333,
+        "reference_bracket_jd_tt": [
+          2460246.1384202,
+          2460246.1696702
+        ],
+        "reference_bracket_width_seconds": 2700.0,
+        "sampled_reference_root_unique_in_grid": true
+      },
+      "jpl_sampled_equation": [
+        {
+          "event_equation": -0.1029205123486463,
+          "jd_tt": 2460246.0446702,
+          "reference": {
+            "ecliptic_latitude_a_deg": 0.09009306453108047,
+            "ecliptic_latitude_b_deg": -1.4182623700891697,
+            "longitude_a_deg": 221.17275895209443,
+            "longitude_b_deg": 41.275679464443044,
+            "pair_phase_residual_deg": -0.1029205123486463
+          }
+        },
+        {
+          "event_equation": -0.07719238200297696,
+          "jd_tt": 2460246.0759202,
+          "reference": {
+            "ecliptic_latitude_a_deg": 0.08978604683411652,
+            "ecliptic_latitude_b_deg": -1.4182389479973112,
+            "longitude_a_deg": 221.1942875173772,
+            "longitude_b_deg": 41.271479899380154,
+            "pair_phase_residual_deg": -0.07719238200297696
+          }
+        },
+        {
+          "event_equation": -0.05146290794687047,
+          "jd_tt": 2460246.1071702,
+          "reference": {
+            "ecliptic_latitude_a_deg": 0.08947901859789965,
+            "ecliptic_latitude_b_deg": -1.4182154161989053,
+            "longitude_a_deg": 221.21581690695248,
+            "longitude_b_deg": 41.26727981489938,
+            "pair_phase_residual_deg": -0.05146290794687047
+          }
+        },
+        {
+          "event_equation": -0.025732094582053833,
+          "jd_tt": 2460246.1384202,
+          "reference": {
+            "ecliptic_latitude_a_deg": 0.08917198102523224,
+            "ecliptic_latitude_b_deg": -1.4181917733677234,
+            "longitude_a_deg": 221.23734711899064,
+            "longitude_b_deg": 41.26307921357267,
+            "pair_phase_residual_deg": -0.025732094582053833
+          }
+        },
+        {
+          "event_equation": 5.7065619785134913e-08,
+          "jd_tt": 2460246.1696702,
+          "reference": {
+            "ecliptic_latitude_a_deg": 0.08886493462092394,
+            "ecliptic_latitude_b_deg": -1.418168021631574,
+            "longitude_a_deg": 221.25887815595203,
+            "longitude_b_deg": 41.258878098886406,
+            "pair_phase_residual_deg": 5.7065619785134913e-08
+          }
+        },
+        {
+          "event_equation": 0.02573354290291263,
+          "jd_tt": 2460246.2009202,
+          "reference": {
+            "ecliptic_latitude_a_deg": 0.08855787898760469,
+            "ecliptic_latitude_b_deg": -1.4181441590142496,
+            "longitude_a_deg": 221.28041001753863,
+            "longitude_b_deg": 41.25467647463569,
+            "pair_phase_residual_deg": 0.02573354290291263
+          }
+        },
+        {
+          "event_equation": 0.0514683622276948,
+          "jd_tt": 2460246.2321702,
+          "reference": {
+            "ecliptic_latitude_a_deg": 0.0882508130778905,
+            "ecliptic_latitude_b_deg": -1.4181201870430629,
+            "longitude_a_deg": 221.30194270467638,
+            "longitude_b_deg": 41.25047434244868,
+            "pair_phase_residual_deg": 0.0514683622276948
+          }
+        },
+        {
+          "event_equation": 0.07720451033156905,
+          "jd_tt": 2460246.2634202,
+          "reference": {
+            "ecliptic_latitude_a_deg": 0.08794373744481306,
+            "ecliptic_latitude_b_deg": -1.4180961059447066,
+            "longitude_a_deg": 221.32347621674683,
+            "longitude_b_deg": 41.24627170641524,
+            "pair_phase_residual_deg": 0.07720451033156905
+          }
+        },
+        {
+          "event_equation": 0.10294198496313811,
+          "jd_tt": 2460246.2946702,
+          "reference": {
+            "ecliptic_latitude_a_deg": 0.0876366529417601,
+            "ecliptic_latitude_b_deg": -1.4180719143941232,
+            "longitude_a_deg": 221.3450105540448,
+            "longitude_b_deg": 41.24206856908166,
+            "pair_phase_residual_deg": 0.10294198496313811
+          }
+        }
+      ],
+      "kind": "opposition",
+      "nominated_jd_tt": 2460246.1696702,
+      "other_body": "jupiter",
+      "selection": {
+        "blind_independent_discovery": false,
+        "nomination_method": "Aria physical-centre phase sign-change scan and bisection ONLY",
+        "nomination_window_jd_tt": [
+          2460245.5,
+          2460247.5
+        ]
+      }
+    },
+    {
+      "aria_events_in_half_day": [
+        {
+          "condition": "well-conditioned",
+          "event_direction": "direct",
+          "jd_tt": 2460411.3591883234,
+          "time_bracket_seconds": 0.0823974609375,
+          "timing_qualified": false
+        }
+      ],
+      "aria_minus_independently_interpolated_jpl_seconds": -0.039549171924591064,
+      "aria_nearest_event": {
+        "condition": "well-conditioned",
+        "event_direction": "direct",
+        "jd_tt": 2460411.3591883234,
+        "time_bracket_seconds": 0.0823974609375,
+        "timing_qualified": false
+      },
+      "body": "mars",
+      "candidate_60_seconds_exceeded": false,
+      "conditioning": {
+        "interpolation_is_not_certified_exact_event_time": true,
+        "jpl_equation_slope_abs_per_tt_day": 0.6709909396774832,
+        "max_position_or_rate_difference_time_proxy_seconds": 1.7883997071209172,
+        "proxy_is_not_certified_error_bound": true,
+        "source_model_uncertainty_unresolved": true
+      },
+      "event_id": "conjunction-mars-saturn",
+      "goal_deg": 0,
+      "jpl_reference": {
+        "cubic_minus_linear_seconds": 4.023313522338867e-05,
+        "interpolation_error_bound_established": false,
+        "interpolation_method": "four-point local cubic inside observed JPL sign-change bracket",
+        "jd_tt": 2460411.359188781,
+        "linear_root_jd_tt": 2460411.3591887807,
+        "local_signed_slope_per_tt_day": 0.6709909396774832,
+        "reference_bracket_jd_tt": [
+          2460411.3279388,
+          2460411.3591888
+        ],
+        "reference_bracket_width_seconds": 2700.0,
+        "sampled_reference_root_unique_in_grid": true
+      },
+      "jpl_sampled_equation": [
+        {
+          "event_equation": -0.0838697756700526,
+          "jd_tt": 2460411.2341888,
+          "reference": {
+            "ecliptic_latitude_a_deg": -1.249185036369836,
+            "ecliptic_latitude_b_deg": -1.6891587551946594,
+            "longitude_a_deg": 344.5818340729713,
+            "longitude_b_deg": 344.66570384864133,
+            "pair_phase_residual_deg": -0.0838697756700526
+          }
+        },
+        {
+          "event_equation": -0.06290311973845064,
+          "jd_tt": 2460411.2654388,
+          "reference": {
+            "ecliptic_latitude_a_deg": -1.2492517328953023,
+            "ecliptic_latitude_b_deg": -1.689234778549954,
+            "longitude_a_deg": 344.6061182179724,
+            "longitude_b_deg": 344.66902133771083,
+            "pair_phase_residual_deg": -0.06290311973845064
+          }
+        },
+        {
+          "event_equation": -0.04193593577286947,
+          "jd_tt": 2460411.2966888,
+          "reference": {
+            "ecliptic_latitude_a_deg": -1.2493183024148349,
+            "ecliptic_latitude_b_deg": -1.6893108384335187,
+            "longitude_a_deg": 344.6304021594652,
+            "longitude_b_deg": 344.67233809523805,
+            "pair_phase_residual_deg": -0.04193593577286947
+          }
+        },
+        {
+          "event_equation": -0.02096822541284382,
+          "jd_tt": 2460411.3279388,
+          "reference": {
+            "ecliptic_latitude_a_deg": -1.2493847466017256,
+            "ecliptic_latitude_b_deg": -1.6893869355918179,
+            "longitude_a_deg": 344.65468589751754,
+            "longitude_b_deg": 344.6756541229304,
+            "pair_phase_residual_deg": -0.02096822541284382
+          }
+        },
+        {
+          "event_equation": 1.3074952676106477e-08,
+          "jd_tt": 2460411.3591888,
+          "reference": {
+            "ecliptic_latitude_a_deg": -1.249451063979105,
+            "ecliptic_latitude_b_deg": -1.6894630705447093,
+            "longitude_a_deg": 344.67896943243545,
+            "longitude_b_deg": 344.6789694193605,
+            "pair_phase_residual_deg": 1.3074952676106477e-08
+          }
+        },
+        {
+          "event_equation": 0.020968779490829093,
+          "jd_tt": 2460411.3904388,
+          "reference": {
+            "ecliptic_latitude_a_deg": -1.249517255454524,
+            "ecliptic_latitude_b_deg": -1.6895392415844896,
+            "longitude_a_deg": 344.7032527624462,
+            "longitude_b_deg": 344.68228398295537,
+            "pair_phase_residual_deg": 0.020968779490829093
+          }
+        },
+        {
+          "event_equation": 0.04193807388008963,
+          "jd_tt": 2460411.4216888,
+          "reference": {
+            "ecliptic_latitude_a_deg": -1.2495833204734117,
+            "ecliptic_latitude_b_deg": -1.6896154486916404,
+            "longitude_a_deg": 344.7275358874595,
+            "longitude_b_deg": 344.6855978135794,
+            "pair_phase_residual_deg": 0.04193807388008963
+          }
+        },
+        {
+          "event_equation": 0.06290789575962208,
+          "jd_tt": 2460411.4529388,
+          "reference": {
+            "ecliptic_latitude_a_deg": -1.2496492590206019,
+            "ecliptic_latitude_b_deg": -1.6896916936912976,
+            "longitude_a_deg": 344.7518188060788,
+            "longitude_b_deg": 344.6889109103192,
+            "pair_phase_residual_deg": 0.06290789575962208
+          }
+        },
+        {
+          "event_equation": 0.08387824661730292,
+          "jd_tt": 2460411.4841888,
+          "reference": {
+            "ecliptic_latitude_a_deg": -1.2497150709246505,
+            "ecliptic_latitude_b_deg": -1.6897679752586792,
+            "longitude_a_deg": 344.7761015191196,
+            "longitude_b_deg": 344.6922232725023,
+            "pair_phase_residual_deg": 0.08387824661730292
+          }
+        }
+      ],
+      "kind": "conjunction",
+      "nominated_jd_tt": 2460411.3591888,
+      "other_body": "saturn",
+      "selection": {
+        "blind_independent_discovery": false,
+        "nomination_method": "Aria physical-centre phase sign-change scan and bisection ONLY",
+        "nomination_window_jd_tt": [
+          2460409.5,
+          2460411.5
+        ]
+      }
+    },
+    {
+      "aria_events_in_half_day": [
+        {
+          "condition": "well-conditioned",
+          "event_direction": "direct",
+          "jd_tt": 2460146.3613059,
+          "time_bracket_seconds": 0.1,
+          "timing_qualified": false
+        }
+      ],
+      "aria_minus_independently_interpolated_jpl_seconds": -0.0028967857360839844,
+      "aria_nearest_event": {
+        "condition": "well-conditioned",
+        "event_direction": "direct",
+        "jd_tt": 2460146.3613059,
+        "time_bracket_seconds": 0.1,
+        "timing_qualified": false
+      },
+      "body": "mars",
+      "candidate_60_seconds_exceeded": false,
+      "conditioning": {
+        "interpolation_is_not_certified_exact_event_time": true,
+        "jpl_equation_slope_abs_per_tt_day": 0.6652138803596788,
+        "max_position_or_rate_difference_time_proxy_seconds": 1.8039310895785343,
+        "proxy_is_not_certified_error_bound": true,
+        "source_model_uncertainty_unresolved": true
+      },
+      "event_id": "opposition-mars-saturn",
+      "goal_deg": 180,
+      "jpl_reference": {
+        "cubic_minus_linear_seconds": 0.0,
+        "interpolation_error_bound_established": false,
+        "interpolation_method": "four-point local cubic inside observed JPL sign-change bracket",
+        "jd_tt": 2460146.3613059334,
+        "linear_root_jd_tt": 2460146.3613059334,
+        "local_signed_slope_per_tt_day": 0.6652138803596788,
+        "reference_bracket_jd_tt": [
+          2460146.3613059,
+          2460146.3925559
+        ],
+        "reference_bracket_width_seconds": 2700.0,
+        "sampled_reference_root_unique_in_grid": true
+      },
+      "jpl_sampled_equation": [
+        {
+          "event_equation": -0.08313688310704492,
+          "jd_tt": 2460146.2363059,
+          "reference": {
+            "ecliptic_latitude_a_deg": 1.0229425925525166,
+            "ecliptic_latitude_b_deg": -1.6980128809439403,
+            "longitude_a_deg": 156.26694270388862,
+            "longitude_b_deg": 336.35007958699566,
+            "pair_phase_residual_deg": -0.08313688310704492
+          }
+        },
+        {
+          "event_equation": -0.062355484682314,
+          "jd_tt": 2460146.2675559,
+          "reference": {
+            "ecliptic_latitude_a_deg": 1.022661713448587,
+            "ecliptic_latitude_b_deg": -1.6981098140415587,
+            "longitude_a_deg": 156.28615915940873,
+            "longitude_b_deg": 336.34851464409104,
+            "pair_phase_residual_deg": -0.062355484682314
+          }
+        },
+        {
+          "event_equation": -0.04157220812885498,
+          "jd_tt": 2460146.2988059,
+          "reference": {
+            "ecliptic_latitude_a_deg": 1.0223808306054782,
+            "ecliptic_latitude_b_deg": -1.6982067110673902,
+            "longitude_a_deg": 156.30537625225026,
+            "longitude_b_deg": 336.3469484603791,
+            "pair_phase_residual_deg": -0.04157220812885498
+          }
+        },
+        {
+          "event_equation": -0.02078705326613317,
+          "jd_tt": 2460146.3300559,
+          "reference": {
+            "ecliptic_latitude_a_deg": 1.0220999423234516,
+            "ecliptic_latitude_b_deg": -1.6983035720393496,
+            "longitude_a_deg": 156.3245939826682,
+            "longitude_b_deg": 336.34538103593434,
+            "pair_phase_residual_deg": -0.02078705326613317
+          }
+        },
+        {
+          "event_equation": -2.230228801636258e-08,
+          "jd_tt": 2460146.3613059,
+          "reference": {
+            "ecliptic_latitude_a_deg": 1.0218190509831921,
+            "ecliptic_latitude_b_deg": -1.6984003977022308,
+            "longitude_a_deg": 156.3438123503561,
+            "longitude_b_deg": 336.3438123726584,
+            "pair_phase_residual_deg": -2.230228801636258e-08
+          }
+        },
+        {
+          "event_equation": 0.020788884570492883,
+          "jd_tt": 2460146.3925559,
+          "reference": {
+            "ecliptic_latitude_a_deg": 1.0215381545210647,
+            "ecliptic_latitude_b_deg": -1.698497186781512,
+            "longitude_a_deg": 156.3630313546566,
+            "longitude_b_deg": 336.34224247008615,
+            "pair_phase_residual_deg": 0.020788884570492883
+          }
+        },
+        {
+          "event_equation": 0.04157966642753763,
+          "jd_tt": 2460146.4238059,
+          "reference": {
+            "ecliptic_latitude_a_deg": 1.021257254751345,
+            "ecliptic_latitude_b_deg": -1.6985939400219845,
+            "longitude_a_deg": 156.38225099654954,
+            "longitude_b_deg": 336.340671330122,
+            "pair_phase_residual_deg": 0.04157966642753763
+          }
+        },
+        {
+          "event_equation": 0.062372322163582794,
+          "jd_tt": 2460146.4550559,
+          "reference": {
+            "ecliptic_latitude_a_deg": 1.0209763496098618,
+            "ecliptic_latitude_b_deg": -1.6986906565125808,
+            "longitude_a_deg": 156.40147127538012,
+            "longitude_b_deg": 336.33909895321653,
+            "pair_phase_residual_deg": 0.062372322163582794
+          }
+        },
+        {
+          "event_equation": 0.08316685085026165,
+          "jd_tt": 2460146.4863059,
+          "reference": {
+            "ecliptic_latitude_a_deg": 1.0206954411126388,
+            "ecliptic_latitude_b_deg": -1.698787337200306,
+            "longitude_a_deg": 156.42069218993154,
+            "longitude_b_deg": 336.3375253390813,
+            "pair_phase_residual_deg": 0.08316685085026165
+          }
+        }
+      ],
+      "kind": "opposition",
+      "nominated_jd_tt": 2460146.3613059,
+      "other_body": "saturn",
+      "selection": {
+        "blind_independent_discovery": false,
+        "nomination_method": "Aria physical-centre phase sign-change scan and bisection ONLY",
+        "nomination_window_jd_tt": [
+          2460145.5,
+          2460147.5
+        ]
+      }
+    },
+    {
+      "aria_events_in_half_day": [
+        {
+          "condition": "well-conditioned",
+          "event_direction": "direct",
+          "jd_tt": 2460507.0874819,
+          "time_bracket_seconds": 0.1,
+          "timing_qualified": false
+        }
+      ],
+      "aria_minus_independently_interpolated_jpl_seconds": 0.0008046627044677734,
+      "aria_nearest_event": {
+        "condition": "well-conditioned",
+        "event_direction": "direct",
+        "jd_tt": 2460507.0874819,
+        "time_bracket_seconds": 0.1,
+        "timing_qualified": false
+      },
+      "body": "mars",
+      "candidate_60_seconds_exceeded": false,
+      "conditioning": {
+        "interpolation_is_not_certified_exact_event_time": true,
+        "jpl_equation_slope_abs_per_tt_day": 0.663321343026655,
+        "max_position_or_rate_difference_time_proxy_seconds": 1.8090779267323818,
+        "proxy_is_not_certified_error_bound": true,
+        "source_model_uncertainty_unresolved": true
+      },
+      "event_id": "conjunction-mars-uranus",
+      "goal_deg": 0,
+      "jpl_reference": {
+        "cubic_minus_linear_seconds": -4.023313522338867e-05,
+        "interpolation_error_bound_established": false,
+        "interpolation_method": "four-point local cubic inside observed JPL sign-change bracket",
+        "jd_tt": 2460507.087481891,
+        "linear_root_jd_tt": 2460507.0874818913,
+        "local_signed_slope_per_tt_day": 0.663321343026655,
+        "reference_bracket_jd_tt": [
+          2460507.0562319,
+          2460507.0874819
+        ],
+        "reference_bracket_width_seconds": 2700.0,
+        "sampled_reference_root_unique_in_grid": true
+      },
+      "jpl_sampled_equation": [
+        {
+          "event_equation": -0.08292144227712583,
+          "jd_tt": 2460506.9624819,
+          "reference": {
+            "ecliptic_latitude_a_deg": -0.7971603341959269,
+            "ecliptic_latitude_b_deg": -0.2611912316357577,
+            "longitude_a_deg": 56.23658666804536,
+            "longitude_b_deg": 56.31950811032249,
+            "pair_phase_residual_deg": -0.08292144227712583
+          }
+        },
+        {
+          "event_equation": -0.06218992896049258,
+          "jd_tt": 2460506.9937319,
+          "reference": {
+            "ecliptic_latitude_a_deg": -0.7967998793478117,
+            "ecliptic_latitude_b_deg": -0.2611926285639786,
+            "longitude_a_deg": 56.25847814964801,
+            "longitude_b_deg": 56.32066807860849,
+            "pair_phase_residual_deg": -0.06218992896049258
+          }
+        },
+        {
+          "event_equation": -0.041459182740197775,
+          "jd_tt": 2460507.0249819,
+          "reference": {
+            "ecliptic_latitude_a_deg": -0.7964392891953763,
+            "ecliptic_latitude_b_deg": -0.26119402615053683,
+            "longitude_a_deg": 56.280368258047666,
+            "longitude_b_deg": 56.321827440787864,
+            "pair_phase_residual_deg": -0.041459182740197775
+          }
+        },
+        {
+          "event_equation": -0.02072920521999322,
+          "jd_tt": 2460507.0562319,
+          "reference": {
+            "ecliptic_latitude_a_deg": -0.7960785649097435,
+            "ecliptic_latitude_b_deg": -0.2611954253805972,
+            "longitude_a_deg": 56.302256991473826,
+            "longitude_b_deg": 56.322986196693826,
+            "pair_phase_residual_deg": -0.02072920521999322
+          }
+        },
+        {
+          "event_equation": 5.916263035032898e-09,
+          "jd_tt": 2460507.0874819,
+          "reference": {
+            "ecliptic_latitude_a_deg": -0.795717705415058,
+            "ecliptic_latitude_b_deg": -0.2611968250730484,
+            "longitude_a_deg": 56.32414435162586,
+            "longitude_b_deg": 56.324144345709605,
+            "pair_phase_residual_deg": 5.916263035032898e-09
+          }
+        },
+        {
+          "event_equation": 0.02072844838198762,
+          "jd_tt": 2460507.1187319,
+          "reference": {
+            "ecliptic_latitude_a_deg": -0.7953567109124506,
+            "ecliptic_latitude_b_deg": -0.2611982264356135,
+            "longitude_a_deg": 56.346030336966116,
+            "longitude_b_deg": 56.325301888584114,
+            "pair_phase_residual_deg": 0.02072844838198762
+          }
+        },
+        {
+          "event_equation": 0.04145612333834947,
+          "jd_tt": 2460507.1499819,
+          "reference": {
+            "ecliptic_latitude_a_deg": -0.7949955820491567,
+            "ecliptic_latitude_b_deg": -0.2611996292590484,
+            "longitude_a_deg": 56.36791494780026,
+            "longitude_b_deg": 56.32645882446191,
+            "pair_phase_residual_deg": 0.04145612333834947
+          }
+        },
+        {
+          "event_equation": 0.06218303010828663,
+          "jd_tt": 2460507.1812319,
+          "reference": {
+            "ecliptic_latitude_a_deg": -0.7946343185009104,
+            "ecliptic_latitude_b_deg": -0.2612010328072247,
+            "longitude_a_deg": 56.38979818466741,
+            "longitude_b_deg": 56.32761515455912,
+            "pair_phase_residual_deg": 0.06218303010828663
+          }
+        },
+        {
+          "event_equation": 0.08290917100561046,
+          "jd_tt": 2460507.2124819,
+          "reference": {
+            "ecliptic_latitude_a_deg": -0.7942729206941275,
+            "ecliptic_latitude_b_deg": -0.2612024373978483,
+            "longitude_a_deg": 56.41168004694913,
+            "longitude_b_deg": 56.328770875943505,
+            "pair_phase_residual_deg": 0.08290917100561046
+          }
+        }
+      ],
+      "kind": "conjunction",
+      "nominated_jd_tt": 2460507.0874819,
+      "other_body": "uranus",
+      "selection": {
+        "blind_independent_discovery": false,
+        "nomination_method": "Aria physical-centre phase sign-change scan and bisection ONLY",
+        "nomination_window_jd_tt": [
+          2460505.5,
+          2460507.5
+        ]
+      }
+    },
+    {
+      "aria_events_in_half_day": [
+        {
+          "condition": "well-conditioned",
+          "event_direction": "direct",
+          "jd_tt": 2460260.3836462,
+          "time_bracket_seconds": 0.1,
+          "timing_qualified": false
+        }
+      ],
+      "aria_minus_independently_interpolated_jpl_seconds": -0.0021323561668395996,
+      "aria_nearest_event": {
+        "condition": "well-conditioned",
+        "event_direction": "direct",
+        "jd_tt": 2460260.3836462,
+        "time_bracket_seconds": 0.1,
+        "timing_qualified": false
+      },
+      "body": "mars",
+      "candidate_60_seconds_exceeded": false,
+      "conditioning": {
+        "interpolation_is_not_certified_exact_event_time": true,
+        "jpl_equation_slope_abs_per_tt_day": 0.7427858985703426,
+        "max_position_or_rate_difference_time_proxy_seconds": 1.6155395549507174,
+        "proxy_is_not_certified_error_bound": true,
+        "source_model_uncertainty_unresolved": true
+      },
+      "event_id": "opposition-mars-uranus",
+      "goal_deg": 180,
+      "jpl_reference": {
+        "cubic_minus_linear_seconds": 0.0,
+        "interpolation_error_bound_established": false,
+        "interpolation_method": "four-point local cubic inside observed JPL sign-change bracket",
+        "jd_tt": 2460260.3836462246,
+        "linear_root_jd_tt": 2460260.3836462246,
+        "local_signed_slope_per_tt_day": 0.7427858985703426,
+        "reference_bracket_jd_tt": [
+          2460260.3836462,
+          2460260.4148962
+        ],
+        "reference_bracket_width_seconds": 2700.0,
+        "sampled_reference_root_unique_in_grid": true
+      },
+      "jpl_sampled_equation": [
+        {
+          "event_equation": -0.09284145876006278,
+          "jd_tt": 2460260.2586462,
+          "reference": {
+            "ecliptic_latitude_a_deg": -0.05062991898589851,
+            "ecliptic_latitude_b_deg": -0.31926816730904456,
+            "longitude_a_deg": 231.0513108987244,
+            "longitude_b_deg": 51.14415235748446,
+            "pair_phase_residual_deg": -0.09284145876006278
+          }
+        },
+        {
+          "event_equation": -0.06963240355361222,
+          "jd_tt": 2460260.2898962,
+          "reference": {
+            "ecliptic_latitude_a_deg": -0.050941387752533616,
+            "ecliptic_latitude_b_deg": -0.319263858098702,
+            "longitude_a_deg": 231.07322074957776,
+            "longitude_b_deg": 51.14285315313136,
+            "pair_phase_residual_deg": -0.06963240355361222
+          }
+        },
+        {
+          "event_equation": -0.046422478962767855,
+          "jd_tt": 2460260.3211462,
+          "reference": {
+            "ecliptic_latitude_a_deg": -0.05125286206625014,
+            "ecliptic_latitude_b_deg": -0.3192595440025209,
+            "longitude_a_deg": 231.09513144479186,
+            "longitude_b_deg": 51.141553923754664,
+            "pair_phase_residual_deg": -0.046422478962767855
+          }
+        },
+        {
+          "event_equation": -0.02321168323993561,
+          "jd_tt": 2460260.3523962,
+          "reference": {
+            "ecliptic_latitude_a_deg": -0.05156434203632219,
+            "ecliptic_latitude_b_deg": -0.31925522476851137,
+            "longitude_a_deg": 231.11704298532726,
+            "longitude_b_deg": 51.140254668567195,
+            "pair_phase_residual_deg": -0.02321168323993561
+          }
+        },
+        {
+          "event_equation": -1.8309435745322844e-08,
+          "jd_tt": 2460260.3836462,
+          "reference": {
+            "ecliptic_latitude_a_deg": -0.051875828274869785,
+            "ecliptic_latitude_b_deg": -0.3192509006473562,
+            "longitude_a_deg": 231.13895537030916,
+            "longitude_b_deg": 51.13895538861861,
+            "pair_phase_residual_deg": -1.8309435745322844e-08
+          }
+        },
+        {
+          "event_equation": 0.023212514558395014,
+          "jd_tt": 2460260.4148962,
+          "reference": {
+            "ecliptic_latitude_a_deg": -0.0521873211421765,
+            "ecliptic_latitude_b_deg": -0.31924657092516834,
+            "longitude_a_deg": 231.16086859977912,
+            "longitude_b_deg": 51.137656085220705,
+            "pair_phase_residual_deg": 0.023212514558395014
+          }
+        },
+        {
+          "event_equation": 0.04642591619386849,
+          "jd_tt": 2460260.4461462,
+          "reference": {
+            "ecliptic_latitude_a_deg": -0.052498819782675746,
+            "ecliptic_latitude_b_deg": -0.3192422365659004,
+            "longitude_a_deg": 231.18278267443068,
+            "longitude_b_deg": 51.13635675823682,
+            "pair_phase_residual_deg": 0.04642591619386849
+          }
+        },
+        {
+          "event_equation": 0.069640184411071,
+          "jd_tt": 2460260.4773962,
+          "reference": {
+            "ecliptic_latitude_a_deg": -0.052810324807415675,
+            "ecliptic_latitude_b_deg": -0.3192378968557226,
+            "longitude_a_deg": 231.2046975933865,
+            "longitude_b_deg": 51.13505740897542,
+            "pair_phase_residual_deg": 0.069640184411071
+          }
+        },
+        {
+          "event_equation": 0.09285531885933551,
+          "jd_tt": 2460260.5086462,
+          "reference": {
+            "ecliptic_latitude_a_deg": -0.05312183536047659,
+            "ecliptic_latitude_b_deg": -0.31923355204540366,
+            "longitude_a_deg": 231.22661335733866,
+            "longitude_b_deg": 51.133758038479314,
+            "pair_phase_residual_deg": 0.09285531885933551
+          }
+        }
+      ],
+      "kind": "opposition",
+      "nominated_jd_tt": 2460260.3836462,
+      "other_body": "uranus",
+      "selection": {
+        "blind_independent_discovery": false,
+        "nomination_method": "Aria physical-centre phase sign-change scan and bisection ONLY",
+        "nomination_window_jd_tt": [
+          2460259.5,
+          2460261.5
+        ]
+      }
+    },
+    {
+      "aria_events_in_half_day": [
+        {
+          "condition": "well-conditioned",
+          "event_direction": "direct",
+          "jd_tt": 2460429.688975723,
+          "time_bracket_seconds": 0.0823974609375,
+          "timing_qualified": false
+        }
+      ],
+      "aria_minus_independently_interpolated_jpl_seconds": -0.03576725721359253,
+      "aria_nearest_event": {
+        "condition": "well-conditioned",
+        "event_direction": "direct",
+        "jd_tt": 2460429.688975723,
+        "time_bracket_seconds": 0.0823974609375,
+        "timing_qualified": false
+      },
+      "body": "mars",
+      "candidate_60_seconds_exceeded": false,
+      "conditioning": {
+        "interpolation_is_not_certified_exact_event_time": true,
+        "jpl_equation_slope_abs_per_tt_day": 0.7408065874016858,
+        "max_position_or_rate_difference_time_proxy_seconds": 1.6198560061525573,
+        "proxy_is_not_certified_error_bound": true,
+        "source_model_uncertainty_unresolved": true
+      },
+      "event_id": "conjunction-mars-neptune",
+      "goal_deg": 0,
+      "jpl_reference": {
+        "cubic_minus_linear_seconds": 4.023313522338867e-05,
+        "interpolation_error_bound_established": false,
+        "interpolation_method": "four-point local cubic inside observed JPL sign-change bracket",
+        "jd_tt": 2460429.688976137,
+        "linear_root_jd_tt": 2460429.6889761365,
+        "local_signed_slope_per_tt_day": 0.7408065874016858,
+        "reference_bracket_jd_tt": [
+          2460429.6577262,
+          2460429.6889762
+        ],
+        "reference_bracket_width_seconds": 2700.0,
+        "sampled_reference_root_unique_in_grid": true
+      },
+      "jpl_sampled_equation": [
+        {
+          "event_equation": -0.09260135088169363,
+          "jd_tt": 2460429.5639762,
+          "reference": {
+            "ecliptic_latitude_a_deg": -1.265746535382062,
+            "ecliptic_latitude_b_deg": -1.2313092685986564,
+            "longitude_a_deg": 358.7779688894143,
+            "longitude_b_deg": 358.870570240296,
+            "pair_phase_residual_deg": -0.09260135088169363
+          }
+        },
+        {
+          "event_equation": -0.06945092405146625,
+          "jd_tt": 2460429.5952262,
+          "reference": {
+            "ecliptic_latitude_a_deg": -1.2657341180177453,
+            "ecliptic_latitude_b_deg": -1.2313267747623784,
+            "longitude_a_deg": 358.80207801707047,
+            "longitude_b_deg": 358.87152894112194,
+            "pair_phase_residual_deg": -0.06945092405146625
+          }
+        },
+        {
+          "event_equation": -0.046300547630210076,
+          "jd_tt": 2460429.6264762,
+          "reference": {
+            "ecliptic_latitude_a_deg": -1.2657215562666224,
+            "ecliptic_latitude_b_deg": -1.231344289770746,
+            "longitude_a_deg": 358.82618677057644,
+            "longitude_b_deg": 358.87248731820665,
+            "pair_phase_residual_deg": -0.046300547630210076
+          }
+        },
+        {
+          "event_equation": -0.02315022470185113,
+          "jd_tt": 2460429.6577262,
+          "reference": {
+            "ecliptic_latitude_a_deg": -1.2657088505515126,
+            "ecliptic_latitude_b_deg": -1.2313618125836796,
+            "longitude_a_deg": 358.85029514925697,
+            "longitude_b_deg": 358.8734453739588,
+            "pair_phase_residual_deg": -0.02315022470185113
+          }
+        },
+        {
+          "event_equation": 4.678878440245171e-08,
+          "jd_tt": 2460429.6889762,
+          "reference": {
+            "ecliptic_latitude_a_deg": -1.2656959990627477,
+            "ecliptic_latitude_b_deg": -1.2313793442407646,
+            "longitude_a_deg": 358.87440315231515,
+            "longitude_b_deg": 358.87440310552637,
+            "pair_phase_residual_deg": 4.678878440245171e-08
+          }
+        },
+        {
+          "event_equation": 0.023150265073184073,
+          "jd_tt": 2460429.7202262,
+          "reference": {
+            "ecliptic_latitude_a_deg": -1.2656830031409845,
+            "ecliptic_latitude_b_deg": -1.2313968851392256,
+            "longitude_a_deg": 358.89851077867763,
+            "longitude_b_deg": 358.87536051360445,
+            "pair_phase_residual_deg": 0.023150265073184073
+          }
+        },
+        {
+          "event_equation": 0.046300431930262675,
+          "jd_tt": 2460429.7514762,
+          "reference": {
+            "ecliptic_latitude_a_deg": -1.265669861374582,
+            "ecliptic_latitude_b_deg": -1.2314144335661552,
+            "longitude_a_deg": 358.9226180284647,
+            "longitude_b_deg": 358.8763175965344,
+            "pair_phase_residual_deg": 0.046300431930262675
+          }
+        },
+        {
+          "event_equation": 0.06945054467399814,
+          "jd_tt": 2460429.7827262,
+          "reference": {
+            "ecliptic_latitude_a_deg": -1.2656565760219596,
+            "ecliptic_latitude_b_deg": -1.2314319912339473,
+            "longitude_a_deg": 358.94672490020497,
+            "longitude_b_deg": 358.877274355531,
+            "pair_phase_residual_deg": 0.06945054467399814
+          }
+        },
+        {
+          "event_equation": 0.09260060508319157,
+          "jd_tt": 2460429.8139762,
+          "reference": {
+            "ecliptic_latitude_a_deg": -1.2656431456718293,
+            "ecliptic_latitude_b_deg": -1.2314495564296342,
+            "longitude_a_deg": 358.9708313940186,
+            "longitude_b_deg": 358.8782307889354,
+            "pair_phase_residual_deg": 0.09260060508319157
+          }
+        }
+      ],
+      "kind": "conjunction",
+      "nominated_jd_tt": 2460429.6889762,
+      "other_body": "neptune",
+      "selection": {
+        "blind_independent_discovery": false,
+        "nomination_method": "Aria physical-centre phase sign-change scan and bisection ONLY",
+        "nomination_window_jd_tt": [
+          2460429.5,
+          2460431.5
+        ]
+      }
+    },
+    {
+      "aria_events_in_half_day": [
+        {
+          "condition": "well-conditioned",
+          "event_direction": "direct",
+          "jd_tt": 2460179.357612823,
+          "time_bracket_seconds": 0.0823974609375,
+          "timing_qualified": false
+        }
+      ],
+      "aria_minus_independently_interpolated_jpl_seconds": -0.039187073707580566,
+      "aria_nearest_event": {
+        "condition": "well-conditioned",
+        "event_direction": "direct",
+        "jd_tt": 2460179.357612823,
+        "time_bracket_seconds": 0.0823974609375,
+        "timing_qualified": false
+      },
+      "body": "mars",
+      "candidate_60_seconds_exceeded": false,
+      "conditioning": {
+        "interpolation_is_not_certified_exact_event_time": true,
+        "jpl_equation_slope_abs_per_tt_day": 0.6610324804606516,
+        "max_position_or_rate_difference_time_proxy_seconds": 1.8153419619619295,
+        "proxy_is_not_certified_error_bound": true,
+        "source_model_uncertainty_unresolved": true
+      },
+      "event_id": "opposition-mars-neptune",
+      "goal_deg": 180,
+      "jpl_reference": {
+        "cubic_minus_linear_seconds": -4.023313522338867e-05,
+        "interpolation_error_bound_established": false,
+        "interpolation_method": "four-point local cubic inside observed JPL sign-change bracket",
+        "jd_tt": 2460179.3576132767,
+        "linear_root_jd_tt": 2460179.357613277,
+        "local_signed_slope_per_tt_day": 0.6610324804606516,
+        "reference_bracket_jd_tt": [
+          2460179.3263633,
+          2460179.3576133
+        ],
+        "reference_bracket_width_seconds": 2700.0,
+        "sampled_reference_root_unique_in_grid": true
+      },
+      "jpl_sampled_equation": [
+        {
+          "event_equation": -0.08262169425364618,
+          "jd_tt": 2460179.2326133,
+          "reference": {
+            "ecliptic_latitude_a_deg": 0.7241637083503251,
+            "ecliptic_latitude_b_deg": -1.2676001211056793,
+            "longitude_a_deg": 176.9179289391691,
+            "longitude_b_deg": 357.00055063342273,
+            "pair_phase_residual_deg": -0.08262169425364618
+          }
+        },
+        {
+          "event_equation": -0.061967672200694324,
+          "jd_tt": 2460179.2638633,
+          "reference": {
+            "ecliptic_latitude_a_deg": 0.7238771388271972,
+            "ecliptic_latitude_b_deg": -1.2676149571178499,
+            "longitude_a_deg": 176.93784388456922,
+            "longitude_b_deg": 356.9998115567699,
+            "pair_phase_residual_deg": -0.061967672200694324
+          }
+        },
+        {
+          "event_equation": -0.041312712470983115,
+          "jd_tt": 2460179.2951133,
+          "reference": {
+            "ecliptic_latitude_a_deg": 0.7235905619147751,
+            "ecliptic_latitude_b_deg": -1.2676297809960557,
+            "longitude_a_deg": 176.9577595111636,
+            "longitude_b_deg": 356.9990722236346,
+            "pair_phase_residual_deg": -0.041312712470983115
+          }
+        },
+        {
+          "event_equation": -0.020656816720645566,
+          "jd_tt": 2460179.3263633,
+          "reference": {
+            "ecliptic_latitude_a_deg": 0.7233039788481073,
+            "ecliptic_latitude_b_deg": -1.267644594452359,
+            "longitude_a_deg": 176.9776758188221,
+            "longitude_b_deg": 356.99833263554274,
+            "pair_phase_residual_deg": -0.020656816720645566
+          }
+        },
+        {
+          "event_equation": 1.5227385574689833e-08,
+          "jd_tt": 2460179.3576133,
+          "reference": {
+            "ecliptic_latitude_a_deg": 0.7230173877118938,
+            "ecliptic_latitude_b_deg": -1.2676593952547168,
+            "longitude_a_deg": 176.99759280768728,
+            "longitude_b_deg": 356.9975927924599,
+            "pair_phase_residual_deg": 1.5227385574689833e-08
+          }
+        },
+        {
+          "event_equation": 0.02065778355142811,
+          "jd_tt": 2460179.3888633,
+          "reference": {
+            "ecliptic_latitude_a_deg": 0.7227307910555534,
+            "ecliptic_latitude_b_deg": -1.2676741856357376,
+            "longitude_a_deg": 177.017510478145,
+            "longitude_b_deg": 356.9968526945936,
+            "pair_phase_residual_deg": 0.02065778355142811
+          }
+        },
+        {
+          "event_equation": 0.04131648619659245,
+          "jd_tt": 2460179.4201133,
+          "reference": {
+            "ecliptic_latitude_a_deg": 0.7224441874840309,
+            "ecliptic_latitude_b_deg": -1.26768896376052,
+            "longitude_a_deg": 177.0374288290195,
+            "longitude_b_deg": 356.9961123428229,
+            "pair_phase_residual_deg": 0.04131648619659245
+          }
+        },
+        {
+          "event_equation": 0.061976124135071586,
+          "jd_tt": 2460179.4513633,
+          "reference": {
+            "ecliptic_latitude_a_deg": 0.7221575763961426,
+            "ecliptic_latitude_b_deg": -1.2677037305469816,
+            "longitude_a_deg": 177.05734786096716,
+            "longitude_b_deg": 356.9953717368321,
+            "pair_phase_residual_deg": 0.061976124135071586
+          }
+        },
+        {
+          "event_equation": 0.08263669491543624,
+          "jd_tt": 2460179.4826133,
+          "reference": {
+            "ecliptic_latitude_a_deg": 0.7218709590259555,
+            "ecliptic_latitude_b_deg": -1.2677184858718322,
+            "longitude_a_deg": 177.07726757384802,
+            "longitude_b_deg": 356.9946308789326,
+            "pair_phase_residual_deg": 0.08263669491543624
+          }
+        }
+      ],
+      "kind": "opposition",
+      "nominated_jd_tt": 2460179.3576133,
+      "other_body": "neptune",
+      "selection": {
+        "blind_independent_discovery": false,
+        "nomination_method": "Aria physical-centre phase sign-change scan and bisection ONLY",
+        "nomination_window_jd_tt": [
+          2460177.5,
+          2460179.5
+        ]
+      }
+    },
+    {
+      "aria_events_in_half_day": [
+        {
+          "condition": "well-conditioned",
+          "event_direction": "direct",
+          "jd_tt": 2460354.7548052,
+          "time_bracket_seconds": 0.1,
+          "timing_qualified": false
+        }
+      ],
+      "aria_minus_independently_interpolated_jpl_seconds": -0.0029772520065307617,
+      "aria_nearest_event": {
+        "condition": "well-conditioned",
+        "event_direction": "direct",
+        "jd_tt": 2460354.7548052,
+        "time_bracket_seconds": 0.1,
+        "timing_qualified": false
+      },
+      "body": "mars",
+      "candidate_60_seconds_exceeded": false,
+      "conditioning": {
+        "interpolation_is_not_certified_exact_event_time": true,
+        "jpl_equation_slope_abs_per_tt_day": 0.7383414508717746,
+        "max_position_or_rate_difference_time_proxy_seconds": 1.6252642982229102,
+        "proxy_is_not_certified_error_bound": true,
+        "source_model_uncertainty_unresolved": true
+      },
+      "event_id": "conjunction-mars-pluto",
+      "goal_deg": 0,
+      "jpl_reference": {
+        "cubic_minus_linear_seconds": 0.0,
+        "interpolation_error_bound_established": false,
+        "interpolation_method": "four-point local cubic inside observed JPL sign-change bracket",
+        "jd_tt": 2460354.7548052343,
+        "linear_root_jd_tt": 2460354.7548052343,
+        "local_signed_slope_per_tt_day": 0.7383414508717746,
+        "reference_bracket_jd_tt": [
+          2460354.7548052,
+          2460354.7860552
+        ],
+        "reference_bracket_width_seconds": 2700.0,
+        "sampled_reference_root_unique_in_grid": true
+      },
+      "jpl_sampled_equation": [
+        {
+          "event_equation": -0.09228806504694376,
+          "jd_tt": 2460354.6298052,
+          "reference": {
+            "ecliptic_latitude_a_deg": -0.9471189201721806,
+            "ecliptic_latitude_b_deg": -2.8309199493061916,
+            "longitude_a_deg": 300.6725722849568,
+            "longitude_b_deg": 300.76486035000374,
+            "pair_phase_residual_deg": -0.09228806504694376
+          }
+        },
+        {
+          "event_equation": -0.06921695623930191,
+          "jd_tt": 2460354.6610552,
+          "reference": {
+            "ecliptic_latitude_a_deg": -0.9473651607798248,
+            "ecliptic_latitude_b_deg": -2.8309809022243226,
+            "longitude_a_deg": 300.69658647216215,
+            "longitude_b_deg": 300.76580342840145,
+            "pair_phase_residual_deg": -0.06921695623930191
+          }
+        },
+        {
+          "event_equation": -0.04614524528926722,
+          "jd_tt": 2460354.6923052,
+          "reference": {
+            "ecliptic_latitude_a_deg": -0.9476113369054042,
+            "ecliptic_latitude_b_deg": -2.8310418626173592,
+            "longitude_a_deg": 300.7206010712836,
+            "longitude_b_deg": 300.7667463165729,
+            "pair_phase_residual_deg": -0.04614524528926722
+          }
+        },
+        {
+          "event_equation": -0.02307293604332017,
+          "jd_tt": 2460354.7235552,
+          "reference": {
+            "ecliptic_latitude_a_deg": -0.9478574472651937,
+            "ecliptic_latitude_b_deg": -2.8311028301100105,
+            "longitude_a_deg": 300.7446160815556,
+            "longitude_b_deg": 300.7676890175989,
+            "pair_phase_residual_deg": -0.02307293604332017
+          }
+        },
+        {
+          "event_equation": -2.5538781756040407e-08,
+          "jd_tt": 2460354.7548052,
+          "reference": {
+            "ecliptic_latitude_a_deg": -0.9481034941075824,
+            "ecliptic_latitude_b_deg": -2.8311638042955085,
+            "longitude_a_deg": 300.76863150429506,
+            "longitude_b_deg": 300.76863152983384,
+            "pair_phase_residual_deg": -2.5538781756040407e-08
+          }
+        },
+        {
+          "event_equation": 0.023073483480743562,
+          "jd_tt": 2460354.7860552,
+          "reference": {
+            "ecliptic_latitude_a_deg": -0.9483494749687102,
+            "ecliptic_latitude_b_deg": -2.83122478439566,
+            "longitude_a_deg": 300.7926473380285,
+            "longitude_b_deg": 300.76957385454773,
+            "pair_phase_residual_deg": 0.023073483480743562
+          }
+        },
+        {
+          "event_equation": 0.04614759238171473,
+          "jd_tt": 2460354.8173052,
+          "reference": {
+            "ecliptic_latitude_a_deg": -0.9485953918934644,
+            "ecliptic_latitude_b_deg": -2.8312857711809967,
+            "longitude_a_deg": 300.81666358314857,
+            "longitude_b_deg": 300.77051599076685,
+            "pair_phase_residual_deg": 0.04614759238171473
+          }
+        },
+        {
+          "event_equation": 0.06922229869041985,
+          "jd_tt": 2460354.8485552,
+          "reference": {
+            "ecliptic_latitude_a_deg": -0.9488412447712834,
+            "ecliptic_latitude_b_deg": -2.831346763098979,
+            "longitude_a_deg": 300.8406802395614,
+            "longitude_b_deg": 300.77145794087096,
+            "pair_phase_residual_deg": 0.06922229869041985
+          }
+        },
+        {
+          "event_equation": 0.09229760260399189,
+          "jd_tt": 2460354.8798052,
+          "reference": {
+            "ecliptic_latitude_a_deg": -0.9490870315379271,
+            "ecliptic_latitude_b_deg": -2.831407760145806,
+            "longitude_a_deg": 300.8646973075999,
+            "longitude_b_deg": 300.7723997049959,
+            "pair_phase_residual_deg": 0.09229760260399189
+          }
+        }
+      ],
+      "kind": "conjunction",
+      "nominated_jd_tt": 2460354.7548052,
+      "other_body": "pluto",
+      "selection": {
+        "blind_independent_discovery": false,
+        "nomination_method": "Aria physical-centre phase sign-change scan and bisection ONLY",
+        "nomination_window_jd_tt": [
+          2460353.5,
+          2460355.5
+        ]
+      }
+    },
+    {
+      "aria_events_in_half_day": [
+        {
+          "condition": "well-conditioned",
+          "event_direction": "direct",
+          "jd_tt": 2460085.634004523,
+          "time_bracket_seconds": 0.0823974609375,
+          "timing_qualified": false
+        }
+      ],
+      "aria_minus_independently_interpolated_jpl_seconds": -0.038623809814453125,
+      "aria_nearest_event": {
+        "condition": "well-conditioned",
+        "event_direction": "direct",
+        "jd_tt": 2460085.634004523,
+        "time_bracket_seconds": 0.0823974609375,
+        "timing_qualified": false
+      },
+      "body": "mars",
+      "candidate_60_seconds_exceeded": false,
+      "conditioning": {
+        "interpolation_is_not_certified_exact_event_time": true,
+        "jpl_equation_slope_abs_per_tt_day": 0.579477184102286,
+        "max_position_or_rate_difference_time_proxy_seconds": 2.0708321792841855,
+        "proxy_is_not_certified_error_bound": true,
+        "source_model_uncertainty_unresolved": true
+      },
+      "event_id": "opposition-mars-pluto",
+      "goal_deg": 180,
+      "jpl_reference": {
+        "cubic_minus_linear_seconds": 4.023313522338867e-05,
+        "interpolation_error_bound_established": false,
+        "interpolation_method": "four-point local cubic inside observed JPL sign-change bracket",
+        "jd_tt": 2460085.63400497,
+        "linear_root_jd_tt": 2460085.6340049696,
+        "local_signed_slope_per_tt_day": 0.579477184102286,
+        "reference_bracket_jd_tt": [
+          2460085.602755,
+          2460085.634005
+        ],
+        "reference_bracket_width_seconds": 2700.0,
+        "sampled_reference_root_unique_in_grid": true
+      },
+      "jpl_sampled_equation": [
+        {
+          "event_equation": -0.07242382768964717,
+          "jd_tt": 2460085.509005,
+          "reference": {
+            "ecliptic_latitude_a_deg": 1.5737629729603395,
+            "ecliptic_latitude_b_deg": -2.5536096171807605,
+            "longitude_a_deg": 120.20611009748482,
+            "longitude_b_deg": 300.2785339251745,
+            "pair_phase_residual_deg": -0.07242382768964717
+          }
+        },
+        {
+          "event_equation": -0.05431991576790551,
+          "jd_tt": 2460085.540255,
+          "reference": {
+            "ecliptic_latitude_a_deg": 1.5734713749429419,
+            "ecliptic_latitude_b_deg": -2.5536907772562842,
+            "longitude_a_deg": 120.22394046462384,
+            "longitude_b_deg": 300.2782603803917,
+            "pair_phase_residual_deg": -0.05431991576790551
+          }
+        },
+        {
+          "event_equation": -0.036214636768249875,
+          "jd_tt": 2460085.571505,
+          "reference": {
+            "ecliptic_latitude_a_deg": 1.573179789145714,
+            "ecliptic_latitude_b_deg": -2.553771930634472,
+            "longitude_a_deg": 120.24177176292996,
+            "longitude_b_deg": 300.2779863996982,
+            "pair_phase_residual_deg": -0.036214636768249875
+          }
+        },
+        {
+          "event_equation": -0.018107992779505366,
+          "jd_tt": 2460085.602755,
+          "reference": {
+            "ecliptic_latitude_a_deg": 1.57288821679657,
+            "ecliptic_latitude_b_deg": -2.5538530761426186,
+            "longitude_a_deg": 120.2596039894535,
+            "longitude_b_deg": 300.277711982233,
+            "pair_phase_residual_deg": -0.018107992779505366
+          }
+        },
+        {
+          "event_equation": 1.747559963405365e-08,
+          "jd_tt": 2460085.634005,
+          "reference": {
+            "ecliptic_latitude_a_deg": 1.5725966577637445,
+            "ecliptic_latitude_b_deg": -2.553934213584583,
+            "longitude_a_deg": 120.27743714439501,
+            "longitude_b_deg": 300.2774371269194,
+            "pair_phase_residual_deg": 1.747559963405365e-08
+          }
+        },
+        {
+          "event_equation": 0.018109392131179902,
+          "jd_tt": 2460085.665255,
+          "reference": {
+            "ecliptic_latitude_a_deg": 1.5723051117165576,
+            "ecliptic_latitude_b_deg": -2.5540153412082267,
+            "longitude_a_deg": 120.29527122704654,
+            "longitude_b_deg": 300.2771618349154,
+            "pair_phase_residual_deg": 0.018109392131179902
+          }
+        },
+        {
+          "event_equation": 0.036220129751654895,
+          "jd_tt": 2460085.696505,
+          "reference": {
+            "ecliptic_latitude_a_deg": 1.572013578323715,
+            "ecliptic_latitude_b_deg": -2.5540964592145996,
+            "longitude_a_deg": 120.31310623669954,
+            "longitude_b_deg": 300.27688610694787,
+            "pair_phase_residual_deg": 0.036220129751654895
+          }
+        },
+        {
+          "event_equation": 0.05433223208194704,
+          "jd_tt": 2460085.727755,
+          "reference": {
+            "ecliptic_latitude_a_deg": 1.5717220592069339,
+            "ecliptic_latitude_b_deg": -2.554177567010393,
+            "longitude_a_deg": 120.33094217221687,
+            "longitude_b_deg": 300.2766099401349,
+            "pair_phase_residual_deg": 0.05433223208194704
+          }
+        },
+        {
+          "event_equation": 0.07244569587891192,
+          "jd_tt": 2460085.759005,
+          "reference": {
+            "ecliptic_latitude_a_deg": 1.5714305520799428,
+            "ecliptic_latitude_b_deg": -2.5542586632406366,
+            "longitude_a_deg": 120.34877903331694,
+            "longitude_b_deg": 300.276333337438,
+            "pair_phase_residual_deg": 0.07244569587891192
+          }
+        }
+      ],
+      "kind": "opposition",
+      "nominated_jd_tt": 2460085.634005,
+      "other_body": "pluto",
+      "selection": {
+        "blind_independent_discovery": false,
+        "nomination_method": "Aria physical-centre phase sign-change scan and bisection ONLY",
+        "nomination_window_jd_tt": [
+          2460085.5,
+          2460087.5
+        ]
+      }
+    }
+  ],
+  "schema_version": 1,
+  "source_fixture_id": "aria-horizons-planet-centres-event-time-reference-v1",
+  "source_fixture_sha256": "8887371848f64c7c3d92a3d13f38f5ea1e6c787aed29b1d564b7b85be76dbacb"
+}

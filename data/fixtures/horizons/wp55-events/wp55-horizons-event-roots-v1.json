@@ -1,0 +1,5026 @@
+{
+  "absolute_event_timing_qualified": false,
+  "acquired_utc": "2026-11-19T13:35:24.057149+00:00",
+  "aria_base_sha256": "54d97562a5b094d298b1b8eafa5a2e17e3e010ce85e1a366d07f003ad159323c",
+  "aria_source_manifest_id": "aria-physical-planet-centres-sources-v1",
+  "case_count": 22,
+  "cases": [
+    {
+      "body": "mars",
+      "event_id": "station-mars",
+      "goal_deg": null,
+      "jd_tt_grid": [
+        2459957.2482605,
+        2459957.2795105,
+        2459957.3107605,
+        2459957.3420105,
+        2459957.3732605,
+        2459957.4045105,
+        2459957.4357605,
+        2459957.4670105,
+        2459957.4982605
+      ],
+      "kind": "station",
+      "nominated_jd_tt": 2459957.3732605,
+      "nomination_method": "Aria-nominated WP5.4 critical date; no independently timed root",
+      "nomination_window_jd_tt": [
+        2459953.5,
+        2459957.5
+      ],
+      "other_body": null,
+      "reference_rate_stencils": [
+        [
+          2459957.2232605,
+          2459957.2357605,
+          2459957.2482605,
+          2459957.2607605,
+          2459957.2732605
+        ],
+        [
+          2459957.2545105,
+          2459957.2670105,
+          2459957.2795105,
+          2459957.2920105,
+          2459957.3045105
+        ],
+        [
+          2459957.2857605,
+          2459957.2982605,
+          2459957.3107605,
+          2459957.3232605,
+          2459957.3357605
+        ],
+        [
+          2459957.3170105,
+          2459957.3295105,
+          2459957.3420105,
+          2459957.3545105,
+          2459957.3670105
+        ],
+        [
+          2459957.3482605,
+          2459957.3607605,
+          2459957.3732605,
+          2459957.3857605,
+          2459957.3982605
+        ],
+        [
+          2459957.3795105,
+          2459957.3920105,
+          2459957.4045105,
+          2459957.4170105,
+          2459957.4295105
+        ],
+        [
+          2459957.4107605,
+          2459957.4232605,
+          2459957.4357605,
+          2459957.4482605,
+          2459957.4607605
+        ],
+        [
+          2459957.4420105,
+          2459957.4545105,
+          2459957.4670105,
+          2459957.4795105,
+          2459957.4920105
+        ],
+        [
+          2459957.4732605,
+          2459957.4857605,
+          2459957.4982605,
+          2459957.5107605,
+          2459957.5232605
+        ]
+      ],
+      "reference_source": "independent JPL rays only; no Aria expected position or root"
+    },
+    {
+      "body": "mars",
+      "event_id": "ingress-mars",
+      "goal_deg": 90,
+      "jd_tt_grid": [
+        2460028.8656311,
+        2460028.8968811,
+        2460028.9281311,
+        2460028.9593811,
+        2460028.9906311,
+        2460029.0218811,
+        2460029.0531311,
+        2460029.0843811,
+        2460029.1156311
+      ],
+      "kind": "ingress",
+      "nominated_jd_tt": 2460028.9906311,
+      "nomination_method": "Aria-nominated WP5.4 critical date; no independently timed root",
+      "nomination_window_jd_tt": [
+        2460025.5,
+        2460029.5
+      ],
+      "other_body": null,
+      "reference_rate_stencils": [],
+      "reference_source": "independent JPL rays only; no Aria expected position or root"
+    },
+    {
+      "body": "jupiter",
+      "event_id": "station-jupiter",
+      "goal_deg": null,
+      "jd_tt_grid": [
+        2460191.9667664,
+        2460191.9980164,
+        2460192.0292664,
+        2460192.0605164,
+        2460192.0917664,
+        2460192.1230164,
+        2460192.1542664,
+        2460192.1855164,
+        2460192.2167664
+      ],
+      "kind": "station",
+      "nominated_jd_tt": 2460192.0917664,
+      "nomination_method": "Aria-nominated WP5.4 critical date; no independently timed root",
+      "nomination_window_jd_tt": [
+        2460189.5,
+        2460193.5
+      ],
+      "other_body": null,
+      "reference_rate_stencils": [
+        [
+          2460191.9417664,
+          2460191.9542664,
+          2460191.9667664,
+          2460191.9792664,
+          2460191.9917664
+        ],
+        [
+          2460191.9730164,
+          2460191.9855164,
+          2460191.9980164,
+          2460192.0105164,
+          2460192.0230164
+        ],
+        [
+          2460192.0042664,
+          2460192.0167664,
+          2460192.0292664,
+          2460192.0417664,
+          2460192.0542664
+        ],
+        [
+          2460192.0355164,
+          2460192.0480164,
+          2460192.0605164,
+          2460192.0730164,
+          2460192.0855164
+        ],
+        [
+          2460192.0667664,
+          2460192.0792664,
+          2460192.0917664,
+          2460192.1042664,
+          2460192.1167664
+        ],
+        [
+          2460192.0980164,
+          2460192.1105164,
+          2460192.1230164,
+          2460192.1355164,
+          2460192.1480164
+        ],
+        [
+          2460192.1292664,
+          2460192.1417664,
+          2460192.1542664,
+          2460192.1667664,
+          2460192.1792664
+        ],
+        [
+          2460192.1605164,
+          2460192.1730164,
+          2460192.1855164,
+          2460192.1980164,
+          2460192.2105164
+        ],
+        [
+          2460192.1917664,
+          2460192.2042664,
+          2460192.2167664,
+          2460192.2292664,
+          2460192.2417664
+        ]
+      ],
+      "reference_source": "independent JPL rays only; no Aria expected position or root"
+    },
+    {
+      "body": "jupiter",
+      "event_id": "ingress-jupiter",
+      "goal_deg": 30,
+      "jd_tt_grid": [
+        2460081.098053,
+        2460081.129303,
+        2460081.160553,
+        2460081.191803,
+        2460081.223053,
+        2460081.254303,
+        2460081.285553,
+        2460081.316803,
+        2460081.348053
+      ],
+      "kind": "ingress",
+      "nominated_jd_tt": 2460081.223053,
+      "nomination_method": "Aria-nominated WP5.4 critical date; no independently timed root",
+      "nomination_window_jd_tt": [
+        2460077.5,
+        2460081.5
+      ],
+      "other_body": null,
+      "reference_rate_stencils": [],
+      "reference_source": "independent JPL rays only; no Aria expected position or root"
+    },
+    {
+      "body": "saturn",
+      "event_id": "station-saturn",
+      "goal_deg": null,
+      "jd_tt_grid": [
+        2460113.1026306,
+        2460113.1338806,
+        2460113.1651306,
+        2460113.1963806,
+        2460113.2276306,
+        2460113.2588806,
+        2460113.2901306,
+        2460113.3213806,
+        2460113.3526306
+      ],
+      "kind": "station",
+      "nominated_jd_tt": 2460113.2276306,
+      "nomination_method": "Aria-nominated WP5.4 critical date; no independently timed root",
+      "nomination_window_jd_tt": [
+        2460109.5,
+        2460113.5
+      ],
+      "other_body": null,
+      "reference_rate_stencils": [
+        [
+          2460113.0776306,
+          2460113.0901306,
+          2460113.1026306,
+          2460113.1151306,
+          2460113.1276306
+        ],
+        [
+          2460113.1088806,
+          2460113.1213806,
+          2460113.1338806,
+          2460113.1463806,
+          2460113.1588806
+        ],
+        [
+          2460113.1401306,
+          2460113.1526306,
+          2460113.1651306,
+          2460113.1776306,
+          2460113.1901306
+        ],
+        [
+          2460113.1713806,
+          2460113.1838806,
+          2460113.1963806,
+          2460113.2088806,
+          2460113.2213806
+        ],
+        [
+          2460113.2026306,
+          2460113.2151306,
+          2460113.2276306,
+          2460113.2401306,
+          2460113.2526306
+        ],
+        [
+          2460113.2338806,
+          2460113.2463806,
+          2460113.2588806,
+          2460113.2713806,
+          2460113.2838806
+        ],
+        [
+          2460113.2651306,
+          2460113.2776306,
+          2460113.2901306,
+          2460113.3026306,
+          2460113.3151306
+        ],
+        [
+          2460113.2963806,
+          2460113.3088806,
+          2460113.3213806,
+          2460113.3338806,
+          2460113.3463806
+        ],
+        [
+          2460113.3276306,
+          2460113.3401306,
+          2460113.3526306,
+          2460113.3651306,
+          2460113.3776306
+        ]
+      ],
+      "reference_source": "independent JPL rays only; no Aria expected position or root"
+    },
+    {
+      "body": "saturn",
+      "event_id": "ingress-saturn",
+      "goal_deg": 330,
+      "jd_tt_grid": [
+        2460010.9417419,
+        2460010.9729919,
+        2460011.0042419,
+        2460011.0354919,
+        2460011.0667419,
+        2460011.0979919,
+        2460011.1292419,
+        2460011.1604919,
+        2460011.1917419
+      ],
+      "kind": "ingress",
+      "nominated_jd_tt": 2460011.0667419,
+      "nomination_method": "Aria-nominated WP5.4 critical date; no independently timed root",
+      "nomination_window_jd_tt": [
+        2460009.5,
+        2460013.5
+      ],
+      "other_body": null,
+      "reference_rate_stencils": [],
+      "reference_source": "independent JPL rays only; no Aria expected position or root"
+    },
+    {
+      "body": "uranus",
+      "event_id": "station-uranus",
+      "goal_deg": null,
+      "jd_tt_grid": [
+        2459967.3327332,
+        2459967.3639832,
+        2459967.3952332,
+        2459967.4264832,
+        2459967.4577332,
+        2459967.4889832,
+        2459967.5202332,
+        2459967.5514832,
+        2459967.5827332
+      ],
+      "kind": "station",
+      "nominated_jd_tt": 2459967.4577332,
+      "nomination_method": "Aria-nominated WP5.4 critical date; no independently timed root",
+      "nomination_window_jd_tt": [
+        2459965.5,
+        2459969.5
+      ],
+      "other_body": null,
+      "reference_rate_stencils": [
+        [
+          2459967.3077332,
+          2459967.3202332,
+          2459967.3327332,
+          2459967.3452332,
+          2459967.3577332
+        ],
+        [
+          2459967.3389832,
+          2459967.3514832,
+          2459967.3639832,
+          2459967.3764832,
+          2459967.3889832
+        ],
+        [
+          2459967.3702332,
+          2459967.3827332,
+          2459967.3952332,
+          2459967.4077332,
+          2459967.4202332
+        ],
+        [
+          2459967.4014832,
+          2459967.4139832,
+          2459967.4264832,
+          2459967.4389832,
+          2459967.4514832
+        ],
+        [
+          2459967.4327332,
+          2459967.4452332,
+          2459967.4577332,
+          2459967.4702332,
+          2459967.4827332
+        ],
+        [
+          2459967.4639832,
+          2459967.4764832,
+          2459967.4889832,
+          2459967.5014832,
+          2459967.5139832
+        ],
+        [
+          2459967.4952332,
+          2459967.5077332,
+          2459967.5202332,
+          2459967.5327332,
+          2459967.5452332
+        ],
+        [
+          2459967.5264832,
+          2459967.5389832,
+          2459967.5514832,
+          2459967.5639832,
+          2459967.5764832
+        ],
+        [
+          2459967.5577332,
+          2459967.5702332,
+          2459967.5827332,
+          2459967.5952332,
+          2459967.6077332
+        ]
+      ],
+      "reference_source": "independent JPL rays only; no Aria expected position or root"
+    },
+    {
+      "body": "uranus",
+      "event_id": "ingress-uranus",
+      "goal_deg": 60,
+      "jd_tt_grid": [
+        2460863.7001038,
+        2460863.7313538,
+        2460863.7626038,
+        2460863.7938538,
+        2460863.8251038,
+        2460863.8563538,
+        2460863.8876038,
+        2460863.9188538,
+        2460863.9501038
+      ],
+      "kind": "ingress",
+      "nominated_jd_tt": 2460863.8251038,
+      "nomination_method": "Aria-nominated WP5.4 critical date; no independently timed root",
+      "nomination_window_jd_tt": [
+        2460861.5,
+        2460865.5
+      ],
+      "other_body": null,
+      "reference_rate_stencils": [],
+      "reference_source": "independent JPL rays only; no Aria expected position or root"
+    },
+    {
+      "body": "neptune",
+      "event_id": "station-neptune",
+      "goal_deg": null,
+      "jd_tt_grid": [
+        2460126.2556458,
+        2460126.2868958,
+        2460126.3181458,
+        2460126.3493958,
+        2460126.3806458,
+        2460126.4118958,
+        2460126.4431458,
+        2460126.4743958,
+        2460126.5056458
+      ],
+      "kind": "station",
+      "nominated_jd_tt": 2460126.3806458,
+      "nomination_method": "Aria-nominated WP5.4 critical date; no independently timed root",
+      "nomination_window_jd_tt": [
+        2460125.5,
+        2460129.5
+      ],
+      "other_body": null,
+      "reference_rate_stencils": [
+        [
+          2460126.2306458,
+          2460126.2431458,
+          2460126.2556458,
+          2460126.2681458,
+          2460126.2806458
+        ],
+        [
+          2460126.2618958,
+          2460126.2743958,
+          2460126.2868958,
+          2460126.2993958,
+          2460126.3118958
+        ],
+        [
+          2460126.2931458,
+          2460126.3056458,
+          2460126.3181458,
+          2460126.3306458,
+          2460126.3431458
+        ],
+        [
+          2460126.3243958,
+          2460126.3368958,
+          2460126.3493958,
+          2460126.3618958,
+          2460126.3743958
+        ],
+        [
+          2460126.3556458,
+          2460126.3681458,
+          2460126.3806458,
+          2460126.3931458,
+          2460126.4056458
+        ],
+        [
+          2460126.3868958,
+          2460126.3993958,
+          2460126.4118958,
+          2460126.4243958,
+          2460126.4368958
+        ],
+        [
+          2460126.4181458,
+          2460126.4306458,
+          2460126.4431458,
+          2460126.4556458,
+          2460126.4681458
+        ],
+        [
+          2460126.4493958,
+          2460126.4618958,
+          2460126.4743958,
+          2460126.4868958,
+          2460126.4993958
+        ],
+        [
+          2460126.4806458,
+          2460126.4931458,
+          2460126.5056458,
+          2460126.5181458,
+          2460126.5306458
+        ]
+      ],
+      "reference_source": "independent JPL rays only; no Aria expected position or root"
+    },
+    {
+      "body": "neptune",
+      "event_id": "ingress-neptune",
+      "goal_deg": 0,
+      "jd_tt_grid": [
+        2460764.8744202,
+        2460764.9056702,
+        2460764.9369202,
+        2460764.9681702,
+        2460764.9994202,
+        2460765.0306702,
+        2460765.0619202,
+        2460765.0931702,
+        2460765.1244202
+      ],
+      "kind": "ingress",
+      "nominated_jd_tt": 2460764.9994202,
+      "nomination_method": "Aria-nominated WP5.4 critical date; no independently timed root",
+      "nomination_window_jd_tt": [
+        2460761.5,
+        2460765.5
+      ],
+      "other_body": null,
+      "reference_rate_stencils": [],
+      "reference_source": "independent JPL rays only; no Aria expected position or root"
+    },
+    {
+      "body": "pluto",
+      "event_id": "station-pluto",
+      "goal_deg": null,
+      "jd_tt_grid": [
+        2460066.1051941,
+        2460066.1364441,
+        2460066.1676941,
+        2460066.1989441,
+        2460066.2301941,
+        2460066.2614441,
+        2460066.2926941,
+        2460066.3239441,
+        2460066.3551941
+      ],
+      "kind": "station",
+      "nominated_jd_tt": 2460066.2301941,
+      "nomination_method": "Aria-nominated WP5.4 critical date; no independently timed root",
+      "nomination_window_jd_tt": [
+        2460065.5,
+        2460069.5
+      ],
+      "other_body": null,
+      "reference_rate_stencils": [
+        [
+          2460066.0801941,
+          2460066.0926941,
+          2460066.1051941,
+          2460066.1176941,
+          2460066.1301941
+        ],
+        [
+          2460066.1114441,
+          2460066.1239441,
+          2460066.1364441,
+          2460066.1489441,
+          2460066.1614441
+        ],
+        [
+          2460066.1426941,
+          2460066.1551941,
+          2460066.1676941,
+          2460066.1801941,
+          2460066.1926941
+        ],
+        [
+          2460066.1739441,
+          2460066.1864441,
+          2460066.1989441,
+          2460066.2114441,
+          2460066.2239441
+        ],
+        [
+          2460066.2051941,
+          2460066.2176941,
+          2460066.2301941,
+          2460066.2426941,
+          2460066.2551941
+        ],
+        [
+          2460066.2364441,
+          2460066.2489441,
+          2460066.2614441,
+          2460066.2739441,
+          2460066.2864441
+        ],
+        [
+          2460066.2676941,
+          2460066.2801941,
+          2460066.2926941,
+          2460066.3051941,
+          2460066.3176941
+        ],
+        [
+          2460066.2989441,
+          2460066.3114441,
+          2460066.3239441,
+          2460066.3364441,
+          2460066.3489441
+        ],
+        [
+          2460066.3301941,
+          2460066.3426941,
+          2460066.3551941,
+          2460066.3676941,
+          2460066.3801941
+        ]
+      ],
+      "reference_source": "independent JPL rays only; no Aria expected position or root"
+    },
+    {
+      "body": "pluto",
+      "event_id": "ingress-pluto",
+      "goal_deg": 300,
+      "jd_tt_grid": [
+        2460026.8911438,
+        2460026.9223938,
+        2460026.9536438,
+        2460026.9848938,
+        2460027.0161438,
+        2460027.0473938,
+        2460027.0786438,
+        2460027.1098938,
+        2460027.1411438
+      ],
+      "kind": "ingress",
+      "nominated_jd_tt": 2460027.0161438,
+      "nomination_method": "Aria-nominated WP5.4 critical date; no independently timed root",
+      "nomination_window_jd_tt": [
+        2460025.5,
+        2460029.5
+      ],
+      "other_body": null,
+      "reference_rate_stencils": [],
+      "reference_source": "independent JPL rays only; no Aria expected position or root"
+    },
+    {
+      "body": "mars",
+      "event_id": "conjunction-mars-jupiter",
+      "goal_deg": 0,
+      "jd_tt_grid": [
+        2460537.0157562,
+        2460537.0470062,
+        2460537.0782562,
+        2460537.1095062,
+        2460537.1407562,
+        2460537.1720062,
+        2460537.2032562,
+        2460537.2345062,
+        2460537.2657562
+      ],
+      "kind": "conjunction",
+      "nominated_jd_tt": 2460537.1407562,
+      "nomination_method": "Aria physical-centre phase sign-change scan and bisection ONLY",
+      "nomination_window_jd_tt": [
+        2460535.5,
+        2460537.5
+      ],
+      "other_body": "jupiter",
+      "reference_rate_stencils": [],
+      "reference_source": "independent JPL rays only; no Aria expected position or root"
+    },
+    {
+      "body": "mars",
+      "event_id": "opposition-mars-jupiter",
+      "goal_deg": 180,
+      "jd_tt_grid": [
+        2460246.0446702,
+        2460246.0759202,
+        2460246.1071702,
+        2460246.1384202,
+        2460246.1696702,
+        2460246.2009202,
+        2460246.2321702,
+        2460246.2634202,
+        2460246.2946702
+      ],
+      "kind": "opposition",
+      "nominated_jd_tt": 2460246.1696702,
+      "nomination_method": "Aria physical-centre phase sign-change scan and bisection ONLY",
+      "nomination_window_jd_tt": [
+        2460245.5,
+        2460247.5
+      ],
+      "other_body": "jupiter",
+      "reference_rate_stencils": [],
+      "reference_source": "independent JPL rays only; no Aria expected position or root"
+    },
+    {
+      "body": "mars",
+      "event_id": "conjunction-mars-saturn",
+      "goal_deg": 0,
+      "jd_tt_grid": [
+        2460411.2341888,
+        2460411.2654388,
+        2460411.2966888,
+        2460411.3279388,
+        2460411.3591888,
+        2460411.3904388,
+        2460411.4216888,
+        2460411.4529388,
+        2460411.4841888
+      ],
+      "kind": "conjunction",
+      "nominated_jd_tt": 2460411.3591888,
+      "nomination_method": "Aria physical-centre phase sign-change scan and bisection ONLY",
+      "nomination_window_jd_tt": [
+        2460409.5,
+        2460411.5
+      ],
+      "other_body": "saturn",
+      "reference_rate_stencils": [],
+      "reference_source": "independent JPL rays only; no Aria expected position or root"
+    },
+    {
+      "body": "mars",
+      "event_id": "opposition-mars-saturn",
+      "goal_deg": 180,
+      "jd_tt_grid": [
+        2460146.2363059,
+        2460146.2675559,
+        2460146.2988059,
+        2460146.3300559,
+        2460146.3613059,
+        2460146.3925559,
+        2460146.4238059,
+        2460146.4550559,
+        2460146.4863059
+      ],
+      "kind": "opposition",
+      "nominated_jd_tt": 2460146.3613059,
+      "nomination_method": "Aria physical-centre phase sign-change scan and bisection ONLY",
+      "nomination_window_jd_tt": [
+        2460145.5,
+        2460147.5
+      ],
+      "other_body": "saturn",
+      "reference_rate_stencils": [],
+      "reference_source": "independent JPL rays only; no Aria expected position or root"
+    },
+    {
+      "body": "mars",
+      "event_id": "conjunction-mars-uranus",
+      "goal_deg": 0,
+      "jd_tt_grid": [
+        2460506.9624819,
+        2460506.9937319,
+        2460507.0249819,
+        2460507.0562319,
+        2460507.0874819,
+        2460507.1187319,
+        2460507.1499819,
+        2460507.1812319,
+        2460507.2124819
+      ],
+      "kind": "conjunction",
+      "nominated_jd_tt": 2460507.0874819,
+      "nomination_method": "Aria physical-centre phase sign-change scan and bisection ONLY",
+      "nomination_window_jd_tt": [
+        2460505.5,
+        2460507.5
+      ],
+      "other_body": "uranus",
+      "reference_rate_stencils": [],
+      "reference_source": "independent JPL rays only; no Aria expected position or root"
+    },
+    {
+      "body": "mars",
+      "event_id": "opposition-mars-uranus",
+      "goal_deg": 180,
+      "jd_tt_grid": [
+        2460260.2586462,
+        2460260.2898962,
+        2460260.3211462,
+        2460260.3523962,
+        2460260.3836462,
+        2460260.4148962,
+        2460260.4461462,
+        2460260.4773962,
+        2460260.5086462
+      ],
+      "kind": "opposition",
+      "nominated_jd_tt": 2460260.3836462,
+      "nomination_method": "Aria physical-centre phase sign-change scan and bisection ONLY",
+      "nomination_window_jd_tt": [
+        2460259.5,
+        2460261.5
+      ],
+      "other_body": "uranus",
+      "reference_rate_stencils": [],
+      "reference_source": "independent JPL rays only; no Aria expected position or root"
+    },
+    {
+      "body": "mars",
+      "event_id": "conjunction-mars-neptune",
+      "goal_deg": 0,
+      "jd_tt_grid": [
+        2460429.5639762,
+        2460429.5952262,
+        2460429.6264762,
+        2460429.6577262,
+        2460429.6889762,
+        2460429.7202262,
+        2460429.7514762,
+        2460429.7827262,
+        2460429.8139762
+      ],
+      "kind": "conjunction",
+      "nominated_jd_tt": 2460429.6889762,
+      "nomination_method": "Aria physical-centre phase sign-change scan and bisection ONLY",
+      "nomination_window_jd_tt": [
+        2460429.5,
+        2460431.5
+      ],
+      "other_body": "neptune",
+      "reference_rate_stencils": [],
+      "reference_source": "independent JPL rays only; no Aria expected position or root"
+    },
+    {
+      "body": "mars",
+      "event_id": "opposition-mars-neptune",
+      "goal_deg": 180,
+      "jd_tt_grid": [
+        2460179.2326133,
+        2460179.2638633,
+        2460179.2951133,
+        2460179.3263633,
+        2460179.3576133,
+        2460179.3888633,
+        2460179.4201133,
+        2460179.4513633,
+        2460179.4826133
+      ],
+      "kind": "opposition",
+      "nominated_jd_tt": 2460179.3576133,
+      "nomination_method": "Aria physical-centre phase sign-change scan and bisection ONLY",
+      "nomination_window_jd_tt": [
+        2460177.5,
+        2460179.5
+      ],
+      "other_body": "neptune",
+      "reference_rate_stencils": [],
+      "reference_source": "independent JPL rays only; no Aria expected position or root"
+    },
+    {
+      "body": "mars",
+      "event_id": "conjunction-mars-pluto",
+      "goal_deg": 0,
+      "jd_tt_grid": [
+        2460354.6298052,
+        2460354.6610552,
+        2460354.6923052,
+        2460354.7235552,
+        2460354.7548052,
+        2460354.7860552,
+        2460354.8173052,
+        2460354.8485552,
+        2460354.8798052
+      ],
+      "kind": "conjunction",
+      "nominated_jd_tt": 2460354.7548052,
+      "nomination_method": "Aria physical-centre phase sign-change scan and bisection ONLY",
+      "nomination_window_jd_tt": [
+        2460353.5,
+        2460355.5
+      ],
+      "other_body": "pluto",
+      "reference_rate_stencils": [],
+      "reference_source": "independent JPL rays only; no Aria expected position or root"
+    },
+    {
+      "body": "mars",
+      "event_id": "opposition-mars-pluto",
+      "goal_deg": 180,
+      "jd_tt_grid": [
+        2460085.509005,
+        2460085.540255,
+        2460085.571505,
+        2460085.602755,
+        2460085.634005,
+        2460085.665255,
+        2460085.696505,
+        2460085.727755,
+        2460085.759005
+      ],
+      "kind": "opposition",
+      "nominated_jd_tt": 2460085.634005,
+      "nomination_method": "Aria physical-centre phase sign-change scan and bisection ONLY",
+      "nomination_window_jd_tt": [
+        2460085.5,
+        2460087.5
+      ],
+      "other_body": "pluto",
+      "reference_rate_stencils": [],
+      "reference_source": "independent JPL rays only; no Aria expected position or root"
+    }
+  ],
+  "commercial_release_qualified": false,
+  "dataset_id": "aria-horizons-planet-centres-event-time-reference-v1",
+  "frame_convention": "IAU 2006/2000A true ecliptic-of-date; shared ERFA standard implementation",
+  "original_evaluation": "No Aria prediction, state or longitude enters any reference value or JPL-root interpolation",
+  "original_response_count": 14,
+  "ray_count": 504,
+  "rays": [
+    {
+      "body": "mars",
+      "inertial_apparent_dec_deg": 24.409161342,
+      "inertial_apparent_ra_deg": 65.528711283,
+      "jd_tt": 2459957.2232605,
+      "raw_file": "raw/mars-event-01.txt"
+    },
+    {
+      "body": "mars",
+      "inertial_apparent_dec_deg": 24.409128881,
+      "inertial_apparent_ra_deg": 65.52869133,
+      "jd_tt": 2459957.2357605,
+      "raw_file": "raw/mars-event-01.txt"
+    },
+    {
+      "body": "mars",
+      "inertial_apparent_dec_deg": 24.409096655,
+      "inertial_apparent_ra_deg": 65.528673566,
+      "jd_tt": 2459957.2482605,
+      "raw_file": "raw/mars-event-01.txt"
+    },
+    {
+      "body": "mars",
+      "inertial_apparent_dec_deg": 24.40908063,
+      "inertial_apparent_ra_deg": 65.528665505,
+      "jd_tt": 2459957.2545105,
+      "raw_file": "raw/mars-event-01.txt"
+    },
+    {
+      "body": "mars",
+      "inertial_apparent_dec_deg": 24.409064664,
+      "inertial_apparent_ra_deg": 65.528657991,
+      "jd_tt": 2459957.2607605,
+      "raw_file": "raw/mars-event-01.txt"
+    },
+    {
+      "body": "mars",
+      "inertial_apparent_dec_deg": 24.409048757,
+      "inertial_apparent_ra_deg": 65.528651024,
+      "jd_tt": 2459957.2670105,
+      "raw_file": "raw/mars-event-01.txt"
+    },
+    {
+      "body": "mars",
+      "inertial_apparent_dec_deg": 24.409032908,
+      "inertial_apparent_ra_deg": 65.528644604,
+      "jd_tt": 2459957.2732605,
+      "raw_file": "raw/mars-event-01.txt"
+    },
+    {
+      "body": "mars",
+      "inertial_apparent_dec_deg": 24.409017118,
+      "inertial_apparent_ra_deg": 65.528638731,
+      "jd_tt": 2459957.2795105,
+      "raw_file": "raw/mars-event-01.txt"
+    },
+    {
+      "body": "mars",
+      "inertial_apparent_dec_deg": 24.409001387,
+      "inertial_apparent_ra_deg": 65.528633404,
+      "jd_tt": 2459957.2857605,
+      "raw_file": "raw/mars-event-01.txt"
+    },
+    {
+      "body": "mars",
+      "inertial_apparent_dec_deg": 24.408985715,
+      "inertial_apparent_ra_deg": 65.528628625,
+      "jd_tt": 2459957.2920105,
+      "raw_file": "raw/mars-event-01.txt"
+    },
+    {
+      "body": "mars",
+      "inertial_apparent_dec_deg": 24.408970101,
+      "inertial_apparent_ra_deg": 65.528624392,
+      "jd_tt": 2459957.2982605,
+      "raw_file": "raw/mars-event-01.txt"
+    },
+    {
+      "body": "mars",
+      "inertial_apparent_dec_deg": 24.408954546,
+      "inertial_apparent_ra_deg": 65.528620706,
+      "jd_tt": 2459957.3045105,
+      "raw_file": "raw/mars-event-01.txt"
+    },
+    {
+      "body": "mars",
+      "inertial_apparent_dec_deg": 24.40893905,
+      "inertial_apparent_ra_deg": 65.528617567,
+      "jd_tt": 2459957.3107605,
+      "raw_file": "raw/mars-event-01.txt"
+    },
+    {
+      "body": "mars",
+      "inertial_apparent_dec_deg": 24.408923613,
+      "inertial_apparent_ra_deg": 65.528614975,
+      "jd_tt": 2459957.3170105,
+      "raw_file": "raw/mars-event-01.txt"
+    },
+    {
+      "body": "mars",
+      "inertial_apparent_dec_deg": 24.408908234,
+      "inertial_apparent_ra_deg": 65.528612929,
+      "jd_tt": 2459957.3232605,
+      "raw_file": "raw/mars-event-01.txt"
+    },
+    {
+      "body": "mars",
+      "inertial_apparent_dec_deg": 24.408892915,
+      "inertial_apparent_ra_deg": 65.52861143,
+      "jd_tt": 2459957.3295105,
+      "raw_file": "raw/mars-event-01.txt"
+    },
+    {
+      "body": "mars",
+      "inertial_apparent_dec_deg": 24.408877654,
+      "inertial_apparent_ra_deg": 65.528610477,
+      "jd_tt": 2459957.3357605,
+      "raw_file": "raw/mars-event-01.txt"
+    },
+    {
+      "body": "mars",
+      "inertial_apparent_dec_deg": 24.408862451,
+      "inertial_apparent_ra_deg": 65.528610071,
+      "jd_tt": 2459957.3420105,
+      "raw_file": "raw/mars-event-01.txt"
+    },
+    {
+      "body": "mars",
+      "inertial_apparent_dec_deg": 24.408847308,
+      "inertial_apparent_ra_deg": 65.528610211,
+      "jd_tt": 2459957.3482605,
+      "raw_file": "raw/mars-event-01.txt"
+    },
+    {
+      "body": "mars",
+      "inertial_apparent_dec_deg": 24.408832223,
+      "inertial_apparent_ra_deg": 65.528610898,
+      "jd_tt": 2459957.3545105,
+      "raw_file": "raw/mars-event-01.txt"
+    },
+    {
+      "body": "mars",
+      "inertial_apparent_dec_deg": 24.408817197,
+      "inertial_apparent_ra_deg": 65.528612131,
+      "jd_tt": 2459957.3607605,
+      "raw_file": "raw/mars-event-01.txt"
+    },
+    {
+      "body": "mars",
+      "inertial_apparent_dec_deg": 24.40880223,
+      "inertial_apparent_ra_deg": 65.528613911,
+      "jd_tt": 2459957.3670105,
+      "raw_file": "raw/mars-event-01.txt"
+    },
+    {
+      "body": "mars",
+      "inertial_apparent_dec_deg": 24.408787322,
+      "inertial_apparent_ra_deg": 65.528616237,
+      "jd_tt": 2459957.3732605,
+      "raw_file": "raw/mars-event-01.txt"
+    },
+    {
+      "body": "mars",
+      "inertial_apparent_dec_deg": 24.408772472,
+      "inertial_apparent_ra_deg": 65.528619109,
+      "jd_tt": 2459957.3795105,
+      "raw_file": "raw/mars-event-01.txt"
+    },
+    {
+      "body": "mars",
+      "inertial_apparent_dec_deg": 24.408757682,
+      "inertial_apparent_ra_deg": 65.528622528,
+      "jd_tt": 2459957.3857605,
+      "raw_file": "raw/mars-event-01.txt"
+    },
+    {
+      "body": "mars",
+      "inertial_apparent_dec_deg": 24.40874295,
+      "inertial_apparent_ra_deg": 65.528626493,
+      "jd_tt": 2459957.3920105,
+      "raw_file": "raw/mars-event-01.txt"
+    },
+    {
+      "body": "mars",
+      "inertial_apparent_dec_deg": 24.408728277,
+      "inertial_apparent_ra_deg": 65.528631003,
+      "jd_tt": 2459957.3982605,
+      "raw_file": "raw/mars-event-01.txt"
+    },
+    {
+      "body": "mars",
+      "inertial_apparent_dec_deg": 24.408713662,
+      "inertial_apparent_ra_deg": 65.52863606,
+      "jd_tt": 2459957.4045105,
+      "raw_file": "raw/mars-event-01.txt"
+    },
+    {
+      "body": "mars",
+      "inertial_apparent_dec_deg": 24.408699107,
+      "inertial_apparent_ra_deg": 65.528641664,
+      "jd_tt": 2459957.4107605,
+      "raw_file": "raw/mars-event-01.txt"
+    },
+    {
+      "body": "mars",
+      "inertial_apparent_dec_deg": 24.40868461,
+      "inertial_apparent_ra_deg": 65.528647813,
+      "jd_tt": 2459957.4170105,
+      "raw_file": "raw/mars-event-01.txt"
+    },
+    {
+      "body": "mars",
+      "inertial_apparent_dec_deg": 24.408670172,
+      "inertial_apparent_ra_deg": 65.528654508,
+      "jd_tt": 2459957.4232605,
+      "raw_file": "raw/mars-event-01.txt"
+    },
+    {
+      "body": "mars",
+      "inertial_apparent_dec_deg": 24.408655793,
+      "inertial_apparent_ra_deg": 65.528661749,
+      "jd_tt": 2459957.4295105,
+      "raw_file": "raw/mars-event-01.txt"
+    },
+    {
+      "body": "mars",
+      "inertial_apparent_dec_deg": 24.408641472,
+      "inertial_apparent_ra_deg": 65.528669536,
+      "jd_tt": 2459957.4357605,
+      "raw_file": "raw/mars-event-01.txt"
+    },
+    {
+      "body": "mars",
+      "inertial_apparent_dec_deg": 24.40862721,
+      "inertial_apparent_ra_deg": 65.528677869,
+      "jd_tt": 2459957.4420105,
+      "raw_file": "raw/mars-event-01.txt"
+    },
+    {
+      "body": "mars",
+      "inertial_apparent_dec_deg": 24.408613008,
+      "inertial_apparent_ra_deg": 65.528686748,
+      "jd_tt": 2459957.4482605,
+      "raw_file": "raw/mars-event-01.txt"
+    },
+    {
+      "body": "mars",
+      "inertial_apparent_dec_deg": 24.408598864,
+      "inertial_apparent_ra_deg": 65.528696173,
+      "jd_tt": 2459957.4545105,
+      "raw_file": "raw/mars-event-01.txt"
+    },
+    {
+      "body": "mars",
+      "inertial_apparent_dec_deg": 24.408584778,
+      "inertial_apparent_ra_deg": 65.528706143,
+      "jd_tt": 2459957.4607605,
+      "raw_file": "raw/mars-event-01.txt"
+    },
+    {
+      "body": "mars",
+      "inertial_apparent_dec_deg": 24.408570752,
+      "inertial_apparent_ra_deg": 65.528716659,
+      "jd_tt": 2459957.4670105,
+      "raw_file": "raw/mars-event-01.txt"
+    },
+    {
+      "body": "mars",
+      "inertial_apparent_dec_deg": 24.408556784,
+      "inertial_apparent_ra_deg": 65.528727721,
+      "jd_tt": 2459957.4732605,
+      "raw_file": "raw/mars-event-01.txt"
+    },
+    {
+      "body": "mars",
+      "inertial_apparent_dec_deg": 24.408542876,
+      "inertial_apparent_ra_deg": 65.528739328,
+      "jd_tt": 2459957.4795105,
+      "raw_file": "raw/mars-event-01.txt"
+    },
+    {
+      "body": "mars",
+      "inertial_apparent_dec_deg": 24.408529026,
+      "inertial_apparent_ra_deg": 65.528751482,
+      "jd_tt": 2459957.4857605,
+      "raw_file": "raw/mars-event-01.txt"
+    },
+    {
+      "body": "mars",
+      "inertial_apparent_dec_deg": 24.408515234,
+      "inertial_apparent_ra_deg": 65.52876418,
+      "jd_tt": 2459957.4920105,
+      "raw_file": "raw/mars-event-01.txt"
+    },
+    {
+      "body": "mars",
+      "inertial_apparent_dec_deg": 24.408501502,
+      "inertial_apparent_ra_deg": 65.528777424,
+      "jd_tt": 2459957.4982605,
+      "raw_file": "raw/mars-event-01.txt"
+    },
+    {
+      "body": "mars",
+      "inertial_apparent_dec_deg": 24.408474214,
+      "inertial_apparent_ra_deg": 65.528805549,
+      "jd_tt": 2459957.5107605,
+      "raw_file": "raw/mars-event-01.txt"
+    },
+    {
+      "body": "mars",
+      "inertial_apparent_dec_deg": 24.408447161,
+      "inertial_apparent_ra_deg": 65.528835855,
+      "jd_tt": 2459957.5232605,
+      "raw_file": "raw/mars-event-01.txt"
+    },
+    {
+      "body": "mars",
+      "inertial_apparent_dec_deg": 25.574603577,
+      "inertial_apparent_ra_deg": 89.576660947,
+      "jd_tt": 2460028.8656311,
+      "raw_file": "raw/mars-event-02.txt"
+    },
+    {
+      "body": "mars",
+      "inertial_apparent_dec_deg": 25.574311168,
+      "inertial_apparent_ra_deg": 89.593392956,
+      "jd_tt": 2460028.8968811,
+      "raw_file": "raw/mars-event-02.txt"
+    },
+    {
+      "body": "mars",
+      "inertial_apparent_dec_deg": 25.574017043,
+      "inertial_apparent_ra_deg": 89.610127732,
+      "jd_tt": 2460028.9281311,
+      "raw_file": "raw/mars-event-02.txt"
+    },
+    {
+      "body": "mars",
+      "inertial_apparent_dec_deg": 25.573721198,
+      "inertial_apparent_ra_deg": 89.626865272,
+      "jd_tt": 2460028.9593811,
+      "raw_file": "raw/mars-event-02.txt"
+    },
+    {
+      "body": "mars",
+      "inertial_apparent_dec_deg": 25.573423634,
+      "inertial_apparent_ra_deg": 89.643605574,
+      "jd_tt": 2460028.9906311,
+      "raw_file": "raw/mars-event-02.txt"
+    },
+    {
+      "body": "mars",
+      "inertial_apparent_dec_deg": 25.57312435,
+      "inertial_apparent_ra_deg": 89.660348634,
+      "jd_tt": 2460029.0218811,
+      "raw_file": "raw/mars-event-02.txt"
+    },
+    {
+      "body": "mars",
+      "inertial_apparent_dec_deg": 25.572823344,
+      "inertial_apparent_ra_deg": 89.677094449,
+      "jd_tt": 2460029.0531311,
+      "raw_file": "raw/mars-event-02.txt"
+    },
+    {
+      "body": "mars",
+      "inertial_apparent_dec_deg": 25.572520616,
+      "inertial_apparent_ra_deg": 89.693843017,
+      "jd_tt": 2460029.0843811,
+      "raw_file": "raw/mars-event-02.txt"
+    },
+    {
+      "body": "mars",
+      "inertial_apparent_dec_deg": 25.572216165,
+      "inertial_apparent_ra_deg": 89.710594335,
+      "jd_tt": 2460029.1156311,
+      "raw_file": "raw/mars-event-02.txt"
+    },
+    {
+      "body": "mars",
+      "inertial_apparent_dec_deg": 21.710737717,
+      "inertial_apparent_ra_deg": 122.415703741,
+      "jd_tt": 2460085.509005,
+      "raw_file": "raw/mars-event-02.txt"
+    },
+    {
+      "body": "mars",
+      "inertial_apparent_dec_deg": 21.706650866,
+      "inertial_apparent_ra_deg": 122.434377026,
+      "jd_tt": 2460085.540255,
+      "raw_file": "raw/mars-event-02.txt"
+    },
+    {
+      "body": "mars",
+      "inertial_apparent_dec_deg": 21.702561886,
+      "inertial_apparent_ra_deg": 122.453050266,
+      "jd_tt": 2460085.571505,
+      "raw_file": "raw/mars-event-02.txt"
+    },
+    {
+      "body": "mars",
+      "inertial_apparent_dec_deg": 21.698470779,
+      "inertial_apparent_ra_deg": 122.471723458,
+      "jd_tt": 2460085.602755,
+      "raw_file": "raw/mars-event-02.txt"
+    },
+    {
+      "body": "mars",
+      "inertial_apparent_dec_deg": 21.694377545,
+      "inertial_apparent_ra_deg": 122.490396602,
+      "jd_tt": 2460085.634005,
+      "raw_file": "raw/mars-event-02.txt"
+    },
+    {
+      "body": "mars",
+      "inertial_apparent_dec_deg": 21.690282184,
+      "inertial_apparent_ra_deg": 122.509069697,
+      "jd_tt": 2460085.665255,
+      "raw_file": "raw/mars-event-02.txt"
+    },
+    {
+      "body": "mars",
+      "inertial_apparent_dec_deg": 21.686184696,
+      "inertial_apparent_ra_deg": 122.527742742,
+      "jd_tt": 2460085.696505,
+      "raw_file": "raw/mars-event-02.txt"
+    },
+    {
+      "body": "mars",
+      "inertial_apparent_dec_deg": 21.682085083,
+      "inertial_apparent_ra_deg": 122.546415736,
+      "jd_tt": 2460085.727755,
+      "raw_file": "raw/mars-event-02.txt"
+    },
+    {
+      "body": "mars",
+      "inertial_apparent_dec_deg": 21.677983343,
+      "inertial_apparent_ra_deg": 122.565088678,
+      "jd_tt": 2460085.759005,
+      "raw_file": "raw/mars-event-02.txt"
+    },
+    {
+      "body": "mars",
+      "inertial_apparent_dec_deg": 10.282948208,
+      "inertial_apparent_ra_deg": 158.106165632,
+      "jd_tt": 2460146.2363059,
+      "raw_file": "raw/mars-event-02.txt"
+    },
+    {
+      "body": "mars",
+      "inertial_apparent_dec_deg": 10.27559541,
+      "inertial_apparent_ra_deg": 158.124207199,
+      "jd_tt": 2460146.2675559,
+      "raw_file": "raw/mars-event-02.txt"
+    },
+    {
+      "body": "mars",
+      "inertial_apparent_dec_deg": 10.268241478,
+      "inertial_apparent_ra_deg": 158.142248583,
+      "jd_tt": 2460146.2988059,
+      "raw_file": "raw/mars-event-02.txt"
+    },
+    {
+      "body": "mars",
+      "inertial_apparent_dec_deg": 10.260886411,
+      "inertial_apparent_ra_deg": 158.160289784,
+      "jd_tt": 2460146.3300559,
+      "raw_file": "raw/mars-event-02.txt"
+    },
+    {
+      "body": "mars",
+      "inertial_apparent_dec_deg": 10.253530212,
+      "inertial_apparent_ra_deg": 158.178330803,
+      "jd_tt": 2460146.3613059,
+      "raw_file": "raw/mars-event-02.txt"
+    },
+    {
+      "body": "mars",
+      "inertial_apparent_dec_deg": 10.24617288,
+      "inertial_apparent_ra_deg": 158.196371639,
+      "jd_tt": 2460146.3925559,
+      "raw_file": "raw/mars-event-02.txt"
+    },
+    {
+      "body": "mars",
+      "inertial_apparent_dec_deg": 10.238814417,
+      "inertial_apparent_ra_deg": 158.214412294,
+      "jd_tt": 2460146.4238059,
+      "raw_file": "raw/mars-event-02.txt"
+    },
+    {
+      "body": "mars",
+      "inertial_apparent_dec_deg": 10.231454822,
+      "inertial_apparent_ra_deg": 158.232452767,
+      "jd_tt": 2460146.4550559,
+      "raw_file": "raw/mars-event-02.txt"
+    },
+    {
+      "body": "mars",
+      "inertial_apparent_dec_deg": 10.224094098,
+      "inertial_apparent_ra_deg": 158.250493058,
+      "jd_tt": 2460146.4863059,
+      "raw_file": "raw/mars-event-02.txt"
+    },
+    {
+      "body": "mars",
+      "inertial_apparent_dec_deg": 2.02053809,
+      "inertial_apparent_ra_deg": 177.158319331,
+      "jd_tt": 2460179.2326133,
+      "raw_file": "raw/mars-event-02.txt"
+    },
+    {
+      "body": "mars",
+      "inertial_apparent_dec_deg": 2.012364383,
+      "inertial_apparent_ra_deg": 177.176490485,
+      "jd_tt": 2460179.2638633,
+      "raw_file": "raw/mars-event-02.txt"
+    },
+    {
+      "body": "mars",
+      "inertial_apparent_dec_deg": 2.004190281,
+      "inertial_apparent_ra_deg": 177.194662104,
+      "jd_tt": 2460179.2951133,
+      "raw_file": "raw/mars-event-02.txt"
+    },
+    {
+      "body": "mars",
+      "inertial_apparent_dec_deg": 1.996015786,
+      "inertial_apparent_ra_deg": 177.212834189,
+      "jd_tt": 2460179.3263633,
+      "raw_file": "raw/mars-event-02.txt"
+    },
+    {
+      "body": "mars",
+      "inertial_apparent_dec_deg": 1.987840897,
+      "inertial_apparent_ra_deg": 177.23100674,
+      "jd_tt": 2460179.3576133,
+      "raw_file": "raw/mars-event-02.txt"
+    },
+    {
+      "body": "mars",
+      "inertial_apparent_dec_deg": 1.979665617,
+      "inertial_apparent_ra_deg": 177.249179759,
+      "jd_tt": 2460179.3888633,
+      "raw_file": "raw/mars-event-02.txt"
+    },
+    {
+      "body": "mars",
+      "inertial_apparent_dec_deg": 1.971489946,
+      "inertial_apparent_ra_deg": 177.267353245,
+      "jd_tt": 2460179.4201133,
+      "raw_file": "raw/mars-event-02.txt"
+    },
+    {
+      "body": "mars",
+      "inertial_apparent_dec_deg": 1.963313884,
+      "inertial_apparent_ra_deg": 177.285527199,
+      "jd_tt": 2460179.4513633,
+      "raw_file": "raw/mars-event-02.txt"
+    },
+    {
+      "body": "mars",
+      "inertial_apparent_dec_deg": 1.955137433,
+      "inertial_apparent_ra_deg": 177.303701622,
+      "jd_tt": 2460179.4826133,
+      "raw_file": "raw/mars-event-02.txt"
+    },
+    {
+      "body": "mars",
+      "inertial_apparent_dec_deg": -14.990523631,
+      "inertial_apparent_ra_deg": 218.448875315,
+      "jd_tt": 2460246.0446702,
+      "raw_file": "raw/mars-event-02.txt"
+    },
+    {
+      "body": "mars",
+      "inertial_apparent_dec_deg": -14.997520075,
+      "inertial_apparent_ra_deg": 218.469954534,
+      "jd_tt": 2460246.0759202,
+      "raw_file": "raw/mars-event-02.txt"
+    },
+    {
+      "body": "mars",
+      "inertial_apparent_dec_deg": -15.00451483,
+      "inertial_apparent_ra_deg": 218.491035928,
+      "jd_tt": 2460246.1071702,
+      "raw_file": "raw/mars-event-02.txt"
+    },
+    {
+      "body": "mars",
+      "inertial_apparent_dec_deg": -15.011507893,
+      "inertial_apparent_ra_deg": 218.512119496,
+      "jd_tt": 2460246.1384202,
+      "raw_file": "raw/mars-event-02.txt"
+    },
+    {
+      "body": "mars",
+      "inertial_apparent_dec_deg": -15.018499263,
+      "inertial_apparent_ra_deg": 218.533205241,
+      "jd_tt": 2460246.1696702,
+      "raw_file": "raw/mars-event-02.txt"
+    },
+    {
+      "body": "mars",
+      "inertial_apparent_dec_deg": -15.025488939,
+      "inertial_apparent_ra_deg": 218.554293163,
+      "jd_tt": 2460246.2009202,
+      "raw_file": "raw/mars-event-02.txt"
+    },
+    {
+      "body": "mars",
+      "inertial_apparent_dec_deg": -15.032476921,
+      "inertial_apparent_ra_deg": 218.575383263,
+      "jd_tt": 2460246.2321702,
+      "raw_file": "raw/mars-event-02.txt"
+    },
+    {
+      "body": "mars",
+      "inertial_apparent_dec_deg": -15.039463207,
+      "inertial_apparent_ra_deg": 218.596475541,
+      "jd_tt": 2460246.2634202,
+      "raw_file": "raw/mars-event-02.txt"
+    },
+    {
+      "body": "mars",
+      "inertial_apparent_dec_deg": -15.046447795,
+      "inertial_apparent_ra_deg": 218.617569998,
+      "jd_tt": 2460246.2946702,
+      "raw_file": "raw/mars-event-02.txt"
+    },
+    {
+      "body": "mars",
+      "inertial_apparent_dec_deg": -17.979371293,
+      "inertial_apparent_ra_deg": 228.270905445,
+      "jd_tt": 2460260.2586462,
+      "raw_file": "raw/mars-event-03.txt"
+    },
+    {
+      "body": "mars",
+      "inertial_apparent_dec_deg": -17.985470479,
+      "inertial_apparent_ra_deg": 228.29303156,
+      "jd_tt": 2460260.2898962,
+      "raw_file": "raw/mars-event-03.txt"
+    },
+    {
+      "body": "mars",
+      "inertial_apparent_dec_deg": -17.991567388,
+      "inertial_apparent_ra_deg": 228.315160044,
+      "jd_tt": 2460260.3211462,
+      "raw_file": "raw/mars-event-03.txt"
+    },
+    {
+      "body": "mars",
+      "inertial_apparent_dec_deg": -17.997662019,
+      "inertial_apparent_ra_deg": 228.337290898,
+      "jd_tt": 2460260.3523962,
+      "raw_file": "raw/mars-event-03.txt"
+    },
+    {
+      "body": "mars",
+      "inertial_apparent_dec_deg": -18.003754371,
+      "inertial_apparent_ra_deg": 228.359424121,
+      "jd_tt": 2460260.3836462,
+      "raw_file": "raw/mars-event-03.txt"
+    },
+    {
+      "body": "mars",
+      "inertial_apparent_dec_deg": -18.009844443,
+      "inertial_apparent_ra_deg": 228.381559713,
+      "jd_tt": 2460260.4148962,
+      "raw_file": "raw/mars-event-03.txt"
+    },
+    {
+      "body": "mars",
+      "inertial_apparent_dec_deg": -18.015932233,
+      "inertial_apparent_ra_deg": 228.403697675,
+      "jd_tt": 2460260.4461462,
+      "raw_file": "raw/mars-event-03.txt"
+    },
+    {
+      "body": "mars",
+      "inertial_apparent_dec_deg": -18.02201774,
+      "inertial_apparent_ra_deg": 228.425838006,
+      "jd_tt": 2460260.4773962,
+      "raw_file": "raw/mars-event-03.txt"
+    },
+    {
+      "body": "mars",
+      "inertial_apparent_dec_deg": -18.028100962,
+      "inertial_apparent_ra_deg": 228.447980707,
+      "jd_tt": 2460260.5086462,
+      "raw_file": "raw/mars-event-03.txt"
+    },
+    {
+      "body": "mars",
+      "inertial_apparent_dec_deg": -21.001230387,
+      "inertial_apparent_ra_deg": 302.748071556,
+      "jd_tt": 2460354.6298052,
+      "raw_file": "raw/mars-event-03.txt"
+    },
+    {
+      "body": "mars",
+      "inertial_apparent_dec_deg": -20.996302659,
+      "inertial_apparent_ra_deg": 302.773243917,
+      "jd_tt": 2460354.6610552,
+      "raw_file": "raw/mars-event-03.txt"
+    },
+    {
+      "body": "mars",
+      "inertial_apparent_dec_deg": -20.991371246,
+      "inertial_apparent_ra_deg": 302.798415053,
+      "jd_tt": 2460354.6923052,
+      "raw_file": "raw/mars-event-03.txt"
+    },
+    {
+      "body": "mars",
+      "inertial_apparent_dec_deg": -20.986436148,
+      "inertial_apparent_ra_deg": 302.823584962,
+      "jd_tt": 2460354.7235552,
+      "raw_file": "raw/mars-event-03.txt"
+    },
+    {
+      "body": "mars",
+      "inertial_apparent_dec_deg": -20.981497368,
+      "inertial_apparent_ra_deg": 302.848753645,
+      "jd_tt": 2460354.7548052,
+      "raw_file": "raw/mars-event-03.txt"
+    },
+    {
+      "body": "mars",
+      "inertial_apparent_dec_deg": -20.976554905,
+      "inertial_apparent_ra_deg": 302.873921099,
+      "jd_tt": 2460354.7860552,
+      "raw_file": "raw/mars-event-03.txt"
+    },
+    {
+      "body": "mars",
+      "inertial_apparent_dec_deg": -20.971608762,
+      "inertial_apparent_ra_deg": 302.899087324,
+      "jd_tt": 2460354.8173052,
+      "raw_file": "raw/mars-event-03.txt"
+    },
+    {
+      "body": "mars",
+      "inertial_apparent_dec_deg": -20.96665894,
+      "inertial_apparent_ra_deg": 302.924252319,
+      "jd_tt": 2460354.8485552,
+      "raw_file": "raw/mars-event-03.txt"
+    },
+    {
+      "body": "mars",
+      "inertial_apparent_dec_deg": -20.961705438,
+      "inertial_apparent_ra_deg": 302.949416083,
+      "jd_tt": 2460354.8798052,
+      "raw_file": "raw/mars-event-03.txt"
+    },
+    {
+      "body": "mars",
+      "inertial_apparent_dec_deg": -7.35278669,
+      "inertial_apparent_ra_deg": 345.971887279,
+      "jd_tt": 2460411.2341888,
+      "raw_file": "raw/mars-event-03.txt"
+    },
+    {
+      "body": "mars",
+      "inertial_apparent_dec_deg": -7.343477887,
+      "inertial_apparent_ra_deg": 345.994494505,
+      "jd_tt": 2460411.2654388,
+      "raw_file": "raw/mars-event-03.txt"
+    },
+    {
+      "body": "mars",
+      "inertial_apparent_dec_deg": -7.334168129,
+      "inertial_apparent_ra_deg": 346.017100615,
+      "jd_tt": 2460411.2966888,
+      "raw_file": "raw/mars-event-03.txt"
+    },
+    {
+      "body": "mars",
+      "inertial_apparent_dec_deg": -7.324857419,
+      "inertial_apparent_ra_deg": 346.039705611,
+      "jd_tt": 2460411.3279388,
+      "raw_file": "raw/mars-event-03.txt"
+    },
+    {
+      "body": "mars",
+      "inertial_apparent_dec_deg": -7.315545757,
+      "inertial_apparent_ra_deg": 346.062309494,
+      "jd_tt": 2460411.3591888,
+      "raw_file": "raw/mars-event-03.txt"
+    },
+    {
+      "body": "mars",
+      "inertial_apparent_dec_deg": -7.306233146,
+      "inertial_apparent_ra_deg": 346.084912264,
+      "jd_tt": 2460411.3904388,
+      "raw_file": "raw/mars-event-03.txt"
+    },
+    {
+      "body": "mars",
+      "inertial_apparent_dec_deg": -7.296919587,
+      "inertial_apparent_ra_deg": 346.107513922,
+      "jd_tt": 2460411.4216888,
+      "raw_file": "raw/mars-event-03.txt"
+    },
+    {
+      "body": "mars",
+      "inertial_apparent_dec_deg": -7.287605082,
+      "inertial_apparent_ra_deg": 346.130114468,
+      "jd_tt": 2460411.4529388,
+      "raw_file": "raw/mars-event-03.txt"
+    },
+    {
+      "body": "mars",
+      "inertial_apparent_dec_deg": -7.278289632,
+      "inertial_apparent_ra_deg": 346.152713904,
+      "jd_tt": 2460411.4841888,
+      "raw_file": "raw/mars-event-03.txt"
+    },
+    {
+      "body": "mars",
+      "inertial_apparent_dec_deg": -1.782142543,
+      "inertial_apparent_ra_deg": 359.071900552,
+      "jd_tt": 2460429.5639762,
+      "raw_file": "raw/mars-event-03.txt"
+    },
+    {
+      "body": "mars",
+      "inertial_apparent_dec_deg": -1.772544453,
+      "inertial_apparent_ra_deg": 359.094018505,
+      "jd_tt": 2460429.5952262,
+      "raw_file": "raw/mars-event-03.txt"
+    },
+    {
+      "body": "mars",
+      "inertial_apparent_dec_deg": -1.76294632,
+      "inertial_apparent_ra_deg": 359.116135919,
+      "jd_tt": 2460429.6264762,
+      "raw_file": "raw/mars-event-03.txt"
+    },
+    {
+      "body": "mars",
+      "inertial_apparent_dec_deg": -1.753348146,
+      "inertial_apparent_ra_deg": 359.138252795,
+      "jd_tt": 2460429.6577262,
+      "raw_file": "raw/mars-event-03.txt"
+    },
+    {
+      "body": "mars",
+      "inertial_apparent_dec_deg": -1.743749931,
+      "inertial_apparent_ra_deg": 359.160369133,
+      "jd_tt": 2460429.6889762,
+      "raw_file": "raw/mars-event-03.txt"
+    },
+    {
+      "body": "mars",
+      "inertial_apparent_dec_deg": -1.734151678,
+      "inertial_apparent_ra_deg": 359.182484934,
+      "jd_tt": 2460429.7202262,
+      "raw_file": "raw/mars-event-03.txt"
+    },
+    {
+      "body": "mars",
+      "inertial_apparent_dec_deg": -1.724553387,
+      "inertial_apparent_ra_deg": 359.204600199,
+      "jd_tt": 2460429.7514762,
+      "raw_file": "raw/mars-event-03.txt"
+    },
+    {
+      "body": "mars",
+      "inertial_apparent_dec_deg": -1.714955062,
+      "inertial_apparent_ra_deg": 359.226714929,
+      "jd_tt": 2460429.7827262,
+      "raw_file": "raw/mars-event-03.txt"
+    },
+    {
+      "body": "mars",
+      "inertial_apparent_dec_deg": -1.705356703,
+      "inertial_apparent_ra_deg": 359.248829125,
+      "jd_tt": 2460429.8139762,
+      "raw_file": "raw/mars-event-03.txt"
+    },
+    {
+      "body": "mars",
+      "inertial_apparent_dec_deg": 18.452619957,
+      "inertial_apparent_ra_deg": 53.768254099,
+      "jd_tt": 2460506.9624819,
+      "raw_file": "raw/mars-event-03.txt"
+    },
+    {
+      "body": "mars",
+      "inertial_apparent_dec_deg": 18.458114905,
+      "inertial_apparent_ra_deg": 53.790593164,
+      "jd_tt": 2460506.9937319,
+      "raw_file": "raw/mars-event-03.txt"
+    },
+    {
+      "body": "mars",
+      "inertial_apparent_dec_deg": 18.463606931,
+      "inertial_apparent_ra_deg": 53.812932238,
+      "jd_tt": 2460507.0249819,
+      "raw_file": "raw/mars-event-03.txt"
+    },
+    {
+      "body": "mars",
+      "inertial_apparent_dec_deg": 18.469096033,
+      "inertial_apparent_ra_deg": 53.835271319,
+      "jd_tt": 2460507.0562319,
+      "raw_file": "raw/mars-event-03.txt"
+    },
+    {
+      "body": "mars",
+      "inertial_apparent_dec_deg": 18.474582212,
+      "inertial_apparent_ra_deg": 53.857610408,
+      "jd_tt": 2460507.0874819,
+      "raw_file": "raw/mars-event-03.txt"
+    },
+    {
+      "body": "mars",
+      "inertial_apparent_dec_deg": 18.480065467,
+      "inertial_apparent_ra_deg": 53.879949503,
+      "jd_tt": 2460507.1187319,
+      "raw_file": "raw/mars-event-03.txt"
+    },
+    {
+      "body": "mars",
+      "inertial_apparent_dec_deg": 18.485545797,
+      "inertial_apparent_ra_deg": 53.902288604,
+      "jd_tt": 2460507.1499819,
+      "raw_file": "raw/mars-event-03.txt"
+    },
+    {
+      "body": "mars",
+      "inertial_apparent_dec_deg": 18.491023202,
+      "inertial_apparent_ra_deg": 53.924627711,
+      "jd_tt": 2460507.1812319,
+      "raw_file": "raw/mars-event-03.txt"
+    },
+    {
+      "body": "mars",
+      "inertial_apparent_dec_deg": 18.496497681,
+      "inertial_apparent_ra_deg": 53.946966823,
+      "jd_tt": 2460507.2124819,
+      "raw_file": "raw/mars-event-03.txt"
+    },
+    {
+      "body": "mars",
+      "inertial_apparent_dec_deg": 22.338792373,
+      "inertial_apparent_ra_deg": 75.109708396,
+      "jd_tt": 2460537.0157562,
+      "raw_file": "raw/mars-event-04.txt"
+    },
+    {
+      "body": "mars",
+      "inertial_apparent_dec_deg": 22.341355438,
+      "inertial_apparent_ra_deg": 75.131535997,
+      "jd_tt": 2460537.0470062,
+      "raw_file": "raw/mars-event-04.txt"
+    },
+    {
+      "body": "mars",
+      "inertial_apparent_dec_deg": 22.343915479,
+      "inertial_apparent_ra_deg": 75.153362371,
+      "jd_tt": 2460537.0782562,
+      "raw_file": "raw/mars-event-04.txt"
+    },
+    {
+      "body": "mars",
+      "inertial_apparent_dec_deg": 22.346472497,
+      "inertial_apparent_ra_deg": 75.175187517,
+      "jd_tt": 2460537.1095062,
+      "raw_file": "raw/mars-event-04.txt"
+    },
+    {
+      "body": "mars",
+      "inertial_apparent_dec_deg": 22.349026493,
+      "inertial_apparent_ra_deg": 75.197011433,
+      "jd_tt": 2460537.1407562,
+      "raw_file": "raw/mars-event-04.txt"
+    },
+    {
+      "body": "mars",
+      "inertial_apparent_dec_deg": 22.351577466,
+      "inertial_apparent_ra_deg": 75.218834119,
+      "jd_tt": 2460537.1720062,
+      "raw_file": "raw/mars-event-04.txt"
+    },
+    {
+      "body": "mars",
+      "inertial_apparent_dec_deg": 22.354125417,
+      "inertial_apparent_ra_deg": 75.240655573,
+      "jd_tt": 2460537.2032562,
+      "raw_file": "raw/mars-event-04.txt"
+    },
+    {
+      "body": "mars",
+      "inertial_apparent_dec_deg": 22.356670347,
+      "inertial_apparent_ra_deg": 75.262475793,
+      "jd_tt": 2460537.2345062,
+      "raw_file": "raw/mars-event-04.txt"
+    },
+    {
+      "body": "mars",
+      "inertial_apparent_dec_deg": 22.359212255,
+      "inertial_apparent_ra_deg": 75.284294779,
+      "jd_tt": 2460537.2657562,
+      "raw_file": "raw/mars-event-04.txt"
+    },
+    {
+      "body": "jupiter",
+      "inertial_apparent_dec_deg": 10.344923432,
+      "inertial_apparent_ra_deg": 27.958300221,
+      "jd_tt": 2460081.098053,
+      "raw_file": "raw/jupiter-event-01.txt"
+    },
+    {
+      "body": "jupiter",
+      "inertial_apparent_dec_deg": 10.347411836,
+      "inertial_apparent_ra_deg": 27.965107265,
+      "jd_tt": 2460081.129303,
+      "raw_file": "raw/jupiter-event-01.txt"
+    },
+    {
+      "body": "jupiter",
+      "inertial_apparent_dec_deg": 10.349899808,
+      "inertial_apparent_ra_deg": 27.971913771,
+      "jd_tt": 2460081.160553,
+      "raw_file": "raw/jupiter-event-01.txt"
+    },
+    {
+      "body": "jupiter",
+      "inertial_apparent_dec_deg": 10.35238735,
+      "inertial_apparent_ra_deg": 27.978719742,
+      "jd_tt": 2460081.191803,
+      "raw_file": "raw/jupiter-event-01.txt"
+    },
+    {
+      "body": "jupiter",
+      "inertial_apparent_dec_deg": 10.35487446,
+      "inertial_apparent_ra_deg": 27.985525177,
+      "jd_tt": 2460081.223053,
+      "raw_file": "raw/jupiter-event-01.txt"
+    },
+    {
+      "body": "jupiter",
+      "inertial_apparent_dec_deg": 10.357361141,
+      "inertial_apparent_ra_deg": 27.992330078,
+      "jd_tt": 2460081.254303,
+      "raw_file": "raw/jupiter-event-01.txt"
+    },
+    {
+      "body": "jupiter",
+      "inertial_apparent_dec_deg": 10.359847391,
+      "inertial_apparent_ra_deg": 27.999134445,
+      "jd_tt": 2460081.285553,
+      "raw_file": "raw/jupiter-event-01.txt"
+    },
+    {
+      "body": "jupiter",
+      "inertial_apparent_dec_deg": 10.362333211,
+      "inertial_apparent_ra_deg": 28.005938279,
+      "jd_tt": 2460081.316803,
+      "raw_file": "raw/jupiter-event-01.txt"
+    },
+    {
+      "body": "jupiter",
+      "inertial_apparent_dec_deg": 10.364818602,
+      "inertial_apparent_ra_deg": 28.012741581,
+      "jd_tt": 2460081.348053,
+      "raw_file": "raw/jupiter-event-01.txt"
+    },
+    {
+      "body": "jupiter",
+      "inertial_apparent_dec_deg": 15.137715803,
+      "inertial_apparent_ra_deg": 43.190224765,
+      "jd_tt": 2460191.9417664,
+      "raw_file": "raw/jupiter-event-01.txt"
+    },
+    {
+      "body": "jupiter",
+      "inertial_apparent_dec_deg": 15.137679757,
+      "inertial_apparent_ra_deg": 43.190242191,
+      "jd_tt": 2460191.9542664,
+      "raw_file": "raw/jupiter-event-01.txt"
+    },
+    {
+      "body": "jupiter",
+      "inertial_apparent_dec_deg": 15.137643562,
+      "inertial_apparent_ra_deg": 43.190259099,
+      "jd_tt": 2460191.9667664,
+      "raw_file": "raw/jupiter-event-01.txt"
+    },
+    {
+      "body": "jupiter",
+      "inertial_apparent_dec_deg": 15.137625408,
+      "inertial_apparent_ra_deg": 43.190267358,
+      "jd_tt": 2460191.9730164,
+      "raw_file": "raw/jupiter-event-01.txt"
+    },
+    {
+      "body": "jupiter",
+      "inertial_apparent_dec_deg": 15.137607217,
+      "inertial_apparent_ra_deg": 43.190275487,
+      "jd_tt": 2460191.9792664,
+      "raw_file": "raw/jupiter-event-01.txt"
+    },
+    {
+      "body": "jupiter",
+      "inertial_apparent_dec_deg": 15.137588989,
+      "inertial_apparent_ra_deg": 43.190283487,
+      "jd_tt": 2460191.9855164,
+      "raw_file": "raw/jupiter-event-01.txt"
+    },
+    {
+      "body": "jupiter",
+      "inertial_apparent_dec_deg": 15.137570724,
+      "inertial_apparent_ra_deg": 43.190291356,
+      "jd_tt": 2460191.9917664,
+      "raw_file": "raw/jupiter-event-01.txt"
+    },
+    {
+      "body": "jupiter",
+      "inertial_apparent_dec_deg": 15.137552421,
+      "inertial_apparent_ra_deg": 43.190299096,
+      "jd_tt": 2460191.9980164,
+      "raw_file": "raw/jupiter-event-01.txt"
+    },
+    {
+      "body": "jupiter",
+      "inertial_apparent_dec_deg": 15.137534081,
+      "inertial_apparent_ra_deg": 43.190306706,
+      "jd_tt": 2460192.0042664,
+      "raw_file": "raw/jupiter-event-01.txt"
+    },
+    {
+      "body": "jupiter",
+      "inertial_apparent_dec_deg": 15.137515704,
+      "inertial_apparent_ra_deg": 43.190314187,
+      "jd_tt": 2460192.0105164,
+      "raw_file": "raw/jupiter-event-01.txt"
+    },
+    {
+      "body": "jupiter",
+      "inertial_apparent_dec_deg": 15.137497289,
+      "inertial_apparent_ra_deg": 43.190321537,
+      "jd_tt": 2460192.0167664,
+      "raw_file": "raw/jupiter-event-01.txt"
+    },
+    {
+      "body": "jupiter",
+      "inertial_apparent_dec_deg": 15.137478837,
+      "inertial_apparent_ra_deg": 43.190328757,
+      "jd_tt": 2460192.0230164,
+      "raw_file": "raw/jupiter-event-01.txt"
+    },
+    {
+      "body": "jupiter",
+      "inertial_apparent_dec_deg": 15.137460348,
+      "inertial_apparent_ra_deg": 43.190335848,
+      "jd_tt": 2460192.0292664,
+      "raw_file": "raw/jupiter-event-01.txt"
+    },
+    {
+      "body": "jupiter",
+      "inertial_apparent_dec_deg": 15.137441821,
+      "inertial_apparent_ra_deg": 43.190342809,
+      "jd_tt": 2460192.0355164,
+      "raw_file": "raw/jupiter-event-01.txt"
+    },
+    {
+      "body": "jupiter",
+      "inertial_apparent_dec_deg": 15.137423257,
+      "inertial_apparent_ra_deg": 43.190349639,
+      "jd_tt": 2460192.0417664,
+      "raw_file": "raw/jupiter-event-01.txt"
+    },
+    {
+      "body": "jupiter",
+      "inertial_apparent_dec_deg": 15.137404656,
+      "inertial_apparent_ra_deg": 43.19035634,
+      "jd_tt": 2460192.0480164,
+      "raw_file": "raw/jupiter-event-01.txt"
+    },
+    {
+      "body": "jupiter",
+      "inertial_apparent_dec_deg": 15.137386017,
+      "inertial_apparent_ra_deg": 43.190362911,
+      "jd_tt": 2460192.0542664,
+      "raw_file": "raw/jupiter-event-01.txt"
+    },
+    {
+      "body": "jupiter",
+      "inertial_apparent_dec_deg": 15.137367341,
+      "inertial_apparent_ra_deg": 43.190369352,
+      "jd_tt": 2460192.0605164,
+      "raw_file": "raw/jupiter-event-01.txt"
+    },
+    {
+      "body": "jupiter",
+      "inertial_apparent_dec_deg": 15.137348628,
+      "inertial_apparent_ra_deg": 43.190375662,
+      "jd_tt": 2460192.0667664,
+      "raw_file": "raw/jupiter-event-01.txt"
+    },
+    {
+      "body": "jupiter",
+      "inertial_apparent_dec_deg": 15.137329877,
+      "inertial_apparent_ra_deg": 43.190381843,
+      "jd_tt": 2460192.0730164,
+      "raw_file": "raw/jupiter-event-01.txt"
+    },
+    {
+      "body": "jupiter",
+      "inertial_apparent_dec_deg": 15.137311089,
+      "inertial_apparent_ra_deg": 43.190387894,
+      "jd_tt": 2460192.0792664,
+      "raw_file": "raw/jupiter-event-01.txt"
+    },
+    {
+      "body": "jupiter",
+      "inertial_apparent_dec_deg": 15.137292263,
+      "inertial_apparent_ra_deg": 43.190393815,
+      "jd_tt": 2460192.0855164,
+      "raw_file": "raw/jupiter-event-01.txt"
+    },
+    {
+      "body": "jupiter",
+      "inertial_apparent_dec_deg": 15.1372734,
+      "inertial_apparent_ra_deg": 43.190399605,
+      "jd_tt": 2460192.0917664,
+      "raw_file": "raw/jupiter-event-01.txt"
+    },
+    {
+      "body": "jupiter",
+      "inertial_apparent_dec_deg": 15.1372545,
+      "inertial_apparent_ra_deg": 43.190405266,
+      "jd_tt": 2460192.0980164,
+      "raw_file": "raw/jupiter-event-01.txt"
+    },
+    {
+      "body": "jupiter",
+      "inertial_apparent_dec_deg": 15.137235562,
+      "inertial_apparent_ra_deg": 43.190410796,
+      "jd_tt": 2460192.1042664,
+      "raw_file": "raw/jupiter-event-01.txt"
+    },
+    {
+      "body": "jupiter",
+      "inertial_apparent_dec_deg": 15.137216588,
+      "inertial_apparent_ra_deg": 43.190416197,
+      "jd_tt": 2460192.1105164,
+      "raw_file": "raw/jupiter-event-01.txt"
+    },
+    {
+      "body": "jupiter",
+      "inertial_apparent_dec_deg": 15.137197575,
+      "inertial_apparent_ra_deg": 43.190421467,
+      "jd_tt": 2460192.1167664,
+      "raw_file": "raw/jupiter-event-01.txt"
+    },
+    {
+      "body": "jupiter",
+      "inertial_apparent_dec_deg": 15.137178525,
+      "inertial_apparent_ra_deg": 43.190426607,
+      "jd_tt": 2460192.1230164,
+      "raw_file": "raw/jupiter-event-01.txt"
+    },
+    {
+      "body": "jupiter",
+      "inertial_apparent_dec_deg": 15.137159438,
+      "inertial_apparent_ra_deg": 43.190431617,
+      "jd_tt": 2460192.1292664,
+      "raw_file": "raw/jupiter-event-01.txt"
+    },
+    {
+      "body": "jupiter",
+      "inertial_apparent_dec_deg": 15.137140314,
+      "inertial_apparent_ra_deg": 43.190436497,
+      "jd_tt": 2460192.1355164,
+      "raw_file": "raw/jupiter-event-01.txt"
+    },
+    {
+      "body": "jupiter",
+      "inertial_apparent_dec_deg": 15.137121152,
+      "inertial_apparent_ra_deg": 43.190441247,
+      "jd_tt": 2460192.1417664,
+      "raw_file": "raw/jupiter-event-01.txt"
+    },
+    {
+      "body": "jupiter",
+      "inertial_apparent_dec_deg": 15.137101953,
+      "inertial_apparent_ra_deg": 43.190445866,
+      "jd_tt": 2460192.1480164,
+      "raw_file": "raw/jupiter-event-01.txt"
+    },
+    {
+      "body": "jupiter",
+      "inertial_apparent_dec_deg": 15.137082716,
+      "inertial_apparent_ra_deg": 43.190450356,
+      "jd_tt": 2460192.1542664,
+      "raw_file": "raw/jupiter-event-01.txt"
+    },
+    {
+      "body": "jupiter",
+      "inertial_apparent_dec_deg": 15.137063442,
+      "inertial_apparent_ra_deg": 43.190454715,
+      "jd_tt": 2460192.1605164,
+      "raw_file": "raw/jupiter-event-01.txt"
+    },
+    {
+      "body": "jupiter",
+      "inertial_apparent_dec_deg": 15.13704413,
+      "inertial_apparent_ra_deg": 43.190458944,
+      "jd_tt": 2460192.1667664,
+      "raw_file": "raw/jupiter-event-01.txt"
+    },
+    {
+      "body": "jupiter",
+      "inertial_apparent_dec_deg": 15.137024782,
+      "inertial_apparent_ra_deg": 43.190463043,
+      "jd_tt": 2460192.1730164,
+      "raw_file": "raw/jupiter-event-01.txt"
+    },
+    {
+      "body": "jupiter",
+      "inertial_apparent_dec_deg": 15.137005395,
+      "inertial_apparent_ra_deg": 43.190467011,
+      "jd_tt": 2460192.1792664,
+      "raw_file": "raw/jupiter-event-02.txt"
+    },
+    {
+      "body": "jupiter",
+      "inertial_apparent_dec_deg": 15.136985972,
+      "inertial_apparent_ra_deg": 43.190470849,
+      "jd_tt": 2460192.1855164,
+      "raw_file": "raw/jupiter-event-02.txt"
+    },
+    {
+      "body": "jupiter",
+      "inertial_apparent_dec_deg": 15.136966511,
+      "inertial_apparent_ra_deg": 43.190474557,
+      "jd_tt": 2460192.1917664,
+      "raw_file": "raw/jupiter-event-02.txt"
+    },
+    {
+      "body": "jupiter",
+      "inertial_apparent_dec_deg": 15.136947012,
+      "inertial_apparent_ra_deg": 43.190478135,
+      "jd_tt": 2460192.1980164,
+      "raw_file": "raw/jupiter-event-02.txt"
+    },
+    {
+      "body": "jupiter",
+      "inertial_apparent_dec_deg": 15.136927476,
+      "inertial_apparent_ra_deg": 43.190481583,
+      "jd_tt": 2460192.2042664,
+      "raw_file": "raw/jupiter-event-02.txt"
+    },
+    {
+      "body": "jupiter",
+      "inertial_apparent_dec_deg": 15.136907903,
+      "inertial_apparent_ra_deg": 43.1904849,
+      "jd_tt": 2460192.2105164,
+      "raw_file": "raw/jupiter-event-02.txt"
+    },
+    {
+      "body": "jupiter",
+      "inertial_apparent_dec_deg": 15.136888292,
+      "inertial_apparent_ra_deg": 43.190488087,
+      "jd_tt": 2460192.2167664,
+      "raw_file": "raw/jupiter-event-02.txt"
+    },
+    {
+      "body": "jupiter",
+      "inertial_apparent_dec_deg": 15.136848959,
+      "inertial_apparent_ra_deg": 43.19049407,
+      "jd_tt": 2460192.2292664,
+      "raw_file": "raw/jupiter-event-02.txt"
+    },
+    {
+      "body": "jupiter",
+      "inertial_apparent_dec_deg": 15.136809476,
+      "inertial_apparent_ra_deg": 43.190499532,
+      "jd_tt": 2460192.2417664,
+      "raw_file": "raw/jupiter-event-02.txt"
+    },
+    {
+      "body": "jupiter",
+      "inertial_apparent_dec_deg": 13.759890158,
+      "inertial_apparent_ra_deg": 38.975437461,
+      "jd_tt": 2460246.0446702,
+      "raw_file": "raw/jupiter-event-02.txt"
+    },
+    {
+      "body": "jupiter",
+      "inertial_apparent_dec_deg": 13.758613654,
+      "inertial_apparent_ra_deg": 38.971318964,
+      "jd_tt": 2460246.0759202,
+      "raw_file": "raw/jupiter-event-02.txt"
+    },
+    {
+      "body": "jupiter",
+      "inertial_apparent_dec_deg": 13.757337013,
+      "inertial_apparent_ra_deg": 38.967199955,
+      "jd_tt": 2460246.1071702,
+      "raw_file": "raw/jupiter-event-02.txt"
+    },
+    {
+      "body": "jupiter",
+      "inertial_apparent_dec_deg": 13.756060237,
+      "inertial_apparent_ra_deg": 38.963080436,
+      "jd_tt": 2460246.1384202,
+      "raw_file": "raw/jupiter-event-02.txt"
+    },
+    {
+      "body": "jupiter",
+      "inertial_apparent_dec_deg": 13.754783325,
+      "inertial_apparent_ra_deg": 38.958960411,
+      "jd_tt": 2460246.1696702,
+      "raw_file": "raw/jupiter-event-02.txt"
+    },
+    {
+      "body": "jupiter",
+      "inertial_apparent_dec_deg": 13.75350628,
+      "inertial_apparent_ra_deg": 38.954839883,
+      "jd_tt": 2460246.2009202,
+      "raw_file": "raw/jupiter-event-02.txt"
+    },
+    {
+      "body": "jupiter",
+      "inertial_apparent_dec_deg": 13.752229101,
+      "inertial_apparent_ra_deg": 38.950718854,
+      "jd_tt": 2460246.2321702,
+      "raw_file": "raw/jupiter-event-02.txt"
+    },
+    {
+      "body": "jupiter",
+      "inertial_apparent_dec_deg": 13.750951789,
+      "inertial_apparent_ra_deg": 38.946597328,
+      "jd_tt": 2460246.2634202,
+      "raw_file": "raw/jupiter-event-02.txt"
+    },
+    {
+      "body": "jupiter",
+      "inertial_apparent_dec_deg": 13.749674346,
+      "inertial_apparent_ra_deg": 38.942475307,
+      "jd_tt": 2460246.2946702,
+      "raw_file": "raw/jupiter-event-02.txt"
+    },
+    {
+      "body": "jupiter",
+      "inertial_apparent_dec_deg": 22.042085003,
+      "inertial_apparent_ra_deg": 75.209955818,
+      "jd_tt": 2460537.0157562,
+      "raw_file": "raw/jupiter-event-02.txt"
+    },
+    {
+      "body": "jupiter",
+      "inertial_apparent_dec_deg": 22.042565505,
+      "inertial_apparent_ra_deg": 75.215126773,
+      "jd_tt": 2460537.0470062,
+      "raw_file": "raw/jupiter-event-02.txt"
+    },
+    {
+      "body": "jupiter",
+      "inertial_apparent_dec_deg": 22.043045632,
+      "inertial_apparent_ra_deg": 75.220295681,
+      "jd_tt": 2460537.0782562,
+      "raw_file": "raw/jupiter-event-02.txt"
+    },
+    {
+      "body": "jupiter",
+      "inertial_apparent_dec_deg": 22.043525385,
+      "inertial_apparent_ra_deg": 75.225462541,
+      "jd_tt": 2460537.1095062,
+      "raw_file": "raw/jupiter-event-02.txt"
+    },
+    {
+      "body": "jupiter",
+      "inertial_apparent_dec_deg": 22.044004762,
+      "inertial_apparent_ra_deg": 75.230627349,
+      "jd_tt": 2460537.1407562,
+      "raw_file": "raw/jupiter-event-02.txt"
+    },
+    {
+      "body": "jupiter",
+      "inertial_apparent_dec_deg": 22.044483765,
+      "inertial_apparent_ra_deg": 75.235790103,
+      "jd_tt": 2460537.1720062,
+      "raw_file": "raw/jupiter-event-02.txt"
+    },
+    {
+      "body": "jupiter",
+      "inertial_apparent_dec_deg": 22.044962393,
+      "inertial_apparent_ra_deg": 75.2409508,
+      "jd_tt": 2460537.2032562,
+      "raw_file": "raw/jupiter-event-02.txt"
+    },
+    {
+      "body": "jupiter",
+      "inertial_apparent_dec_deg": 22.045440646,
+      "inertial_apparent_ra_deg": 75.246109436,
+      "jd_tt": 2460537.2345062,
+      "raw_file": "raw/jupiter-event-02.txt"
+    },
+    {
+      "body": "jupiter",
+      "inertial_apparent_dec_deg": 22.045918524,
+      "inertial_apparent_ra_deg": 75.251266011,
+      "jd_tt": 2460537.2657562,
+      "raw_file": "raw/jupiter-event-02.txt"
+    },
+    {
+      "body": "saturn",
+      "inertial_apparent_dec_deg": -12.790486666,
+      "inertial_apparent_ra_deg": 332.229151255,
+      "jd_tt": 2460010.9417419,
+      "raw_file": "raw/saturn-event-01.txt"
+    },
+    {
+      "body": "saturn",
+      "inertial_apparent_dec_deg": -12.789238802,
+      "inertial_apparent_ra_deg": 332.232696784,
+      "jd_tt": 2460010.9729919,
+      "raw_file": "raw/saturn-event-01.txt"
+    },
+    {
+      "body": "saturn",
+      "inertial_apparent_dec_deg": -12.787991043,
+      "inertial_apparent_ra_deg": 332.236241964,
+      "jd_tt": 2460011.0042419,
+      "raw_file": "raw/saturn-event-01.txt"
+    },
+    {
+      "body": "saturn",
+      "inertial_apparent_dec_deg": -12.786743391,
+      "inertial_apparent_ra_deg": 332.239786796,
+      "jd_tt": 2460011.0354919,
+      "raw_file": "raw/saturn-event-01.txt"
+    },
+    {
+      "body": "saturn",
+      "inertial_apparent_dec_deg": -12.785495845,
+      "inertial_apparent_ra_deg": 332.243331279,
+      "jd_tt": 2460011.0667419,
+      "raw_file": "raw/saturn-event-01.txt"
+    },
+    {
+      "body": "saturn",
+      "inertial_apparent_dec_deg": -12.784248406,
+      "inertial_apparent_ra_deg": 332.246875412,
+      "jd_tt": 2460011.0979919,
+      "raw_file": "raw/saturn-event-01.txt"
+    },
+    {
+      "body": "saturn",
+      "inertial_apparent_dec_deg": -12.783001073,
+      "inertial_apparent_ra_deg": 332.250419194,
+      "jd_tt": 2460011.1292419,
+      "raw_file": "raw/saturn-event-01.txt"
+    },
+    {
+      "body": "saturn",
+      "inertial_apparent_dec_deg": -12.781753847,
+      "inertial_apparent_ra_deg": 332.253962626,
+      "jd_tt": 2460011.1604919,
+      "raw_file": "raw/saturn-event-01.txt"
+    },
+    {
+      "body": "saturn",
+      "inertial_apparent_dec_deg": -12.780506728,
+      "inertial_apparent_ra_deg": 332.257505706,
+      "jd_tt": 2460011.1917419,
+      "raw_file": "raw/saturn-event-01.txt"
+    },
+    {
+      "body": "saturn",
+      "inertial_apparent_dec_deg": -10.451458937,
+      "inertial_apparent_ra_deg": 339.209159591,
+      "jd_tt": 2460113.0776306,
+      "raw_file": "raw/saturn-event-01.txt"
+    },
+    {
+      "body": "saturn",
+      "inertial_apparent_dec_deg": -10.451501579,
+      "inertial_apparent_ra_deg": 339.209179154,
+      "jd_tt": 2460113.0901306,
+      "raw_file": "raw/saturn-event-01.txt"
+    },
+    {
+      "body": "saturn",
+      "inertial_apparent_dec_deg": -10.451544317,
+      "inertial_apparent_ra_deg": 339.209198473,
+      "jd_tt": 2460113.1026306,
+      "raw_file": "raw/saturn-event-01.txt"
+    },
+    {
+      "body": "saturn",
+      "inertial_apparent_dec_deg": -10.451565722,
+      "inertial_apparent_ra_deg": 339.20920804,
+      "jd_tt": 2460113.1088806,
+      "raw_file": "raw/saturn-event-01.txt"
+    },
+    {
+      "body": "saturn",
+      "inertial_apparent_dec_deg": -10.451587152,
+      "inertial_apparent_ra_deg": 339.209217546,
+      "jd_tt": 2460113.1151306,
+      "raw_file": "raw/saturn-event-01.txt"
+    },
+    {
+      "body": "saturn",
+      "inertial_apparent_dec_deg": -10.451608605,
+      "inertial_apparent_ra_deg": 339.209226991,
+      "jd_tt": 2460113.1213806,
+      "raw_file": "raw/saturn-event-01.txt"
+    },
+    {
+      "body": "saturn",
+      "inertial_apparent_dec_deg": -10.451630082,
+      "inertial_apparent_ra_deg": 339.209236375,
+      "jd_tt": 2460113.1276306,
+      "raw_file": "raw/saturn-event-01.txt"
+    },
+    {
+      "body": "saturn",
+      "inertial_apparent_dec_deg": -10.451651583,
+      "inertial_apparent_ra_deg": 339.209245697,
+      "jd_tt": 2460113.1338806,
+      "raw_file": "raw/saturn-event-01.txt"
+    },
+    {
+      "body": "saturn",
+      "inertial_apparent_dec_deg": -10.451673108,
+      "inertial_apparent_ra_deg": 339.209254959,
+      "jd_tt": 2460113.1401306,
+      "raw_file": "raw/saturn-event-01.txt"
+    },
+    {
+      "body": "saturn",
+      "inertial_apparent_dec_deg": -10.451694657,
+      "inertial_apparent_ra_deg": 339.209264159,
+      "jd_tt": 2460113.1463806,
+      "raw_file": "raw/saturn-event-01.txt"
+    },
+    {
+      "body": "saturn",
+      "inertial_apparent_dec_deg": -10.45171623,
+      "inertial_apparent_ra_deg": 339.209273297,
+      "jd_tt": 2460113.1526306,
+      "raw_file": "raw/saturn-event-01.txt"
+    },
+    {
+      "body": "saturn",
+      "inertial_apparent_dec_deg": -10.451737827,
+      "inertial_apparent_ra_deg": 339.209282375,
+      "jd_tt": 2460113.1588806,
+      "raw_file": "raw/saturn-event-01.txt"
+    },
+    {
+      "body": "saturn",
+      "inertial_apparent_dec_deg": -10.451759448,
+      "inertial_apparent_ra_deg": 339.209291391,
+      "jd_tt": 2460113.1651306,
+      "raw_file": "raw/saturn-event-01.txt"
+    },
+    {
+      "body": "saturn",
+      "inertial_apparent_dec_deg": -10.451781093,
+      "inertial_apparent_ra_deg": 339.209300346,
+      "jd_tt": 2460113.1713806,
+      "raw_file": "raw/saturn-event-01.txt"
+    },
+    {
+      "body": "saturn",
+      "inertial_apparent_dec_deg": -10.451802762,
+      "inertial_apparent_ra_deg": 339.20930924,
+      "jd_tt": 2460113.1776306,
+      "raw_file": "raw/saturn-event-01.txt"
+    },
+    {
+      "body": "saturn",
+      "inertial_apparent_dec_deg": -10.451824455,
+      "inertial_apparent_ra_deg": 339.209318073,
+      "jd_tt": 2460113.1838806,
+      "raw_file": "raw/saturn-event-01.txt"
+    },
+    {
+      "body": "saturn",
+      "inertial_apparent_dec_deg": -10.451846172,
+      "inertial_apparent_ra_deg": 339.209326844,
+      "jd_tt": 2460113.1901306,
+      "raw_file": "raw/saturn-event-01.txt"
+    },
+    {
+      "body": "saturn",
+      "inertial_apparent_dec_deg": -10.451867913,
+      "inertial_apparent_ra_deg": 339.209335554,
+      "jd_tt": 2460113.1963806,
+      "raw_file": "raw/saturn-event-01.txt"
+    },
+    {
+      "body": "saturn",
+      "inertial_apparent_dec_deg": -10.451889678,
+      "inertial_apparent_ra_deg": 339.209344203,
+      "jd_tt": 2460113.2026306,
+      "raw_file": "raw/saturn-event-01.txt"
+    },
+    {
+      "body": "saturn",
+      "inertial_apparent_dec_deg": -10.451911467,
+      "inertial_apparent_ra_deg": 339.209352791,
+      "jd_tt": 2460113.2088806,
+      "raw_file": "raw/saturn-event-01.txt"
+    },
+    {
+      "body": "saturn",
+      "inertial_apparent_dec_deg": -10.45193328,
+      "inertial_apparent_ra_deg": 339.209361318,
+      "jd_tt": 2460113.2151306,
+      "raw_file": "raw/saturn-event-01.txt"
+    },
+    {
+      "body": "saturn",
+      "inertial_apparent_dec_deg": -10.451955117,
+      "inertial_apparent_ra_deg": 339.209369783,
+      "jd_tt": 2460113.2213806,
+      "raw_file": "raw/saturn-event-01.txt"
+    },
+    {
+      "body": "saturn",
+      "inertial_apparent_dec_deg": -10.451976978,
+      "inertial_apparent_ra_deg": 339.209378187,
+      "jd_tt": 2460113.2276306,
+      "raw_file": "raw/saturn-event-01.txt"
+    },
+    {
+      "body": "saturn",
+      "inertial_apparent_dec_deg": -10.451998863,
+      "inertial_apparent_ra_deg": 339.20938653,
+      "jd_tt": 2460113.2338806,
+      "raw_file": "raw/saturn-event-01.txt"
+    },
+    {
+      "body": "saturn",
+      "inertial_apparent_dec_deg": -10.452020772,
+      "inertial_apparent_ra_deg": 339.209394811,
+      "jd_tt": 2460113.2401306,
+      "raw_file": "raw/saturn-event-01.txt"
+    },
+    {
+      "body": "saturn",
+      "inertial_apparent_dec_deg": -10.452042705,
+      "inertial_apparent_ra_deg": 339.209403032,
+      "jd_tt": 2460113.2463806,
+      "raw_file": "raw/saturn-event-01.txt"
+    },
+    {
+      "body": "saturn",
+      "inertial_apparent_dec_deg": -10.452064662,
+      "inertial_apparent_ra_deg": 339.209411191,
+      "jd_tt": 2460113.2526306,
+      "raw_file": "raw/saturn-event-01.txt"
+    },
+    {
+      "body": "saturn",
+      "inertial_apparent_dec_deg": -10.452086643,
+      "inertial_apparent_ra_deg": 339.209419289,
+      "jd_tt": 2460113.2588806,
+      "raw_file": "raw/saturn-event-01.txt"
+    },
+    {
+      "body": "saturn",
+      "inertial_apparent_dec_deg": -10.452108647,
+      "inertial_apparent_ra_deg": 339.209427325,
+      "jd_tt": 2460113.2651306,
+      "raw_file": "raw/saturn-event-01.txt"
+    },
+    {
+      "body": "saturn",
+      "inertial_apparent_dec_deg": -10.452130676,
+      "inertial_apparent_ra_deg": 339.209435301,
+      "jd_tt": 2460113.2713806,
+      "raw_file": "raw/saturn-event-01.txt"
+    },
+    {
+      "body": "saturn",
+      "inertial_apparent_dec_deg": -10.452152729,
+      "inertial_apparent_ra_deg": 339.209443215,
+      "jd_tt": 2460113.2776306,
+      "raw_file": "raw/saturn-event-01.txt"
+    },
+    {
+      "body": "saturn",
+      "inertial_apparent_dec_deg": -10.452174806,
+      "inertial_apparent_ra_deg": 339.209451068,
+      "jd_tt": 2460113.2838806,
+      "raw_file": "raw/saturn-event-01.txt"
+    },
+    {
+      "body": "saturn",
+      "inertial_apparent_dec_deg": -10.452196907,
+      "inertial_apparent_ra_deg": 339.20945886,
+      "jd_tt": 2460113.2901306,
+      "raw_file": "raw/saturn-event-01.txt"
+    },
+    {
+      "body": "saturn",
+      "inertial_apparent_dec_deg": -10.452219031,
+      "inertial_apparent_ra_deg": 339.209466591,
+      "jd_tt": 2460113.2963806,
+      "raw_file": "raw/saturn-event-01.txt"
+    },
+    {
+      "body": "saturn",
+      "inertial_apparent_dec_deg": -10.45224118,
+      "inertial_apparent_ra_deg": 339.20947426,
+      "jd_tt": 2460113.3026306,
+      "raw_file": "raw/saturn-event-01.txt"
+    },
+    {
+      "body": "saturn",
+      "inertial_apparent_dec_deg": -10.452263353,
+      "inertial_apparent_ra_deg": 339.209481868,
+      "jd_tt": 2460113.3088806,
+      "raw_file": "raw/saturn-event-01.txt"
+    },
+    {
+      "body": "saturn",
+      "inertial_apparent_dec_deg": -10.452285549,
+      "inertial_apparent_ra_deg": 339.209489415,
+      "jd_tt": 2460113.3151306,
+      "raw_file": "raw/saturn-event-02.txt"
+    },
+    {
+      "body": "saturn",
+      "inertial_apparent_dec_deg": -10.45230777,
+      "inertial_apparent_ra_deg": 339.209496901,
+      "jd_tt": 2460113.3213806,
+      "raw_file": "raw/saturn-event-02.txt"
+    },
+    {
+      "body": "saturn",
+      "inertial_apparent_dec_deg": -10.452330015,
+      "inertial_apparent_ra_deg": 339.209504325,
+      "jd_tt": 2460113.3276306,
+      "raw_file": "raw/saturn-event-02.txt"
+    },
+    {
+      "body": "saturn",
+      "inertial_apparent_dec_deg": -10.452352283,
+      "inertial_apparent_ra_deg": 339.209511689,
+      "jd_tt": 2460113.3338806,
+      "raw_file": "raw/saturn-event-02.txt"
+    },
+    {
+      "body": "saturn",
+      "inertial_apparent_dec_deg": -10.452374576,
+      "inertial_apparent_ra_deg": 339.209518991,
+      "jd_tt": 2460113.3401306,
+      "raw_file": "raw/saturn-event-02.txt"
+    },
+    {
+      "body": "saturn",
+      "inertial_apparent_dec_deg": -10.452396892,
+      "inertial_apparent_ra_deg": 339.209526231,
+      "jd_tt": 2460113.3463806,
+      "raw_file": "raw/saturn-event-02.txt"
+    },
+    {
+      "body": "saturn",
+      "inertial_apparent_dec_deg": -10.452419233,
+      "inertial_apparent_ra_deg": 339.209533411,
+      "jd_tt": 2460113.3526306,
+      "raw_file": "raw/saturn-event-02.txt"
+    },
+    {
+      "body": "saturn",
+      "inertial_apparent_dec_deg": -10.452463986,
+      "inertial_apparent_ra_deg": 339.209547587,
+      "jd_tt": 2460113.3651306,
+      "raw_file": "raw/saturn-event-02.txt"
+    },
+    {
+      "body": "saturn",
+      "inertial_apparent_dec_deg": -10.452508835,
+      "inertial_apparent_ra_deg": 339.209561517,
+      "jd_tt": 2460113.3776306,
+      "raw_file": "raw/saturn-event-02.txt"
+    },
+    {
+      "body": "saturn",
+      "inertial_apparent_dec_deg": -10.879507692,
+      "inertial_apparent_ra_deg": 338.438536739,
+      "jd_tt": 2460146.2363059,
+      "raw_file": "raw/saturn-event-02.txt"
+    },
+    {
+      "body": "saturn",
+      "inertial_apparent_dec_deg": -10.880176953,
+      "inertial_apparent_ra_deg": 338.437092559,
+      "jd_tt": 2460146.2675559,
+      "raw_file": "raw/saturn-event-02.txt"
+    },
+    {
+      "body": "saturn",
+      "inertial_apparent_dec_deg": -10.88084663,
+      "inertial_apparent_ra_deg": 338.435647196,
+      "jd_tt": 2460146.2988059,
+      "raw_file": "raw/saturn-event-02.txt"
+    },
+    {
+      "body": "saturn",
+      "inertial_apparent_dec_deg": -10.881516723,
+      "inertial_apparent_ra_deg": 338.43420065,
+      "jd_tt": 2460146.3300559,
+      "raw_file": "raw/saturn-event-02.txt"
+    },
+    {
+      "body": "saturn",
+      "inertial_apparent_dec_deg": -10.882187232,
+      "inertial_apparent_ra_deg": 338.432752923,
+      "jd_tt": 2460146.3613059,
+      "raw_file": "raw/saturn-event-02.txt"
+    },
+    {
+      "body": "saturn",
+      "inertial_apparent_dec_deg": -10.882858156,
+      "inertial_apparent_ra_deg": 338.431304014,
+      "jd_tt": 2460146.3925559,
+      "raw_file": "raw/saturn-event-02.txt"
+    },
+    {
+      "body": "saturn",
+      "inertial_apparent_dec_deg": -10.883529495,
+      "inertial_apparent_ra_deg": 338.429853925,
+      "jd_tt": 2460146.4238059,
+      "raw_file": "raw/saturn-event-02.txt"
+    },
+    {
+      "body": "saturn",
+      "inertial_apparent_dec_deg": -10.884201248,
+      "inertial_apparent_ra_deg": 338.428402656,
+      "jd_tt": 2460146.4550559,
+      "raw_file": "raw/saturn-event-02.txt"
+    },
+    {
+      "body": "saturn",
+      "inertial_apparent_dec_deg": -10.884873416,
+      "inertial_apparent_ra_deg": 338.426950207,
+      "jd_tt": 2460146.4863059,
+      "raw_file": "raw/saturn-event-02.txt"
+    },
+    {
+      "body": "saturn",
+      "inertial_apparent_dec_deg": -7.726245204,
+      "inertial_apparent_ra_deg": 346.221299123,
+      "jd_tt": 2460411.2341888,
+      "raw_file": "raw/saturn-event-02.txt"
+    },
+    {
+      "body": "saturn",
+      "inertial_apparent_dec_deg": -7.725034338,
+      "inertial_apparent_ra_deg": 346.22441399,
+      "jd_tt": 2460411.2654388,
+      "raw_file": "raw/saturn-event-02.txt"
+    },
+    {
+      "body": "saturn",
+      "inertial_apparent_dec_deg": -7.723823778,
+      "inertial_apparent_ra_deg": 346.227528158,
+      "jd_tt": 2460411.2966888,
+      "raw_file": "raw/saturn-event-02.txt"
+    },
+    {
+      "body": "saturn",
+      "inertial_apparent_dec_deg": -7.722613524,
+      "inertial_apparent_ra_deg": 346.230641629,
+      "jd_tt": 2460411.3279388,
+      "raw_file": "raw/saturn-event-02.txt"
+    },
+    {
+      "body": "saturn",
+      "inertial_apparent_dec_deg": -7.721403577,
+      "inertial_apparent_ra_deg": 346.233754402,
+      "jd_tt": 2460411.3591888,
+      "raw_file": "raw/saturn-event-02.txt"
+    },
+    {
+      "body": "saturn",
+      "inertial_apparent_dec_deg": -7.720193936,
+      "inertial_apparent_ra_deg": 346.236866475,
+      "jd_tt": 2460411.3904388,
+      "raw_file": "raw/saturn-event-02.txt"
+    },
+    {
+      "body": "saturn",
+      "inertial_apparent_dec_deg": -7.718984601,
+      "inertial_apparent_ra_deg": 346.239977848,
+      "jd_tt": 2460411.4216888,
+      "raw_file": "raw/saturn-event-02.txt"
+    },
+    {
+      "body": "saturn",
+      "inertial_apparent_dec_deg": -7.717775574,
+      "inertial_apparent_ra_deg": 346.243088521,
+      "jd_tt": 2460411.4529388,
+      "raw_file": "raw/saturn-event-02.txt"
+    },
+    {
+      "body": "saturn",
+      "inertial_apparent_dec_deg": -7.716566854,
+      "inertial_apparent_ra_deg": 346.246198493,
+      "jd_tt": 2460411.4841888,
+      "raw_file": "raw/saturn-event-02.txt"
+    },
+    {
+      "body": "uranus",
+      "inertial_apparent_dec_deg": 15.890206873,
+      "inertial_apparent_ra_deg": 42.265539669,
+      "jd_tt": 2459967.3077332,
+      "raw_file": "raw/uranus-event-01.txt"
+    },
+    {
+      "body": "uranus",
+      "inertial_apparent_dec_deg": 15.89021144,
+      "inertial_apparent_ra_deg": 42.265535744,
+      "jd_tt": 2459967.3202332,
+      "raw_file": "raw/uranus-event-01.txt"
+    },
+    {
+      "body": "uranus",
+      "inertial_apparent_dec_deg": 15.890216048,
+      "inertial_apparent_ra_deg": 42.265531956,
+      "jd_tt": 2459967.3327332,
+      "raw_file": "raw/uranus-event-01.txt"
+    },
+    {
+      "body": "uranus",
+      "inertial_apparent_dec_deg": 15.890218367,
+      "inertial_apparent_ra_deg": 42.265530114,
+      "jd_tt": 2459967.3389832,
+      "raw_file": "raw/uranus-event-01.txt"
+    },
+    {
+      "body": "uranus",
+      "inertial_apparent_dec_deg": 15.890220697,
+      "inertial_apparent_ra_deg": 42.265528306,
+      "jd_tt": 2459967.3452332,
+      "raw_file": "raw/uranus-event-01.txt"
+    },
+    {
+      "body": "uranus",
+      "inertial_apparent_dec_deg": 15.890223037,
+      "inertial_apparent_ra_deg": 42.265526532,
+      "jd_tt": 2459967.3514832,
+      "raw_file": "raw/uranus-event-01.txt"
+    },
+    {
+      "body": "uranus",
+      "inertial_apparent_dec_deg": 15.890225387,
+      "inertial_apparent_ra_deg": 42.265524793,
+      "jd_tt": 2459967.3577332,
+      "raw_file": "raw/uranus-event-01.txt"
+    },
+    {
+      "body": "uranus",
+      "inertial_apparent_dec_deg": 15.890227747,
+      "inertial_apparent_ra_deg": 42.265523088,
+      "jd_tt": 2459967.3639832,
+      "raw_file": "raw/uranus-event-01.txt"
+    },
+    {
+      "body": "uranus",
+      "inertial_apparent_dec_deg": 15.890230118,
+      "inertial_apparent_ra_deg": 42.265521417,
+      "jd_tt": 2459967.3702332,
+      "raw_file": "raw/uranus-event-01.txt"
+    },
+    {
+      "body": "uranus",
+      "inertial_apparent_dec_deg": 15.890232499,
+      "inertial_apparent_ra_deg": 42.265519781,
+      "jd_tt": 2459967.3764832,
+      "raw_file": "raw/uranus-event-01.txt"
+    },
+    {
+      "body": "uranus",
+      "inertial_apparent_dec_deg": 15.89023489,
+      "inertial_apparent_ra_deg": 42.265518179,
+      "jd_tt": 2459967.3827332,
+      "raw_file": "raw/uranus-event-01.txt"
+    },
+    {
+      "body": "uranus",
+      "inertial_apparent_dec_deg": 15.890237291,
+      "inertial_apparent_ra_deg": 42.265516611,
+      "jd_tt": 2459967.3889832,
+      "raw_file": "raw/uranus-event-01.txt"
+    },
+    {
+      "body": "uranus",
+      "inertial_apparent_dec_deg": 15.890239702,
+      "inertial_apparent_ra_deg": 42.265515078,
+      "jd_tt": 2459967.3952332,
+      "raw_file": "raw/uranus-event-01.txt"
+    },
+    {
+      "body": "uranus",
+      "inertial_apparent_dec_deg": 15.890242124,
+      "inertial_apparent_ra_deg": 42.265513579,
+      "jd_tt": 2459967.4014832,
+      "raw_file": "raw/uranus-event-01.txt"
+    },
+    {
+      "body": "uranus",
+      "inertial_apparent_dec_deg": 15.890244556,
+      "inertial_apparent_ra_deg": 42.265512115,
+      "jd_tt": 2459967.4077332,
+      "raw_file": "raw/uranus-event-01.txt"
+    },
+    {
+      "body": "uranus",
+      "inertial_apparent_dec_deg": 15.890246998,
+      "inertial_apparent_ra_deg": 42.265510684,
+      "jd_tt": 2459967.4139832,
+      "raw_file": "raw/uranus-event-01.txt"
+    },
+    {
+      "body": "uranus",
+      "inertial_apparent_dec_deg": 15.890249451,
+      "inertial_apparent_ra_deg": 42.265509289,
+      "jd_tt": 2459967.4202332,
+      "raw_file": "raw/uranus-event-01.txt"
+    },
+    {
+      "body": "uranus",
+      "inertial_apparent_dec_deg": 15.890251913,
+      "inertial_apparent_ra_deg": 42.265507927,
+      "jd_tt": 2459967.4264832,
+      "raw_file": "raw/uranus-event-01.txt"
+    },
+    {
+      "body": "uranus",
+      "inertial_apparent_dec_deg": 15.890254386,
+      "inertial_apparent_ra_deg": 42.2655066,
+      "jd_tt": 2459967.4327332,
+      "raw_file": "raw/uranus-event-01.txt"
+    },
+    {
+      "body": "uranus",
+      "inertial_apparent_dec_deg": 15.890256869,
+      "inertial_apparent_ra_deg": 42.265505307,
+      "jd_tt": 2459967.4389832,
+      "raw_file": "raw/uranus-event-01.txt"
+    },
+    {
+      "body": "uranus",
+      "inertial_apparent_dec_deg": 15.890259362,
+      "inertial_apparent_ra_deg": 42.265504049,
+      "jd_tt": 2459967.4452332,
+      "raw_file": "raw/uranus-event-01.txt"
+    },
+    {
+      "body": "uranus",
+      "inertial_apparent_dec_deg": 15.890261866,
+      "inertial_apparent_ra_deg": 42.265502824,
+      "jd_tt": 2459967.4514832,
+      "raw_file": "raw/uranus-event-01.txt"
+    },
+    {
+      "body": "uranus",
+      "inertial_apparent_dec_deg": 15.89026438,
+      "inertial_apparent_ra_deg": 42.265501635,
+      "jd_tt": 2459967.4577332,
+      "raw_file": "raw/uranus-event-01.txt"
+    },
+    {
+      "body": "uranus",
+      "inertial_apparent_dec_deg": 15.890266904,
+      "inertial_apparent_ra_deg": 42.265500479,
+      "jd_tt": 2459967.4639832,
+      "raw_file": "raw/uranus-event-01.txt"
+    },
+    {
+      "body": "uranus",
+      "inertial_apparent_dec_deg": 15.890269438,
+      "inertial_apparent_ra_deg": 42.265499358,
+      "jd_tt": 2459967.4702332,
+      "raw_file": "raw/uranus-event-01.txt"
+    },
+    {
+      "body": "uranus",
+      "inertial_apparent_dec_deg": 15.890271983,
+      "inertial_apparent_ra_deg": 42.265498271,
+      "jd_tt": 2459967.4764832,
+      "raw_file": "raw/uranus-event-01.txt"
+    },
+    {
+      "body": "uranus",
+      "inertial_apparent_dec_deg": 15.890274537,
+      "inertial_apparent_ra_deg": 42.265497219,
+      "jd_tt": 2459967.4827332,
+      "raw_file": "raw/uranus-event-01.txt"
+    },
+    {
+      "body": "uranus",
+      "inertial_apparent_dec_deg": 15.890277102,
+      "inertial_apparent_ra_deg": 42.265496201,
+      "jd_tt": 2459967.4889832,
+      "raw_file": "raw/uranus-event-01.txt"
+    },
+    {
+      "body": "uranus",
+      "inertial_apparent_dec_deg": 15.890279677,
+      "inertial_apparent_ra_deg": 42.265495217,
+      "jd_tt": 2459967.4952332,
+      "raw_file": "raw/uranus-event-01.txt"
+    },
+    {
+      "body": "uranus",
+      "inertial_apparent_dec_deg": 15.890282263,
+      "inertial_apparent_ra_deg": 42.265494268,
+      "jd_tt": 2459967.5014832,
+      "raw_file": "raw/uranus-event-01.txt"
+    },
+    {
+      "body": "uranus",
+      "inertial_apparent_dec_deg": 15.890284858,
+      "inertial_apparent_ra_deg": 42.265493353,
+      "jd_tt": 2459967.5077332,
+      "raw_file": "raw/uranus-event-01.txt"
+    },
+    {
+      "body": "uranus",
+      "inertial_apparent_dec_deg": 15.890287464,
+      "inertial_apparent_ra_deg": 42.265492472,
+      "jd_tt": 2459967.5139832,
+      "raw_file": "raw/uranus-event-01.txt"
+    },
+    {
+      "body": "uranus",
+      "inertial_apparent_dec_deg": 15.89029008,
+      "inertial_apparent_ra_deg": 42.265491626,
+      "jd_tt": 2459967.5202332,
+      "raw_file": "raw/uranus-event-01.txt"
+    },
+    {
+      "body": "uranus",
+      "inertial_apparent_dec_deg": 15.890292707,
+      "inertial_apparent_ra_deg": 42.265490814,
+      "jd_tt": 2459967.5264832,
+      "raw_file": "raw/uranus-event-01.txt"
+    },
+    {
+      "body": "uranus",
+      "inertial_apparent_dec_deg": 15.890295343,
+      "inertial_apparent_ra_deg": 42.265490036,
+      "jd_tt": 2459967.5327332,
+      "raw_file": "raw/uranus-event-01.txt"
+    },
+    {
+      "body": "uranus",
+      "inertial_apparent_dec_deg": 15.89029799,
+      "inertial_apparent_ra_deg": 42.265489293,
+      "jd_tt": 2459967.5389832,
+      "raw_file": "raw/uranus-event-01.txt"
+    },
+    {
+      "body": "uranus",
+      "inertial_apparent_dec_deg": 15.890300647,
+      "inertial_apparent_ra_deg": 42.265488584,
+      "jd_tt": 2459967.5452332,
+      "raw_file": "raw/uranus-event-01.txt"
+    },
+    {
+      "body": "uranus",
+      "inertial_apparent_dec_deg": 15.890303314,
+      "inertial_apparent_ra_deg": 42.265487909,
+      "jd_tt": 2459967.5514832,
+      "raw_file": "raw/uranus-event-01.txt"
+    },
+    {
+      "body": "uranus",
+      "inertial_apparent_dec_deg": 15.890305992,
+      "inertial_apparent_ra_deg": 42.265487269,
+      "jd_tt": 2459967.5577332,
+      "raw_file": "raw/uranus-event-01.txt"
+    },
+    {
+      "body": "uranus",
+      "inertial_apparent_dec_deg": 15.890308679,
+      "inertial_apparent_ra_deg": 42.265486663,
+      "jd_tt": 2459967.5639832,
+      "raw_file": "raw/uranus-event-01.txt"
+    },
+    {
+      "body": "uranus",
+      "inertial_apparent_dec_deg": 15.890311377,
+      "inertial_apparent_ra_deg": 42.265486091,
+      "jd_tt": 2459967.5702332,
+      "raw_file": "raw/uranus-event-01.txt"
+    },
+    {
+      "body": "uranus",
+      "inertial_apparent_dec_deg": 15.890314085,
+      "inertial_apparent_ra_deg": 42.265485554,
+      "jd_tt": 2459967.5764832,
+      "raw_file": "raw/uranus-event-01.txt"
+    },
+    {
+      "body": "uranus",
+      "inertial_apparent_dec_deg": 15.890316804,
+      "inertial_apparent_ra_deg": 42.265485051,
+      "jd_tt": 2459967.5827332,
+      "raw_file": "raw/uranus-event-01.txt"
+    },
+    {
+      "body": "uranus",
+      "inertial_apparent_dec_deg": 15.890322271,
+      "inertial_apparent_ra_deg": 42.265484149,
+      "jd_tt": 2459967.5952332,
+      "raw_file": "raw/uranus-event-01.txt"
+    },
+    {
+      "body": "uranus",
+      "inertial_apparent_dec_deg": 15.89032778,
+      "inertial_apparent_ra_deg": 42.265483383,
+      "jd_tt": 2459967.6077332,
+      "raw_file": "raw/uranus-event-01.txt"
+    },
+    {
+      "body": "uranus",
+      "inertial_apparent_dec_deg": 17.647150022,
+      "inertial_apparent_ra_deg": 48.467614379,
+      "jd_tt": 2460260.2586462,
+      "raw_file": "raw/uranus-event-02.txt"
+    },
+    {
+      "body": "uranus",
+      "inertial_apparent_dec_deg": 17.646811341,
+      "inertial_apparent_ra_deg": 48.466297323,
+      "jd_tt": 2460260.2898962,
+      "raw_file": "raw/uranus-event-02.txt"
+    },
+    {
+      "body": "uranus",
+      "inertial_apparent_dec_deg": 17.646472646,
+      "inertial_apparent_ra_deg": 48.464980233,
+      "jd_tt": 2460260.3211462,
+      "raw_file": "raw/uranus-event-02.txt"
+    },
+    {
+      "body": "uranus",
+      "inertial_apparent_dec_deg": 17.646133937,
+      "inertial_apparent_ra_deg": 48.463663108,
+      "jd_tt": 2460260.3523962,
+      "raw_file": "raw/uranus-event-02.txt"
+    },
+    {
+      "body": "uranus",
+      "inertial_apparent_dec_deg": 17.645795214,
+      "inertial_apparent_ra_deg": 48.462345949,
+      "jd_tt": 2460260.3836462,
+      "raw_file": "raw/uranus-event-02.txt"
+    },
+    {
+      "body": "uranus",
+      "inertial_apparent_dec_deg": 17.645456478,
+      "inertial_apparent_ra_deg": 48.461028757,
+      "jd_tt": 2460260.4148962,
+      "raw_file": "raw/uranus-event-02.txt"
+    },
+    {
+      "body": "uranus",
+      "inertial_apparent_dec_deg": 17.645117728,
+      "inertial_apparent_ra_deg": 48.459711532,
+      "jd_tt": 2460260.4461462,
+      "raw_file": "raw/uranus-event-02.txt"
+    },
+    {
+      "body": "uranus",
+      "inertial_apparent_dec_deg": 17.644778965,
+      "inertial_apparent_ra_deg": 48.458394275,
+      "jd_tt": 2460260.4773962,
+      "raw_file": "raw/uranus-event-02.txt"
+    },
+    {
+      "body": "uranus",
+      "inertial_apparent_dec_deg": 17.644440189,
+      "inertial_apparent_ra_deg": 48.457076987,
+      "jd_tt": 2460260.5086462,
+      "raw_file": "raw/uranus-event-02.txt"
+    },
+    {
+      "body": "uranus",
+      "inertial_apparent_dec_deg": 18.993054511,
+      "inertial_apparent_ra_deg": 53.720229558,
+      "jd_tt": 2460506.9624819,
+      "raw_file": "raw/uranus-event-02.txt"
+    },
+    {
+      "body": "uranus",
+      "inertial_apparent_dec_deg": 18.993325837,
+      "inertial_apparent_ra_deg": 53.721420878,
+      "jd_tt": 2460506.9937319,
+      "raw_file": "raw/uranus-event-02.txt"
+    },
+    {
+      "body": "uranus",
+      "inertial_apparent_dec_deg": 18.993597009,
+      "inertial_apparent_ra_deg": 53.722611566,
+      "jd_tt": 2460507.0249819,
+      "raw_file": "raw/uranus-event-02.txt"
+    },
+    {
+      "body": "uranus",
+      "inertial_apparent_dec_deg": 18.993868026,
+      "inertial_apparent_ra_deg": 53.723801622,
+      "jd_tt": 2460507.0562319,
+      "raw_file": "raw/uranus-event-02.txt"
+    },
+    {
+      "body": "uranus",
+      "inertial_apparent_dec_deg": 18.994138889,
+      "inertial_apparent_ra_deg": 53.724991045,
+      "jd_tt": 2460507.0874819,
+      "raw_file": "raw/uranus-event-02.txt"
+    },
+    {
+      "body": "uranus",
+      "inertial_apparent_dec_deg": 18.994409597,
+      "inertial_apparent_ra_deg": 53.726179836,
+      "jd_tt": 2460507.1187319,
+      "raw_file": "raw/uranus-event-02.txt"
+    },
+    {
+      "body": "uranus",
+      "inertial_apparent_dec_deg": 18.99468015,
+      "inertial_apparent_ra_deg": 53.727367994,
+      "jd_tt": 2460507.1499819,
+      "raw_file": "raw/uranus-event-02.txt"
+    },
+    {
+      "body": "uranus",
+      "inertial_apparent_dec_deg": 18.994950549,
+      "inertial_apparent_ra_deg": 53.72855552,
+      "jd_tt": 2460507.1812319,
+      "raw_file": "raw/uranus-event-02.txt"
+    },
+    {
+      "body": "uranus",
+      "inertial_apparent_dec_deg": 18.995220793,
+      "inertial_apparent_ra_deg": 53.729742411,
+      "jd_tt": 2460507.2124819,
+      "raw_file": "raw/uranus-event-02.txt"
+    },
+    {
+      "body": "uranus",
+      "inertial_apparent_dec_deg": 19.865988584,
+      "inertial_apparent_ra_deg": 57.489492077,
+      "jd_tt": 2460863.7001038,
+      "raw_file": "raw/uranus-event-02.txt"
+    },
+    {
+      "body": "uranus",
+      "inertial_apparent_dec_deg": 19.866287534,
+      "inertial_apparent_ra_deg": 57.490941869,
+      "jd_tt": 2460863.7313538,
+      "raw_file": "raw/uranus-event-02.txt"
+    },
+    {
+      "body": "uranus",
+      "inertial_apparent_dec_deg": 19.866586362,
+      "inertial_apparent_ra_deg": 57.492391137,
+      "jd_tt": 2460863.7626038,
+      "raw_file": "raw/uranus-event-02.txt"
+    },
+    {
+      "body": "uranus",
+      "inertial_apparent_dec_deg": 19.866885068,
+      "inertial_apparent_ra_deg": 57.49383988,
+      "jd_tt": 2460863.7938538,
+      "raw_file": "raw/uranus-event-02.txt"
+    },
+    {
+      "body": "uranus",
+      "inertial_apparent_dec_deg": 19.867183651,
+      "inertial_apparent_ra_deg": 57.495288099,
+      "jd_tt": 2460863.8251038,
+      "raw_file": "raw/uranus-event-02.txt"
+    },
+    {
+      "body": "uranus",
+      "inertial_apparent_dec_deg": 19.867482111,
+      "inertial_apparent_ra_deg": 57.496735792,
+      "jd_tt": 2460863.8563538,
+      "raw_file": "raw/uranus-event-02.txt"
+    },
+    {
+      "body": "uranus",
+      "inertial_apparent_dec_deg": 19.86778045,
+      "inertial_apparent_ra_deg": 57.49818296,
+      "jd_tt": 2460863.8876038,
+      "raw_file": "raw/uranus-event-02.txt"
+    },
+    {
+      "body": "uranus",
+      "inertial_apparent_dec_deg": 19.868078665,
+      "inertial_apparent_ra_deg": 57.499629603,
+      "jd_tt": 2460863.9188538,
+      "raw_file": "raw/uranus-event-02.txt"
+    },
+    {
+      "body": "uranus",
+      "inertial_apparent_dec_deg": 19.868376759,
+      "inertial_apparent_ra_deg": 57.50107572,
+      "jd_tt": 2460863.9501038,
+      "raw_file": "raw/uranus-event-02.txt"
+    },
+    {
+      "body": "neptune",
+      "inertial_apparent_dec_deg": -2.178996629,
+      "inertial_apparent_ra_deg": 358.068166975,
+      "jd_tt": 2460126.2306458,
+      "raw_file": "raw/neptune-event-01.txt"
+    },
+    {
+      "body": "neptune",
+      "inertial_apparent_dec_deg": -2.179006031,
+      "inertial_apparent_ra_deg": 358.068171081,
+      "jd_tt": 2460126.2431458,
+      "raw_file": "raw/neptune-event-01.txt"
+    },
+    {
+      "body": "neptune",
+      "inertial_apparent_dec_deg": -2.179015467,
+      "inertial_apparent_ra_deg": 358.068175109,
+      "jd_tt": 2460126.2556458,
+      "raw_file": "raw/neptune-event-01.txt"
+    },
+    {
+      "body": "neptune",
+      "inertial_apparent_dec_deg": -2.179020197,
+      "inertial_apparent_ra_deg": 358.068177094,
+      "jd_tt": 2460126.2618958,
+      "raw_file": "raw/neptune-event-01.txt"
+    },
+    {
+      "body": "neptune",
+      "inertial_apparent_dec_deg": -2.179024936,
+      "inertial_apparent_ra_deg": 358.068179059,
+      "jd_tt": 2460126.2681458,
+      "raw_file": "raw/neptune-event-01.txt"
+    },
+    {
+      "body": "neptune",
+      "inertial_apparent_dec_deg": -2.179029683,
+      "inertial_apparent_ra_deg": 358.068181006,
+      "jd_tt": 2460126.2743958,
+      "raw_file": "raw/neptune-event-01.txt"
+    },
+    {
+      "body": "neptune",
+      "inertial_apparent_dec_deg": -2.179034438,
+      "inertial_apparent_ra_deg": 358.068182932,
+      "jd_tt": 2460126.2806458,
+      "raw_file": "raw/neptune-event-01.txt"
+    },
+    {
+      "body": "neptune",
+      "inertial_apparent_dec_deg": -2.179039202,
+      "inertial_apparent_ra_deg": 358.06818484,
+      "jd_tt": 2460126.2868958,
+      "raw_file": "raw/neptune-event-01.txt"
+    },
+    {
+      "body": "neptune",
+      "inertial_apparent_dec_deg": -2.179043974,
+      "inertial_apparent_ra_deg": 358.068186728,
+      "jd_tt": 2460126.2931458,
+      "raw_file": "raw/neptune-event-01.txt"
+    },
+    {
+      "body": "neptune",
+      "inertial_apparent_dec_deg": -2.179048754,
+      "inertial_apparent_ra_deg": 358.068188597,
+      "jd_tt": 2460126.2993958,
+      "raw_file": "raw/neptune-event-01.txt"
+    },
+    {
+      "body": "neptune",
+      "inertial_apparent_dec_deg": -2.179053542,
+      "inertial_apparent_ra_deg": 358.068190447,
+      "jd_tt": 2460126.3056458,
+      "raw_file": "raw/neptune-event-01.txt"
+    },
+    {
+      "body": "neptune",
+      "inertial_apparent_dec_deg": -2.179058339,
+      "inertial_apparent_ra_deg": 358.068192277,
+      "jd_tt": 2460126.3118958,
+      "raw_file": "raw/neptune-event-01.txt"
+    },
+    {
+      "body": "neptune",
+      "inertial_apparent_dec_deg": -2.179063144,
+      "inertial_apparent_ra_deg": 358.068194088,
+      "jd_tt": 2460126.3181458,
+      "raw_file": "raw/neptune-event-01.txt"
+    },
+    {
+      "body": "neptune",
+      "inertial_apparent_dec_deg": -2.179067957,
+      "inertial_apparent_ra_deg": 358.068195879,
+      "jd_tt": 2460126.3243958,
+      "raw_file": "raw/neptune-event-01.txt"
+    },
+    {
+      "body": "neptune",
+      "inertial_apparent_dec_deg": -2.179072779,
+      "inertial_apparent_ra_deg": 358.068197651,
+      "jd_tt": 2460126.3306458,
+      "raw_file": "raw/neptune-event-01.txt"
+    },
+    {
+      "body": "neptune",
+      "inertial_apparent_dec_deg": -2.179077609,
+      "inertial_apparent_ra_deg": 358.068199404,
+      "jd_tt": 2460126.3368958,
+      "raw_file": "raw/neptune-event-01.txt"
+    },
+    {
+      "body": "neptune",
+      "inertial_apparent_dec_deg": -2.179082447,
+      "inertial_apparent_ra_deg": 358.068201137,
+      "jd_tt": 2460126.3431458,
+      "raw_file": "raw/neptune-event-01.txt"
+    },
+    {
+      "body": "neptune",
+      "inertial_apparent_dec_deg": -2.179087293,
+      "inertial_apparent_ra_deg": 358.068202851,
+      "jd_tt": 2460126.3493958,
+      "raw_file": "raw/neptune-event-01.txt"
+    },
+    {
+      "body": "neptune",
+      "inertial_apparent_dec_deg": -2.179092148,
+      "inertial_apparent_ra_deg": 358.068204546,
+      "jd_tt": 2460126.3556458,
+      "raw_file": "raw/neptune-event-01.txt"
+    },
+    {
+      "body": "neptune",
+      "inertial_apparent_dec_deg": -2.179097011,
+      "inertial_apparent_ra_deg": 358.068206221,
+      "jd_tt": 2460126.3618958,
+      "raw_file": "raw/neptune-event-01.txt"
+    },
+    {
+      "body": "neptune",
+      "inertial_apparent_dec_deg": -2.179101882,
+      "inertial_apparent_ra_deg": 358.068207877,
+      "jd_tt": 2460126.3681458,
+      "raw_file": "raw/neptune-event-01.txt"
+    },
+    {
+      "body": "neptune",
+      "inertial_apparent_dec_deg": -2.179106762,
+      "inertial_apparent_ra_deg": 358.068209514,
+      "jd_tt": 2460126.3743958,
+      "raw_file": "raw/neptune-event-01.txt"
+    },
+    {
+      "body": "neptune",
+      "inertial_apparent_dec_deg": -2.17911165,
+      "inertial_apparent_ra_deg": 358.068211131,
+      "jd_tt": 2460126.3806458,
+      "raw_file": "raw/neptune-event-01.txt"
+    },
+    {
+      "body": "neptune",
+      "inertial_apparent_dec_deg": -2.179116546,
+      "inertial_apparent_ra_deg": 358.068212729,
+      "jd_tt": 2460126.3868958,
+      "raw_file": "raw/neptune-event-01.txt"
+    },
+    {
+      "body": "neptune",
+      "inertial_apparent_dec_deg": -2.17912145,
+      "inertial_apparent_ra_deg": 358.068214308,
+      "jd_tt": 2460126.3931458,
+      "raw_file": "raw/neptune-event-01.txt"
+    },
+    {
+      "body": "neptune",
+      "inertial_apparent_dec_deg": -2.179126363,
+      "inertial_apparent_ra_deg": 358.068215867,
+      "jd_tt": 2460126.3993958,
+      "raw_file": "raw/neptune-event-01.txt"
+    },
+    {
+      "body": "neptune",
+      "inertial_apparent_dec_deg": -2.179131284,
+      "inertial_apparent_ra_deg": 358.068217407,
+      "jd_tt": 2460126.4056458,
+      "raw_file": "raw/neptune-event-01.txt"
+    },
+    {
+      "body": "neptune",
+      "inertial_apparent_dec_deg": -2.179136213,
+      "inertial_apparent_ra_deg": 358.068218928,
+      "jd_tt": 2460126.4118958,
+      "raw_file": "raw/neptune-event-01.txt"
+    },
+    {
+      "body": "neptune",
+      "inertial_apparent_dec_deg": -2.179141151,
+      "inertial_apparent_ra_deg": 358.068220429,
+      "jd_tt": 2460126.4181458,
+      "raw_file": "raw/neptune-event-01.txt"
+    },
+    {
+      "body": "neptune",
+      "inertial_apparent_dec_deg": -2.179146097,
+      "inertial_apparent_ra_deg": 358.068221911,
+      "jd_tt": 2460126.4243958,
+      "raw_file": "raw/neptune-event-01.txt"
+    },
+    {
+      "body": "neptune",
+      "inertial_apparent_dec_deg": -2.179151051,
+      "inertial_apparent_ra_deg": 358.068223373,
+      "jd_tt": 2460126.4306458,
+      "raw_file": "raw/neptune-event-01.txt"
+    },
+    {
+      "body": "neptune",
+      "inertial_apparent_dec_deg": -2.179156014,
+      "inertial_apparent_ra_deg": 358.068224816,
+      "jd_tt": 2460126.4368958,
+      "raw_file": "raw/neptune-event-01.txt"
+    },
+    {
+      "body": "neptune",
+      "inertial_apparent_dec_deg": -2.179160984,
+      "inertial_apparent_ra_deg": 358.06822624,
+      "jd_tt": 2460126.4431458,
+      "raw_file": "raw/neptune-event-01.txt"
+    },
+    {
+      "body": "neptune",
+      "inertial_apparent_dec_deg": -2.179165964,
+      "inertial_apparent_ra_deg": 358.068227645,
+      "jd_tt": 2460126.4493958,
+      "raw_file": "raw/neptune-event-01.txt"
+    },
+    {
+      "body": "neptune",
+      "inertial_apparent_dec_deg": -2.179170951,
+      "inertial_apparent_ra_deg": 358.06822903,
+      "jd_tt": 2460126.4556458,
+      "raw_file": "raw/neptune-event-01.txt"
+    },
+    {
+      "body": "neptune",
+      "inertial_apparent_dec_deg": -2.179175947,
+      "inertial_apparent_ra_deg": 358.068230396,
+      "jd_tt": 2460126.4618958,
+      "raw_file": "raw/neptune-event-01.txt"
+    },
+    {
+      "body": "neptune",
+      "inertial_apparent_dec_deg": -2.179180951,
+      "inertial_apparent_ra_deg": 358.068231742,
+      "jd_tt": 2460126.4681458,
+      "raw_file": "raw/neptune-event-01.txt"
+    },
+    {
+      "body": "neptune",
+      "inertial_apparent_dec_deg": -2.179185963,
+      "inertial_apparent_ra_deg": 358.068233069,
+      "jd_tt": 2460126.4743958,
+      "raw_file": "raw/neptune-event-01.txt"
+    },
+    {
+      "body": "neptune",
+      "inertial_apparent_dec_deg": -2.179190983,
+      "inertial_apparent_ra_deg": 358.068234377,
+      "jd_tt": 2460126.4806458,
+      "raw_file": "raw/neptune-event-01.txt"
+    },
+    {
+      "body": "neptune",
+      "inertial_apparent_dec_deg": -2.179196012,
+      "inertial_apparent_ra_deg": 358.068235665,
+      "jd_tt": 2460126.4868958,
+      "raw_file": "raw/neptune-event-01.txt"
+    },
+    {
+      "body": "neptune",
+      "inertial_apparent_dec_deg": -2.179201049,
+      "inertial_apparent_ra_deg": 358.068236934,
+      "jd_tt": 2460126.4931458,
+      "raw_file": "raw/neptune-event-01.txt"
+    },
+    {
+      "body": "neptune",
+      "inertial_apparent_dec_deg": -2.179206095,
+      "inertial_apparent_ra_deg": 358.068238184,
+      "jd_tt": 2460126.4993958,
+      "raw_file": "raw/neptune-event-01.txt"
+    },
+    {
+      "body": "neptune",
+      "inertial_apparent_dec_deg": -2.179211148,
+      "inertial_apparent_ra_deg": 358.068239414,
+      "jd_tt": 2460126.5056458,
+      "raw_file": "raw/neptune-event-01.txt"
+    },
+    {
+      "body": "neptune",
+      "inertial_apparent_dec_deg": -2.179221281,
+      "inertial_apparent_ra_deg": 358.068241817,
+      "jd_tt": 2460126.5181458,
+      "raw_file": "raw/neptune-event-01.txt"
+    },
+    {
+      "body": "neptune",
+      "inertial_apparent_dec_deg": -2.179231446,
+      "inertial_apparent_ra_deg": 358.068244143,
+      "jd_tt": 2460126.5306458,
+      "raw_file": "raw/neptune-event-01.txt"
+    },
+    {
+      "body": "neptune",
+      "inertial_apparent_dec_deg": -2.486407649,
+      "inertial_apparent_ra_deg": 357.450287117,
+      "jd_tt": 2460179.2326133,
+      "raw_file": "raw/neptune-event-02.txt"
+    },
+    {
+      "body": "neptune",
+      "inertial_apparent_dec_deg": -2.486715246,
+      "inertial_apparent_ra_deg": 357.4496136,
+      "jd_tt": 2460179.2638633,
+      "raw_file": "raw/neptune-event-02.txt"
+    },
+    {
+      "body": "neptune",
+      "inertial_apparent_dec_deg": -2.487022939,
+      "inertial_apparent_ra_deg": 357.44893983,
+      "jd_tt": 2460179.2951133,
+      "raw_file": "raw/neptune-event-02.txt"
+    },
+    {
+      "body": "neptune",
+      "inertial_apparent_dec_deg": -2.487330729,
+      "inertial_apparent_ra_deg": 357.448265809,
+      "jd_tt": 2460179.3263633,
+      "raw_file": "raw/neptune-event-02.txt"
+    },
+    {
+      "body": "neptune",
+      "inertial_apparent_dec_deg": -2.487638614,
+      "inertial_apparent_ra_deg": 357.447591536,
+      "jd_tt": 2460179.3576133,
+      "raw_file": "raw/neptune-event-02.txt"
+    },
+    {
+      "body": "neptune",
+      "inertial_apparent_dec_deg": -2.487946596,
+      "inertial_apparent_ra_deg": 357.446917012,
+      "jd_tt": 2460179.3888633,
+      "raw_file": "raw/neptune-event-02.txt"
+    },
+    {
+      "body": "neptune",
+      "inertial_apparent_dec_deg": -2.488254673,
+      "inertial_apparent_ra_deg": 357.446242237,
+      "jd_tt": 2460179.4201133,
+      "raw_file": "raw/neptune-event-02.txt"
+    },
+    {
+      "body": "neptune",
+      "inertial_apparent_dec_deg": -2.488562846,
+      "inertial_apparent_ra_deg": 357.445567211,
+      "jd_tt": 2460179.4513633,
+      "raw_file": "raw/neptune-event-02.txt"
+    },
+    {
+      "body": "neptune",
+      "inertial_apparent_dec_deg": -2.488871114,
+      "inertial_apparent_ra_deg": 357.444891936,
+      "jd_tt": 2460179.4826133,
+      "raw_file": "raw/neptune-event-02.txt"
+    },
+    {
+      "body": "neptune",
+      "inertial_apparent_dec_deg": -1.713721377,
+      "inertial_apparent_ra_deg": 359.14317562,
+      "jd_tt": 2460429.5639762,
+      "raw_file": "raw/neptune-event-02.txt"
+    },
+    {
+      "body": "neptune",
+      "inertial_apparent_dec_deg": -1.713357089,
+      "inertial_apparent_ra_deg": 359.144060275,
+      "jd_tt": 2460429.5952262,
+      "raw_file": "raw/neptune-event-02.txt"
+    },
+    {
+      "body": "neptune",
+      "inertial_apparent_dec_deg": -1.712992937,
+      "inertial_apparent_ra_deg": 359.144944638,
+      "jd_tt": 2460429.6264762,
+      "raw_file": "raw/neptune-event-02.txt"
+    },
+    {
+      "body": "neptune",
+      "inertial_apparent_dec_deg": -1.712628919,
+      "inertial_apparent_ra_deg": 359.145828711,
+      "jd_tt": 2460429.6577262,
+      "raw_file": "raw/neptune-event-02.txt"
+    },
+    {
+      "body": "neptune",
+      "inertial_apparent_dec_deg": -1.712265037,
+      "inertial_apparent_ra_deg": 359.146712492,
+      "jd_tt": 2460429.6889762,
+      "raw_file": "raw/neptune-event-02.txt"
+    },
+    {
+      "body": "neptune",
+      "inertial_apparent_dec_deg": -1.711901291,
+      "inertial_apparent_ra_deg": 359.147595982,
+      "jd_tt": 2460429.7202262,
+      "raw_file": "raw/neptune-event-02.txt"
+    },
+    {
+      "body": "neptune",
+      "inertial_apparent_dec_deg": -1.71153768,
+      "inertial_apparent_ra_deg": 359.148479179,
+      "jd_tt": 2460429.7514762,
+      "raw_file": "raw/neptune-event-02.txt"
+    },
+    {
+      "body": "neptune",
+      "inertial_apparent_dec_deg": -1.711174205,
+      "inertial_apparent_ra_deg": 359.149362085,
+      "jd_tt": 2460429.7827262,
+      "raw_file": "raw/neptune-event-02.txt"
+    },
+    {
+      "body": "neptune",
+      "inertial_apparent_dec_deg": -1.710810865,
+      "inertial_apparent_ra_deg": 359.150244698,
+      "jd_tt": 2460429.8139762,
+      "raw_file": "raw/neptune-event-02.txt"
+    },
+    {
+      "body": "neptune",
+      "inertial_apparent_dec_deg": -1.302253845,
+      "inertial_apparent_ra_deg": 0.175024293,
+      "jd_tt": 2460764.8744202,
+      "raw_file": "raw/neptune-event-02.txt"
+    },
+    {
+      "body": "neptune",
+      "inertial_apparent_dec_deg": -1.301794625,
+      "inertial_apparent_ra_deg": 0.176101589,
+      "jd_tt": 2460764.9056702,
+      "raw_file": "raw/neptune-event-02.txt"
+    },
+    {
+      "body": "neptune",
+      "inertial_apparent_dec_deg": -1.30133545,
+      "inertial_apparent_ra_deg": 0.17717881,
+      "jd_tt": 2460764.9369202,
+      "raw_file": "raw/neptune-event-02.txt"
+    },
+    {
+      "body": "neptune",
+      "inertial_apparent_dec_deg": -1.30087632,
+      "inertial_apparent_ra_deg": 0.178255955,
+      "jd_tt": 2460764.9681702,
+      "raw_file": "raw/neptune-event-02.txt"
+    },
+    {
+      "body": "neptune",
+      "inertial_apparent_dec_deg": -1.300417235,
+      "inertial_apparent_ra_deg": 0.179333024,
+      "jd_tt": 2460764.9994202,
+      "raw_file": "raw/neptune-event-02.txt"
+    },
+    {
+      "body": "neptune",
+      "inertial_apparent_dec_deg": -1.299958195,
+      "inertial_apparent_ra_deg": 0.180410017,
+      "jd_tt": 2460765.0306702,
+      "raw_file": "raw/neptune-event-02.txt"
+    },
+    {
+      "body": "neptune",
+      "inertial_apparent_dec_deg": -1.2994992,
+      "inertial_apparent_ra_deg": 0.181486934,
+      "jd_tt": 2460765.0619202,
+      "raw_file": "raw/neptune-event-02.txt"
+    },
+    {
+      "body": "neptune",
+      "inertial_apparent_dec_deg": -1.299040251,
+      "inertial_apparent_ra_deg": 0.182563774,
+      "jd_tt": 2460765.0931702,
+      "raw_file": "raw/neptune-event-02.txt"
+    },
+    {
+      "body": "neptune",
+      "inertial_apparent_dec_deg": -1.298581348,
+      "inertial_apparent_ra_deg": 0.183640537,
+      "jd_tt": 2460765.1244202,
+      "raw_file": "raw/neptune-event-02.txt"
+    },
+    {
+      "body": "pluto",
+      "inertial_apparent_dec_deg": -22.562075936,
+      "inertial_apparent_ra_deg": 302.388586363,
+      "jd_tt": 2460026.8911438,
+      "raw_file": "raw/pluto-event-01.txt"
+    },
+    {
+      "body": "pluto",
+      "inertial_apparent_dec_deg": -22.562030299,
+      "inertial_apparent_ra_deg": 302.389204937,
+      "jd_tt": 2460026.9223938,
+      "raw_file": "raw/pluto-event-01.txt"
+    },
+    {
+      "body": "pluto",
+      "inertial_apparent_dec_deg": -22.561984777,
+      "inertial_apparent_ra_deg": 302.389823079,
+      "jd_tt": 2460026.9536438,
+      "raw_file": "raw/pluto-event-01.txt"
+    },
+    {
+      "body": "pluto",
+      "inertial_apparent_dec_deg": -22.561939369,
+      "inertial_apparent_ra_deg": 302.390440789,
+      "jd_tt": 2460026.9848938,
+      "raw_file": "raw/pluto-event-01.txt"
+    },
+    {
+      "body": "pluto",
+      "inertial_apparent_dec_deg": -22.561894075,
+      "inertial_apparent_ra_deg": 302.391058066,
+      "jd_tt": 2460027.0161438,
+      "raw_file": "raw/pluto-event-01.txt"
+    },
+    {
+      "body": "pluto",
+      "inertial_apparent_dec_deg": -22.561848895,
+      "inertial_apparent_ra_deg": 302.39167491,
+      "jd_tt": 2460027.0473938,
+      "raw_file": "raw/pluto-event-01.txt"
+    },
+    {
+      "body": "pluto",
+      "inertial_apparent_dec_deg": -22.56180383,
+      "inertial_apparent_ra_deg": 302.392291319,
+      "jd_tt": 2460027.0786438,
+      "raw_file": "raw/pluto-event-01.txt"
+    },
+    {
+      "body": "pluto",
+      "inertial_apparent_dec_deg": -22.561758878,
+      "inertial_apparent_ra_deg": 302.392907293,
+      "jd_tt": 2460027.1098938,
+      "raw_file": "raw/pluto-event-01.txt"
+    },
+    {
+      "body": "pluto",
+      "inertial_apparent_dec_deg": -22.561714041,
+      "inertial_apparent_ra_deg": 302.393522831,
+      "jd_tt": 2460027.1411438,
+      "raw_file": "raw/pluto-event-01.txt"
+    },
+    {
+      "body": "pluto",
+      "inertial_apparent_dec_deg": -22.583729061,
+      "inertial_apparent_ra_deg": 302.79811329,
+      "jd_tt": 2460066.0801941,
+      "raw_file": "raw/pluto-event-01.txt"
+    },
+    {
+      "body": "pluto",
+      "inertial_apparent_dec_deg": -22.583761745,
+      "inertial_apparent_ra_deg": 302.798121978,
+      "jd_tt": 2460066.0926941,
+      "raw_file": "raw/pluto-event-01.txt"
+    },
+    {
+      "body": "pluto",
+      "inertial_apparent_dec_deg": -22.583794446,
+      "inertial_apparent_ra_deg": 302.798130585,
+      "jd_tt": 2460066.1051941,
+      "raw_file": "raw/pluto-event-01.txt"
+    },
+    {
+      "body": "pluto",
+      "inertial_apparent_dec_deg": -22.583810803,
+      "inertial_apparent_ra_deg": 302.798134858,
+      "jd_tt": 2460066.1114441,
+      "raw_file": "raw/pluto-event-01.txt"
+    },
+    {
+      "body": "pluto",
+      "inertial_apparent_dec_deg": -22.583827164,
+      "inertial_apparent_ra_deg": 302.798139111,
+      "jd_tt": 2460066.1176941,
+      "raw_file": "raw/pluto-event-01.txt"
+    },
+    {
+      "body": "pluto",
+      "inertial_apparent_dec_deg": -22.58384353,
+      "inertial_apparent_ra_deg": 302.798143343,
+      "jd_tt": 2460066.1239441,
+      "raw_file": "raw/pluto-event-01.txt"
+    },
+    {
+      "body": "pluto",
+      "inertial_apparent_dec_deg": -22.5838599,
+      "inertial_apparent_ra_deg": 302.798147555,
+      "jd_tt": 2460066.1301941,
+      "raw_file": "raw/pluto-event-01.txt"
+    },
+    {
+      "body": "pluto",
+      "inertial_apparent_dec_deg": -22.583876274,
+      "inertial_apparent_ra_deg": 302.798151747,
+      "jd_tt": 2460066.1364441,
+      "raw_file": "raw/pluto-event-01.txt"
+    },
+    {
+      "body": "pluto",
+      "inertial_apparent_dec_deg": -22.583892653,
+      "inertial_apparent_ra_deg": 302.798155918,
+      "jd_tt": 2460066.1426941,
+      "raw_file": "raw/pluto-event-01.txt"
+    },
+    {
+      "body": "pluto",
+      "inertial_apparent_dec_deg": -22.583909036,
+      "inertial_apparent_ra_deg": 302.79816007,
+      "jd_tt": 2460066.1489441,
+      "raw_file": "raw/pluto-event-01.txt"
+    },
+    {
+      "body": "pluto",
+      "inertial_apparent_dec_deg": -22.583925423,
+      "inertial_apparent_ra_deg": 302.7981642,
+      "jd_tt": 2460066.1551941,
+      "raw_file": "raw/pluto-event-01.txt"
+    },
+    {
+      "body": "pluto",
+      "inertial_apparent_dec_deg": -22.583941815,
+      "inertial_apparent_ra_deg": 302.79816831,
+      "jd_tt": 2460066.1614441,
+      "raw_file": "raw/pluto-event-01.txt"
+    },
+    {
+      "body": "pluto",
+      "inertial_apparent_dec_deg": -22.583958211,
+      "inertial_apparent_ra_deg": 302.7981724,
+      "jd_tt": 2460066.1676941,
+      "raw_file": "raw/pluto-event-01.txt"
+    },
+    {
+      "body": "pluto",
+      "inertial_apparent_dec_deg": -22.583974611,
+      "inertial_apparent_ra_deg": 302.79817647,
+      "jd_tt": 2460066.1739441,
+      "raw_file": "raw/pluto-event-01.txt"
+    },
+    {
+      "body": "pluto",
+      "inertial_apparent_dec_deg": -22.583991016,
+      "inertial_apparent_ra_deg": 302.798180519,
+      "jd_tt": 2460066.1801941,
+      "raw_file": "raw/pluto-event-01.txt"
+    },
+    {
+      "body": "pluto",
+      "inertial_apparent_dec_deg": -22.584007424,
+      "inertial_apparent_ra_deg": 302.798184548,
+      "jd_tt": 2460066.1864441,
+      "raw_file": "raw/pluto-event-01.txt"
+    },
+    {
+      "body": "pluto",
+      "inertial_apparent_dec_deg": -22.584023838,
+      "inertial_apparent_ra_deg": 302.798188557,
+      "jd_tt": 2460066.1926941,
+      "raw_file": "raw/pluto-event-01.txt"
+    },
+    {
+      "body": "pluto",
+      "inertial_apparent_dec_deg": -22.584040255,
+      "inertial_apparent_ra_deg": 302.798192545,
+      "jd_tt": 2460066.1989441,
+      "raw_file": "raw/pluto-event-01.txt"
+    },
+    {
+      "body": "pluto",
+      "inertial_apparent_dec_deg": -22.584056677,
+      "inertial_apparent_ra_deg": 302.798196513,
+      "jd_tt": 2460066.2051941,
+      "raw_file": "raw/pluto-event-01.txt"
+    },
+    {
+      "body": "pluto",
+      "inertial_apparent_dec_deg": -22.584073103,
+      "inertial_apparent_ra_deg": 302.79820046,
+      "jd_tt": 2460066.2114441,
+      "raw_file": "raw/pluto-event-01.txt"
+    },
+    {
+      "body": "pluto",
+      "inertial_apparent_dec_deg": -22.584089533,
+      "inertial_apparent_ra_deg": 302.798204387,
+      "jd_tt": 2460066.2176941,
+      "raw_file": "raw/pluto-event-01.txt"
+    },
+    {
+      "body": "pluto",
+      "inertial_apparent_dec_deg": -22.584105968,
+      "inertial_apparent_ra_deg": 302.798208294,
+      "jd_tt": 2460066.2239441,
+      "raw_file": "raw/pluto-event-01.txt"
+    },
+    {
+      "body": "pluto",
+      "inertial_apparent_dec_deg": -22.584122407,
+      "inertial_apparent_ra_deg": 302.79821218,
+      "jd_tt": 2460066.2301941,
+      "raw_file": "raw/pluto-event-01.txt"
+    },
+    {
+      "body": "pluto",
+      "inertial_apparent_dec_deg": -22.58413885,
+      "inertial_apparent_ra_deg": 302.798216046,
+      "jd_tt": 2460066.2364441,
+      "raw_file": "raw/pluto-event-01.txt"
+    },
+    {
+      "body": "pluto",
+      "inertial_apparent_dec_deg": -22.584155297,
+      "inertial_apparent_ra_deg": 302.798219891,
+      "jd_tt": 2460066.2426941,
+      "raw_file": "raw/pluto-event-01.txt"
+    },
+    {
+      "body": "pluto",
+      "inertial_apparent_dec_deg": -22.584171749,
+      "inertial_apparent_ra_deg": 302.798223716,
+      "jd_tt": 2460066.2489441,
+      "raw_file": "raw/pluto-event-01.txt"
+    },
+    {
+      "body": "pluto",
+      "inertial_apparent_dec_deg": -22.584188205,
+      "inertial_apparent_ra_deg": 302.798227521,
+      "jd_tt": 2460066.2551941,
+      "raw_file": "raw/pluto-event-01.txt"
+    },
+    {
+      "body": "pluto",
+      "inertial_apparent_dec_deg": -22.584204665,
+      "inertial_apparent_ra_deg": 302.798231305,
+      "jd_tt": 2460066.2614441,
+      "raw_file": "raw/pluto-event-01.txt"
+    },
+    {
+      "body": "pluto",
+      "inertial_apparent_dec_deg": -22.584221129,
+      "inertial_apparent_ra_deg": 302.798235069,
+      "jd_tt": 2460066.2676941,
+      "raw_file": "raw/pluto-event-01.txt"
+    },
+    {
+      "body": "pluto",
+      "inertial_apparent_dec_deg": -22.584237598,
+      "inertial_apparent_ra_deg": 302.798238812,
+      "jd_tt": 2460066.2739441,
+      "raw_file": "raw/pluto-event-01.txt"
+    },
+    {
+      "body": "pluto",
+      "inertial_apparent_dec_deg": -22.584254071,
+      "inertial_apparent_ra_deg": 302.798242535,
+      "jd_tt": 2460066.2801941,
+      "raw_file": "raw/pluto-event-01.txt"
+    },
+    {
+      "body": "pluto",
+      "inertial_apparent_dec_deg": -22.584270548,
+      "inertial_apparent_ra_deg": 302.798246238,
+      "jd_tt": 2460066.2864441,
+      "raw_file": "raw/pluto-event-01.txt"
+    },
+    {
+      "body": "pluto",
+      "inertial_apparent_dec_deg": -22.584287029,
+      "inertial_apparent_ra_deg": 302.79824992,
+      "jd_tt": 2460066.2926941,
+      "raw_file": "raw/pluto-event-01.txt"
+    },
+    {
+      "body": "pluto",
+      "inertial_apparent_dec_deg": -22.584303515,
+      "inertial_apparent_ra_deg": 302.798253582,
+      "jd_tt": 2460066.2989441,
+      "raw_file": "raw/pluto-event-01.txt"
+    },
+    {
+      "body": "pluto",
+      "inertial_apparent_dec_deg": -22.584320005,
+      "inertial_apparent_ra_deg": 302.798257224,
+      "jd_tt": 2460066.3051941,
+      "raw_file": "raw/pluto-event-01.txt"
+    },
+    {
+      "body": "pluto",
+      "inertial_apparent_dec_deg": -22.584336499,
+      "inertial_apparent_ra_deg": 302.798260845,
+      "jd_tt": 2460066.3114441,
+      "raw_file": "raw/pluto-event-01.txt"
+    },
+    {
+      "body": "pluto",
+      "inertial_apparent_dec_deg": -22.584352997,
+      "inertial_apparent_ra_deg": 302.798264445,
+      "jd_tt": 2460066.3176941,
+      "raw_file": "raw/pluto-event-02.txt"
+    },
+    {
+      "body": "pluto",
+      "inertial_apparent_dec_deg": -22.584369499,
+      "inertial_apparent_ra_deg": 302.798268025,
+      "jd_tt": 2460066.3239441,
+      "raw_file": "raw/pluto-event-02.txt"
+    },
+    {
+      "body": "pluto",
+      "inertial_apparent_dec_deg": -22.584386006,
+      "inertial_apparent_ra_deg": 302.798271585,
+      "jd_tt": 2460066.3301941,
+      "raw_file": "raw/pluto-event-02.txt"
+    },
+    {
+      "body": "pluto",
+      "inertial_apparent_dec_deg": -22.584402516,
+      "inertial_apparent_ra_deg": 302.798275124,
+      "jd_tt": 2460066.3364441,
+      "raw_file": "raw/pluto-event-02.txt"
+    },
+    {
+      "body": "pluto",
+      "inertial_apparent_dec_deg": -22.584419031,
+      "inertial_apparent_ra_deg": 302.798278643,
+      "jd_tt": 2460066.3426941,
+      "raw_file": "raw/pluto-event-02.txt"
+    },
+    {
+      "body": "pluto",
+      "inertial_apparent_dec_deg": -22.584435551,
+      "inertial_apparent_ra_deg": 302.798282142,
+      "jd_tt": 2460066.3489441,
+      "raw_file": "raw/pluto-event-02.txt"
+    },
+    {
+      "body": "pluto",
+      "inertial_apparent_dec_deg": -22.584452074,
+      "inertial_apparent_ra_deg": 302.79828562,
+      "jd_tt": 2460066.3551941,
+      "raw_file": "raw/pluto-event-02.txt"
+    },
+    {
+      "body": "pluto",
+      "inertial_apparent_dec_deg": -22.584485133,
+      "inertial_apparent_ra_deg": 302.798292514,
+      "jd_tt": 2460066.3676941,
+      "raw_file": "raw/pluto-event-02.txt"
+    },
+    {
+      "body": "pluto",
+      "inertial_apparent_dec_deg": -22.584518209,
+      "inertial_apparent_ra_deg": 302.798299327,
+      "jd_tt": 2460066.3801941,
+      "raw_file": "raw/pluto-event-02.txt"
+    },
+    {
+      "body": "pluto",
+      "inertial_apparent_dec_deg": -22.652330766,
+      "inertial_apparent_ra_deg": 302.718742676,
+      "jd_tt": 2460085.509005,
+      "raw_file": "raw/pluto-event-02.txt"
+    },
+    {
+      "body": "pluto",
+      "inertial_apparent_dec_deg": -22.652469305,
+      "inertial_apparent_ra_deg": 302.718470038,
+      "jd_tt": 2460085.540255,
+      "raw_file": "raw/pluto-event-02.txt"
+    },
+    {
+      "body": "pluto",
+      "inertial_apparent_dec_deg": -22.652607932,
+      "inertial_apparent_ra_deg": 302.718196931,
+      "jd_tt": 2460085.571505,
+      "raw_file": "raw/pluto-event-02.txt"
+    },
+    {
+      "body": "pluto",
+      "inertial_apparent_dec_deg": -22.652746646,
+      "inertial_apparent_ra_deg": 302.717923354,
+      "jd_tt": 2460085.602755,
+      "raw_file": "raw/pluto-event-02.txt"
+    },
+    {
+      "body": "pluto",
+      "inertial_apparent_dec_deg": -22.652885447,
+      "inertial_apparent_ra_deg": 302.717649306,
+      "jd_tt": 2460085.634005,
+      "raw_file": "raw/pluto-event-02.txt"
+    },
+    {
+      "body": "pluto",
+      "inertial_apparent_dec_deg": -22.653024333,
+      "inertial_apparent_ra_deg": 302.717374788,
+      "jd_tt": 2460085.665255,
+      "raw_file": "raw/pluto-event-02.txt"
+    },
+    {
+      "body": "pluto",
+      "inertial_apparent_dec_deg": -22.653163304,
+      "inertial_apparent_ra_deg": 302.717099801,
+      "jd_tt": 2460085.696505,
+      "raw_file": "raw/pluto-event-02.txt"
+    },
+    {
+      "body": "pluto",
+      "inertial_apparent_dec_deg": -22.65330236,
+      "inertial_apparent_ra_deg": 302.716824342,
+      "jd_tt": 2460085.727755,
+      "raw_file": "raw/pluto-event-02.txt"
+    },
+    {
+      "body": "pluto",
+      "inertial_apparent_dec_deg": -22.653441499,
+      "inertial_apparent_ra_deg": 302.716548414,
+      "jd_tt": 2460085.759005,
+      "raw_file": "raw/pluto-event-02.txt"
+    },
+    {
+      "body": "pluto",
+      "inertial_apparent_dec_deg": -22.820213873,
+      "inertial_apparent_ra_deg": 303.285428344,
+      "jd_tt": 2460354.6298052,
+      "raw_file": "raw/pluto-event-02.txt"
+    },
+    {
+      "body": "pluto",
+      "inertial_apparent_dec_deg": -22.820067596,
+      "inertial_apparent_ra_deg": 303.286439508,
+      "jd_tt": 2460354.6610552,
+      "raw_file": "raw/pluto-event-02.txt"
+    },
+    {
+      "body": "pluto",
+      "inertial_apparent_dec_deg": -22.819921365,
+      "inertial_apparent_ra_deg": 303.287450457,
+      "jd_tt": 2460354.6923052,
+      "raw_file": "raw/pluto-event-02.txt"
+    },
+    {
+      "body": "pluto",
+      "inertial_apparent_dec_deg": -22.819775179,
+      "inertial_apparent_ra_deg": 303.288461194,
+      "jd_tt": 2460354.7235552,
+      "raw_file": "raw/pluto-event-02.txt"
+    },
+    {
+      "body": "pluto",
+      "inertial_apparent_dec_deg": -22.819629038,
+      "inertial_apparent_ra_deg": 303.289471717,
+      "jd_tt": 2460354.7548052,
+      "raw_file": "raw/pluto-event-02.txt"
+    },
+    {
+      "body": "pluto",
+      "inertial_apparent_dec_deg": -22.819482941,
+      "inertial_apparent_ra_deg": 303.290482027,
+      "jd_tt": 2460354.7860552,
+      "raw_file": "raw/pluto-event-02.txt"
+    },
+    {
+      "body": "pluto",
+      "inertial_apparent_dec_deg": -22.819336889,
+      "inertial_apparent_ra_deg": 303.291492123,
+      "jd_tt": 2460354.8173052,
+      "raw_file": "raw/pluto-event-02.txt"
+    },
+    {
+      "body": "pluto",
+      "inertial_apparent_dec_deg": -22.81919088,
+      "inertial_apparent_ra_deg": 303.292502007,
+      "jd_tt": 2460354.8485552,
+      "raw_file": "raw/pluto-event-02.txt"
+    },
+    {
+      "body": "pluto",
+      "inertial_apparent_dec_deg": -22.819044914,
+      "inertial_apparent_ra_deg": 303.293511679,
+      "jd_tt": 2460354.8798052,
+      "raw_file": "raw/pluto-event-02.txt"
+    }
+  ],
+  "sampling": {
+    "grid_half_width_days": 0.125,
+    "grid_step_tt_days": 0.03125,
+    "interpolation_accuracy_not_proven": true,
+    "reference_interpolation": "four-point cubic inside independently observed JPL root bracket",
+    "source_tt_jd_precision_days": 1e-07,
+    "station_rate_stencil": [
+      -2,
+      -1,
+      0,
+      1,
+      2
+    ],
+    "station_rate_step_tt_days": 0.0125
+  },
+  "schema_version": 1,
+  "selection_bias": "22 candidate events nominated by Aria; this is NOT a blind event discovery or completeness test",
+  "source_authority": "NASA/JPL Horizons geocentric airless apparent ICRF RA/Dec, quantity45 TT",
+  "source_requests": [
+    {
+      "body": "mars",
+      "centre_id": 399,
+      "parameters": {
+        "ANG_FORMAT": "DEG",
+        "APPARENT": "AIRLESS",
+        "CAL_FORMAT": "JD",
+        "CENTER": "'500@399'",
+        "COMMAND": "'499'",
+        "CSV_FORMAT": "YES",
+        "EPHEM_TYPE": "OBSERVER",
+        "EXTRA_PREC": "YES",
+        "MAKE_EPHEM": "YES",
+        "OBJ_DATA": "NO",
+        "QUANTITIES": "'45'",
+        "REF_SYSTEM": "'ICRF'",
+        "TIME_TYPE": "TT",
+        "TLIST": "'2459957.2232605' '2459957.2357605' '2459957.2482605' '2459957.2545105' '2459957.2607605' '2459957.2670105' '2459957.2732605' '2459957.2795105' '2459957.2857605' '2459957.2920105' '2459957.2982605' '2459957.3045105' '2459957.3107605' '2459957.3170105' '2459957.3232605' '2459957.3295105' '2459957.3357605' '2459957.3420105' '2459957.3482605' '2459957.3545105' '2459957.3607605' '2459957.3670105' '2459957.3732605' '2459957.3795105' '2459957.3857605' '2459957.3920105' '2459957.3982605' '2459957.4045105' '2459957.4107605' '2459957.4170105' '2459957.4232605' '2459957.4295105' '2459957.4357605' '2459957.4420105' '2459957.4482605' '2459957.4545105' '2459957.4607605' '2459957.4670105' '2459957.4732605' '2459957.4795105' '2459957.4857605' '2459957.4920105' '2459957.4982605' '2459957.5107605' '2459957.5232605'",
+        "TLIST_TYPE": "'JD'",
+        "format": "json"
+      },
+      "raw_file": "raw/mars-event-01.txt",
+      "raw_sha256": "d4e9894ab6d7d0b54aabd1307395099c920383ec6deb029a9273b3066081cfd5",
+      "response_signature": {
+        "source": "NASA/JPL Horizons API",
+        "version": "1.2"
+      },
+      "row_count": 45,
+      "source_header": {
+        "centre": "Center body name: Earth (399)                     {source: DE441}",
+        "source_solution_labels": "DE441, mar099",
+        "target": "Target body name: Mars (499)                      {source: mar099}"
+      },
+      "source_url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=json&COMMAND=%27499%27&OBJ_DATA=NO&MAKE_EPHEM=YES&CENTER=%27500%40399%27&REF_SYSTEM=%27ICRF%27&TLIST_TYPE=%27JD%27&TLIST=%272459957.2232605%27+%272459957.2357605%27+%272459957.2482605%27+%272459957.2545105%27+%272459957.2607605%27+%272459957.2670105%27+%272459957.2732605%27+%272459957.2795105%27+%272459957.2857605%27+%272459957.2920105%27+%272459957.2982605%27+%272459957.3045105%27+%272459957.3107605%27+%272459957.3170105%27+%272459957.3232605%27+%272459957.3295105%27+%272459957.3357605%27+%272459957.3420105%27+%272459957.3482605%27+%272459957.3545105%27+%272459957.3607605%27+%272459957.3670105%27+%272459957.3732605%27+%272459957.3795105%27+%272459957.3857605%27+%272459957.3920105%27+%272459957.3982605%27+%272459957.4045105%27+%272459957.4107605%27+%272459957.4170105%27+%272459957.4232605%27+%272459957.4295105%27+%272459957.4357605%27+%272459957.4420105%27+%272459957.4482605%27+%272459957.4545105%27+%272459957.4607605%27+%272459957.4670105%27+%272459957.4732605%27+%272459957.4795105%27+%272459957.4857605%27+%272459957.4920105%27+%272459957.4982605%27+%272459957.5107605%27+%272459957.5232605%27&CSV_FORMAT=YES&EPHEM_TYPE=OBSERVER&TIME_TYPE=TT&QUANTITIES=%2745%27&CAL_FORMAT=JD&ANG_FORMAT=DEG&EXTRA_PREC=YES&APPARENT=AIRLESS",
+      "target_id": 499
+    },
+    {
+      "body": "mars",
+      "centre_id": 399,
+      "parameters": {
+        "ANG_FORMAT": "DEG",
+        "APPARENT": "AIRLESS",
+        "CAL_FORMAT": "JD",
+        "CENTER": "'500@399'",
+        "COMMAND": "'499'",
+        "CSV_FORMAT": "YES",
+        "EPHEM_TYPE": "OBSERVER",
+        "EXTRA_PREC": "YES",
+        "MAKE_EPHEM": "YES",
+        "OBJ_DATA": "NO",
+        "QUANTITIES": "'45'",
+        "REF_SYSTEM": "'ICRF'",
+        "TIME_TYPE": "TT",
+        "TLIST": "'2460028.8656311' '2460028.8968811' '2460028.9281311' '2460028.9593811' '2460028.9906311' '2460029.0218811' '2460029.0531311' '2460029.0843811' '2460029.1156311' '2460085.5090050' '2460085.5402550' '2460085.5715050' '2460085.6027550' '2460085.6340050' '2460085.6652550' '2460085.6965050' '2460085.7277550' '2460085.7590050' '2460146.2363059' '2460146.2675559' '2460146.2988059' '2460146.3300559' '2460146.3613059' '2460146.3925559' '2460146.4238059' '2460146.4550559' '2460146.4863059' '2460179.2326133' '2460179.2638633' '2460179.2951133' '2460179.3263633' '2460179.3576133' '2460179.3888633' '2460179.4201133' '2460179.4513633' '2460179.4826133' '2460246.0446702' '2460246.0759202' '2460246.1071702' '2460246.1384202' '2460246.1696702' '2460246.2009202' '2460246.2321702' '2460246.2634202' '2460246.2946702'",
+        "TLIST_TYPE": "'JD'",
+        "format": "json"
+      },
+      "raw_file": "raw/mars-event-02.txt",
+      "raw_sha256": "e9340130ca2f34f2e9a315317efba30c059750ea23abf1a26c324a6176db3a54",
+      "response_signature": {
+        "source": "NASA/JPL Horizons API",
+        "version": "1.2"
+      },
+      "row_count": 45,
+      "source_header": {
+        "centre": "Center body name: Earth (399)                     {source: DE441}",
+        "source_solution_labels": "DE441, mar099",
+        "target": "Target body name: Mars (499)                      {source: mar099}"
+      },
+      "source_url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=json&COMMAND=%27499%27&OBJ_DATA=NO&MAKE_EPHEM=YES&CENTER=%27500%40399%27&REF_SYSTEM=%27ICRF%27&TLIST_TYPE=%27JD%27&TLIST=%272460028.8656311%27+%272460028.8968811%27+%272460028.9281311%27+%272460028.9593811%27+%272460028.9906311%27+%272460029.0218811%27+%272460029.0531311%27+%272460029.0843811%27+%272460029.1156311%27+%272460085.5090050%27+%272460085.5402550%27+%272460085.5715050%27+%272460085.6027550%27+%272460085.6340050%27+%272460085.6652550%27+%272460085.6965050%27+%272460085.7277550%27+%272460085.7590050%27+%272460146.2363059%27+%272460146.2675559%27+%272460146.2988059%27+%272460146.3300559%27+%272460146.3613059%27+%272460146.3925559%27+%272460146.4238059%27+%272460146.4550559%27+%272460146.4863059%27+%272460179.2326133%27+%272460179.2638633%27+%272460179.2951133%27+%272460179.3263633%27+%272460179.3576133%27+%272460179.3888633%27+%272460179.4201133%27+%272460179.4513633%27+%272460179.4826133%27+%272460246.0446702%27+%272460246.0759202%27+%272460246.1071702%27+%272460246.1384202%27+%272460246.1696702%27+%272460246.2009202%27+%272460246.2321702%27+%272460246.2634202%27+%272460246.2946702%27&CSV_FORMAT=YES&EPHEM_TYPE=OBSERVER&TIME_TYPE=TT&QUANTITIES=%2745%27&CAL_FORMAT=JD&ANG_FORMAT=DEG&EXTRA_PREC=YES&APPARENT=AIRLESS",
+      "target_id": 499
+    },
+    {
+      "body": "mars",
+      "centre_id": 399,
+      "parameters": {
+        "ANG_FORMAT": "DEG",
+        "APPARENT": "AIRLESS",
+        "CAL_FORMAT": "JD",
+        "CENTER": "'500@399'",
+        "COMMAND": "'499'",
+        "CSV_FORMAT": "YES",
+        "EPHEM_TYPE": "OBSERVER",
+        "EXTRA_PREC": "YES",
+        "MAKE_EPHEM": "YES",
+        "OBJ_DATA": "NO",
+        "QUANTITIES": "'45'",
+        "REF_SYSTEM": "'ICRF'",
+        "TIME_TYPE": "TT",
+        "TLIST": "'2460260.2586462' '2460260.2898962' '2460260.3211462' '2460260.3523962' '2460260.3836462' '2460260.4148962' '2460260.4461462' '2460260.4773962' '2460260.5086462' '2460354.6298052' '2460354.6610552' '2460354.6923052' '2460354.7235552' '2460354.7548052' '2460354.7860552' '2460354.8173052' '2460354.8485552' '2460354.8798052' '2460411.2341888' '2460411.2654388' '2460411.2966888' '2460411.3279388' '2460411.3591888' '2460411.3904388' '2460411.4216888' '2460411.4529388' '2460411.4841888' '2460429.5639762' '2460429.5952262' '2460429.6264762' '2460429.6577262' '2460429.6889762' '2460429.7202262' '2460429.7514762' '2460429.7827262' '2460429.8139762' '2460506.9624819' '2460506.9937319' '2460507.0249819' '2460507.0562319' '2460507.0874819' '2460507.1187319' '2460507.1499819' '2460507.1812319' '2460507.2124819'",
+        "TLIST_TYPE": "'JD'",
+        "format": "json"
+      },
+      "raw_file": "raw/mars-event-03.txt",
+      "raw_sha256": "d22726ee2c4075c18a0ebaa9767fb7ddd9a35619aae2ed361c6d6c140c8e0082",
+      "response_signature": {
+        "source": "NASA/JPL Horizons API",
+        "version": "1.2"
+      },
+      "row_count": 45,
+      "source_header": {
+        "centre": "Center body name: Earth (399)                     {source: DE441}",
+        "source_solution_labels": "DE441, mar099",
+        "target": "Target body name: Mars (499)                      {source: mar099}"
+      },
+      "source_url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=json&COMMAND=%27499%27&OBJ_DATA=NO&MAKE_EPHEM=YES&CENTER=%27500%40399%27&REF_SYSTEM=%27ICRF%27&TLIST_TYPE=%27JD%27&TLIST=%272460260.2586462%27+%272460260.2898962%27+%272460260.3211462%27+%272460260.3523962%27+%272460260.3836462%27+%272460260.4148962%27+%272460260.4461462%27+%272460260.4773962%27+%272460260.5086462%27+%272460354.6298052%27+%272460354.6610552%27+%272460354.6923052%27+%272460354.7235552%27+%272460354.7548052%27+%272460354.7860552%27+%272460354.8173052%27+%272460354.8485552%27+%272460354.8798052%27+%272460411.2341888%27+%272460411.2654388%27+%272460411.2966888%27+%272460411.3279388%27+%272460411.3591888%27+%272460411.3904388%27+%272460411.4216888%27+%272460411.4529388%27+%272460411.4841888%27+%272460429.5639762%27+%272460429.5952262%27+%272460429.6264762%27+%272460429.6577262%27+%272460429.6889762%27+%272460429.7202262%27+%272460429.7514762%27+%272460429.7827262%27+%272460429.8139762%27+%272460506.9624819%27+%272460506.9937319%27+%272460507.0249819%27+%272460507.0562319%27+%272460507.0874819%27+%272460507.1187319%27+%272460507.1499819%27+%272460507.1812319%27+%272460507.2124819%27&CSV_FORMAT=YES&EPHEM_TYPE=OBSERVER&TIME_TYPE=TT&QUANTITIES=%2745%27&CAL_FORMAT=JD&ANG_FORMAT=DEG&EXTRA_PREC=YES&APPARENT=AIRLESS",
+      "target_id": 499
+    },
+    {
+      "body": "mars",
+      "centre_id": 399,
+      "parameters": {
+        "ANG_FORMAT": "DEG",
+        "APPARENT": "AIRLESS",
+        "CAL_FORMAT": "JD",
+        "CENTER": "'500@399'",
+        "COMMAND": "'499'",
+        "CSV_FORMAT": "YES",
+        "EPHEM_TYPE": "OBSERVER",
+        "EXTRA_PREC": "YES",
+        "MAKE_EPHEM": "YES",
+        "OBJ_DATA": "NO",
+        "QUANTITIES": "'45'",
+        "REF_SYSTEM": "'ICRF'",
+        "TIME_TYPE": "TT",
+        "TLIST": "'2460537.0157562' '2460537.0470062' '2460537.0782562' '2460537.1095062' '2460537.1407562' '2460537.1720062' '2460537.2032562' '2460537.2345062' '2460537.2657562'",
+        "TLIST_TYPE": "'JD'",
+        "format": "json"
+      },
+      "raw_file": "raw/mars-event-04.txt",
+      "raw_sha256": "1b0adb79293bd8a321de1d250077071d46008abbaae7b9f710757e4da0c3cc72",
+      "response_signature": {
+        "source": "NASA/JPL Horizons API",
+        "version": "1.2"
+      },
+      "row_count": 9,
+      "source_header": {
+        "centre": "Center body name: Earth (399)                     {source: DE441}",
+        "source_solution_labels": "DE441, mar099",
+        "target": "Target body name: Mars (499)                      {source: mar099}"
+      },
+      "source_url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=json&COMMAND=%27499%27&OBJ_DATA=NO&MAKE_EPHEM=YES&CENTER=%27500%40399%27&REF_SYSTEM=%27ICRF%27&TLIST_TYPE=%27JD%27&TLIST=%272460537.0157562%27+%272460537.0470062%27+%272460537.0782562%27+%272460537.1095062%27+%272460537.1407562%27+%272460537.1720062%27+%272460537.2032562%27+%272460537.2345062%27+%272460537.2657562%27&CSV_FORMAT=YES&EPHEM_TYPE=OBSERVER&TIME_TYPE=TT&QUANTITIES=%2745%27&CAL_FORMAT=JD&ANG_FORMAT=DEG&EXTRA_PREC=YES&APPARENT=AIRLESS",
+      "target_id": 499
+    },
+    {
+      "body": "jupiter",
+      "centre_id": 399,
+      "parameters": {
+        "ANG_FORMAT": "DEG",
+        "APPARENT": "AIRLESS",
+        "CAL_FORMAT": "JD",
+        "CENTER": "'500@399'",
+        "COMMAND": "'599'",
+        "CSV_FORMAT": "YES",
+        "EPHEM_TYPE": "OBSERVER",
+        "EXTRA_PREC": "YES",
+        "MAKE_EPHEM": "YES",
+        "OBJ_DATA": "NO",
+        "QUANTITIES": "'45'",
+        "REF_SYSTEM": "'ICRF'",
+        "TIME_TYPE": "TT",
+        "TLIST": "'2460081.0980530' '2460081.1293030' '2460081.1605530' '2460081.1918030' '2460081.2230530' '2460081.2543030' '2460081.2855530' '2460081.3168030' '2460081.3480530' '2460191.9417664' '2460191.9542664' '2460191.9667664' '2460191.9730164' '2460191.9792664' '2460191.9855164' '2460191.9917664' '2460191.9980164' '2460192.0042664' '2460192.0105164' '2460192.0167664' '2460192.0230164' '2460192.0292664' '2460192.0355164' '2460192.0417664' '2460192.0480164' '2460192.0542664' '2460192.0605164' '2460192.0667664' '2460192.0730164' '2460192.0792664' '2460192.0855164' '2460192.0917664' '2460192.0980164' '2460192.1042664' '2460192.1105164' '2460192.1167664' '2460192.1230164' '2460192.1292664' '2460192.1355164' '2460192.1417664' '2460192.1480164' '2460192.1542664' '2460192.1605164' '2460192.1667664' '2460192.1730164'",
+        "TLIST_TYPE": "'JD'",
+        "format": "json"
+      },
+      "raw_file": "raw/jupiter-event-01.txt",
+      "raw_sha256": "1692b61223c67d6bcc7f6a8bfe4ba8bd8a81447200492e1ca7bcc5e3bdc04563",
+      "response_signature": {
+        "source": "NASA/JPL Horizons API",
+        "version": "1.2"
+      },
+      "row_count": 45,
+      "source_header": {
+        "centre": "Center body name: Earth (399)                     {source: jup365_merged}",
+        "source_solution_labels": "DE441, jup365_merged",
+        "target": "Target body name: Jupiter (599)                   {source: jup365_merged}"
+      },
+      "source_url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=json&COMMAND=%27599%27&OBJ_DATA=NO&MAKE_EPHEM=YES&CENTER=%27500%40399%27&REF_SYSTEM=%27ICRF%27&TLIST_TYPE=%27JD%27&TLIST=%272460081.0980530%27+%272460081.1293030%27+%272460081.1605530%27+%272460081.1918030%27+%272460081.2230530%27+%272460081.2543030%27+%272460081.2855530%27+%272460081.3168030%27+%272460081.3480530%27+%272460191.9417664%27+%272460191.9542664%27+%272460191.9667664%27+%272460191.9730164%27+%272460191.9792664%27+%272460191.9855164%27+%272460191.9917664%27+%272460191.9980164%27+%272460192.0042664%27+%272460192.0105164%27+%272460192.0167664%27+%272460192.0230164%27+%272460192.0292664%27+%272460192.0355164%27+%272460192.0417664%27+%272460192.0480164%27+%272460192.0542664%27+%272460192.0605164%27+%272460192.0667664%27+%272460192.0730164%27+%272460192.0792664%27+%272460192.0855164%27+%272460192.0917664%27+%272460192.0980164%27+%272460192.1042664%27+%272460192.1105164%27+%272460192.1167664%27+%272460192.1230164%27+%272460192.1292664%27+%272460192.1355164%27+%272460192.1417664%27+%272460192.1480164%27+%272460192.1542664%27+%272460192.1605164%27+%272460192.1667664%27+%272460192.1730164%27&CSV_FORMAT=YES&EPHEM_TYPE=OBSERVER&TIME_TYPE=TT&QUANTITIES=%2745%27&CAL_FORMAT=JD&ANG_FORMAT=DEG&EXTRA_PREC=YES&APPARENT=AIRLESS",
+      "target_id": 599
+    },
+    {
+      "body": "jupiter",
+      "centre_id": 399,
+      "parameters": {
+        "ANG_FORMAT": "DEG",
+        "APPARENT": "AIRLESS",
+        "CAL_FORMAT": "JD",
+        "CENTER": "'500@399'",
+        "COMMAND": "'599'",
+        "CSV_FORMAT": "YES",
+        "EPHEM_TYPE": "OBSERVER",
+        "EXTRA_PREC": "YES",
+        "MAKE_EPHEM": "YES",
+        "OBJ_DATA": "NO",
+        "QUANTITIES": "'45'",
+        "REF_SYSTEM": "'ICRF'",
+        "TIME_TYPE": "TT",
+        "TLIST": "'2460192.1792664' '2460192.1855164' '2460192.1917664' '2460192.1980164' '2460192.2042664' '2460192.2105164' '2460192.2167664' '2460192.2292664' '2460192.2417664' '2460246.0446702' '2460246.0759202' '2460246.1071702' '2460246.1384202' '2460246.1696702' '2460246.2009202' '2460246.2321702' '2460246.2634202' '2460246.2946702' '2460537.0157562' '2460537.0470062' '2460537.0782562' '2460537.1095062' '2460537.1407562' '2460537.1720062' '2460537.2032562' '2460537.2345062' '2460537.2657562'",
+        "TLIST_TYPE": "'JD'",
+        "format": "json"
+      },
+      "raw_file": "raw/jupiter-event-02.txt",
+      "raw_sha256": "d2bef435441a2ea0441267c949bc1028d4fbfdae6bc05f18bdf676a47029e445",
+      "response_signature": {
+        "source": "NASA/JPL Horizons API",
+        "version": "1.2"
+      },
+      "row_count": 27,
+      "source_header": {
+        "centre": "Center body name: Earth (399)                     {source: jup365_merged}",
+        "source_solution_labels": "DE441, jup365_merged",
+        "target": "Target body name: Jupiter (599)                   {source: jup365_merged}"
+      },
+      "source_url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=json&COMMAND=%27599%27&OBJ_DATA=NO&MAKE_EPHEM=YES&CENTER=%27500%40399%27&REF_SYSTEM=%27ICRF%27&TLIST_TYPE=%27JD%27&TLIST=%272460192.1792664%27+%272460192.1855164%27+%272460192.1917664%27+%272460192.1980164%27+%272460192.2042664%27+%272460192.2105164%27+%272460192.2167664%27+%272460192.2292664%27+%272460192.2417664%27+%272460246.0446702%27+%272460246.0759202%27+%272460246.1071702%27+%272460246.1384202%27+%272460246.1696702%27+%272460246.2009202%27+%272460246.2321702%27+%272460246.2634202%27+%272460246.2946702%27+%272460537.0157562%27+%272460537.0470062%27+%272460537.0782562%27+%272460537.1095062%27+%272460537.1407562%27+%272460537.1720062%27+%272460537.2032562%27+%272460537.2345062%27+%272460537.2657562%27&CSV_FORMAT=YES&EPHEM_TYPE=OBSERVER&TIME_TYPE=TT&QUANTITIES=%2745%27&CAL_FORMAT=JD&ANG_FORMAT=DEG&EXTRA_PREC=YES&APPARENT=AIRLESS",
+      "target_id": 599
+    },
+    {
+      "body": "saturn",
+      "centre_id": 399,
+      "parameters": {
+        "ANG_FORMAT": "DEG",
+        "APPARENT": "AIRLESS",
+        "CAL_FORMAT": "JD",
+        "CENTER": "'500@399'",
+        "COMMAND": "'699'",
+        "CSV_FORMAT": "YES",
+        "EPHEM_TYPE": "OBSERVER",
+        "EXTRA_PREC": "YES",
+        "MAKE_EPHEM": "YES",
+        "OBJ_DATA": "NO",
+        "QUANTITIES": "'45'",
+        "REF_SYSTEM": "'ICRF'",
+        "TIME_TYPE": "TT",
+        "TLIST": "'2460010.9417419' '2460010.9729919' '2460011.0042419' '2460011.0354919' '2460011.0667419' '2460011.0979919' '2460011.1292419' '2460011.1604919' '2460011.1917419' '2460113.0776306' '2460113.0901306' '2460113.1026306' '2460113.1088806' '2460113.1151306' '2460113.1213806' '2460113.1276306' '2460113.1338806' '2460113.1401306' '2460113.1463806' '2460113.1526306' '2460113.1588806' '2460113.1651306' '2460113.1713806' '2460113.1776306' '2460113.1838806' '2460113.1901306' '2460113.1963806' '2460113.2026306' '2460113.2088806' '2460113.2151306' '2460113.2213806' '2460113.2276306' '2460113.2338806' '2460113.2401306' '2460113.2463806' '2460113.2526306' '2460113.2588806' '2460113.2651306' '2460113.2713806' '2460113.2776306' '2460113.2838806' '2460113.2901306' '2460113.2963806' '2460113.3026306' '2460113.3088806'",
+        "TLIST_TYPE": "'JD'",
+        "format": "json"
+      },
+      "raw_file": "raw/saturn-event-01.txt",
+      "raw_sha256": "647b5b65a1f2fcd2683b54f8c3457426bb7c3ca1cd1927d6a536f19bf89cfb07",
+      "response_signature": {
+        "source": "NASA/JPL Horizons API",
+        "version": "1.2"
+      },
+      "row_count": 45,
+      "source_header": {
+        "centre": "Center body name: Earth (399)                     {source: DE441}",
+        "source_solution_labels": "DE441, sat441l",
+        "target": "Target body name: Saturn (699)                    {source: sat441l}"
+      },
+      "source_url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=json&COMMAND=%27699%27&OBJ_DATA=NO&MAKE_EPHEM=YES&CENTER=%27500%40399%27&REF_SYSTEM=%27ICRF%27&TLIST_TYPE=%27JD%27&TLIST=%272460010.9417419%27+%272460010.9729919%27+%272460011.0042419%27+%272460011.0354919%27+%272460011.0667419%27+%272460011.0979919%27+%272460011.1292419%27+%272460011.1604919%27+%272460011.1917419%27+%272460113.0776306%27+%272460113.0901306%27+%272460113.1026306%27+%272460113.1088806%27+%272460113.1151306%27+%272460113.1213806%27+%272460113.1276306%27+%272460113.1338806%27+%272460113.1401306%27+%272460113.1463806%27+%272460113.1526306%27+%272460113.1588806%27+%272460113.1651306%27+%272460113.1713806%27+%272460113.1776306%27+%272460113.1838806%27+%272460113.1901306%27+%272460113.1963806%27+%272460113.2026306%27+%272460113.2088806%27+%272460113.2151306%27+%272460113.2213806%27+%272460113.2276306%27+%272460113.2338806%27+%272460113.2401306%27+%272460113.2463806%27+%272460113.2526306%27+%272460113.2588806%27+%272460113.2651306%27+%272460113.2713806%27+%272460113.2776306%27+%272460113.2838806%27+%272460113.2901306%27+%272460113.2963806%27+%272460113.3026306%27+%272460113.3088806%27&CSV_FORMAT=YES&EPHEM_TYPE=OBSERVER&TIME_TYPE=TT&QUANTITIES=%2745%27&CAL_FORMAT=JD&ANG_FORMAT=DEG&EXTRA_PREC=YES&APPARENT=AIRLESS",
+      "target_id": 699
+    },
+    {
+      "body": "saturn",
+      "centre_id": 399,
+      "parameters": {
+        "ANG_FORMAT": "DEG",
+        "APPARENT": "AIRLESS",
+        "CAL_FORMAT": "JD",
+        "CENTER": "'500@399'",
+        "COMMAND": "'699'",
+        "CSV_FORMAT": "YES",
+        "EPHEM_TYPE": "OBSERVER",
+        "EXTRA_PREC": "YES",
+        "MAKE_EPHEM": "YES",
+        "OBJ_DATA": "NO",
+        "QUANTITIES": "'45'",
+        "REF_SYSTEM": "'ICRF'",
+        "TIME_TYPE": "TT",
+        "TLIST": "'2460113.3151306' '2460113.3213806' '2460113.3276306' '2460113.3338806' '2460113.3401306' '2460113.3463806' '2460113.3526306' '2460113.3651306' '2460113.3776306' '2460146.2363059' '2460146.2675559' '2460146.2988059' '2460146.3300559' '2460146.3613059' '2460146.3925559' '2460146.4238059' '2460146.4550559' '2460146.4863059' '2460411.2341888' '2460411.2654388' '2460411.2966888' '2460411.3279388' '2460411.3591888' '2460411.3904388' '2460411.4216888' '2460411.4529388' '2460411.4841888'",
+        "TLIST_TYPE": "'JD'",
+        "format": "json"
+      },
+      "raw_file": "raw/saturn-event-02.txt",
+      "raw_sha256": "2508a5a1c3328b3e7884ff9cedcc08e1f580ae69043fa90ef4e3981a3d7f23da",
+      "response_signature": {
+        "source": "NASA/JPL Horizons API",
+        "version": "1.2"
+      },
+      "row_count": 27,
+      "source_header": {
+        "centre": "Center body name: Earth (399)                     {source: DE441}",
+        "source_solution_labels": "DE441, sat441l",
+        "target": "Target body name: Saturn (699)                    {source: sat441l}"
+      },
+      "source_url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=json&COMMAND=%27699%27&OBJ_DATA=NO&MAKE_EPHEM=YES&CENTER=%27500%40399%27&REF_SYSTEM=%27ICRF%27&TLIST_TYPE=%27JD%27&TLIST=%272460113.3151306%27+%272460113.3213806%27+%272460113.3276306%27+%272460113.3338806%27+%272460113.3401306%27+%272460113.3463806%27+%272460113.3526306%27+%272460113.3651306%27+%272460113.3776306%27+%272460146.2363059%27+%272460146.2675559%27+%272460146.2988059%27+%272460146.3300559%27+%272460146.3613059%27+%272460146.3925559%27+%272460146.4238059%27+%272460146.4550559%27+%272460146.4863059%27+%272460411.2341888%27+%272460411.2654388%27+%272460411.2966888%27+%272460411.3279388%27+%272460411.3591888%27+%272460411.3904388%27+%272460411.4216888%27+%272460411.4529388%27+%272460411.4841888%27&CSV_FORMAT=YES&EPHEM_TYPE=OBSERVER&TIME_TYPE=TT&QUANTITIES=%2745%27&CAL_FORMAT=JD&ANG_FORMAT=DEG&EXTRA_PREC=YES&APPARENT=AIRLESS",
+      "target_id": 699
+    },
+    {
+      "body": "uranus",
+      "centre_id": 399,
+      "parameters": {
+        "ANG_FORMAT": "DEG",
+        "APPARENT": "AIRLESS",
+        "CAL_FORMAT": "JD",
+        "CENTER": "'500@399'",
+        "COMMAND": "'799'",
+        "CSV_FORMAT": "YES",
+        "EPHEM_TYPE": "OBSERVER",
+        "EXTRA_PREC": "YES",
+        "MAKE_EPHEM": "YES",
+        "OBJ_DATA": "NO",
+        "QUANTITIES": "'45'",
+        "REF_SYSTEM": "'ICRF'",
+        "TIME_TYPE": "TT",
+        "TLIST": "'2459967.3077332' '2459967.3202332' '2459967.3327332' '2459967.3389832' '2459967.3452332' '2459967.3514832' '2459967.3577332' '2459967.3639832' '2459967.3702332' '2459967.3764832' '2459967.3827332' '2459967.3889832' '2459967.3952332' '2459967.4014832' '2459967.4077332' '2459967.4139832' '2459967.4202332' '2459967.4264832' '2459967.4327332' '2459967.4389832' '2459967.4452332' '2459967.4514832' '2459967.4577332' '2459967.4639832' '2459967.4702332' '2459967.4764832' '2459967.4827332' '2459967.4889832' '2459967.4952332' '2459967.5014832' '2459967.5077332' '2459967.5139832' '2459967.5202332' '2459967.5264832' '2459967.5327332' '2459967.5389832' '2459967.5452332' '2459967.5514832' '2459967.5577332' '2459967.5639832' '2459967.5702332' '2459967.5764832' '2459967.5827332' '2459967.5952332' '2459967.6077332'",
+        "TLIST_TYPE": "'JD'",
+        "format": "json"
+      },
+      "raw_file": "raw/uranus-event-01.txt",
+      "raw_sha256": "46c5c5b1c2cebfdead5261dd7c8809e351516f6960b7f470d00a6aabf09cd23a",
+      "response_signature": {
+        "source": "NASA/JPL Horizons API",
+        "version": "1.2"
+      },
+      "row_count": 45,
+      "source_header": {
+        "centre": "Center body name: Earth (399)                     {source: ura184_merged}",
+        "source_solution_labels": "DE441, ura184_merged",
+        "target": "Target body name: Uranus (799)                    {source: ura184_merged}"
+      },
+      "source_url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=json&COMMAND=%27799%27&OBJ_DATA=NO&MAKE_EPHEM=YES&CENTER=%27500%40399%27&REF_SYSTEM=%27ICRF%27&TLIST_TYPE=%27JD%27&TLIST=%272459967.3077332%27+%272459967.3202332%27+%272459967.3327332%27+%272459967.3389832%27+%272459967.3452332%27+%272459967.3514832%27+%272459967.3577332%27+%272459967.3639832%27+%272459967.3702332%27+%272459967.3764832%27+%272459967.3827332%27+%272459967.3889832%27+%272459967.3952332%27+%272459967.4014832%27+%272459967.4077332%27+%272459967.4139832%27+%272459967.4202332%27+%272459967.4264832%27+%272459967.4327332%27+%272459967.4389832%27+%272459967.4452332%27+%272459967.4514832%27+%272459967.4577332%27+%272459967.4639832%27+%272459967.4702332%27+%272459967.4764832%27+%272459967.4827332%27+%272459967.4889832%27+%272459967.4952332%27+%272459967.5014832%27+%272459967.5077332%27+%272459967.5139832%27+%272459967.5202332%27+%272459967.5264832%27+%272459967.5327332%27+%272459967.5389832%27+%272459967.5452332%27+%272459967.5514832%27+%272459967.5577332%27+%272459967.5639832%27+%272459967.5702332%27+%272459967.5764832%27+%272459967.5827332%27+%272459967.5952332%27+%272459967.6077332%27&CSV_FORMAT=YES&EPHEM_TYPE=OBSERVER&TIME_TYPE=TT&QUANTITIES=%2745%27&CAL_FORMAT=JD&ANG_FORMAT=DEG&EXTRA_PREC=YES&APPARENT=AIRLESS",
+      "target_id": 799
+    },
+    {
+      "body": "uranus",
+      "centre_id": 399,
+      "parameters": {
+        "ANG_FORMAT": "DEG",
+        "APPARENT": "AIRLESS",
+        "CAL_FORMAT": "JD",
+        "CENTER": "'500@399'",
+        "COMMAND": "'799'",
+        "CSV_FORMAT": "YES",
+        "EPHEM_TYPE": "OBSERVER",
+        "EXTRA_PREC": "YES",
+        "MAKE_EPHEM": "YES",
+        "OBJ_DATA": "NO",
+        "QUANTITIES": "'45'",
+        "REF_SYSTEM": "'ICRF'",
+        "TIME_TYPE": "TT",
+        "TLIST": "'2460260.2586462' '2460260.2898962' '2460260.3211462' '2460260.3523962' '2460260.3836462' '2460260.4148962' '2460260.4461462' '2460260.4773962' '2460260.5086462' '2460506.9624819' '2460506.9937319' '2460507.0249819' '2460507.0562319' '2460507.0874819' '2460507.1187319' '2460507.1499819' '2460507.1812319' '2460507.2124819' '2460863.7001038' '2460863.7313538' '2460863.7626038' '2460863.7938538' '2460863.8251038' '2460863.8563538' '2460863.8876038' '2460863.9188538' '2460863.9501038'",
+        "TLIST_TYPE": "'JD'",
+        "format": "json"
+      },
+      "raw_file": "raw/uranus-event-02.txt",
+      "raw_sha256": "ca16293eb7c7d7dd7b41dc6fc3f44306007907468dee1ca7c93a108552fe0454",
+      "response_signature": {
+        "source": "NASA/JPL Horizons API",
+        "version": "1.2"
+      },
+      "row_count": 27,
+      "source_header": {
+        "centre": "Center body name: Earth (399)                     {source: ura184_merged}",
+        "source_solution_labels": "DE441, ura184_merged",
+        "target": "Target body name: Uranus (799)                    {source: ura184_merged}"
+      },
+      "source_url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=json&COMMAND=%27799%27&OBJ_DATA=NO&MAKE_EPHEM=YES&CENTER=%27500%40399%27&REF_SYSTEM=%27ICRF%27&TLIST_TYPE=%27JD%27&TLIST=%272460260.2586462%27+%272460260.2898962%27+%272460260.3211462%27+%272460260.3523962%27+%272460260.3836462%27+%272460260.4148962%27+%272460260.4461462%27+%272460260.4773962%27+%272460260.5086462%27+%272460506.9624819%27+%272460506.9937319%27+%272460507.0249819%27+%272460507.0562319%27+%272460507.0874819%27+%272460507.1187319%27+%272460507.1499819%27+%272460507.1812319%27+%272460507.2124819%27+%272460863.7001038%27+%272460863.7313538%27+%272460863.7626038%27+%272460863.7938538%27+%272460863.8251038%27+%272460863.8563538%27+%272460863.8876038%27+%272460863.9188538%27+%272460863.9501038%27&CSV_FORMAT=YES&EPHEM_TYPE=OBSERVER&TIME_TYPE=TT&QUANTITIES=%2745%27&CAL_FORMAT=JD&ANG_FORMAT=DEG&EXTRA_PREC=YES&APPARENT=AIRLESS",
+      "target_id": 799
+    },
+    {
+      "body": "neptune",
+      "centre_id": 399,
+      "parameters": {
+        "ANG_FORMAT": "DEG",
+        "APPARENT": "AIRLESS",
+        "CAL_FORMAT": "JD",
+        "CENTER": "'500@399'",
+        "COMMAND": "'899'",
+        "CSV_FORMAT": "YES",
+        "EPHEM_TYPE": "OBSERVER",
+        "EXTRA_PREC": "YES",
+        "MAKE_EPHEM": "YES",
+        "OBJ_DATA": "NO",
+        "QUANTITIES": "'45'",
+        "REF_SYSTEM": "'ICRF'",
+        "TIME_TYPE": "TT",
+        "TLIST": "'2460126.2306458' '2460126.2431458' '2460126.2556458' '2460126.2618958' '2460126.2681458' '2460126.2743958' '2460126.2806458' '2460126.2868958' '2460126.2931458' '2460126.2993958' '2460126.3056458' '2460126.3118958' '2460126.3181458' '2460126.3243958' '2460126.3306458' '2460126.3368958' '2460126.3431458' '2460126.3493958' '2460126.3556458' '2460126.3618958' '2460126.3681458' '2460126.3743958' '2460126.3806458' '2460126.3868958' '2460126.3931458' '2460126.3993958' '2460126.4056458' '2460126.4118958' '2460126.4181458' '2460126.4243958' '2460126.4306458' '2460126.4368958' '2460126.4431458' '2460126.4493958' '2460126.4556458' '2460126.4618958' '2460126.4681458' '2460126.4743958' '2460126.4806458' '2460126.4868958' '2460126.4931458' '2460126.4993958' '2460126.5056458' '2460126.5181458' '2460126.5306458'",
+        "TLIST_TYPE": "'JD'",
+        "format": "json"
+      },
+      "raw_file": "raw/neptune-event-01.txt",
+      "raw_sha256": "f9f5313024637b4d8ed409e5ca6a2fdaff9a1ea82ab6100c2627d50a1b938826",
+      "response_signature": {
+        "source": "NASA/JPL Horizons API",
+        "version": "1.2"
+      },
+      "row_count": 45,
+      "source_header": {
+        "centre": "Center body name: Earth (399)                     {source: nep098_merged}",
+        "source_solution_labels": "DE441, nep098_merged",
+        "target": "Target body name: Neptune (899)                   {source: nep098_merged}"
+      },
+      "source_url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=json&COMMAND=%27899%27&OBJ_DATA=NO&MAKE_EPHEM=YES&CENTER=%27500%40399%27&REF_SYSTEM=%27ICRF%27&TLIST_TYPE=%27JD%27&TLIST=%272460126.2306458%27+%272460126.2431458%27+%272460126.2556458%27+%272460126.2618958%27+%272460126.2681458%27+%272460126.2743958%27+%272460126.2806458%27+%272460126.2868958%27+%272460126.2931458%27+%272460126.2993958%27+%272460126.3056458%27+%272460126.3118958%27+%272460126.3181458%27+%272460126.3243958%27+%272460126.3306458%27+%272460126.3368958%27+%272460126.3431458%27+%272460126.3493958%27+%272460126.3556458%27+%272460126.3618958%27+%272460126.3681458%27+%272460126.3743958%27+%272460126.3806458%27+%272460126.3868958%27+%272460126.3931458%27+%272460126.3993958%27+%272460126.4056458%27+%272460126.4118958%27+%272460126.4181458%27+%272460126.4243958%27+%272460126.4306458%27+%272460126.4368958%27+%272460126.4431458%27+%272460126.4493958%27+%272460126.4556458%27+%272460126.4618958%27+%272460126.4681458%27+%272460126.4743958%27+%272460126.4806458%27+%272460126.4868958%27+%272460126.4931458%27+%272460126.4993958%27+%272460126.5056458%27+%272460126.5181458%27+%272460126.5306458%27&CSV_FORMAT=YES&EPHEM_TYPE=OBSERVER&TIME_TYPE=TT&QUANTITIES=%2745%27&CAL_FORMAT=JD&ANG_FORMAT=DEG&EXTRA_PREC=YES&APPARENT=AIRLESS",
+      "target_id": 899
+    },
+    {
+      "body": "neptune",
+      "centre_id": 399,
+      "parameters": {
+        "ANG_FORMAT": "DEG",
+        "APPARENT": "AIRLESS",
+        "CAL_FORMAT": "JD",
+        "CENTER": "'500@399'",
+        "COMMAND": "'899'",
+        "CSV_FORMAT": "YES",
+        "EPHEM_TYPE": "OBSERVER",
+        "EXTRA_PREC": "YES",
+        "MAKE_EPHEM": "YES",
+        "OBJ_DATA": "NO",
+        "QUANTITIES": "'45'",
+        "REF_SYSTEM": "'ICRF'",
+        "TIME_TYPE": "TT",
+        "TLIST": "'2460179.2326133' '2460179.2638633' '2460179.2951133' '2460179.3263633' '2460179.3576133' '2460179.3888633' '2460179.4201133' '2460179.4513633' '2460179.4826133' '2460429.5639762' '2460429.5952262' '2460429.6264762' '2460429.6577262' '2460429.6889762' '2460429.7202262' '2460429.7514762' '2460429.7827262' '2460429.8139762' '2460764.8744202' '2460764.9056702' '2460764.9369202' '2460764.9681702' '2460764.9994202' '2460765.0306702' '2460765.0619202' '2460765.0931702' '2460765.1244202'",
+        "TLIST_TYPE": "'JD'",
+        "format": "json"
+      },
+      "raw_file": "raw/neptune-event-02.txt",
+      "raw_sha256": "e5382cb707726bbcef56808b17124bb877f7f5fecd8556b5b0fc45b5f7d9aae1",
+      "response_signature": {
+        "source": "NASA/JPL Horizons API",
+        "version": "1.2"
+      },
+      "row_count": 27,
+      "source_header": {
+        "centre": "Center body name: Earth (399)                     {source: nep098_merged}",
+        "source_solution_labels": "DE441, nep098_merged",
+        "target": "Target body name: Neptune (899)                   {source: nep098_merged}"
+      },
+      "source_url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=json&COMMAND=%27899%27&OBJ_DATA=NO&MAKE_EPHEM=YES&CENTER=%27500%40399%27&REF_SYSTEM=%27ICRF%27&TLIST_TYPE=%27JD%27&TLIST=%272460179.2326133%27+%272460179.2638633%27+%272460179.2951133%27+%272460179.3263633%27+%272460179.3576133%27+%272460179.3888633%27+%272460179.4201133%27+%272460179.4513633%27+%272460179.4826133%27+%272460429.5639762%27+%272460429.5952262%27+%272460429.6264762%27+%272460429.6577262%27+%272460429.6889762%27+%272460429.7202262%27+%272460429.7514762%27+%272460429.7827262%27+%272460429.8139762%27+%272460764.8744202%27+%272460764.9056702%27+%272460764.9369202%27+%272460764.9681702%27+%272460764.9994202%27+%272460765.0306702%27+%272460765.0619202%27+%272460765.0931702%27+%272460765.1244202%27&CSV_FORMAT=YES&EPHEM_TYPE=OBSERVER&TIME_TYPE=TT&QUANTITIES=%2745%27&CAL_FORMAT=JD&ANG_FORMAT=DEG&EXTRA_PREC=YES&APPARENT=AIRLESS",
+      "target_id": 899
+    },
+    {
+      "body": "pluto",
+      "centre_id": 399,
+      "parameters": {
+        "ANG_FORMAT": "DEG",
+        "APPARENT": "AIRLESS",
+        "CAL_FORMAT": "JD",
+        "CENTER": "'500@399'",
+        "COMMAND": "'999'",
+        "CSV_FORMAT": "YES",
+        "EPHEM_TYPE": "OBSERVER",
+        "EXTRA_PREC": "YES",
+        "MAKE_EPHEM": "YES",
+        "OBJ_DATA": "NO",
+        "QUANTITIES": "'45'",
+        "REF_SYSTEM": "'ICRF'",
+        "TIME_TYPE": "TT",
+        "TLIST": "'2460026.8911438' '2460026.9223938' '2460026.9536438' '2460026.9848938' '2460027.0161438' '2460027.0473938' '2460027.0786438' '2460027.1098938' '2460027.1411438' '2460066.0801941' '2460066.0926941' '2460066.1051941' '2460066.1114441' '2460066.1176941' '2460066.1239441' '2460066.1301941' '2460066.1364441' '2460066.1426941' '2460066.1489441' '2460066.1551941' '2460066.1614441' '2460066.1676941' '2460066.1739441' '2460066.1801941' '2460066.1864441' '2460066.1926941' '2460066.1989441' '2460066.2051941' '2460066.2114441' '2460066.2176941' '2460066.2239441' '2460066.2301941' '2460066.2364441' '2460066.2426941' '2460066.2489441' '2460066.2551941' '2460066.2614441' '2460066.2676941' '2460066.2739441' '2460066.2801941' '2460066.2864441' '2460066.2926941' '2460066.2989441' '2460066.3051941' '2460066.3114441'",
+        "TLIST_TYPE": "'JD'",
+        "format": "json"
+      },
+      "raw_file": "raw/pluto-event-01.txt",
+      "raw_sha256": "eb2921de65dac4cd64f7f695fb6bfa574c9bf52d870493a71afe3889f5e16f6a",
+      "response_signature": {
+        "source": "NASA/JPL Horizons API",
+        "version": "1.2"
+      },
+      "row_count": 45,
+      "source_header": {
+        "centre": "Center body name: Earth (399)                     {source: DE441}",
+        "source_solution_labels": "DE441, plu060_merged",
+        "target": "Target body name: Pluto (999)                     {source: plu060_merged}"
+      },
+      "source_url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=json&COMMAND=%27999%27&OBJ_DATA=NO&MAKE_EPHEM=YES&CENTER=%27500%40399%27&REF_SYSTEM=%27ICRF%27&TLIST_TYPE=%27JD%27&TLIST=%272460026.8911438%27+%272460026.9223938%27+%272460026.9536438%27+%272460026.9848938%27+%272460027.0161438%27+%272460027.0473938%27+%272460027.0786438%27+%272460027.1098938%27+%272460027.1411438%27+%272460066.0801941%27+%272460066.0926941%27+%272460066.1051941%27+%272460066.1114441%27+%272460066.1176941%27+%272460066.1239441%27+%272460066.1301941%27+%272460066.1364441%27+%272460066.1426941%27+%272460066.1489441%27+%272460066.1551941%27+%272460066.1614441%27+%272460066.1676941%27+%272460066.1739441%27+%272460066.1801941%27+%272460066.1864441%27+%272460066.1926941%27+%272460066.1989441%27+%272460066.2051941%27+%272460066.2114441%27+%272460066.2176941%27+%272460066.2239441%27+%272460066.2301941%27+%272460066.2364441%27+%272460066.2426941%27+%272460066.2489441%27+%272460066.2551941%27+%272460066.2614441%27+%272460066.2676941%27+%272460066.2739441%27+%272460066.2801941%27+%272460066.2864441%27+%272460066.2926941%27+%272460066.2989441%27+%272460066.3051941%27+%272460066.3114441%27&CSV_FORMAT=YES&EPHEM_TYPE=OBSERVER&TIME_TYPE=TT&QUANTITIES=%2745%27&CAL_FORMAT=JD&ANG_FORMAT=DEG&EXTRA_PREC=YES&APPARENT=AIRLESS",
+      "target_id": 999
+    },
+    {
+      "body": "pluto",
+      "centre_id": 399,
+      "parameters": {
+        "ANG_FORMAT": "DEG",
+        "APPARENT": "AIRLESS",
+        "CAL_FORMAT": "JD",
+        "CENTER": "'500@399'",
+        "COMMAND": "'999'",
+        "CSV_FORMAT": "YES",
+        "EPHEM_TYPE": "OBSERVER",
+        "EXTRA_PREC": "YES",
+        "MAKE_EPHEM": "YES",
+        "OBJ_DATA": "NO",
+        "QUANTITIES": "'45'",
+        "REF_SYSTEM": "'ICRF'",
+        "TIME_TYPE": "TT",
+        "TLIST": "'2460066.3176941' '2460066.3239441' '2460066.3301941' '2460066.3364441' '2460066.3426941' '2460066.3489441' '2460066.3551941' '2460066.3676941' '2460066.3801941' '2460085.5090050' '2460085.5402550' '2460085.5715050' '2460085.6027550' '2460085.6340050' '2460085.6652550' '2460085.6965050' '2460085.7277550' '2460085.7590050' '2460354.6298052' '2460354.6610552' '2460354.6923052' '2460354.7235552' '2460354.7548052' '2460354.7860552' '2460354.8173052' '2460354.8485552' '2460354.8798052'",
+        "TLIST_TYPE": "'JD'",
+        "format": "json"
+      },
+      "raw_file": "raw/pluto-event-02.txt",
+      "raw_sha256": "bb7cd3c06547e30ae9caca04e83a0db7509c5e6dc641f2fae4f38fd5546cf229",
+      "response_signature": {
+        "source": "NASA/JPL Horizons API",
+        "version": "1.2"
+      },
+      "row_count": 27,
+      "source_header": {
+        "centre": "Center body name: Earth (399)                     {source: DE441}",
+        "source_solution_labels": "DE441, plu060_merged",
+        "target": "Target body name: Pluto (999)                     {source: plu060_merged}"
+      },
+      "source_url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=json&COMMAND=%27999%27&OBJ_DATA=NO&MAKE_EPHEM=YES&CENTER=%27500%40399%27&REF_SYSTEM=%27ICRF%27&TLIST_TYPE=%27JD%27&TLIST=%272460066.3176941%27+%272460066.3239441%27+%272460066.3301941%27+%272460066.3364441%27+%272460066.3426941%27+%272460066.3489441%27+%272460066.3551941%27+%272460066.3676941%27+%272460066.3801941%27+%272460085.5090050%27+%272460085.5402550%27+%272460085.5715050%27+%272460085.6027550%27+%272460085.6340050%27+%272460085.6652550%27+%272460085.6965050%27+%272460085.7277550%27+%272460085.7590050%27+%272460354.6298052%27+%272460354.6610552%27+%272460354.6923052%27+%272460354.7235552%27+%272460354.7548052%27+%272460354.7860552%27+%272460354.8173052%27+%272460354.8485552%27+%272460354.8798052%27&CSV_FORMAT=YES&EPHEM_TYPE=OBSERVER&TIME_TYPE=TT&QUANTITIES=%2745%27&CAL_FORMAT=JD&ANG_FORMAT=DEG&EXTRA_PREC=YES&APPARENT=AIRLESS",
+      "target_id": 999
+    }
+  ],
+  "wp54_source_dataset_id": "aria-wp54-jpl-iau2006-tropical-ray-stencils-v1"
+}
