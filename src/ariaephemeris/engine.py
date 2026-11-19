@@ -28,7 +28,7 @@ from .models import (
 )
 from .positions import coordinates
 from .sources import Kernel
-from .sources.centres import CENTRE_IDS, PhysicalCentreKernel
+from .sources.centres import PhysicalCentreKernel
 from .time import ResolvedTime, resolve
 
 
@@ -90,9 +90,14 @@ class Ephemeris:
         result = {**deepcopy(self._manifest), "segments": self.kernel.segments()}
         if self._centre_kernel is not None:
             result["physical_centres"] = self._centre_kernel.provenance(
-                tuple(self._centre_kernel._sources)
+                tuple(datasets.centres_manifest()["sources"])
             )
         return result
+
+    def _physical_provenance(self, bodies: tuple[str, ...]) -> dict[str, dict[str, Any]]:
+        if self._centre_kernel is None:
+            raise AriaError("DATA_UNAVAILABLE", "Physical planet-centre sources are not installed")
+        return self._centre_kernel.provenance(bodies)
 
     def _profile_kernel(
         self, profile: str
@@ -127,7 +132,7 @@ class Ephemeris:
         }
         if profile != "reference":
             result["profile"] = profile
-            result["physical_centre_sources"] = active.provenance((body,))
+            result["physical_centre_sources"] = self._physical_provenance((body,))
             result["qualification"] = "not-qualified-for-commercial-release"
         return result
 
@@ -255,7 +260,7 @@ class Ephemeris:
                     else "same-kernel centre-source/CSPICE evaluator agreement only",
                     **(
                         {
-                            "physical_centre_sources": active.provenance(request.bodies),
+                            "physical_centre_sources": self._physical_provenance(request.bodies),
                             "physical_centre_dataset_id": datasets.centres_manifest()["dataset_id"],
                         }
                         if request.profile == "planet-centres-v1"
