@@ -187,7 +187,7 @@ def calculate(engine: Ephemeris, refs: dict[str, Any], fixture_sha256: str) -> d
                         "motion_classification": ref_motion,
                         "sign_index_0_11": int(ref_lon // 30) % 12,
                         "stencil_jd_tt": case["stencil_jd_tt"],
-                        "source_icu": "Horizons quantity45 ICRF RA/Dec; IAU2006 true ecliptic-of-date",
+                        "source_icrf": "Horizons quantity45 ICRF RA/Dec; IAU2006 true ecliptic-of-date",
                     },
                     "aria": {
                         "tropical_longitude_deg": planet.longitude_deg,
