@@ -1,13 +1,7 @@
 name: RM-001-006 One-shot Jupiter and Pluto Horizons component acquisition
 
+# Archived references are immutable: only explicit manual acquisition for a reviewed version.
 on:
-  push:
-    branches:
-      - feature/rm-001-006-jpl-source-model-reconciliation-20261119
-    paths:
-      - '.github/workflows/horizons-model-components-acquisition.yml'
-      - 'tools/datasets/acquire_horizons_model_components.py'
-      - 'tools/datasets/verify_horizons_model_components.py'
   workflow_dispatch:
 
 permissions:
