@@ -8,6 +8,8 @@ on:
       - '.github/workflows/jupiter-centre-qualification.yml'
       - 'tools/datasets/audit_planet_centres.py'
       - 'tools/datasets/qualify_jupiter_centre.py'
+      - 'src/**'
+      - 'tests/integration/test_physical_centres.py'
       - 'tests/unit/test_planet_centre_audit.py'
       - 'docs/roadmaps/001-engine-development/jupiter-source-manifest.json'
   pull_request:
@@ -80,6 +82,12 @@ jobs:
       - name: Validate qualification output
         run: |
           python -c 'import json; r=json.load(open(".artifacts/jupiter-cspice-comparison.json")); assert r["evaluator_agreement_pass"]; assert r["source"]["satellite_md5_checked"]==r["source"]["satellite_published_md5"]; assert r["source"]["satellite_sha256_pinned_independently"]; print("JUP349 pinned-source and evaluator qualification passed")'
+      - name: Verify runtime opt-in Jupiter physical-centre profile
+        run: |
+          ARIA_KERNEL=.artifacts/de442s.bsp \
+          ARIA_CENTRE_BODY=jupiter \
+          ARIA_CENTRE_KERNEL=.artifacts/planet-centres/jup349.bsp \
+            pytest -q tests/integration/test_physical_centres.py
       - name: Upload evidence (never upload production SPK binaries)
         if: always()
         uses: actions/upload-artifact@v4
