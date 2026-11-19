@@ -36,9 +36,7 @@ def test_true_tropical_projection_with_independently_constructed_inertial_vector
     ra = math.degrees(math.atan2(inertial[1], inertial[0])) % 360.0
     dec = math.degrees(math.atan2(inertial[2], math.hypot(inertial[0], inertial[1])))
     actual = compare.true_tropical_from_icrf(ra, dec, jd)
-    assert compare.signed_angle(actual[0], math.degrees(ecl_lon)) == pytest.approx(
-        0.0, abs=1e-11
-    )
+    assert compare.signed_angle(actual[0], math.degrees(ecl_lon)) == pytest.approx(0.0, abs=1e-11)
     assert actual[1] == pytest.approx(math.degrees(ecl_lat), abs=1e-11)
 
 
@@ -46,15 +44,10 @@ def test_rate_stencil_wrap_and_signed_retrograde():
     jd = 2451545.0
     step = compare.RATE_STEP_DAYS
     # Analytic circular motion of -0.25 degrees/day around 0 Aries.
-    five = [
-        ((0.0001 - 0.25 * step * k) % 360, 0.0)
-        for k in (-2, -1, 0, 1, 2)
-    ]
+    five = [((0.0001 - 0.25 * step * k) % 360, 0.0) for k in (-2, -1, 0, 1, 2)]
     assert compare.reference_rate(five) == pytest.approx(-0.25, abs=1e-11)
     assert compare.signed_angle(359.9999, 0.0001) == pytest.approx(-0.0002)
-    assert compare.nearest_sign_boundary_arcsec(359.9999) == pytest.approx(
-        0.36, abs=1e-7
-    )
+    assert compare.nearest_sign_boundary_arcsec(359.9999) == pytest.approx(0.36, abs=1e-7)
     assert jd != 0
     with pytest.raises(ValueError, match="Five"):
         compare.reference_rate(five[:3])
@@ -106,11 +99,16 @@ def test_critical_station_and_ingress_selection_without_external_reference_value
     stress, nominated = acquire.stress_centres(engine, "jupiter")
     assert len(stress) == 6 and len(nominated) == 2
     assert {x["label"] for x in stress} == {
-        "station-before", "station-root", "station-after",
-        "ingress-before", "ingress-root", "ingress-after",
+        "station-before",
+        "station-root",
+        "station-after",
+        "ingress-before",
+        "ingress-root",
+        "ingress-after",
     }
-    assert all(x["nomination"]["candidate_source"].endswith("not independent reference)")
-               for x in stress)
+    assert all(
+        x["nomination"]["candidate_source"].endswith("not independent reference)") for x in stress
+    )
 
 
 def test_motion_and_sign_limits_are_never_claimed_as_physical_truth():

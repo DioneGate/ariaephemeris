@@ -24,9 +24,8 @@ from acquire_horizons_fixtures import (
 from acquire_wp54_tropical import (
     BODIES,
     NUM_BASE,
-    NUM_STRESS,
-    STEP,
     STENCIL,
+    STEP,
     stamp,
 )
 from verify_horizons_fixtures import validate as validate_wp51
@@ -53,11 +52,12 @@ def verify(root: Path, wp51_root: Path) -> dict[str, Any]:
         raise ValueError("Independent longitude-rate finite difference conventions changed")
     if source["source_wp51_id"] != "aria-horizons-physical-centre-reference-v1":
         raise ValueError("Different original source dataset")
-    if source["scientific_status"] != "INDEPENDENT_INERTIAL_RAYS_WITH_SHARED_IAU_STANDARD_TRANSFORM":
+    if (
+        source["scientific_status"]
+        != "INDEPENDENT_INERTIAL_RAYS_WITH_SHARED_IAU_STANDARD_TRANSFORM"
+    ):
         raise ValueError("Scientific independence scope is missing")
-    manifest = json.loads(
-        (wp51_root / "horizons-reference-v1.json").read_text(encoding="utf-8")
-    )
+    manifest = json.loads((wp51_root / "horizons-reference-v1.json").read_text(encoding="utf-8"))
     original_rays = {
         (case["body"], case["reference"]["jd_tt"]): (
             case["reference"]["inertial_apparent_ra_deg"],
@@ -89,11 +89,10 @@ def verify(root: Path, wp51_root: Path) -> dict[str, Any]:
         if (body, jd) not in ray_map:
             raise ValueError("Original WP5.1 source directions missing")
         entry = ray_map[(body, jd)]
-        if (
-            (entry["inertial_apparent_ra_deg"], entry["inertial_apparent_dec_deg"])
-            != (ra, dec)
-            or entry["source_raw_file"] != file
-        ):
+        if (entry["inertial_apparent_ra_deg"], entry["inertial_apparent_dec_deg"]) != (
+            ra,
+            dec,
+        ) or entry["source_raw_file"] != file:
             raise ValueError("Original JPL source numerical value was changed")
         matched.add((body, jd))
 

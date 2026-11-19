@@ -135,9 +135,7 @@ def select_critical(engine: Ephemeris, body: str) -> tuple[dict[str, Any], dict[
             sign_right = int(right.longitude_deg // 30)
             if sign_left != sign_right:
                 boundary = ((sign_left + (1 if motion > 0 else 0)) * 30) % 360
-                root = _refine(
-                    engine, body, epochs[index], epochs[index + 1], "ingress", boundary
-                )
+                root = _refine(engine, body, epochs[index], epochs[index + 1], "ingress", boundary)
                 ingress = {
                     "kind": "ingress",
                     "jd_tt": root,
@@ -175,9 +173,7 @@ def stress_centres(
 def _wp51_centres(root: Path, body: str) -> list[dict[str, Any]]:
     data = json.loads((root / "horizons-reference-v1.json").read_text(encoding="utf-8"))
     relevant = [
-        case
-        for case in data["cases"]
-        if case["body"] == body and case["kind"] == "apparent"
+        case for case in data["cases"] if case["body"] == body and case["kind"] == "apparent"
     ]
     if len(relevant) != NUM_BASE:
         raise ValueError("WP5.1 baseline apparent time samples missing")
@@ -192,18 +188,13 @@ def _wp51_centres(root: Path, body: str) -> list[dict[str, Any]]:
     ]
 
 
-def acquire(
-    base: Path, centres_dir: Path, wp51: Path, output: Path
-) -> dict[str, Any]:
+def acquire(base: Path, centres_dir: Path, wp51: Path, output: Path) -> dict[str, Any]:
     if (output / "wp54-horizons-tropical-stencils-v1.json").exists():
         raise FileExistsError("Frozen Horizons WP5.4 fixtures must not be silently refreshed")
     if verify_wp51(wp51)["fixture_rows_verified"] != 300:
         raise ValueError("Frozen original external source validation did not pass")
     manifest = centres_manifest()
-    sources = {
-        body: centres_dir / entry["filename"]
-        for body, entry in manifest["sources"].items()
-    }
+    sources = {body: centres_dir / entry["filename"] for body, entry in manifest["sources"].items()}
     raw = output / "raw"
     raw.mkdir(parents=True, exist_ok=True)
     cases: list[dict[str, Any]] = []
@@ -228,11 +219,7 @@ def acquire(
                 for case in wp51_data["cases"]
                 if case["body"] == body and case["kind"] == "apparent"
             }
-            wanted = {
-                stamp(anchor["jd_tt"] + STEP * k)
-                for anchor in anchors
-                for k in STENCIL
-            }
+            wanted = {stamp(anchor["jd_tt"] + STEP * k) for anchor in anchors for k in STENCIL}
             new_points = sorted(wanted - set(existing))
             for chunk_no, start in enumerate(range(0, len(new_points), CHUNK), 1):
                 dates = new_points[start : start + CHUNK]
@@ -269,9 +256,7 @@ def acquire(
                     time.sleep(3)
             if set(existing) != wanted:
                 raise ValueError("Incomplete new Horizons five-point stencils")
-            source_rows.extend(
-                {"body": body, **existing[jd]} for jd in sorted(existing)
-            )
+            source_rows.extend({"body": body, **existing[jd]} for jd in sorted(existing))
             for anchor in anchors:
                 values = [stamp(anchor["jd_tt"] + k * STEP) for k in STENCIL]
                 if len(set(values)) != len(values):
@@ -333,9 +318,7 @@ def main() -> int:
     parser.add_argument("--base", type=Path, required=True)
     parser.add_argument("--centres-dir", type=Path, required=True)
     parser.add_argument("--wp51", type=Path, default=Path("data/fixtures/horizons"))
-    parser.add_argument(
-        "--output", type=Path, default=Path("data/fixtures/horizons/wp54-tropical")
-    )
+    parser.add_argument("--output", type=Path, default=Path("data/fixtures/horizons/wp54-tropical"))
     a = parser.parse_args()
     out = acquire(a.base, a.centres_dir, a.wp51, a.output)
     print(f"Acquired {out['new_jpl_reference_rows']} new inertial JPL direction records")

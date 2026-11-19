@@ -44,9 +44,7 @@ def signed_angle(first: float, second: float) -> float:
     return (first - second + 180.0) % 360.0 - 180.0
 
 
-def true_tropical_from_icrf(
-    ra_deg: float, dec_deg: float, jd_tt: float
-) -> tuple[float, float]:
+def true_tropical_from_icrf(ra_deg: float, dec_deg: float, jd_tt: float) -> tuple[float, float]:
     """Direct independent coordinate conversion using reference SOFA/ERFA primitives.
 
     Separate closed-form Euler x-rotation from true equatorial basis. Never
@@ -108,12 +106,8 @@ def _stats(values: list[float]) -> dict[str, float | int]:
     }
 
 
-def calculate(
-    engine: Ephemeris, refs: dict[str, Any], fixture_sha256: str
-) -> dict[str, Any]:
-    source_rows = {
-        (row["body"], row["jd_tt"]): row for row in refs["rays"]
-    }
+def calculate(engine: Ephemeris, refs: dict[str, Any], fixture_sha256: str) -> dict[str, Any]:
+    source_rows = {(row["body"], row["jd_tt"]): row for row in refs["rays"]}
     if len(source_rows) != 930 or len(refs["cases"]) != 186:
         raise ValueError("Incomplete source of independent JPL chart directions")
     rows = []
@@ -306,8 +300,7 @@ def main() -> int:
     if manifest["base_sha256"] != refs["aria_base_sha256"]:
         raise ValueError("Aria model base source has changed since fixture acquisition")
     sources = {
-        body: args.centres_dir / record["filename"]
-        for body, record in manifest["sources"].items()
+        body: args.centres_dir / record["filename"] for body, record in manifest["sources"].items()
     }
     with Ephemeris(args.base, centre_kernels=sources) as engine:
         report = calculate(engine, refs, hashlib.sha256(original_bytes).hexdigest())
