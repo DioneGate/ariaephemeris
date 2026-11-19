@@ -21,7 +21,16 @@ BODY_IDS = {
     "neptune": 8,
     "pluto": 9,
 }
-PHYSICAL_BODY_IDS = {\n    **BODY_IDS,\n    "mars": 499,\n    "jupiter": 599,\n    "saturn": 699,\n    "uranus": 799,\n    "neptune": 899,\n    "pluto": 999,\n}\nDEFAULT_BODIES = tuple(b for b in BODY_IDS if b != "earth")
+PHYSICAL_BODY_IDS = {
+    **BODY_IDS,
+    "mars": 499,
+    "jupiter": 599,
+    "saturn": 699,
+    "uranus": 799,
+    "neptune": 899,
+    "pluto": 999,
+}
+DEFAULT_BODIES = tuple(b for b in BODY_IDS if b != "earth")
 
 
 @dataclass(frozen=True)
