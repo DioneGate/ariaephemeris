@@ -172,7 +172,9 @@ def source_header(raw: str) -> dict[str, str]:
 
 def fetch(params: dict[str, str], timeout: int = 150) -> tuple[dict[str, Any], str]:
     url = API + "?" + urllib.parse.urlencode(params)
-    request = urllib.request.Request(url, headers={"User-Agent": USER_AGENT, "Accept": "application/json"})
+    request = urllib.request.Request(
+        url, headers={"User-Agent": USER_AGENT, "Accept": "application/json"}
+    )
     for attempt in range(3):
         try:
             with urllib.request.urlopen(request, timeout=timeout) as response:
@@ -190,7 +192,13 @@ def fetch(params: dict[str, str], timeout: int = 150) -> tuple[dict[str, Any], s
                 raise ValueError(f"Horizons failed to produce ephemeris: {str(raw)[:280]}")
             return payload, url
         except (urllib.error.HTTPError, urllib.error.URLError, TimeoutError) as error:
-            transient = not isinstance(error, urllib.error.HTTPError) or error.code in (429, 500, 502, 503, 504)
+            transient = not isinstance(error, urllib.error.HTTPError) or error.code in (
+                429,
+                500,
+                502,
+                503,
+                504,
+            )
             if not transient or attempt == 2:
                 raise
             time.sleep(6 * (attempt + 1))
@@ -241,7 +249,10 @@ def acquire(directory: Path, *, probe: bool = False) -> dict[str, Any]:
                         "source_raw_file": f"raw/{filename}",
                     }
                 )
-            print(f"{body} {kind}: {len(records)} parsed Horizons rows, {len(encoded)} raw bytes", flush=True)
+            print(
+                f"{body} {kind}: {len(records)} parsed Horizons rows, {len(encoded)} raw bytes",
+                flush=True,
+            )
             if not (body == bodies[-1] and kind == "apparent"):
                 time.sleep(3)  # NASA/JPL requests are serial, not parallel.
     output = {
@@ -264,14 +275,18 @@ def acquire(directory: Path, *, probe: bool = False) -> dict[str, Any]:
         "case_count": len(cases),
     }
     name = "probe.json" if probe else "horizons-reference-v1.json"
-    (directory / name).write_text(json.dumps(output, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+    (directory / name).write_text(
+        json.dumps(output, indent=2, sort_keys=True) + "\n", encoding="utf-8"
+    )
     return output
 
 
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--output-dir", type=Path, default=Path("data/fixtures/horizons"))
-    parser.add_argument("--probe", action="store_true", help="Only one body, two epochs of each mode")
+    parser.add_argument(
+        "--probe", action="store_true", help="Only one body, two epochs of each mode"
+    )
     args = parser.parse_args()
     data = acquire(args.output_dir, probe=args.probe)
     print(f"Horizons fixture acquisition complete: {data['case_count']} records")
