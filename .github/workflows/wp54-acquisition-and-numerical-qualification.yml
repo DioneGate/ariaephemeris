@@ -1,0 +1,131 @@
+name: RM-001-007 WP5.4 acquire Horizons tropical-chart reference and qualify
+
+on:
+  push:
+    branches:
+      - feature/rm-001-007-wp5-4-astrological-coordinate-qualification-20261119
+    paths:
+      - '.github/workflows/wp54-acquisition-and-numerical-qualification.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  frozen-horizons-chart-reference:
+    runs-on: ubuntu-latest
+    timeout-minutes: 80
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+          cache-dependency-path: requirements/development.lock
+      - name: Install exactly pinned Aria and scientific test dependencies
+        run: |
+          python -m pip install -r requirements/development.lock
+          python -m pip install --no-deps -e .
+      - name: Format newly authored WP5.4 code using project-pinned Ruff
+        run: |
+          ruff check --fix tools/datasets/acquire_wp54_tropical.py tools/datasets/verify_wp54_tropical.py tools/datasets/compare_wp54_tropical.py tests/unit/test_wp54_tropical_qualification.py
+          ruff format tools/datasets/acquire_wp54_tropical.py tools/datasets/verify_wp54_tropical.py tools/datasets/compare_wp54_tropical.py tests/unit/test_wp54_tropical_qualification.py
+          ruff check tools/datasets/acquire_wp54_tropical.py tools/datasets/verify_wp54_tropical.py tools/datasets/compare_wp54_tropical.py tests/unit/test_wp54_tropical_qualification.py
+      - name: Run independent frame, rate and critical-case synthetic tests
+        run: pytest -q tests/unit/test_wp54_tropical_qualification.py
+      - name: Acquire pinned JPL planetary ephemeris DE442s
+        run: ariaephemeris install-data .artifacts
+      - name: Download all six pinned original physical-centre SPKs and verify SHA-256
+        run: |
+          set -euo pipefail
+          mkdir -p .artifacts/planet-centres
+          python - <<'PY' > .artifacts/centres.tsv
+          from ariaephemeris.datasets import centres_manifest
+          for body, record in centres_manifest()["sources"].items():
+              print(body, record["filename"], record["source_url"], sep="\t")
+          PY
+          while IFS=$'\t' read -r body name url; do
+            echo "Downloading SHA-pinned source $body"
+            curl --fail --location --show-error --silent --retry 4 --retry-delay 5 \
+              --connect-timeout 30 --max-time 1800 "$url" \
+              -o ".artifacts/planet-centres/$name"
+          done < .artifacts/centres.tsv
+          python - <<'PY'
+          from pathlib import Path
+          from ariaephemeris.datasets import centres_manifest, verify_centre_sources
+          records = centres_manifest()["sources"]
+          paths = {body: Path(".artifacts/planet-centres") / r["filename"] for body, r in records.items()}
+          assert len(verify_centre_sources(paths)) == 6, "All 6 source SPKs are required"
+          print("Original six SPK SHA-256 identities verified")
+          PY
+      - name: Capture Horizons physical-centre apparent rays, including stations and ingresses
+        run: |
+          set -euo pipefail
+          if [ -f data/fixtures/horizons/wp54-tropical/wp54-horizons-tropical-stencils-v1.json ]; then
+            echo "Existing frozen dataset found; refuse live refresh and use verified original"
+          else
+            python tools/datasets/acquire_wp54_tropical.py \
+              --base .artifacts/de442s.bsp \
+              --centres-dir .artifacts/planet-centres \
+              --wp51 data/fixtures/horizons \
+              --output data/fixtures/horizons/wp54-tropical
+          fi
+      - name: Verify all external JPL original responses and 930 coordinate values offline
+        run: |
+          python tools/datasets/verify_wp54_tropical.py \
+            --root data/fixtures/horizons/wp54-tropical \
+            --wp51 data/fixtures/horizons
+      - name: Independently derive tropical longitude latitude and rates and compare Aria
+        run: |
+          python tools/datasets/compare_wp54_tropical.py \
+            --fixtures data/fixtures/horizons/wp54-tropical \
+            --wp51 data/fixtures/horizons \
+            --base .artifacts/de442s.bsp \
+            --centres-dir .artifacts/planet-centres \
+            --output docs/validation/wp54-tropical-coordinate-comparison.json
+      - name: Reject missing data or false commercial acceptance
+        run: |
+          python - <<'PY'
+          import json, math
+          from pathlib import Path
+          path = Path("docs/validation/wp54-tropical-coordinate-comparison.json")
+          report = json.loads(path.read_text())
+          assert report["sample_count"] == 186 and len(report["rows"]) == 186
+          assert report["source_fixtures_verified_offline"] is True
+          assert set(report["per_planet"]) == {"mars", "jupiter", "saturn", "uranus", "neptune", "pluto"}
+          assert all(report["per_planet"][b]["longitude_arcsec"]["count"] == 31
+                     and report["per_planet"][b]["signed_longitude_rate_deg_tt_day"]["count"] == 31
+                     and report["per_planet"][b]["stress_categories"] == {"baseline": 25, "station": 3, "ingress": 3}
+                     for b in report["per_planet"])
+          assert all(math.isfinite(row["residual"]["longitude_rate_deg_tt_day_signed"])
+                     for row in report["rows"])
+          assert report["absolute_astronomical_accuracy_certified"] is False
+          assert report["commercial_release_qualified"] is False
+          print("186 true tropical positions/rates with independent JPL directions, no false release certification")
+          PY
+      - name: Freeze original source responses, provenance and numeric evidence to PR branch
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/fixtures/horizons/wp54-tropical docs/validation/wp54-tropical-coordinate-comparison.json \
+            tools/datasets/acquire_wp54_tropical.py tools/datasets/verify_wp54_tropical.py \
+            tools/datasets/compare_wp54_tropical.py tests/unit/test_wp54_tropical_qualification.py
+          if git diff --cached --quiet; then
+            echo "Reference source evidence already frozen, no changes"
+          else
+            git commit -m 'data(RM-001/007): freeze independent JPL true tropical longitude and rate fixtures'
+            git push origin HEAD:feature/rm-001-007-wp5-4-astrological-coordinate-qualification-20261119
+          fi
+      - name: Preserve full independent fixture and numeric diagnostics artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: wp54-independent-jpl-tropical-reference-and-diagnostics
+          path: |
+            data/fixtures/horizons/wp54-tropical/
+            docs/validation/wp54-tropical-coordinate-comparison.json
+          if-no-files-found: warn
+          retention-days: 60
