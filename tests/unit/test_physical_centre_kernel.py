@@ -2,8 +2,6 @@
 # Copyright 2026 DioneGate
 """Kernel-free contracts for the opt-in, direct-centre SPK resolver."""
 
-from types import SimpleNamespace
-
 import numpy as np
 import pytest
 
@@ -37,6 +35,9 @@ class FakeSegment:
         self.end_jd = float(end)
         self.data_type = dtype
         self.frame = frame
+
+    def load_array(self):
+        return None
 
     def compute_and_differentiate(self, jd1, jd2=0):
         shape = (3,) + np.asarray(jd1).shape
