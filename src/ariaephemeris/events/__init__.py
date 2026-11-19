@@ -88,7 +88,10 @@ def find_events(
             cache[j] = extract(
                 engine.positions(
                     PositionRequest(
-                        TimeInput(jd=(j, 0), scale="TT"), bodies=bodies, strict=r.strict, profile=r.profile
+                        TimeInput(jd=(j, 0), scale="TT"),
+                        bodies=bodies,
+                        strict=r.strict,
+                        profile=r.profile,
                     )
                 )
             )
