@@ -152,9 +152,7 @@ def evaluate(
                 (x - y) / SECONDS_PER_DAY
                 for x, y in zip(planet["velocity_km_day"], earth["velocity_km_day"], strict=True)
             ]
-            pos, pos_components = vector_difference(
-                geometric_position, reference["position_km"]
-            )
+            pos, pos_components = vector_difference(geometric_position, reference["position_km"])
             speed, vel_components = vector_difference(
                 geometric_velocity, reference["velocity_km_s"], scale=1000.0
             )
@@ -233,8 +231,12 @@ def evaluate(
             "apparent_over_candidate_1_arcsec": sum(
                 bool(r["candidate_1_arcsec_threshold_exceeded"]) for r in app
             ),
-            "reference_target_model": model_provenance(lookup[(body, "geometric")], source_manifest["sources"][body])["horizons_target_source"],
-            "reference_observer_model": model_provenance(lookup[(body, "geometric")], source_manifest["sources"][body])["horizons_observer_source"],
+            "reference_target_model": model_provenance(
+                lookup[(body, "geometric")], source_manifest["sources"][body]
+            )["horizons_target_source"],
+            "reference_observer_model": model_provenance(
+                lookup[(body, "geometric")], source_manifest["sources"][body]
+            )["horizons_observer_source"],
             "aria_offset_filename": source_manifest["sources"][body]["filename"],
         }
     return {
@@ -283,8 +285,7 @@ def main() -> int:
     )
     sources = centres_manifest()
     paths = {
-        body: args.centres_dir / record["filename"]
-        for body, record in sources["sources"].items()
+        body: args.centres_dir / record["filename"] for body, record in sources["sources"].items()
     }
     if set(paths) != set(REQUIRED_BODIES):
         raise ValueError("Source manifest does not contain the six required physical centres")
@@ -294,7 +295,9 @@ def main() -> int:
     args.output.write_text(
         json.dumps(report, indent=2, sort_keys=True, allow_nan=False) + "\n", encoding="utf-8"
     )
-    print(f"WP5.2: {report['sample_count']} external comparisons, scientific acceptance not claimed.")
+    print(
+        f"WP5.2: {report['sample_count']} external comparisons, scientific acceptance not claimed."
+    )
     for body, item in report["per_body"].items():
         print(
             f"{body:8} geometric max {item['geometric_position_km']['max']:.6g} km; "

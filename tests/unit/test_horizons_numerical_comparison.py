@@ -12,7 +12,9 @@ import pytest
 
 TOOLS = Path(__file__).resolve().parents[2] / "tools/datasets"
 sys.path.insert(0, str(TOOLS))
-SPEC = importlib.util.spec_from_file_location("compare_horizons_fixtures", TOOLS / "compare_horizons_fixtures.py")
+SPEC = importlib.util.spec_from_file_location(
+    "compare_horizons_fixtures", TOOLS / "compare_horizons_fixtures.py"
+)
 assert SPEC is not None and SPEC.loader is not None
 c = importlib.util.module_from_spec(SPEC)
 SPEC.loader.exec_module(c)
@@ -44,9 +46,7 @@ def test_vector_units_and_statistics_are_explicit():
 
 
 def test_model_labels_alone_never_certify_source_match():
-    manifest = {
-        "filename": "mar099.bsp", "sha256": "b" * 64, "target_id": 499
-    }
+    manifest = {"filename": "mar099.bsp", "sha256": "b" * 64, "target_id": 499}
     raw = {
         "source_header": {
             "target": "Target body name: Mars (499) {source: mar099}",
@@ -71,7 +71,9 @@ class FakeEngine:
     def raw_state(self, body, time, *, profile="reference"):
         self.geometric_scales.append((time.scale, profile, body))
         return {
-            "target_id": 399 if body == "earth" else c.centres_manifest()["sources"][body]["target_id"],
+            "target_id": 399
+            if body == "earth"
+            else c.centres_manifest()["sources"][body]["target_id"],
             "time": {"jd_tdb": list(time.jd)},
             "position_km": [0, 0, 0] if body == "earth" else [1, 2, 3],
             "velocity_km_day": [0, 0, 0] if body == "earth" else [86400, 0, 0],
@@ -81,12 +83,14 @@ class FakeEngine:
         self.apparent_frames.append((request.frame, request.time.scale, request.profile))
         return SimpleNamespace(
             metadata={"frame": request.frame, "profile": request.profile},
-            bodies=(SimpleNamespace(
-                target_id=c.centres_manifest()["sources"][request.bodies[0]]["target_id"],
-                longitude_deg=359.9999,
-                latitude_deg=0.0,
-                right_ascension_deg=180.0,  # wrong frame deliberately
-            ),),
+            bodies=(
+                SimpleNamespace(
+                    target_id=c.centres_manifest()["sources"][request.bodies[0]]["target_id"],
+                    longitude_deg=359.9999,
+                    latitude_deg=0.0,
+                    right_ascension_deg=180.0,  # wrong frame deliberately
+                ),
+            ),
         )
 
 
@@ -102,15 +106,17 @@ def fake_fixtures():
     for body in c.REQUIRED_BODIES:
         target_id = manifest["sources"][body]["target_id"]
         for kind in ("geometric", "apparent"):
-            queries.append({
-                "body": body,
-                "kind": kind,
-                "source_header": {
-                    "target": f"Target body name: {body} ({target_id}) {{source: {manifest['sources'][body]['filename'].removesuffix('.bsp')}}}",
-                    "centre": "Center body name: Earth (399) {source: DE441}",
-                    "source_solution_labels": "DE441, test",
+            queries.append(
+                {
+                    "body": body,
+                    "kind": kind,
+                    "source_header": {
+                        "target": f"Target body name: {body} ({target_id}) {{source: {manifest['sources'][body]['filename'].removesuffix('.bsp')}}}",
+                        "centre": "Center body name: Earth (399) {source: DE441}",
+                        "source_solution_labels": "DE441, test",
+                    },
                 }
-            })
+            )
             for k in range(25):
                 ref = (
                     {
@@ -125,14 +131,16 @@ def fake_fixtures():
                         "inertial_apparent_dec_deg": 0.0,
                     }
                 )
-                cases.append({
-                    "id": f"{body}-{kind}-{k}",
-                    "kind": kind,
-                    "body": body,
-                    "target_id": target_id,
-                    "source_raw_file": f"raw/{body}-{kind}.txt",
-                    "reference": ref,
-                })
+                cases.append(
+                    {
+                        "id": f"{body}-{kind}-{k}",
+                        "kind": kind,
+                        "body": body,
+                        "target_id": target_id,
+                        "source_raw_file": f"raw/{body}-{kind}.txt",
+                        "reference": ref,
+                    }
+                )
     return {"dataset_id": "synthetic-reference", "raw_queries": queries, "cases": cases}
 
 
@@ -147,10 +155,11 @@ def test_all_300_results_are_computed_not_artificially_qualified():
     assert out["per_body"]["mars"]["geometric_position_km"]["max"] == 0
     assert out["per_body"]["mars"]["apparent_direction_arcsec"]["max"] == pytest.approx(0.72)
     assert all(scale == "TDB" for scale, _, _ in engine.geometric_scales)
-    assert all(frame == "icrs" and scale == "TT" and profile == "planet-centres-v1"
-               for frame, scale, profile in engine.apparent_frames)
-    assert all(not row["provenance"]["matched_physical_model_demonstrated"]
-               for row in out["rows"])
+    assert all(
+        frame == "icrs" and scale == "TT" and profile == "planet-centres-v1"
+        for frame, scale, profile in engine.apparent_frames
+    )
+    assert all(not row["provenance"]["matched_physical_model_demonstrated"] for row in out["rows"])
 
 
 def test_missing_reference_row_is_not_accepted():
