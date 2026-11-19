@@ -1,0 +1,103 @@
+name: RM-001-006 Decompose Jupiter and Pluto Horizons model residuals
+
+# Frozen results are validated in PRs; no CI job may silently rewrite evidence.
+on:
+  pull_request:
+    paths:
+      - '.github/workflows/jpl-model-attribution.yml'
+      - 'tools/datasets/attribute_jpl_source_models.py'
+      - 'tools/datasets/acquire_horizons_model_components.py'
+      - 'tools/datasets/verify_horizons_model_components.py'
+      - 'data/fixtures/horizons/model-components/**'
+      - 'docs/validation/wp5-3-jpl-source-attribution.json'
+      - 'tests/unit/test_horizons_source_attribution.py'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  genuine-source-attribution:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+          cache-dependency-path: requirements/development.lock
+      - name: Install pinned source engine and test requirements
+        run: |
+          python -m pip install -r requirements/development.lock
+          python -m pip install --no-deps -e .
+      - name: Verify original JPL Horizons 300 records and 200 new components
+        run: |
+          python tools/datasets/verify_horizons_fixtures.py --directory data/fixtures/horizons
+          python tools/datasets/verify_horizons_model_components.py --directory data/fixtures/horizons/model-components
+      - name: Install JPL DE442s source
+        run: ariaephemeris install-data .artifacts
+      - name: Fetch only the two relevant pinned original NAIF satellite kernels
+        run: |
+          set -euo pipefail
+          mkdir -p .artifacts/planet-centres
+          python - <<'PY' > .artifacts/selected-sources.tsv
+          from ariaephemeris.datasets import centres_manifest
+          for body in ("jupiter", "pluto"):
+              source = centres_manifest()["sources"][body]
+              print(body, source["filename"], source["source_url"], sep="\t")
+          PY
+          while IFS=$'\t' read -r body filename url; do
+            echo "Fetching hash-pinned $body offset"
+            curl --fail --location --show-error --silent --retry 4 --retry-delay 5 \
+              --connect-timeout 30 --max-time 900 "$url" \
+              -o ".artifacts/planet-centres/$filename"
+          done < .artifacts/selected-sources.tsv
+          python - <<'PY'
+          from pathlib import Path
+          from ariaephemeris.datasets import centres_manifest, verify_centre_sources
+          s = centres_manifest()["sources"]
+          sources = {b: Path(".artifacts/planet-centres") / s[b]["filename"] for b in ("jupiter", "pluto")}
+          checked = verify_centre_sources(sources)
+          assert len(checked) == 2
+          print("Verified exact Pluto and Jupiter source byte counts and SHA-256 digests")
+          PY
+      - name: Independently account for all observed centre, barycentre and Earth differences
+        run: |
+          python tools/datasets/attribute_jpl_source_models.py \
+            --original docs/validation/wp5-2-horizons-comparison.json \
+            --components data/fixtures/horizons/model-components \
+            --base .artifacts/de442s.bsp \
+            --centres-dir .artifacts/planet-centres \
+            --output docs/validation/wp5-3-jpl-source-attribution.json
+      - name: Require full exact decomposition and refuse commercial certification
+        run: |
+          python - <<'PY'
+          import json, math
+          from pathlib import Path
+          d = json.loads(Path("docs/validation/wp5-3-jpl-source-attribution.json").read_text())
+          assert d["source_verified_offline"] is True
+          assert d["sample_count"] == 50 and d["number_of_components"] == 200
+          assert set(d["per_body"]) == {"jupiter", "pluto"}
+          assert len(d["samples"]) == 50
+          assert all(d["per_body"][b]["total_geocentric_km"]["count"] == 25 for b in d["per_body"])
+          assert all(d["per_body"][b]["max_reconstruction_error_km"] < 2e-4 for b in d["per_body"])
+          assert all(math.isfinite(d["per_body"][b]["total_geocentric_km"]["max"]) for b in d["per_body"])
+          assert not d["source_model_fully_matched"]
+          assert not d["commercial_release_accuracy_certified"]
+          print("50/50 decomposition identities pass; actual model uncertainty remains not certified")
+          PY
+      - name: Prove regenerated report equals committed immutable numerical evidence
+        run: |
+          git diff --exit-code -- docs/validation/wp5-3-jpl-source-attribution.json
+          echo "Pinned report reproduced byte-for-byte from JPL and Aria originals"
+      - name: Preserve comparison evidence as downloadable workflow artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: rm-001-006-pluto-jupiter-model-diagnostics
+          path: docs/validation/wp5-3-jpl-source-attribution.json
+          if-no-files-found: warn
+          retention-days: 60

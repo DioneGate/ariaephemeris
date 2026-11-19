@@ -21,6 +21,10 @@ Across the entire 150-case apparent-direction sample, **0/150** exceeded the pro
 
 These position/velocity differences are **differences between two ephemeris outputs**; they do not establish that Aria is inaccurate by the listed amount, nor do they establish a full physical uncertainty budget. The values are measured sample maxima over 25 dates per body, not a continuous bound over 1900–2100.
 
+## Follow-up — Jupiter and Pluto source models quantitatively reconciled (RM-001/006)
+
+[The 50-case source-model attribution](p1-jpl-source-reconciliation.md) acquired a further 200 official Horizons reference vectors and independently separated Earth, system barycentre and physical-centre offset terms. Over the 25 reference dates for Jupiter and Pluto, **the effective physical-centre offsets agreed within 0.248 mm (Jupiter) and 1.908 mm (Pluto)**. The original 14.82 km/40.91 km geometric discrepancies are dominated by **DE442s versus Horizons' DE441-based planetary barycentre trajectories**, not by differing direct planet-centre offsets. Original WP5.2 measurements remain unchanged. The newer finding is **source-model attribution, not proof of absolute physical ephemeris accuracy**; the scientific release gate remains open.
+
 ## Why a reference disagreement is not automatically an engine defect
 
 Horizons uses source solutions selected by its own production service; Aria composes **DE442s** planetary barycentres with individually qualified original satellite SPKs. The reference target solutions are `mar099`, `jup365_merged`, `sat441l`, `ura184_merged`, `nep098_merged` and `plu060_merged`. Multiple Horizons reference headers also identify **DE441**, which differs from Aria's DE442s base. A shared target-family name alone is not proof of a fully matched source model.

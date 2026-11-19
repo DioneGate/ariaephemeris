@@ -1,0 +1,3714 @@
+{
+  "acquired_utc": "2026-11-19T07:32:19.246108+00:00",
+  "api": "https://ssd.jpl.nasa.gov/api/horizons.api",
+  "api_docs": "https://ssd-api.jpl.nasa.gov/doc/horizons.html",
+  "authority": "NASA/JPL Horizons external reference (not Aria engine output)",
+  "cases": [
+    {
+      "body": "jupiter",
+      "id": "ARIA-SOURCE-JUPITER-PARENT_GEO-01",
+      "jd_tdb": 2415021.5,
+      "position_km": [
+        -418255953.565352,
+        -749514983.8247992,
+        -311018472.1382246
+      ],
+      "raw_file": "raw/jupiter-parent_geo.txt",
+      "role": "parent_geo",
+      "velocity_km_s": [
+        40.26457822250875,
+        -0.007109382620096305,
+        -0.2313672812593124
+      ]
+    },
+    {
+      "body": "jupiter",
+      "id": "ARIA-SOURCE-JUPITER-PARENT_GEO-02",
+      "jd_tdb": 2419339.8529412,
+      "position_km": [
+        -581563228.7776821,
+        -692337039.9687772,
+        -285942637.4871544
+      ],
+      "raw_file": "raw/jupiter-parent_geo.txt",
+      "role": "parent_geo",
+      "velocity_km_s": [
+        28.98942149514277,
+        -27.96031391533552,
+        -12.35413509600237
+      ]
+    },
+    {
+      "body": "jupiter",
+      "id": "ARIA-SOURCE-JUPITER-PARENT_GEO-03",
+      "jd_tdb": 2423658.2058824,
+      "position_km": [
+        -611418012.2249166,
+        -541110635.0989056,
+        -220044829.2450991
+      ],
+      "raw_file": "raw/jupiter-parent_geo.txt",
+      "role": "parent_geo",
+      "velocity_km_s": [
+        -2.416392820285294,
+        -30.78719217473078,
+        -13.57655016266926
+      ]
+    },
+    {
+      "body": "jupiter",
+      "id": "ARIA-SOURCE-JUPITER-PARENT_GEO-04",
+      "jd_tdb": 2427976.5588235,
+      "position_km": [
+        -493368761.0289274,
+        -455518551.7752619,
+        -182643195.1338832
+      ],
+      "raw_file": "raw/jupiter-parent_geo.txt",
+      "role": "parent_geo",
+      "velocity_km_s": [
+        -19.05643955581917,
+        -7.266235717552226,
+        -3.367658205581871
+      ]
+    },
+    {
+      "body": "jupiter",
+      "id": "ARIA-SOURCE-JUPITER-PARENT_GEO-05",
+      "jd_tdb": 2432294.9117647,
+      "position_km": [
+        -371610638.3400667,
+        -518310234.3560179,
+        -209594426.9077479
+      ],
+      "raw_file": "raw/jupiter-parent_geo.txt",
+      "role": "parent_geo",
+      "velocity_km_s": [
+        -3.996032117938501,
+        17.13316981051151,
+        7.219650812750363
+      ]
+    },
+    {
+      "body": "jupiter",
+      "id": "ARIA-SOURCE-JUPITER-PARENT_GEO-06",
+      "jd_tdb": 2436613.2647059,
+      "position_km": [
+        -394013373.1215435,
+        -654986000.4706359,
+        -268614879.8294919
+      ],
+      "raw_file": "raw/jupiter-parent_geo.txt",
+      "role": "parent_geo",
+      "velocity_km_s": [
+        27.53853847302511,
+        15.46216287903568,
+        6.49740863524253
+      ]
+    },
+    {
+      "body": "jupiter",
+      "id": "ARIA-SOURCE-JUPITER-PARENT_GEO-07",
+      "jd_tdb": 2440931.6176471,
+      "position_km": [
+        -554615651.6689082,
+        -700912645.8802648,
+        -288284182.8961564
+      ],
+      "raw_file": "raw/jupiter-parent_geo.txt",
+      "role": "parent_geo",
+      "velocity_km_s": [
+        39.48700237479548,
+        -12.26646144495188,
+        -5.521246098693536
+      ]
+    },
+    {
+      "body": "jupiter",
+      "id": "ARIA-SOURCE-JUPITER-PARENT_GEO-08",
+      "jd_tdb": 2445249.9705882,
+      "position_km": [
+        -683558517.4857507,
+        -593256296.8694962,
+        -241338967.2315542
+      ],
+      "raw_file": "raw/jupiter-parent_geo.txt",
+      "role": "parent_geo",
+      "velocity_km_s": [
+        17.32700102602271,
+        -33.76183464705512,
+        -14.8352745062528
+      ]
+    },
+    {
+      "body": "jupiter",
+      "id": "ARIA-SOURCE-JUPITER-PARENT_GEO-09",
+      "jd_tdb": 2449568.3235294,
+      "position_km": [
+        -650851363.2558084,
+        -446005162.4707424,
+        -177246582.6436597
+      ],
+      "raw_file": "raw/jupiter-parent_geo.txt",
+      "role": "parent_geo",
+      "velocity_km_s": [
+        -12.48612546972446,
+        -25.47364444278201,
+        -11.23777448376861
+      ]
+    },
+    {
+      "body": "jupiter",
+      "id": "ARIA-SOURCE-JUPITER-PARENT_GEO-10",
+      "jd_tdb": 2450464.46,
+      "position_km": [
+        439436154.8646502,
+        -733758227.3664796,
+        -324259789.1757131
+      ],
+      "raw_file": "raw/jupiter-parent_geo.txt",
+      "role": "parent_geo",
+      "velocity_km_s": [
+        38.51408016775916,
+        18.5870011401345,
+        7.751642888272457
+      ]
+    },
+    {
+      "body": "jupiter",
+      "id": "ARIA-SOURCE-JUPITER-PARENT_GEO-11",
+      "jd_tdb": 2450464.5,
+      "position_km": [
+        439569242.6918457,
+        -733693959.5051521,
+        -324232985.9575567
+      ],
+      "raw_file": "raw/jupiter-parent_geo.txt",
+      "role": "parent_geo",
+      "velocity_km_s": [
+        38.50433612404186,
+        18.60504703519004,
+        7.759478223917842
+      ]
+    },
+    {
+      "body": "jupiter",
+      "id": "ARIA-SOURCE-JUPITER-PARENT_GEO-12",
+      "jd_tdb": 2450464.54,
+      "position_km": [
+        439702296.8213174,
+        -733629629.2893364,
+        -324206155.6655788
+      ],
+      "raw_file": "raw/jupiter-parent_geo.txt",
+      "role": "parent_geo",
+      "velocity_km_s": [
+        38.49457917233067,
+        18.62308591304781,
+        7.767310608750215
+      ]
+    },
+    {
+      "body": "jupiter",
+      "id": "ARIA-SOURCE-JUPITER-PARENT_GEO-13",
+      "jd_tdb": 2451545.0,
+      "position_km": [
+        625066617.2753594,
+        276628932.7782096,
+        103337628.6524663
+      ],
+      "raw_file": "raw/jupiter-parent_geo.txt",
+      "role": "parent_geo",
+      "velocity_km_s": [
+        21.88442238187011,
+        15.20155012416599,
+        6.733112856298678
+      ]
+    },
+    {
+      "body": "jupiter",
+      "id": "ARIA-SOURCE-JUPITER-PARENT_GEO-14",
+      "jd_tdb": 2453886.6764706,
+      "position_km": [
+        -510298774.5661828,
+        -409717046.8905514,
+        -161261242.4384634
+      ],
+      "raw_file": "raw/jupiter-parent_geo.txt",
+      "role": "parent_geo",
+      "velocity_km_s": [
+        -18.19641889539295,
+        1.954081135120775,
+        0.6597625047891151
+      ]
+    },
+    {
+      "body": "jupiter",
+      "id": "ARIA-SOURCE-JUPITER-PARENT_GEO-15",
+      "jd_tdb": 2458205.0294118,
+      "position_km": [
+        -426243520.359773,
+        -514726533.7105924,
+        -206563817.0648526
+      ],
+      "raw_file": "raw/jupiter-parent_geo.txt",
+      "role": "parent_geo",
+      "velocity_km_s": [
+        6.142326166161672,
+        19.37095912117647,
+        8.21635957093817
+      ]
+    },
+    {
+      "body": "jupiter",
+      "id": "ARIA-SOURCE-JUPITER-PARENT_GEO-16",
+      "jd_tdb": 2461041.5,
+      "position_km": [
+        -227347107.8269884,
+        542637047.6708553,
+        238113039.8112136
+      ],
+      "raw_file": "raw/jupiter-parent_geo.txt",
+      "role": "parent_geo",
+      "velocity_km_s": [
+        17.26943183245091,
+        1.495249561808693,
+        0.9695889286778501
+      ]
+    },
+    {
+      "body": "jupiter",
+      "id": "ARIA-SOURCE-JUPITER-PARENT_GEO-17",
+      "jd_tdb": 2462523.3823529,
+      "position_km": [
+        -508450547.835121,
+        -635638953.9976981,
+        -258762750.9096206
+      ],
+      "raw_file": "raw/jupiter-parent_geo.txt",
+      "role": "parent_geo",
+      "velocity_km_s": [
+        34.77749846058806,
+        6.312936768718917,
+        2.558426530430419
+      ]
+    },
+    {
+      "body": "jupiter",
+      "id": "ARIA-SOURCE-JUPITER-PARENT_GEO-18",
+      "jd_tdb": 2466841.7352941,
+      "position_km": [
+        -679304861.899162,
+        -622959394.4455327,
+        -253036936.593955
+      ],
+      "raw_file": "raw/jupiter-parent_geo.txt",
+      "role": "parent_geo",
+      "velocity_km_s": [
+        33.7865339838885,
+        -23.52307406895611,
+        -10.36906425057774
+      ]
+    },
+    {
+      "body": "jupiter",
+      "id": "ARIA-SOURCE-JUPITER-PARENT_GEO-19",
+      "jd_tdb": 2469807.5,
+      "position_km": [
+        -332022627.0135751,
+        505235344.9649808,
+        224602448.0532101
+      ],
+      "raw_file": "raw/jupiter-parent_geo.txt",
+      "role": "parent_geo",
+      "velocity_km_s": [
+        18.00775624272354,
+        -0.1491236856506388,
+        0.245629828837945
+      ]
+    },
+    {
+      "body": "jupiter",
+      "id": "ARIA-SOURCE-JUPITER-PARENT_GEO-20",
+      "jd_tdb": 2471160.0882353,
+      "position_km": [
+        -755657944.7736186,
+        -480222515.8904899,
+        -190955289.5946545
+      ],
+      "raw_file": "raw/jupiter-parent_geo.txt",
+      "role": "parent_geo",
+      "velocity_km_s": [
+        4.588806233291734,
+        -35.29751534109989,
+        -15.46393047408908
+      ]
+    },
+    {
+      "body": "jupiter",
+      "id": "ARIA-SOURCE-JUPITER-PARENT_GEO-21",
+      "jd_tdb": 2475478.4411765,
+      "position_km": [
+        -668777614.6119347,
+        -357326021.4616208,
+        -137474579.5200804
+      ],
+      "raw_file": "raw/jupiter-parent_geo.txt",
+      "role": "parent_geo",
+      "velocity_km_s": [
+        -19.32047461532643,
+        -17.44623438327043,
+        -7.721302506175762
+      ]
+    },
+    {
+      "body": "jupiter",
+      "id": "ARIA-SOURCE-JUPITER-PARENT_GEO-22",
+      "jd_tdb": 2479796.7941176,
+      "position_km": [
+        -526198805.2820084,
+        -376626474.5849741,
+        -145650824.426124
+      ],
+      "raw_file": "raw/jupiter-parent_geo.txt",
+      "role": "parent_geo",
+      "velocity_km_s": [
+        -13.26956667220001,
+        9.975802612131252,
+        4.1659677024996
+      ]
+    },
+    {
+      "body": "jupiter",
+      "id": "ARIA-SOURCE-JUPITER-PARENT_GEO-23",
+      "jd_tdb": 2484115.1470588,
+      "position_km": [
+        -495897610.0900646,
+        -506012617.7925715,
+        -201537629.2496631
+      ],
+      "raw_file": "raw/jupiter-parent_geo.txt",
+      "role": "parent_geo",
+      "velocity_km_s": [
+        16.86410208987133,
+        17.50030581068293,
+        7.432456888462202
+      ]
+    },
+    {
+      "body": "jupiter",
+      "id": "ARIA-SOURCE-JUPITER-PARENT_GEO-24",
+      "jd_tdb": 2487704.5,
+      "position_km": [
+        -744452966.9460313,
+        91946089.56871125,
+        57461767.07911614
+      ],
+      "raw_file": "raw/jupiter-parent_geo.txt",
+      "role": "parent_geo",
+      "velocity_km_s": [
+        25.62667918484315,
+        -6.289584218399336,
+        -2.570490469290157
+      ]
+    },
+    {
+      "body": "jupiter",
+      "id": "ARIA-SOURCE-JUPITER-PARENT_GEO-25",
+      "jd_tdb": 2488433.5,
+      "position_km": [
+        -627134604.1521676,
+        -590663729.1940405,
+        -238027562.5786069
+      ],
+      "raw_file": "raw/jupiter-parent_geo.txt",
+      "role": "parent_geo",
+      "velocity_km_s": [
+        37.73629652687204,
+        -5.079182657451765,
+        -2.346305061449238
+      ]
+    },
+    {
+      "body": "jupiter",
+      "id": "ARIA-SOURCE-JUPITER-PARENT_SSB-01",
+      "jd_tdb": 2415021.5,
+      "position_km": [
+        -449794939.572888,
+        -616926066.2143275,
+        -253516355.5965407
+      ],
+      "raw_file": "raw/jupiter-parent_ssb.txt",
+      "role": "parent_ssb",
+      "velocity_km_s": [
+        10.67725098625302,
+        -6.052154157609832,
+        -2.855331811819613
+      ]
+    },
+    {
+      "body": "jupiter",
+      "id": "ARIA-SOURCE-JUPITER-PARENT_SSB-02",
+      "jd_tdb": 2419339.8529412,
+      "position_km": [
+        -462807205.7838394,
+        -610036246.656531,
+        -250231738.071682
+      ],
+      "raw_file": "raw/jupiter-parent_ssb.txt",
+      "role": "parent_ssb",
+      "velocity_km_s": [
+        10.54037868387428,
+        -6.249545901812436,
+        -2.936603853734445
+      ]
+    },
+    {
+      "body": "jupiter",
+      "id": "ARIA-SOURCE-JUPITER-PARENT_SSB-03",
+      "jd_tdb": 2423658.2058824,
+      "position_km": [
+        -475276662.1448244,
+        -602398931.5594512,
+        -246659338.7273104
+      ],
+      "raw_file": "raw/jupiter-parent_ssb.txt",
+      "role": "parent_ssb",
+      "velocity_km_s": [
+        10.37786230632905,
+        -6.435728748900571,
+        -3.01227073937044
+      ]
+    },
+    {
+      "body": "jupiter",
+      "id": "ARIA-SOURCE-JUPITER-PARENT_SSB-04",
+      "jd_tdb": 2427976.5588235,
+      "position_km": [
+        -489001619.6775048,
+        -594360662.3141243,
+        -242867326.2660851
+      ],
+      "raw_file": "raw/jupiter-parent_ssb.txt",
+      "role": "parent_ssb",
+      "velocity_km_s": [
+        10.22295384212614,
+        -6.625993642955284,
+        -3.089924561975133
+      ]
+    },
+    {
+      "body": "jupiter",
+      "id": "ARIA-SOURCE-JUPITER-PARENT_SSB-05",
+      "jd_tdb": 2432294.9117647,
+      "position_km": [
+        -501786802.358689,
+        -585461988.410607,
+        -238745189.5271622
+      ],
+      "raw_file": "raw/jupiter-parent_ssb.txt",
+      "role": "parent_ssb",
+      "velocity_km_s": [
+        10.06848265717145,
+        -6.815498291742887,
+        -3.167227546787248
+      ]
+    },
+    {
+      "body": "jupiter",
+      "id": "ARIA-SOURCE-JUPITER-PARENT_SSB-06",
+      "jd_tdb": 2436613.2647059,
+      "position_km": [
+        -514089792.0303301,
+        -576028961.8596114,
+        -234407116.3503365
+      ],
+      "raw_file": "raw/jupiter-parent_ssb.txt",
+      "role": "parent_ssb",
+      "velocity_km_s": [
+        9.91162725694082,
+        -6.996565849066733,
+        -3.240868503837224
+      ]
+    },
+    {
+      "body": "jupiter",
+      "id": "ARIA-SOURCE-JUPITER-PARENT_SSB-07",
+      "jd_tdb": 2440931.6176471,
+      "position_km": [
+        -526170133.1716531,
+        -567762910.3261031,
+        -230554271.7143083
+      ],
+      "raw_file": "raw/jupiter-parent_ssb.txt",
+      "role": "parent_ssb",
+      "velocity_km_s": [
+        9.756845912488703,
+        -7.180440453018496,
+        -3.315920419823194
+      ]
+    },
+    {
+      "body": "jupiter",
+      "id": "ARIA-SOURCE-JUPITER-PARENT_SSB-08",
+      "jd_tdb": 2445249.9705882,
+      "position_km": [
+        -537614246.7286185,
+        -558799420.0923066,
+        -226438430.2014116
+      ],
+      "raw_file": "raw/jupiter-parent_ssb.txt",
+      "role": "parent_ssb",
+      "velocity_km_s": [
+        9.579960606978359,
+        -7.351914594624701,
+        -3.384883233995919
+      ]
+    },
+    {
+      "body": "jupiter",
+      "id": "ARIA-SOURCE-JUPITER-PARENT_SSB-09",
+      "jd_tdb": 2449568.3235294,
+      "position_km": [
+        -550649447.5031451,
+        -549643452.6726568,
+        -222183356.0436141
+      ],
+      "raw_file": "raw/jupiter-parent_ssb.txt",
+      "role": "parent_ssb",
+      "velocity_km_s": [
+        9.405469464028112,
+        -7.528225443219689,
+        -3.456057560613604
+      ]
+    },
+    {
+      "body": "jupiter",
+      "id": "ARIA-SOURCE-JUPITER-PARENT_SSB-10",
+      "jd_tdb": 2450464.46,
+      "position_km": [
+        374213115.6855817,
+        -611496054.2230517,
+        -271227676.8609608
+      ],
+      "raw_file": "raw/jupiter-parent_ssb.txt",
+      "role": "parent_ssb",
+      "velocity_km_s": [
+        11.22592507256221,
+        6.526595533905972,
+        2.524098472169433
+      ]
+    },
+    {
+      "body": "jupiter",
+      "id": "ARIA-SOURCE-JUPITER-PARENT_SSB-11",
+      "jd_tdb": 2450464.5,
+      "position_km": [
+        374251911.8257095,
+        -611473497.2364144,
+        -271218953.1009277
+      ],
+      "raw_file": "raw/jupiter-parent_ssb.txt",
+      "role": "parent_ssb",
+      "velocity_km_s": [
+        11.22554488078462,
+        6.527216162341373,
+        2.524373763420261
+      ]
+    },
+    {
+      "body": "jupiter",
+      "id": "ARIA-SOURCE-JUPITER-PARENT_SSB-12",
+      "jd_tdb": 2450464.54,
+      "position_km": [
+        374290706.651821,
+        -611450938.104916,
+        -271210228.3894993
+      ],
+      "raw_file": "raw/jupiter-parent_ssb.txt",
+      "role": "parent_ssb",
+      "velocity_km_s": [
+        11.22516464648652,
+        6.527836773047259,
+        2.524649048107321
+      ]
+    },
+    {
+      "body": "jupiter",
+      "id": "ARIA-SOURCE-JUPITER-PARENT_SSB-13",
+      "jd_tdb": 2451545.0,
+      "position_km": [
+        597499876.792548,
+        408990313.9317586,
+        160756281.9387201
+      ],
+      "raw_file": "raw/jupiter-parent_ssb.txt",
+      "role": "parent_ssb",
+      "velocity_km_s": [
+        -7.900525116640771,
+        10.17179630923791,
+        4.552467787262923
+      ]
+    },
+    {
+      "body": "jupiter",
+      "id": "ARIA-SOURCE-JUPITER-PARENT_SSB-14",
+      "jd_tdb": 2453886.6764706,
+      "position_km": [
+        -562883606.7100328,
+        -539638758.1720775,
+        -217605910.3558807
+      ],
+      "raw_file": "raw/jupiter-parent_ssb.txt",
+      "role": "parent_ssb",
+      "velocity_km_s": [
+        9.227237424264759,
+        -7.702751111767874,
+        -3.52634563009642
+      ]
+    },
+    {
+      "body": "jupiter",
+      "id": "ARIA-SOURCE-JUPITER-PARENT_SSB-15",
+      "jd_tdb": 2458205.0294118,
+      "position_km": [
+        -574354294.2831601,
+        -529444170.6765388,
+        -212960780.0459598
+      ],
+      "raw_file": "raw/jupiter-parent_ssb.txt",
+      "role": "parent_ssb",
+      "velocity_km_s": [
+        9.053082613504444,
+        -7.868535118809974,
+        -3.593015584659187
+      ]
+    },
+    {
+      "body": "jupiter",
+      "id": "ARIA-SOURCE-JUPITER-PARENT_SSB-16",
+      "jd_tdb": 2461041.5,
+      "position_km": [
+        -253878110.2425539,
+        674701447.2171144,
+        295381743.1861722
+      ],
+      "raw_file": "raw/jupiter-parent_ssb.txt",
+      "role": "parent_ssb",
+      "velocity_km_s": [
+        -12.50707427525374,
+        -3.455519150458821,
+        -1.176640840634098
+      ]
+    },
+    {
+      "body": "jupiter",
+      "id": "ARIA-SOURCE-JUPITER-PARENT_SSB-17",
+      "jd_tdb": 2462523.3823529,
+      "position_km": [
+        -585206325.3367295,
+        -520361248.1083976,
+        -208785774.5079897
+      ],
+      "raw_file": "raw/jupiter-parent_ssb.txt",
+      "role": "parent_ssb",
+      "velocity_km_s": [
+        8.882996907823177,
+        -8.036862221986635,
+        -3.6610404732977
+      ]
+    },
+    {
+      "body": "jupiter",
+      "id": "ARIA-SOURCE-JUPITER-PARENT_SSB-18",
+      "jd_tdb": 2466841.7352941,
+      "position_km": [
+        -595079669.4852237,
+        -510445169.9283699,
+        -204299754.0805605
+      ],
+      "raw_file": "raw/jupiter-parent_ssb.txt",
+      "role": "parent_ssb",
+      "velocity_km_s": [
+        8.694036908648052,
+        -8.192358378217437,
+        -3.722833989220521
+      ]
+    },
+    {
+      "body": "jupiter",
+      "id": "ARIA-SOURCE-JUPITER-PARENT_SSB-19",
+      "jd_tdb": 2469807.5,
+      "position_km": [
+        -357575616.9052123,
+        637675833.0087965,
+        282006790.4777663
+      ],
+      "raw_file": "raw/jupiter-parent_ssb.txt",
+      "role": "parent_ssb",
+      "velocity_km_s": [
+        -11.79521620465616,
+        -5.029672976860915,
+        -1.868634607369851
+      ]
+    },
+    {
+      "body": "jupiter",
+      "id": "ARIA-SOURCE-JUPITER-PARENT_SSB-20",
+      "jd_tdb": 2471160.0882353,
+      "position_km": [
+        -606633821.2226777,
+        -500243540.5865562,
+        -199630901.1057923
+      ],
+      "raw_file": "raw/jupiter-parent_ssb.txt",
+      "role": "parent_ssb",
+      "velocity_km_s": [
+        8.502241458928346,
+        -8.352000675585534,
+        -3.786417692330422
+      ]
+    },
+    {
+      "body": "jupiter",
+      "id": "ARIA-SOURCE-JUPITER-PARENT_SSB-21",
+      "jd_tdb": 2475478.4411765,
+      "position_km": [
+        -617649715.8990844,
+        -488939294.8609538,
+        -194531516.4188243
+      ],
+      "raw_file": "raw/jupiter-parent_ssb.txt",
+      "role": "parent_ssb",
+      "velocity_km_s": [
+        8.302159887300501,
+        -8.507438569068034,
+        -3.848012953404633
+      ]
+    },
+    {
+      "body": "jupiter",
+      "id": "ARIA-SOURCE-JUPITER-PARENT_SSB-22",
+      "jd_tdb": 2479796.7941176,
+      "position_km": [
+        -628002951.2352356,
+        -477626008.5673771,
+        -189436383.858438
+      ],
+      "raw_file": "raw/jupiter-parent_ssb.txt",
+      "role": "parent_ssb",
+      "velocity_km_s": [
+        8.112154326133638,
+        -8.655708513990882,
+        -3.906801297580972
+      ]
+    },
+    {
+      "body": "jupiter",
+      "id": "ARIA-SOURCE-JUPITER-PARENT_SSB-23",
+      "jd_tdb": 2484115.1470588,
+      "position_km": [
+        -637704866.3733648,
+        -467405380.037494,
+        -184806769.5705211
+      ],
+      "raw_file": "raw/jupiter-parent_ssb.txt",
+      "role": "parent_ssb",
+      "velocity_km_s": [
+        7.927778869470574,
+        -8.807198817441082,
+        -3.967272949329862
+      ]
+    },
+    {
+      "body": "jupiter",
+      "id": "ARIA-SOURCE-JUPITER-PARENT_SSB-24",
+      "jd_tdb": 2487704.5,
+      "position_km": [
+        -767436591.9260551,
+        224825381.9784607,
+        114999173.2576858
+      ],
+      "raw_file": "raw/jupiter-parent_ssb.txt",
+      "role": "parent_ssb",
+      "velocity_km_s": [
+        -4.229600766167148,
+        -10.89003132579725,
+        -4.564378389266635
+      ]
+    },
+    {
+      "body": "jupiter",
+      "id": "ARIA-SOURCE-JUPITER-PARENT_SSB-25",
+      "jd_tdb": 2488433.5,
+      "position_km": [
+        -646363098.8086754,
+        -456422684.3601124,
+        -179902518.7383354
+      ],
+      "raw_file": "raw/jupiter-parent_ssb.txt",
+      "role": "parent_ssb",
+      "velocity_km_s": [
+        7.728245816583019,
+        -8.946606299000923,
+        -4.021920453325481
+      ]
+    },
+    {
+      "body": "jupiter",
+      "id": "ARIA-SOURCE-JUPITER-EARTH_SSB-01",
+      "jd_tdb": 2415021.5,
+      "position_km": [
+        -31538986.00753607,
+        132588917.6104717,
+        57502116.54168395
+      ],
+      "raw_file": "raw/jupiter-earth_ssb.txt",
+      "role": "earth_ssb",
+      "velocity_km_s": [
+        -29.58732723625573,
+        -6.045044774989735,
+        -2.623964530560301
+      ]
+    },
+    {
+      "body": "jupiter",
+      "id": "ARIA-SOURCE-JUPITER-EARTH_SSB-02",
+      "jd_tdb": 2419339.8529412,
+      "position_km": [
+        118756022.9938427,
+        82300793.31224626,
+        35710899.41547236
+      ],
+      "raw_file": "raw/jupiter-earth_ssb.txt",
+      "role": "earth_ssb",
+      "velocity_km_s": [
+        -18.44904281126849,
+        21.71076801352308,
+        9.417531242267923
+      ]
+    },
+    {
+      "body": "jupiter",
+      "id": "ARIA-SOURCE-JUPITER-EARTH_SSB-03",
+      "jd_tdb": 2423658.2058824,
+      "position_km": [
+        136141350.0800922,
+        -61288296.46054569,
+        -26614509.48221126
+      ],
+      "raw_file": "raw/jupiter-earth_ssb.txt",
+      "role": "earth_ssb",
+      "velocity_km_s": [
+        12.79425512661434,
+        24.35146342583021,
+        10.56427942329882
+      ]
+    },
+    {
+      "body": "jupiter",
+      "id": "ARIA-SOURCE-JUPITER-EARTH_SSB-04",
+      "jd_tdb": 2427976.5588235,
+      "position_km": [
+        4367141.35142257,
+        -138842110.5388625,
+        -60224131.13220195
+      ],
+      "raw_file": "raw/jupiter-earth_ssb.txt",
+      "role": "earth_ssb",
+      "velocity_km_s": [
+        29.27939339794531,
+        0.6402420745969418,
+        0.2777336436067375
+      ]
+    },
+    {
+      "body": "jupiter",
+      "id": "ARIA-SOURCE-JUPITER-EARTH_SSB-05",
+      "jd_tdb": 2432294.9117647,
+      "position_km": [
+        -130176164.0186222,
+        -67151754.05458906,
+        -29150762.61941426
+      ],
+      "raw_file": "raw/jupiter-earth_ssb.txt",
+      "role": "earth_ssb",
+      "velocity_km_s": [
+        14.06451477510995,
+        -23.9486681022544,
+        -10.38687835953761
+      ]
+    },
+    {
+      "body": "jupiter",
+      "id": "ARIA-SOURCE-JUPITER-EARTH_SSB-06",
+      "jd_tdb": 2436613.2647059,
+      "position_km": [
+        -120076418.9087866,
+        78957038.61102456,
+        34207763.4791554
+      ],
+      "raw_file": "raw/jupiter-earth_ssb.txt",
+      "role": "earth_ssb",
+      "velocity_km_s": [
+        -17.62691121608429,
+        -22.45872872810242,
+        -9.738277139079754
+      ]
+    },
+    {
+      "body": "jupiter",
+      "id": "ARIA-SOURCE-JUPITER-EARTH_SSB-07",
+      "jd_tdb": 2440931.6176471,
+      "position_km": [
+        28445518.49725509,
+        133149735.5541617,
+        57729911.1818481
+      ],
+      "raw_file": "raw/jupiter-earth_ssb.txt",
+      "role": "earth_ssb",
+      "velocity_km_s": [
+        -29.73015646230678,
+        5.08602099193338,
+        2.205325678870342
+      ]
+    },
+    {
+      "body": "jupiter",
+      "id": "ARIA-SOURCE-JUPITER-EARTH_SSB-08",
+      "jd_tdb": 2445249.9705882,
+      "position_km": [
+        145944270.7571321,
+        34456876.77718964,
+        14900537.03014257
+      ],
+      "raw_file": "raw/jupiter-earth_ssb.txt",
+      "role": "earth_ssb",
+      "velocity_km_s": [
+        -7.747040419044357,
+        26.40992005243042,
+        11.45039127225688
+      ]
+    },
+    {
+      "body": "jupiter",
+      "id": "ARIA-SOURCE-JUPITER-EARTH_SSB-09",
+      "jd_tdb": 2449568.3235294,
+      "position_km": [
+        100201915.7526633,
+        -103638290.2019144,
+        -44936773.39995441
+      ],
+      "raw_file": "raw/jupiter-earth_ssb.txt",
+      "role": "earth_ssb",
+      "velocity_km_s": [
+        21.89159493375257,
+        17.94541899956232,
+        7.781716923155003
+      ]
+    },
+    {
+      "body": "jupiter",
+      "id": "ARIA-SOURCE-JUPITER-EARTH_SSB-10",
+      "jd_tdb": 2450464.46,
+      "position_km": [
+        -65223039.17906848,
+        122262173.143428,
+        53032112.31475235
+      ],
+      "raw_file": "raw/jupiter-earth_ssb.txt",
+      "role": "earth_ssb",
+      "velocity_km_s": [
+        -27.28815509519695,
+        -12.06040560622853,
+        -5.227544416103024
+      ]
+    },
+    {
+      "body": "jupiter",
+      "id": "ARIA-SOURCE-JUPITER-EARTH_SSB-11",
+      "jd_tdb": 2450464.5,
+      "position_km": [
+        -65317330.86613617,
+        122220462.2687377,
+        53014032.856629
+      ],
+      "raw_file": "raw/jupiter-earth_ssb.txt",
+      "role": "earth_ssb",
+      "velocity_km_s": [
+        -27.27879124325724,
+        -12.07783087284867,
+        -5.235104460497581
+      ]
+    },
+    {
+      "body": "jupiter",
+      "id": "ARIA-SOURCE-JUPITER-EARTH_SSB-12",
+      "jd_tdb": 2450464.54,
+      "position_km": [
+        -65411590.16949645,
+        122178691.1844205,
+        52995927.27607945
+      ],
+      "raw_file": "raw/jupiter-earth_ssb.txt",
+      "role": "earth_ssb",
+      "velocity_km_s": [
+        -27.26941452584416,
+        -12.09524914000055,
+        -5.242661560642894
+      ]
+    },
+    {
+      "body": "jupiter",
+      "id": "ARIA-SOURCE-JUPITER-EARTH_SSB-13",
+      "jd_tdb": 2451545.0,
+      "position_km": [
+        -27566740.48281145,
+        132361381.1535491,
+        57418653.28625385
+      ],
+      "raw_file": "raw/jupiter-earth_ssb.txt",
+      "role": "earth_ssb",
+      "velocity_km_s": [
+        -29.78494749851088,
+        -5.029753814928081,
+        -2.180645069035755
+      ]
+    },
+    {
+      "body": "jupiter",
+      "id": "ARIA-SOURCE-JUPITER-EARTH_SSB-14",
+      "jd_tdb": 2453886.6764706,
+      "position_km": [
+        -52584832.14385001,
+        -129921711.2815261,
+        -56344667.91741737
+      ],
+      "raw_file": "raw/jupiter-earth_ssb.txt",
+      "role": "earth_ssb",
+      "velocity_km_s": [
+        27.4236563196577,
+        -9.65683224688865,
+        -4.186108134885535
+      ]
+    },
+    {
+      "body": "jupiter",
+      "id": "ARIA-SOURCE-JUPITER-EARTH_SSB-15",
+      "jd_tdb": 2458205.0294118,
+      "position_km": [
+        -148110773.9233871,
+        -14717636.96594637,
+        -6396962.981107187
+      ],
+      "raw_file": "raw/jupiter-earth_ssb.txt",
+      "role": "earth_ssb",
+      "velocity_km_s": [
+        2.910756447342771,
+        -27.23949423998644,
+        -11.80937515559736
+      ]
+    },
+    {
+      "body": "jupiter",
+      "id": "ARIA-SOURCE-JUPITER-EARTH_SSB-16",
+      "jd_tdb": 2461041.5,
+      "position_km": [
+        -26531002.41556548,
+        132064399.5462592,
+        57268703.37495859
+      ],
+      "raw_file": "raw/jupiter-earth_ssb.txt",
+      "role": "earth_ssb",
+      "velocity_km_s": [
+        -29.77650610770464,
+        -4.950768712267514,
+        -2.146229769311948
+      ]
+    },
+    {
+      "body": "jupiter",
+      "id": "ARIA-SOURCE-JUPITER-EARTH_SSB-17",
+      "jd_tdb": 2462523.3823529,
+      "position_km": [
+        -76755777.5016085,
+        115277705.8893004,
+        49976976.40163088
+      ],
+      "raw_file": "raw/jupiter-earth_ssb.txt",
+      "role": "earth_ssb",
+      "velocity_km_s": [
+        -25.89450155276489,
+        -14.34979899070555,
+        -6.219467003728118
+      ]
+    },
+    {
+      "body": "jupiter",
+      "id": "ARIA-SOURCE-JUPITER-EARTH_SSB-18",
+      "jd_tdb": 2466841.7352941,
+      "position_km": [
+        84225192.4139384,
+        112514224.5171628,
+        48737182.5133945
+      ],
+      "raw_file": "raw/jupiter-earth_ssb.txt",
+      "role": "earth_ssb",
+      "velocity_km_s": [
+        -25.09249707524045,
+        15.33071569073868,
+        6.646230261357222
+      ]
+    },
+    {
+      "body": "jupiter",
+      "id": "ARIA-SOURCE-JUPITER-EARTH_SSB-19",
+      "jd_tdb": 2469807.5,
+      "position_km": [
+        -25552989.89163721,
+        132440488.0438156,
+        57404342.4245562
+      ],
+      "raw_file": "raw/jupiter-earth_ssb.txt",
+      "role": "earth_ssb",
+      "velocity_km_s": [
+        -29.80297244737971,
+        -4.880549291210277,
+        -2.114264436207796
+      ]
+    },
+    {
+      "body": "jupiter",
+      "id": "ARIA-SOURCE-JUPITER-EARTH_SSB-20",
+      "jd_tdb": 2471160.0882353,
+      "position_km": [
+        149024123.5509408,
+        -20021024.69606626,
+        -8675611.511137813
+      ],
+      "raw_file": "raw/jupiter-earth_ssb.txt",
+      "role": "earth_ssb",
+      "velocity_km_s": [
+        3.913435225636611,
+        26.94551466551435,
+        11.67751278175865
+      ]
+    },
+    {
+      "body": "jupiter",
+      "id": "ARIA-SOURCE-JUPITER-EARTH_SSB-21",
+      "jd_tdb": 2475478.4411765,
+      "position_km": [
+        51127898.71285021,
+        -131613273.399333,
+        -57056936.89874396
+      ],
+      "raw_file": "raw/jupiter-earth_ssb.txt",
+      "role": "earth_ssb",
+      "velocity_km_s": [
+        27.62263450262693,
+        8.938795814202395,
+        3.87328955277113
+      ]
+    },
+    {
+      "body": "jupiter",
+      "id": "ARIA-SOURCE-JUPITER-EARTH_SSB-22",
+      "jd_tdb": 2479796.7941176,
+      "position_km": [
+        -101804145.9532272,
+        -100999533.982403,
+        -43785559.43231408
+      ],
+      "raw_file": "raw/jupiter-earth_ssb.txt",
+      "role": "earth_ssb",
+      "velocity_km_s": [
+        21.38172099833365,
+        -18.63151112612213,
+        -8.072769000080571
+      ]
+    },
+    {
+      "body": "jupiter",
+      "id": "ARIA-SOURCE-JUPITER-EARTH_SSB-23",
+      "jd_tdb": 2484115.1470588,
+      "position_km": [
+        -141807256.2833002,
+        38607237.75507747,
+        16730859.67914209
+      ],
+      "raw_file": "raw/jupiter-earth_ssb.txt",
+      "role": "earth_ssb",
+      "velocity_km_s": [
+        -8.93632322040076,
+        -26.30750462812401,
+        -11.39972983779206
+      ]
+    },
+    {
+      "body": "jupiter",
+      "id": "ARIA-SOURCE-JUPITER-EARTH_SSB-24",
+      "jd_tdb": 2487704.5,
+      "position_km": [
+        -22983624.98002377,
+        132879292.4097494,
+        57537406.17856967
+      ],
+      "raw_file": "raw/jupiter-earth_ssb.txt",
+      "role": "earth_ssb",
+      "velocity_km_s": [
+        -29.8562799510103,
+        -4.600447107397916,
+        -1.993887919976477
+      ]
+    },
+    {
+      "body": "jupiter",
+      "id": "ARIA-SOURCE-JUPITER-EARTH_SSB-25",
+      "jd_tdb": 2488433.5,
+      "position_km": [
+        -19228494.65650783,
+        134241044.8339282,
+        58125043.84027151
+      ],
+      "raw_file": "raw/jupiter-earth_ssb.txt",
+      "role": "earth_ssb",
+      "velocity_km_s": [
+        -30.00805071028902,
+        -3.867423641549157,
+        -1.675615391876243
+      ]
+    },
+    {
+      "body": "jupiter",
+      "id": "ARIA-SOURCE-JUPITER-CENTRE_SSB-01",
+      "jd_tdb": 2415021.5,
+      "position_km": [
+        -449794895.4040925,
+        -616925906.0906264,
+        -253516278.5027993
+      ],
+      "raw_file": "raw/jupiter-centre_ssb.txt",
+      "role": "centre_ssb",
+      "velocity_km_s": [
+        10.67649804699682,
+        -6.05172566886426,
+        -2.855138758968984
+      ]
+    },
+    {
+      "body": "jupiter",
+      "id": "ARIA-SOURCE-JUPITER-CENTRE_SSB-02",
+      "jd_tdb": 2419339.8529412,
+      "position_km": [
+        -462807098.9876072,
+        -610036325.2517111,
+        -250231774.7314785
+      ],
+      "raw_file": "raw/jupiter-centre_ssb.txt",
+      "role": "centre_ssb",
+      "velocity_km_s": [
+        10.54163116417873,
+        -6.249348189246188,
+        -2.936486711643291
+      ]
+    },
+    {
+      "body": "jupiter",
+      "id": "ARIA-SOURCE-JUPITER-CENTRE_SSB-03",
+      "jd_tdb": 2423658.2058824,
+      "position_km": [
+        -475276721.1608898,
+        -602398962.0666286,
+        -246659354.1946905
+      ],
+      "raw_file": "raw/jupiter-centre_ssb.txt",
+      "role": "centre_ssb",
+      "velocity_km_s": [
+        10.37782533897716,
+        -6.436706593747868,
+        -3.012741582270142
+      ]
+    },
+    {
+      "body": "jupiter",
+      "id": "ARIA-SOURCE-JUPITER-CENTRE_SSB-04",
+      "jd_tdb": 2427976.5588235,
+      "position_km": [
+        -489001675.3366062,
+        -594360694.3508945,
+        -242867341.7839119
+      ],
+      "raw_file": "raw/jupiter-centre_ssb.txt",
+      "role": "centre_ssb",
+      "velocity_km_s": [
+        10.2233259668881,
+        -6.62651849695821,
+        -3.090171364346666
+      ]
+    },
+    {
+      "body": "jupiter",
+      "id": "ARIA-SOURCE-JUPITER-CENTRE_SSB-05",
+      "jd_tdb": 2432294.9117647,
+      "position_km": [
+        -501786920.817511,
+        -585461880.2752306,
+        -238745139.9174906
+      ],
+      "raw_file": "raw/jupiter-centre_ssb.txt",
+      "role": "centre_ssb",
+      "velocity_km_s": [
+        10.06771295480069,
+        -6.817181145431062,
+        -3.168034119523737
+      ]
+    },
+    {
+      "body": "jupiter",
+      "id": "ARIA-SOURCE-JUPITER-CENTRE_SSB-06",
+      "jd_tdb": 2436613.2647059,
+      "position_km": [
+        -514089642.8882514,
+        -576028896.2219292,
+        -234407083.3810287
+      ],
+      "raw_file": "raw/jupiter-centre_ssb.txt",
+      "role": "centre_ssb",
+      "velocity_km_s": [
+        9.910547888081462,
+        -6.996360983150478,
+        -3.240793778556217
+      ]
+    },
+    {
+      "body": "jupiter",
+      "id": "ARIA-SOURCE-JUPITER-CENTRE_SSB-07",
+      "jd_tdb": 2440931.6176471,
+      "position_km": [
+        -526170187.2809502,
+        -567763048.9784138,
+        -230554338.2725132
+      ],
+      "raw_file": "raw/jupiter-centre_ssb.txt",
+      "role": "centre_ssb",
+      "velocity_km_s": [
+        9.757229697616813,
+        -7.181516726138336,
+        -3.316426838134972
+      ]
+    },
+    {
+      "body": "jupiter",
+      "id": "ARIA-SOURCE-JUPITER-CENTRE_SSB-08",
+      "jd_tdb": 2445249.9705882,
+      "position_km": [
+        -537614372.2880704,
+        -558799336.0950247,
+        -226438391.9423842
+      ],
+      "raw_file": "raw/jupiter-centre_ssb.txt",
+      "role": "centre_ssb",
+      "velocity_km_s": [
+        9.57827384537789,
+        -7.352836718759945,
+        -3.385347379149824
+      ]
+    },
+    {
+      "body": "jupiter",
+      "id": "ARIA-SOURCE-JUPITER-CENTRE_SSB-09",
+      "jd_tdb": 2449568.3235294,
+      "position_km": [
+        -550649440.4827071,
+        -549643403.1602533,
+        -222183332.9842401
+      ],
+      "raw_file": "raw/jupiter-centre_ssb.txt",
+      "role": "centre_ssb",
+      "velocity_km_s": [
+        9.40487537498072,
+        -7.528187542438252,
+        -3.456050576138219
+      ]
+    },
+    {
+      "body": "jupiter",
+      "id": "ARIA-SOURCE-JUPITER-CENTRE_SSB-10",
+      "jd_tdb": 2450464.46,
+      "position_km": [
+        374213304.5083923,
+        -611496065.0807662,
+        -271227679.2115791
+      ],
+      "raw_file": "raw/jupiter-centre_ssb.txt",
+      "role": "centre_ssb",
+      "velocity_km_s": [
+        11.22669748532441,
+        6.527920542187276,
+        2.524743818914065
+      ]
+    },
+    {
+      "body": "jupiter",
+      "id": "ARIA-SOURCE-JUPITER-CENTRE_SSB-11",
+      "jd_tdb": 2450464.5,
+      "position_km": [
+        374252103.1997063,
+        -611473503.3243756,
+        -271218953.1323963
+      ],
+      "raw_file": "raw/jupiter-centre_ssb.txt",
+      "role": "centre_ssb",
+      "velocity_km_s": [
+        11.22624604852471,
+        6.528650632370998,
+        2.525070092123845
+      ]
+    },
+    {
+      "body": "jupiter",
+      "id": "ARIA-SOURCE-JUPITER-CENTRE_SSB-12",
+      "jd_tdb": 2450464.54,
+      "position_km": [
+        374290900.3011689,
+        -611450939.054636,
+        -271210225.9307795
+      ],
+      "raw_file": "raw/jupiter-centre_ssb.txt",
+      "role": "centre_ssb",
+      "velocity_km_s": [
+        11.22577755067238,
+        6.529374552105583,
+        2.525393151456047
+      ]
+    },
+    {
+      "body": "jupiter",
+      "id": "ARIA-SOURCE-JUPITER-CENTRE_SSB-13",
+      "jd_tdb": 2451545.0,
+      "position_km": [
+        597499917.8516835,
+        408990269.7993661,
+        160756261.6932818
+      ],
+      "raw_file": "raw/jupiter-centre_ssb.txt",
+      "role": "centre_ssb",
+      "velocity_km_s": [
+        -7.900547720245487,
+        10.1718725762267,
+        4.552504127783227
+      ]
+    },
+    {
+      "body": "jupiter",
+      "id": "ARIA-SOURCE-JUPITER-CENTRE_SSB-14",
+      "jd_tdb": 2453886.6764706,
+      "position_km": [
+        -562883580.0698602,
+        -539638682.7886261,
+        -217605873.7772436
+      ],
+      "raw_file": "raw/jupiter-centre_ssb.txt",
+      "role": "centre_ssb",
+      "velocity_km_s": [
+        9.22596075806112,
+        -7.702971577860095,
+        -3.526472403092373
+      ]
+    },
+    {
+      "body": "jupiter",
+      "id": "ARIA-SOURCE-JUPITER-CENTRE_SSB-15",
+      "jd_tdb": 2458205.0294118,
+      "position_km": [
+        -574354186.4397296,
+        -529444260.7470989,
+        -212960821.0465689
+      ],
+      "raw_file": "raw/jupiter-centre_ssb.txt",
+      "role": "centre_ssb",
+      "velocity_km_s": [
+        9.05311900373246,
+        -7.86742347011786,
+        -3.592486160351584
+      ]
+    },
+    {
+      "body": "jupiter",
+      "id": "ARIA-SOURCE-JUPITER-CENTRE_SSB-16",
+      "jd_tdb": 2461041.5,
+      "position_km": [
+        -253878209.3363155,
+        674701399.5129832,
+        295381719.3606943
+      ],
+      "raw_file": "raw/jupiter-centre_ssb.txt",
+      "role": "centre_ssb",
+      "velocity_km_s": [
+        -12.507616337146,
+        -3.45693147164991,
+        -1.177327613873146
+      ]
+    },
+    {
+      "body": "jupiter",
+      "id": "ARIA-SOURCE-JUPITER-CENTRE_SSB-17",
+      "jd_tdb": 2462523.3823529,
+      "position_km": [
+        -585206499.2802981,
+        -520361305.1325592,
+        -208785804.309891
+      ],
+      "raw_file": "raw/jupiter-centre_ssb.txt",
+      "role": "centre_ssb",
+      "velocity_km_s": [
+        8.883378037333811,
+        -8.037550616542262,
+        -3.661359695826607
+      ]
+    },
+    {
+      "body": "jupiter",
+      "id": "ARIA-SOURCE-JUPITER-CENTRE_SSB-18",
+      "jd_tdb": 2466841.7352941,
+      "position_km": [
+        -595079643.9355911,
+        -510445025.6100291,
+        -204299685.2202288
+      ],
+      "raw_file": "raw/jupiter-centre_ssb.txt",
+      "role": "centre_ssb",
+      "velocity_km_s": [
+        8.693170255938938,
+        -8.191553491653274,
+        -3.722466740751326
+      ]
+    },
+    {
+      "body": "jupiter",
+      "id": "ARIA-SOURCE-JUPITER-CENTRE_SSB-19",
+      "jd_tdb": 2469807.5,
+      "position_km": [
+        -357575558.5955703,
+        637675763.6228216,
+        282006758.0354033
+      ],
+      "raw_file": "raw/jupiter-centre_ssb.txt",
+      "role": "centre_ssb",
+      "velocity_km_s": [
+        -11.79467378498198,
+        -5.030110046769217,
+        -1.868832615234569
+      ]
+    },
+    {
+      "body": "jupiter",
+      "id": "ARIA-SOURCE-JUPITER-CENTRE_SSB-20",
+      "jd_tdb": 2471160.0882353,
+      "position_km": [
+        -606633721.0688308,
+        -500243605.7798021,
+        -199630930.9568016
+      ],
+      "raw_file": "raw/jupiter-centre_ssb.txt",
+      "role": "centre_ssb",
+      "velocity_km_s": [
+        8.503580581343089,
+        -8.351256446667575,
+        -3.786039044881631
+      ]
+    },
+    {
+      "body": "jupiter",
+      "id": "ARIA-SOURCE-JUPITER-CENTRE_SSB-21",
+      "jd_tdb": 2475478.4411765,
+      "position_km": [
+        -617649708.8493984,
+        -488939342.8927043,
+        -194531538.7965753
+      ],
+      "raw_file": "raw/jupiter-centre_ssb.txt",
+      "role": "centre_ssb",
+      "velocity_km_s": [
+        8.302743214546643,
+        -8.507302563416145,
+        -3.847942605223464
+      ]
+    },
+    {
+      "body": "jupiter",
+      "id": "ARIA-SOURCE-JUPITER-CENTRE_SSB-22",
+      "jd_tdb": 2479796.7941176,
+      "position_km": [
+        -628002984.0145369,
+        -477626118.9438656,
+        -189436436.4388139
+      ],
+      "raw_file": "raw/jupiter-centre_ssb.txt",
+      "role": "centre_ssb",
+      "velocity_km_s": [
+        8.113939290295715,
+        -8.655398664395763,
+        -3.906624796205936
+      ]
+    },
+    {
+      "body": "jupiter",
+      "id": "ARIA-SOURCE-JUPITER-CENTRE_SSB-23",
+      "jd_tdb": 2484115.1470588,
+      "position_km": [
+        -637704992.768947,
+        -467405311.2095904,
+        -184806739.3419359
+      ],
+      "raw_file": "raw/jupiter-centre_ssb.txt",
+      "role": "centre_ssb",
+      "velocity_km_s": [
+        7.928382386102858,
+        -8.80824377367292,
+        -3.96775337869923
+      ]
+    },
+    {
+      "body": "jupiter",
+      "id": "ARIA-SOURCE-JUPITER-CENTRE_SSB-24",
+      "jd_tdb": 2487704.5,
+      "position_km": [
+        -767436661.0905279,
+        224825504.2219302,
+        114999229.6943094
+      ],
+      "raw_file": "raw/jupiter-centre_ssb.txt",
+      "role": "centre_ssb",
+      "velocity_km_s": [
+        -4.230197864002875,
+        -10.89084503799356,
+        -4.564773730519843
+      ]
+    },
+    {
+      "body": "jupiter",
+      "id": "ARIA-SOURCE-JUPITER-CENTRE_SSB-25",
+      "jd_tdb": 2488433.5,
+      "position_km": [
+        -646362931.5792,
+        -456422648.8378944,
+        -179902499.9451314
+      ],
+      "raw_file": "raw/jupiter-centre_ssb.txt",
+      "role": "centre_ssb",
+      "velocity_km_s": [
+        7.728804795775293,
+        -8.945849207492394,
+        -4.021560328734227
+      ]
+    },
+    {
+      "body": "pluto",
+      "id": "ARIA-SOURCE-PLUTO-PARENT_GEO-01",
+      "jd_tdb": 2415021.5,
+      "position_km": [
+        1572122435.29362,
+        6529665411.873219,
+        1556945134.009432
+      ],
+      "raw_file": "raw/pluto-parent_geo.txt",
+      "role": "parent_geo",
+      "velocity_km_s": [
+        25.83289306869139,
+        5.966876825505557,
+        3.730725773707265
+      ]
+    },
+    {
+      "body": "pluto",
+      "id": "ARIA-SOURCE-PLUTO-PARENT_GEO-02",
+      "jd_tdb": 2419339.8529412,
+      "position_km": [
+        -8313193.6114503,
+        6367402847.103909,
+        1943304750.686016
+      ],
+      "raw_file": "raw/pluto-parent_geo.txt",
+      "role": "parent_geo",
+      "velocity_km_s": [
+        14.57101181211766,
+        -22.78674229904237,
+        -8.584823322104699
+      ]
+    },
+    {
+      "body": "pluto",
+      "id": "ARIA-SOURCE-PLUTO-PARENT_GEO-03",
+      "jd_tdb": 2423658.2058824,
+      "position_km": [
+        -1460484654.696815,
+        5910628100.70766,
+        2250601722.251417
+      ],
+      "raw_file": "raw/pluto-parent_geo.txt",
+      "role": "parent_geo",
+      "velocity_km_s": [
+        -16.5625652545559,
+        -26.50494330540573,
+        -10.10082464053569
+      ]
+    },
+    {
+      "body": "pluto",
+      "id": "ARIA-SOURCE-PLUTO-PARENT_GEO-04",
+      "jd_tdb": 2427976.5588235,
+      "position_km": [
+        -2666933441.99367,
+        4976050914.265551,
+        2371611725.085304
+      ],
+      "raw_file": "raw/pluto-parent_geo.txt",
+      "role": "parent_geo",
+      "velocity_km_s": [
+        -32.6238211683209,
+        -3.914080278437985,
+        -0.2915596222210758
+      ]
+    },
+    {
+      "body": "pluto",
+      "id": "ARIA-SOURCE-PLUTO-PARENT_GEO-05",
+      "jd_tdb": 2432294.9117647,
+      "position_km": [
+        -3637200897.835469,
+        3479024897.952469,
+        2228688417.049486
+      ],
+      "raw_file": "raw/pluto-parent_geo.txt",
+      "role": "parent_geo",
+      "velocity_km_s": [
+        -16.56157561132617,
+        19.60215019434889,
+        9.783065183266826
+      ]
+    },
+    {
+      "body": "pluto",
+      "id": "ARIA-SOURCE-PLUTO-PARENT_GEO-06",
+      "jd_tdb": 2436613.2647059,
+      "position_km": [
+        -4338799192.145131,
+        1544190934.911974,
+        1815572211.8255
+      ],
+      "raw_file": "raw/pluto-parent_geo.txt",
+      "role": "parent_geo",
+      "velocity_km_s": [
+        16.51340282746272,
+        17.28095003995499,
+        8.45824589990054
+      ]
+    },
+    {
+      "body": "pluto",
+      "id": "ARIA-SOURCE-PLUTO-PARENT_GEO-07",
+      "jd_tdb": 2440931.6176471,
+      "position_km": [
+        -4557101188.08394,
+        -513149136.258601,
+        1188059502.091756
+      ],
+      "raw_file": "raw/pluto-parent_geo.txt",
+      "role": "parent_geo",
+      "velocity_km_s": [
+        30.54959965752094,
+        -10.51428220514453,
+        -4.145984944889864
+      ]
+    },
+    {
+      "body": "pluto",
+      "id": "ARIA-SOURCE-PLUTO-PARENT_GEO-08",
+      "jd_tdb": 2445249.9705882,
+      "position_km": [
+        -3959762967.267501,
+        -2340042472.90171,
+        414661761.6359507
+      ],
+      "raw_file": "raw/pluto-parent_geo.txt",
+      "role": "parent_geo",
+      "velocity_km_s": [
+        10.75390778554092,
+        -31.11950499651186,
+        -13.82595804210972
+      ]
+    },
+    {
+      "body": "pluto",
+      "id": "ARIA-SOURCE-PLUTO-PARENT_GEO-09",
+      "jd_tdb": 2449568.3235294,
+      "position_km": [
+        -2437991834.227404,
+        -3660365730.959779,
+        -425329169.7184938
+      ],
+      "raw_file": "raw/pluto-parent_geo.txt",
+      "role": "parent_geo",
+      "velocity_km_s": [
+        -17.12063915586107,
+        -20.91261697319534,
+        -10.14512841773416
+      ]
+    },
+    {
+      "body": "pluto",
+      "id": "ARIA-SOURCE-PLUTO-PARENT_GEO-10",
+      "jd_tdb": 2451545.0,
+      "position_km": [
+        -1450832632.331634,
+        -4318336512.561318,
+        -918296703.8310648
+      ],
+      "raw_file": "raw/pluto-parent_geo.txt",
+      "role": "parent_geo",
+      "velocity_km_s": [
+        35.03841142974942,
+        3.065673216849631,
+        -0.0151230850820836
+      ]
+    },
+    {
+      "body": "pluto",
+      "id": "ARIA-SOURCE-PLUTO-PARENT_GEO-11",
+      "jd_tdb": 2453886.6764706,
+      "position_km": [
+        -330744283.6611009,
+        -4330306921.729888,
+        -1220059337.383104
+      ],
+      "raw_file": "raw/pluto-parent_geo.txt",
+      "role": "parent_geo",
+      "velocity_km_s": [
+        -21.90678812646318,
+        8.904998224483398,
+        2.289272690223036
+      ]
+    },
+    {
+      "body": "pluto",
+      "id": "ARIA-SOURCE-PLUTO-PARENT_GEO-12",
+      "jd_tdb": 2456293.46,
+      "position_km": [
+        791113259.6005844,
+        -4625659499.921926,
+        -1689812950.698563
+      ],
+      "raw_file": "raw/pluto-parent_geo.txt",
+      "role": "parent_geo",
+      "velocity_km_s": [
+        35.22632141337942,
+        5.492342904672369,
+        0.682917467841353
+      ]
+    },
+    {
+      "body": "pluto",
+      "id": "ARIA-SOURCE-PLUTO-PARENT_GEO-13",
+      "jd_tdb": 2456293.5,
+      "position_km": [
+        791234995.2164139,
+        -4625640485.430649,
+        -1689810576.233409
+      ],
+      "raw_file": "raw/pluto-parent_geo.txt",
+      "role": "parent_geo",
+      "velocity_km_s": [
+        35.22252791318265,
+        5.511413295109828,
+        0.6911941750717241
+      ]
+    },
+    {
+      "body": "pluto",
+      "id": "ARIA-SOURCE-PLUTO-PARENT_GEO-14",
+      "jd_tdb": 2456293.54,
+      "position_km": [
+        791356717.697426,
+        -4625621405.035381,
+        -1689808173.165352
+      ],
+      "raw_file": "raw/pluto-parent_geo.txt",
+      "role": "parent_geo",
+      "velocity_km_s": [
+        35.21872024540708,
+        5.530481787434332,
+        0.6994700735152533
+      ]
+    },
+    {
+      "body": "pluto",
+      "id": "ARIA-SOURCE-PLUTO-PARENT_GEO-15",
+      "jd_tdb": 2458205.0294118,
+      "position_km": [
+        1799354297.672588,
+        -4341647767.734649,
+        -1850604895.869065
+      ],
+      "raw_file": "raw/pluto-parent_geo.txt",
+      "role": "parent_geo",
+      "velocity_km_s": [
+        2.338631249803824,
+        28.46671588039491,
+        10.6107208897495
+      ]
+    },
+    {
+      "body": "pluto",
+      "id": "ARIA-SOURCE-PLUTO-PARENT_GEO-16",
+      "jd_tdb": 2461041.5,
+      "position_km": [
+        2902527855.830679,
+        -4060647026.290183,
+        -2149788564.217762
+      ],
+      "raw_file": "raw/pluto-parent_geo.txt",
+      "role": "parent_geo",
+      "velocity_km_s": [
+        34.48847766009172,
+        7.170319738154783,
+        1.419182779145027
+      ]
+    },
+    {
+      "body": "pluto",
+      "id": "ARIA-SOURCE-PLUTO-PARENT_GEO-17",
+      "jd_tdb": 2462523.3823529,
+      "position_km": [
+        3534211880.984462,
+        -3732438989.125689,
+        -2220503057.659965
+      ],
+      "raw_file": "raw/pluto-parent_geo.txt",
+      "role": "parent_geo",
+      "velocity_km_s": [
+        30.25975761988549,
+        16.98323923107178,
+        5.726051364579036
+      ]
+    },
+    {
+      "body": "pluto",
+      "id": "ARIA-SOURCE-PLUTO-PARENT_GEO-18",
+      "jd_tdb": 2466841.7352941,
+      "position_km": [
+        4794223498.271944,
+        -2574861180.818358,
+        -2287018660.173194
+      ],
+      "raw_file": "raw/pluto-parent_geo.txt",
+      "role": "parent_geo",
+      "velocity_km_s": [
+        28.32508840168042,
+        -11.85932543557592,
+        -6.53686950081079
+      ]
+    },
+    {
+      "body": "pluto",
+      "id": "ARIA-SOURCE-PLUTO-PARENT_GEO-19",
+      "jd_tdb": 2469807.5,
+      "position_km": [
+        5628852789.235807,
+        -1661603335.966251,
+        -2222858254.568248
+      ],
+      "raw_file": "raw/pluto-parent_geo.txt",
+      "role": "parent_geo",
+      "velocity_km_s": [
+        32.22891501439974,
+        8.661360244331357,
+        2.563231112996537
+      ]
+    },
+    {
+      "body": "pluto",
+      "id": "ARIA-SOURCE-PLUTO-PARENT_GEO-20",
+      "jd_tdb": 2471160.0882353,
+      "position_km": [
+        5716525775.55211,
+        -1062142504.115853,
+        -2096295962.705995
+      ],
+      "raw_file": "raw/pluto-parent_geo.txt",
+      "role": "parent_geo",
+      "velocity_km_s": [
+        -1.850342944635027,
+        -23.08193749716901,
+        -11.09338508458923
+      ]
+    },
+    {
+      "body": "pluto",
+      "id": "ARIA-SOURCE-PLUTO-PARENT_GEO-21",
+      "jd_tdb": 2475478.4411765,
+      "position_km": [
+        6374479985.796504,
+        512032436.7653229,
+        -1760218096.562357
+      ],
+      "raw_file": "raw/pluto-parent_geo.txt",
+      "role": "parent_geo",
+      "velocity_km_s": [
+        -26.66939089661305,
+        -5.008086194769201,
+        -2.933806011844187
+      ]
+    },
+    {
+      "body": "pluto",
+      "id": "ARIA-SOURCE-PLUTO-PARENT_GEO-22",
+      "jd_tdb": 2479796.7941176,
+      "position_km": [
+        6690790080.927189,
+        1922723018.472939,
+        -1372912154.514142
+      ],
+      "raw_file": "raw/pluto-parent_geo.txt",
+      "role": "parent_geo",
+      "velocity_km_s": [
+        -21.44170059819731,
+        22.39312618509738,
+        9.264770299899457
+      ]
+    },
+    {
+      "body": "pluto",
+      "id": "ARIA-SOURCE-PLUTO-PARENT_GEO-23",
+      "jd_tdb": 2484115.1470588,
+      "position_km": [
+        6536093039.273779,
+        3126815696.580501,
+        -955421043.3796446
+      ],
+      "raw_file": "raw/pluto-parent_geo.txt",
+      "role": "parent_geo",
+      "velocity_km_s": [
+        7.970857553730313,
+        29.72276530735856,
+        12.75647269501426
+      ]
+    },
+    {
+      "body": "pluto",
+      "id": "ARIA-SOURCE-PLUTO-PARENT_GEO-24",
+      "jd_tdb": 2487704.5,
+      "position_km": [
+        6012139716.109097,
+        4032635811.926334,
+        -562047557.8464957
+      ],
+      "raw_file": "raw/pluto-parent_geo.txt",
+      "role": "parent_geo",
+      "velocity_km_s": [
+        28.221666759164,
+        7.620078116959737,
+        3.428788101255394
+      ]
+    },
+    {
+      "body": "pluto",
+      "id": "ARIA-SOURCE-PLUTO-PARENT_GEO-25",
+      "jd_tdb": 2488433.5,
+      "position_km": [
+        5901423172.542311,
+        4218623343.57892,
+        -471938062.490659
+      ],
+      "raw_file": "raw/pluto-parent_geo.txt",
+      "role": "parent_geo",
+      "velocity_km_s": [
+        28.24680977429408,
+        6.796185592118004,
+        3.120314484074864
+      ]
+    },
+    {
+      "body": "pluto",
+      "id": "ARIA-SOURCE-PLUTO-PARENT_SSB-01",
+      "jd_tdb": 2415021.5,
+      "position_km": [
+        1540583449.286084,
+        6662254329.483691,
+        1614447250.551116
+      ],
+      "raw_file": "raw/pluto-parent_ssb.txt",
+      "role": "parent_ssb",
+      "velocity_km_s": [
+        -3.754434167564333,
+        -0.07816794948417831,
+        1.106761243146964
+      ]
+    },
+    {
+      "body": "pluto",
+      "id": "ARIA-SOURCE-PLUTO-PARENT_SSB-02",
+      "jd_tdb": 2419339.8529412,
+      "position_km": [
+        110442829.3823924,
+        6449703640.416155,
+        1979015650.101488
+      ],
+      "raw_file": "raw/pluto-parent_ssb.txt",
+      "role": "parent_ssb",
+      "velocity_km_s": [
+        -3.878030999150828,
+        -1.075974285519288,
+        0.8327079201632251
+      ]
+    },
+    {
+      "body": "pluto",
+      "id": "ARIA-SOURCE-PLUTO-PARENT_SSB-03",
+      "jd_tdb": 2423658.2058824,
+      "position_km": [
+        -1324343304.616723,
+        5849339804.247114,
+        2223987212.769206
+      ],
+      "raw_file": "raw/pluto-parent_ssb.txt",
+      "role": "parent_ssb",
+      "velocity_km_s": [
+        -3.768310127941557,
+        -2.15347987957552,
+        0.4634547827631308
+      ]
+    },
+    {
+      "body": "pluto",
+      "id": "ARIA-SOURCE-PLUTO-PARENT_SSB-04",
+      "jd_tdb": 2427976.5588235,
+      "position_km": [
+        -2662566300.642247,
+        4837208803.726688,
+        2311387593.953102
+      ],
+      "raw_file": "raw/pluto-parent_ssb.txt",
+      "role": "parent_ssb",
+      "velocity_km_s": [
+        -3.344427770375588,
+        -3.273838203841043,
+        -0.0138259786143383
+      ]
+    },
+    {
+      "body": "pluto",
+      "id": "ARIA-SOURCE-PLUTO-PARENT_SSB-05",
+      "jd_tdb": 2432294.9117647,
+      "position_km": [
+        -3767377061.854091,
+        3411873143.89788,
+        2199537654.430071
+      ],
+      "raw_file": "raw/pluto-parent_ssb.txt",
+      "role": "parent_ssb",
+      "velocity_km_s": [
+        -2.497060836216223,
+        -4.346517907905507,
+        -0.6038131762707846
+      ]
+    },
+    {
+      "body": "pluto",
+      "id": "ARIA-SOURCE-PLUTO-PARENT_SSB-06",
+      "jd_tdb": 2436613.2647059,
+      "position_km": [
+        -4458875611.053918,
+        1623147973.522999,
+        1849779975.304655
+      ],
+      "raw_file": "raw/pluto-parent_ssb.txt",
+      "role": "parent_ssb",
+      "velocity_km_s": [
+        -1.113508388621567,
+        -5.177778688147428,
+        -1.280031239179215
+      ]
+    },
+    {
+      "body": "pluto",
+      "id": "ARIA-SOURCE-PLUTO-PARENT_SSB-07",
+      "jd_tdb": 2440931.6176471,
+      "position_km": [
+        -4528655669.586684,
+        -379999400.7044393,
+        1245789413.273604
+      ],
+      "raw_file": "raw/pluto-parent_ssb.txt",
+      "role": "parent_ssb",
+      "velocity_km_s": [
+        0.8194431952141674,
+        -5.42826121321115,
+        -1.940659266019521
+      ]
+    },
+    {
+      "body": "pluto",
+      "id": "ARIA-SOURCE-PLUTO-PARENT_SSB-08",
+      "jd_tdb": 2445249.9705882,
+      "position_km": [
+        -3813818696.510369,
+        -2305585596.12452,
+        429562298.6660933
+      ],
+      "raw_file": "raw/pluto-parent_ssb.txt",
+      "role": "parent_ssb",
+      "velocity_km_s": [
+        3.00686736649656,
+        -4.709584944081443,
+        -2.375566769852837
+      ]
+    },
+    {
+      "body": "pluto",
+      "id": "ARIA-SOURCE-PLUTO-PARENT_SSB-09",
+      "jd_tdb": 2449568.3235294,
+      "position_km": [
+        -2337789918.474741,
+        -3764004021.161694,
+        -470265943.1184482
+      ],
+      "raw_file": "raw/pluto-parent_ssb.txt",
+      "role": "parent_ssb",
+      "velocity_km_s": [
+        4.770955777891502,
+        -2.967197973633022,
+        -2.363411494579159
+      ]
+    },
+    {
+      "body": "pluto",
+      "id": "ARIA-SOURCE-PLUTO-PARENT_SSB-10",
+      "jd_tdb": 2451545.0,
+      "position_km": [
+        -1478399372.814445,
+        -4185975131.40777,
+        -860878050.544811
+      ],
+      "raw_file": "raw/pluto-parent_ssb.txt",
+      "role": "parent_ssb",
+      "velocity_km_s": [
+        5.253463931238531,
+        -1.96408059807845,
+        -2.195768154117838
+      ]
+    },
+    {
+      "body": "pluto",
+      "id": "ARIA-SOURCE-PLUTO-PARENT_SSB-11",
+      "jd_tdb": 2453886.6764706,
+      "position_km": [
+        -383329115.804951,
+        -4460228633.011415,
+        -1276404005.300521
+      ],
+      "raw_file": "raw/pluto-parent_ssb.txt",
+      "role": "parent_ssb",
+      "velocity_km_s": [
+        5.516868193194519,
+        -0.7518340224052509,
+        -1.896835444662499
+      ]
+    },
+    {
+      "body": "pluto",
+      "id": "ARIA-SOURCE-PLUTO-PARENT_SSB-12",
+      "jd_tdb": 2456293.46,
+      "position_km": [
+        764092865.198088,
+        -4493295474.311269,
+        -1632437273.76999
+      ],
+      "raw_file": "raw/pluto-parent_ssb.txt",
+      "role": "parent_ssb",
+      "velocity_km_s": [
+        5.470312219573637,
+        0.412364448503128,
+        -1.519500092163083
+      ]
+    },
+    {
+      "body": "pluto",
+      "id": "ARIA-SOURCE-PLUTO-PARENT_SSB-13",
+      "jd_tdb": 2456293.5,
+      "position_km": [
+        764111770.5917916,
+        -4493294049.148311,
+        -1632442525.150897
+      ],
+      "raw_file": "raw/pluto-parent_ssb.txt",
+      "role": "parent_ssb",
+      "velocity_km_s": [
+        5.470309126513015,
+        0.4123826331134074,
+        -1.519493485653455
+      ]
+    },
+    {
+      "body": "pluto",
+      "id": "ARIA-SOURCE-PLUTO-PARENT_SSB-14",
+      "jd_tdb": 2456293.54,
+      "position_km": [
+        764130675.9748056,
+        -4493292623.922506,
+        -1632447776.508972
+      ],
+      "raw_file": "raw/pluto-parent_ssb.txt",
+      "role": "parent_ssb",
+      "velocity_km_s": [
+        5.470306033382449,
+        0.4124008176793361,
+        -1.519486879136593
+      ]
+    },
+    {
+      "body": "pluto",
+      "id": "ARIA-SOURCE-PLUTO-PARENT_SSB-15",
+      "jd_tdb": 2458205.0294118,
+      "position_km": [
+        1651243523.749201,
+        -4356365404.700595,
+        -1857001858.850172
+      ],
+      "raw_file": "raw/pluto-parent_ssb.txt",
+      "role": "parent_ssb",
+      "velocity_km_s": [
+        5.249387697146595,
+        1.227221640408469,
+        -1.198654265847858
+      ]
+    },
+    {
+      "body": "pluto",
+      "id": "ARIA-SOURCE-PLUTO-PARENT_SSB-16",
+      "jd_tdb": 2461041.5,
+      "position_km": [
+        2875996853.415114,
+        -3928582626.743924,
+        -2092519860.842804
+      ],
+      "raw_file": "raw/pluto-parent_ssb.txt",
+      "role": "parent_ssb",
+      "velocity_km_s": [
+        4.711971552387081,
+        2.219551025887268,
+        -0.7270469901669209
+      ]
+    },
+    {
+      "body": "pluto",
+      "id": "ARIA-SOURCE-PLUTO-PARENT_SSB-17",
+      "jd_tdb": 2462523.3823529,
+      "position_km": [
+        3457456103.482853,
+        -3617161283.236388,
+        -2170526081.258334
+      ],
+      "raw_file": "raw/pluto-parent_ssb.txt",
+      "role": "parent_ssb",
+      "velocity_km_s": [
+        4.365256067120598,
+        2.633440240366226,
+        -0.4934156391490818
+      ]
+    },
+    {
+      "body": "pluto",
+      "id": "ARIA-SOURCE-PLUTO-PARENT_SSB-18",
+      "jd_tdb": 2466841.7352941,
+      "position_km": [
+        4878448690.685883,
+        -2462346956.301195,
+        -2238281477.6598
+      ],
+      "raw_file": "raw/pluto-parent_ssb.txt",
+      "role": "parent_ssb",
+      "velocity_km_s": [
+        3.232591326439969,
+        3.471390255162759,
+        0.1093607605464322
+      ]
+    },
+    {
+      "body": "pluto",
+      "id": "ARIA-SOURCE-PLUTO-PARENT_SSB-19",
+      "jd_tdb": 2469807.5,
+      "position_km": [
+        5603299799.344171,
+        -1529162847.922436,
+        -2165453912.143692
+      ],
+      "raw_file": "raw/pluto-parent_ssb.txt",
+      "role": "parent_ssb",
+      "velocity_km_s": [
+        2.425942567020032,
+        3.780810953121081,
+        0.4489666767887409
+      ]
+    },
+    {
+      "body": "pluto",
+      "id": "ARIA-SOURCE-PLUTO-PARENT_SSB-20",
+      "jd_tdb": 2471160.0882353,
+      "position_km": [
+        5865549899.10305,
+        -1082163528.811919,
+        -2104971574.217133
+      ],
+      "raw_file": "raw/pluto-parent_ssb.txt",
+      "role": "parent_ssb",
+      "velocity_km_s": [
+        2.063092281001584,
+        3.863577168345341,
+        0.5841276971694265
+      ]
+    },
+    {
+      "body": "pluto",
+      "id": "ARIA-SOURCE-PLUTO-PARENT_SSB-21",
+      "jd_tdb": 2475478.4411765,
+      "position_km": [
+        6425607884.509355,
+        380419163.3659899,
+        -1817275033.461101
+      ],
+      "raw_file": "raw/pluto-parent_ssb.txt",
+      "role": "parent_ssb",
+      "velocity_km_s": [
+        0.9532436060138889,
+        3.930709619433194,
+        0.9394835409269423
+      ]
+    },
+    {
+      "body": "pluto",
+      "id": "ARIA-SOURCE-PLUTO-PARENT_SSB-22",
+      "jd_tdb": 2479796.7941176,
+      "position_km": [
+        6588985934.973962,
+        1821723484.490536,
+        -1416697713.946456
+      ],
+      "raw_file": "raw/pluto-parent_ssb.txt",
+      "role": "parent_ssb",
+      "velocity_km_s": [
+        -0.05997959986365661,
+        3.761615058975242,
+        1.192001299818885
+      ]
+    },
+    {
+      "body": "pluto",
+      "id": "ARIA-SOURCE-PLUTO-PARENT_SSB-23",
+      "jd_tdb": 2484115.1470588,
+      "position_km": [
+        6394285782.990479,
+        3165422934.335578,
+        -938690183.7005025
+      ],
+      "raw_file": "raw/pluto-parent_ssb.txt",
+      "role": "parent_ssb",
+      "velocity_km_s": [
+        -0.9654656666704474,
+        3.415260679234545,
+        1.356742857222199
+      ]
+    },
+    {
+      "body": "pluto",
+      "id": "ARIA-SOURCE-PLUTO-PARENT_SSB-24",
+      "jd_tdb": 2487704.5,
+      "position_km": [
+        5989156091.129074,
+        4165515104.336084,
+        -504510151.6679261
+      ],
+      "raw_file": "raw/pluto-parent_ssb.txt",
+      "role": "parent_ssb",
+      "velocity_km_s": [
+        -1.634613191846294,
+        3.019631009561822,
+        1.434900181278917
+      ]
+    },
+    {
+      "body": "pluto",
+      "id": "ARIA-SOURCE-PLUTO-PARENT_SSB-25",
+      "jd_tdb": 2488433.5,
+      "position_km": [
+        5882194677.885803,
+        4352864388.412848,
+        -413813018.6503875
+      ],
+      "raw_file": "raw/pluto-parent_ssb.txt",
+      "role": "parent_ssb",
+      "velocity_km_s": [
+        -1.761240935994937,
+        2.928761950568847,
+        1.44469909219862
+      ]
+    },
+    {
+      "body": "pluto",
+      "id": "ARIA-SOURCE-PLUTO-EARTH_SSB-01",
+      "jd_tdb": 2415021.5,
+      "position_km": [
+        -31538986.00753607,
+        132588917.6104717,
+        57502116.54168395
+      ],
+      "raw_file": "raw/pluto-earth_ssb.txt",
+      "role": "earth_ssb",
+      "velocity_km_s": [
+        -29.58732723625573,
+        -6.045044774989735,
+        -2.623964530560301
+      ]
+    },
+    {
+      "body": "pluto",
+      "id": "ARIA-SOURCE-PLUTO-EARTH_SSB-02",
+      "jd_tdb": 2419339.8529412,
+      "position_km": [
+        118756022.9938427,
+        82300793.31224626,
+        35710899.41547236
+      ],
+      "raw_file": "raw/pluto-earth_ssb.txt",
+      "role": "earth_ssb",
+      "velocity_km_s": [
+        -18.44904281126849,
+        21.71076801352308,
+        9.417531242267923
+      ]
+    },
+    {
+      "body": "pluto",
+      "id": "ARIA-SOURCE-PLUTO-EARTH_SSB-03",
+      "jd_tdb": 2423658.2058824,
+      "position_km": [
+        136141350.0800922,
+        -61288296.46054569,
+        -26614509.48221126
+      ],
+      "raw_file": "raw/pluto-earth_ssb.txt",
+      "role": "earth_ssb",
+      "velocity_km_s": [
+        12.79425512661434,
+        24.35146342583021,
+        10.56427942329882
+      ]
+    },
+    {
+      "body": "pluto",
+      "id": "ARIA-SOURCE-PLUTO-EARTH_SSB-04",
+      "jd_tdb": 2427976.5588235,
+      "position_km": [
+        4367141.35142257,
+        -138842110.5388625,
+        -60224131.13220195
+      ],
+      "raw_file": "raw/pluto-earth_ssb.txt",
+      "role": "earth_ssb",
+      "velocity_km_s": [
+        29.27939339794531,
+        0.6402420745969418,
+        0.2777336436067375
+      ]
+    },
+    {
+      "body": "pluto",
+      "id": "ARIA-SOURCE-PLUTO-EARTH_SSB-05",
+      "jd_tdb": 2432294.9117647,
+      "position_km": [
+        -130176164.0186222,
+        -67151754.05458906,
+        -29150762.61941426
+      ],
+      "raw_file": "raw/pluto-earth_ssb.txt",
+      "role": "earth_ssb",
+      "velocity_km_s": [
+        14.06451477510995,
+        -23.9486681022544,
+        -10.38687835953761
+      ]
+    },
+    {
+      "body": "pluto",
+      "id": "ARIA-SOURCE-PLUTO-EARTH_SSB-06",
+      "jd_tdb": 2436613.2647059,
+      "position_km": [
+        -120076418.9087866,
+        78957038.61102456,
+        34207763.4791554
+      ],
+      "raw_file": "raw/pluto-earth_ssb.txt",
+      "role": "earth_ssb",
+      "velocity_km_s": [
+        -17.62691121608429,
+        -22.45872872810242,
+        -9.738277139079754
+      ]
+    },
+    {
+      "body": "pluto",
+      "id": "ARIA-SOURCE-PLUTO-EARTH_SSB-07",
+      "jd_tdb": 2440931.6176471,
+      "position_km": [
+        28445518.49725509,
+        133149735.5541617,
+        57729911.1818481
+      ],
+      "raw_file": "raw/pluto-earth_ssb.txt",
+      "role": "earth_ssb",
+      "velocity_km_s": [
+        -29.73015646230678,
+        5.08602099193338,
+        2.205325678870342
+      ]
+    },
+    {
+      "body": "pluto",
+      "id": "ARIA-SOURCE-PLUTO-EARTH_SSB-08",
+      "jd_tdb": 2445249.9705882,
+      "position_km": [
+        145944270.7571321,
+        34456876.77718964,
+        14900537.03014257
+      ],
+      "raw_file": "raw/pluto-earth_ssb.txt",
+      "role": "earth_ssb",
+      "velocity_km_s": [
+        -7.747040419044357,
+        26.40992005243042,
+        11.45039127225688
+      ]
+    },
+    {
+      "body": "pluto",
+      "id": "ARIA-SOURCE-PLUTO-EARTH_SSB-09",
+      "jd_tdb": 2449568.3235294,
+      "position_km": [
+        100201915.7526633,
+        -103638290.2019144,
+        -44936773.39995441
+      ],
+      "raw_file": "raw/pluto-earth_ssb.txt",
+      "role": "earth_ssb",
+      "velocity_km_s": [
+        21.89159493375257,
+        17.94541899956232,
+        7.781716923155003
+      ]
+    },
+    {
+      "body": "pluto",
+      "id": "ARIA-SOURCE-PLUTO-EARTH_SSB-10",
+      "jd_tdb": 2451545.0,
+      "position_km": [
+        -27566740.48281145,
+        132361381.1535491,
+        57418653.28625385
+      ],
+      "raw_file": "raw/pluto-earth_ssb.txt",
+      "role": "earth_ssb",
+      "velocity_km_s": [
+        -29.78494749851088,
+        -5.029753814928081,
+        -2.180645069035755
+      ]
+    },
+    {
+      "body": "pluto",
+      "id": "ARIA-SOURCE-PLUTO-EARTH_SSB-11",
+      "jd_tdb": 2453886.6764706,
+      "position_km": [
+        -52584832.14385001,
+        -129921711.2815261,
+        -56344667.91741737
+      ],
+      "raw_file": "raw/pluto-earth_ssb.txt",
+      "role": "earth_ssb",
+      "velocity_km_s": [
+        27.4236563196577,
+        -9.65683224688865,
+        -4.186108134885535
+      ]
+    },
+    {
+      "body": "pluto",
+      "id": "ARIA-SOURCE-PLUTO-EARTH_SSB-12",
+      "jd_tdb": 2456293.46,
+      "position_km": [
+        -27020394.40249634,
+        132364025.6106565,
+        57375676.92857306
+      ],
+      "raw_file": "raw/pluto-earth_ssb.txt",
+      "role": "earth_ssb",
+      "velocity_km_s": [
+        -29.75600919380578,
+        -5.079978456169241,
+        -2.202417560004436
+      ]
+    },
+    {
+      "body": "pluto",
+      "id": "ARIA-SOURCE-PLUTO-EARTH_SSB-13",
+      "jd_tdb": 2456293.5,
+      "position_km": [
+        -27123224.62462221,
+        132346436.2823378,
+        57368051.08251196
+      ],
+      "raw_file": "raw/pluto-earth_ssb.txt",
+      "role": "earth_ssb",
+      "velocity_km_s": [
+        -29.75221878666964,
+        -5.099030661996421,
+        -2.210687660725179
+      ]
+    },
+    {
+      "body": "pluto",
+      "id": "ARIA-SOURCE-PLUTO-EARTH_SSB-14",
+      "jd_tdb": 2456293.54,
+      "position_km": [
+        -27226041.72262036,
+        132328781.1128745,
+        57360396.65637963
+      ],
+      "raw_file": "raw/pluto-earth_ssb.txt",
+      "role": "earth_ssb",
+      "velocity_km_s": [
+        -29.74841421202463,
+        -5.118080969754996,
+        -2.218956952651847
+      ]
+    },
+    {
+      "body": "pluto",
+      "id": "ARIA-SOURCE-PLUTO-EARTH_SSB-15",
+      "jd_tdb": 2458205.0294118,
+      "position_km": [
+        -148110773.9233871,
+        -14717636.96594637,
+        -6396962.981107187
+      ],
+      "raw_file": "raw/pluto-earth_ssb.txt",
+      "role": "earth_ssb",
+      "velocity_km_s": [
+        2.910756447342771,
+        -27.23949423998644,
+        -11.80937515559736
+      ]
+    },
+    {
+      "body": "pluto",
+      "id": "ARIA-SOURCE-PLUTO-EARTH_SSB-16",
+      "jd_tdb": 2461041.5,
+      "position_km": [
+        -26531002.41556548,
+        132064399.5462592,
+        57268703.37495859
+      ],
+      "raw_file": "raw/pluto-earth_ssb.txt",
+      "role": "earth_ssb",
+      "velocity_km_s": [
+        -29.77650610770464,
+        -4.950768712267514,
+        -2.146229769311948
+      ]
+    },
+    {
+      "body": "pluto",
+      "id": "ARIA-SOURCE-PLUTO-EARTH_SSB-17",
+      "jd_tdb": 2462523.3823529,
+      "position_km": [
+        -76755777.5016085,
+        115277705.8893004,
+        49976976.40163088
+      ],
+      "raw_file": "raw/pluto-earth_ssb.txt",
+      "role": "earth_ssb",
+      "velocity_km_s": [
+        -25.89450155276489,
+        -14.34979899070555,
+        -6.219467003728118
+      ]
+    },
+    {
+      "body": "pluto",
+      "id": "ARIA-SOURCE-PLUTO-EARTH_SSB-18",
+      "jd_tdb": 2466841.7352941,
+      "position_km": [
+        84225192.4139384,
+        112514224.5171628,
+        48737182.5133945
+      ],
+      "raw_file": "raw/pluto-earth_ssb.txt",
+      "role": "earth_ssb",
+      "velocity_km_s": [
+        -25.09249707524045,
+        15.33071569073868,
+        6.646230261357222
+      ]
+    },
+    {
+      "body": "pluto",
+      "id": "ARIA-SOURCE-PLUTO-EARTH_SSB-19",
+      "jd_tdb": 2469807.5,
+      "position_km": [
+        -25552989.89163721,
+        132440488.0438156,
+        57404342.4245562
+      ],
+      "raw_file": "raw/pluto-earth_ssb.txt",
+      "role": "earth_ssb",
+      "velocity_km_s": [
+        -29.80297244737971,
+        -4.880549291210277,
+        -2.114264436207796
+      ]
+    },
+    {
+      "body": "pluto",
+      "id": "ARIA-SOURCE-PLUTO-EARTH_SSB-20",
+      "jd_tdb": 2471160.0882353,
+      "position_km": [
+        149024123.5509408,
+        -20021024.69606626,
+        -8675611.511137813
+      ],
+      "raw_file": "raw/pluto-earth_ssb.txt",
+      "role": "earth_ssb",
+      "velocity_km_s": [
+        3.913435225636611,
+        26.94551466551435,
+        11.67751278175865
+      ]
+    },
+    {
+      "body": "pluto",
+      "id": "ARIA-SOURCE-PLUTO-EARTH_SSB-21",
+      "jd_tdb": 2475478.4411765,
+      "position_km": [
+        51127898.71285021,
+        -131613273.399333,
+        -57056936.89874396
+      ],
+      "raw_file": "raw/pluto-earth_ssb.txt",
+      "role": "earth_ssb",
+      "velocity_km_s": [
+        27.62263450262693,
+        8.938795814202395,
+        3.87328955277113
+      ]
+    },
+    {
+      "body": "pluto",
+      "id": "ARIA-SOURCE-PLUTO-EARTH_SSB-22",
+      "jd_tdb": 2479796.7941176,
+      "position_km": [
+        -101804145.9532272,
+        -100999533.982403,
+        -43785559.43231408
+      ],
+      "raw_file": "raw/pluto-earth_ssb.txt",
+      "role": "earth_ssb",
+      "velocity_km_s": [
+        21.38172099833365,
+        -18.63151112612213,
+        -8.072769000080571
+      ]
+    },
+    {
+      "body": "pluto",
+      "id": "ARIA-SOURCE-PLUTO-EARTH_SSB-23",
+      "jd_tdb": 2484115.1470588,
+      "position_km": [
+        -141807256.2833002,
+        38607237.75507747,
+        16730859.67914209
+      ],
+      "raw_file": "raw/pluto-earth_ssb.txt",
+      "role": "earth_ssb",
+      "velocity_km_s": [
+        -8.93632322040076,
+        -26.30750462812401,
+        -11.39972983779206
+      ]
+    },
+    {
+      "body": "pluto",
+      "id": "ARIA-SOURCE-PLUTO-EARTH_SSB-24",
+      "jd_tdb": 2487704.5,
+      "position_km": [
+        -22983624.98002377,
+        132879292.4097494,
+        57537406.17856967
+      ],
+      "raw_file": "raw/pluto-earth_ssb.txt",
+      "role": "earth_ssb",
+      "velocity_km_s": [
+        -29.8562799510103,
+        -4.600447107397916,
+        -1.993887919976477
+      ]
+    },
+    {
+      "body": "pluto",
+      "id": "ARIA-SOURCE-PLUTO-EARTH_SSB-25",
+      "jd_tdb": 2488433.5,
+      "position_km": [
+        -19228494.65650783,
+        134241044.8339282,
+        58125043.84027151
+      ],
+      "raw_file": "raw/pluto-earth_ssb.txt",
+      "role": "earth_ssb",
+      "velocity_km_s": [
+        -30.00805071028902,
+        -3.867423641549157,
+        -1.675615391876243
+      ]
+    },
+    {
+      "body": "pluto",
+      "id": "ARIA-SOURCE-PLUTO-CENTRE_SSB-01",
+      "jd_tdb": 2415021.5,
+      "position_km": [
+        1540582275.236559,
+        6662253467.451868,
+        1614448806.867755
+      ],
+      "raw_file": "raw/pluto-centre_ssb.txt",
+      "role": "centre_ssb",
+      "velocity_km_s": [
+        -3.742621725760437,
+        -0.0647013899039543,
+        1.123136545570567
+      ]
+    },
+    {
+      "body": "pluto",
+      "id": "ARIA-SOURCE-PLUTO-CENTRE_SSB-02",
+      "jd_tdb": 2419339.8529412,
+      "position_km": [
+        110442417.6232792,
+        6449703569.18035,
+        1979017740.475223
+      ],
+      "raw_file": "raw/pluto-centre_ssb.txt",
+      "role": "centre_ssb",
+      "velocity_km_s": [
+        -3.860819802433239,
+        -1.0593305844515,
+        0.8366678179792886
+      ]
+    },
+    {
+      "body": "pluto",
+      "id": "ARIA-SOURCE-PLUTO-CENTRE_SSB-03",
+      "jd_tdb": 2423658.2058824,
+      "position_km": [
+        -1324342818.798998,
+        5849340547.296578,
+        2223989150.894028
+      ],
+      "raw_file": "raw/pluto-centre_ssb.txt",
+      "role": "centre_ssb",
+      "velocity_km_s": [
+        -3.751351799373932,
+        -2.13912345382629,
+        0.4537018383381184
+      ]
+    },
+    {
+      "body": "pluto",
+      "id": "ARIA-SOURCE-PLUTO-CENTRE_SSB-04",
+      "jd_tdb": 2427976.5588235,
+      "position_km": [
+        -2662565076.740868,
+        4837210117.19538,
+        2311388743.76672
+      ],
+      "raw_file": "raw/pluto-centre_ssb.txt",
+      "role": "centre_ssb",
+      "velocity_km_s": [
+        -3.33328848633965,
+        -3.266480638176832,
+        -0.03408833399083357
+      ]
+    },
+    {
+      "body": "pluto",
+      "id": "ARIA-SOURCE-PLUTO-CENTRE_SSB-05",
+      "jd_tdb": 2432294.9117647,
+      "position_km": [
+        -3767375501.716829,
+        3411874596.601576,
+        2199537638.545429
+      ],
+      "raw_file": "raw/pluto-centre_ssb.txt",
+      "role": "centre_ssb",
+      "velocity_km_s": [
+        -2.495396591507153,
+        -4.348574168750116,
+        -0.6279334010589773
+      ]
+    },
+    {
+      "body": "pluto",
+      "id": "ARIA-SOURCE-PLUTO-CENTRE_SSB-06",
+      "jd_tdb": 2436613.2647059,
+      "position_km": [
+        -4458874226.792945,
+        1623149088.595651,
+        1849778798.844555
+      ],
+      "raw_file": "raw/pluto-centre_ssb.txt",
+      "role": "centre_ssb",
+      "velocity_km_s": [
+        -1.121866405934799,
+        -5.188575529574623,
+        -1.30009153728024
+      ]
+    },
+    {
+      "body": "pluto",
+      "id": "ARIA-SOURCE-PLUTO-CENTRE_SSB-07",
+      "jd_tdb": 2440931.6176471,
+      "position_km": [
+        -4528654915.494959,
+        -379998989.2737048,
+        1245787462.556787
+      ],
+      "raw_file": "raw/pluto-centre_ssb.txt",
+      "role": "centre_ssb",
+      "velocity_km_s": [
+        0.8038055506002189,
+        -5.444255511735659,
+        -1.95007259473273
+      ]
+    },
+    {
+      "body": "pluto",
+      "id": "ARIA-SOURCE-PLUTO-CENTRE_SSB-08",
+      "jd_tdb": 2445249.9705882,
+      "position_km": [
+        -3813818820.116861,
+        -2305586023.395316,
+        429560214.4180557
+      ],
+      "raw_file": "raw/pluto-centre_ssb.txt",
+      "role": "centre_ssb",
+      "velocity_km_s": [
+        2.989083791155922,
+        -4.725524638371139,
+        -2.371239868960471
+      ]
+    },
+    {
+      "body": "pluto",
+      "id": "ARIA-SOURCE-PLUTO-CENTRE_SSB-09",
+      "jd_tdb": 2449568.3235294,
+      "position_km": [
+        -2337790879.258475,
+        -3764005146.82631,
+        -470267476.4197087
+      ],
+      "raw_file": "raw/pluto-centre_ssb.txt",
+      "role": "centre_ssb",
+      "velocity_km_s": [
+        4.756866273630698,
+        -2.977847762329316,
+        -2.346762701694067
+      ]
+    },
+    {
+      "body": "pluto",
+      "id": "ARIA-SOURCE-PLUTO-CENTRE_SSB-10",
+      "jd_tdb": 2451545.0,
+      "position_km": [
+        -1478398629.112175,
+        -4185974175.189133,
+        -860876296.3905871
+      ],
+      "raw_file": "raw/pluto-centre_ssb.txt",
+      "role": "centre_ssb",
+      "velocity_km_s": [
+        5.269162848777873,
+        -1.951462958684585,
+        -2.209300654621625
+      ]
+    },
+    {
+      "body": "pluto",
+      "id": "ARIA-SOURCE-PLUTO-CENTRE_SSB-11",
+      "jd_tdb": 2453886.6764706,
+      "position_km": [
+        -383330598.1595545,
+        -4460230087.330681,
+        -1276404484.102616
+      ],
+      "raw_file": "raw/pluto-centre_ssb.txt",
+      "role": "centre_ssb",
+      "velocity_km_s": [
+        5.511101501563079,
+        -0.7536956808309669,
+        -1.873331813179372
+      ]
+    },
+    {
+      "body": "pluto",
+      "id": "ARIA-SOURCE-PLUTO-CENTRE_SSB-12",
+      "jd_tdb": 2456293.46,
+      "position_km": [
+        764092768.6845814,
+        -4493295877.161059,
+        -1632439364.457202
+      ],
+      "raw_file": "raw/pluto-centre_ssb.txt",
+      "role": "centre_ssb",
+      "velocity_km_s": [
+        5.45250695228779,
+        0.3963418670341757,
+        -1.515586456555179
+      ]
+    },
+    {
+      "body": "pluto",
+      "id": "ARIA-SOURCE-PLUTO-CENTRE_SSB-13",
+      "jd_tdb": 2456293.5,
+      "position_km": [
+        764111612.6339474,
+        -4493294507.045888,
+        -1632444600.697352
+      ],
+      "raw_file": "raw/pluto-centre_ssb.txt",
+      "role": "centre_ssb",
+      "velocity_km_s": [
+        5.452560917490172,
+        0.3965529683650323,
+        -1.514646237503731
+      ]
+    },
+    {
+      "body": "pluto",
+      "id": "ARIA-SOURCE-PLUTO-CENTRE_SSB-14",
+      "jd_tdb": 2456293.54,
+      "position_km": [
+        764130456.8173423,
+        -4493293136.158695,
+        -1632449833.700637
+      ],
+      "raw_file": "raw/pluto-centre_ssb.txt",
+      "role": "centre_ssb",
+      "velocity_km_s": [
+        5.452642367487568,
+        0.3967885856001269,
+        -1.513713510599444
+      ]
+    },
+    {
+      "body": "pluto",
+      "id": "ARIA-SOURCE-PLUTO-CENTRE_SSB-15",
+      "jd_tdb": 2458205.0294118,
+      "position_km": [
+        1651242006.93972,
+        -4356366709.870289,
+        -1857001125.74863
+      ],
+      "raw_file": "raw/pluto-centre_ssb.txt",
+      "role": "centre_ssb",
+      "velocity_km_s": [
+        5.253838220527189,
+        1.234759924574366,
+        -1.176017111351847
+      ]
+    },
+    {
+      "body": "pluto",
+      "id": "ARIA-SOURCE-PLUTO-CENTRE_SSB-16",
+      "jd_tdb": 2461041.5,
+      "position_km": [
+        2875995747.967938,
+        -3928583411.898222,
+        -2092518216.488585
+      ],
+      "raw_file": "raw/pluto-centre_ssb.txt",
+      "role": "centre_ssb",
+      "velocity_km_s": [
+        4.724608857272093,
+        2.23361544864304,
+        -0.7118325238118415
+      ]
+    },
+    {
+      "body": "pluto",
+      "id": "ARIA-SOURCE-PLUTO-CENTRE_SSB-17",
+      "jd_tdb": 2462523.3823529,
+      "position_km": [
+        3457455050.491367,
+        -3617162010.496924,
+        -2170524376.910901
+      ],
+      "raw_file": "raw/pluto-centre_ssb.txt",
+      "role": "centre_ssb",
+      "velocity_km_s": [
+        4.378459990212794,
+        2.647901820122508,
+        -0.4790803405226869
+      ]
+    },
+    {
+      "body": "pluto",
+      "id": "ARIA-SOURCE-PLUTO-CENTRE_SSB-18",
+      "jd_tdb": 2466841.7352941,
+      "position_km": [
+        4878448447.235394,
+        -2462346866.835532,
+        -2238279361.855606
+      ],
+      "raw_file": "raw/pluto-centre_ssb.txt",
+      "role": "centre_ssb",
+      "velocity_km_s": [
+        3.25021013136414,
+        3.48802467241469,
+        0.1106893050376129
+      ]
+    },
+    {
+      "body": "pluto",
+      "id": "ARIA-SOURCE-PLUTO-CENTRE_SSB-19",
+      "jd_tdb": 2469807.5,
+      "position_km": [
+        5603301280.51013,
+        -1529161599.302465,
+        -2165454801.684319
+      ],
+      "raw_file": "raw/pluto-centre_ssb.txt",
+      "role": "centre_ssb",
+      "velocity_km_s": [
+        2.420125262342681,
+        3.772108509803844,
+        0.4270746429843867
+      ]
+    },
+    {
+      "body": "pluto",
+      "id": "ARIA-SOURCE-PLUTO-CENTRE_SSB-20",
+      "jd_tdb": 2471160.0882353,
+      "position_km": [
+        5865550545.155817,
+        -1082162651.931242,
+        -2104969741.760742
+      ],
+      "raw_file": "raw/pluto-centre_ssb.txt",
+      "role": "centre_ssb",
+      "velocity_km_s": [
+        2.079340743596022,
+        3.876922546468899,
+        0.572016554202925
+      ]
+    },
+    {
+      "body": "pluto",
+      "id": "ARIA-SOURCE-PLUTO-CENTRE_SSB-21",
+      "jd_tdb": 2475478.4411765,
+      "position_km": [
+        6425609208.112171,
+        380420539.9382828,
+        -1817274085.821653
+      ],
+      "raw_file": "raw/pluto-centre_ssb.txt",
+      "role": "centre_ssb",
+      "velocity_km_s": [
+        0.962789163355329,
+        3.936385931836357,
+        0.9179097205877441
+      ]
+    },
+    {
+      "body": "pluto",
+      "id": "ARIA-SOURCE-PLUTO-CENTRE_SSB-22",
+      "jd_tdb": 2479796.7941176,
+      "position_km": [
+        6588987501.691305,
+        1821724908.922455,
+        -1416697962.045635
+      ],
+      "raw_file": "raw/pluto-centre_ssb.txt",
+      "role": "centre_ssb",
+      "velocity_km_s": [
+        -0.06026942105999392,
+        3.757759492138461,
+        1.168045912054419
+      ]
+    },
+    {
+      "body": "pluto",
+      "id": "ARIA-SOURCE-PLUTO-CENTRE_SSB-23",
+      "jd_tdb": 2484115.1470588,
+      "position_km": [
+        6394287078.52994,
+        3165423939.003315,
+        -938691546.172791
+      ],
+      "raw_file": "raw/pluto-centre_ssb.txt",
+      "role": "centre_ssb",
+      "velocity_km_s": [
+        -0.975497188617968,
+        3.403137496440105,
+        1.338269300698646
+      ]
+    },
+    {
+      "body": "pluto",
+      "id": "ARIA-SOURCE-PLUTO-CENTRE_SSB-24",
+      "jd_tdb": 2487704.5,
+      "position_km": [
+        5989157570.556908,
+        4165516350.267112,
+        -504511048.3221231
+      ],
+      "raw_file": "raw/pluto-centre_ssb.txt",
+      "role": "centre_ssb",
+      "velocity_km_s": [
+        -1.640490359214754,
+        3.010877034798893,
+        1.413044275409358
+      ]
+    },
+    {
+      "body": "pluto",
+      "id": "ARIA-SOURCE-PLUTO-CENTRE_SSB-25",
+      "jd_tdb": 2488433.5,
+      "position_km": [
+        5882195277.015032,
+        4352864643.537611,
+        -413815048.3524354
+      ],
+      "raw_file": "raw/pluto-centre_ssb.txt",
+      "role": "centre_ssb",
+      "velocity_km_s": [
+        -1.777723146725317,
+        2.912349395100778,
+        1.437773756238181
+      ]
+    }
+  ],
+  "dataset_id": "aria-jpl-model-decomposition-horizons-v1",
+  "model_matching_claim": false,
+  "numerical_commercial_qualification": false,
+  "purpose": "Algebraic attribution of WP5.2 geocentric vector differences, including Horizons path consistency",
+  "refresh_policy": "new version and separate review only",
+  "responses": [
+    {
+      "body": "jupiter",
+      "center_id": 399,
+      "raw_file": "raw/jupiter-parent_geo.txt",
+      "raw_sha256": "4207ff59bd28aef993575ffd2a476a8a97d8f576535c326a6bf8d2fd2e588b31",
+      "reference_parameters": {
+        "CENTER": "'500@399'",
+        "COMMAND": "'5'",
+        "CSV_FORMAT": "YES",
+        "EPHEM_TYPE": "VECTORS",
+        "MAKE_EPHEM": "YES",
+        "OBJ_DATA": "NO",
+        "OUT_UNITS": "KM-S",
+        "REF_PLANE": "FRAME",
+        "REF_SYSTEM": "'ICRF'",
+        "TIME_TYPE": "TDB",
+        "TLIST": "'2415021.5000000' '2419339.8529412' '2423658.2058824' '2427976.5588235' '2432294.9117647' '2436613.2647059' '2440931.6176471' '2445249.9705882' '2449568.3235294' '2450464.4600000' '2450464.5000000' '2450464.5400000' '2451545.0000000' '2453886.6764706' '2458205.0294118' '2461041.5000000' '2462523.3823529' '2466841.7352941' '2469807.5000000' '2471160.0882353' '2475478.4411765' '2479796.7941176' '2484115.1470588' '2487704.5000000' '2488433.5000000'",
+        "TLIST_TYPE": "'JD'",
+        "VEC_CORR": "NONE",
+        "VEC_LABELS": "NO",
+        "VEC_TABLE": "2",
+        "format": "json"
+      },
+      "reference_url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=json&COMMAND=%275%27&OBJ_DATA=NO&MAKE_EPHEM=YES&CENTER=%27500%40399%27&REF_SYSTEM=%27ICRF%27&TLIST_TYPE=%27JD%27&TLIST=%272415021.5000000%27+%272419339.8529412%27+%272423658.2058824%27+%272427976.5588235%27+%272432294.9117647%27+%272436613.2647059%27+%272440931.6176471%27+%272445249.9705882%27+%272449568.3235294%27+%272450464.4600000%27+%272450464.5000000%27+%272450464.5400000%27+%272451545.0000000%27+%272453886.6764706%27+%272458205.0294118%27+%272461041.5000000%27+%272462523.3823529%27+%272466841.7352941%27+%272469807.5000000%27+%272471160.0882353%27+%272475478.4411765%27+%272479796.7941176%27+%272484115.1470588%27+%272487704.5000000%27+%272488433.5000000%27&CSV_FORMAT=YES&EPHEM_TYPE=VECTORS&TIME_TYPE=TDB&REF_PLANE=FRAME&VEC_TABLE=2&VEC_LABELS=NO&VEC_CORR=NONE&OUT_UNITS=KM-S",
+      "response_signature": {
+        "source": "NASA/JPL Horizons API",
+        "version": "1.2"
+      },
+      "role": "parent_geo",
+      "rows": 25,
+      "source_header": {
+        "centre": "Center body name: Earth (399)                     {source: DE441}",
+        "source_solution_labels": "DE441",
+        "target": "Target body name: Jupiter Barycenter (5)          {source: DE441}"
+      },
+      "target_id": 5
+    },
+    {
+      "body": "jupiter",
+      "center_id": 0,
+      "raw_file": "raw/jupiter-parent_ssb.txt",
+      "raw_sha256": "16947009781437815efd29e8993552addb2b6fe71686c41044bcdda6a47946ba",
+      "reference_parameters": {
+        "CENTER": "'500@0'",
+        "COMMAND": "'5'",
+        "CSV_FORMAT": "YES",
+        "EPHEM_TYPE": "VECTORS",
+        "MAKE_EPHEM": "YES",
+        "OBJ_DATA": "NO",
+        "OUT_UNITS": "KM-S",
+        "REF_PLANE": "FRAME",
+        "REF_SYSTEM": "'ICRF'",
+        "TIME_TYPE": "TDB",
+        "TLIST": "'2415021.5000000' '2419339.8529412' '2423658.2058824' '2427976.5588235' '2432294.9117647' '2436613.2647059' '2440931.6176471' '2445249.9705882' '2449568.3235294' '2450464.4600000' '2450464.5000000' '2450464.5400000' '2451545.0000000' '2453886.6764706' '2458205.0294118' '2461041.5000000' '2462523.3823529' '2466841.7352941' '2469807.5000000' '2471160.0882353' '2475478.4411765' '2479796.7941176' '2484115.1470588' '2487704.5000000' '2488433.5000000'",
+        "TLIST_TYPE": "'JD'",
+        "VEC_CORR": "NONE",
+        "VEC_LABELS": "NO",
+        "VEC_TABLE": "2",
+        "format": "json"
+      },
+      "reference_url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=json&COMMAND=%275%27&OBJ_DATA=NO&MAKE_EPHEM=YES&CENTER=%27500%400%27&REF_SYSTEM=%27ICRF%27&TLIST_TYPE=%27JD%27&TLIST=%272415021.5000000%27+%272419339.8529412%27+%272423658.2058824%27+%272427976.5588235%27+%272432294.9117647%27+%272436613.2647059%27+%272440931.6176471%27+%272445249.9705882%27+%272449568.3235294%27+%272450464.4600000%27+%272450464.5000000%27+%272450464.5400000%27+%272451545.0000000%27+%272453886.6764706%27+%272458205.0294118%27+%272461041.5000000%27+%272462523.3823529%27+%272466841.7352941%27+%272469807.5000000%27+%272471160.0882353%27+%272475478.4411765%27+%272479796.7941176%27+%272484115.1470588%27+%272487704.5000000%27+%272488433.5000000%27&CSV_FORMAT=YES&EPHEM_TYPE=VECTORS&TIME_TYPE=TDB&REF_PLANE=FRAME&VEC_TABLE=2&VEC_LABELS=NO&VEC_CORR=NONE&OUT_UNITS=KM-S",
+      "response_signature": {
+        "source": "NASA/JPL Horizons API",
+        "version": "1.2"
+      },
+      "role": "parent_ssb",
+      "rows": 25,
+      "source_header": {
+        "centre": "Center body name: Solar System Barycenter (0)     {source: DE441}",
+        "source_solution_labels": "DE441",
+        "target": "Target body name: Jupiter Barycenter (5)          {source: DE441}"
+      },
+      "target_id": 5
+    },
+    {
+      "body": "jupiter",
+      "center_id": 0,
+      "raw_file": "raw/jupiter-earth_ssb.txt",
+      "raw_sha256": "b06774a7c5d420e87ee31a16f25d322cb5e2907426830e2bea2bb98002827866",
+      "reference_parameters": {
+        "CENTER": "'500@0'",
+        "COMMAND": "'399'",
+        "CSV_FORMAT": "YES",
+        "EPHEM_TYPE": "VECTORS",
+        "MAKE_EPHEM": "YES",
+        "OBJ_DATA": "NO",
+        "OUT_UNITS": "KM-S",
+        "REF_PLANE": "FRAME",
+        "REF_SYSTEM": "'ICRF'",
+        "TIME_TYPE": "TDB",
+        "TLIST": "'2415021.5000000' '2419339.8529412' '2423658.2058824' '2427976.5588235' '2432294.9117647' '2436613.2647059' '2440931.6176471' '2445249.9705882' '2449568.3235294' '2450464.4600000' '2450464.5000000' '2450464.5400000' '2451545.0000000' '2453886.6764706' '2458205.0294118' '2461041.5000000' '2462523.3823529' '2466841.7352941' '2469807.5000000' '2471160.0882353' '2475478.4411765' '2479796.7941176' '2484115.1470588' '2487704.5000000' '2488433.5000000'",
+        "TLIST_TYPE": "'JD'",
+        "VEC_CORR": "NONE",
+        "VEC_LABELS": "NO",
+        "VEC_TABLE": "2",
+        "format": "json"
+      },
+      "reference_url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=json&COMMAND=%27399%27&OBJ_DATA=NO&MAKE_EPHEM=YES&CENTER=%27500%400%27&REF_SYSTEM=%27ICRF%27&TLIST_TYPE=%27JD%27&TLIST=%272415021.5000000%27+%272419339.8529412%27+%272423658.2058824%27+%272427976.5588235%27+%272432294.9117647%27+%272436613.2647059%27+%272440931.6176471%27+%272445249.9705882%27+%272449568.3235294%27+%272450464.4600000%27+%272450464.5000000%27+%272450464.5400000%27+%272451545.0000000%27+%272453886.6764706%27+%272458205.0294118%27+%272461041.5000000%27+%272462523.3823529%27+%272466841.7352941%27+%272469807.5000000%27+%272471160.0882353%27+%272475478.4411765%27+%272479796.7941176%27+%272484115.1470588%27+%272487704.5000000%27+%272488433.5000000%27&CSV_FORMAT=YES&EPHEM_TYPE=VECTORS&TIME_TYPE=TDB&REF_PLANE=FRAME&VEC_TABLE=2&VEC_LABELS=NO&VEC_CORR=NONE&OUT_UNITS=KM-S",
+      "response_signature": {
+        "source": "NASA/JPL Horizons API",
+        "version": "1.2"
+      },
+      "role": "earth_ssb",
+      "rows": 25,
+      "source_header": {
+        "centre": "Center body name: Solar System Barycenter (0)     {source: DE441}",
+        "source_solution_labels": "DE441",
+        "target": "Target body name: Earth (399)                     {source: DE441}"
+      },
+      "target_id": 399
+    },
+    {
+      "body": "jupiter",
+      "center_id": 0,
+      "raw_file": "raw/jupiter-centre_ssb.txt",
+      "raw_sha256": "91e45556391f5ce9e780cb8fd6bf63a93b48e7c7a9249c22298b65dea270767a",
+      "reference_parameters": {
+        "CENTER": "'500@0'",
+        "COMMAND": "'599'",
+        "CSV_FORMAT": "YES",
+        "EPHEM_TYPE": "VECTORS",
+        "MAKE_EPHEM": "YES",
+        "OBJ_DATA": "NO",
+        "OUT_UNITS": "KM-S",
+        "REF_PLANE": "FRAME",
+        "REF_SYSTEM": "'ICRF'",
+        "TIME_TYPE": "TDB",
+        "TLIST": "'2415021.5000000' '2419339.8529412' '2423658.2058824' '2427976.5588235' '2432294.9117647' '2436613.2647059' '2440931.6176471' '2445249.9705882' '2449568.3235294' '2450464.4600000' '2450464.5000000' '2450464.5400000' '2451545.0000000' '2453886.6764706' '2458205.0294118' '2461041.5000000' '2462523.3823529' '2466841.7352941' '2469807.5000000' '2471160.0882353' '2475478.4411765' '2479796.7941176' '2484115.1470588' '2487704.5000000' '2488433.5000000'",
+        "TLIST_TYPE": "'JD'",
+        "VEC_CORR": "NONE",
+        "VEC_LABELS": "NO",
+        "VEC_TABLE": "2",
+        "format": "json"
+      },
+      "reference_url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=json&COMMAND=%27599%27&OBJ_DATA=NO&MAKE_EPHEM=YES&CENTER=%27500%400%27&REF_SYSTEM=%27ICRF%27&TLIST_TYPE=%27JD%27&TLIST=%272415021.5000000%27+%272419339.8529412%27+%272423658.2058824%27+%272427976.5588235%27+%272432294.9117647%27+%272436613.2647059%27+%272440931.6176471%27+%272445249.9705882%27+%272449568.3235294%27+%272450464.4600000%27+%272450464.5000000%27+%272450464.5400000%27+%272451545.0000000%27+%272453886.6764706%27+%272458205.0294118%27+%272461041.5000000%27+%272462523.3823529%27+%272466841.7352941%27+%272469807.5000000%27+%272471160.0882353%27+%272475478.4411765%27+%272479796.7941176%27+%272484115.1470588%27+%272487704.5000000%27+%272488433.5000000%27&CSV_FORMAT=YES&EPHEM_TYPE=VECTORS&TIME_TYPE=TDB&REF_PLANE=FRAME&VEC_TABLE=2&VEC_LABELS=NO&VEC_CORR=NONE&OUT_UNITS=KM-S",
+      "response_signature": {
+        "source": "NASA/JPL Horizons API",
+        "version": "1.2"
+      },
+      "role": "centre_ssb",
+      "rows": 25,
+      "source_header": {
+        "centre": "Center body name: Solar System Barycenter (0)     {source: DE441}",
+        "source_solution_labels": "DE441, jup365_merged",
+        "target": "Target body name: Jupiter (599)                   {source: jup365_merged}"
+      },
+      "target_id": 599
+    },
+    {
+      "body": "pluto",
+      "center_id": 399,
+      "raw_file": "raw/pluto-parent_geo.txt",
+      "raw_sha256": "6a6433738cbeb293a82b7383015e69c2eb40a752a54320cc4bc465df718f207e",
+      "reference_parameters": {
+        "CENTER": "'500@399'",
+        "COMMAND": "'9'",
+        "CSV_FORMAT": "YES",
+        "EPHEM_TYPE": "VECTORS",
+        "MAKE_EPHEM": "YES",
+        "OBJ_DATA": "NO",
+        "OUT_UNITS": "KM-S",
+        "REF_PLANE": "FRAME",
+        "REF_SYSTEM": "'ICRF'",
+        "TIME_TYPE": "TDB",
+        "TLIST": "'2415021.5000000' '2419339.8529412' '2423658.2058824' '2427976.5588235' '2432294.9117647' '2436613.2647059' '2440931.6176471' '2445249.9705882' '2449568.3235294' '2451545.0000000' '2453886.6764706' '2456293.4600000' '2456293.5000000' '2456293.5400000' '2458205.0294118' '2461041.5000000' '2462523.3823529' '2466841.7352941' '2469807.5000000' '2471160.0882353' '2475478.4411765' '2479796.7941176' '2484115.1470588' '2487704.5000000' '2488433.5000000'",
+        "TLIST_TYPE": "'JD'",
+        "VEC_CORR": "NONE",
+        "VEC_LABELS": "NO",
+        "VEC_TABLE": "2",
+        "format": "json"
+      },
+      "reference_url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=json&COMMAND=%279%27&OBJ_DATA=NO&MAKE_EPHEM=YES&CENTER=%27500%40399%27&REF_SYSTEM=%27ICRF%27&TLIST_TYPE=%27JD%27&TLIST=%272415021.5000000%27+%272419339.8529412%27+%272423658.2058824%27+%272427976.5588235%27+%272432294.9117647%27+%272436613.2647059%27+%272440931.6176471%27+%272445249.9705882%27+%272449568.3235294%27+%272451545.0000000%27+%272453886.6764706%27+%272456293.4600000%27+%272456293.5000000%27+%272456293.5400000%27+%272458205.0294118%27+%272461041.5000000%27+%272462523.3823529%27+%272466841.7352941%27+%272469807.5000000%27+%272471160.0882353%27+%272475478.4411765%27+%272479796.7941176%27+%272484115.1470588%27+%272487704.5000000%27+%272488433.5000000%27&CSV_FORMAT=YES&EPHEM_TYPE=VECTORS&TIME_TYPE=TDB&REF_PLANE=FRAME&VEC_TABLE=2&VEC_LABELS=NO&VEC_CORR=NONE&OUT_UNITS=KM-S",
+      "response_signature": {
+        "source": "NASA/JPL Horizons API",
+        "version": "1.2"
+      },
+      "role": "parent_geo",
+      "rows": 25,
+      "source_header": {
+        "centre": "Center body name: Earth (399)                     {source: DE441}",
+        "source_solution_labels": "DE441",
+        "target": "Target body name: Pluto Barycenter (9)            {source: DE441}"
+      },
+      "target_id": 9
+    },
+    {
+      "body": "pluto",
+      "center_id": 0,
+      "raw_file": "raw/pluto-parent_ssb.txt",
+      "raw_sha256": "e65524ff6b7e62e96e2b3567decd9ae5c18b38fc6469649eb22a2fc4d7e50ad7",
+      "reference_parameters": {
+        "CENTER": "'500@0'",
+        "COMMAND": "'9'",
+        "CSV_FORMAT": "YES",
+        "EPHEM_TYPE": "VECTORS",
+        "MAKE_EPHEM": "YES",
+        "OBJ_DATA": "NO",
+        "OUT_UNITS": "KM-S",
+        "REF_PLANE": "FRAME",
+        "REF_SYSTEM": "'ICRF'",
+        "TIME_TYPE": "TDB",
+        "TLIST": "'2415021.5000000' '2419339.8529412' '2423658.2058824' '2427976.5588235' '2432294.9117647' '2436613.2647059' '2440931.6176471' '2445249.9705882' '2449568.3235294' '2451545.0000000' '2453886.6764706' '2456293.4600000' '2456293.5000000' '2456293.5400000' '2458205.0294118' '2461041.5000000' '2462523.3823529' '2466841.7352941' '2469807.5000000' '2471160.0882353' '2475478.4411765' '2479796.7941176' '2484115.1470588' '2487704.5000000' '2488433.5000000'",
+        "TLIST_TYPE": "'JD'",
+        "VEC_CORR": "NONE",
+        "VEC_LABELS": "NO",
+        "VEC_TABLE": "2",
+        "format": "json"
+      },
+      "reference_url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=json&COMMAND=%279%27&OBJ_DATA=NO&MAKE_EPHEM=YES&CENTER=%27500%400%27&REF_SYSTEM=%27ICRF%27&TLIST_TYPE=%27JD%27&TLIST=%272415021.5000000%27+%272419339.8529412%27+%272423658.2058824%27+%272427976.5588235%27+%272432294.9117647%27+%272436613.2647059%27+%272440931.6176471%27+%272445249.9705882%27+%272449568.3235294%27+%272451545.0000000%27+%272453886.6764706%27+%272456293.4600000%27+%272456293.5000000%27+%272456293.5400000%27+%272458205.0294118%27+%272461041.5000000%27+%272462523.3823529%27+%272466841.7352941%27+%272469807.5000000%27+%272471160.0882353%27+%272475478.4411765%27+%272479796.7941176%27+%272484115.1470588%27+%272487704.5000000%27+%272488433.5000000%27&CSV_FORMAT=YES&EPHEM_TYPE=VECTORS&TIME_TYPE=TDB&REF_PLANE=FRAME&VEC_TABLE=2&VEC_LABELS=NO&VEC_CORR=NONE&OUT_UNITS=KM-S",
+      "response_signature": {
+        "source": "NASA/JPL Horizons API",
+        "version": "1.2"
+      },
+      "role": "parent_ssb",
+      "rows": 25,
+      "source_header": {
+        "centre": "Center body name: Solar System Barycenter (0)     {source: DE441}",
+        "source_solution_labels": "DE441",
+        "target": "Target body name: Pluto Barycenter (9)            {source: DE441}"
+      },
+      "target_id": 9
+    },
+    {
+      "body": "pluto",
+      "center_id": 0,
+      "raw_file": "raw/pluto-earth_ssb.txt",
+      "raw_sha256": "9fe2a389fa31655a3987c27f0e7cade40209d8a3a7c060249f78f7d3c6a64c26",
+      "reference_parameters": {
+        "CENTER": "'500@0'",
+        "COMMAND": "'399'",
+        "CSV_FORMAT": "YES",
+        "EPHEM_TYPE": "VECTORS",
+        "MAKE_EPHEM": "YES",
+        "OBJ_DATA": "NO",
+        "OUT_UNITS": "KM-S",
+        "REF_PLANE": "FRAME",
+        "REF_SYSTEM": "'ICRF'",
+        "TIME_TYPE": "TDB",
+        "TLIST": "'2415021.5000000' '2419339.8529412' '2423658.2058824' '2427976.5588235' '2432294.9117647' '2436613.2647059' '2440931.6176471' '2445249.9705882' '2449568.3235294' '2451545.0000000' '2453886.6764706' '2456293.4600000' '2456293.5000000' '2456293.5400000' '2458205.0294118' '2461041.5000000' '2462523.3823529' '2466841.7352941' '2469807.5000000' '2471160.0882353' '2475478.4411765' '2479796.7941176' '2484115.1470588' '2487704.5000000' '2488433.5000000'",
+        "TLIST_TYPE": "'JD'",
+        "VEC_CORR": "NONE",
+        "VEC_LABELS": "NO",
+        "VEC_TABLE": "2",
+        "format": "json"
+      },
+      "reference_url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=json&COMMAND=%27399%27&OBJ_DATA=NO&MAKE_EPHEM=YES&CENTER=%27500%400%27&REF_SYSTEM=%27ICRF%27&TLIST_TYPE=%27JD%27&TLIST=%272415021.5000000%27+%272419339.8529412%27+%272423658.2058824%27+%272427976.5588235%27+%272432294.9117647%27+%272436613.2647059%27+%272440931.6176471%27+%272445249.9705882%27+%272449568.3235294%27+%272451545.0000000%27+%272453886.6764706%27+%272456293.4600000%27+%272456293.5000000%27+%272456293.5400000%27+%272458205.0294118%27+%272461041.5000000%27+%272462523.3823529%27+%272466841.7352941%27+%272469807.5000000%27+%272471160.0882353%27+%272475478.4411765%27+%272479796.7941176%27+%272484115.1470588%27+%272487704.5000000%27+%272488433.5000000%27&CSV_FORMAT=YES&EPHEM_TYPE=VECTORS&TIME_TYPE=TDB&REF_PLANE=FRAME&VEC_TABLE=2&VEC_LABELS=NO&VEC_CORR=NONE&OUT_UNITS=KM-S",
+      "response_signature": {
+        "source": "NASA/JPL Horizons API",
+        "version": "1.2"
+      },
+      "role": "earth_ssb",
+      "rows": 25,
+      "source_header": {
+        "centre": "Center body name: Solar System Barycenter (0)     {source: DE441}",
+        "source_solution_labels": "DE441",
+        "target": "Target body name: Earth (399)                     {source: DE441}"
+      },
+      "target_id": 399
+    },
+    {
+      "body": "pluto",
+      "center_id": 0,
+      "raw_file": "raw/pluto-centre_ssb.txt",
+      "raw_sha256": "b5c0ebbfff6e1bb8b22af654fc7e4c29e18efc163ae1582888e7ff242c7379c9",
+      "reference_parameters": {
+        "CENTER": "'500@0'",
+        "COMMAND": "'999'",
+        "CSV_FORMAT": "YES",
+        "EPHEM_TYPE": "VECTORS",
+        "MAKE_EPHEM": "YES",
+        "OBJ_DATA": "NO",
+        "OUT_UNITS": "KM-S",
+        "REF_PLANE": "FRAME",
+        "REF_SYSTEM": "'ICRF'",
+        "TIME_TYPE": "TDB",
+        "TLIST": "'2415021.5000000' '2419339.8529412' '2423658.2058824' '2427976.5588235' '2432294.9117647' '2436613.2647059' '2440931.6176471' '2445249.9705882' '2449568.3235294' '2451545.0000000' '2453886.6764706' '2456293.4600000' '2456293.5000000' '2456293.5400000' '2458205.0294118' '2461041.5000000' '2462523.3823529' '2466841.7352941' '2469807.5000000' '2471160.0882353' '2475478.4411765' '2479796.7941176' '2484115.1470588' '2487704.5000000' '2488433.5000000'",
+        "TLIST_TYPE": "'JD'",
+        "VEC_CORR": "NONE",
+        "VEC_LABELS": "NO",
+        "VEC_TABLE": "2",
+        "format": "json"
+      },
+      "reference_url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=json&COMMAND=%27999%27&OBJ_DATA=NO&MAKE_EPHEM=YES&CENTER=%27500%400%27&REF_SYSTEM=%27ICRF%27&TLIST_TYPE=%27JD%27&TLIST=%272415021.5000000%27+%272419339.8529412%27+%272423658.2058824%27+%272427976.5588235%27+%272432294.9117647%27+%272436613.2647059%27+%272440931.6176471%27+%272445249.9705882%27+%272449568.3235294%27+%272451545.0000000%27+%272453886.6764706%27+%272456293.4600000%27+%272456293.5000000%27+%272456293.5400000%27+%272458205.0294118%27+%272461041.5000000%27+%272462523.3823529%27+%272466841.7352941%27+%272469807.5000000%27+%272471160.0882353%27+%272475478.4411765%27+%272479796.7941176%27+%272484115.1470588%27+%272487704.5000000%27+%272488433.5000000%27&CSV_FORMAT=YES&EPHEM_TYPE=VECTORS&TIME_TYPE=TDB&REF_PLANE=FRAME&VEC_TABLE=2&VEC_LABELS=NO&VEC_CORR=NONE&OUT_UNITS=KM-S",
+      "response_signature": {
+        "source": "NASA/JPL Horizons API",
+        "version": "1.2"
+      },
+      "role": "centre_ssb",
+      "rows": 25,
+      "source_header": {
+        "centre": "Center body name: Solar System Barycenter (0)     {source: DE441}",
+        "source_solution_labels": "DE441, plu060_merged",
+        "target": "Target body name: Pluto (999)                     {source: plu060_merged}"
+      },
+      "target_id": 999
+    }
+  ],
+  "sample_count": 200,
+  "schema_version": 1,
+  "scope": "Jupiter and Pluto; 25 TDB JDs each; parent vs Earth, parent vs SSB, Earth vs SSB, centre vs SSB"
+}
