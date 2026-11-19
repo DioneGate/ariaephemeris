@@ -27,6 +27,10 @@ def main(argv: list[str] | None = None) -> int:
     for name in ("dataset-info", "positions", "batch", "chart", "aspects", "events"):
         p = sub.add_parser(name)
         p.add_argument("--kernel", required=True)
+        p.add_argument(
+            "--centre-kernel", action="append", default=[], metavar="BODY=FILE",
+            help="Explicit original JPL satellite source for planet-centres-v1 (repeat per body)",
+        )
         if name != "dataset-info":
             p.add_argument("--request", required=True, help="JSON file path, or - for stdin")
     args = parser.parse_args(argv)
@@ -39,7 +43,15 @@ def main(argv: list[str] | None = None) -> int:
                 request = json.loads(
                     sys.stdin.read() if args.request == "-" else Path(args.request).read_text()
                 )
-            with Ephemeris(args.kernel) as engine:
+            centre_kernels: dict[str, Path] = {}
+            for item in args.centre_kernel:
+                if "=" not in item:
+                    raise AriaError("INVALID_REQUEST", "--centre-kernel expects BODY=FILE")
+                body, name = item.split("=", 1)
+                if not body or not name or body in centre_kernels:
+                    raise AriaError("INVALID_REQUEST", "Invalid or repeated --centre-kernel")
+                centre_kernels[body] = Path(name)
+            with Ephemeris(args.kernel, centre_kernels=centre_kernels or None) as engine:
                 if args.command == "dataset-info":
                     output = engine.dataset_info()
                 elif args.command == "positions":
