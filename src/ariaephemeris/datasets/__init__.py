@@ -7,9 +7,9 @@ import json
 import os
 import tempfile
 import urllib.request
+from collections.abc import Mapping
 from importlib.resources import files
 from pathlib import Path
-from collections.abc import Mapping
 from typing import Any
 
 from ..errors import AriaError
