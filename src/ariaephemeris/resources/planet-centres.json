@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "dataset_id": "aria-physical-planet-centres-sources-v1",
+  "base_dataset_id": "aria-de442-reference-v1",
+  "base_sha256": "54d97562a5b094d298b1b8eafa5a2e17e3e010ce85e1a366d07f003ad159323c",
+  "qualified_interval_jd_tdb": [
+    2415020.499988426,
+    2488434.500011574
+  ],
+  "source_evidence": "https://github.com/DioneGate/ariaephemeris/actions/runs/44410508647",
+  "qualification": "MD5/SHA-256 source identity, binary segment coverage and same-source CSPICE evaluator agreement only; no released chart accuracy claim",
+  "sources": {
+    "mars": {
+      "target_id": 499,
+      "centre_id": 4,
+      "filename": "mar099.bsp",
+      "size_bytes": 1227574272,
+      "sha256": "9991e57b196bae1a096acc6e2afc6718102ee420d684695de0f0333064c046bc",
+      "source_url": "https://naif.jpl.nasa.gov/pub/naif/generic_kernels/spk/satellites/mar099.bsp"
+    },
+    "jupiter": {
+      "target_id": 599,
+      "centre_id": 5,
+      "filename": "jup349.bsp",
+      "size_bytes": 97525760,
+      "sha256": "a8f682fd0f156db47ee9672e0276f0842eb70d3ade8533fed59e38b6d5032971",
+      "source_url": "https://naif.jpl.nasa.gov/pub/naif/generic_kernels/spk/satellites/jup349.bsp"
+    },
+    "saturn": {
+      "target_id": 699,
+      "centre_id": 6,
+      "filename": "sat456.bsp",
+      "size_bytes": 120824832,
+      "sha256": "55ea388b1e60e0a8f11fdc12e53a245d653e3f1cbf6f7886209c7d5281f6f811",
+      "source_url": "https://naif.jpl.nasa.gov/pub/naif/generic_kernels/spk/satellites/sat456.bsp"
+    },
+    "uranus": {
+      "target_id": 799,
+      "centre_id": 7,
+      "filename": "ura184_part-3.bsp",
+      "size_bytes": 386885632,
+      "sha256": "273cd4ccc470d1098562cd4e94fa48fc2b4c6b1c2896308e473c949b87937c53",
+      "source_url": "https://naif.jpl.nasa.gov/pub/naif/generic_kernels/spk/satellites/ura184_part-3.bsp"
+    },
+    "neptune": {
+      "target_id": 899,
+      "centre_id": 8,
+      "filename": "nep105.bsp",
+      "size_bytes": 210456576,
+      "sha256": "be2ea8cd16658c957e803c7896731c81ad1a8afe2caca6fbf87d7b68bc4392c7",
+      "source_url": "https://naif.jpl.nasa.gov/pub/naif/generic_kernels/spk/satellites/nep105.bsp"
+    },
+    "pluto": {
+      "target_id": 999,
+      "centre_id": 9,
+      "filename": "plu060.bsp",
+      "size_bytes": 135207936,
+      "sha256": "dfbb102491a26ed41ae08ca3f8963f22f0219df1d8f265ab87b9ad825a826fc6",
+      "source_url": "https://naif.jpl.nasa.gov/pub/naif/generic_kernels/spk/satellites/plu060.bsp"
+    }
+  }
+}
