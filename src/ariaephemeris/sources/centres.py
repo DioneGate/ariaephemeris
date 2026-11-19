@@ -63,7 +63,9 @@ class PhysicalCentreKernel:
                     segment.load_array()  # Only the direct centre records; safe concurrent reads.
                     chosen.append(segment)
                 if not chosen:
-                    raise AriaError("DATA_INTEGRITY_ERROR", f"{body}: no direct {target}/{parent} offset")
+                    raise AriaError(
+                        "DATA_INTEGRITY_ERROR", f"{body}: no direct {target}/{parent} offset"
+                    )
                 # Inspect all direct segment spans; avoid eager-loading unrelated satellite data.
                 lo, hi = interval
                 cursor = lo
@@ -83,7 +85,9 @@ class PhysicalCentreKernel:
             raise
         except Exception as error:
             self.close()
-            raise AriaError("DATA_INTEGRITY_ERROR", f"Cannot initialise centre SPK: {error}") from error
+            raise AriaError(
+                "DATA_INTEGRITY_ERROR", f"Cannot initialise centre SPK: {error}"
+            ) from error
 
     def state(
         self, target: int, jd1: Any, jd2: Any = 0.0, visited: frozenset[int] = frozenset()
