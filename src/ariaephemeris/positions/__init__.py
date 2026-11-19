@@ -11,6 +11,7 @@ from ..errors import AriaError
 from ..frames import AU_KM, observer_state, rotation, spherical
 from ..models import BODY_IDS, Observer
 from ..sources import Kernel
+from ..sources.centres import PhysicalCentreKernel
 from ..time import ResolvedTime
 
 C_KM_DAY = 299792.458 * 86400
@@ -19,17 +20,18 @@ DEFLECTORS = ((10, 1.0, 1e-6), (5, 1 / 1047.348631, 3e-9), (6, 1 / 3497.901801, 
 
 
 def vectors(
-    kernel: Kernel,
+    kernel: Kernel | PhysicalCentreKernel,
     body: str,
     times: list[ResolvedTime],
     origin: str,
     mode: str,
     observer: Observer | None,
     strict: bool,
+    target_id: int | None = None,
 ) -> tuple[Any, Any, list[str]]:
     t1 = np.array([t.tdb1 for t in times])
     t2 = np.array([t.tdb2 for t in times])
-    target = BODY_IDS[body]
+    target = BODY_IDS[body] if target_id is None else target_id
     if origin in ("geocentric", "topocentric"):
         op, ov = kernel.state(399, t1, t2)
     elif origin == "heliocentric":
@@ -71,7 +73,7 @@ def vectors(
     unit = (ray / distance).T
     # Bodies at closest approach along the finite source-observer light ray.
     for bid, mass, limit in DEFLECTORS:
-        if target == bid:
+        if target == bid or (bid in (5, 6) and target == bid * 100 + 99):
             continue
         bp, _ = kernel.state(bid, t1, t2)
         travel = np.sum((bp - op).T * unit, axis=1) / C_KM_DAY
@@ -106,8 +108,9 @@ def coordinates(
     frame: str,
     observer: Observer | None,
     strict: bool,
+    target_id: int | None = None,
 ) -> tuple[Any, Any, Any, Any, Any, Any, list[str]]:
-    v, vel, notes = vectors(kernel, body, times, origin, mode, observer, strict)
+    v, vel, notes = vectors(kernel, body, times, origin, mode, observer, strict, target_id)
     tt1 = np.array([t.tt1 for t in times])
     tt2 = np.array([t.tt2 for t in times])
     r = rotation(frame, tt1, tt2)
