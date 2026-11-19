@@ -47,9 +47,7 @@ class SyntheticCentreEngine:
         phase = (sum(request.time.jd) - 2451545.0) * 10 - 4
         return SimpleNamespace(
             bodies=(
-                SimpleNamespace(
-                    longitude_deg=phase % 360, longitude_rate_deg_day=10
-                ),
+                SimpleNamespace(longitude_deg=phase % 360, longitude_rate_deg_day=10),
                 SimpleNamespace(longitude_deg=0, longitude_rate_deg_day=0),
             )
         )
