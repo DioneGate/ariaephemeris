@@ -8,7 +8,7 @@ AI contributors must first follow the repository [AGENTS.md](../../AGENTS.md).
 
 | ID | Roadmap | Progress and evidence | Current focus |
 | --- | --- | --- | --- |
-| RM-001 | [Engine development and commercial application readiness](001-engine-development/README.md) | [Progress](001-engine-development/progress.md) | All eight parent phases remain Planned. Physical centre engine WP4 and WP5.1/5.2 external comparison are merged; [RM-001/006 Jupiter/Pluto source-model attribution](001-engine-development/p1-jpl-source-reconciliation.md) shows millimetre-matched centre offsets and kilometres of DE441/DE442s planetary barycentre model differences, on [draft PR #11](https://github.com/DioneGate/ariaephemeris/pull/11). Absolute accuracy, other planets, packaging and release gates open. |
+| RM-001 | [Engine development and commercial application readiness](001-engine-development/README.md) | [Progress](001-engine-development/progress.md) | Eight parent phases remain Planned. WP4 physical-centre profile and [WP5.1–5.3 independent reference, source and model attribution](001-engine-development/p1-jpl-source-reconciliation.md) are merged. [WP5.4 tropical longitude/latitude/signed rate comparison](001-engine-development/p1-wp54-tropical-coordinate-qualification.md): 186 independently sourced chart cases on [draft PR #12](https://github.com/DioneGate/ariaephemeris/pull/12); scientific event timing, source uncertainty and release acceptance still open. |
 
 This register is for discovery. Each roadmap's README owns phase status; its
 progress log owns implementation evidence; its prompt register owns prompt status.
