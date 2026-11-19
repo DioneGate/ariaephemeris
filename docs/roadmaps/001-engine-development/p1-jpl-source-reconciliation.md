@@ -96,6 +96,12 @@ Recommended **separate release gates** before claiming commercial-grade numerica
 - Validate stations, zodiac ingresses, oppositions/conjunctions, closest approaches and both sides of kernel segment boundaries, with explicit timing error and conditioning.
 - Retain the existing `reference` profile regression; do not silently change the production kernel or model default.
 
+## Executed verification
+
+The dedicated [JPL source-integrity workflow #44481431375](https://github.com/DioneGate/ariaephemeris/actions/runs/44481431375) **passed** its immutable-reference and parser checks. The [real-kernel source-attribution workflow #44481431478](https://github.com/DioneGate/ariaephemeris/actions/runs/44481431478) **passed**, independently reacquiring **no** Horizons data, hash-verifying the separately archived vectors, and reproducing the full 50-case report **byte-for-byte** from the pinned Jupiter, Pluto and DE442s binaries. The [project fast CI #44481431302](https://github.com/DioneGate/ariaephemeris/actions/runs/44481431302) **passed** source formatting, typing, offline source audit, non-kernel pytest, build and package smoke tests. The separate longer baseline kernel qualification is a distinct workflow, not a claimed WP5.3 physical model accuracy test.
+
+These passing results establish a **reproducible quantitative attribution**. They do not transform the model-to-model differences into absolute physical accuracy limits.
+
 ## Status and files
 
 The source-model analysis was implemented on [draft PR #11](https://github.com/DioneGate/ariaephemeris/pull/11), separate from `main`; it changes **source-reconciliation tools, tests, datasets, numerical evidence and documentation only**, not Aria engine runtime or Aria Galaxy. The user requested reconciliation but did **not** separately authorise a merge or production source change. The PR therefore remains **In review / unmerged** until authorised.
