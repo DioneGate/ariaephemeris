@@ -7,7 +7,7 @@
 | Baseline | Aria Ephemeris `main` at `e8b0642f694be3869fdd0fb41dc70cd90881b8ec` (WP4 PR #6 merged) |
 | Branch | `feature/rm-001-004-independent-horizons-fixtures-20261119` |
 | Review | [PR #7](https://github.com/DioneGate/ariaephemeris/pull/7) |
-| Implementation status | In review until verified merge; source dataset downloaded, validation gates to be recorded |
+| Implementation status | **Done** — [PR #7](https://github.com/DioneGate/ariaephemeris/pull/7) merged to main at `fa8e5b7a4a71d01999f712da7b25cbeb711e5510`; reference acquisition only |
 
 ## Objective and expected behaviour
 
@@ -44,10 +44,10 @@ Horizons' current source labels may differ from Aria's chosen JPL files. Differe
 - [x] Independent source specification and bounded 25-epoch/body policy implemented.
 - [x] Real Horizons acquisition produces exactly **300** parsed records across six bodies and two modes.
 - [x] Original Horizons responses retained with SHA-256 and source-solution names.
-- [ ] Offline integrity validator checks all 12 source bytes and all 300 structured rows on final PR head.
-- [ ] Python project fast CI, audit and nonkernel tests pass on final PR head.
-- [ ] Repository progress/prompt indexes updated with source identity, model differences and no numerical accuracy claim.
-- [ ] Owner-authorised merge of PR #7 verified in main; only then mark this bounded prompt Done.
+- [x] Offline integrity validator checked all 12 source bytes and all 300 structured rows on final PR head ([passing CI #44474930652](https://github.com/DioneGate/ariaephemeris/actions/runs/44474930652)).
+- [x] Fast CI including Ruff, mypy, audit, nonkernel tests, build and package smoke [passed #44474930651](https://github.com/DioneGate/ariaephemeris/actions/runs/44474930651).
+- [x] Repository report/progress/prompt indexes record source identity, model differences and no numerical accuracy claim.
+- [x] Owner-authorised merge [PR #7](https://github.com/DioneGate/ariaephemeris/pull/7) verified in main at [merge commit `fa8e5b7`](https://github.com/DioneGate/ariaephemeris/commit/fa8e5b7a4a71d01999f712da7b25cbeb711e5510).
 
 ## Files and reproducibility
 
@@ -62,4 +62,4 @@ Re-run the **offline** integrity check with `python tools/datasets/verify_horizo
 
 ## Delivery record
 
-See the [progress log](../progress.md) for the actual CI and merge SHA. A passing reference acquisition is a prerequisite for WP5.2, not a measurement of Aria's chart errors.
+[PR #7](https://github.com/DioneGate/ariaephemeris/pull/7) merged successfully at [`fa8e5b7`](https://github.com/DioneGate/ariaephemeris/commit/fa8e5b7a4a71d01999f712da7b25cbeb711e5510) after the required offline integrity and fast checks passed. See the [progress log](../progress.md) for details. A passing reference acquisition is a prerequisite for WP5.2, not a measurement of Aria's chart errors.
