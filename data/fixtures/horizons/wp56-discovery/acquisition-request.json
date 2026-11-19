@@ -1,0 +1,6 @@
+{
+  "specification_commit": "09593cf21efffa8c7c0079b9eeb4014f3cf49cdd",
+  "authority": "Owner authorised RM-001/009 implementation, testing and merge on 2026-11-19",
+  "request": "Capture predeclared independent grids once, verify original source, run complete real-kernel comparison",
+  "attempt": 1
+}
