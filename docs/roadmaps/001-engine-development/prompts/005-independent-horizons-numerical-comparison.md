@@ -7,7 +7,7 @@
 | Main baseline | After WP5.1 [PR #7](https://github.com/DioneGate/ariaephemeris/pull/7) and roadmap [PR #8](https://github.com/DioneGate/ariaephemeris/pull/8) merged |
 | Implementation branch | `feature/rm-001-005-horizons-numerical-comparison-20261119` |
 | Review PR | [#9](https://github.com/DioneGate/ariaephemeris/pull/9) |
-| Prompt status | **In progress** until complete comparison, CI, review and verified merge |
+| Prompt status | **Done — bounded comparison implemented, verified and merged**; independent physical-model accuracy remains unqualified |
 
 ## Objective
 
@@ -42,12 +42,12 @@ The first WP5.2 increment is comparison and diagnosis. Source-model reconciliati
 
 ## Acceptance checklist
 
-- [ ] 300 frozen original-source samples independently verified and all evaluated on six checksum-pinned physical-centre SPKs.
-- [ ] Per-planet geometric position/velocity and inertial apparent angular residuals recorded, including RMS/p95/max and diagnostics for model mismatches.
-- [ ] No source-model discrepancy is silently auto-passed, no physical accuracy or commercial status misrepresented.
-- [ ] Python unit tests, offline fixture integrity, Ruff, mypy, package build and real-kernel comparison CI pass.
-- [ ] Brief measured report with source labels and open validation issues produced.
-- [ ] Owner-authorised PR #9 merge verified in main, delivery/prompt register updated with actual SHA.
+- [x] 300 frozen original-source samples verified and evaluated on six SHA-256-pinned physical-centre SPKs; [complete evidence](../../../validation/wp5-2-horizons-comparison.json).
+- [x] Per-planet geometric positions/velocities and apparent angular residuals recorded with RMS/p95/max and source-model provenance.
+- [x] No source-model discrepancy auto-passed; physical/commercial accuracy explicitly **not qualified**.
+- [x] Frozen reference integrity and real six-kernel comparison produced the complete 300-row report; [fast CI #44478988481](https://github.com/DioneGate/ariaephemeris/actions/runs/44478988481) passed Ruff, mypy, non-kernel tests, build/smoke, and [real-kernel pytest #44478988386](https://github.com/DioneGate/ariaephemeris/actions/runs/44478988386) passed. The same job's slower historic qualification remained in progress at merge; it is not claimed complete.
+- [x] [Measured results](../p1-external-horizons-comparison.md) include all six planets, largest geometric differences and explicit unresolved source-model uncertainty.
+- [x] User-authorised [PR #9 merged](https://github.com/DioneGate/ariaephemeris/pull/9) into main at [`6216f15`](https://github.com/DioneGate/ariaephemeris/commit/6216f15c9bac88bcfa5bf4eeadb444f7730b0ac1); verified main includes the same 300-row evidence blob.
 
 ## Implementation evidence and next step
 
@@ -57,4 +57,4 @@ The first WP5.2 increment is comparison and diagnosis. Source-model reconciliati
 - [Frozen comparison report](../../../validation/wp5-2-horizons-comparison.json), after CI acquisition
 - [WP5.2 findings](../p1-external-horizons-comparison.md), after measured results
 
-Further scientific resolution should test why model/correction differences occur before accepting a threshold for any planet. This is the next bounded validation step, not approval to release.
+**Delivery complete:** [PR #9](https://github.com/DioneGate/ariaephemeris/pull/9) merged at `6216f15`. The bounded comparison is Done; the scientific acceptance gate remains open because reference models differ. Further scientific work must isolate source/correction differences before accepting a threshold for any planet. This is the next bounded validation step, not approval to release.
