@@ -1,0 +1,59 @@
+name: RM-001-006 One-shot Jupiter and Pluto Horizons component acquisition
+
+on:
+  push:
+    branches:
+      - feature/rm-001-006-jpl-source-model-reconciliation-20261119
+    paths:
+      - '.github/workflows/horizons-model-components-acquisition.yml'
+      - 'tools/datasets/acquire_horizons_model_components.py'
+      - 'tools/datasets/verify_horizons_model_components.py'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  source-components:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Acquire missing immutable official Horizons model components
+        run: |
+          set -euo pipefail
+          if [ -f data/fixtures/horizons/model-components/jpl-model-components-v1.json ]; then
+            echo "Frozen dataset already exists; do not requery official Horizons."
+          else
+            python tools/datasets/acquire_horizons_model_components.py \
+              --output-dir data/fixtures/horizons/model-components
+          fi
+      - name: Verify all original source bytes and numerical tables offline
+        run: |
+          python tools/datasets/verify_horizons_model_components.py \
+            --directory data/fixtures/horizons/model-components
+      - name: Freeze original reference responses (no binary SPKs)
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/fixtures/horizons/model-components
+          if git diff --cached --quiet; then
+            echo "No source data changes"
+          else
+            git commit -m "data(RM-001/006): freeze 200 Horizons SSB and geocentric component vectors"
+            git push origin HEAD:feature/rm-001-006-jpl-source-model-reconciliation-20261119
+          fi
+      - name: Retain original reference data as workflow evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: jupiter-pluto-horizons-components
+          path: data/fixtures/horizons/model-components/
+          if-no-files-found: warn
+          retention-days: 60
