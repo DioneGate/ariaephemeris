@@ -32,9 +32,10 @@ def test_physical_centres_opt_in_end_to_end():
 
     t = TimeInput(jd=(2451545.0, 0.0), scale="TT")
     r = PositionRequest(t, bodies=(name,))
-    with Ephemeris(base) as reference, Ephemeris(
-        base, centre_kernels={name: satellite}
-    ) as physical:
+    with (
+        Ephemeris(base) as reference,
+        Ephemeris(base, centre_kernels={name: satellite}) as physical,
+    ):
         regular = reference.positions(r)
         regular_with_satellite = physical.positions(r)
         # Supplying an SPK must never alter the default 'reference' profile.
@@ -50,8 +51,9 @@ def test_physical_centres_opt_in_end_to_end():
         assert result.metadata["profile"] == "planet-centres-v1"
         assert result.metadata["qualification"] == "not-qualified-for-commercial-release"
         assert result.metadata["physical_centre_sources"][name]["source_sha256"]
-        assert result.metadata["physical_centre_sources"][name]["offset_parent_id"] == (
-            CENTRE_IDS[name][1]
+        assert (
+            result.metadata["physical_centre_sources"][name]["offset_parent_id"]
+            == (CENTRE_IDS[name][1])
         )
         raw = physical.raw_state(name, t, profile="planet-centres-v1")
         barycentre = physical.raw_state(name, t)
@@ -59,9 +61,10 @@ def test_physical_centres_opt_in_end_to_end():
         assert barycentre["target_id"] == CENTRE_IDS[name][1]
         assert np.isfinite(raw["position_km"]).all()
         assert np.isfinite(raw["velocity_km_day"]).all()
-        assert np.linalg.norm(
-            np.asarray(raw["position_km"]) - np.asarray(barycentre["position_km"])
-        ) > 0.0
+        assert (
+            np.linalg.norm(np.asarray(raw["position_km"]) - np.asarray(barycentre["position_km"]))
+            > 0.0
+        )
 
         batch = physical.positions_batch(
             request,
@@ -71,9 +74,7 @@ def test_physical_centres_opt_in_end_to_end():
         assert batch[0].metadata == result.metadata
         for sample, time in zip(batch, (t, TimeInput(jd=(2451565.0, 0.0), scale="TT"))):
             scalar = physical.positions(replace(request, time=time))
-            assert [x.target_id for x in sample.bodies] == [
-                x.target_id for x in scalar.bodies
-            ]
+            assert [x.target_id for x in sample.bodies] == [x.target_id for x in scalar.bodies]
             assert [x.longitude_deg for x in sample.bodies] == pytest.approx(
                 [x.longitude_deg for x in scalar.bodies], abs=1e-10
             )
