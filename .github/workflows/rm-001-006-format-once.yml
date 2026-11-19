@@ -1,0 +1,46 @@
+name: RM-001-006 One-shot pinned Ruff formatting (self-removing)
+
+on:
+  push:
+    branches:
+      - feature/rm-001-006-jpl-source-model-reconciliation-20261119
+    paths:
+      - '.github/workflows/rm-001-006-format-once.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  format-and-remove:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Format new sources using pinned project Ruff; remove one-shot workflow
+        run: |
+          set -euo pipefail
+          python -m pip install ruff==0.17.0
+          ruff check --fix \
+            tools/datasets/acquire_horizons_model_components.py \
+            tools/datasets/verify_horizons_model_components.py \
+            tools/datasets/attribute_jpl_source_models.py \
+            tests/unit/test_horizons_source_attribution.py
+          ruff format \
+            tools/datasets/acquire_horizons_model_components.py \
+            tools/datasets/verify_horizons_model_components.py \
+            tools/datasets/attribute_jpl_source_models.py \
+            tests/unit/test_horizons_source_attribution.py
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git rm .github/workflows/rm-001-006-format-once.yml
+          git add tools/datasets/acquire_horizons_model_components.py \
+                  tools/datasets/verify_horizons_model_components.py \
+                  tools/datasets/attribute_jpl_source_models.py \
+                  tests/unit/test_horizons_source_attribution.py
+          git commit -m 'style(RM-001/006): apply pinned Ruff formatting and remove temporary workflow'
+          git push origin HEAD:feature/rm-001-006-jpl-source-model-reconciliation-20261119
