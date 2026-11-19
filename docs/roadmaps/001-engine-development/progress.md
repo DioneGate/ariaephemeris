@@ -104,6 +104,18 @@ Branch: [`docs/rm-001-001-commercial-calculation-contract-20261118`](https://git
 
 **Acceptance boundary:** Jupiter's separately qualified 599/5 and all five WP3 sources establish **six SHA-pinned, compatible physical-centre offset sources** and numerical same-kernel evaluator checks. This does not independently certify their physical model accuracy, differential dynamical model consistency, geocentric apparent horoscope positions, civil-time handling, commercial pack redistribution or Aria Galaxy provider replacement. Production multi-kernel resolver and `planet-centres-v1` calculation profile remain **unimplemented** and require a new, scoped code work package. PR #5 **draft/unmerged**; RM-001/002 **In review** for sources; RM-001-P1 remains **Planned**.
 
+## RM-001/003 — WP4 multi-kernel calculation engine — 2026-11-19
+
+**Owner-approved implementation:** [draft PR #6](https://github.com/DioneGate/ariaephemeris/pull/6) on `feature/rm-001-002-wp4-multi-kernel-centres-20261119` from `main bfe4a636` (the verified merge of [WP3 PR #5](https://github.com/DioneGate/ariaephemeris/commit/bfe4a636356366514a213c63be07cffd48b5a337)). Engine source modified only in Aria Ephemeris; **no Aria Galaxy code, merge, package publication or deployment**.
+
+**Implementation:** Package-pinned SHA-256/size source manifest in `src/ariaephemeris/resources/planet-centres.json`; strict offline verifier `datasets.verify_centre_sources`; new `sources/centres.py` resolver composing **direct physical target offset + DE442s planet system barycentre**, never alternate planetary positions inside the satellite files; `planet-centres-v1` target/profile selection in raw states, scalar/batch positions, chart and events; position-mode light-time evaluated with selected centre targets; self-deflection avoided; physical-profile source hashes/identities and **explicit not-commercially-qualified status** in metadata; new CLI `--centre-kernel BODY=FILE` option and matching JSON schemas. Original v0.1.0 `reference` profile and all default target identities are unchanged.
+
+**Tests:** fail-closed source identity/corruption/coverage/type/frame/partial-installation unit tests, physical event profile and false-certificate safeguards, real-source per-planet scalar/batch/reference parity, geometric/apparent/rate/provenance checks, and combined all-six-loaded ten-body chart and batch CI. Qualification workflows extended, but WP4 does not claim an independently established physical model error budget or commercial app parity.
+
+**Verification and gates:** [Real-source Jupiter workflow](https://github.com/DioneGate/ariaephemeris/actions/runs/44471515305) **passed** and [five-source runtime matrix](https://github.com/DioneGate/ariaephemeris/actions/runs/44471515371) **5/5 passed** on an earlier amended source revision; subsequent tests/documentation were refined. [Full six-source workflow](https://github.com/DioneGate/ariaephemeris/actions/runs/44471769118) runs the all-sources-in-one-instance integration gate; **check its terminal result**, not merely the committed workflow. [Fast checks](https://github.com/DioneGate/ariaephemeris/actions/runs/44471515337) and standard [DE442s regression](https://github.com/DioneGate/ariaephemeris/actions/runs/44471515277) identified formatting/typing and unit assertion issues on earlier commits; those were addressed in subsequent commits, with final CI results to be recorded separately. These early failures are not claimed as passing.
+
+**Open scope:** full-source performance and memory profile, representative independent apparent positions/rates/event fixtures, model-combination compatibility, commercially suitable compact pack/licensing, complete data installation experience, HTTP service and provider-neutral Aria Galaxy migration. WP4 code **In review** until final checks and owner approval; RM-001-P3 and parent P1 still **Planned**. Do not merge/release/deploy without separate authorisation.
+
 ## Delivery log
 
 | Date | Phase/prompt | Change and evidence | Validation | Deployment |
@@ -117,6 +129,8 @@ Branch: [`docs/rm-001-001-commercial-calculation-contract-20261118`](https://git
 
 | 2026-11-18 | RM-001/002 WP3; **source/evaluator gates in review** | Five-source manifest, CSPICE qualification matrix, 5 pinned JSON reports, PR #5 draft | [Pinned matrix #44410508647](https://github.com/DioneGate/ariaephemeris/actions/runs/44410508647) **5/5 pass**; fast CI #44410508459 **passed** | No runtime change, no app change, no merge/release/deployment |
 
+| 2026-11-19 | RM-001/003 WP4 **In review** | Versioned physical-centre runtime profile on [draft PR #6](https://github.com/DioneGate/ariaephemeris/pull/6); source SHA manifests, resolver, CLI/schemas, tests and all-six workflow | Six per-source real-kernel profile tests passed on earlier revision; final CI and all-six workflow tracked in WP4 section | Engine branch only; no app modification, merge or deployment |
+
 Record subsequent increments here with exact phase/prompt ID, branch/PR,
 review/merge evidence, commands/results, remaining gaps and deployed-version
 status. Do not mark work Done until its merge and acceptance are verified.
@@ -124,4 +138,4 @@ The roadmap README owns phase status; this log owns evidence.
 
 ## Next action
 
-Review [draft PR #5](https://github.com/DioneGate/ariaephemeris/pull/5) and the [all-six source evidence](p1-centre-source-feasibility.md). The physical source-binary, coverage and same-source evaluator gates passed; an implementation-ready follow-up can now be scoped for the **production multi-kernel resolver** and named `planet-centres-v1` calculation profile, protecting the existing barycentre default. Separately review JPL model compatibility, compact dataset packaging and modified-kernel attribution before redistribution or commercial release. RM-001-P1 and other broader D02–D14 decisions remain open; no approval to merge PR #5 or deploy is implied.
+Review [WP4 draft PR #6](https://github.com/DioneGate/ariaephemeris/pull/6), [WP4 implementation record](prompts/003-versioned-physical-centre-engine-profile.md) and actual final workflow outcomes. Keep the `reference` default stable, profile source identities pinned and physical-centre numerical qualification explicitly bounded. **Do not merge without separate approval.** After WP4 integration checks, separately plan compact-source packing, independent apparent chart/event fixtures, provider migration and commercial release prerequisites. Outstanding D02–D14 decisions and RM-001-P1/P3 phase gates remain open.
