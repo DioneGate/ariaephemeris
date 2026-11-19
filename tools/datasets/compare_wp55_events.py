@@ -17,7 +17,6 @@ import hashlib
 import json
 import math
 import sys
-from collections import Counter
 from pathlib import Path
 from typing import Any
 
@@ -199,7 +198,6 @@ def compare(
         )
     if len(records) != 22 or len({r["event_id"] for r in records}) != 22:
         raise ValueError("Incomplete independent event-root comparison")
-    kinds = Counter(r["kind"] for r in records)
     per_kind: dict[str, Any] = {}
     for kind in ("station", "ingress", "conjunction", "opposition"):
         selected = [r for r in records if r["kind"] == kind]
