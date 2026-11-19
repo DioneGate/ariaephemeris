@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "status": "candidate-source-sha256-pinned-awaiting-independent-replay",
+  "published_md5_url": "https://naif.jpl.nasa.gov/pub/naif/generic_kernels/spk/satellites/aa_checksums.txt",
+  "source_catalogue": "https://naif.jpl.nasa.gov/pub/naif/generic_kernels/spk/satellites/aa_summaries.txt",
+  "qualification_scope": "Direct physical-centre offsets relative to DE442s planetary barycentres; independent CSPICE evaluator agreement not independent model accuracy",
+  "sources": {
+    "mars": {
+      "source_file": "mar099.bsp",
+      "source_url": "https://naif.jpl.nasa.gov/pub/naif/generic_kernels/spk/satellites/mar099.bsp",
+      "target_id": 499,
+      "centre_id": 4,
+      "published_md5": "46f5740f86ec78b978ab96a82f0e42b7",
+      "observed_sha256_pinned": "9991e57b196bae1a096acc6e2afc6718102ee420d684695de0f0333064c046bc",
+      "composition_base_sha256": "54d97562a5b094d298b1b8eafa5a2e17e3e010ce85e1a366d07f003ad159323c",
+      "sha256_discovered_from": "https://github.com/DioneGate/ariaephemeris/actions/runs/44410136973"
+    },
+    "saturn": {
+      "source_file": "sat456.bsp",
+      "source_url": "https://naif.jpl.nasa.gov/pub/naif/generic_kernels/spk/satellites/sat456.bsp",
+      "target_id": 699,
+      "centre_id": 6,
+      "published_md5": "4c66748ca3209d0e66ff29954ab1ee64",
+      "observed_sha256_pinned": "55ea388b1e60e0a8f11fdc12e53a245d653e3f1cbf6f7886209c7d5281f6f811",
+      "composition_base_sha256": "54d97562a5b094d298b1b8eafa5a2e17e3e010ce85e1a366d07f003ad159323c",
+      "sha256_discovered_from": "https://github.com/DioneGate/ariaephemeris/actions/runs/44410136973"
+    },
+    "uranus": {
+      "source_file": "ura184_part-3.bsp",
+      "source_url": "https://naif.jpl.nasa.gov/pub/naif/generic_kernels/spk/satellites/ura184_part-3.bsp",
+      "target_id": 799,
+      "centre_id": 7,
+      "published_md5": "cf24471fb9037543cdbe168bc0fd4c2e",
+      "observed_sha256_pinned": "273cd4ccc470d1098562cd4e94fa48fc2b4c6b1c2896308e473c949b87937c53",
+      "composition_base_sha256": "54d97562a5b094d298b1b8eafa5a2e17e3e010ce85e1a366d07f003ad159323c",
+      "sha256_discovered_from": "https://github.com/DioneGate/ariaephemeris/actions/runs/44410136973"
+    },
+    "neptune": {
+      "source_file": "nep105.bsp",
+      "source_url": "https://naif.jpl.nasa.gov/pub/naif/generic_kernels/spk/satellites/nep105.bsp",
+      "target_id": 899,
+      "centre_id": 8,
+      "published_md5": "2c32f77dd972c1a7d80e0c57d9cde2e9",
+      "observed_sha256_pinned": "be2ea8cd16658c957e803c7896731c81ad1a8afe2caca6fbf87d7b68bc4392c7",
+      "composition_base_sha256": "54d97562a5b094d298b1b8eafa5a2e17e3e010ce85e1a366d07f003ad159323c",
+      "sha256_discovered_from": "https://github.com/DioneGate/ariaephemeris/actions/runs/44410136973"
+    },
+    "pluto": {
+      "source_file": "plu060.bsp",
+      "source_url": "https://naif.jpl.nasa.gov/pub/naif/generic_kernels/spk/satellites/plu060.bsp",
+      "target_id": 999,
+      "centre_id": 9,
+      "published_md5": "9e8d40339d583273feb94bbf8c95cae4",
+      "observed_sha256_pinned": "dfbb102491a26ed41ae08ca3f8963f22f0219df1d8f265ab87b9ad825a826fc6",
+      "composition_base_sha256": "54d97562a5b094d298b1b8eafa5a2e17e3e010ce85e1a366d07f003ad159323c",
+      "sha256_discovered_from": "https://github.com/DioneGate/ariaephemeris/actions/runs/44410136973"
+    }
+  },
+  "discovered_at_utc": "2026-11-18",
+  "sha256_verification": "First observed in MD5-verified GitHub Actions run #44410136973; requires subsequent runner to verify committed SHA-256"
+}

@@ -8,7 +8,7 @@
 | Baseline | Aria Ephemeris main `df96380ee851e3aeac1962ec6010807342f3b7da` (PR #3 merged; engine still 0.1.0); Aria Galaxy unchanged |
 | Product direction | Physical planet centres for Mars–Pluto, retain original barycentre mode; selected source/kernels and numeric standards require evidence and approval |
 | Working branch | `feature/rm-001-002-centre-source-feasibility-20261118` |
-| Prompt status | **Jupiter WP1/WP2 verified** by pinned-source CI; **Blocked** for remaining five-source and commercial scope gates |
+| Prompt status | **In review** — all six source integrity, binary coverage and same-source CSPICE evaluator gates verified; compact packaging and commercial release gates still open; PR #5 draft/unmerged |
 
 Follow [AGENTS.md](../../../../AGENTS.md) and the [source feasibility evidence](../p1-centre-source-feasibility.md). RM-001/001's separate [PR #3](https://github.com/DioneGate/ariaephemeris/pull/3) has merged into main at `df96380`; this task does not silently accept the outstanding D02–D14 decisions.
 
@@ -23,7 +23,7 @@ Demonstrate that centre-offset SPK segments 499/4, 599/5, 699/6, 799/7, 899/8, a
 - `src/ariaephemeris/datasets/__init__.py`: a single SHA-256-pinned DE442s manifest; no supplementary manifest/resolver.
 - `src/ariaephemeris/positions/__init__.py`: existing correct mode-aware position and light-time pipeline; current actual body targets are declared in `docs/conventions.md`.
 - JPL/NAIF published catalogues, direct centre/parent relationships and nominal `BRIEF` intervals for six candidate files are recorded in [the evidence report](../p1-centre-source-feasibility.md). Published text alone is not a binary segment validation.
-- Local shell cannot resolve JPL domains, but [GitHub Actions](https://github.com/DioneGate/ariaephemeris/actions/runs/44402922404) acquired and checksum-verified JUP349, ran a real-SPK audit and nine-point independent CSPICE evaluator comparison successfully. See [observed evidence](../p1-jupiter-centre-qualification.md). Five other planet-centre kernels remain unqualified.
+- Local shell cannot resolve JPL domains, but [GitHub Actions](https://github.com/DioneGate/ariaephemeris/actions/runs/44402922404) acquired and checksum-verified JUP349, ran a real-SPK audit and nine-point independent CSPICE evaluator comparison successfully. See [observed evidence](../p1-jupiter-centre-qualification.md). The other five planet-centre source/evaluator checks also passed on [pinned WP3 GitHub Actions #44410508647](https://github.com/DioneGate/ariaephemeris/actions/runs/44410508647); [WP3 evidence](../p1-five-centres-qualification.md).
 
 ## Scope and exclusions
 
@@ -52,12 +52,12 @@ Demonstrate that centre-offset SPK segments 499/4, 599/5, 699/6, 799/7, 899/8, a
 
 - [x] Six direct centre targets and suitable JPL **candidate** solutions documented from official catalogue/`BRIEF` summaries.
 - [x] Read-only source probe and kernel-independent contract tests committed.
-- [ ] All six **actual** SPKs downloaded; **Jupiter done**, five others remain; source checksums and SHA-256 must be independently pinned per file.
-- [ ] All six direct segment IDs, types, frames and **continuous binary coverage** verified (**Jupiter complete**, five remaining).
+- [x] All six actual SPK sources downloaded, official MD5 checked and separate-commit SHA-256 pins verified (Jupiter [WP1/WP2](../p1-jupiter-centre-qualification.md), other five [WP3](../p1-five-centres-qualification.md)).
+- [x] All six direct segment IDs, type-2/frame-1 compatibility and continuous 1900–2100 TDB coverage verified from real SPK binaries.
 - [x] Jupiter DE442s + JUP349 centre state and velocity calculated with verified source hashes, [J2000 evidence](../p1-jupiter-centre-qualification.md).
-- [x] Jupiter geometric CSPICE **evaluator comparison** at nine epochs passed initial thresholds ([evidence](../p1-jupiter-centre-qualification.md)); independent physical-model accuracy, other planets and commercial qualification remain separate.
+- [x] All six same-kernel CSPICE evaluator comparisons passed initial limits (Jupiter 9 and other planets 11 epochs each). Independent physical model accuracy and commercial product qualification remain separate.
 - [ ] Compact source packaging/licence design measured, reviewed, documented.
-- [x] Fast CI and Jupiter pinned-source workflow completed successfully; broader six-planet acceptance and application tests remain open.
+- [x] Fast CI, Jupiter pinned-source and all-five WP3 pinned-source workflows passed. Application and production release qualification remain open.
 
 **Exit:** only after observed evidence for all gates; source feasibility by itself does not qualify production planet-centre calculations or close wider RM-001-P1.
 
@@ -72,10 +72,10 @@ Demonstrate that centre-offset SPK segments 499/4, 599/5, 699/6, 799/7, 899/8, a
 
 ### Blocked / not run
 
-- Original local shell DNS failure: **Could not resolve host**. GitHub Actions runner subsequently **downloaded and verified JUP349**; five other planet-centre files remain unavailable/uninspected.
-- Local shell lacked `jplephem`, `spiceypy` and DE442s. The **pinned GitHub workflow** installed them, confirmed two direct Jupiter type-2/frame-1 SPK segments and continuous coverage, verified SHA-256, and passed a nine-epoch CSPICE evaluator comparison. Reproducible actual [results](../p1-jupiter-centre-qualification.md).
+- Original local shell DNS failure: **Could not resolve host**. The separate network-enabled GitHub Actions runners successfully acquired, hash-verified and audited all six planet-centre sources.
+- Local shell lacked numerical dependencies; controlled GitHub runner installed them and passed the [Jupiter](../p1-jupiter-centre-qualification.md) and [five-planet](../p1-five-centres-qualification.md) independent evaluator and source identity checks.
 - Existing numerical qualification and performance claims remain historical, not rerun.
 
 ## Delivery record
 
-This is a separately owner-started implementation increment on `feature/rm-001-002-centre-source-feasibility-20261118`. Deliver in a **draft PR for review** while the actual kernel-source and numerical gates are blocked. Do not merge, publish or deploy without subsequent permission. Update [progress](../progress.md) and the [prompt register](README.md) when the actual CI status and subsequent binary checks become available. Keep RM-001-P1 Planned until its broader dependencies are accepted.
+This is a separately owner-started implementation increment on `feature/rm-001-002-centre-source-feasibility-20261118`. Deliver WP3 in a **draft PR for review** now that all six source/evaluator gates have observed passing evidence; compact pack/licensing and commercial release qualification remain unimplemented. Do not merge, publish or deploy without subsequent permission. Update [progress](../progress.md) and the [prompt register](README.md) when the actual CI status and subsequent binary checks become available. Keep RM-001-P1 Planned until its broader dependencies are accepted. The production multi-kernel resolver requires a separately authorised implementation work package.

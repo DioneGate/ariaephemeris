@@ -1,6 +1,6 @@
 # RM-001-P1 — Candidate commercial launch scope and owner decisions
 
-**Date:** 18 November 2026 · **Decision authority:** Product owner, with engineering evidence · **State of every decision below:** **Open**. This document proposes product choices; no choices were approved by authoring it and no application options have been disabled.
+**Date:** 18 November 2026 · **Decision authority:** Product owner, with engineering evidence · **Current state:** D01's physical-centre product direction was approved by the owner on 18 November 2026; D02–D14 remain **Open**. No new engine profile or application configuration has been implemented.
 
 Cross-references: [complete capability inventory](p1-capability-matrix.md), [proposed numerical contract](p1-calculation-contract.md), [qualification baseline](p1-qualification-baseline.md), [RM-001 roadmap](README.md). Inspected Aria Ephemeris `main` `36a9cec`, Aria Galaxy `main` `4ab5f99`.
 
@@ -32,11 +32,11 @@ An **internal engineering pilot** could compare Sun/Moon/Mercury/Venus, tropical
 
 For a paid launch, the recommended priority is **definitionally correct planetary targets and dependable dates first**, then user-visible default points and controlled service integration; do not spend P5 budget on a Rust rewrite while core identity and contracts remain unresolved.
 
-## Decision register (all Open)
+## Decision register (D01 direction selected; D02–D14 open)
 
 | ID | Question | Recommendation | Alternative(s) | Product / technical impact | Owner | Approval state | Required before |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| D01 | What exactly does "Mars", "Jupiter", "Saturn", "Uranus", "Neptune" or "Pluto" mean in the paid chart? | Use physical planet centres matching current application intent; source and qualify centre data per body | Explicitly market barycentres as separately named research targets, but **never** label them silently as centres | Six core bodies block native parity; requires source, time-range, rate and compare fixtures | Product owner + engine lead | **Open** | P3 centre work / P4 compatibility / P6 |
+| D01 | What should Mars, Jupiter, Saturn, Uranus, Neptune and Pluto mean in the paid chart? | **Owner selected physical planet centres for the intended commercial profile**, preserving the existing barycentre mode separately | Barycentre-only research calculations may remain available but must be explicitly distinguished | All six centre SPK sources passed binary identity/coverage and CSPICE same-source evaluator checks; multi-kernel production calculation, apparent chart and release qualification remain outstanding | Product owner + engine lead | **Product direction approved 2026-11-18; implementation pending** | P3 source integration / P4 compatibility / P6 |
 | D02 | Which of Placidus, Lahiri, nodes, Lilith, Fortune, Vertex and minor bodies must be in the first Aria offering? | Restrict launch to qualified tropical/Equal or Whole Sign unless the current default visible points/setting options are essential and funded | Full existing feature parity in first release; or clearly labelled limited beta | UI disable, saved-chart warnings, customer expectations and scope; defaults **currently show Fortune/Vertex** | Product owner | **Open** | P3 backlog / P4 settings |
 | D03 | What exact civil calendar/date range can a normal user enter? | Approve only after P2 has an observed/modelled EOP and leap/tzdata policy; distinguish TT envelope from birth-date support | Restrict initially to years with pinned, audited UTC data; or expert TT/UT1 research-only workflow | Pre-1972 and beyond 2027-06-28 strict UTC unavailable in v0.1.0; changes user promise | Product owner + engine lead | **Open** | P2 / P4 / P6 |
 | D04 | How must unknown/approximate times behave? | Don't display precise houses/angles for unknown/unresolved birth time; preserve event-source readiness and uncertainty | Explicit time-estimation mode with warning and qualified policy as a separate product feature | Prevents false specificity; impacts historical/event charts | Product owner | **Open** | P2 / P4 |
@@ -51,7 +51,7 @@ For a paid launch, the recommended priority is **definitionally correct planetar
 | D13 | How will target/source uncertainty and redistribution be disclosed? | Provenance per output; pin JPL, licences, data/time models and rollback; review shipped runtime notices | Unpinned data or mutable automatic updates (not recommended) | Reproducibility, support and commercial compliance | Owner + engineering/release | **Open** | P6 |
 | D14 | Should a restricted internal pilot precede whole-app migration? | **Yes**, test without replacing public commercial paths; keep pilot branded as partial capability | All-at-once provider cutover | Reduces risk of multiple contract and source changes; not evidence of paid release | Product owner | **Open** | P4 |
 
-These records are *recommendations*. No response in this conversation approved any D01–D14 choices; do not change status to Approved or mark a downstream phase Ready without a recorded owner decision.
+D01's physical-centre product direction was explicitly selected by the owner and six-source qualification was authorised. [Jupiter](p1-jupiter-centre-qualification.md) and [WP3](p1-five-centres-qualification.md) source/binary/evaluator gates have passing evidence. This is **not** approval of model physical accuracy, future numerical profile changes, final launch limits or production rollout. **D02–D14 remain Open**, and downstream phases cannot be marked Ready without their separate gates.
 
 ## Sequential engineering priorities after owner review
 
