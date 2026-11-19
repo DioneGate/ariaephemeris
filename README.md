@@ -52,9 +52,7 @@ with Ephemeris(
     ".artifacts/de442s.bsp",
     centre_kernels={"jupiter": ".artifacts/planet-centres/jup349.bsp"},
 ) as e:
-    result = e.positions(
-        PositionRequest(t, bodies=("jupiter",), profile="planet-centres-v1")
-    )
+    result = e.positions(PositionRequest(t, bodies=("jupiter",), profile="planet-centres-v1"))
     assert result.bodies[0].target_id == 599
     print(result.metadata["physical_centre_sources"]["jupiter"]["source_sha256"])
 ```
