@@ -8,7 +8,7 @@ AI contributors must first follow the repository [AGENTS.md](../../AGENTS.md).
 
 | ID | Roadmap | Progress and evidence | Current focus |
 | --- | --- | --- | --- |
-| RM-001 | [Engine development and commercial application readiness](001-engine-development/README.md) | [Progress](001-engine-development/progress.md) | All eight phases Planned; RM-001/001 docs merged via PR #3; [RM-001/002](001-engine-development/prompts/002-physical-planet-centres-source-feasibility.md) all-six SPK and same-source CSPICE qualification evidence passes, [WP3 draft PR #5](https://github.com/DioneGate/ariaephemeris/pull/5) in review; production resolver and release gates open. |
+| RM-001 | [Engine development and commercial application readiness](001-engine-development/README.md) | [Progress](001-engine-development/progress.md) | Eight phases remain Planned. Physical-centre engine WP4 merged; [WP5.1 independent reference fixtures](001-engine-development/p1-independent-horizons-fixtures.md) completed in PR #7; [WP5.2 300-case geometric/apparent comparison](001-engine-development/p1-external-horizons-comparison.md) in PR #9 review, with source-model reconciliation still open. |
 
 This register is for discovery. Each roadmap's README owns phase status; its
 progress log owns implementation evidence; its prompt register owns prompt status.

@@ -130,6 +130,16 @@ Branch: [`docs/rm-001-001-commercial-calculation-contract-20261118`](https://git
 
 **Acceptance boundary:** WP5.1 is independent **source acquisition**, not an Aria-vs-Horizons comparison, absolute planetary accuracy certification, event root acceptance or commercial release. See [WP5.1 report](p1-independent-horizons-fixtures.md) and [bounded prompt](prompts/004-independent-horizons-reference-fixtures.md). Next is separately scoped WP5.2 external numerical comparison with source/convention diagnostics. Parent RM-001-P3/P6 remain Planned.
 
+## RM-001/005 — WP5.2 measured external Horizons comparison, 2026-11-19
+
+**Authorisation / branch:** The owner expressly requested implementation, testing, merge and a brief results report. Feature branch `feature/rm-001-005-horizons-numerical-comparison-20261119`, [draft PR #9](https://github.com/DioneGate/ariaephemeris/pull/9), after WP5.1 merged on main. Changes are limited to offline comparison tooling, tests, reproducible CI and measured numerical evidence; no `src/`, Aria Galaxy code, source model/fixture, API behaviour or release deployment changes.
+
+**Observed measured evidence:** [`wp5-2-horizons-comparison.json`](../../validation/wp5-2-horizons-comparison.json), created by running the real Aria `planet-centres-v1` multi-source engine against all **300** frozen original Horizons cases. Both reference data and original NAIF kernels are hash-verified. The complete 150 geometric vectors and 150 inertial apparent directions are recorded with precise sample definitions. Largest observed apparent sky separation **0.0047886 arcsec** (Jupiter); **0/150** exceeds a *provisional* 1-arcsecond diagnostic threshold. Largest geometric position difference **40.9135 km** (Pluto), and largest geometric velocity difference **0.00637874 m/s** (Neptune). Per-planet maxima, RMS, p95 and all 300 original/evaluated state pairs are documented in [WP5.2 report](p1-external-horizons-comparison.md).
+
+**Source-model caution:** Horizons labels Jupiter `jup365_merged`, Saturn `sat441l`, Neptune `nep098_merged` (among other models) and includes DE441, while Aria uses the DE442s base and independently pinned centre offsets. These are external **model-to-model differences**, not proven numerical errors in either system. A direct residual alone cannot justify an independent source-accuracy certificate; the comparator marks physical release qualification **false** and source-model reconciliation unresolved.
+
+**Tests/gates:** Original frozen 12-response SHA verification and 300-case comparison executed successfully in the pinned real-kernel workflow. New unit tests cover angular wrap, vector units, time-scale separation, target identity, strict completeness and false-certificate protection. The first fast CI run exposed Ruff formatting issues; the pinned formatter corrected them. Final fast CI, reference regression workflow, and merge evidence must be checked before marking the bounded implementation **Done**. Scientific accuracy acceptance remains open irrespective of implementation CI success.
+
 ## Delivery log
 
 | Date | Phase/prompt | Change and evidence | Validation | Deployment |
@@ -147,6 +157,8 @@ Branch: [`docs/rm-001-001-commercial-calculation-contract-20261118`](https://git
 
 | 2026-11-19 | RM-001/004 WP5.1 — **Done** (bounded acquisition) | 300 original NASA/JPL records, raw responses, hashes, model provenance; [PR #7 merged](https://github.com/DioneGate/ariaephemeris/commit/fa8e5b7a4a71d01999f712da7b25cbeb711e5510) | Offline integrity #44474930652 **PASS**; fast CI #44474930651 **PASS** | Source evidence only; no chart calculation or deployment change |
 
+| 2026-11-19 | RM-001/005 WP5.2 **In review** (comparison measured) | [300-case independent Horizons comparison](p1-external-horizons-comparison.md), [machine evidence](../../validation/wp5-2-horizons-comparison.json), [PR #9](https://github.com/DioneGate/ariaephemeris/pull/9) | Full real-source comparison executed; full CI/merge evidence pending | Tooling/evidence only; no engine/app/release change |
+
 Record subsequent increments here with exact phase/prompt ID, branch/PR,
 review/merge evidence, commands/results, remaining gaps and deployed-version
 status. Do not mark work Done until its merge and acceptance are verified.
@@ -154,4 +166,4 @@ The roadmap README owns phase status; this log owns evidence.
 
 ## Next action
 
-WP5.1 [PR #7 merged at `fa8e5b7`](https://github.com/DioneGate/ariaephemeris/commit/fa8e5b7a4a71d01999f712da7b25cbeb711e5510) after passing source-integrity and fast CI checks. Next, separately authorise WP5.2 comparison of the new frozen reference data against `planet-centres-v1`, aligning TT/TDB and coordinate conventions, and diagnosing mismatched JPL source solutions before applying tolerances. No commercial release or Aria Galaxy migration is implied.
+Review and merge [WP5.2 PR #9](https://github.com/DioneGate/ariaephemeris/pull/9) once all data, unit, lint/type, package, reference and numerical workflow checks pass. Verify actual main merge SHA, mark the bounded comparison Done, **without** falsely approving overall scientific model accuracy. Then separately authorise a matched-source/model and correction-convention reconciliation for the largest geometric outliers before accepting commercial apparent-position tolerances. WP5.3 rates/stations and WP5.4 release evidence remain separate. No app migration or deployment is implied.

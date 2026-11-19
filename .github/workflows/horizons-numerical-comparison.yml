@@ -1,0 +1,112 @@
+name: RM-001-005 WP5.2 independent Horizons numeric comparison
+
+on:
+  push:
+    branches:
+      - feature/rm-001-005-horizons-numerical-comparison-20261119
+    paths:
+      - '.github/workflows/horizons-numerical-comparison.yml'
+      - 'tools/datasets/compare_horizons_fixtures.py'
+      - 'tests/unit/test_horizons_numerical_comparison.py'
+      - 'data/fixtures/horizons/**'
+      - 'src/ariaephemeris/**'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  real-source-comparison:
+    runs-on: ubuntu-latest
+    timeout-minutes: 55
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+          cache-dependency-path: requirements/development.lock
+      - name: Install pinned numerical and test packages
+        run: |
+          python -m pip install -r requirements/development.lock
+          python -m pip install --no-deps -e .
+      - name: Acquire and verify original DE442s from immutable manifest
+        run: ariaephemeris install-data .artifacts
+      - name: Acquire six pinned original JPL physical-centre source kernels
+        run: |
+          set -euo pipefail
+          mkdir -p .artifacts/planet-centres
+          python - <<'PY' > .artifacts/centre-sources.tsv
+          from ariaephemeris.datasets import centres_manifest
+          for body, record in centres_manifest()["sources"].items():
+              print(body, record["filename"], record["source_url"], sep="\t")
+          PY
+          while IFS=$'\t' read -r body filename url; do
+            echo "Downloading pinned physical-centre source: $body ($filename)"
+            curl --fail --location --show-error --silent --retry 4 --retry-delay 5 \
+              --connect-timeout 30 --max-time 1800 "$url" \
+              -o ".artifacts/planet-centres/$filename"
+          done < .artifacts/centre-sources.tsv
+          python - <<'PY'
+          from pathlib import Path
+          from ariaephemeris.datasets import centres_manifest, verify_centre_sources
+          sources = {
+              body: Path(".artifacts/planet-centres") / rec["filename"]
+              for body, rec in centres_manifest()["sources"].items()
+          }
+          verified = verify_centre_sources(sources)
+          assert len(verified) == 6, "All six physical centre binaries required"
+          print("All 6 original NAIF SPKs match pinned SHA-256 and exact byte sizes")
+          PY
+      - name: Run frozen Horizons comparison, preserve complete numerical evidence
+        run: |
+          set -euo pipefail
+          python tools/datasets/compare_horizons_fixtures.py \
+            --fixtures data/fixtures/horizons \
+            --base .artifacts/de442s.bsp \
+            --centres-dir .artifacts/planet-centres \
+            --output docs/validation/wp5-2-horizons-comparison.json
+      - name: Verify complete evidence and prevent accidental accuracy certification
+        run: |
+          python - <<'PY'
+          import json, math
+          from pathlib import Path
+          r = json.loads(Path("docs/validation/wp5-2-horizons-comparison.json").read_text())
+          assert r["source_fixtures_verified_offline"] is True
+          assert r["sample_count"] == 300 and len(r["rows"]) == 300
+          assert set(r["per_body"]) == {"mars", "jupiter", "saturn", "uranus", "neptune", "pluto"}
+          assert all(r["per_body"][b]["geometric_position_km"]["count"] == 25 and
+                     r["per_body"][b]["apparent_direction_arcsec"]["count"] == 25
+                     for b in r["per_body"])
+          assert all(math.isfinite(row["metrics"].get("angular_separation_arcsec",
+                       row["metrics"].get("position_residual_km", float("nan"))))
+                     for row in r["rows"])
+          assert not r["physically_qualified_for_commercial_release"]
+          assert r["independent_chart_accuracy_pass"] is None
+          assert all(not row["provenance"]["matched_physical_model_demonstrated"] for row in r["rows"])
+          assert r["scientific_status"] == "MEASURED_WITH_UNRECONCILED_SOURCE_MODELS"
+          print("All 300 numerical comparisons recorded; model-based accuracy acceptance remains open")
+          PY
+      - name: Commit machine-readable comparison evidence to implementation branch
+        if: github.ref == 'refs/heads/feature/rm-001-005-horizons-numerical-comparison-20261119'
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/validation/wp5-2-horizons-comparison.json
+          if git diff --cached --quiet; then
+            echo "Comparison evidence unchanged"
+          else
+            git commit -m "data(RM-001/005): freeze 300 measured Aria-vs-Horizons numeric residuals"
+            git push origin HEAD:feature/rm-001-005-horizons-numerical-comparison-20261119
+          fi
+      - name: Preserve numerical evidence as workflow artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: rm-001-005-wp5-2-independent-horizons-comparison
+          path: docs/validation/wp5-2-horizons-comparison.json
+          if-no-files-found: warn
+          retention-days: 60
