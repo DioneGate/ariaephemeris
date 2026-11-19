@@ -7,7 +7,7 @@
 | Starting point | [WP5.2 independent comparison](../p1-external-horizons-comparison.md) merged via PR #9 |
 | Implementation branch | `feature/rm-001-006-jpl-source-model-reconciliation-20261119` |
 | PR | [#11](https://github.com/DioneGate/ariaephemeris/pull/11), **draft/unmerged** |
-| Prompt status | **In review** once numerical model attribution, integrity tests and report pass; no merge approval in this request |
+| Prompt status | **In review** — source attribution, source integrity, fast CI and numerical reproduction pass; scientific acceptance and merge remain open |
 
 ## Objective and contract
 
@@ -54,7 +54,7 @@ Every one of the 50 original discrepancy vectors was reconstructed from independ
 - [x] 200 separately acquired Horizons states archived with original raw SHA-256, exact request/response headers and source labels.
 - [x] 50 original WP5.2 geometric residuals reconstructed algebraically; explicit planetary barycentre, Earth, physical-offset and query-chain contributions.
 - [x] No numerical change to Aria engine, no change to barycentre/physical profile defaults or SPK identities; no false commercial physical uncertainty claim.
-- [ ] Project fast CI, all frozen reference integrity checks, pinned real source workflow and kernel-backed unit/regression checks verified on the final branch head.
+- [x] [Fast CI #44481431302](https://github.com/DioneGate/ariaephemeris/actions/runs/44481431302) **PASS** (Ruff, mypy, audit, non-kernel tests, build and package smoke); [frozen-source integrity #44481431375](https://github.com/DioneGate/ariaephemeris/actions/runs/44481431375) **PASS**; [real JPL-source attribution #44481431478](https://github.com/DioneGate/ariaephemeris/actions/runs/44481431478) **PASS**, including **byte-for-byte regeneration** of the frozen numeric evidence. The existing full-kernel pytest passed in the separately running baseline qualification job; its longer historical qualifier is tracked separately and is **not** claimed complete here.
 - [ ] Owner review of source-model attribution, proposed external product agreement gate and broader six-planet release qualification.
 - [ ] Merge or release requires **separate owner approval**; current prompt remains In review and parent P3/P6 Planned.
 
