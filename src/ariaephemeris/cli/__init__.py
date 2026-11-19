@@ -28,7 +28,10 @@ def main(argv: list[str] | None = None) -> int:
         p = sub.add_parser(name)
         p.add_argument("--kernel", required=True)
         p.add_argument(
-            "--centre-kernel", action="append", default=[], metavar="BODY=FILE",
+            "--centre-kernel",
+            action="append",
+            default=[],
+            metavar="BODY=FILE",
             help="Explicit original JPL satellite source for planet-centres-v1 (repeat per body)",
         )
         if name != "dataset-info":
