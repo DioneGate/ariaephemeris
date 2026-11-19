@@ -99,9 +99,7 @@ class Ephemeris:
             raise AriaError("DATA_UNAVAILABLE", "Physical planet-centre sources are not installed")
         return self._centre_kernel.provenance(bodies)
 
-    def _profile_kernel(
-        self, profile: str
-    ) -> tuple[Kernel | PhysicalCentreKernel, dict[str, int]]:
+    def _profile_kernel(self, profile: str) -> tuple[Kernel | PhysicalCentreKernel, dict[str, int]]:
         if profile == "reference":
             return self.kernel, BODY_IDS
         if profile == "planet-centres-v1":
