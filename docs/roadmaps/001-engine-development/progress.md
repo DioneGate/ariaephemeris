@@ -126,6 +126,8 @@ Branch: [`docs/rm-001-001-commercial-calculation-contract-20261118`](https://git
 
 **Validation:** the initial new offline verifier run passed its complete 12-response SHA-256/300-row semantic check, demonstrating the frozen data matches its archived JPL responses. Initial fast CI flagged only Ruff formatting in newly authored files, and the independent test workflow lacked an installed package; both were corrected. Subsequent CI statuses are tracked on [PR #7](https://github.com/DioneGate/ariaephemeris/pull/7) and must be recorded as actually observed, not presumed. Live acquisition has been restricted to manually dispatched workflow runs; routine CI only checks the frozen files offline.
 
+**Post-merge verification (19 November 2026):** [WP5.1 PR #7](https://github.com/DioneGate/ariaephemeris/pull/7) merged into main at [`fa8e5b7a4a71d01999f712da7b25cbeb711e5510`](https://github.com/DioneGate/ariaephemeris/commit/fa8e5b7a4a71d01999f712da7b25cbeb711e5510). [Offline integrity + acquisition parser CI #44474930652](https://github.com/DioneGate/ariaephemeris/actions/runs/44474930652) **passed**; [fast CI #44474930651](https://github.com/DioneGate/ariaephemeris/actions/runs/44474930651) **passed** (Ruff, formatting, mypy, licence audit, nonkernel tests, build and package smoke). **Actual main read-back** found `case_count=300` and the same fixture file blob SHA as the merged branch. RM-001/004 is **Done for reference acquisition only**, not physical-profile accuracy qualification. Ordinary numerical/deployment gates remain separate.
+
 **Acceptance boundary:** WP5.1 is independent **source acquisition**, not an Aria-vs-Horizons comparison, absolute planetary accuracy certification, event root acceptance or commercial release. See [WP5.1 report](p1-independent-horizons-fixtures.md) and [bounded prompt](prompts/004-independent-horizons-reference-fixtures.md). Next is separately scoped WP5.2 external numerical comparison with source/convention diagnostics. Parent RM-001-P3/P6 remain Planned.
 
 ## Delivery log
@@ -143,7 +145,7 @@ Branch: [`docs/rm-001-001-commercial-calculation-contract-20261118`](https://git
 
 | 2026-11-19 | RM-001/003 WP4 **In review** | Versioned physical-centre runtime profile on [draft PR #6](https://github.com/DioneGate/ariaephemeris/pull/6); source SHA manifests, resolver, CLI/schemas, tests and all-six workflow | Six per-source real-kernel profile tests passed on earlier revision; final CI and all-six workflow tracked in WP4 section | Engine branch only; no app modification, merge or deployment |
 
-| 2026-11-19 | RM-001/004 WP5.1 — **In review** | 300 original NASA/JPL Horizons records + raw responses, hashes, exact queries, source-model differences; [PR #7](https://github.com/DioneGate/ariaephemeris/pull/7) | Initial raw integrity check passed; final CI and merge to be recorded | Source data / test harness only; no chart change or deployment |
+| 2026-11-19 | RM-001/004 WP5.1 — **Done** (bounded acquisition) | 300 original NASA/JPL records, raw responses, hashes, model provenance; [PR #7 merged](https://github.com/DioneGate/ariaephemeris/commit/fa8e5b7a4a71d01999f712da7b25cbeb711e5510) | Offline integrity #44474930652 **PASS**; fast CI #44474930651 **PASS** | Source evidence only; no chart calculation or deployment change |
 
 Record subsequent increments here with exact phase/prompt ID, branch/PR,
 review/merge evidence, commands/results, remaining gaps and deployed-version
@@ -152,4 +154,4 @@ The roadmap README owns phase status; this log owns evidence.
 
 ## Next action
 
-Accept and merge [WP5.1 PR #7](https://github.com/DioneGate/ariaephemeris/pull/7) once the frozen Horizons source integrity and fast CI pass, and capture the actual merge SHA in the prompt register. Then separately authorise WP5.2 comparison of the new frozen reference data against `planet-centres-v1`, aligning TT/TDB and coordinate conventions, and diagnosing mismatched JPL source solutions before applying tolerances. No commercial release or Aria Galaxy migration is implied.
+WP5.1 [PR #7 merged at `fa8e5b7`](https://github.com/DioneGate/ariaephemeris/commit/fa8e5b7a4a71d01999f712da7b25cbeb711e5510) after passing source-integrity and fast CI checks. Next, separately authorise WP5.2 comparison of the new frozen reference data against `planet-centres-v1`, aligning TT/TDB and coordinate conventions, and diagnosing mismatched JPL source solutions before applying tolerances. No commercial release or Aria Galaxy migration is implied.
