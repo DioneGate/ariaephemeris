@@ -1,0 +1,115 @@
+name: RM-001-010 original-source and numerical uncertainty replay
+on:
+  pull_request:
+    paths:
+      - '.github/workflows/wp57-review.yml'
+      - 'tools/datasets/*wp57*'
+      - 'tools/datasets/attribute_jpl_source_models.py'
+      - 'tools/datasets/acquire_horizons_model_components.py'
+      - 'tools/datasets/verify_horizons_model_components.py'
+      - 'data/fixtures/horizons/wp57-uncertainty/**'
+      - 'docs/validation/wp57-model-uncertainty.json'
+      - 'tests/unit/test_wp57_uncertainty.py'
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: wp57-replay-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+jobs:
+  original-source-and-independent-refinement:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+          cache-dependency-path: requirements/development.lock
+      - run: |
+          python -m pip install -r requirements/development.lock
+          python -m pip install --no-deps -e .
+      - name: Verify every new original JPL response and existing source integrity
+        run: |
+          python tools/datasets/wp57_source.py verify
+          python tools/datasets/wp57_source.py verify-offsets
+          pytest -q tests/unit/test_wp57_uncertainty.py
+      - name: Reconstruct independent station roots and preserve unresolved physical bounds
+        run: |
+          python - <<'PY'
+          import json,sys
+          from pathlib import Path
+          sys.path.insert(0,'tools/datasets')
+          from wp57_source import DEFAULT_ROOT,WP56_REPORT,load_spec,verify,verify_offsets
+          from wp57_uncertainty import refine_stations,uncertainty_register
+          from wp57_replay import assert_replay_equal
+          proof,rays=verify(DEFAULT_ROOT)
+          offsets,_=verify_offsets(DEFAULT_ROOT)
+          proof.update(offsets)
+          frozen=json.loads(Path('docs/validation/wp57-model-uncertainty.json').read_text())
+          generated=refine_stations(load_spec(DEFAULT_ROOT),rays,json.loads(WP56_REPORT.read_text()))
+          assert proof==frozen['source_integrity']
+          assert len(generated)==frozen['refined_station_count']==36
+          assert proof['component_states']==400 and proof['direct_offset_states']==100
+          assert frozen['source_attribution']['sample_count']==100
+          for a,b in zip(generated,frozen['station_refinement'],strict=True):
+              proof=assert_replay_equal(a,{k:b[k] for k in a},'station_refinement')
+              if proof['nonidentical_floats']:
+                  print(a['id'],proof,flush=True)
+          assert frozen['passed'] and frozen['resolved_station_count']==frozen['matched_station_count']==36
+          assert frozen['original_wp56_passed'] is False
+          assert len(frozen['original_wp56_failed_reference_workloads'])==6
+          assert frozen['uncertainty_register']==uncertainty_register()
+          assert frozen['absolute_physical_uncertainty_bound'] is None
+          assert not frozen['absolute_accuracy_certified'] and not frozen['commercial_release_qualified']
+          assert not frozen['continuous_completeness_proven'] and not frozen['model_default_changed']
+          PY
+  pinned-source-numerical-replay:
+    needs: original-source-and-independent-refinement
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+          cache-dependency-path: requirements/development.lock
+      - run: |
+          python -m pip install -r requirements/development.lock
+          python -m pip install --no-deps -e .
+      - uses: actions/cache@v4
+        with:
+          path: |
+            .artifacts/de442s.bsp
+            .artifacts/planet-centres
+          key: wp57-six-original-spks-v1
+      - name: Restore exact SHA-pinned base and six centre sources
+        run: |
+          set -euo pipefail
+          ariaephemeris install-data .artifacts
+          mkdir -p .artifacts/planet-centres
+          python - <<'PY' > .artifacts/centres.tsv
+          from ariaephemeris.datasets import centres_manifest
+          for b,r in centres_manifest()['sources'].items():
+              print(b,r['filename'],r['source_url'],sep='\t')
+          PY
+          while IFS=$'\t' read -r body filename url; do
+            if [ ! -f ".artifacts/planet-centres/$filename" ]; then
+              curl --fail --location --show-error --silent --retry 4 --retry-delay 5 \
+                --connect-timeout 30 --max-time 1800 "$url" -o ".artifacts/planet-centres/$filename"
+            fi
+          done < .artifacts/centres.tsv
+          python - <<'PY'
+          from pathlib import Path
+          from ariaephemeris.datasets import centres_manifest,verify_centre_sources
+          assert len(verify_centre_sources({b:Path('.artifacts/planet-centres')/r['filename'] for b,r in centres_manifest()['sources'].items()}))==6
+          PY
+      - name: Require exact source/vector identities and declared station numerical precision
+        run: |
+          python tools/datasets/attribute_jpl_source_models.py --base .artifacts/de442s.bsp \
+            --centres-dir .artifacts/planet-centres --output .artifacts/wp53-replay.json
+          cmp .artifacts/wp53-replay.json docs/validation/wp5-3-jpl-source-attribution.json
+          python tools/datasets/qualify_wp57_uncertainty.py --base .artifacts/de442s.bsp --centres-dir .artifacts/planet-centres --output .artifacts/wp57-replayed.json
+          python tools/datasets/wp57_replay.py --actual .artifacts/wp57-replayed.json

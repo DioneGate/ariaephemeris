@@ -10,6 +10,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import re
 import sys
 import time
 import urllib.parse
@@ -86,6 +87,14 @@ def validate_response(
     if sha256(raw_bytes) != record["raw_sha256"]:
         raise ValueError("Original JPL response SHA-256 mismatch")
     raw = raw_bytes.decode("utf-8")
+    raw_header = raw.split("$$SOE", 1)[0]
+    if (
+        not re.search(r"Center-site name:\s*GEOCENTRIC", raw_header)
+        or not re.search(r"Atmos refraction:\s*NO \(AIRLESS\)", raw_header)
+        or not re.search(r"RA format\s*:\s*DEG", raw_header)
+        or not all(label in raw_header for label in ("JDTT", "RA_(ICRF-a-app)", "DEC_(ICRF-a-app)"))
+    ):
+        raise ValueError("Raw JPL header disagrees with geocentric airless ICRF/TT semantics")
     header = source_header(raw)
     if header != record["source_header"] or "(399)" not in header["centre"]:
         raise ValueError("Changed target/observer/source labels")

@@ -76,18 +76,34 @@ The owner authorised **implementation, not merge** of WP5.4 on 19 November 2026.
 
 ## RM-001/008 — WP5.5 independently sourced event timing (Done)
 
-The owner authorised implementation of event-timing qualification on 19 November 2026. [RM-001/008](prompts/008-wp5-5-independent-event-timing.md) on [draft PR #13](https://github.com/DioneGate/ariaephemeris/pull/13) prepares explicit TT-domain **22 source-nominated planetary events**: six physical-centre stations, six tropical 30° ingresses, and five Mars–outer-planet conjunctions plus five oppositions. It obtains **original JPL Horizons airless apparent inertial rays** at independent nine-point observed root grids (and five-point JPL-derived rate stencils for stations), solves reference roots *only* from these source observations, and separately compares Aria's existing `find_events` returned roots, signed differences, bracket and conditioning. Candidate test windows are Aria-nominated: **this is not blind event discovery, global completeness, rigorous interpolation error or commercial accuracy certification**. The 60-second threshold is only an unapproved diagnostic. No engine runtime, source model defaults or Aria Galaxy changes are permitted in this review package. The initial [22-case independent JPL numerical report](../../validation/wp55-independent-event-roots.json) measured **22/22 corresponding Aria events**, with maximum TT discrepancies of **4.61 s for stations (Neptune)**, **0.044 s ingresses**, **0.040 s conjunctions** and **0.039 s oppositions**. Independently sourced JPL **±15-second near-root observations**, [all 224 new rays and per-case sign-bracket evidence](../../validation/wp55-jpl-fine-root-brackets.json), demonstrate **22/22 original JPL event sign changes within an observed 30-second window**, and **all 22 Aria times lie within those source brackets**. The source comparison is not an absolute physical truth-model accuracy or global event-completeness certificate; all candidate tolerances remain unapproved. [Source kernel/event acquisition #44534617647](https://github.com/DioneGate/ariaephemeris/actions/runs/44534617647) and [JPL-only fine root #44535411289](https://github.com/DioneGate/ariaephemeris/actions/runs/44535411289) passed; full PR-specific replay and CI pending.
+[PR #13](https://github.com/DioneGate/ariaephemeris/pull/13) merged on
+19 November 2026 at `b170f7443008f3b8e7b6fbcda656bdefa541e99f`.
+[The 22-case report](../../validation/wp55-independent-event-roots.json) compares
+six stations, six ingresses, five conjunctions and five oppositions against
+original independent JPL source rays. All 22 Aria times lie inside independently
+observed 30-second JPL crossing intervals. Maximum differences were 4.6136 seconds
+for stations and below 0.044 seconds for the other sampled kinds. Original-source
+and six-kernel replay #44536016732 and fast CI #44536016808 passed.
 
+RM-001/008 is **Done for this bounded timing comparison**. Candidate windows were
+Aria-nominated, so independent discovery, complete event lists, physical model
+uncertainty and commercial release acceptance remain separate gates. The 60-second
+comparison diagnostic is not an approved physical timing guarantee. No engine
+runtime/default, Aria Galaxy, publication or deployment changed.
 
-**Verified delivery update, 19 November 2026:** [PR #13](https://github.com/DioneGate/ariaephemeris/pull/13) merged at `b170f7443008f3b8e7b6fbcda656bdefa541e99f`. RM-001/008 is **Done for bounded event timing only**. Final source/replay #44536016732 and fast CI #44536016808 passed. Earlier review wording above is historical; no global completeness, physical uncertainty or commercial release acceptance follows.
-
-## RM-001/009 — Independent event-discovery completeness (In progress)
+## RM-001/009 — Independent event-discovery completeness (In review)
 
 [Implementation prompt](prompts/009-independent-event-discovery.md). Freeze independent TT windows and discover complete JPL-only event catalogues, then compare every Aria return one-to-one. Cover stations, ingresses, all six-body conjunction/opposition pairs, selected additional aspect angles, empty searches, historical/seam windows and analytic degeneracies. Record grid convergence, missed/additional/duplicate/ambiguous outcomes, exact source provenance and empirical qualification limits. Owner authorised implementation, tests and merge on 19 November 2026. Parent P3/P6 remain Planned.
 
-## RM-001/010 — Model uncertainty and remaining source attribution (Planned)
+**Verified 009 delivery:** [PR #14](https://github.com/DioneGate/ariaephemeris/pull/14) merged at `02020a9`. All 142 event pairs match; 193 workloads are empty. The overall benchmark is **not passed**: six station workloads fail coarse-reference convergence. 009 remains **In review for scientific acceptance**; 010 investigates that interpolation sensitivity. Original evidence is preserved.
 
-Extend Jupiter/Pluto attribution to Mars, Saturn, Uranus and Neptune, prioritising Neptune velocity/station sensitivity. Separate planetary/observer/centre source differences, frame/correction choices, derivative/interpolation convergence, physical ephemeris uncertainty and civil-time/EOP assumptions. Use 009 independently discovered events for conditioning analysis. Deliver per-body evidence and a model-aware uncertainty register; mark unsupported absolute bounds unknown, not zero. Product limits remain subject to decision D07. This stage is **Planned** only: no code execution or detailed implementation prompt is authorised by recording its scope.
+## RM-001/010 — Model uncertainty and remaining source attribution (In review)
+
+Extend Jupiter/Pluto attribution to Mars, Saturn, Uranus and Neptune, prioritising Neptune velocity/station sensitivity. Separate planetary/observer/centre source differences, frame/correction choices, derivative/interpolation convergence, physical ephemeris uncertainty and civil-time/EOP assumptions. Use 009 independently discovered events for conditioning analysis. Deliver per-body evidence and a model-aware uncertainty register; mark unsupported absolute bounds unknown, not zero. Product limits remain subject to decision D07. Owner requested 010 execution on 19 November 2026. [Implementation prompt](prompts/010-model-uncertainty-and-source-attribution.md); source-only station refinement will diagnose the six 009 reference-grid failures. No physical uncertainty guarantee is inferred.
+
+Entry: 009 evidence available and exact source/convention identities retained. Exit: reproducible component closure for the remaining four planets; per-body/date/model numerical sensitivity and event-conditioning evidence; an uncertainty register distinguishing measured disagreement, justified bounds and unknown physical uncertainty; explicit proposed commercial claim wording for owner review. No unknown uncertainty may be replaced by the maximum disagreement between two ephemerides. Civil-time/EOP qualification remains P2 work rather than an implicit TT accuracy claim.
+
+**010 measured outcome:** [PR #15](https://github.com/DioneGate/ariaephemeris/pull/15) has 500 new original geometric vectors and 2,340 JPL station rays. [Scientific report](p1-wp57-model-uncertainty.md): all 100 remaining-body residuals reconstruct, direct queries isolate Uranus/Neptune chain cancellation, and a continuous reference resolves all 36 stations (maximum grid difference 5.25 s; Aria disagreement 3.57 s). Neptune's sampled direct-offset difference is about 325.5 m and 6.38 mm/s; absolute physical uncertainty remains unknown. Final original-source and pinned-kernel replay passed in [run #44608488208](https://github.com/DioneGate/ariaephemeris/actions/runs/44608488208); PR review and merge remain outstanding. P3/P6 stay Planned.
 
 ## Delivery plan
 

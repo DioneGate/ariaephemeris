@@ -1,0 +1,5036 @@
+{
+  "full_report_commit": "221ecf1",
+  "full_report_sha256": "c827b0784e3b6a43c302fc14fca558e53da1136f56a6ba829731c23004cb0430",
+  "interpretation": "Independent local cubics have discontinuous derivatives at source knots; retain every original missing/double root diagnosis.",
+  "matched_station_count": 29,
+  "passed": false,
+  "report_id": "aria-wp57-initial-local-cubic-diagnostic-v1",
+  "resolved_station_count": 17,
+  "source_integrity": {
+    "component_responses": 16,
+    "component_states": 400,
+    "source_sha256": "6329fca25014080529e590c496a4a1746097c461e6e18beeeb7b2718cb5f5d15",
+    "specification_sha256": "f30f0c4db868cb31d497ad157c4dd97460492cd1137c4c9cf1f7d17370c3a59e",
+    "station_count": 36,
+    "station_rays": 2340,
+    "station_responses": 55
+  },
+  "station_records": [
+    {
+      "aria_comparison": {
+        "actual_count": 1,
+        "additional_actual_indices": [],
+        "ambiguous_edges": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            0
+          ]
+        ],
+        "duplicate_actual_pairs": [],
+        "matches": [],
+        "missing_reference_indices": [],
+        "passed": false,
+        "reference_count": 2
+      },
+      "body": "mars",
+      "grid_comparisons": {
+        "3-hour": {
+          "actual_count": 1,
+          "additional_actual_indices": [],
+          "ambiguous_edges": [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              0
+            ]
+          ],
+          "duplicate_actual_pairs": [],
+          "matches": [],
+          "missing_reference_indices": [],
+          "passed": false,
+          "reference_count": 2
+        },
+        "90-minute": {
+          "actual_count": 1,
+          "additional_actual_indices": [],
+          "ambiguous_edges": [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              0
+            ]
+          ],
+          "duplicate_actual_pairs": [],
+          "matches": [],
+          "missing_reference_indices": [],
+          "passed": false,
+          "reference_count": 2
+        },
+        "shifted-45-minute": {
+          "actual_count": 1,
+          "additional_actual_indices": [],
+          "ambiguous_edges": [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              0
+            ]
+          ],
+          "duplicate_actual_pairs": [],
+          "matches": [],
+          "missing_reference_indices": [],
+          "passed": false,
+          "reference_count": 2
+        }
+      },
+      "id": "2023-2025:station:mars:None:0:0",
+      "passed": false,
+      "roots_by_grid": {
+        "3-hour": [
+          {
+            "ambiguous": false,
+            "body": "mars",
+            "direction": "retrograde-to-direct",
+            "equation_slope_per_tt_day": 0.01282163472986471,
+            "goal_deg": null,
+            "interpolation_error_bound_established": false,
+            "jd_tt": 2459957.3732503913,
+            "kind": "station",
+            "other": null,
+            "source_panel_jd_tt": [
+              2459957.3732499,
+              2459957.4982499
+            ]
+          }
+        ],
+        "45-minute": [
+          {
+            "ambiguous": false,
+            "body": "mars",
+            "direction": "retrograde-to-direct",
+            "equation_slope_per_tt_day": 0.012820556793396292,
+            "goal_deg": null,
+            "interpolation_error_bound_established": false,
+            "jd_tt": 2459957.37324982,
+            "kind": "station",
+            "other": null,
+            "source_panel_jd_tt": [
+              2459957.3419999,
+              2459957.3732499
+            ]
+          },
+          {
+            "ambiguous": false,
+            "body": "mars",
+            "direction": "retrograde-to-direct",
+            "equation_slope_per_tt_day": 0.01282055669190109,
+            "goal_deg": null,
+            "interpolation_error_bound_established": false,
+            "jd_tt": 2459957.3732515536,
+            "kind": "station",
+            "other": null,
+            "source_panel_jd_tt": [
+              2459957.3732499,
+              2459957.4044999
+            ]
+          }
+        ],
+        "90-minute": [
+          {
+            "ambiguous": false,
+            "body": "mars",
+            "direction": "retrograde-to-direct",
+            "equation_slope_per_tt_day": 0.012821623456414286,
+            "goal_deg": null,
+            "interpolation_error_bound_established": false,
+            "jd_tt": 2459957.3732497846,
+            "kind": "station",
+            "other": null,
+            "source_panel_jd_tt": [
+              2459957.3107499,
+              2459957.3732499
+            ]
+          }
+        ],
+        "shifted-45-minute": [
+          {
+            "ambiguous": false,
+            "body": "mars",
+            "direction": "retrograde-to-direct",
+            "equation_slope_per_tt_day": 0.01282185351308554,
+            "goal_deg": null,
+            "interpolation_error_bound_established": false,
+            "jd_tt": 2459957.3732501217,
+            "kind": "station",
+            "other": null,
+            "source_panel_jd_tt": [
+              2459957.3576249,
+              2459957.3888749
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "aria_comparison": {
+        "actual_count": 1,
+        "additional_actual_indices": [],
+        "ambiguous_edges": [],
+        "duplicate_actual_pairs": [],
+        "matches": [
+          {
+            "actual_index": 0,
+            "actual_minus_reference_seconds": -0.0024944543838500977,
+            "reference_index": 0
+          }
+        ],
+        "missing_reference_indices": [],
+        "passed": true,
+        "reference_count": 1
+      },
+      "body": "mars",
+      "grid_comparisons": {
+        "3-hour": {
+          "actual_count": 1,
+          "additional_actual_indices": [],
+          "ambiguous_edges": [],
+          "duplicate_actual_pairs": [],
+          "matches": [
+            {
+              "actual_index": 0,
+              "actual_minus_reference_seconds": 0.03186464309692383,
+              "reference_index": 0
+            }
+          ],
+          "missing_reference_indices": [],
+          "passed": true,
+          "reference_count": 1
+        },
+        "90-minute": {
+          "actual_count": 1,
+          "additional_actual_indices": [],
+          "ambiguous_edges": [],
+          "duplicate_actual_pairs": [],
+          "matches": [
+            {
+              "actual_index": 0,
+              "actual_minus_reference_seconds": 0.07125288248062134,
+              "reference_index": 0
+            }
+          ],
+          "missing_reference_indices": [],
+          "passed": true,
+          "reference_count": 1
+        },
+        "shifted-45-minute": {
+          "actual_count": 1,
+          "additional_actual_indices": [],
+          "ambiguous_edges": [],
+          "duplicate_actual_pairs": [],
+          "matches": [
+            {
+              "actual_index": 0,
+              "actual_minus_reference_seconds": -0.018627941608428955,
+              "reference_index": 0
+            }
+          ],
+          "missing_reference_indices": [],
+          "passed": true,
+          "reference_count": 1
+        }
+      },
+      "id": "2023-2025:station:mars:None:0:1",
+      "passed": true,
+      "roots_by_grid": {
+        "3-hour": [
+          {
+            "ambiguous": false,
+            "body": "mars",
+            "direction": "direct-to-retrograde",
+            "equation_slope_per_tt_day": -0.013392796694421909,
+            "goal_deg": null,
+            "interpolation_error_bound_established": false,
+            "jd_tt": 2460651.4821585817,
+            "kind": "station",
+            "other": null,
+            "source_panel_jd_tt": [
+              2460651.3571596,
+              2460651.4821596
+            ]
+          }
+        ],
+        "45-minute": [
+          {
+            "ambiguous": false,
+            "body": "mars",
+            "direction": "direct-to-retrograde",
+            "equation_slope_per_tt_day": -0.013393341396211152,
+            "goal_deg": null,
+            "interpolation_error_bound_established": false,
+            "jd_tt": 2460651.482158213,
+            "kind": "station",
+            "other": null,
+            "source_panel_jd_tt": [
+              2460651.4509096,
+              2460651.4821596
+            ]
+          }
+        ],
+        "90-minute": [
+          {
+            "ambiguous": false,
+            "body": "mars",
+            "direction": "direct-to-retrograde",
+            "equation_slope_per_tt_day": -0.01339291703398135,
+            "goal_deg": null,
+            "interpolation_error_bound_established": false,
+            "jd_tt": 2460651.4821590376,
+            "kind": "station",
+            "other": null,
+            "source_panel_jd_tt": [
+              2460651.4196596,
+              2460651.4821596
+            ]
+          }
+        ],
+        "shifted-45-minute": [
+          {
+            "ambiguous": false,
+            "body": "mars",
+            "direction": "direct-to-retrograde",
+            "equation_slope_per_tt_day": -0.013392750917554236,
+            "goal_deg": null,
+            "interpolation_error_bound_established": false,
+            "jd_tt": 2460651.4821579973,
+            "kind": "station",
+            "other": null,
+            "source_panel_jd_tt": [
+              2460651.4665346,
+              2460651.4977846
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "aria_comparison": {
+        "actual_count": 1,
+        "additional_actual_indices": [],
+        "ambiguous_edges": [],
+        "duplicate_actual_pairs": [],
+        "matches": [
+          {
+            "actual_index": 0,
+            "actual_minus_reference_seconds": -0.0004425644874572754,
+            "reference_index": 0
+          }
+        ],
+        "missing_reference_indices": [],
+        "passed": true,
+        "reference_count": 1
+      },
+      "body": "mars",
+      "grid_comparisons": {
+        "3-hour": {
+          "actual_count": 0,
+          "additional_actual_indices": [],
+          "ambiguous_edges": [],
+          "duplicate_actual_pairs": [],
+          "matches": [],
+          "missing_reference_indices": [
+            0
+          ],
+          "passed": false,
+          "reference_count": 1
+        },
+        "90-minute": {
+          "actual_count": 1,
+          "additional_actual_indices": [],
+          "ambiguous_edges": [],
+          "duplicate_actual_pairs": [],
+          "matches": [
+            {
+              "actual_index": 0,
+              "actual_minus_reference_seconds": 0.04735440015792847,
+              "reference_index": 0
+            }
+          ],
+          "missing_reference_indices": [],
+          "passed": true,
+          "reference_count": 1
+        },
+        "shifted-45-minute": {
+          "actual_count": 1,
+          "additional_actual_indices": [],
+          "ambiguous_edges": [],
+          "duplicate_actual_pairs": [],
+          "matches": [
+            {
+              "actual_index": 0,
+              "actual_minus_reference_seconds": 0.03669261932373047,
+              "reference_index": 0
+            }
+          ],
+          "missing_reference_indices": [],
+          "passed": true,
+          "reference_count": 1
+        }
+      },
+      "id": "2023-2025:station:mars:None:0:2",
+      "passed": false,
+      "roots_by_grid": {
+        "3-hour": [],
+        "45-minute": [
+          {
+            "ambiguous": false,
+            "body": "mars",
+            "direction": "retrograde-to-direct",
+            "equation_slope_per_tt_day": 0.012413844776872407,
+            "goal_deg": null,
+            "interpolation_error_bound_established": false,
+            "jd_tt": 2460730.584016328,
+            "kind": "station",
+            "other": null,
+            "source_panel_jd_tt": [
+              2460730.5527665,
+              2460730.5840165
+            ]
+          }
+        ],
+        "90-minute": [
+          {
+            "ambiguous": false,
+            "body": "mars",
+            "direction": "retrograde-to-direct",
+            "equation_slope_per_tt_day": 0.012413812158982185,
+            "goal_deg": null,
+            "interpolation_error_bound_established": false,
+            "jd_tt": 2460730.5840168763,
+            "kind": "station",
+            "other": null,
+            "source_panel_jd_tt": [
+              2460730.5840165,
+              2460730.6465165
+            ]
+          }
+        ],
+        "shifted-45-minute": [
+          {
+            "ambiguous": false,
+            "body": "mars",
+            "direction": "retrograde-to-direct",
+            "equation_slope_per_tt_day": 0.01241377960401855,
+            "goal_deg": null,
+            "interpolation_error_bound_established": false,
+            "jd_tt": 2460730.584016753,
+            "kind": "station",
+            "other": null,
+            "source_panel_jd_tt": [
+              2460730.5683915,
+              2460730.5996415
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "aria_comparison": {
+        "actual_count": 1,
+        "additional_actual_indices": [],
+        "ambiguous_edges": [],
+        "duplicate_actual_pairs": [],
+        "matches": [
+          {
+            "actual_index": 0,
+            "actual_minus_reference_seconds": -0.1729220151901245,
+            "reference_index": 0
+          }
+        ],
+        "missing_reference_indices": [],
+        "passed": true,
+        "reference_count": 1
+      },
+      "body": "jupiter",
+      "grid_comparisons": {
+        "3-hour": {
+          "actual_count": 1,
+          "additional_actual_indices": [],
+          "ambiguous_edges": [],
+          "duplicate_actual_pairs": [],
+          "matches": [
+            {
+              "actual_index": 0,
+              "actual_minus_reference_seconds": -1.1208951473236084,
+              "reference_index": 0
+            }
+          ],
+          "missing_reference_indices": [],
+          "passed": true,
+          "reference_count": 1
+        },
+        "90-minute": {
+          "actual_count": 1,
+          "additional_actual_indices": [],
+          "ambiguous_edges": [],
+          "duplicate_actual_pairs": [],
+          "matches": [
+            {
+              "actual_index": 0,
+              "actual_minus_reference_seconds": -0.1935616135597229,
+              "reference_index": 0
+            }
+          ],
+          "missing_reference_indices": [],
+          "passed": true,
+          "reference_count": 1
+        },
+        "shifted-45-minute": {
+          "actual_count": 1,
+          "additional_actual_indices": [],
+          "ambiguous_edges": [],
+          "duplicate_actual_pairs": [],
+          "matches": [
+            {
+              "actual_index": 0,
+              "actual_minus_reference_seconds": 0.27543604373931885,
+              "reference_index": 0
+            }
+          ],
+          "missing_reference_indices": [],
+          "passed": true,
+          "reference_count": 1
+        }
+      },
+      "id": "2023-2025:station:jupiter:None:0:0",
+      "passed": true,
+      "roots_by_grid": {
+        "3-hour": [
+          {
+            "ambiguous": false,
+            "body": "jupiter",
+            "direction": "direct-to-retrograde",
+            "equation_slope_per_tt_day": -0.0033389607578354877,
+            "goal_deg": null,
+            "interpolation_error_bound_established": false,
+            "jd_tt": 2460192.091769214,
+            "kind": "station",
+            "other": null,
+            "source_panel_jd_tt": [
+              2460192.0917511,
+              2460192.2167511
+            ]
+          }
+        ],
+        "45-minute": [
+          {
+            "ambiguous": false,
+            "body": "jupiter",
+            "direction": "direct-to-retrograde",
+            "equation_slope_per_tt_day": -0.003338648549476284,
+            "goal_deg": null,
+            "interpolation_error_bound_established": false,
+            "jd_tt": 2460192.091782187,
+            "kind": "station",
+            "other": null,
+            "source_panel_jd_tt": [
+              2460192.0917511,
+              2460192.1230011
+            ]
+          }
+        ],
+        "90-minute": [
+          {
+            "ambiguous": false,
+            "body": "jupiter",
+            "direction": "direct-to-retrograde",
+            "equation_slope_per_tt_day": -0.0033389730609623405,
+            "goal_deg": null,
+            "interpolation_error_bound_established": false,
+            "jd_tt": 2460192.091779947,
+            "kind": "station",
+            "other": null,
+            "source_panel_jd_tt": [
+              2460192.0917511,
+              2460192.1542511
+            ]
+          }
+        ],
+        "shifted-45-minute": [
+          {
+            "ambiguous": false,
+            "body": "jupiter",
+            "direction": "direct-to-retrograde",
+            "equation_slope_per_tt_day": -0.0033388262583514687,
+            "goal_deg": null,
+            "interpolation_error_bound_established": false,
+            "jd_tt": 2460192.091785375,
+            "kind": "station",
+            "other": null,
+            "source_panel_jd_tt": [
+              2460192.0761261,
+              2460192.1073761
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "aria_comparison": {
+        "actual_count": 1,
+        "additional_actual_indices": [],
+        "ambiguous_edges": [],
+        "duplicate_actual_pairs": [],
+        "matches": [
+          {
+            "actual_index": 0,
+            "actual_minus_reference_seconds": 0.20663738250732422,
+            "reference_index": 0
+          }
+        ],
+        "missing_reference_indices": [],
+        "passed": true,
+        "reference_count": 1
+      },
+      "body": "jupiter",
+      "grid_comparisons": {
+        "3-hour": {
+          "actual_count": 1,
+          "additional_actual_indices": [],
+          "ambiguous_edges": [],
+          "duplicate_actual_pairs": [],
+          "matches": [
+            {
+              "actual_index": 0,
+              "actual_minus_reference_seconds": -0.5159899592399597,
+              "reference_index": 0
+            }
+          ],
+          "missing_reference_indices": [],
+          "passed": true,
+          "reference_count": 1
+        },
+        "90-minute": {
+          "actual_count": 1,
+          "additional_actual_indices": [],
+          "ambiguous_edges": [],
+          "duplicate_actual_pairs": [],
+          "matches": [
+            {
+              "actual_index": 0,
+              "actual_minus_reference_seconds": 0.07435083389282227,
+              "reference_index": 0
+            }
+          ],
+          "missing_reference_indices": [],
+          "passed": true,
+          "reference_count": 1
+        },
+        "shifted-45-minute": {
+          "actual_count": 1,
+          "additional_actual_indices": [],
+          "ambiguous_edges": [],
+          "duplicate_actual_pairs": [],
+          "matches": [
+            {
+              "actual_index": 0,
+              "actual_minus_reference_seconds": 0.054073333740234375,
+              "reference_index": 0
+            }
+          ],
+          "missing_reference_indices": [],
+          "passed": true,
+          "reference_count": 1
+        }
+      },
+      "id": "2023-2025:station:jupiter:None:0:1",
+      "passed": true,
+      "roots_by_grid": {
+        "3-hour": [
+          {
+            "ambiguous": false,
+            "body": "jupiter",
+            "direction": "retrograde-to-direct",
+            "equation_slope_per_tt_day": 0.0034675794707038528,
+            "goal_deg": null,
+            "interpolation_error_bound_established": false,
+            "jd_tt": 2460309.6108186054,
+            "kind": "station",
+            "other": null,
+            "source_panel_jd_tt": [
+              2460309.6108147,
+              2460309.7358147
+            ]
+          }
+        ],
+        "45-minute": [
+          {
+            "ambiguous": false,
+            "body": "jupiter",
+            "direction": "retrograde-to-direct",
+            "equation_slope_per_tt_day": 0.003468582967876052,
+            "goal_deg": null,
+            "interpolation_error_bound_established": false,
+            "jd_tt": 2460309.6108245775,
+            "kind": "station",
+            "other": null,
+            "source_panel_jd_tt": [
+              2460309.6108147,
+              2460309.6420647
+            ]
+          }
+        ],
+        "90-minute": [
+          {
+            "ambiguous": false,
+            "body": "jupiter",
+            "direction": "retrograde-to-direct",
+            "equation_slope_per_tt_day": 0.0034676585883139997,
+            "goal_deg": null,
+            "interpolation_error_bound_established": false,
+            "jd_tt": 2460309.610825438,
+            "kind": "station",
+            "other": null,
+            "source_panel_jd_tt": [
+              2460309.6108147,
+              2460309.6733147
+            ]
+          }
+        ],
+        "shifted-45-minute": [
+          {
+            "ambiguous": false,
+            "body": "jupiter",
+            "direction": "retrograde-to-direct",
+            "equation_slope_per_tt_day": 0.003467336995494116,
+            "goal_deg": null,
+            "interpolation_error_bound_established": false,
+            "jd_tt": 2460309.6108252034,
+            "kind": "station",
+            "other": null,
+            "source_panel_jd_tt": [
+              2460309.5951897,
+              2460309.6264397
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "aria_comparison": {
+        "actual_count": 1,
+        "additional_actual_indices": [],
+        "ambiguous_edges": [],
+        "duplicate_actual_pairs": [],
+        "matches": [
+          {
+            "actual_index": 0,
+            "actual_minus_reference_seconds": -0.03279000520706177,
+            "reference_index": 0
+          }
+        ],
+        "missing_reference_indices": [],
+        "passed": true,
+        "reference_count": 1
+      },
+      "body": "jupiter",
+      "grid_comparisons": {
+        "3-hour": {
+          "actual_count": 1,
+          "additional_actual_indices": [],
+          "ambiguous_edges": [],
+          "duplicate_actual_pairs": [],
+          "matches": [
+            {
+              "actual_index": 0,
+              "actual_minus_reference_seconds": -0.18853247165679932,
+              "reference_index": 0
+            }
+          ],
+          "missing_reference_indices": [],
+          "passed": true,
+          "reference_count": 1
+        },
+        "90-minute": {
+          "actual_count": 1,
+          "additional_actual_indices": [],
+          "ambiguous_edges": [],
+          "duplicate_actual_pairs": [],
+          "matches": [
+            {
+              "actual_index": 0,
+              "actual_minus_reference_seconds": -0.005552172660827637,
+              "reference_index": 0
+            }
+          ],
+          "missing_reference_indices": [],
+          "passed": true,
+          "reference_count": 1
+        },
+        "shifted-45-minute": {
+          "actual_count": 1,
+          "additional_actual_indices": [],
+          "ambiguous_edges": [],
+          "duplicate_actual_pairs": [],
+          "matches": [
+            {
+              "actual_index": 0,
+              "actual_minus_reference_seconds": 0.6367295980453491,
+              "reference_index": 0
+            }
+          ],
+          "missing_reference_indices": [],
+          "passed": true,
+          "reference_count": 1
+        }
+      },
+      "id": "2023-2025:station:jupiter:None:0:2",
+      "passed": true,
+      "roots_by_grid": {
+        "3-hour": [
+          {
+            "ambiguous": false,
+            "body": "jupiter",
+            "direction": "direct-to-retrograde",
+            "equation_slope_per_tt_day": -0.0033392604771919254,
+            "goal_deg": null,
+            "interpolation_error_bound_established": false,
+            "jd_tt": 2460592.7911888217,
+            "kind": "station",
+            "other": null,
+            "source_panel_jd_tt": [
+              2460592.666233,
+              2460592.791233
+            ]
+          }
+        ],
+        "45-minute": [
+          {
+            "ambiguous": false,
+            "body": "jupiter",
+            "direction": "direct-to-retrograde",
+            "equation_slope_per_tt_day": -0.0033397259034359953,
+            "goal_deg": null,
+            "interpolation_error_bound_established": false,
+            "jd_tt": 2460592.7911910038,
+            "kind": "station",
+            "other": null,
+            "source_panel_jd_tt": [
+              2460592.759983,
+              2460592.791233
+            ]
+          }
+        ],
+        "90-minute": [
+          {
+            "ambiguous": false,
+            "body": "jupiter",
+            "direction": "direct-to-retrograde",
+            "equation_slope_per_tt_day": -0.0033394905045009363,
+            "goal_deg": null,
+            "interpolation_error_bound_established": false,
+            "jd_tt": 2460592.7911909395,
+            "kind": "station",
+            "other": null,
+            "source_panel_jd_tt": [
+              2460592.728733,
+              2460592.791233
+            ]
+          }
+        ],
+        "shifted-45-minute": [
+          {
+            "ambiguous": false,
+            "body": "jupiter",
+            "direction": "direct-to-retrograde",
+            "equation_slope_per_tt_day": -0.0033392521165279214,
+            "goal_deg": null,
+            "interpolation_error_bound_established": false,
+            "jd_tt": 2460592.7911983733,
+            "kind": "station",
+            "other": null,
+            "source_panel_jd_tt": [
+              2460592.775608,
+              2460592.806858
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "aria_comparison": {
+        "actual_count": 1,
+        "additional_actual_indices": [],
+        "ambiguous_edges": [],
+        "duplicate_actual_pairs": [],
+        "matches": [
+          {
+            "actual_index": 0,
+            "actual_minus_reference_seconds": 0.29430538415908813,
+            "reference_index": 0
+          }
+        ],
+        "missing_reference_indices": [],
+        "passed": true,
+        "reference_count": 1
+      },
+      "body": "jupiter",
+      "grid_comparisons": {
+        "3-hour": {
+          "actual_count": 1,
+          "additional_actual_indices": [],
+          "ambiguous_edges": [],
+          "duplicate_actual_pairs": [],
+          "matches": [
+            {
+              "actual_index": 0,
+              "actual_minus_reference_seconds": 1.0726958513259888,
+              "reference_index": 0
+            }
+          ],
+          "missing_reference_indices": [],
+          "passed": true,
+          "reference_count": 1
+        },
+        "90-minute": {
+          "actual_count": 1,
+          "additional_actual_indices": [],
+          "ambiguous_edges": [],
+          "duplicate_actual_pairs": [],
+          "matches": [
+            {
+              "actual_index": 0,
+              "actual_minus_reference_seconds": 0.44167935848236084,
+              "reference_index": 0
+            }
+          ],
+          "missing_reference_indices": [],
+          "passed": true,
+          "reference_count": 1
+        },
+        "shifted-45-minute": {
+          "actual_count": 1,
+          "additional_actual_indices": [],
+          "ambiguous_edges": [],
+          "duplicate_actual_pairs": [],
+          "matches": [
+            {
+              "actual_index": 0,
+              "actual_minus_reference_seconds": 0.48348158597946167,
+              "reference_index": 0
+            }
+          ],
+          "missing_reference_indices": [],
+          "passed": true,
+          "reference_count": 1
+        }
+      },
+      "id": "2023-2025:station:jupiter:None:0:3",
+      "passed": true,
+      "roots_by_grid": {
+        "3-hour": [
+          {
+            "ambiguous": false,
+            "body": "jupiter",
+            "direction": "retrograde-to-direct",
+            "equation_slope_per_tt_day": 0.00341868287674638,
+            "goal_deg": null,
+            "interpolation_error_bound_established": false,
+            "jd_tt": 2460710.9023551433,
+            "kind": "station",
+            "other": null,
+            "source_panel_jd_tt": [
+              2460710.9023227,
+              2460711.0273227
+            ]
+          }
+        ],
+        "45-minute": [
+          {
+            "ambiguous": false,
+            "body": "jupiter",
+            "direction": "retrograde-to-direct",
+            "equation_slope_per_tt_day": 0.0034184416308756,
+            "goal_deg": null,
+            "interpolation_error_bound_established": false,
+            "jd_tt": 2460710.902342728,
+            "kind": "station",
+            "other": null,
+            "source_panel_jd_tt": [
+              2460710.9023227,
+              2460710.9335727
+            ]
+          }
+        ],
+        "90-minute": [
+          {
+            "ambiguous": false,
+            "body": "jupiter",
+            "direction": "retrograde-to-direct",
+            "equation_slope_per_tt_day": 0.0034183695904153135,
+            "goal_deg": null,
+            "interpolation_error_bound_established": false,
+            "jd_tt": 2460710.90234784,
+            "kind": "station",
+            "other": null,
+            "source_panel_jd_tt": [
+              2460710.9023227,
+              2460710.9648227
+            ]
+          }
+        ],
+        "shifted-45-minute": [
+          {
+            "ambiguous": false,
+            "body": "jupiter",
+            "direction": "retrograde-to-direct",
+            "equation_slope_per_tt_day": 0.0034188418004896604,
+            "goal_deg": null,
+            "interpolation_error_bound_established": false,
+            "jd_tt": 2460710.9023483237,
+            "kind": "station",
+            "other": null,
+            "source_panel_jd_tt": [
+              2460710.8866977,
+              2460710.9179477
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "aria_comparison": {
+        "actual_count": 1,
+        "additional_actual_indices": [],
+        "ambiguous_edges": [],
+        "duplicate_actual_pairs": [],
+        "matches": [
+          {
+            "actual_index": 0,
+            "actual_minus_reference_seconds": -0.44015049934387207,
+            "reference_index": 0
+          }
+        ],
+        "missing_reference_indices": [],
+        "passed": true,
+        "reference_count": 1
+      },
+      "body": "jupiter",
+      "grid_comparisons": {
+        "3-hour": {
+          "actual_count": 1,
+          "additional_actual_indices": [],
+          "ambiguous_edges": [],
+          "duplicate_actual_pairs": [],
+          "matches": [
+            {
+              "actual_index": 0,
+              "actual_minus_reference_seconds": 0.5822136998176575,
+              "reference_index": 0
+            }
+          ],
+          "missing_reference_indices": [],
+          "passed": true,
+          "reference_count": 1
+        },
+        "90-minute": {
+          "actual_count": 1,
+          "additional_actual_indices": [],
+          "ambiguous_edges": [],
+          "duplicate_actual_pairs": [],
+          "matches": [
+            {
+              "actual_index": 0,
+              "actual_minus_reference_seconds": -0.26626288890838623,
+              "reference_index": 0
+            }
+          ],
+          "missing_reference_indices": [],
+          "passed": true,
+          "reference_count": 1
+        },
+        "shifted-45-minute": {
+          "actual_count": 1,
+          "additional_actual_indices": [],
+          "ambiguous_edges": [],
+          "duplicate_actual_pairs": [],
+          "matches": [
+            {
+              "actual_index": 0,
+              "actual_minus_reference_seconds": -0.9352192282676697,
+              "reference_index": 0
+            }
+          ],
+          "missing_reference_indices": [],
+          "passed": true,
+          "reference_count": 1
+        }
+      },
+      "id": "2023-2025:station:jupiter:None:0:4",
+      "passed": true,
+      "roots_by_grid": {
+        "3-hour": [
+          {
+            "ambiguous": false,
+            "body": "jupiter",
+            "direction": "direct-to-retrograde",
+            "equation_slope_per_tt_day": -0.0033325899249847537,
+            "goal_deg": null,
+            "interpolation_error_bound_established": false,
+            "jd_tt": 2460991.196044834,
+            "kind": "station",
+            "other": null,
+            "source_panel_jd_tt": [
+              2460991.195994,
+              2460991.320994
+            ]
+          }
+        ],
+        "45-minute": [
+          {
+            "ambiguous": false,
+            "body": "jupiter",
+            "direction": "direct-to-retrograde",
+            "equation_slope_per_tt_day": -0.0033322557149244553,
+            "goal_deg": null,
+            "interpolation_error_bound_established": false,
+            "jd_tt": 2460991.1960380953,
+            "kind": "station",
+            "other": null,
+            "source_panel_jd_tt": [
+              2460991.195994,
+              2460991.227244
+            ]
+          }
+        ],
+        "90-minute": [
+          {
+            "ambiguous": false,
+            "body": "jupiter",
+            "direction": "direct-to-retrograde",
+            "equation_slope_per_tt_day": -0.0033325799285689366,
+            "goal_deg": null,
+            "interpolation_error_bound_established": false,
+            "jd_tt": 2460991.1960350135,
+            "kind": "station",
+            "other": null,
+            "source_panel_jd_tt": [
+              2460991.195994,
+              2460991.258494
+            ]
+          }
+        ],
+        "shifted-45-minute": [
+          {
+            "ambiguous": false,
+            "body": "jupiter",
+            "direction": "direct-to-retrograde",
+            "equation_slope_per_tt_day": -0.003332252644879764,
+            "goal_deg": null,
+            "interpolation_error_bound_established": false,
+            "jd_tt": 2460991.196027271,
+            "kind": "station",
+            "other": null,
+            "source_panel_jd_tt": [
+              2460991.180369,
+              2460991.211619
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "aria_comparison": {
+        "actual_count": 1,
+        "additional_actual_indices": [],
+        "ambiguous_edges": [],
+        "duplicate_actual_pairs": [],
+        "matches": [
+          {
+            "actual_index": 0,
+            "actual_minus_reference_seconds": -0.49535036087036133,
+            "reference_index": 0
+          }
+        ],
+        "missing_reference_indices": [],
+        "passed": true,
+        "reference_count": 1
+      },
+      "body": "saturn",
+      "grid_comparisons": {
+        "3-hour": {
+          "actual_count": 0,
+          "additional_actual_indices": [],
+          "ambiguous_edges": [],
+          "duplicate_actual_pairs": [],
+          "matches": [],
+          "missing_reference_indices": [
+            0
+          ],
+          "passed": false,
+          "reference_count": 1
+        },
+        "90-minute": {
+          "actual_count": 1,
+          "additional_actual_indices": [],
+          "ambiguous_edges": [],
+          "duplicate_actual_pairs": [],
+          "matches": [
+            {
+              "actual_index": 0,
+              "actual_minus_reference_seconds": -0.5366697907447815,
+              "reference_index": 0
+            }
+          ],
+          "missing_reference_indices": [],
+          "passed": true,
+          "reference_count": 1
+        },
+        "shifted-45-minute": {
+          "actual_count": 1,
+          "additional_actual_indices": [],
+          "ambiguous_edges": [],
+          "duplicate_actual_pairs": [],
+          "matches": [
+            {
+              "actual_index": 0,
+              "actual_minus_reference_seconds": -0.5928754806518555,
+              "reference_index": 0
+            }
+          ],
+          "missing_reference_indices": [],
+          "passed": true,
+          "reference_count": 1
+        }
+      },
+      "id": "2023-2025:station:saturn:None:0:0",
+      "passed": false,
+      "roots_by_grid": {
+        "3-hour": [],
+        "45-minute": [
+          {
+            "ambiguous": false,
+            "body": "saturn",
+            "direction": "direct-to-retrograde",
+            "equation_slope_per_tt_day": -0.0016563336699899724,
+            "goal_deg": null,
+            "interpolation_error_bound_established": false,
+            "jd_tt": 2460113.227634918,
+            "kind": "station",
+            "other": null,
+            "source_panel_jd_tt": [
+              2460113.2276291,
+              2460113.2588791
+            ]
+          }
+        ],
+        "90-minute": [
+          {
+            "ambiguous": false,
+            "body": "saturn",
+            "direction": "direct-to-retrograde",
+            "equation_slope_per_tt_day": -0.001656290379764999,
+            "goal_deg": null,
+            "interpolation_error_bound_established": false,
+            "jd_tt": 2460113.2276287065,
+            "kind": "station",
+            "other": null,
+            "source_panel_jd_tt": [
+              2460113.1651291,
+              2460113.2276291
+            ]
+          }
+        ],
+        "shifted-45-minute": [
+          {
+            "ambiguous": false,
+            "body": "saturn",
+            "direction": "direct-to-retrograde",
+            "equation_slope_per_tt_day": -0.001656056593220174,
+            "goal_deg": null,
+            "interpolation_error_bound_established": false,
+            "jd_tt": 2460113.227628056,
+            "kind": "station",
+            "other": null,
+            "source_panel_jd_tt": [
+              2460113.2120041,
+              2460113.2432541
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "aria_comparison": {
+        "actual_count": 1,
+        "additional_actual_indices": [
+          0
+        ],
+        "ambiguous_edges": [],
+        "duplicate_actual_pairs": [],
+        "matches": [],
+        "missing_reference_indices": [],
+        "passed": false,
+        "reference_count": 0
+      },
+      "body": "saturn",
+      "grid_comparisons": {
+        "3-hour": {
+          "actual_count": 1,
+          "additional_actual_indices": [
+            0
+          ],
+          "ambiguous_edges": [],
+          "duplicate_actual_pairs": [],
+          "matches": [],
+          "missing_reference_indices": [],
+          "passed": false,
+          "reference_count": 0
+        },
+        "90-minute": {
+          "actual_count": 2,
+          "additional_actual_indices": [
+            0,
+            1
+          ],
+          "ambiguous_edges": [],
+          "duplicate_actual_pairs": [],
+          "matches": [],
+          "missing_reference_indices": [],
+          "passed": false,
+          "reference_count": 0
+        },
+        "shifted-45-minute": {
+          "actual_count": 1,
+          "additional_actual_indices": [
+            0
+          ],
+          "ambiguous_edges": [],
+          "duplicate_actual_pairs": [],
+          "matches": [],
+          "missing_reference_indices": [],
+          "passed": false,
+          "reference_count": 0
+        }
+      },
+      "id": "2023-2025:station:saturn:None:0:1",
+      "passed": false,
+      "roots_by_grid": {
+        "3-hour": [
+          {
+            "ambiguous": false,
+            "body": "saturn",
+            "direction": "retrograde-to-direct",
+            "equation_slope_per_tt_day": 0.0017183772529652227,
+            "goal_deg": null,
+            "interpolation_error_bound_established": false,
+            "jd_tt": 2460252.792327516,
+            "kind": "station",
+            "other": null,
+            "source_panel_jd_tt": [
+              2460252.667329,
+              2460252.792329
+            ]
+          }
+        ],
+        "45-minute": [],
+        "90-minute": [
+          {
+            "ambiguous": false,
+            "body": "saturn",
+            "direction": "retrograde-to-direct",
+            "equation_slope_per_tt_day": 0.001718330053582892,
+            "goal_deg": null,
+            "interpolation_error_bound_established": false,
+            "jd_tt": 2460252.792327985,
+            "kind": "station",
+            "other": null,
+            "source_panel_jd_tt": [
+              2460252.729829,
+              2460252.792329
+            ]
+          },
+          {
+            "ambiguous": false,
+            "body": "saturn",
+            "direction": "retrograde-to-direct",
+            "equation_slope_per_tt_day": 0.0017183300665259045,
+            "goal_deg": null,
+            "interpolation_error_bound_established": false,
+            "jd_tt": 2460252.7923291293,
+            "kind": "station",
+            "other": null,
+            "source_panel_jd_tt": [
+              2460252.792329,
+              2460252.854829
+            ]
+          }
+        ],
+        "shifted-45-minute": [
+          {
+            "ambiguous": false,
+            "body": "saturn",
+            "direction": "retrograde-to-direct",
+            "equation_slope_per_tt_day": 0.0017183299575500937,
+            "goal_deg": null,
+            "interpolation_error_bound_established": false,
+            "jd_tt": 2460252.7923363363,
+            "kind": "station",
+            "other": null,
+            "source_panel_jd_tt": [
+              2460252.776704,
+              2460252.807954
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "aria_comparison": {
+        "actual_count": 1,
+        "additional_actual_indices": [],
+        "ambiguous_edges": [],
+        "duplicate_actual_pairs": [],
+        "matches": [
+          {
+            "actual_index": 0,
+            "actual_minus_reference_seconds": 0.7741659879684448,
+            "reference_index": 0
+          }
+        ],
+        "missing_reference_indices": [],
+        "passed": true,
+        "reference_count": 1
+      },
+      "body": "saturn",
+      "grid_comparisons": {
+        "3-hour": {
+          "actual_count": 1,
+          "additional_actual_indices": [],
+          "ambiguous_edges": [],
+          "duplicate_actual_pairs": [],
+          "matches": [
+            {
+              "actual_index": 0,
+              "actual_minus_reference_seconds": 0.8193880319595337,
+              "reference_index": 0
+            }
+          ],
+          "missing_reference_indices": [],
+          "passed": true,
+          "reference_count": 1
+        },
+        "90-minute": {
+          "actual_count": 0,
+          "additional_actual_indices": [],
+          "ambiguous_edges": [],
+          "duplicate_actual_pairs": [],
+          "matches": [],
+          "missing_reference_indices": [
+            0
+          ],
+          "passed": false,
+          "reference_count": 1
+        },
+        "shifted-45-minute": {
+          "actual_count": 1,
+          "additional_actual_indices": [],
+          "ambiguous_edges": [],
+          "duplicate_actual_pairs": [],
+          "matches": [
+            {
+              "actual_index": 0,
+              "actual_minus_reference_seconds": -0.3519594669342041,
+              "reference_index": 0
+            }
+          ],
+          "missing_reference_indices": [],
+          "passed": true,
+          "reference_count": 1
+        }
+      },
+      "id": "2023-2025:station:saturn:None:0:2",
+      "passed": false,
+      "roots_by_grid": {
+        "3-hour": [
+          {
+            "ambiguous": false,
+            "body": "saturn",
+            "direction": "direct-to-retrograde",
+            "equation_slope_per_tt_day": -0.0016595859549315025,
+            "goal_deg": null,
+            "interpolation_error_bound_established": false,
+            "jd_tt": 2460491.299216317,
+            "kind": "station",
+            "other": null,
+            "source_panel_jd_tt": [
+              2460491.2992154,
+              2460491.4242154
+            ]
+          }
+        ],
+        "45-minute": [
+          {
+            "ambiguous": false,
+            "body": "saturn",
+            "direction": "direct-to-retrograde",
+            "equation_slope_per_tt_day": -0.0016595978025650676,
+            "goal_deg": null,
+            "interpolation_error_bound_established": false,
+            "jd_tt": 2460491.2992068334,
+            "kind": "station",
+            "other": null,
+            "source_panel_jd_tt": [
+              2460491.2679654,
+              2460491.2992154
+            ]
+          }
+        ],
+        "90-minute": [],
+        "shifted-45-minute": [
+          {
+            "ambiguous": false,
+            "body": "saturn",
+            "direction": "direct-to-retrograde",
+            "equation_slope_per_tt_day": -0.0016595329415793874,
+            "goal_deg": null,
+            "interpolation_error_bound_established": false,
+            "jd_tt": 2460491.2992027598,
+            "kind": "station",
+            "other": null,
+            "source_panel_jd_tt": [
+              2460491.2835904,
+              2460491.3148404
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "aria_comparison": {
+        "actual_count": 1,
+        "additional_actual_indices": [],
+        "ambiguous_edges": [],
+        "duplicate_actual_pairs": [],
+        "matches": [
+          {
+            "actual_index": 0,
+            "actual_minus_reference_seconds": -0.5337730050086975,
+            "reference_index": 0
+          }
+        ],
+        "missing_reference_indices": [],
+        "passed": true,
+        "reference_count": 1
+      },
+      "body": "saturn",
+      "grid_comparisons": {
+        "3-hour": {
+          "actual_count": 1,
+          "additional_actual_indices": [],
+          "ambiguous_edges": [],
+          "duplicate_actual_pairs": [],
+          "matches": [
+            {
+              "actual_index": 0,
+              "actual_minus_reference_seconds": -0.6130725145339966,
+              "reference_index": 0
+            }
+          ],
+          "missing_reference_indices": [],
+          "passed": true,
+          "reference_count": 1
+        },
+        "90-minute": {
+          "actual_count": 2,
+          "additional_actual_indices": [],
+          "ambiguous_edges": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              1
+            ]
+          ],
+          "duplicate_actual_pairs": [],
+          "matches": [],
+          "missing_reference_indices": [],
+          "passed": false,
+          "reference_count": 1
+        },
+        "shifted-45-minute": {
+          "actual_count": 1,
+          "additional_actual_indices": [],
+          "ambiguous_edges": [],
+          "duplicate_actual_pairs": [],
+          "matches": [
+            {
+              "actual_index": 0,
+              "actual_minus_reference_seconds": -1.366397738456726,
+              "reference_index": 0
+            }
+          ],
+          "missing_reference_indices": [],
+          "passed": true,
+          "reference_count": 1
+        }
+      },
+      "id": "2023-2025:station:saturn:None:0:3",
+      "passed": false,
+      "roots_by_grid": {
+        "3-hour": [
+          {
+            "ambiguous": false,
+            "body": "saturn",
+            "direction": "retrograde-to-direct",
+            "equation_slope_per_tt_day": 0.0017776714186542133,
+            "goal_deg": null,
+            "interpolation_error_bound_established": false,
+            "jd_tt": 2460630.098829782,
+            "kind": "station",
+            "other": null,
+            "source_panel_jd_tt": [
+              2460630.0988284,
+              2460630.2238284
+            ]
+          }
+        ],
+        "45-minute": [
+          {
+            "ambiguous": false,
+            "body": "saturn",
+            "direction": "retrograde-to-direct",
+            "equation_slope_per_tt_day": 0.001777236324017527,
+            "goal_deg": null,
+            "interpolation_error_bound_established": false,
+            "jd_tt": 2460630.098836878,
+            "kind": "station",
+            "other": null,
+            "source_panel_jd_tt": [
+              2460630.0988284,
+              2460630.1300784
+            ]
+          }
+        ],
+        "90-minute": [
+          {
+            "ambiguous": false,
+            "body": "saturn",
+            "direction": "retrograde-to-direct",
+            "equation_slope_per_tt_day": 0.001777542577796131,
+            "goal_deg": null,
+            "interpolation_error_bound_established": false,
+            "jd_tt": 2460630.0988280927,
+            "kind": "station",
+            "other": null,
+            "source_panel_jd_tt": [
+              2460630.0363284,
+              2460630.0988284
+            ]
+          },
+          {
+            "ambiguous": false,
+            "body": "saturn",
+            "direction": "retrograde-to-direct",
+            "equation_slope_per_tt_day": 0.001777542597173905,
+            "goal_deg": null,
+            "interpolation_error_bound_established": false,
+            "jd_tt": 2460630.098831112,
+            "kind": "station",
+            "other": null,
+            "source_panel_jd_tt": [
+              2460630.0988284,
+              2460630.1613284
+            ]
+          }
+        ],
+        "shifted-45-minute": [
+          {
+            "ambiguous": false,
+            "body": "saturn",
+            "direction": "retrograde-to-direct",
+            "equation_slope_per_tt_day": 0.0017771134796057985,
+            "goal_deg": null,
+            "interpolation_error_bound_established": false,
+            "jd_tt": 2460630.098821063,
+            "kind": "station",
+            "other": null,
+            "source_panel_jd_tt": [
+              2460630.0832034,
+              2460630.1144534
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "aria_comparison": {
+        "actual_count": 1,
+        "additional_actual_indices": [],
+        "ambiguous_edges": [],
+        "duplicate_actual_pairs": [],
+        "matches": [
+          {
+            "actual_index": 0,
+            "actual_minus_reference_seconds": 0.15171915292739868,
+            "reference_index": 0
+          }
+        ],
+        "missing_reference_indices": [],
+        "passed": true,
+        "reference_count": 1
+      },
+      "body": "saturn",
+      "grid_comparisons": {
+        "3-hour": {
+          "actual_count": 1,
+          "additional_actual_indices": [],
+          "ambiguous_edges": [],
+          "duplicate_actual_pairs": [],
+          "matches": [
+            {
+              "actual_index": 0,
+              "actual_minus_reference_seconds": 0.1977860927581787,
+              "reference_index": 0
+            }
+          ],
+          "missing_reference_indices": [],
+          "passed": true,
+          "reference_count": 1
+        },
+        "90-minute": {
+          "actual_count": 1,
+          "additional_actual_indices": [],
+          "ambiguous_edges": [],
+          "duplicate_actual_pairs": [],
+          "matches": [
+            {
+              "actual_index": 0,
+              "actual_minus_reference_seconds": -0.034359097480773926,
+              "reference_index": 0
+            }
+          ],
+          "missing_reference_indices": [],
+          "passed": true,
+          "reference_count": 1
+        },
+        "shifted-45-minute": {
+          "actual_count": 1,
+          "additional_actual_indices": [],
+          "ambiguous_edges": [],
+          "duplicate_actual_pairs": [],
+          "matches": [
+            {
+              "actual_index": 0,
+              "actual_minus_reference_seconds": 0.6964758038520813,
+              "reference_index": 0
+            }
+          ],
+          "missing_reference_indices": [],
+          "passed": true,
+          "reference_count": 1
+        }
+      },
+      "id": "2023-2025:station:saturn:None:0:4",
+      "passed": true,
+      "roots_by_grid": {
+        "3-hour": [
+          {
+            "ambiguous": false,
+            "body": "saturn",
+            "direction": "direct-to-retrograde",
+            "equation_slope_per_tt_day": -0.001694083765171547,
+            "goal_deg": null,
+            "interpolation_error_bound_established": false,
+            "jd_tt": 2460869.6707764235,
+            "kind": "station",
+            "other": null,
+            "source_panel_jd_tt": [
+              2460869.545777,
+              2460869.670777
+            ]
+          }
+        ],
+        "45-minute": [
+          {
+            "ambiguous": false,
+            "body": "saturn",
+            "direction": "direct-to-retrograde",
+            "equation_slope_per_tt_day": -0.0016944110090924243,
+            "goal_deg": null,
+            "interpolation_error_bound_established": false,
+            "jd_tt": 2460869.6707741343,
+            "kind": "station",
+            "other": null,
+            "source_panel_jd_tt": [
+              2460869.639527,
+              2460869.670777
+            ]
+          }
+        ],
+        "90-minute": [
+          {
+            "ambiguous": false,
+            "body": "saturn",
+            "direction": "direct-to-retrograde",
+            "equation_slope_per_tt_day": -0.0016940108878078317,
+            "goal_deg": null,
+            "interpolation_error_bound_established": false,
+            "jd_tt": 2460869.6707737367,
+            "kind": "station",
+            "other": null,
+            "source_panel_jd_tt": [
+              2460869.608277,
+              2460869.670777
+            ]
+          }
+        ],
+        "shifted-45-minute": [
+          {
+            "ambiguous": false,
+            "body": "saturn",
+            "direction": "direct-to-retrograde",
+            "equation_slope_per_tt_day": -0.0016945522196030417,
+            "goal_deg": null,
+            "interpolation_error_bound_established": false,
+            "jd_tt": 2460869.6707821954,
+            "kind": "station",
+            "other": null,
+            "source_panel_jd_tt": [
+              2460869.655152,
+              2460869.686402
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "aria_comparison": {
+        "actual_count": 1,
+        "additional_actual_indices": [],
+        "ambiguous_edges": [],
+        "duplicate_actual_pairs": [],
+        "matches": [
+          {
+            "actual_index": 0,
+            "actual_minus_reference_seconds": 0.042888522148132324,
+            "reference_index": 0
+          }
+        ],
+        "missing_reference_indices": [],
+        "passed": true,
+        "reference_count": 1
+      },
+      "body": "saturn",
+      "grid_comparisons": {
+        "3-hour": {
+          "actual_count": 1,
+          "additional_actual_indices": [],
+          "ambiguous_edges": [],
+          "duplicate_actual_pairs": [],
+          "matches": [
+            {
+              "actual_index": 0,
+              "actual_minus_reference_seconds": -0.0012069940567016602,
+              "reference_index": 0
+            }
+          ],
+          "missing_reference_indices": [],
+          "passed": true,
+          "reference_count": 1
+        },
+        "90-minute": {
+          "actual_count": 1,
+          "additional_actual_indices": [],
+          "ambiguous_edges": [],
+          "duplicate_actual_pairs": [],
+          "matches": [
+            {
+              "actual_index": 0,
+              "actual_minus_reference_seconds": -0.03838241100311279,
+              "reference_index": 0
+            }
+          ],
+          "missing_reference_indices": [],
+          "passed": true,
+          "reference_count": 1
+        },
+        "shifted-45-minute": {
+          "actual_count": 1,
+          "additional_actual_indices": [],
+          "ambiguous_edges": [],
+          "duplicate_actual_pairs": [],
+          "matches": [
+            {
+              "actual_index": 0,
+              "actual_minus_reference_seconds": -0.07660388946533203,
+              "reference_index": 0
+            }
+          ],
+          "missing_reference_indices": [],
+          "passed": true,
+          "reference_count": 1
+        }
+      },
+      "id": "2023-2025:station:saturn:None:0:5",
+      "passed": true,
+      "roots_by_grid": {
+        "3-hour": [
+          {
+            "ambiguous": false,
+            "body": "saturn",
+            "direction": "retrograde-to-direct",
+            "equation_slope_per_tt_day": 0.0017878519495227142,
+            "goal_deg": null,
+            "interpolation_error_bound_established": false,
+            "jd_tt": 2461007.6629123352,
+            "kind": "station",
+            "other": null,
+            "source_panel_jd_tt": [
+              2461007.537914,
+              2461007.662914
+            ]
+          }
+        ],
+        "45-minute": [
+          {
+            "ambiguous": false,
+            "body": "saturn",
+            "direction": "retrograde-to-direct",
+            "equation_slope_per_tt_day": 0.0017881179050151833,
+            "goal_deg": null,
+            "interpolation_error_bound_established": false,
+            "jd_tt": 2461007.662912349,
+            "kind": "station",
+            "other": null,
+            "source_panel_jd_tt": [
+              2461007.631664,
+              2461007.662914
+            ]
+          }
+        ],
+        "90-minute": [
+          {
+            "ambiguous": false,
+            "body": "saturn",
+            "direction": "retrograde-to-direct",
+            "equation_slope_per_tt_day": 0.0017879151840676693,
+            "goal_deg": null,
+            "interpolation_error_bound_established": false,
+            "jd_tt": 2461007.662911905,
+            "kind": "station",
+            "other": null,
+            "source_panel_jd_tt": [
+              2461007.600414,
+              2461007.662914
+            ]
+          }
+        ],
+        "shifted-45-minute": [
+          {
+            "ambiguous": false,
+            "body": "saturn",
+            "direction": "retrograde-to-direct",
+            "equation_slope_per_tt_day": 0.001787914770460013,
+            "goal_deg": null,
+            "interpolation_error_bound_established": false,
+            "jd_tt": 2461007.6629114626,
+            "kind": "station",
+            "other": null,
+            "source_panel_jd_tt": [
+              2461007.647289,
+              2461007.678539
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "aria_comparison": {
+        "actual_count": 1,
+        "additional_actual_indices": [
+          0
+        ],
+        "ambiguous_edges": [],
+        "duplicate_actual_pairs": [],
+        "matches": [],
+        "missing_reference_indices": [],
+        "passed": false,
+        "reference_count": 0
+      },
+      "body": "uranus",
+      "grid_comparisons": {
+        "3-hour": {
+          "actual_count": 1,
+          "additional_actual_indices": [
+            0
+          ],
+          "ambiguous_edges": [],
+          "duplicate_actual_pairs": [],
+          "matches": [],
+          "missing_reference_indices": [],
+          "passed": false,
+          "reference_count": 0
+        },
+        "90-minute": {
+          "actual_count": 0,
+          "additional_actual_indices": [],
+          "ambiguous_edges": [],
+          "duplicate_actual_pairs": [],
+          "matches": [],
+          "missing_reference_indices": [],
+          "passed": true,
+          "reference_count": 0
+        },
+        "shifted-45-minute": {
+          "actual_count": 1,
+          "additional_actual_indices": [
+            0
+          ],
+          "ambiguous_edges": [],
+          "duplicate_actual_pairs": [],
+          "matches": [],
+          "missing_reference_indices": [],
+          "passed": false,
+          "reference_count": 0
+        }
+      },
+      "id": "2023-2025:station:uranus:None:0:0",
+      "passed": false,
+      "roots_by_grid": {
+        "3-hour": [
+          {
+            "ambiguous": false,
+            "body": "uranus",
+            "direction": "retrograde-to-direct",
+            "equation_slope_per_tt_day": 0.0008620612574866014,
+            "goal_deg": null,
+            "interpolation_error_bound_established": false,
+            "jd_tt": 2459967.4577158107,
+            "kind": "station",
+            "other": null,
+            "source_panel_jd_tt": [
+              2459967.4577075,
+              2459967.5827075
+            ]
+          }
+        ],
+        "45-minute": [],
+        "90-minute": [],
+        "shifted-45-minute": [
+          {
+            "ambiguous": false,
+            "body": "uranus",
+            "direction": "retrograde-to-direct",
+            "equation_slope_per_tt_day": 0.0008619328461177087,
+            "goal_deg": null,
+            "interpolation_error_bound_established": false,
+            "jd_tt": 2459967.457714644,
+            "kind": "station",
+            "other": null,
+            "source_panel_jd_tt": [
+              2459967.4420825,
+              2459967.4733325
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "aria_comparison": {
+        "actual_count": 1,
+        "additional_actual_indices": [
+          0
+        ],
+        "ambiguous_edges": [],
+        "duplicate_actual_pairs": [],
+        "matches": [],
+        "missing_reference_indices": [],
+        "passed": false,
+        "reference_count": 0
+      },
+      "body": "uranus",
+      "grid_comparisons": {
+        "3-hour": {
+          "actual_count": 1,
+          "additional_actual_indices": [
+            0
+          ],
+          "ambiguous_edges": [],
+          "duplicate_actual_pairs": [],
+          "matches": [],
+          "missing_reference_indices": [],
+          "passed": false,
+          "reference_count": 0
+        },
+        "90-minute": {
+          "actual_count": 1,
+          "additional_actual_indices": [
+            0
+          ],
+          "ambiguous_edges": [],
+          "duplicate_actual_pairs": [],
+          "matches": [],
+          "missing_reference_indices": [],
+          "passed": false,
+          "reference_count": 0
+        },
+        "shifted-45-minute": {
+          "actual_count": 1,
+          "additional_actual_indices": [
+            0
+          ],
+          "ambiguous_edges": [],
+          "duplicate_actual_pairs": [],
+          "matches": [],
+          "missing_reference_indices": [],
+          "passed": false,
+          "reference_count": 0
+        }
+      },
+      "id": "2023-2025:station:uranus:None:0:1",
+      "passed": false,
+      "roots_by_grid": {
+        "3-hour": [
+          {
+            "ambiguous": false,
+            "body": "uranus",
+            "direction": "direct-to-retrograde",
+            "equation_slope_per_tt_day": -0.0008517955269161723,
+            "goal_deg": null,
+            "interpolation_error_bound_established": false,
+            "jd_tt": 2460185.6108375336,
+            "kind": "station",
+            "other": null,
+            "source_panel_jd_tt": [
+              2460185.6108338,
+              2460185.7358338
+            ]
+          }
+        ],
+        "45-minute": [],
+        "90-minute": [
+          {
+            "ambiguous": false,
+            "body": "uranus",
+            "direction": "direct-to-retrograde",
+            "equation_slope_per_tt_day": -0.000851961744957811,
+            "goal_deg": null,
+            "interpolation_error_bound_established": false,
+            "jd_tt": 2460185.6108308868,
+            "kind": "station",
+            "other": null,
+            "source_panel_jd_tt": [
+              2460185.5483338,
+              2460185.6108338
+            ]
+          }
+        ],
+        "shifted-45-minute": [
+          {
+            "ambiguous": false,
+            "body": "uranus",
+            "direction": "direct-to-retrograde",
+            "equation_slope_per_tt_day": -0.0008514919487801514,
+            "goal_deg": null,
+            "interpolation_error_bound_established": false,
+            "jd_tt": 2460185.61082598,
+            "kind": "station",
+            "other": null,
+            "source_panel_jd_tt": [
+              2460185.5952088,
+              2460185.6264588
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "aria_comparison": {
+        "actual_count": 1,
+        "additional_actual_indices": [],
+        "ambiguous_edges": [],
+        "duplicate_actual_pairs": [],
+        "matches": [
+          {
+            "actual_index": 0,
+            "actual_minus_reference_seconds": 1.0683104395866394,
+            "reference_index": 0
+          }
+        ],
+        "missing_reference_indices": [],
+        "passed": true,
+        "reference_count": 1
+      },
+      "body": "uranus",
+      "grid_comparisons": {
+        "3-hour": {
+          "actual_count": 0,
+          "additional_actual_indices": [],
+          "ambiguous_edges": [],
+          "duplicate_actual_pairs": [],
+          "matches": [],
+          "missing_reference_indices": [
+            0
+          ],
+          "passed": false,
+          "reference_count": 1
+        },
+        "90-minute": {
+          "actual_count": 1,
+          "additional_actual_indices": [],
+          "ambiguous_edges": [],
+          "duplicate_actual_pairs": [],
+          "matches": [
+            {
+              "actual_index": 0,
+              "actual_minus_reference_seconds": 1.5201285481452942,
+              "reference_index": 0
+            }
+          ],
+          "missing_reference_indices": [],
+          "passed": true,
+          "reference_count": 1
+        },
+        "shifted-45-minute": {
+          "actual_count": 1,
+          "additional_actual_indices": [],
+          "ambiguous_edges": [],
+          "duplicate_actual_pairs": [],
+          "matches": [
+            {
+              "actual_index": 0,
+              "actual_minus_reference_seconds": 1.0015636682510376,
+              "reference_index": 0
+            }
+          ],
+          "missing_reference_indices": [],
+          "passed": true,
+          "reference_count": 1
+        }
+      },
+      "id": "2023-2025:station:uranus:None:0:2",
+      "passed": false,
+      "roots_by_grid": {
+        "3-hour": [],
+        "45-minute": [
+          {
+            "ambiguous": false,
+            "body": "uranus",
+            "direction": "retrograde-to-direct",
+            "equation_slope_per_tt_day": 0.0008650287663570968,
+            "goal_deg": null,
+            "interpolation_error_bound_established": false,
+            "jd_tt": 2460336.817282233,
+            "kind": "station",
+            "other": null,
+            "source_panel_jd_tt": [
+              2460336.786044,
+              2460336.817294
+            ]
+          }
+        ],
+        "90-minute": [
+          {
+            "ambiguous": false,
+            "body": "uranus",
+            "direction": "retrograde-to-direct",
+            "equation_slope_per_tt_day": 0.0008651939309956841,
+            "goal_deg": null,
+            "interpolation_error_bound_established": false,
+            "jd_tt": 2460336.817299827,
+            "kind": "station",
+            "other": null,
+            "source_panel_jd_tt": [
+              2460336.817294,
+              2460336.879794
+            ]
+          }
+        ],
+        "shifted-45-minute": [
+          {
+            "ambiguous": false,
+            "body": "uranus",
+            "direction": "retrograde-to-direct",
+            "equation_slope_per_tt_day": 0.0008650286569262863,
+            "goal_deg": null,
+            "interpolation_error_bound_established": false,
+            "jd_tt": 2460336.817293825,
+            "kind": "station",
+            "other": null,
+            "source_panel_jd_tt": [
+              2460336.801669,
+              2460336.832919
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "aria_comparison": {
+        "actual_count": 1,
+        "additional_actual_indices": [],
+        "ambiguous_edges": [],
+        "duplicate_actual_pairs": [],
+        "matches": [
+          {
+            "actual_index": 0,
+            "actual_minus_reference_seconds": 0.6261080503463745,
+            "reference_index": 0
+          }
+        ],
+        "missing_reference_indices": [],
+        "passed": true,
+        "reference_count": 1
+      },
+      "body": "uranus",
+      "grid_comparisons": {
+        "3-hour": {
+          "actual_count": 1,
+          "additional_actual_indices": [],
+          "ambiguous_edges": [],
+          "duplicate_actual_pairs": [],
+          "matches": [
+            {
+              "actual_index": 0,
+              "actual_minus_reference_seconds": 0.5846276879310608,
+              "reference_index": 0
+            }
+          ],
+          "missing_reference_indices": [],
+          "passed": true,
+          "reference_count": 1
+        },
+        "90-minute": {
+          "actual_count": 1,
+          "additional_actual_indices": [],
+          "ambiguous_edges": [],
+          "duplicate_actual_pairs": [],
+          "matches": [
+            {
+              "actual_index": 0,
+              "actual_minus_reference_seconds": 0.8583739399909973,
+              "reference_index": 0
+            }
+          ],
+          "missing_reference_indices": [],
+          "passed": true,
+          "reference_count": 1
+        },
+        "shifted-45-minute": {
+          "actual_count": 1,
+          "additional_actual_indices": [],
+          "ambiguous_edges": [],
+          "duplicate_actual_pairs": [],
+          "matches": [
+            {
+              "actual_index": 0,
+              "actual_minus_reference_seconds": 0.8009612560272217,
+              "reference_index": 0
+            }
+          ],
+          "missing_reference_indices": [],
+          "passed": true,
+          "reference_count": 1
+        }
+      },
+      "id": "2023-2025:station:uranus:None:0:3",
+      "passed": true,
+      "roots_by_grid": {
+        "3-hour": [
+          {
+            "ambiguous": false,
+            "body": "uranus",
+            "direction": "direct-to-retrograde",
+            "equation_slope_per_tt_day": -0.0008589228015976126,
+            "goal_deg": null,
+            "interpolation_error_bound_established": false,
+            "jd_tt": 2460555.1380047766,
+            "kind": "station",
+            "other": null,
+            "source_panel_jd_tt": [
+              2460555.0130063,
+              2460555.1380063
+            ]
+          }
+        ],
+        "45-minute": [
+          {
+            "ambiguous": false,
+            "body": "uranus",
+            "direction": "direct-to-retrograde",
+            "equation_slope_per_tt_day": -0.0008593074520831893,
+            "goal_deg": null,
+            "interpolation_error_bound_established": false,
+            "jd_tt": 2460555.13799801,
+            "kind": "station",
+            "other": null,
+            "source_panel_jd_tt": [
+              2460555.1067563,
+              2460555.1380063
+            ]
+          }
+        ],
+        "90-minute": [
+          {
+            "ambiguous": false,
+            "body": "uranus",
+            "direction": "direct-to-retrograde",
+            "equation_slope_per_tt_day": -0.0008590128383810105,
+            "goal_deg": null,
+            "interpolation_error_bound_established": false,
+            "jd_tt": 2460555.138007945,
+            "kind": "station",
+            "other": null,
+            "source_panel_jd_tt": [
+              2460555.1380063,
+              2460555.2005063
+            ]
+          }
+        ],
+        "shifted-45-minute": [
+          {
+            "ambiguous": false,
+            "body": "uranus",
+            "direction": "direct-to-retrograde",
+            "equation_slope_per_tt_day": -0.0008593072303999859,
+            "goal_deg": null,
+            "interpolation_error_bound_established": false,
+            "jd_tt": 2460555.1380072804,
+            "kind": "station",
+            "other": null,
+            "source_panel_jd_tt": [
+              2460555.1223813,
+              2460555.1536313
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "aria_comparison": {
+        "actual_count": 1,
+        "additional_actual_indices": [
+          0
+        ],
+        "ambiguous_edges": [],
+        "duplicate_actual_pairs": [],
+        "matches": [],
+        "missing_reference_indices": [],
+        "passed": false,
+        "reference_count": 0
+      },
+      "body": "uranus",
+      "grid_comparisons": {
+        "3-hour": {
+          "actual_count": 1,
+          "additional_actual_indices": [
+            0
+          ],
+          "ambiguous_edges": [],
+          "duplicate_actual_pairs": [],
+          "matches": [],
+          "missing_reference_indices": [],
+          "passed": false,
+          "reference_count": 0
+        },
+        "90-minute": {
+          "actual_count": 1,
+          "additional_actual_indices": [
+            0
+          ],
+          "ambiguous_edges": [],
+          "duplicate_actual_pairs": [],
+          "matches": [],
+          "missing_reference_indices": [],
+          "passed": false,
+          "reference_count": 0
+        },
+        "shifted-45-minute": {
+          "actual_count": 1,
+          "additional_actual_indices": [
+            0
+          ],
+          "ambiguous_edges": [],
+          "duplicate_actual_pairs": [],
+          "matches": [],
+          "missing_reference_indices": [],
+          "passed": false,
+          "reference_count": 0
+        }
+      },
+      "id": "2023-2025:station:uranus:None:0:4",
+      "passed": false,
+      "roots_by_grid": {
+        "3-hour": [
+          {
+            "ambiguous": false,
+            "body": "uranus",
+            "direction": "retrograde-to-direct",
+            "equation_slope_per_tt_day": 0.0008709007890744247,
+            "goal_deg": null,
+            "interpolation_error_bound_established": false,
+            "jd_tt": 2460706.1825957717,
+            "kind": "station",
+            "other": null,
+            "source_panel_jd_tt": [
+              2460706.1825868,
+              2460706.3075868
+            ]
+          }
+        ],
+        "45-minute": [],
+        "90-minute": [
+          {
+            "ambiguous": false,
+            "body": "uranus",
+            "direction": "retrograde-to-direct",
+            "equation_slope_per_tt_day": 0.0008708046022865345,
+            "goal_deg": null,
+            "interpolation_error_bound_established": false,
+            "jd_tt": 2460706.1826017033,
+            "kind": "station",
+            "other": null,
+            "source_panel_jd_tt": [
+              2460706.1825868,
+              2460706.2450868
+            ]
+          }
+        ],
+        "shifted-45-minute": [
+          {
+            "ambiguous": false,
+            "body": "uranus",
+            "direction": "retrograde-to-direct",
+            "equation_slope_per_tt_day": 0.0008711684194877491,
+            "goal_deg": null,
+            "interpolation_error_bound_established": false,
+            "jd_tt": 2460706.1825899375,
+            "kind": "station",
+            "other": null,
+            "source_panel_jd_tt": [
+              2460706.1669618,
+              2460706.1982118
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "aria_comparison": {
+        "actual_count": 1,
+        "additional_actual_indices": [],
+        "ambiguous_edges": [],
+        "duplicate_actual_pairs": [],
+        "matches": [
+          {
+            "actual_index": 0,
+            "actual_minus_reference_seconds": -0.715908408164978,
+            "reference_index": 0
+          }
+        ],
+        "missing_reference_indices": [],
+        "passed": true,
+        "reference_count": 1
+      },
+      "body": "uranus",
+      "grid_comparisons": {
+        "3-hour": {
+          "actual_count": 2,
+          "additional_actual_indices": [],
+          "ambiguous_edges": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              1
+            ]
+          ],
+          "duplicate_actual_pairs": [],
+          "matches": [],
+          "missing_reference_indices": [],
+          "passed": false,
+          "reference_count": 1
+        },
+        "90-minute": {
+          "actual_count": 1,
+          "additional_actual_indices": [],
+          "ambiguous_edges": [],
+          "duplicate_actual_pairs": [],
+          "matches": [
+            {
+              "actual_index": 0,
+              "actual_minus_reference_seconds": -0.14644861221313477,
+              "reference_index": 0
+            }
+          ],
+          "missing_reference_indices": [],
+          "passed": true,
+          "reference_count": 1
+        },
+        "shifted-45-minute": {
+          "actual_count": 1,
+          "additional_actual_indices": [],
+          "ambiguous_edges": [],
+          "duplicate_actual_pairs": [],
+          "matches": [
+            {
+              "actual_index": 0,
+              "actual_minus_reference_seconds": -0.43954700231552124,
+              "reference_index": 0
+            }
+          ],
+          "missing_reference_indices": [],
+          "passed": true,
+          "reference_count": 1
+        }
+      },
+      "id": "2023-2025:station:uranus:None:0:5",
+      "passed": false,
+      "roots_by_grid": {
+        "3-hour": [
+          {
+            "ambiguous": false,
+            "body": "uranus",
+            "direction": "direct-to-retrograde",
+            "equation_slope_per_tt_day": -0.0008564208230229026,
+            "goal_deg": null,
+            "interpolation_error_bound_established": false,
+            "jd_tt": 2460924.7031217343,
+            "kind": "station",
+            "other": null,
+            "source_panel_jd_tt": [
+              2460924.5781287,
+              2460924.7031287
+            ]
+          },
+          {
+            "ambiguous": false,
+            "body": "uranus",
+            "direction": "direct-to-retrograde",
+            "equation_slope_per_tt_day": -0.0008564208046257202,
+            "goal_deg": null,
+            "interpolation_error_bound_established": false,
+            "jd_tt": 2460924.7031289423,
+            "kind": "station",
+            "other": null,
+            "source_panel_jd_tt": [
+              2460924.7031287,
+              2460924.8281287
+            ]
+          }
+        ],
+        "45-minute": [
+          {
+            "ambiguous": false,
+            "body": "uranus",
+            "direction": "direct-to-retrograde",
+            "equation_slope_per_tt_day": -0.0008563412654737428,
+            "goal_deg": null,
+            "interpolation_error_bound_established": false,
+            "jd_tt": 2460924.703132809,
+            "kind": "station",
+            "other": null,
+            "source_panel_jd_tt": [
+              2460924.7031287,
+              2460924.7343787
+            ]
+          }
+        ],
+        "90-minute": [
+          {
+            "ambiguous": false,
+            "body": "uranus",
+            "direction": "direct-to-retrograde",
+            "equation_slope_per_tt_day": -0.0008563925669010582,
+            "goal_deg": null,
+            "interpolation_error_bound_established": false,
+            "jd_tt": 2460924.703131114,
+            "kind": "station",
+            "other": null,
+            "source_panel_jd_tt": [
+              2460924.7031287,
+              2460924.7656287
+            ]
+          }
+        ],
+        "shifted-45-minute": [
+          {
+            "ambiguous": false,
+            "body": "uranus",
+            "direction": "direct-to-retrograde",
+            "equation_slope_per_tt_day": -0.0008563406906419794,
+            "goal_deg": null,
+            "interpolation_error_bound_established": false,
+            "jd_tt": 2460924.703127722,
+            "kind": "station",
+            "other": null,
+            "source_panel_jd_tt": [
+              2460924.6875037,
+              2460924.7187537
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "aria_comparison": {
+        "actual_count": 1,
+        "additional_actual_indices": [],
+        "ambiguous_edges": [],
+        "duplicate_actual_pairs": [],
+        "matches": [
+          {
+            "actual_index": 0,
+            "actual_minus_reference_seconds": -0.8306130766868591,
+            "reference_index": 0
+          }
+        ],
+        "missing_reference_indices": [],
+        "passed": true,
+        "reference_count": 1
+      },
+      "body": "neptune",
+      "grid_comparisons": {
+        "3-hour": {
+          "actual_count": 1,
+          "additional_actual_indices": [],
+          "ambiguous_edges": [],
+          "duplicate_actual_pairs": [],
+          "matches": [
+            {
+              "actual_index": 0,
+              "actual_minus_reference_seconds": -0.12150406837463379,
+              "reference_index": 0
+            }
+          ],
+          "missing_reference_indices": [],
+          "passed": true,
+          "reference_count": 1
+        },
+        "90-minute": {
+          "actual_count": 2,
+          "additional_actual_indices": [],
+          "ambiguous_edges": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              1
+            ]
+          ],
+          "duplicate_actual_pairs": [],
+          "matches": [],
+          "missing_reference_indices": [],
+          "passed": false,
+          "reference_count": 1
+        },
+        "shifted-45-minute": {
+          "actual_count": 1,
+          "additional_actual_indices": [],
+          "ambiguous_edges": [],
+          "duplicate_actual_pairs": [],
+          "matches": [
+            {
+              "actual_index": 0,
+              "actual_minus_reference_seconds": -3.0988767743110657,
+              "reference_index": 0
+            }
+          ],
+          "missing_reference_indices": [],
+          "passed": true,
+          "reference_count": 1
+        }
+      },
+      "id": "2023-2025:station:neptune:None:0:0",
+      "passed": false,
+      "roots_by_grid": {
+        "3-hour": [
+          {
+            "ambiguous": false,
+            "body": "neptune",
+            "direction": "direct-to-retrograde",
+            "equation_slope_per_tt_day": -0.0005211973855004885,
+            "goal_deg": null,
+            "interpolation_error_bound_established": false,
+            "jd_tt": 2460126.380631548,
+            "kind": "station",
+            "other": null,
+            "source_panel_jd_tt": [
+              2460126.3806232,
+              2460126.5056232
+            ]
+          }
+        ],
+        "45-minute": [
+          {
+            "ambiguous": false,
+            "body": "neptune",
+            "direction": "direct-to-retrograde",
+            "equation_slope_per_tt_day": -0.0005208510769872009,
+            "goal_deg": null,
+            "interpolation_error_bound_established": false,
+            "jd_tt": 2460126.380632954,
+            "kind": "station",
+            "other": null,
+            "source_panel_jd_tt": [
+              2460126.3806232,
+              2460126.4118732
+            ]
+          }
+        ],
+        "90-minute": [
+          {
+            "ambiguous": false,
+            "body": "neptune",
+            "direction": "direct-to-retrograde",
+            "equation_slope_per_tt_day": -0.0005210164036651987,
+            "goal_deg": null,
+            "interpolation_error_bound_established": false,
+            "jd_tt": 2460126.380609877,
+            "kind": "station",
+            "other": null,
+            "source_panel_jd_tt": [
+              2460126.3181232,
+              2460126.3806232
+            ]
+          },
+          {
+            "ambiguous": false,
+            "body": "neptune",
+            "direction": "direct-to-retrograde",
+            "equation_slope_per_tt_day": -0.0005210163132801692,
+            "goal_deg": null,
+            "interpolation_error_bound_established": false,
+            "jd_tt": 2460126.3806243576,
+            "kind": "station",
+            "other": null,
+            "source_panel_jd_tt": [
+              2460126.3806232,
+              2460126.4431232
+            ]
+          }
+        ],
+        "shifted-45-minute": [
+          {
+            "ambiguous": false,
+            "body": "neptune",
+            "direction": "direct-to-retrograde",
+            "equation_slope_per_tt_day": -0.000520914578653312,
+            "goal_deg": null,
+            "interpolation_error_bound_established": false,
+            "jd_tt": 2460126.3805970876,
+            "kind": "station",
+            "other": null,
+            "source_panel_jd_tt": [
+              2460126.3649982,
+              2460126.3962482
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "aria_comparison": {
+        "actual_count": 1,
+        "additional_actual_indices": [],
+        "ambiguous_edges": [],
+        "duplicate_actual_pairs": [],
+        "matches": [
+          {
+            "actual_index": 0,
+            "actual_minus_reference_seconds": 2.139115333557129,
+            "reference_index": 0
+          }
+        ],
+        "missing_reference_indices": [],
+        "passed": true,
+        "reference_count": 1
+      },
+      "body": "neptune",
+      "grid_comparisons": {
+        "3-hour": {
+          "actual_count": 1,
+          "additional_actual_indices": [],
+          "ambiguous_edges": [],
+          "duplicate_actual_pairs": [],
+          "matches": [
+            {
+              "actual_index": 0,
+              "actual_minus_reference_seconds": 2.005179226398468,
+              "reference_index": 0
+            }
+          ],
+          "missing_reference_indices": [],
+          "passed": true,
+          "reference_count": 1
+        },
+        "90-minute": {
+          "actual_count": 1,
+          "additional_actual_indices": [],
+          "ambiguous_edges": [],
+          "duplicate_actual_pairs": [],
+          "matches": [
+            {
+              "actual_index": 0,
+              "actual_minus_reference_seconds": 3.626614809036255,
+              "reference_index": 0
+            }
+          ],
+          "missing_reference_indices": [],
+          "passed": true,
+          "reference_count": 1
+        },
+        "shifted-45-minute": {
+          "actual_count": 1,
+          "additional_actual_indices": [],
+          "ambiguous_edges": [],
+          "duplicate_actual_pairs": [],
+          "matches": [
+            {
+              "actual_index": 0,
+              "actual_minus_reference_seconds": 2.477113902568817,
+              "reference_index": 0
+            }
+          ],
+          "missing_reference_indices": [],
+          "passed": true,
+          "reference_count": 1
+        }
+      },
+      "id": "2023-2025:station:neptune:None:0:1",
+      "passed": true,
+      "roots_by_grid": {
+        "3-hour": [
+          {
+            "ambiguous": false,
+            "body": "neptune",
+            "direction": "retrograde-to-direct",
+            "equation_slope_per_tt_day": 0.0005770526474162524,
+            "goal_deg": null,
+            "interpolation_error_bound_established": false,
+            "jd_tt": 2460285.058170199,
+            "kind": "station",
+            "other": null,
+            "source_panel_jd_tt": [
+              2460284.9331745,
+              2460285.0581745
+            ]
+          }
+        ],
+        "45-minute": [
+          {
+            "ambiguous": false,
+            "body": "neptune",
+            "direction": "retrograde-to-direct",
+            "equation_slope_per_tt_day": 0.000576463051994393,
+            "goal_deg": null,
+            "interpolation_error_bound_established": false,
+            "jd_tt": 2460285.058146991,
+            "kind": "station",
+            "other": null,
+            "source_panel_jd_tt": [
+              2460285.0269245,
+              2460285.0581745
+            ]
+          }
+        ],
+        "90-minute": [
+          {
+            "ambiguous": false,
+            "body": "neptune",
+            "direction": "retrograde-to-direct",
+            "equation_slope_per_tt_day": 0.0005770014230036624,
+            "goal_deg": null,
+            "interpolation_error_bound_established": false,
+            "jd_tt": 2460285.0581889655,
+            "kind": "station",
+            "other": null,
+            "source_panel_jd_tt": [
+              2460285.0581745,
+              2460285.1206745
+            ]
+          }
+        ],
+        "shifted-45-minute": [
+          {
+            "ambiguous": false,
+            "body": "neptune",
+            "direction": "retrograde-to-direct",
+            "equation_slope_per_tt_day": 0.0005768681261238735,
+            "goal_deg": null,
+            "interpolation_error_bound_established": false,
+            "jd_tt": 2460285.058175661,
+            "kind": "station",
+            "other": null,
+            "source_panel_jd_tt": [
+              2460285.0425495,
+              2460285.0737995
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "aria_comparison": {
+        "actual_count": 1,
+        "additional_actual_indices": [],
+        "ambiguous_edges": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            0
+          ]
+        ],
+        "duplicate_actual_pairs": [],
+        "matches": [],
+        "missing_reference_indices": [],
+        "passed": false,
+        "reference_count": 2
+      },
+      "body": "neptune",
+      "grid_comparisons": {
+        "3-hour": {
+          "actual_count": 0,
+          "additional_actual_indices": [],
+          "ambiguous_edges": [],
+          "duplicate_actual_pairs": [],
+          "matches": [],
+          "missing_reference_indices": [
+            0,
+            1
+          ],
+          "passed": false,
+          "reference_count": 2
+        },
+        "90-minute": {
+          "actual_count": 1,
+          "additional_actual_indices": [],
+          "ambiguous_edges": [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              0
+            ]
+          ],
+          "duplicate_actual_pairs": [],
+          "matches": [],
+          "missing_reference_indices": [],
+          "passed": false,
+          "reference_count": 2
+        },
+        "shifted-45-minute": {
+          "actual_count": 1,
+          "additional_actual_indices": [],
+          "ambiguous_edges": [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              0
+            ]
+          ],
+          "duplicate_actual_pairs": [],
+          "matches": [],
+          "missing_reference_indices": [],
+          "passed": false,
+          "reference_count": 2
+        }
+      },
+      "id": "2023-2025:station:neptune:None:0:2",
+      "passed": false,
+      "roots_by_grid": {
+        "3-hour": [],
+        "45-minute": [
+          {
+            "ambiguous": false,
+            "body": "neptune",
+            "direction": "direct-to-retrograde",
+            "equation_slope_per_tt_day": -0.0005307597776135857,
+            "goal_deg": null,
+            "interpolation_error_bound_established": false,
+            "jd_tt": 2460493.945865905,
+            "kind": "station",
+            "other": null,
+            "source_panel_jd_tt": [
+              2460493.9146168,
+              2460493.9458668
+            ]
+          },
+          {
+            "ambiguous": false,
+            "body": "neptune",
+            "direction": "direct-to-retrograde",
+            "equation_slope_per_tt_day": -0.0005307607134531751,
+            "goal_deg": null,
+            "interpolation_error_bound_established": false,
+            "jd_tt": 2460493.9458856,
+            "kind": "station",
+            "other": null,
+            "source_panel_jd_tt": [
+              2460493.9458668,
+              2460493.9771168
+            ]
+          }
+        ],
+        "90-minute": [
+          {
+            "ambiguous": false,
+            "body": "neptune",
+            "direction": "direct-to-retrograde",
+            "equation_slope_per_tt_day": -0.000531261505382857,
+            "goal_deg": null,
+            "interpolation_error_bound_established": false,
+            "jd_tt": 2460493.94585058,
+            "kind": "station",
+            "other": null,
+            "source_panel_jd_tt": [
+              2460493.8833668,
+              2460493.9458668
+            ]
+          }
+        ],
+        "shifted-45-minute": [
+          {
+            "ambiguous": false,
+            "body": "neptune",
+            "direction": "direct-to-retrograde",
+            "equation_slope_per_tt_day": -0.000531502543229499,
+            "goal_deg": null,
+            "interpolation_error_bound_established": false,
+            "jd_tt": 2460493.9459303045,
+            "kind": "station",
+            "other": null,
+            "source_panel_jd_tt": [
+              2460493.9302418,
+              2460493.9614918
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "aria_comparison": {
+        "actual_count": 1,
+        "additional_actual_indices": [],
+        "ambiguous_edges": [],
+        "duplicate_actual_pairs": [],
+        "matches": [
+          {
+            "actual_index": 0,
+            "actual_minus_reference_seconds": 0.9227067232131958,
+            "reference_index": 0
+          }
+        ],
+        "missing_reference_indices": [],
+        "passed": true,
+        "reference_count": 1
+      },
+      "body": "neptune",
+      "grid_comparisons": {
+        "3-hour": {
+          "actual_count": 1,
+          "additional_actual_indices": [],
+          "ambiguous_edges": [],
+          "duplicate_actual_pairs": [],
+          "matches": [
+            {
+              "actual_index": 0,
+              "actual_minus_reference_seconds": 0.3079041838645935,
+              "reference_index": 0
+            }
+          ],
+          "missing_reference_indices": [],
+          "passed": true,
+          "reference_count": 1
+        },
+        "90-minute": {
+          "actual_count": 1,
+          "additional_actual_indices": [],
+          "ambiguous_edges": [],
+          "duplicate_actual_pairs": [],
+          "matches": [
+            {
+              "actual_index": 0,
+              "actual_minus_reference_seconds": 0.4457831382751465,
+              "reference_index": 0
+            }
+          ],
+          "missing_reference_indices": [],
+          "passed": true,
+          "reference_count": 1
+        },
+        "shifted-45-minute": {
+          "actual_count": 1,
+          "additional_actual_indices": [],
+          "ambiguous_edges": [],
+          "duplicate_actual_pairs": [],
+          "matches": [
+            {
+              "actual_index": 0,
+              "actual_minus_reference_seconds": 0.321824848651886,
+              "reference_index": 0
+            }
+          ],
+          "missing_reference_indices": [],
+          "passed": true,
+          "reference_count": 1
+        }
+      },
+      "id": "2023-2025:station:neptune:None:0:3",
+      "passed": true,
+      "roots_by_grid": {
+        "3-hour": [
+          {
+            "ambiguous": false,
+            "body": "neptune",
+            "direction": "retrograde-to-direct",
+            "equation_slope_per_tt_day": 0.0005659779866361955,
+            "goal_deg": null,
+            "interpolation_error_bound_established": false,
+            "jd_tt": 2460652.4892931352,
+            "kind": "station",
+            "other": null,
+            "source_panel_jd_tt": [
+              2460652.4892837,
+              2460652.6142837
+            ]
+          }
+        ],
+        "45-minute": [
+          {
+            "ambiguous": false,
+            "body": "neptune",
+            "direction": "retrograde-to-direct",
+            "equation_slope_per_tt_day": 0.0005662433811557311,
+            "goal_deg": null,
+            "interpolation_error_bound_established": false,
+            "jd_tt": 2460652.4892895715,
+            "kind": "station",
+            "other": null,
+            "source_panel_jd_tt": [
+              2460652.4892837,
+              2460652.5205337
+            ]
+          }
+        ],
+        "90-minute": [
+          {
+            "ambiguous": false,
+            "body": "neptune",
+            "direction": "retrograde-to-direct",
+            "equation_slope_per_tt_day": 0.0005661426136450706,
+            "goal_deg": null,
+            "interpolation_error_bound_established": false,
+            "jd_tt": 2460652.489294731,
+            "kind": "station",
+            "other": null,
+            "source_panel_jd_tt": [
+              2460652.4892837,
+              2460652.5517837
+            ]
+          }
+        ],
+        "shifted-45-minute": [
+          {
+            "ambiguous": false,
+            "body": "neptune",
+            "direction": "retrograde-to-direct",
+            "equation_slope_per_tt_day": 0.0005662439320706749,
+            "goal_deg": null,
+            "interpolation_error_bound_established": false,
+            "jd_tt": 2460652.4892932964,
+            "kind": "station",
+            "other": null,
+            "source_panel_jd_tt": [
+              2460652.4736587,
+              2460652.5049087
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "aria_comparison": {
+        "actual_count": 1,
+        "additional_actual_indices": [],
+        "ambiguous_edges": [],
+        "duplicate_actual_pairs": [],
+        "matches": [
+          {
+            "actual_index": 0,
+            "actual_minus_reference_seconds": 1.8428385257720947,
+            "reference_index": 0
+          }
+        ],
+        "missing_reference_indices": [],
+        "passed": true,
+        "reference_count": 1
+      },
+      "body": "neptune",
+      "grid_comparisons": {
+        "3-hour": {
+          "actual_count": 1,
+          "additional_actual_indices": [],
+          "ambiguous_edges": [],
+          "duplicate_actual_pairs": [],
+          "matches": [
+            {
+              "actual_index": 0,
+              "actual_minus_reference_seconds": 2.727001905441284,
+              "reference_index": 0
+            }
+          ],
+          "missing_reference_indices": [],
+          "passed": true,
+          "reference_count": 1
+        },
+        "90-minute": {
+          "actual_count": 0,
+          "additional_actual_indices": [],
+          "ambiguous_edges": [],
+          "duplicate_actual_pairs": [],
+          "matches": [],
+          "missing_reference_indices": [
+            0
+          ],
+          "passed": false,
+          "reference_count": 1
+        },
+        "shifted-45-minute": {
+          "actual_count": 1,
+          "additional_actual_indices": [],
+          "ambiguous_edges": [],
+          "duplicate_actual_pairs": [],
+          "matches": [
+            {
+              "actual_index": 0,
+              "actual_minus_reference_seconds": 0.05914270877838135,
+              "reference_index": 0
+            }
+          ],
+          "missing_reference_indices": [],
+          "passed": true,
+          "reference_count": 1
+        }
+      },
+      "id": "2023-2025:station:neptune:None:0:4",
+      "passed": false,
+      "roots_by_grid": {
+        "3-hour": [
+          {
+            "ambiguous": false,
+            "body": "neptune",
+            "direction": "direct-to-retrograde",
+            "equation_slope_per_tt_day": -0.0005296715033490808,
+            "goal_deg": null,
+            "interpolation_error_bound_established": false,
+            "jd_tt": 2460861.399778586,
+            "kind": "station",
+            "other": null,
+            "source_panel_jd_tt": [
+              2460861.3997776,
+              2460861.5247776
+            ]
+          }
+        ],
+        "45-minute": [
+          {
+            "ambiguous": false,
+            "body": "neptune",
+            "direction": "direct-to-retrograde",
+            "equation_slope_per_tt_day": -0.0005302985764815785,
+            "goal_deg": null,
+            "interpolation_error_bound_established": false,
+            "jd_tt": 2460861.3997470234,
+            "kind": "station",
+            "other": null,
+            "source_panel_jd_tt": [
+              2460861.3685276,
+              2460861.3997776
+            ]
+          }
+        ],
+        "90-minute": [],
+        "shifted-45-minute": [
+          {
+            "ambiguous": false,
+            "body": "neptune",
+            "direction": "direct-to-retrograde",
+            "equation_slope_per_tt_day": -0.0005300333356443196,
+            "goal_deg": null,
+            "interpolation_error_bound_established": false,
+            "jd_tt": 2460861.399747708,
+            "kind": "station",
+            "other": null,
+            "source_panel_jd_tt": [
+              2460861.3841526,
+              2460861.4154026
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "aria_comparison": {
+        "actual_count": 1,
+        "additional_actual_indices": [],
+        "ambiguous_edges": [],
+        "duplicate_actual_pairs": [],
+        "matches": [
+          {
+            "actual_index": 0,
+            "actual_minus_reference_seconds": -0.44799596071243286,
+            "reference_index": 0
+          }
+        ],
+        "missing_reference_indices": [],
+        "passed": true,
+        "reference_count": 1
+      },
+      "body": "neptune",
+      "grid_comparisons": {
+        "3-hour": {
+          "actual_count": 1,
+          "additional_actual_indices": [],
+          "ambiguous_edges": [],
+          "duplicate_actual_pairs": [],
+          "matches": [
+            {
+              "actual_index": 0,
+              "actual_minus_reference_seconds": -0.12987256050109863,
+              "reference_index": 0
+            }
+          ],
+          "missing_reference_indices": [],
+          "passed": true,
+          "reference_count": 1
+        },
+        "90-minute": {
+          "actual_count": 0,
+          "additional_actual_indices": [],
+          "ambiguous_edges": [],
+          "duplicate_actual_pairs": [],
+          "matches": [],
+          "missing_reference_indices": [
+            0
+          ],
+          "passed": false,
+          "reference_count": 1
+        },
+        "shifted-45-minute": {
+          "actual_count": 1,
+          "additional_actual_indices": [],
+          "ambiguous_edges": [],
+          "duplicate_actual_pairs": [],
+          "matches": [
+            {
+              "actual_index": 0,
+              "actual_minus_reference_seconds": 0.6666228175163269,
+              "reference_index": 0
+            }
+          ],
+          "missing_reference_indices": [],
+          "passed": true,
+          "reference_count": 1
+        }
+      },
+      "id": "2023-2025:station:neptune:None:0:5",
+      "passed": false,
+      "roots_by_grid": {
+        "3-hour": [
+          {
+            "ambiguous": false,
+            "body": "neptune",
+            "direction": "retrograde-to-direct",
+            "equation_slope_per_tt_day": 0.0005652440222489259,
+            "goal_deg": null,
+            "interpolation_error_bound_established": false,
+            "jd_tt": 2461020.016917573,
+            "kind": "station",
+            "other": null,
+            "source_panel_jd_tt": [
+              2461020.0169138,
+              2461020.1419138
+            ]
+          }
+        ],
+        "45-minute": [
+          {
+            "ambiguous": false,
+            "body": "neptune",
+            "direction": "retrograde-to-direct",
+            "equation_slope_per_tt_day": 0.000566164196152158,
+            "goal_deg": null,
+            "interpolation_error_bound_established": false,
+            "jd_tt": 2461020.016919076,
+            "kind": "station",
+            "other": null,
+            "source_panel_jd_tt": [
+              2461020.0169138,
+              2461020.0481638
+            ]
+          }
+        ],
+        "90-minute": [],
+        "shifted-45-minute": [
+          {
+            "ambiguous": false,
+            "body": "neptune",
+            "direction": "retrograde-to-direct",
+            "equation_slope_per_tt_day": 0.0005654287389161033,
+            "goal_deg": null,
+            "interpolation_error_bound_established": false,
+            "jd_tt": 2461020.0169267915,
+            "kind": "station",
+            "other": null,
+            "source_panel_jd_tt": [
+              2461020.0012888,
+              2461020.0325388
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "aria_comparison": {
+        "actual_count": 1,
+        "additional_actual_indices": [],
+        "ambiguous_edges": [],
+        "duplicate_actual_pairs": [],
+        "matches": [
+          {
+            "actual_index": 0,
+            "actual_minus_reference_seconds": 1.3321593403816223,
+            "reference_index": 0
+          }
+        ],
+        "missing_reference_indices": [],
+        "passed": true,
+        "reference_count": 1
+      },
+      "body": "pluto",
+      "grid_comparisons": {
+        "3-hour": {
+          "actual_count": 1,
+          "additional_actual_indices": [],
+          "ambiguous_edges": [],
+          "duplicate_actual_pairs": [],
+          "matches": [
+            {
+              "actual_index": 0,
+              "actual_minus_reference_seconds": 1.7175927758216858,
+              "reference_index": 0
+            }
+          ],
+          "missing_reference_indices": [],
+          "passed": true,
+          "reference_count": 1
+        },
+        "90-minute": {
+          "actual_count": 1,
+          "additional_actual_indices": [],
+          "ambiguous_edges": [],
+          "duplicate_actual_pairs": [],
+          "matches": [
+            {
+              "actual_index": 0,
+              "actual_minus_reference_seconds": 1.2812644243240356,
+              "reference_index": 0
+            }
+          ],
+          "missing_reference_indices": [],
+          "passed": true,
+          "reference_count": 1
+        },
+        "shifted-45-minute": {
+          "actual_count": 1,
+          "additional_actual_indices": [],
+          "ambiguous_edges": [],
+          "duplicate_actual_pairs": [],
+          "matches": [
+            {
+              "actual_index": 0,
+              "actual_minus_reference_seconds": -1.6749054193496704,
+              "reference_index": 0
+            }
+          ],
+          "missing_reference_indices": [],
+          "passed": true,
+          "reference_count": 1
+        }
+      },
+      "id": "2023-2025:station:pluto:None:0:0",
+      "passed": true,
+      "roots_by_grid": {
+        "3-hour": [
+          {
+            "ambiguous": false,
+            "body": "pluto",
+            "direction": "direct-to-retrograde",
+            "equation_slope_per_tt_day": -0.0004981590150176631,
+            "goal_deg": null,
+            "interpolation_error_bound_established": false,
+            "jd_tt": 2460066.2301875856,
+            "kind": "station",
+            "other": null,
+            "source_panel_jd_tt": [
+              2460066.1052302,
+              2460066.2302302
+            ]
+          }
+        ],
+        "45-minute": [
+          {
+            "ambiguous": false,
+            "body": "pluto",
+            "direction": "direct-to-retrograde",
+            "equation_slope_per_tt_day": -0.0004974615851162661,
+            "goal_deg": null,
+            "interpolation_error_bound_established": false,
+            "jd_tt": 2460066.230167706,
+            "kind": "station",
+            "other": null,
+            "source_panel_jd_tt": [
+              2460066.1989802,
+              2460066.2302302
+            ]
+          }
+        ],
+        "90-minute": [
+          {
+            "ambiguous": false,
+            "body": "pluto",
+            "direction": "direct-to-retrograde",
+            "equation_slope_per_tt_day": -0.0004980313040505544,
+            "goal_deg": null,
+            "interpolation_error_bound_established": false,
+            "jd_tt": 2460066.2301825355,
+            "kind": "station",
+            "other": null,
+            "source_panel_jd_tt": [
+              2460066.1677302,
+              2460066.2302302
+            ]
+          }
+        ],
+        "shifted-45-minute": [
+          {
+            "ambiguous": false,
+            "body": "pluto",
+            "direction": "direct-to-retrograde",
+            "equation_slope_per_tt_day": -0.0004979236544458387,
+            "goal_deg": null,
+            "interpolation_error_bound_established": false,
+            "jd_tt": 2460066.2301483206,
+            "kind": "station",
+            "other": null,
+            "source_panel_jd_tt": [
+              2460066.2146052,
+              2460066.2458552
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "aria_comparison": {
+        "actual_count": 1,
+        "additional_actual_indices": [],
+        "ambiguous_edges": [],
+        "duplicate_actual_pairs": [],
+        "matches": [
+          {
+            "actual_index": 0,
+            "actual_minus_reference_seconds": -1.160404086112976,
+            "reference_index": 0
+          }
+        ],
+        "missing_reference_indices": [],
+        "passed": true,
+        "reference_count": 1
+      },
+      "body": "pluto",
+      "grid_comparisons": {
+        "3-hour": {
+          "actual_count": 1,
+          "additional_actual_indices": [],
+          "ambiguous_edges": [],
+          "duplicate_actual_pairs": [],
+          "matches": [
+            {
+              "actual_index": 0,
+              "actual_minus_reference_seconds": -0.7402092218399048,
+              "reference_index": 0
+            }
+          ],
+          "missing_reference_indices": [],
+          "passed": true,
+          "reference_count": 1
+        },
+        "90-minute": {
+          "actual_count": 2,
+          "additional_actual_indices": [],
+          "ambiguous_edges": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              1
+            ]
+          ],
+          "duplicate_actual_pairs": [],
+          "matches": [],
+          "missing_reference_indices": [],
+          "passed": false,
+          "reference_count": 1
+        },
+        "shifted-45-minute": {
+          "actual_count": 1,
+          "additional_actual_indices": [],
+          "ambiguous_edges": [],
+          "duplicate_actual_pairs": [],
+          "matches": [
+            {
+              "actual_index": 0,
+              "actual_minus_reference_seconds": -1.6521334648132324,
+              "reference_index": 0
+            }
+          ],
+          "missing_reference_indices": [],
+          "passed": true,
+          "reference_count": 1
+        }
+      },
+      "id": "2023-2025:station:pluto:None:0:1",
+      "passed": false,
+      "roots_by_grid": {
+        "3-hour": [
+          {
+            "ambiguous": false,
+            "body": "pluto",
+            "direction": "retrograde-to-direct",
+            "equation_slope_per_tt_day": 0.0004892830782396717,
+            "goal_deg": null,
+            "interpolation_error_bound_established": false,
+            "jd_tt": 2460228.5846038815,
+            "kind": "station",
+            "other": null,
+            "source_panel_jd_tt": [
+              2460228.5845847,
+              2460228.7095847
+            ]
+          }
+        ],
+        "45-minute": [
+          {
+            "ambiguous": false,
+            "body": "pluto",
+            "direction": "retrograde-to-direct",
+            "equation_slope_per_tt_day": 0.0004887253508137313,
+            "goal_deg": null,
+            "interpolation_error_bound_established": false,
+            "jd_tt": 2460228.5846124487,
+            "kind": "station",
+            "other": null,
+            "source_panel_jd_tt": [
+              2460228.5845847,
+              2460228.6158347
+            ]
+          }
+        ],
+        "90-minute": [
+          {
+            "ambiguous": false,
+            "body": "pluto",
+            "direction": "retrograde-to-direct",
+            "equation_slope_per_tt_day": 0.0004892364366326554,
+            "goal_deg": null,
+            "interpolation_error_bound_established": false,
+            "jd_tt": 2460228.5845839917,
+            "kind": "station",
+            "other": null,
+            "source_panel_jd_tt": [
+              2460228.5220847,
+              2460228.5845847
+            ]
+          },
+          {
+            "ambiguous": false,
+            "body": "pluto",
+            "direction": "retrograde-to-direct",
+            "equation_slope_per_tt_day": 0.0004892365138058277,
+            "goal_deg": null,
+            "interpolation_error_bound_established": false,
+            "jd_tt": 2460228.584587929,
+            "kind": "station",
+            "other": null,
+            "source_panel_jd_tt": [
+              2460228.5845847,
+              2460228.6470847
+            ]
+          }
+        ],
+        "shifted-45-minute": [
+          {
+            "ambiguous": false,
+            "body": "pluto",
+            "direction": "retrograde-to-direct",
+            "equation_slope_per_tt_day": 0.0004888265555384198,
+            "goal_deg": null,
+            "interpolation_error_bound_established": false,
+            "jd_tt": 2460228.584593327,
+            "kind": "station",
+            "other": null,
+            "source_panel_jd_tt": [
+              2460228.5689597,
+              2460228.6002097
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "aria_comparison": {
+        "actual_count": 1,
+        "additional_actual_indices": [],
+        "ambiguous_edges": [],
+        "duplicate_actual_pairs": [],
+        "matches": [
+          {
+            "actual_index": 0,
+            "actual_minus_reference_seconds": -0.13558566570281982,
+            "reference_index": 0
+          }
+        ],
+        "missing_reference_indices": [],
+        "passed": true,
+        "reference_count": 1
+      },
+      "body": "pluto",
+      "grid_comparisons": {
+        "3-hour": {
+          "actual_count": 1,
+          "additional_actual_indices": [],
+          "ambiguous_edges": [],
+          "duplicate_actual_pairs": [],
+          "matches": [
+            {
+              "actual_index": 0,
+              "actual_minus_reference_seconds": -0.35714954137802124,
+              "reference_index": 0
+            }
+          ],
+          "missing_reference_indices": [],
+          "passed": true,
+          "reference_count": 1
+        },
+        "90-minute": {
+          "actual_count": 1,
+          "additional_actual_indices": [],
+          "ambiguous_edges": [],
+          "duplicate_actual_pairs": [],
+          "matches": [
+            {
+              "actual_index": 0,
+              "actual_minus_reference_seconds": 1.094140112400055,
+              "reference_index": 0
+            }
+          ],
+          "missing_reference_indices": [],
+          "passed": true,
+          "reference_count": 1
+        },
+        "shifted-45-minute": {
+          "actual_count": 1,
+          "additional_actual_indices": [],
+          "ambiguous_edges": [],
+          "duplicate_actual_pairs": [],
+          "matches": [
+            {
+              "actual_index": 0,
+              "actual_minus_reference_seconds": -1.6887858510017395,
+              "reference_index": 0
+            }
+          ],
+          "missing_reference_indices": [],
+          "passed": true,
+          "reference_count": 1
+        }
+      },
+      "id": "2023-2025:station:pluto:None:0:2",
+      "passed": true,
+      "roots_by_grid": {
+        "3-hour": [
+          {
+            "ambiguous": false,
+            "body": "pluto",
+            "direction": "direct-to-retrograde",
+            "equation_slope_per_tt_day": -0.000471526743253197,
+            "goal_deg": null,
+            "interpolation_error_bound_established": false,
+            "jd_tt": 2460433.215474902,
+            "kind": "station",
+            "other": null,
+            "source_panel_jd_tt": [
+              2460433.215454,
+              2460433.340454
+            ]
+          }
+        ],
+        "45-minute": [
+          {
+            "ambiguous": false,
+            "body": "pluto",
+            "direction": "direct-to-retrograde",
+            "equation_slope_per_tt_day": -0.000471463041968831,
+            "goal_deg": null,
+            "interpolation_error_bound_established": false,
+            "jd_tt": 2460433.215479036,
+            "kind": "station",
+            "other": null,
+            "source_panel_jd_tt": [
+              2460433.215454,
+              2460433.246704
+            ]
+          }
+        ],
+        "90-minute": [
+          {
+            "ambiguous": false,
+            "body": "pluto",
+            "direction": "direct-to-retrograde",
+            "equation_slope_per_tt_day": -0.0004715175474593037,
+            "goal_deg": null,
+            "interpolation_error_bound_established": false,
+            "jd_tt": 2460433.2154916995,
+            "kind": "station",
+            "other": null,
+            "source_panel_jd_tt": [
+              2460433.215454,
+              2460433.277954
+            ]
+          }
+        ],
+        "shifted-45-minute": [
+          {
+            "ambiguous": false,
+            "body": "pluto",
+            "direction": "direct-to-retrograde",
+            "equation_slope_per_tt_day": -0.00047180692860097846,
+            "goal_deg": null,
+            "interpolation_error_bound_established": false,
+            "jd_tt": 2460433.2154594897,
+            "kind": "station",
+            "other": null,
+            "source_panel_jd_tt": [
+              2460433.199829,
+              2460433.231079
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "aria_comparison": {
+        "actual_count": 1,
+        "additional_actual_indices": [],
+        "ambiguous_edges": [],
+        "duplicate_actual_pairs": [],
+        "matches": [
+          {
+            "actual_index": 0,
+            "actual_minus_reference_seconds": -1.3938769698143005,
+            "reference_index": 0
+          }
+        ],
+        "missing_reference_indices": [],
+        "passed": true,
+        "reference_count": 1
+      },
+      "body": "pluto",
+      "grid_comparisons": {
+        "3-hour": {
+          "actual_count": 1,
+          "additional_actual_indices": [],
+          "ambiguous_edges": [],
+          "duplicate_actual_pairs": [],
+          "matches": [
+            {
+              "actual_index": 0,
+              "actual_minus_reference_seconds": -1.120130717754364,
+              "reference_index": 0
+            }
+          ],
+          "missing_reference_indices": [],
+          "passed": true,
+          "reference_count": 1
+        },
+        "90-minute": {
+          "actual_count": 1,
+          "additional_actual_indices": [],
+          "ambiguous_edges": [],
+          "duplicate_actual_pairs": [],
+          "matches": [
+            {
+              "actual_index": 0,
+              "actual_minus_reference_seconds": -1.4533013105392456,
+              "reference_index": 0
+            }
+          ],
+          "missing_reference_indices": [],
+          "passed": true,
+          "reference_count": 1
+        },
+        "shifted-45-minute": {
+          "actual_count": 1,
+          "additional_actual_indices": [],
+          "ambiguous_edges": [],
+          "duplicate_actual_pairs": [],
+          "matches": [
+            {
+              "actual_index": 0,
+              "actual_minus_reference_seconds": -2.678319811820984,
+              "reference_index": 0
+            }
+          ],
+          "missing_reference_indices": [],
+          "passed": true,
+          "reference_count": 1
+        }
+      },
+      "id": "2023-2025:station:pluto:None:0:3",
+      "passed": true,
+      "roots_by_grid": {
+        "3-hour": [
+          {
+            "ambiguous": false,
+            "body": "pluto",
+            "direction": "retrograde-to-direct",
+            "equation_slope_per_tt_day": 0.000458744739929544,
+            "goal_deg": null,
+            "interpolation_error_bound_established": false,
+            "jd_tt": 2460595.4796980117,
+            "kind": "station",
+            "other": null,
+            "source_panel_jd_tt": [
+              2460595.4796729,
+              2460595.6046729
+            ]
+          }
+        ],
+        "45-minute": [
+          {
+            "ambiguous": false,
+            "body": "pluto",
+            "direction": "retrograde-to-direct",
+            "equation_slope_per_tt_day": 0.000458461299732525,
+            "goal_deg": null,
+            "interpolation_error_bound_established": false,
+            "jd_tt": 2460595.479710976,
+            "kind": "station",
+            "other": null,
+            "source_panel_jd_tt": [
+              2460595.4796729,
+              2460595.5109229
+            ]
+          }
+        ],
+        "90-minute": [
+          {
+            "ambiguous": false,
+            "body": "pluto",
+            "direction": "retrograde-to-direct",
+            "equation_slope_per_tt_day": 0.00045879990664633144,
+            "goal_deg": null,
+            "interpolation_error_bound_established": false,
+            "jd_tt": 2460595.4796941555,
+            "kind": "station",
+            "other": null,
+            "source_panel_jd_tt": [
+              2460595.4796729,
+              2460595.5421729
+            ]
+          }
+        ],
+        "shifted-45-minute": [
+          {
+            "ambiguous": false,
+            "body": "pluto",
+            "direction": "retrograde-to-direct",
+            "equation_slope_per_tt_day": 0.0004585699301146488,
+            "goal_deg": null,
+            "interpolation_error_bound_established": false,
+            "jd_tt": 2460595.479679977,
+            "kind": "station",
+            "other": null,
+            "source_panel_jd_tt": [
+              2460595.4640479,
+              2460595.4952979
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "aria_comparison": {
+        "actual_count": 1,
+        "additional_actual_indices": [],
+        "ambiguous_edges": [],
+        "duplicate_actual_pairs": [],
+        "matches": [
+          {
+            "actual_index": 0,
+            "actual_minus_reference_seconds": 1.1156648397445679,
+            "reference_index": 0
+          }
+        ],
+        "missing_reference_indices": [],
+        "passed": true,
+        "reference_count": 1
+      },
+      "body": "pluto",
+      "grid_comparisons": {
+        "3-hour": {
+          "actual_count": 1,
+          "additional_actual_indices": [],
+          "ambiguous_edges": [],
+          "duplicate_actual_pairs": [],
+          "matches": [
+            {
+              "actual_index": 0,
+              "actual_minus_reference_seconds": 1.6902744770050049,
+              "reference_index": 0
+            }
+          ],
+          "missing_reference_indices": [],
+          "passed": true,
+          "reference_count": 1
+        },
+        "90-minute": {
+          "actual_count": 1,
+          "additional_actual_indices": [],
+          "ambiguous_edges": [],
+          "duplicate_actual_pairs": [],
+          "matches": [
+            {
+              "actual_index": 0,
+              "actual_minus_reference_seconds": -0.7372722029685974,
+              "reference_index": 0
+            }
+          ],
+          "missing_reference_indices": [],
+          "passed": true,
+          "reference_count": 1
+        },
+        "shifted-45-minute": {
+          "actual_count": 1,
+          "additional_actual_indices": [],
+          "ambiguous_edges": [],
+          "duplicate_actual_pairs": [],
+          "matches": [
+            {
+              "actual_index": 0,
+              "actual_minus_reference_seconds": 0.22562742233276367,
+              "reference_index": 0
+            }
+          ],
+          "missing_reference_indices": [],
+          "passed": true,
+          "reference_count": 1
+        }
+      },
+      "id": "2023-2025:station:pluto:None:0:4",
+      "passed": true,
+      "roots_by_grid": {
+        "3-hour": [
+          {
+            "ambiguous": false,
+            "body": "pluto",
+            "direction": "direct-to-retrograde",
+            "equation_slope_per_tt_day": -0.0004978546009602507,
+            "goal_deg": null,
+            "interpolation_error_bound_established": false,
+            "jd_tt": 2460800.1798166977,
+            "kind": "station",
+            "other": null,
+            "source_panel_jd_tt": [
+              2460800.0548288,
+              2460800.1798288
+            ]
+          }
+        ],
+        "45-minute": [
+          {
+            "ambiguous": false,
+            "body": "pluto",
+            "direction": "direct-to-retrograde",
+            "equation_slope_per_tt_day": -0.0004971582801680398,
+            "goal_deg": null,
+            "interpolation_error_bound_established": false,
+            "jd_tt": 2460800.1797971344,
+            "kind": "station",
+            "other": null,
+            "source_panel_jd_tt": [
+              2460800.1485788,
+              2460800.1798288
+            ]
+          }
+        ],
+        "90-minute": [
+          {
+            "ambiguous": false,
+            "body": "pluto",
+            "direction": "direct-to-retrograde",
+            "equation_slope_per_tt_day": -0.000497509075252144,
+            "goal_deg": null,
+            "interpolation_error_bound_established": false,
+            "jd_tt": 2460800.179788601,
+            "kind": "station",
+            "other": null,
+            "source_panel_jd_tt": [
+              2460800.1173288,
+              2460800.1798288
+            ]
+          }
+        ],
+        "shifted-45-minute": [
+          {
+            "ambiguous": false,
+            "body": "pluto",
+            "direction": "direct-to-retrograde",
+            "equation_slope_per_tt_day": -0.0004983203393311228,
+            "goal_deg": null,
+            "interpolation_error_bound_established": false,
+            "jd_tt": 2460800.179799746,
+            "kind": "station",
+            "other": null,
+            "source_panel_jd_tt": [
+              2460800.1642038,
+              2460800.1954538
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "aria_comparison": {
+        "actual_count": 1,
+        "additional_actual_indices": [],
+        "ambiguous_edges": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            0
+          ]
+        ],
+        "duplicate_actual_pairs": [],
+        "matches": [],
+        "missing_reference_indices": [],
+        "passed": false,
+        "reference_count": 2
+      },
+      "body": "pluto",
+      "grid_comparisons": {
+        "3-hour": {
+          "actual_count": 2,
+          "additional_actual_indices": [],
+          "ambiguous_edges": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "duplicate_actual_pairs": [],
+          "matches": [],
+          "missing_reference_indices": [],
+          "passed": false,
+          "reference_count": 2
+        },
+        "90-minute": {
+          "actual_count": 1,
+          "additional_actual_indices": [],
+          "ambiguous_edges": [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              0
+            ]
+          ],
+          "duplicate_actual_pairs": [],
+          "matches": [],
+          "missing_reference_indices": [],
+          "passed": false,
+          "reference_count": 2
+        },
+        "shifted-45-minute": {
+          "actual_count": 1,
+          "additional_actual_indices": [],
+          "ambiguous_edges": [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              0
+            ]
+          ],
+          "duplicate_actual_pairs": [],
+          "matches": [],
+          "missing_reference_indices": [],
+          "passed": false,
+          "reference_count": 2
+        }
+      },
+      "id": "2023-2025:station:pluto:None:0:5",
+      "passed": false,
+      "roots_by_grid": {
+        "3-hour": [
+          {
+            "ambiguous": false,
+            "body": "pluto",
+            "direction": "retrograde-to-direct",
+            "equation_slope_per_tt_day": 0.0004677834884357539,
+            "goal_deg": null,
+            "interpolation_error_bound_established": false,
+            "jd_tt": 2460962.6668170323,
+            "kind": "station",
+            "other": null,
+            "source_panel_jd_tt": [
+              2460962.5418206,
+              2460962.6668206
+            ]
+          },
+          {
+            "ambiguous": false,
+            "body": "pluto",
+            "direction": "retrograde-to-direct",
+            "equation_slope_per_tt_day": 0.00046778359265348433,
+            "goal_deg": null,
+            "interpolation_error_bound_established": false,
+            "jd_tt": 2460962.6668222267,
+            "kind": "station",
+            "other": null,
+            "source_panel_jd_tt": [
+              2460962.6668206,
+              2460962.7918206
+            ]
+          }
+        ],
+        "45-minute": [
+          {
+            "ambiguous": false,
+            "body": "pluto",
+            "direction": "retrograde-to-direct",
+            "equation_slope_per_tt_day": 0.0004665346026306757,
+            "goal_deg": null,
+            "interpolation_error_bound_established": false,
+            "jd_tt": 2460962.6667850656,
+            "kind": "station",
+            "other": null,
+            "source_panel_jd_tt": [
+              2460962.6355706,
+              2460962.6668206
+            ]
+          },
+          {
+            "ambiguous": false,
+            "body": "pluto",
+            "direction": "retrograde-to-direct",
+            "equation_slope_per_tt_day": 0.00046653390212126136,
+            "goal_deg": null,
+            "interpolation_error_bound_established": false,
+            "jd_tt": 2460962.666831149,
+            "kind": "station",
+            "other": null,
+            "source_panel_jd_tt": [
+              2460962.6668206,
+              2460962.6980706
+            ]
+          }
+        ],
+        "90-minute": [
+          {
+            "ambiguous": false,
+            "body": "pluto",
+            "direction": "retrograde-to-direct",
+            "equation_slope_per_tt_day": 0.00046756476196557496,
+            "goal_deg": null,
+            "interpolation_error_bound_established": false,
+            "jd_tt": 2460962.6667952226,
+            "kind": "station",
+            "other": null,
+            "source_panel_jd_tt": [
+              2460962.6043206,
+              2460962.6668206
+            ]
+          }
+        ],
+        "shifted-45-minute": [
+          {
+            "ambiguous": false,
+            "body": "pluto",
+            "direction": "retrograde-to-direct",
+            "equation_slope_per_tt_day": 0.00046756520956637107,
+            "goal_deg": null,
+            "interpolation_error_bound_established": false,
+            "jd_tt": 2460962.6667908905,
+            "kind": "station",
+            "other": null,
+            "source_panel_jd_tt": [
+              2460962.6511956,
+              2460962.6824456
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "aria_comparison": {
+        "actual_count": 1,
+        "additional_actual_indices": [],
+        "ambiguous_edges": [],
+        "duplicate_actual_pairs": [],
+        "matches": [
+          {
+            "actual_index": 0,
+            "actual_minus_reference_seconds": -0.019513070583343506,
+            "reference_index": 0
+          }
+        ],
+        "missing_reference_indices": [],
+        "passed": true,
+        "reference_count": 1
+      },
+      "body": "mars",
+      "grid_comparisons": {
+        "3-hour": {
+          "actual_count": 1,
+          "additional_actual_indices": [],
+          "ambiguous_edges": [],
+          "duplicate_actual_pairs": [],
+          "matches": [
+            {
+              "actual_index": 0,
+              "actual_minus_reference_seconds": -0.04413574934005737,
+              "reference_index": 0
+            }
+          ],
+          "missing_reference_indices": [],
+          "passed": true,
+          "reference_count": 1
+        },
+        "90-minute": {
+          "actual_count": 1,
+          "additional_actual_indices": [],
+          "ambiguous_edges": [],
+          "duplicate_actual_pairs": [],
+          "matches": [
+            {
+              "actual_index": 0,
+              "actual_minus_reference_seconds": -0.06831586360931396,
+              "reference_index": 0
+            }
+          ],
+          "missing_reference_indices": [],
+          "passed": true,
+          "reference_count": 1
+        },
+        "shifted-45-minute": {
+          "actual_count": 1,
+          "additional_actual_indices": [],
+          "ambiguous_edges": [],
+          "duplicate_actual_pairs": [],
+          "matches": [
+            {
+              "actual_index": 0,
+              "actual_minus_reference_seconds": -0.03186464309692383,
+              "reference_index": 0
+            }
+          ],
+          "missing_reference_indices": [],
+          "passed": true,
+          "reference_count": 1
+        }
+      },
+      "id": "historical-1901:station:mars:None:0:0",
+      "passed": true,
+      "roots_by_grid": {
+        "3-hour": [
+          {
+            "ambiguous": false,
+            "body": "mars",
+            "direction": "direct-to-retrograde",
+            "equation_slope_per_tt_day": -0.012677822314967245,
+            "goal_deg": null,
+            "interpolation_error_bound_established": false,
+            "jd_tt": 2415397.794254495,
+            "kind": "station",
+            "other": null,
+            "source_panel_jd_tt": [
+              2415397.7942537,
+              2415397.9192537
+            ]
+          }
+        ],
+        "45-minute": [
+          {
+            "ambiguous": false,
+            "body": "mars",
+            "direction": "direct-to-retrograde",
+            "equation_slope_per_tt_day": -0.012678112401079751,
+            "goal_deg": null,
+            "interpolation_error_bound_established": false,
+            "jd_tt": 2415397.7942550057,
+            "kind": "station",
+            "other": null,
+            "source_panel_jd_tt": [
+              2415397.7942537,
+              2415397.8255037
+            ]
+          }
+        ],
+        "90-minute": [
+          {
+            "ambiguous": false,
+            "body": "mars",
+            "direction": "direct-to-retrograde",
+            "equation_slope_per_tt_day": -0.012678012888115538,
+            "goal_deg": null,
+            "interpolation_error_bound_established": false,
+            "jd_tt": 2415397.794254215,
+            "kind": "station",
+            "other": null,
+            "source_panel_jd_tt": [
+              2415397.7942537,
+              2415397.8567537
+            ]
+          }
+        ],
+        "shifted-45-minute": [
+          {
+            "ambiguous": false,
+            "body": "mars",
+            "direction": "direct-to-retrograde",
+            "equation_slope_per_tt_day": -0.012677248237371716,
+            "goal_deg": null,
+            "interpolation_error_bound_established": false,
+            "jd_tt": 2415397.794254637,
+            "kind": "station",
+            "other": null,
+            "source_panel_jd_tt": [
+              2415397.7786287,
+              2415397.8098787
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "aria_comparison": {
+        "actual_count": 1,
+        "additional_actual_indices": [],
+        "ambiguous_edges": [],
+        "duplicate_actual_pairs": [],
+        "matches": [
+          {
+            "actual_index": 0,
+            "actual_minus_reference_seconds": -0.013156235218048096,
+            "reference_index": 0
+          }
+        ],
+        "missing_reference_indices": [],
+        "passed": true,
+        "reference_count": 1
+      },
+      "body": "saturn",
+      "grid_comparisons": {
+        "3-hour": {
+          "actual_count": 1,
+          "additional_actual_indices": [],
+          "ambiguous_edges": [],
+          "duplicate_actual_pairs": [],
+          "matches": [
+            {
+              "actual_index": 0,
+              "actual_minus_reference_seconds": -0.1267746090888977,
+              "reference_index": 0
+            }
+          ],
+          "missing_reference_indices": [],
+          "passed": true,
+          "reference_count": 1
+        },
+        "90-minute": {
+          "actual_count": 2,
+          "additional_actual_indices": [],
+          "ambiguous_edges": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              1
+            ]
+          ],
+          "duplicate_actual_pairs": [],
+          "matches": [],
+          "missing_reference_indices": [],
+          "passed": false,
+          "reference_count": 1
+        },
+        "shifted-45-minute": {
+          "actual_count": 1,
+          "additional_actual_indices": [],
+          "ambiguous_edges": [],
+          "duplicate_actual_pairs": [],
+          "matches": [
+            {
+              "actual_index": 0,
+              "actual_minus_reference_seconds": 0.49422383308410645,
+              "reference_index": 0
+            }
+          ],
+          "missing_reference_indices": [],
+          "passed": true,
+          "reference_count": 1
+        }
+      },
+      "id": "historical-2000:station:saturn:None:0:0",
+      "passed": false,
+      "roots_by_grid": {
+        "3-hour": [
+          {
+            "ambiguous": false,
+            "body": "saturn",
+            "direction": "retrograde-to-direct",
+            "equation_slope_per_tt_day": 0.0018807335743557842,
+            "goal_deg": null,
+            "interpolation_error_bound_established": false,
+            "jd_tt": 2451555.7107592784,
+            "kind": "station",
+            "other": null,
+            "source_panel_jd_tt": [
+              2451555.5857597,
+              2451555.7107597
+            ]
+          }
+        ],
+        "45-minute": [
+          {
+            "ambiguous": false,
+            "body": "saturn",
+            "direction": "retrograde-to-direct",
+            "equation_slope_per_tt_day": 0.001881424535724194,
+            "goal_deg": null,
+            "interpolation_error_bound_established": false,
+            "jd_tt": 2451555.7107607457,
+            "kind": "station",
+            "other": null,
+            "source_panel_jd_tt": [
+              2451555.7107597,
+              2451555.7420097
+            ]
+          }
+        ],
+        "90-minute": [
+          {
+            "ambiguous": false,
+            "body": "saturn",
+            "direction": "retrograde-to-direct",
+            "equation_slope_per_tt_day": 0.0018807120760065776,
+            "goal_deg": null,
+            "interpolation_error_bound_established": false,
+            "jd_tt": 2451555.71075941,
+            "kind": "station",
+            "other": null,
+            "source_panel_jd_tt": [
+              2451555.6482597,
+              2451555.7107597
+            ]
+          },
+          {
+            "ambiguous": false,
+            "body": "saturn",
+            "direction": "retrograde-to-direct",
+            "equation_slope_per_tt_day": 0.001880712078784343,
+            "goal_deg": null,
+            "interpolation_error_bound_established": false,
+            "jd_tt": 2451555.7107598865,
+            "kind": "station",
+            "other": null,
+            "source_panel_jd_tt": [
+              2451555.7107597,
+              2451555.7732597
+            ]
+          }
+        ],
+        "shifted-45-minute": [
+          {
+            "ambiguous": false,
+            "body": "saturn",
+            "direction": "retrograde-to-direct",
+            "equation_slope_per_tt_day": 0.0018804744225103382,
+            "goal_deg": null,
+            "interpolation_error_bound_established": false,
+            "jd_tt": 2451555.710766466,
+            "kind": "station",
+            "other": null,
+            "source_panel_jd_tt": [
+              2451555.6951347,
+              2451555.7263847
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "aria_comparison": {
+        "actual_count": 1,
+        "additional_actual_indices": [],
+        "ambiguous_edges": [],
+        "duplicate_actual_pairs": [],
+        "matches": [
+          {
+            "actual_index": 0,
+            "actual_minus_reference_seconds": 0.2518594264984131,
+            "reference_index": 0
+          }
+        ],
+        "missing_reference_indices": [],
+        "passed": true,
+        "reference_count": 1
+      },
+      "body": "jupiter",
+      "grid_comparisons": {
+        "3-hour": {
+          "actual_count": 2,
+          "additional_actual_indices": [],
+          "ambiguous_edges": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              1
+            ]
+          ],
+          "duplicate_actual_pairs": [],
+          "matches": [],
+          "missing_reference_indices": [],
+          "passed": false,
+          "reference_count": 1
+        },
+        "90-minute": {
+          "actual_count": 1,
+          "additional_actual_indices": [],
+          "ambiguous_edges": [],
+          "duplicate_actual_pairs": [],
+          "matches": [
+            {
+              "actual_index": 0,
+              "actual_minus_reference_seconds": 0.3467291593551636,
+              "reference_index": 0
+            }
+          ],
+          "missing_reference_indices": [],
+          "passed": true,
+          "reference_count": 1
+        },
+        "shifted-45-minute": {
+          "actual_count": 1,
+          "additional_actual_indices": [],
+          "ambiguous_edges": [],
+          "duplicate_actual_pairs": [],
+          "matches": [
+            {
+              "actual_index": 0,
+              "actual_minus_reference_seconds": 0.3768637776374817,
+              "reference_index": 0
+            }
+          ],
+          "missing_reference_indices": [],
+          "passed": true,
+          "reference_count": 1
+        }
+      },
+      "id": "historical-2099:station:jupiter:None:0:0",
+      "passed": false,
+      "roots_by_grid": {
+        "3-hour": [
+          {
+            "ambiguous": false,
+            "body": "jupiter",
+            "direction": "direct-to-retrograde",
+            "equation_slope_per_tt_day": -0.00319682830666623,
+            "goal_deg": null,
+            "interpolation_error_bound_established": false,
+            "jd_tt": 2487710.8894282887,
+            "kind": "station",
+            "other": null,
+            "source_panel_jd_tt": [
+              2487710.7644288,
+              2487710.8894288
+            ]
+          },
+          {
+            "ambiguous": false,
+            "body": "jupiter",
+            "direction": "direct-to-retrograde",
+            "equation_slope_per_tt_day": -0.003196828643053536,
+            "goal_deg": null,
+            "interpolation_error_bound_established": false,
+            "jd_tt": 2487710.889452516,
+            "kind": "station",
+            "other": null,
+            "source_panel_jd_tt": [
+              2487710.8894288,
+              2487711.0144288
+            ]
+          }
+        ],
+        "45-minute": [
+          {
+            "ambiguous": false,
+            "body": "jupiter",
+            "direction": "direct-to-retrograde",
+            "equation_slope_per_tt_day": -0.0031968748040669954,
+            "goal_deg": null,
+            "interpolation_error_bound_established": false,
+            "jd_tt": 2487710.889439052,
+            "kind": "station",
+            "other": null,
+            "source_panel_jd_tt": [
+              2487710.8894288,
+              2487710.9206788
+            ]
+          }
+        ],
+        "90-minute": [
+          {
+            "ambiguous": false,
+            "body": "jupiter",
+            "direction": "direct-to-retrograde",
+            "equation_slope_per_tt_day": -0.003196773181109994,
+            "goal_deg": null,
+            "interpolation_error_bound_established": false,
+            "jd_tt": 2487710.889443065,
+            "kind": "station",
+            "other": null,
+            "source_panel_jd_tt": [
+              2487710.8894288,
+              2487710.9519288
+            ]
+          }
+        ],
+        "shifted-45-minute": [
+          {
+            "ambiguous": false,
+            "body": "jupiter",
+            "direction": "direct-to-retrograde",
+            "equation_slope_per_tt_day": -0.0031962037080426197,
+            "goal_deg": null,
+            "interpolation_error_bound_established": false,
+            "jd_tt": 2487710.889443414,
+            "kind": "station",
+            "other": null,
+            "source_panel_jd_tt": [
+              2487710.8738038,
+              2487710.9050538
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "aria_comparison": {
+        "actual_count": 1,
+        "additional_actual_indices": [],
+        "ambiguous_edges": [],
+        "duplicate_actual_pairs": [],
+        "matches": [
+          {
+            "actual_index": 0,
+            "actual_minus_reference_seconds": 1.7018616199493408,
+            "reference_index": 0
+          }
+        ],
+        "missing_reference_indices": [],
+        "passed": true,
+        "reference_count": 1
+      },
+      "body": "pluto",
+      "grid_comparisons": {
+        "3-hour": {
+          "actual_count": 1,
+          "additional_actual_indices": [],
+          "ambiguous_edges": [],
+          "duplicate_actual_pairs": [],
+          "matches": [
+            {
+              "actual_index": 0,
+              "actual_minus_reference_seconds": 0.8104562759399414,
+              "reference_index": 0
+            }
+          ],
+          "missing_reference_indices": [],
+          "passed": true,
+          "reference_count": 1
+        },
+        "90-minute": {
+          "actual_count": 1,
+          "additional_actual_indices": [],
+          "ambiguous_edges": [],
+          "duplicate_actual_pairs": [],
+          "matches": [
+            {
+              "actual_index": 0,
+              "actual_minus_reference_seconds": 0.37734657526016235,
+              "reference_index": 0
+            }
+          ],
+          "missing_reference_indices": [],
+          "passed": true,
+          "reference_count": 1
+        },
+        "shifted-45-minute": {
+          "actual_count": 1,
+          "additional_actual_indices": [],
+          "ambiguous_edges": [],
+          "duplicate_actual_pairs": [],
+          "matches": [
+            {
+              "actual_index": 0,
+              "actual_minus_reference_seconds": 2.3552075028419495,
+              "reference_index": 0
+            }
+          ],
+          "missing_reference_indices": [],
+          "passed": true,
+          "reference_count": 1
+        }
+      },
+      "id": "historical-2099:station:pluto:None:0:0",
+      "passed": true,
+      "roots_by_grid": {
+        "3-hour": [
+          {
+            "ambiguous": false,
+            "body": "pluto",
+            "direction": "retrograde-to-direct",
+            "equation_slope_per_tt_day": 0.0003921236193624738,
+            "goal_deg": null,
+            "interpolation_error_bound_established": false,
+            "jd_tt": 2487718.13029545,
+            "kind": "station",
+            "other": null,
+            "source_panel_jd_tt": [
+              2487718.0053103,
+              2487718.1303103
+            ]
+          }
+        ],
+        "45-minute": [
+          {
+            "ambiguous": false,
+            "body": "pluto",
+            "direction": "retrograde-to-direct",
+            "equation_slope_per_tt_day": 0.0003920588846815084,
+            "goal_deg": null,
+            "interpolation_error_bound_established": false,
+            "jd_tt": 2487718.1302860696,
+            "kind": "station",
+            "other": null,
+            "source_panel_jd_tt": [
+              2487718.0990603,
+              2487718.1303103
+            ]
+          }
+        ],
+        "90-minute": [
+          {
+            "ambiguous": false,
+            "body": "pluto",
+            "direction": "retrograde-to-direct",
+            "equation_slope_per_tt_day": 0.0003921502290245817,
+            "goal_deg": null,
+            "interpolation_error_bound_established": false,
+            "jd_tt": 2487718.130290437,
+            "kind": "station",
+            "other": null,
+            "source_panel_jd_tt": [
+              2487718.0678103,
+              2487718.1303103
+            ]
+          }
+        ],
+        "shifted-45-minute": [
+          {
+            "ambiguous": false,
+            "body": "pluto",
+            "direction": "retrograde-to-direct",
+            "equation_slope_per_tt_day": 0.0003917425852859285,
+            "goal_deg": null,
+            "interpolation_error_bound_established": false,
+            "jd_tt": 2487718.130313329,
+            "kind": "station",
+            "other": null,
+            "source_panel_jd_tt": [
+              2487718.1146853,
+              2487718.1459353
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

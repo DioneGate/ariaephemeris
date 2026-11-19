@@ -1,0 +1,150 @@
+
+
+*******************************************************************************
+Ephemeris / API_USER Thu Nov 19 11:57:58 2026 Pasadena, USA      / Horizons    
+*******************************************************************************
+Target body name: Uranus (799)                    {source: ura184_merged}
+Center body name: Earth (399)                     {source: ura184_merged}
+Center-site name: GEOCENTRIC
+*******************************************************************************
+Start time      : A.D. 2025-Jan-31 01:00:25.5000 TT      
+Stop  time      : A.D. 2025-Sep-06 05:37:30.3197 TT      
+Step-size       : DISCRETE TIME-LIST
+*******************************************************************************
+Target pole/equ : IAU_URANUS                      {East-longitude positive}
+Target radii    : 25559.0, 25559.0, 24973.0 km    {Equator_a, b, pole_c}       
+Center geodetic : 0.0, 0.0, -6378.137             {E-lon(deg),Lat(deg),Alt(km)}
+Center cylindric: 0.0, 0.0, 0.0                   {E-lon(deg),Dxy(km),Dz(km)}
+Center pole/equ : ITRF93                          {East-longitude positive}
+Center radii    : 6378.137, 6378.137, 6356.752 km {Equator_a, b, pole_c}       
+Target primary  : Sun
+Vis. interferer : MOON (R_eq= 1737.400) km        {source: DE441}
+Rel. light bend : Sun                             {source: ura184_merged}
+Rel. lght bnd GM: 1.3271E+11 km^3/s^2                                          
+Atmos refraction: NO (AIRLESS)
+RA format       : DEG
+Time format     : JD  
+Calendar mode   : Mixed Julian/Gregorian
+EOP file        : eop.261118.p270214                                           
+EOP coverage    : DATA-BASED 1962-JAN-20 TO 2026-NOV-18. PREDICTS-> 2027-FEB-13
+Units conversion: 1 au= 149597870.700 km, c= 299792.458 km/s, 1 day= 86400.0 s 
+Table cut-offs 1: Elevation (-90.0deg=NO ),Airmass (>38.000=NO), Daylight (NO )
+Table cut-offs 2: Solar elongation (  0.0,180.0=NO ),Local Hour Angle( 0.0=NO )
+Table cut-offs 3: RA/DEC angular rate (     0.0=NO )                           
+Table format    : Comma Separated Values (spreadsheet)
+*******************************************************************************
+Date_________JDTT, , , RA_(ICRF-a-app), DEC_(ICRF-a-app),
+*********************************************************
+$$SOE
+2460706.541961800, , ,    50.576955578,     18.262868295,
+2460706.557586800, , ,    50.576958729,     18.262874897,
+2460706.573211800, , ,    50.576962100,     18.262881553,
+2460706.588836800, , ,    50.576965693,     18.262888265,
+2460706.604461800, , ,    50.576969506,     18.262895031,
+2460706.620086800, , ,    50.576973541,     18.262901852,
+2460706.635711800, , ,    50.576977796,     18.262908729,
+2460706.651336800, , ,    50.576982273,     18.262915660,
+2460706.666961800, , ,    50.576986970,     18.262922646,
+2460706.682586800, , ,    50.576991889,     18.262929687,
+2460924.203128700, , ,    59.016025209,     20.171833253,
+2460924.218753700, , ,    59.016031682,     20.171834074,
+2460924.234378700, , ,    59.016037941,     20.171834854,
+2460924.250003700, , ,    59.016043985,     20.171835592,
+2460924.265628700, , ,    59.016049816,     20.171836287,
+2460924.281253700, , ,    59.016055432,     20.171836941,
+2460924.296878700, , ,    59.016060834,     20.171837553,
+2460924.312503700, , ,    59.016066022,     20.171838123,
+2460924.328128700, , ,    59.016070996,     20.171838651,
+2460924.343753700, , ,    59.016075756,     20.171839138,
+2460924.359378700, , ,    59.016080301,     20.171839582,
+2460924.375003700, , ,    59.016084633,     20.171839985,
+2460924.390628700, , ,    59.016088750,     20.171840345,
+2460924.406253700, , ,    59.016092653,     20.171840664,
+2460924.421878700, , ,    59.016096343,     20.171840941,
+2460924.437503700, , ,    59.016099818,     20.171841176,
+2460924.453128700, , ,    59.016103079,     20.171841369,
+2460924.468753700, , ,    59.016106126,     20.171841521,
+2460924.484378700, , ,    59.016108958,     20.171841630,
+2460924.500003700, , ,    59.016111577,     20.171841698,
+2460924.515628700, , ,    59.016113982,     20.171841723,
+2460924.531253700, , ,    59.016116172,     20.171841707,
+2460924.546878700, , ,    59.016118149,     20.171841650,
+2460924.562503700, , ,    59.016119911,     20.171841550,
+2460924.578128700, , ,    59.016121460,     20.171841408,
+2460924.593753700, , ,    59.016122794,     20.171841225,
+2460924.609378700, , ,    59.016123914,     20.171841000,
+2460924.625003700, , ,    59.016124820,     20.171840733,
+2460924.640628700, , ,    59.016125512,     20.171840424,
+2460924.656253700, , ,    59.016125990,     20.171840074,
+2460924.671878700, , ,    59.016126254,     20.171839681,
+2460924.687503700, , ,    59.016126304,     20.171839247,
+2460924.703128700, , ,    59.016126140,     20.171838771,
+2460924.718753700, , ,    59.016125762,     20.171838253,
+2460924.734378700, , ,    59.016125170,     20.171837694,
+$$EOE
+*******************************************************************************
+Column meaning:
+ 
+TIME
+
+  Terrestrial Time ("TT") output was requested. This continuous timescale
+is the relativistic proper time of a clock at rest on the Earth's geoid (at
+"mean sea level"), but defined for a specified gravitational time dilation,
+so a coordinate time. It is appropriate for observations and measurements
+from the surface of the Earth.
+
+  TT runs at a uniform rate of one SI second per second and is independent of
+irregularities in Earth's rotation. It is a theoretical ideal, approximated
+(with a constant offset of 32.184 seconds) by the measured International Atomic
+Time (TAI) after 1955.  TT is the relativistic successor to the now deprecated
+non-relativistic Ephemeris Time (ET).
+
+  The TT scale requested here is a time-scale conversion from internal
+Barycentric Dynamical Time (TDB) and differs periodically from TDB with an
+amplitude less than 2 ms for several thousand years centered on present.
+The time-scale conversion for Earth is used regardless of observer location
+within the solar system, although clock rates may differ due to the local
+gravity field.
+
+  Any 'b' symbol in the 1st-column denotes a B.C. date. First-column blank
+(" ") denotes an A.D. date.
+ 
+CALENDAR SYSTEM
+
+  Mixed calendar mode was active such that calendar dates after AD 1582-Oct-15
+(if any) are in the modern Gregorian system. Dates prior to 1582-Oct-5 (if any)
+are in the Julian calendar system, which is automatically extended for dates
+prior to its adoption on 45-Jan-1 BC.  The Julian calendar is useful for
+matching historical dates. The Gregorian calendar more accurately corresponds
+to the Earth's orbital motion and seasons. A "Gregorian-only" calendar mode is
+available if such physical events are the primary interest.
+
+  NOTE: "n.a." in output means quantity "not available" at the print-time.
+ 
+ 'RA_(ICRF-a-app), DEC_(ICRF-a-app),' =
+   Airless apparent right ascension and declination coordinates of the target
+in the ICRF reference frame, with down-leg light-time, gravitational deflection
+of light, and stellar aberration.
+
+   Units:
+          RA : ddd.ddddd{dddd}   (degrees)
+          DEC: sdd.ddddd{dddd}   (degrees)
+
+Computations by ...
+
+    Solar System Dynamics Group, Horizons On-Line Ephemeris System
+    4800 Oak Grove Drive, Jet Propulsion Laboratory
+    Pasadena, CA  91109   USA
+
+    General site: https://ssd.jpl.nasa.gov/
+    Mailing list: https://ssd.jpl.nasa.gov/email_list.html
+    System news : https://ssd.jpl.nasa.gov/horizons/news.html
+    User Guide  : https://ssd.jpl.nasa.gov/horizons/manual.html
+    Connect     : browser        https://ssd.jpl.nasa.gov/horizons/app.html#/x
+                  API            https://ssd-api.jpl.nasa.gov/doc/horizons.html
+                  command-line   telnet ssd.jpl.nasa.gov 6775
+                  e-mail/batch   https://ssd.jpl.nasa.gov/ftp/ssd/horizons_batch.txt
+                  scripts        https://ssd.jpl.nasa.gov/ftp/ssd/SCRIPTS
+    Inquiries   : Jon.D.Giorgini@jpl.nasa.gov
+
+*******************************************************************************

@@ -229,3 +229,105 @@ No Aria Galaxy change, package release or deployment is included.
 Complete RM-001/009 independent catalogues, compare every returned event, execute
 fast/source/real-kernel checks and merge only after their recorded gates pass.
 Then prepare RM-001/010 separately when requested. Parent P3/P6 remain Planned.
+
+## RM-001/009 execution baseline — 19 November 2026
+
+[PR #14](https://github.com/DioneGate/ariaephemeris/pull/14), branch
+`feature/rm-001-009-independent-event-discovery`. The complete machine-readable
+specification was committed **before acquiring JPL source** at
+`09593cf21efffa8c7c0079b9eeb4014f3cf49cdd`: 237 workloads, 11 fixed TT windows,
+6 physical bodies and 15 pairs; full 2023–2025 plus four historical windows and
+six source-seam windows. Additional Mars-pair aspects include 60°, 90° and 120°.
+Reference discovery uses local cubic source rays and three coarser/shifted grids;
+full-list matching never silently selects just the nearest returned event.
+
+Executed locally with the exact development lock: Ruff check/format, mypy, source
+notice audit, 108 non-kernel tests (20 deselected), distribution build and clean
+wheel/sdist package smoke **PASS**. Thirteen new analytic/source-contract tests
+cover hidden recrossings, tangency, close roots, wrap, half-open endpoints,
+corrupted sources, duplicate/ambiguous matching and search budget failure.
+Original JPL acquisition and real-kernel comparison are separate pending gates;
+no source-model or commercial accuracy pass is inferred from fast checks.
+
+**Separate legacy numerical regression:** [real-kernel qualification
+#44582272663](https://github.com/DioneGate/ariaephemeris/actions/runs/44582272663)
+**PASS**, including 125 tests passed / 3 explicitly skipped, full
+`tools/datasets/qualify.py` (all seven raw-state, apparent-direction, rate,
+angle/house, timing and declared-window completeness gates true), and
+`tools/datasets/qualify_oppositions.py`. This is the existing DE442s reference
+profile regression, not a substitute for 009's independent physical-centre gate.
+
+**Review hardening:** raw JPL headers must independently state GEOCENTRIC,
+AIRLESS, ICRF apparent RA/Dec and JDTT; a recomputed digest cannot legitimise a
+mislabelled frame. Local non-kernel suite now **109 passed / 20 deselected**
+(14 new tests). The replay runner can use two isolated calculation processes,
+with separate verified kernel handles and exact serial result ordering; the
+frozen serial report remains the byte-for-byte acceptance target. This is a
+qualification-runner option, not an engine performance or capacity claim.
+
+## RM-001/009 final result and 010 baseline — 19 November 2026
+
+PR #14 was merged into main at `02020a9415d7e71e6c2e5601bf93d32096c94fe0` after source capture. The acquisition
+run #44582263949 **failed its numerical gate**: all 142 Aria/reference events
+matched (zero missing/additional/duplicate/ambiguous), but six station workloads
+failed the 30-second coarse-reference convergence test. All 237 workloads were
+executed; 193 were empty. The failure is reference interpolation sensitivity,
+not observed missed Aria events; it remains unresolved rather than a pass.
+
+010 is now authorised for implementation. The specification fixes 400 new
+geometric JPL source components at the pre-existing 25 epochs for each remaining
+planet, and a JPL-only refinement around all 36 independently discovered stations.
+The original 009 source and failed report remain immutable. Physical uncertainty
+is not inferred from model disagreement. Parent P3/P6 remain Planned.
+
+## RM-001/010 measured evidence — 19 November 2026
+
+[PR #15](https://github.com/DioneGate/ariaephemeris/pull/15), branch
+`feature/rm-001-010-model-uncertainty`. Original scope frozen at `df381bdf`;
+initial 400-state / 2,340-ray capture retained in `221ecf1`. It failed reference
+checks because adjacent independently fitted cubics had derivative discontinuities.
+The compact initial diagnostic and immutable Git report retain all failures.
+
+A C2 not-a-knot cubic spline resolves all 36 stations, with 5.2527 s maximum grid
+difference under the unchanged 30-second criterion; all match recorded Aria
+events, maximum 3.5712 s (Neptune). Separately predeclared 100 direct-offset vectors
+(`a2272bc`) isolate large Uranus/Neptune reference-chain cancellation. Neptune's
+remaining sampled direct-offset differences reach 325.5 m and 6.38 mm/s; other
+remaining-body direct-offset differences are below 1 mm in the sample.
+
+[Capture and real-kernel qualification #44605189943](https://github.com/DioneGate/ariaephemeris/actions/runs/44605189943)
+**PASS**: original reference integrity, six source SPKs, unchanged Jupiter/Pluto
+byte-for-byte attribution and complete new 100-case / 36-station numerical gates.
+The final report was frozen at `4c109c0`. No source default or runtime changed.
+
+Executed locally: Ruff, format, mypy, source audit, build, clean wheel/sdist smoke,
+and initially 118 non-kernel tests (20 kernel tests deselected) **PASS**. Final
+validation evidence follows below. All physical uncertainty bounds remain
+null where applicable observational evidence is absent; 009's failed coarse
+report remains immutable. New acquisition workflows are now explicit/read-only.
+
+**Numerical portability diagnosis:** source-only replay #44606319071 failed
+strict equality for a derived station field. Independent source reconstruction
+then passed at #44607131524, while its full replay differed only in 171 derived
+station floating values; all source/vector identities and scientific flags were
+unchanged. The largest solved-root difference was **0.00004024 seconds**.
+The exact Git diff was checked against the frozen report locally.
+
+A structured replay contract now keeps source hashes, vector attribution,
+schemas, topology, counts, acceptance flags and unknown physical bounds exact.
+Derived station times/rates/accelerations use the explicit numerical precision
+in the scientific report; conditioning proxies must exactly reconstruct from
+their independently checked inputs. The observed CI replay satisfies this
+contract. The 30/60-second scientific criteria are unchanged. Unit tests also
+reject a one-second root change, altered source identity, changed acceptance
+flags, a zero substituted for unknown uncertainty, and inconsistent proxies.
+Local non-kernel suite: **120 passed / 20 deselected**. Final CI replay passed.
+
+
+**Final implementation validation (`5dc4a0d`):**
+[original-source and pinned six-kernel replay #44608488208](https://github.com/DioneGate/ariaephemeris/actions/runs/44608488208) **PASS**; all 36 stations and all 100 component decompositions pass. This runner reproduced all 9,629 numerical report leaves exactly; the separately tested numerical portability contract also accepts the observed 40-microsecond replay difference.
+[Legacy Jupiter/Pluto attribution #44608488096](https://github.com/DioneGate/ariaephemeris/actions/runs/44608488096) **PASS**, byte-for-byte.
+[Real-kernel baseline #44608488076](https://github.com/DioneGate/ariaephemeris/actions/runs/44608488076) **PASS**: **137 tests passed, 3 skipped**; all raw position/velocity, apparent direction, longitude rate, angles/houses, event timing and bounded completeness gates pass, plus supplementary oppositions. Skipped tests do not count as qualified cases.
+[Fast checks/distribution #44608488090](https://github.com/DioneGate/ariaephemeris/actions/runs/44608488090) **PASS**: Ruff, formatting, mypy, source audit, 120 non-kernel tests and build/package smoke. Existing Horizons source integrity #44608488217 also **PASS**.
+
+The final documentation-only follow-up records these checks and aligns the written acceleration replay tolerance with the implemented **1e-9 deg/TT day²**. It does not change code, frozen source data, the numerical report or scientific gates. Prompt 010 remains **In review**, PR #15 open/unmerged; P3/P6 remain Planned. No release or deployment was performed.
