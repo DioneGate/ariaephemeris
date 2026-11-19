@@ -46,3 +46,14 @@ The reference sky directions are independent Horizons outputs, but both sides sh
 [RM-001/008 WP5.5](../roadmaps/001-engine-development/p1-wp55-independent-event-timing.md) compares **22** 2023–2025, Aria-nominated physical-centre stations, tropical zodiac ingresses, Mars–outer-body conjunctions and oppositions against independently interpolated NASA/JPL Horizons TT roots. [The 22-case numerical report](wp55-independent-event-roots.json) has maximum absolute timing differences **4.6136 s stations (Neptune), 0.04357 s ingresses, 0.03955 s conjunctions, 0.03919 s oppositions**, 22/22 matching Aria event returns; every reference root comes from original Horizons airless apparent ICRF direction samples rather than Aria predictions. [An extra 224 original JPL rays](../../data/fixtures/horizons/wp55-root-refinement/wp55-jpl-fine-root-brackets-v1.json) confirm **22/22 observed source sign changes within ±15 seconds** and each Aria event time inside that observed source interval. Source files and raw SHA checks remain immutable and live acquisition is not routine CI.
 
 **Scientific limits:** This is an Aria-nominated finite selection, not independent blind event discovery/completeness. A sign change proves existence of a crossing under local continuity, not necessarily uniqueness. JPL model/source differences, finite interpolation and shared ERFA standards are disclosed; no absolute physical event timing uncertainty, 1900–2100 continuous guarantee or commercial release acceptance is inferred. [PR #13](https://github.com/DioneGate/ariaephemeris/pull/13) merged on 19 November 2026 at `b170f7443008f3b8e7b6fbcda656bdefa541e99f`; RM-001/008 is Done for the bounded timing comparison. No runtime algorithm, model default or Aria Galaxy code changed.
+
+## RM-001/010 — model attribution and uncertainty
+
+[Measured evidence](wp57-model-uncertainty.json) reconstructs 100 remaining-body
+source discrepancies from 400 component states plus 100 independent direct-offset
+vectors. Another 2,340 JPL rays refine all 36 independently discovered stations.
+[Scientific interpretation](../roadmaps/001-engine-development/p1-wp57-model-uncertainty.md)
+separates query-chain cancellation, true direct-offset differences, interpolation
+continuity and unknown physical bounds. The initial local-cubic failure is retained
+in [its diagnostic](wp57-initial-local-cubic-diagnostic.json). Final replay/merge
+status belongs in roadmap progress; this is not commercial-release certification.

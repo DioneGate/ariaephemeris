@@ -97,11 +97,13 @@ runtime/default, Aria Galaxy, publication or deployment changed.
 
 **Verified 009 delivery:** [PR #14](https://github.com/DioneGate/ariaephemeris/pull/14) merged at `02020a9`. All 142 event pairs match; 193 workloads are empty. The overall benchmark is **not passed**: six station workloads fail coarse-reference convergence. 009 remains **In review for scientific acceptance**; 010 investigates that interpolation sensitivity. Original evidence is preserved.
 
-## RM-001/010 — Model uncertainty and remaining source attribution (In progress)
+## RM-001/010 — Model uncertainty and remaining source attribution (In review)
 
 Extend Jupiter/Pluto attribution to Mars, Saturn, Uranus and Neptune, prioritising Neptune velocity/station sensitivity. Separate planetary/observer/centre source differences, frame/correction choices, derivative/interpolation convergence, physical ephemeris uncertainty and civil-time/EOP assumptions. Use 009 independently discovered events for conditioning analysis. Deliver per-body evidence and a model-aware uncertainty register; mark unsupported absolute bounds unknown, not zero. Product limits remain subject to decision D07. Owner requested 010 execution on 19 November 2026. [Implementation prompt](prompts/010-model-uncertainty-and-source-attribution.md); source-only station refinement will diagnose the six 009 reference-grid failures. No physical uncertainty guarantee is inferred.
 
 Entry: 009 evidence available and exact source/convention identities retained. Exit: reproducible component closure for the remaining four planets; per-body/date/model numerical sensitivity and event-conditioning evidence; an uncertainty register distinguishing measured disagreement, justified bounds and unknown physical uncertainty; explicit proposed commercial claim wording for owner review. No unknown uncertainty may be replaced by the maximum disagreement between two ephemerides. Civil-time/EOP qualification remains P2 work rather than an implicit TT accuracy claim.
+
+**010 measured outcome:** [PR #15](https://github.com/DioneGate/ariaephemeris/pull/15) has 500 new original geometric vectors and 2,340 JPL station rays. [Scientific report](p1-wp57-model-uncertainty.md): all 100 remaining-body residuals reconstruct, direct queries isolate Uranus/Neptune chain cancellation, and a continuous reference resolves all 36 stations (maximum grid difference 5.25 s; Aria disagreement 3.57 s). Neptune's sampled direct-offset difference is about 325.5 m and 6.38 mm/s; absolute physical uncertainty remains unknown. Final offline/pinned-kernel replay is required before bounded acceptance. P3/P6 stay Planned.
 
 ## Delivery plan
 

@@ -1,11 +1,9 @@
 name: RM-001-010 explicit source capture and uncertainty qualification
+# Explicit source acquisition only; routine checks use frozen reference data.
 on:
-  push:
-    branches: [feature/rm-001-010-model-uncertainty]
-    paths: ['data/fixtures/horizons/wp57-uncertainty/acquisition-request.json']
   workflow_dispatch:
 permissions:
-  contents: write
+  contents: read
 concurrency:
   group: wp57-explicit-acquisition
   cancel-in-progress: false
@@ -90,19 +88,3 @@ jobs:
             data/fixtures/horizons/wp57-uncertainty/
             docs/validation/wp57-model-uncertainty.json
           retention-days: 60
-      - name: Freeze original source and actual numerical results on review branch
-        if: always()
-        run: |
-          set -euo pipefail
-          if [ -f data/fixtures/horizons/wp57-uncertainty/source.json ]; then
-            git config user.name 'github-actions[bot]'
-            git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-            git add data/fixtures/horizons/wp57-uncertainty
-            if [ -f docs/validation/wp57-model-uncertainty.json ]; then
-              git add docs/validation/wp57-model-uncertainty.json
-            fi
-            if ! git diff --cached --quiet; then
-              git commit -m 'data(RM-001/010): freeze original four-model components and station uncertainty evidence'
-              git push origin HEAD:feature/rm-001-010-model-uncertainty
-            fi
-          fi

@@ -279,3 +279,29 @@ geometric JPL source components at the pre-existing 25 epochs for each remaining
 planet, and a JPL-only refinement around all 36 independently discovered stations.
 The original 009 source and failed report remain immutable. Physical uncertainty
 is not inferred from model disagreement. Parent P3/P6 remain Planned.
+
+## RM-001/010 measured evidence — 19 November 2026
+
+[PR #15](https://github.com/DioneGate/ariaephemeris/pull/15), branch
+`feature/rm-001-010-model-uncertainty`. Original scope frozen at `df381bdf`;
+initial 400-state / 2,340-ray capture retained in `221ecf1`. It failed reference
+checks because adjacent independently fitted cubics had derivative discontinuities.
+The compact initial diagnostic and immutable Git report retain all failures.
+
+A C2 not-a-knot cubic spline resolves all 36 stations, with 5.2527 s maximum grid
+difference under the unchanged 30-second criterion; all match recorded Aria
+events, maximum 3.5712 s (Neptune). Separately predeclared 100 direct-offset vectors
+(`a2272bc`) isolate large Uranus/Neptune reference-chain cancellation. Neptune's
+remaining sampled direct-offset differences reach 325.5 m and 6.38 mm/s; other
+remaining-body direct-offset differences are below 1 mm in the sample.
+
+[Capture and real-kernel qualification #44605189943](https://github.com/DioneGate/ariaephemeris/actions/runs/44605189943)
+**PASS**: original reference integrity, six source SPKs, unchanged Jupiter/Pluto
+byte-for-byte attribution and complete new 100-case / 36-station numerical gates.
+The final report was frozen at `4c109c0`. No source default or runtime changed.
+
+Executed locally: Ruff, format, mypy, source audit, build, clean wheel/sdist smoke,
+and 118 non-kernel tests (20 kernel tests deselected) **PASS**. Full pinned-kernel
+replay and final PR checks remain pending. All physical uncertainty bounds remain
+null where applicable observational evidence is absent; 009's failed coarse
+report remains immutable. New acquisition workflows are now explicit/read-only.
