@@ -168,6 +168,14 @@ Branch: [`docs/rm-001-001-commercial-calculation-contract-20261118`](https://git
 
 **Scope boundary:** This task implements the qualification harness and measured external chart comparisons only. The absolute source-model uncertainty budget, complete chart product (Sun/Moon/inner planets, houses), independent event-root timing (WP5.5), broader 1900–2100 stress sampling, Neptune/other-source model residual attribution and commercial release remain **open**. No Aria engine runtime, Aria Galaxy, package publication or deployment was changed. Prompt remains **In review** until specifically authorised merge; parent RM-001-P3/P6 remain Planned.
 
+## RM-001/008 — WP5.5 independent JPL event-root timing, 2026-11-19
+
+**User authority:** Implement WP5.5 on `feature/rm-001-008-wp5-5-independent-event-timing-20261119` / [draft PR #13](https://github.com/DioneGate/ariaephemeris/pull/13). No merge, release, Aria Galaxy or engine-runtime changes authorised.
+
+**Implemented qualification design (initial, source results pending):** An independently sourced set of 22 *nominated* 2023–2025 planetary events comprises six stations, six tropical sign ingresses, five Mars–outer-planet conjunctions and five oppositions. Aria selects 22 candidate windows only. NASA/JPL Horizons provides all reference airless apparent ICRF RA/Dec directions at explicit TT, stored with original raw output and SHA-256. A separate IAU 2006/2000A tropical conversion and Horizons-only five-point signed-rate stencil identify source sign-change brackets; local four-point cubic interpolation produces reference roots, retaining observed time brackets and cubic-versus-linear sensitivity. Aria's unchanged `find_events` is compared against those roots in TT seconds. This **does not establish** independent blind event discovery, rigorous event timing error bounds or external physical model truth. Source-model and ERFA frame dependencies are labelled.
+
+**Evidence to record only after execution:** raw JPL source response count and SHA, number of complete independent source rays, all 22 source reference-root brackets, Aria root counts, actual timing maximum/RMS/p95 per event kind and provisional 60-second exceedances, exact final CI runs, reference report hashes and PR review status. No values or acceptance claims are inferred from prior WP5.4 position agreement.
+
 ## Delivery log
 
 | Date | Phase/prompt | Change and evidence | Validation | Deployment |
@@ -190,6 +198,8 @@ Branch: [`docs/rm-001-001-commercial-calculation-contract-20261118`](https://git
 | 2026-11-19 | RM-001/006 source-model reconciliation **Done (attribution only)** | 200 independent Horizons source-component states + [50 exact Jupiter/Pluto decompositions](p1-jpl-source-reconciliation.md), [draft PR #11](https://github.com/DioneGate/ariaephemeris/pull/11) | Original-source integrity #44481431375 PASS, numerical replay #44481431478 PASS, fast CI #44481431302 PASS; separate historical qualification pending | No engine/app/model change or release; [PR #11 merged](https://github.com/DioneGate/ariaephemeris/pull/11), physical uncertainty still open |
 
 | 2026-11-19 | RM-001/007 WP5.4 **In review** — tropical longitude/latitude/rates | [186-case report](p1-wp54-tropical-coordinate-qualification.md), [930 original JPL rays](../../../data/fixtures/horizons/wp54-tropical/wp54-horizons-tropical-stencils-v1.json), [draft PR #12](https://github.com/DioneGate/ariaephemeris/pull/12) | Real JPL acquisition and 186-case comparison successful; initial Git push recovered via #44485106448 PASS; final PR CI/replay to be checked | No runtime/app/merge/release change; physical accuracy not certified |
+
+| 2026-11-19 | RM-001/008 WP5.5 **In progress**, independent event roots | [Prompt](prompts/008-wp5-5-independent-event-timing.md), [PR #13 draft](https://github.com/DioneGate/ariaephemeris/pull/13) | Synthetic root tests passed in initial formatter; real NASA/JPL source acquisition and numerical event report pending | No runtime, app, merge or release change |
 
 Record subsequent increments here with exact phase/prompt ID, branch/PR,
 review/merge evidence, commands/results, remaining gaps and deployed-version
