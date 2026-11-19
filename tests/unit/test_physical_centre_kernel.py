@@ -136,7 +136,7 @@ def test_type_three_velocity_unit_conversion(monkeypatch):
 def test_closed_source_is_not_used_after_failure(monkeypatch):
     fake = FakeSPK([FakeSegment(2, 3, start=0, end=10)])
     monkeypatch.setattr("ariaephemeris.sources.centres.SPK.open", lambda path: fake)
-    with pytest.raises(AriaError, match="missing centre segment"):
+    with pytest.raises(AriaError, match="source ends early"):
         PhysicalCentreKernel(
             FakeBase(),
             {"jupiter": "unused"},
