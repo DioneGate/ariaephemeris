@@ -75,7 +75,9 @@ def validate(root: Path, *, expected_count: int = 300) -> dict[str, object]:
             ):
                 raise ValueError("Apparent reference query parameters drifted")
         original = parse_table(raw, TARGETS[body], kind, epochs(body))
-        selected = [case["reference"] for case in cases if (case["body"], case["kind"]) == (body, kind)]
+        selected = [
+            case["reference"] for case in cases if (case["body"], case["kind"]) == (body, kind)
+        ]
         if original != selected:
             raise ValueError("Structured fixture values differ from raw source")
         if kind == "geometric":
