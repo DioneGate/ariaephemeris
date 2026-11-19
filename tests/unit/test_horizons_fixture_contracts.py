@@ -10,7 +10,9 @@ import pytest
 
 TOOLS = Path(__file__).resolve().parents[2] / "tools/datasets"
 sys.path.insert(0, str(TOOLS))
-SPEC = importlib.util.spec_from_file_location("acquire_horizons_fixtures", TOOLS / "acquire_horizons_fixtures.py")
+SPEC = importlib.util.spec_from_file_location(
+    "acquire_horizons_fixtures", TOOLS / "acquire_horizons_fixtures.py"
+)
 assert SPEC is not None and SPEC.loader is not None
 h = importlib.util.module_from_spec(SPEC)
 SPEC.loader.exec_module(h)
@@ -58,7 +60,9 @@ def test_source_parser_accepts_only_resolved_physical_target_and_complete_rows()
     assert parsed[0]["inertial_apparent_ra_deg"] == 125.125
     assert parsed[0]["inertial_apparent_dec_deg"] == -23.5
     with pytest.raises(ValueError, match="different physical-centre"):
-        h.parse_table(geo.replace("Mars (499)", "Mars Barycentre (4)"), 499, "geometric", [2451545.0])
+        h.parse_table(
+            geo.replace("Mars (499)", "Mars Barycentre (4)"), 499, "geometric", [2451545.0]
+        )
     with pytest.raises(ValueError, match="returned 1 rows"):
         h.parse_table(geo, 499, "geometric", [2451545.0, 2451546.0])
     with pytest.raises(ValueError, match="No unique complete"):
@@ -66,9 +70,10 @@ def test_source_parser_accepts_only_resolved_physical_target_and_complete_rows()
 
 
 def test_acquisition_sha_provenance_stable():
-    assert h.sha256(b"JPL reference fixture") == __import__("hashlib").sha256(
-        b"JPL reference fixture"
-    ).hexdigest()
+    assert (
+        h.sha256(b"JPL reference fixture")
+        == __import__("hashlib").sha256(b"JPL reference fixture").hexdigest()
+    )
 
 
 def test_reject_unsupported_requests_before_api():
