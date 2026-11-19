@@ -116,6 +116,18 @@ Branch: [`docs/rm-001-001-commercial-calculation-contract-20261118`](https://git
 
 **Open scope:** full-source performance and memory profile, representative independent apparent positions/rates/event fixtures, model-combination compatibility, commercially suitable compact pack/licensing, complete data installation experience, HTTP service and provider-neutral Aria Galaxy migration. WP4 code **In review** until final checks and owner approval; RM-001-P3 and parent P1 still **Planned**. Do not merge/release/deploy without separate authorisation.
 
+## RM-001/004 — WP5.1 independent Horizons fixture acquisition, 2026-11-19
+
+**Owner authorisation:** explicitly requested WP5.1 implementation, brief report and **merge into `main` after successful checks**. Work branch `feature/rm-001-004-independent-horizons-fixtures-20261119`, [PR #7](https://github.com/DioneGate/ariaephemeris/pull/7). Baseline is `main e8b0642`, after WP4 PR #6 merged. The work does not modify `src/` or change any chart outputs, profile defaults, application code, SPK packages or deployment.
+
+**Independent reference acquisition observed:** the [original NASA/JPL Horizons API](https://ssd.jpl.nasa.gov/api/horizons.api) returned 12 complete responses, stored under [`data/fixtures/horizons/raw/`](../../../data/fixtures/horizons/raw/). Manifest [`horizons-reference-v1.json`](../../../data/fixtures/horizons/horizons-reference-v1.json) stores exactly **300 records** from six physical planet centres × 25 epochs × geometric `TDB/ICRF/499 etc` vectors and apparent `TT/ICRF/quantity-45` positions. Query URLs, API signatures, target and centre source lines, raw SHA-256 and independent-source model choices are retained. Dates are stratified from 1900 through 2100, with selected kernel join ±0.04-day samples and four anchors; no reference case was calculated using Aria.
+
+**Observed source differences:** Horizons labels Mars `mar099`, Jupiter `jup365_merged`, Saturn `sat441l`, Uranus `ura184_merged`, Neptune `nep098_merged` and Pluto `plu060_merged`, with DE441 appearing in several centre/observer source headers. These are **not necessarily Aria's DE442s + six pinned supplementary kernels**; WP5.2 must distinguish scientific source-model differences from implementation errors, and separately align TT and TDB epochs before comparisons.
+
+**Validation:** the initial new offline verifier run passed its complete 12-response SHA-256/300-row semantic check, demonstrating the frozen data matches its archived JPL responses. Initial fast CI flagged only Ruff formatting in newly authored files, and the independent test workflow lacked an installed package; both were corrected. Subsequent CI statuses are tracked on [PR #7](https://github.com/DioneGate/ariaephemeris/pull/7) and must be recorded as actually observed, not presumed. Live acquisition has been restricted to manually dispatched workflow runs; routine CI only checks the frozen files offline.
+
+**Acceptance boundary:** WP5.1 is independent **source acquisition**, not an Aria-vs-Horizons comparison, absolute planetary accuracy certification, event root acceptance or commercial release. See [WP5.1 report](p1-independent-horizons-fixtures.md) and [bounded prompt](prompts/004-independent-horizons-reference-fixtures.md). Next is separately scoped WP5.2 external numerical comparison with source/convention diagnostics. Parent RM-001-P3/P6 remain Planned.
+
 ## Delivery log
 
 | Date | Phase/prompt | Change and evidence | Validation | Deployment |
@@ -131,6 +143,8 @@ Branch: [`docs/rm-001-001-commercial-calculation-contract-20261118`](https://git
 
 | 2026-11-19 | RM-001/003 WP4 **In review** | Versioned physical-centre runtime profile on [draft PR #6](https://github.com/DioneGate/ariaephemeris/pull/6); source SHA manifests, resolver, CLI/schemas, tests and all-six workflow | Six per-source real-kernel profile tests passed on earlier revision; final CI and all-six workflow tracked in WP4 section | Engine branch only; no app modification, merge or deployment |
 
+| 2026-11-19 | RM-001/004 WP5.1 — **In review** | 300 original NASA/JPL Horizons records + raw responses, hashes, exact queries, source-model differences; [PR #7](https://github.com/DioneGate/ariaephemeris/pull/7) | Initial raw integrity check passed; final CI and merge to be recorded | Source data / test harness only; no chart change or deployment |
+
 Record subsequent increments here with exact phase/prompt ID, branch/PR,
 review/merge evidence, commands/results, remaining gaps and deployed-version
 status. Do not mark work Done until its merge and acceptance are verified.
@@ -138,4 +152,4 @@ The roadmap README owns phase status; this log owns evidence.
 
 ## Next action
 
-Review [WP4 draft PR #6](https://github.com/DioneGate/ariaephemeris/pull/6), [WP4 implementation record](prompts/003-versioned-physical-centre-engine-profile.md) and actual final workflow outcomes. Keep the `reference` default stable, profile source identities pinned and physical-centre numerical qualification explicitly bounded. **Do not merge without separate approval.** After WP4 integration checks, separately plan compact-source packing, independent apparent chart/event fixtures, provider migration and commercial release prerequisites. Outstanding D02–D14 decisions and RM-001-P1/P3 phase gates remain open.
+Accept and merge [WP5.1 PR #7](https://github.com/DioneGate/ariaephemeris/pull/7) once the frozen Horizons source integrity and fast CI pass, and capture the actual merge SHA in the prompt register. Then separately authorise WP5.2 comparison of the new frozen reference data against `planet-centres-v1`, aligning TT/TDB and coordinate conventions, and diagnosing mismatched JPL source solutions before applying tolerances. No commercial release or Aria Galaxy migration is implied.
