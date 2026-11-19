@@ -12,6 +12,10 @@ on:
       - 'docs/validation/wp54-tropical-coordinate-comparison.json'
   workflow_dispatch:
 
+concurrency:
+  group: wp54-replay-pr-\${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
 permissions:
   contents: read
 
