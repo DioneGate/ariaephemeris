@@ -7,7 +7,7 @@
 | Starting point | [WP5.2 independent comparison](../p1-external-horizons-comparison.md) merged via PR #9 |
 | Implementation branch | `feature/rm-001-006-jpl-source-model-reconciliation-20261119` |
 | PR | [#11](https://github.com/DioneGate/ariaephemeris/pull/11), **draft/unmerged** |
-| Prompt status | **In review** — source attribution, source integrity, fast CI and numerical reproduction pass; scientific acceptance and merge remain open |
+| Prompt status | **Done — bounded source attribution merged at `0b5d6d6`; independent absolute physical accuracy and commercial release remain unqualified** |
 
 ## Objective and contract
 
@@ -56,7 +56,7 @@ Every one of the 50 original discrepancy vectors was reconstructed from independ
 - [x] No numerical change to Aria engine, no change to barycentre/physical profile defaults or SPK identities; no false commercial physical uncertainty claim.
 - [x] [Fast CI #44481431302](https://github.com/DioneGate/ariaephemeris/actions/runs/44481431302) **PASS** (Ruff, mypy, audit, non-kernel tests, build and package smoke); [frozen-source integrity #44481431375](https://github.com/DioneGate/ariaephemeris/actions/runs/44481431375) **PASS**; [real JPL-source attribution #44481431478](https://github.com/DioneGate/ariaephemeris/actions/runs/44481431478) **PASS**, including **byte-for-byte regeneration** of the frozen numeric evidence. The existing full-kernel pytest passed in the separately running baseline qualification job; its longer historical qualifier is tracked separately and is **not** claimed complete here.
 - [ ] Owner review of source-model attribution, proposed external product agreement gate and broader six-planet release qualification.
-- [ ] Merge or release requires **separate owner approval**; current prompt remains In review and parent P3/P6 Planned.
+- [x] Owner independently merged [PR #11](https://github.com/DioneGate/ariaephemeris/pull/11) at [`0b5d6d6`](https://github.com/DioneGate/ariaephemeris/commit/0b5d6d661e5796a7d74889dcffc323741707c1bd); this bounded source-attribution implementation is Done. Release and parent P3/P6 scientific acceptance remain **unapproved**.
 
 **Technical result versus commercial claim:** Jupiter and Pluto centre offsets are independently consistent to millimetre levels on the frozen date sample. The major 14–41 km differences derive principally from **different planetary barycentre trajectories**, with a sub-kilometre Earth reference contribution. This removes the apparent centre-offset defect hypothesis but **does not** establish that either ephemeris gives absolute planet locations within a validated physical uncertainty.
 
