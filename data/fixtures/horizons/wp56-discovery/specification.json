@@ -1,0 +1,2066 @@
+{
+  "aria_max_step_days": 0.25,
+  "aria_tolerance_seconds": 0.1,
+  "association_seconds": 60,
+  "baseline": "b170f7443008f3b8e7b6fbcda656bdefa541e99f",
+  "continuous_completeness_proven": false,
+  "conventions": {
+    "frame": "IAU 2006/2000A true ecliptic/equinox of date",
+    "observer": 399,
+    "position": "airless apparent",
+    "profile": "planet-centres-v1",
+    "source": "Horizons quantity45 ICRF RA/Dec",
+    "target_centres": [
+      499,
+      599,
+      699,
+      799,
+      899,
+      999
+    ],
+    "time": "TT",
+    "zodiac": "tropical"
+  },
+  "interval_ownership": "[start,end)",
+  "physical_accuracy_certified": false,
+  "reference_convergence_seconds": 30,
+  "reference_grids": [
+    {
+      "name": "fine",
+      "offset": 0,
+      "stride": 1
+    },
+    {
+      "name": "half-day",
+      "offset": 0,
+      "stride": 2
+    },
+    {
+      "name": "shifted-half-day",
+      "offset": 1,
+      "stride": 2
+    },
+    {
+      "name": "daily",
+      "offset": 0,
+      "stride": 4
+    }
+  ],
+  "schema_version": 1,
+  "source_padding_days": 2,
+  "source_step_days": 0.25,
+  "specification_id": "aria-independent-event-discovery-v1",
+  "windows": [
+    {
+      "bodies": [
+        "mars",
+        "jupiter",
+        "saturn",
+        "uranus",
+        "neptune",
+        "pluto"
+      ],
+      "end_jd_tt": 2461041.5,
+      "id": "2023-2025",
+      "start_jd_tt": 2459945.5
+    },
+    {
+      "bodies": [
+        "mars",
+        "jupiter",
+        "saturn",
+        "uranus",
+        "neptune",
+        "pluto"
+      ],
+      "end_jd_tt": 2415399.5,
+      "id": "historical-1901",
+      "start_jd_tt": 2415385.5
+    },
+    {
+      "bodies": [
+        "mars",
+        "jupiter",
+        "saturn",
+        "uranus",
+        "neptune",
+        "pluto"
+      ],
+      "end_jd_tt": 2433296.5,
+      "id": "historical-1950",
+      "start_jd_tt": 2433282.5
+    },
+    {
+      "bodies": [
+        "mars",
+        "jupiter",
+        "saturn",
+        "uranus",
+        "neptune",
+        "pluto"
+      ],
+      "end_jd_tt": 2451558.5,
+      "id": "historical-2000",
+      "start_jd_tt": 2451544.5
+    },
+    {
+      "bodies": [
+        "mars",
+        "jupiter",
+        "saturn",
+        "uranus",
+        "neptune",
+        "pluto"
+      ],
+      "end_jd_tt": 2487718.5,
+      "id": "historical-2099",
+      "start_jd_tt": 2487704.5
+    },
+    {
+      "bodies": [
+        "mars"
+      ],
+      "end_jd_tt": 2447577.5,
+      "id": "seam-mars",
+      "start_jd_tt": 2447573.5
+    },
+    {
+      "bodies": [
+        "jupiter"
+      ],
+      "end_jd_tt": 2450466.5,
+      "id": "seam-jupiter",
+      "start_jd_tt": 2450462.5
+    },
+    {
+      "bodies": [
+        "saturn"
+      ],
+      "end_jd_tt": 2456930.5,
+      "id": "seam-saturn",
+      "start_jd_tt": 2456926.5
+    },
+    {
+      "bodies": [
+        "uranus"
+      ],
+      "end_jd_tt": 2446280.5,
+      "id": "seam-uranus",
+      "start_jd_tt": 2446276.5
+    },
+    {
+      "bodies": [
+        "neptune"
+      ],
+      "end_jd_tt": 2447832.5,
+      "id": "seam-neptune",
+      "start_jd_tt": 2447828.5
+    },
+    {
+      "bodies": [
+        "pluto"
+      ],
+      "end_jd_tt": 2456295.5,
+      "id": "seam-pluto",
+      "start_jd_tt": 2456291.5
+    }
+  ],
+  "workloads": [
+    {
+      "angle": 0,
+      "body": "mars",
+      "id": "2023-2025:station:mars:None:0",
+      "kind": "station",
+      "other": null,
+      "window": "2023-2025"
+    },
+    {
+      "angle": 0,
+      "body": "mars",
+      "id": "2023-2025:ingress:mars:None:0",
+      "kind": "ingress",
+      "other": null,
+      "window": "2023-2025"
+    },
+    {
+      "angle": 0,
+      "body": "jupiter",
+      "id": "2023-2025:station:jupiter:None:0",
+      "kind": "station",
+      "other": null,
+      "window": "2023-2025"
+    },
+    {
+      "angle": 0,
+      "body": "jupiter",
+      "id": "2023-2025:ingress:jupiter:None:0",
+      "kind": "ingress",
+      "other": null,
+      "window": "2023-2025"
+    },
+    {
+      "angle": 0,
+      "body": "saturn",
+      "id": "2023-2025:station:saturn:None:0",
+      "kind": "station",
+      "other": null,
+      "window": "2023-2025"
+    },
+    {
+      "angle": 0,
+      "body": "saturn",
+      "id": "2023-2025:ingress:saturn:None:0",
+      "kind": "ingress",
+      "other": null,
+      "window": "2023-2025"
+    },
+    {
+      "angle": 0,
+      "body": "uranus",
+      "id": "2023-2025:station:uranus:None:0",
+      "kind": "station",
+      "other": null,
+      "window": "2023-2025"
+    },
+    {
+      "angle": 0,
+      "body": "uranus",
+      "id": "2023-2025:ingress:uranus:None:0",
+      "kind": "ingress",
+      "other": null,
+      "window": "2023-2025"
+    },
+    {
+      "angle": 0,
+      "body": "neptune",
+      "id": "2023-2025:station:neptune:None:0",
+      "kind": "station",
+      "other": null,
+      "window": "2023-2025"
+    },
+    {
+      "angle": 0,
+      "body": "neptune",
+      "id": "2023-2025:ingress:neptune:None:0",
+      "kind": "ingress",
+      "other": null,
+      "window": "2023-2025"
+    },
+    {
+      "angle": 0,
+      "body": "pluto",
+      "id": "2023-2025:station:pluto:None:0",
+      "kind": "station",
+      "other": null,
+      "window": "2023-2025"
+    },
+    {
+      "angle": 0,
+      "body": "pluto",
+      "id": "2023-2025:ingress:pluto:None:0",
+      "kind": "ingress",
+      "other": null,
+      "window": "2023-2025"
+    },
+    {
+      "angle": 0,
+      "body": "mars",
+      "id": "2023-2025:conjunction:mars:jupiter:0",
+      "kind": "conjunction",
+      "other": "jupiter",
+      "window": "2023-2025"
+    },
+    {
+      "angle": 180,
+      "body": "mars",
+      "id": "2023-2025:opposition:mars:jupiter:180",
+      "kind": "opposition",
+      "other": "jupiter",
+      "window": "2023-2025"
+    },
+    {
+      "angle": 60,
+      "body": "mars",
+      "id": "2023-2025:aspect:mars:jupiter:60",
+      "kind": "aspect",
+      "other": "jupiter",
+      "window": "2023-2025"
+    },
+    {
+      "angle": 90,
+      "body": "mars",
+      "id": "2023-2025:aspect:mars:jupiter:90",
+      "kind": "aspect",
+      "other": "jupiter",
+      "window": "2023-2025"
+    },
+    {
+      "angle": 120,
+      "body": "mars",
+      "id": "2023-2025:aspect:mars:jupiter:120",
+      "kind": "aspect",
+      "other": "jupiter",
+      "window": "2023-2025"
+    },
+    {
+      "angle": 0,
+      "body": "mars",
+      "id": "2023-2025:conjunction:mars:saturn:0",
+      "kind": "conjunction",
+      "other": "saturn",
+      "window": "2023-2025"
+    },
+    {
+      "angle": 180,
+      "body": "mars",
+      "id": "2023-2025:opposition:mars:saturn:180",
+      "kind": "opposition",
+      "other": "saturn",
+      "window": "2023-2025"
+    },
+    {
+      "angle": 60,
+      "body": "mars",
+      "id": "2023-2025:aspect:mars:saturn:60",
+      "kind": "aspect",
+      "other": "saturn",
+      "window": "2023-2025"
+    },
+    {
+      "angle": 90,
+      "body": "mars",
+      "id": "2023-2025:aspect:mars:saturn:90",
+      "kind": "aspect",
+      "other": "saturn",
+      "window": "2023-2025"
+    },
+    {
+      "angle": 120,
+      "body": "mars",
+      "id": "2023-2025:aspect:mars:saturn:120",
+      "kind": "aspect",
+      "other": "saturn",
+      "window": "2023-2025"
+    },
+    {
+      "angle": 0,
+      "body": "mars",
+      "id": "2023-2025:conjunction:mars:uranus:0",
+      "kind": "conjunction",
+      "other": "uranus",
+      "window": "2023-2025"
+    },
+    {
+      "angle": 180,
+      "body": "mars",
+      "id": "2023-2025:opposition:mars:uranus:180",
+      "kind": "opposition",
+      "other": "uranus",
+      "window": "2023-2025"
+    },
+    {
+      "angle": 60,
+      "body": "mars",
+      "id": "2023-2025:aspect:mars:uranus:60",
+      "kind": "aspect",
+      "other": "uranus",
+      "window": "2023-2025"
+    },
+    {
+      "angle": 90,
+      "body": "mars",
+      "id": "2023-2025:aspect:mars:uranus:90",
+      "kind": "aspect",
+      "other": "uranus",
+      "window": "2023-2025"
+    },
+    {
+      "angle": 120,
+      "body": "mars",
+      "id": "2023-2025:aspect:mars:uranus:120",
+      "kind": "aspect",
+      "other": "uranus",
+      "window": "2023-2025"
+    },
+    {
+      "angle": 0,
+      "body": "mars",
+      "id": "2023-2025:conjunction:mars:neptune:0",
+      "kind": "conjunction",
+      "other": "neptune",
+      "window": "2023-2025"
+    },
+    {
+      "angle": 180,
+      "body": "mars",
+      "id": "2023-2025:opposition:mars:neptune:180",
+      "kind": "opposition",
+      "other": "neptune",
+      "window": "2023-2025"
+    },
+    {
+      "angle": 60,
+      "body": "mars",
+      "id": "2023-2025:aspect:mars:neptune:60",
+      "kind": "aspect",
+      "other": "neptune",
+      "window": "2023-2025"
+    },
+    {
+      "angle": 90,
+      "body": "mars",
+      "id": "2023-2025:aspect:mars:neptune:90",
+      "kind": "aspect",
+      "other": "neptune",
+      "window": "2023-2025"
+    },
+    {
+      "angle": 120,
+      "body": "mars",
+      "id": "2023-2025:aspect:mars:neptune:120",
+      "kind": "aspect",
+      "other": "neptune",
+      "window": "2023-2025"
+    },
+    {
+      "angle": 0,
+      "body": "mars",
+      "id": "2023-2025:conjunction:mars:pluto:0",
+      "kind": "conjunction",
+      "other": "pluto",
+      "window": "2023-2025"
+    },
+    {
+      "angle": 180,
+      "body": "mars",
+      "id": "2023-2025:opposition:mars:pluto:180",
+      "kind": "opposition",
+      "other": "pluto",
+      "window": "2023-2025"
+    },
+    {
+      "angle": 60,
+      "body": "mars",
+      "id": "2023-2025:aspect:mars:pluto:60",
+      "kind": "aspect",
+      "other": "pluto",
+      "window": "2023-2025"
+    },
+    {
+      "angle": 90,
+      "body": "mars",
+      "id": "2023-2025:aspect:mars:pluto:90",
+      "kind": "aspect",
+      "other": "pluto",
+      "window": "2023-2025"
+    },
+    {
+      "angle": 120,
+      "body": "mars",
+      "id": "2023-2025:aspect:mars:pluto:120",
+      "kind": "aspect",
+      "other": "pluto",
+      "window": "2023-2025"
+    },
+    {
+      "angle": 0,
+      "body": "jupiter",
+      "id": "2023-2025:conjunction:jupiter:saturn:0",
+      "kind": "conjunction",
+      "other": "saturn",
+      "window": "2023-2025"
+    },
+    {
+      "angle": 180,
+      "body": "jupiter",
+      "id": "2023-2025:opposition:jupiter:saturn:180",
+      "kind": "opposition",
+      "other": "saturn",
+      "window": "2023-2025"
+    },
+    {
+      "angle": 0,
+      "body": "jupiter",
+      "id": "2023-2025:conjunction:jupiter:uranus:0",
+      "kind": "conjunction",
+      "other": "uranus",
+      "window": "2023-2025"
+    },
+    {
+      "angle": 180,
+      "body": "jupiter",
+      "id": "2023-2025:opposition:jupiter:uranus:180",
+      "kind": "opposition",
+      "other": "uranus",
+      "window": "2023-2025"
+    },
+    {
+      "angle": 0,
+      "body": "jupiter",
+      "id": "2023-2025:conjunction:jupiter:neptune:0",
+      "kind": "conjunction",
+      "other": "neptune",
+      "window": "2023-2025"
+    },
+    {
+      "angle": 180,
+      "body": "jupiter",
+      "id": "2023-2025:opposition:jupiter:neptune:180",
+      "kind": "opposition",
+      "other": "neptune",
+      "window": "2023-2025"
+    },
+    {
+      "angle": 0,
+      "body": "jupiter",
+      "id": "2023-2025:conjunction:jupiter:pluto:0",
+      "kind": "conjunction",
+      "other": "pluto",
+      "window": "2023-2025"
+    },
+    {
+      "angle": 180,
+      "body": "jupiter",
+      "id": "2023-2025:opposition:jupiter:pluto:180",
+      "kind": "opposition",
+      "other": "pluto",
+      "window": "2023-2025"
+    },
+    {
+      "angle": 0,
+      "body": "saturn",
+      "id": "2023-2025:conjunction:saturn:uranus:0",
+      "kind": "conjunction",
+      "other": "uranus",
+      "window": "2023-2025"
+    },
+    {
+      "angle": 180,
+      "body": "saturn",
+      "id": "2023-2025:opposition:saturn:uranus:180",
+      "kind": "opposition",
+      "other": "uranus",
+      "window": "2023-2025"
+    },
+    {
+      "angle": 0,
+      "body": "saturn",
+      "id": "2023-2025:conjunction:saturn:neptune:0",
+      "kind": "conjunction",
+      "other": "neptune",
+      "window": "2023-2025"
+    },
+    {
+      "angle": 180,
+      "body": "saturn",
+      "id": "2023-2025:opposition:saturn:neptune:180",
+      "kind": "opposition",
+      "other": "neptune",
+      "window": "2023-2025"
+    },
+    {
+      "angle": 0,
+      "body": "saturn",
+      "id": "2023-2025:conjunction:saturn:pluto:0",
+      "kind": "conjunction",
+      "other": "pluto",
+      "window": "2023-2025"
+    },
+    {
+      "angle": 180,
+      "body": "saturn",
+      "id": "2023-2025:opposition:saturn:pluto:180",
+      "kind": "opposition",
+      "other": "pluto",
+      "window": "2023-2025"
+    },
+    {
+      "angle": 0,
+      "body": "uranus",
+      "id": "2023-2025:conjunction:uranus:neptune:0",
+      "kind": "conjunction",
+      "other": "neptune",
+      "window": "2023-2025"
+    },
+    {
+      "angle": 180,
+      "body": "uranus",
+      "id": "2023-2025:opposition:uranus:neptune:180",
+      "kind": "opposition",
+      "other": "neptune",
+      "window": "2023-2025"
+    },
+    {
+      "angle": 0,
+      "body": "uranus",
+      "id": "2023-2025:conjunction:uranus:pluto:0",
+      "kind": "conjunction",
+      "other": "pluto",
+      "window": "2023-2025"
+    },
+    {
+      "angle": 180,
+      "body": "uranus",
+      "id": "2023-2025:opposition:uranus:pluto:180",
+      "kind": "opposition",
+      "other": "pluto",
+      "window": "2023-2025"
+    },
+    {
+      "angle": 0,
+      "body": "neptune",
+      "id": "2023-2025:conjunction:neptune:pluto:0",
+      "kind": "conjunction",
+      "other": "pluto",
+      "window": "2023-2025"
+    },
+    {
+      "angle": 180,
+      "body": "neptune",
+      "id": "2023-2025:opposition:neptune:pluto:180",
+      "kind": "opposition",
+      "other": "pluto",
+      "window": "2023-2025"
+    },
+    {
+      "angle": 0,
+      "body": "mars",
+      "id": "historical-1901:station:mars:None:0",
+      "kind": "station",
+      "other": null,
+      "window": "historical-1901"
+    },
+    {
+      "angle": 0,
+      "body": "mars",
+      "id": "historical-1901:ingress:mars:None:0",
+      "kind": "ingress",
+      "other": null,
+      "window": "historical-1901"
+    },
+    {
+      "angle": 0,
+      "body": "jupiter",
+      "id": "historical-1901:station:jupiter:None:0",
+      "kind": "station",
+      "other": null,
+      "window": "historical-1901"
+    },
+    {
+      "angle": 0,
+      "body": "jupiter",
+      "id": "historical-1901:ingress:jupiter:None:0",
+      "kind": "ingress",
+      "other": null,
+      "window": "historical-1901"
+    },
+    {
+      "angle": 0,
+      "body": "saturn",
+      "id": "historical-1901:station:saturn:None:0",
+      "kind": "station",
+      "other": null,
+      "window": "historical-1901"
+    },
+    {
+      "angle": 0,
+      "body": "saturn",
+      "id": "historical-1901:ingress:saturn:None:0",
+      "kind": "ingress",
+      "other": null,
+      "window": "historical-1901"
+    },
+    {
+      "angle": 0,
+      "body": "uranus",
+      "id": "historical-1901:station:uranus:None:0",
+      "kind": "station",
+      "other": null,
+      "window": "historical-1901"
+    },
+    {
+      "angle": 0,
+      "body": "uranus",
+      "id": "historical-1901:ingress:uranus:None:0",
+      "kind": "ingress",
+      "other": null,
+      "window": "historical-1901"
+    },
+    {
+      "angle": 0,
+      "body": "neptune",
+      "id": "historical-1901:station:neptune:None:0",
+      "kind": "station",
+      "other": null,
+      "window": "historical-1901"
+    },
+    {
+      "angle": 0,
+      "body": "neptune",
+      "id": "historical-1901:ingress:neptune:None:0",
+      "kind": "ingress",
+      "other": null,
+      "window": "historical-1901"
+    },
+    {
+      "angle": 0,
+      "body": "pluto",
+      "id": "historical-1901:station:pluto:None:0",
+      "kind": "station",
+      "other": null,
+      "window": "historical-1901"
+    },
+    {
+      "angle": 0,
+      "body": "pluto",
+      "id": "historical-1901:ingress:pluto:None:0",
+      "kind": "ingress",
+      "other": null,
+      "window": "historical-1901"
+    },
+    {
+      "angle": 0,
+      "body": "mars",
+      "id": "historical-1901:conjunction:mars:jupiter:0",
+      "kind": "conjunction",
+      "other": "jupiter",
+      "window": "historical-1901"
+    },
+    {
+      "angle": 180,
+      "body": "mars",
+      "id": "historical-1901:opposition:mars:jupiter:180",
+      "kind": "opposition",
+      "other": "jupiter",
+      "window": "historical-1901"
+    },
+    {
+      "angle": 0,
+      "body": "mars",
+      "id": "historical-1901:conjunction:mars:saturn:0",
+      "kind": "conjunction",
+      "other": "saturn",
+      "window": "historical-1901"
+    },
+    {
+      "angle": 180,
+      "body": "mars",
+      "id": "historical-1901:opposition:mars:saturn:180",
+      "kind": "opposition",
+      "other": "saturn",
+      "window": "historical-1901"
+    },
+    {
+      "angle": 0,
+      "body": "mars",
+      "id": "historical-1901:conjunction:mars:uranus:0",
+      "kind": "conjunction",
+      "other": "uranus",
+      "window": "historical-1901"
+    },
+    {
+      "angle": 180,
+      "body": "mars",
+      "id": "historical-1901:opposition:mars:uranus:180",
+      "kind": "opposition",
+      "other": "uranus",
+      "window": "historical-1901"
+    },
+    {
+      "angle": 0,
+      "body": "mars",
+      "id": "historical-1901:conjunction:mars:neptune:0",
+      "kind": "conjunction",
+      "other": "neptune",
+      "window": "historical-1901"
+    },
+    {
+      "angle": 180,
+      "body": "mars",
+      "id": "historical-1901:opposition:mars:neptune:180",
+      "kind": "opposition",
+      "other": "neptune",
+      "window": "historical-1901"
+    },
+    {
+      "angle": 0,
+      "body": "mars",
+      "id": "historical-1901:conjunction:mars:pluto:0",
+      "kind": "conjunction",
+      "other": "pluto",
+      "window": "historical-1901"
+    },
+    {
+      "angle": 180,
+      "body": "mars",
+      "id": "historical-1901:opposition:mars:pluto:180",
+      "kind": "opposition",
+      "other": "pluto",
+      "window": "historical-1901"
+    },
+    {
+      "angle": 0,
+      "body": "jupiter",
+      "id": "historical-1901:conjunction:jupiter:saturn:0",
+      "kind": "conjunction",
+      "other": "saturn",
+      "window": "historical-1901"
+    },
+    {
+      "angle": 180,
+      "body": "jupiter",
+      "id": "historical-1901:opposition:jupiter:saturn:180",
+      "kind": "opposition",
+      "other": "saturn",
+      "window": "historical-1901"
+    },
+    {
+      "angle": 0,
+      "body": "jupiter",
+      "id": "historical-1901:conjunction:jupiter:uranus:0",
+      "kind": "conjunction",
+      "other": "uranus",
+      "window": "historical-1901"
+    },
+    {
+      "angle": 180,
+      "body": "jupiter",
+      "id": "historical-1901:opposition:jupiter:uranus:180",
+      "kind": "opposition",
+      "other": "uranus",
+      "window": "historical-1901"
+    },
+    {
+      "angle": 0,
+      "body": "jupiter",
+      "id": "historical-1901:conjunction:jupiter:neptune:0",
+      "kind": "conjunction",
+      "other": "neptune",
+      "window": "historical-1901"
+    },
+    {
+      "angle": 180,
+      "body": "jupiter",
+      "id": "historical-1901:opposition:jupiter:neptune:180",
+      "kind": "opposition",
+      "other": "neptune",
+      "window": "historical-1901"
+    },
+    {
+      "angle": 0,
+      "body": "jupiter",
+      "id": "historical-1901:conjunction:jupiter:pluto:0",
+      "kind": "conjunction",
+      "other": "pluto",
+      "window": "historical-1901"
+    },
+    {
+      "angle": 180,
+      "body": "jupiter",
+      "id": "historical-1901:opposition:jupiter:pluto:180",
+      "kind": "opposition",
+      "other": "pluto",
+      "window": "historical-1901"
+    },
+    {
+      "angle": 0,
+      "body": "saturn",
+      "id": "historical-1901:conjunction:saturn:uranus:0",
+      "kind": "conjunction",
+      "other": "uranus",
+      "window": "historical-1901"
+    },
+    {
+      "angle": 180,
+      "body": "saturn",
+      "id": "historical-1901:opposition:saturn:uranus:180",
+      "kind": "opposition",
+      "other": "uranus",
+      "window": "historical-1901"
+    },
+    {
+      "angle": 0,
+      "body": "saturn",
+      "id": "historical-1901:conjunction:saturn:neptune:0",
+      "kind": "conjunction",
+      "other": "neptune",
+      "window": "historical-1901"
+    },
+    {
+      "angle": 180,
+      "body": "saturn",
+      "id": "historical-1901:opposition:saturn:neptune:180",
+      "kind": "opposition",
+      "other": "neptune",
+      "window": "historical-1901"
+    },
+    {
+      "angle": 0,
+      "body": "saturn",
+      "id": "historical-1901:conjunction:saturn:pluto:0",
+      "kind": "conjunction",
+      "other": "pluto",
+      "window": "historical-1901"
+    },
+    {
+      "angle": 180,
+      "body": "saturn",
+      "id": "historical-1901:opposition:saturn:pluto:180",
+      "kind": "opposition",
+      "other": "pluto",
+      "window": "historical-1901"
+    },
+    {
+      "angle": 0,
+      "body": "uranus",
+      "id": "historical-1901:conjunction:uranus:neptune:0",
+      "kind": "conjunction",
+      "other": "neptune",
+      "window": "historical-1901"
+    },
+    {
+      "angle": 180,
+      "body": "uranus",
+      "id": "historical-1901:opposition:uranus:neptune:180",
+      "kind": "opposition",
+      "other": "neptune",
+      "window": "historical-1901"
+    },
+    {
+      "angle": 0,
+      "body": "uranus",
+      "id": "historical-1901:conjunction:uranus:pluto:0",
+      "kind": "conjunction",
+      "other": "pluto",
+      "window": "historical-1901"
+    },
+    {
+      "angle": 180,
+      "body": "uranus",
+      "id": "historical-1901:opposition:uranus:pluto:180",
+      "kind": "opposition",
+      "other": "pluto",
+      "window": "historical-1901"
+    },
+    {
+      "angle": 0,
+      "body": "neptune",
+      "id": "historical-1901:conjunction:neptune:pluto:0",
+      "kind": "conjunction",
+      "other": "pluto",
+      "window": "historical-1901"
+    },
+    {
+      "angle": 180,
+      "body": "neptune",
+      "id": "historical-1901:opposition:neptune:pluto:180",
+      "kind": "opposition",
+      "other": "pluto",
+      "window": "historical-1901"
+    },
+    {
+      "angle": 0,
+      "body": "mars",
+      "id": "historical-1950:station:mars:None:0",
+      "kind": "station",
+      "other": null,
+      "window": "historical-1950"
+    },
+    {
+      "angle": 0,
+      "body": "mars",
+      "id": "historical-1950:ingress:mars:None:0",
+      "kind": "ingress",
+      "other": null,
+      "window": "historical-1950"
+    },
+    {
+      "angle": 0,
+      "body": "jupiter",
+      "id": "historical-1950:station:jupiter:None:0",
+      "kind": "station",
+      "other": null,
+      "window": "historical-1950"
+    },
+    {
+      "angle": 0,
+      "body": "jupiter",
+      "id": "historical-1950:ingress:jupiter:None:0",
+      "kind": "ingress",
+      "other": null,
+      "window": "historical-1950"
+    },
+    {
+      "angle": 0,
+      "body": "saturn",
+      "id": "historical-1950:station:saturn:None:0",
+      "kind": "station",
+      "other": null,
+      "window": "historical-1950"
+    },
+    {
+      "angle": 0,
+      "body": "saturn",
+      "id": "historical-1950:ingress:saturn:None:0",
+      "kind": "ingress",
+      "other": null,
+      "window": "historical-1950"
+    },
+    {
+      "angle": 0,
+      "body": "uranus",
+      "id": "historical-1950:station:uranus:None:0",
+      "kind": "station",
+      "other": null,
+      "window": "historical-1950"
+    },
+    {
+      "angle": 0,
+      "body": "uranus",
+      "id": "historical-1950:ingress:uranus:None:0",
+      "kind": "ingress",
+      "other": null,
+      "window": "historical-1950"
+    },
+    {
+      "angle": 0,
+      "body": "neptune",
+      "id": "historical-1950:station:neptune:None:0",
+      "kind": "station",
+      "other": null,
+      "window": "historical-1950"
+    },
+    {
+      "angle": 0,
+      "body": "neptune",
+      "id": "historical-1950:ingress:neptune:None:0",
+      "kind": "ingress",
+      "other": null,
+      "window": "historical-1950"
+    },
+    {
+      "angle": 0,
+      "body": "pluto",
+      "id": "historical-1950:station:pluto:None:0",
+      "kind": "station",
+      "other": null,
+      "window": "historical-1950"
+    },
+    {
+      "angle": 0,
+      "body": "pluto",
+      "id": "historical-1950:ingress:pluto:None:0",
+      "kind": "ingress",
+      "other": null,
+      "window": "historical-1950"
+    },
+    {
+      "angle": 0,
+      "body": "mars",
+      "id": "historical-1950:conjunction:mars:jupiter:0",
+      "kind": "conjunction",
+      "other": "jupiter",
+      "window": "historical-1950"
+    },
+    {
+      "angle": 180,
+      "body": "mars",
+      "id": "historical-1950:opposition:mars:jupiter:180",
+      "kind": "opposition",
+      "other": "jupiter",
+      "window": "historical-1950"
+    },
+    {
+      "angle": 0,
+      "body": "mars",
+      "id": "historical-1950:conjunction:mars:saturn:0",
+      "kind": "conjunction",
+      "other": "saturn",
+      "window": "historical-1950"
+    },
+    {
+      "angle": 180,
+      "body": "mars",
+      "id": "historical-1950:opposition:mars:saturn:180",
+      "kind": "opposition",
+      "other": "saturn",
+      "window": "historical-1950"
+    },
+    {
+      "angle": 0,
+      "body": "mars",
+      "id": "historical-1950:conjunction:mars:uranus:0",
+      "kind": "conjunction",
+      "other": "uranus",
+      "window": "historical-1950"
+    },
+    {
+      "angle": 180,
+      "body": "mars",
+      "id": "historical-1950:opposition:mars:uranus:180",
+      "kind": "opposition",
+      "other": "uranus",
+      "window": "historical-1950"
+    },
+    {
+      "angle": 0,
+      "body": "mars",
+      "id": "historical-1950:conjunction:mars:neptune:0",
+      "kind": "conjunction",
+      "other": "neptune",
+      "window": "historical-1950"
+    },
+    {
+      "angle": 180,
+      "body": "mars",
+      "id": "historical-1950:opposition:mars:neptune:180",
+      "kind": "opposition",
+      "other": "neptune",
+      "window": "historical-1950"
+    },
+    {
+      "angle": 0,
+      "body": "mars",
+      "id": "historical-1950:conjunction:mars:pluto:0",
+      "kind": "conjunction",
+      "other": "pluto",
+      "window": "historical-1950"
+    },
+    {
+      "angle": 180,
+      "body": "mars",
+      "id": "historical-1950:opposition:mars:pluto:180",
+      "kind": "opposition",
+      "other": "pluto",
+      "window": "historical-1950"
+    },
+    {
+      "angle": 0,
+      "body": "jupiter",
+      "id": "historical-1950:conjunction:jupiter:saturn:0",
+      "kind": "conjunction",
+      "other": "saturn",
+      "window": "historical-1950"
+    },
+    {
+      "angle": 180,
+      "body": "jupiter",
+      "id": "historical-1950:opposition:jupiter:saturn:180",
+      "kind": "opposition",
+      "other": "saturn",
+      "window": "historical-1950"
+    },
+    {
+      "angle": 0,
+      "body": "jupiter",
+      "id": "historical-1950:conjunction:jupiter:uranus:0",
+      "kind": "conjunction",
+      "other": "uranus",
+      "window": "historical-1950"
+    },
+    {
+      "angle": 180,
+      "body": "jupiter",
+      "id": "historical-1950:opposition:jupiter:uranus:180",
+      "kind": "opposition",
+      "other": "uranus",
+      "window": "historical-1950"
+    },
+    {
+      "angle": 0,
+      "body": "jupiter",
+      "id": "historical-1950:conjunction:jupiter:neptune:0",
+      "kind": "conjunction",
+      "other": "neptune",
+      "window": "historical-1950"
+    },
+    {
+      "angle": 180,
+      "body": "jupiter",
+      "id": "historical-1950:opposition:jupiter:neptune:180",
+      "kind": "opposition",
+      "other": "neptune",
+      "window": "historical-1950"
+    },
+    {
+      "angle": 0,
+      "body": "jupiter",
+      "id": "historical-1950:conjunction:jupiter:pluto:0",
+      "kind": "conjunction",
+      "other": "pluto",
+      "window": "historical-1950"
+    },
+    {
+      "angle": 180,
+      "body": "jupiter",
+      "id": "historical-1950:opposition:jupiter:pluto:180",
+      "kind": "opposition",
+      "other": "pluto",
+      "window": "historical-1950"
+    },
+    {
+      "angle": 0,
+      "body": "saturn",
+      "id": "historical-1950:conjunction:saturn:uranus:0",
+      "kind": "conjunction",
+      "other": "uranus",
+      "window": "historical-1950"
+    },
+    {
+      "angle": 180,
+      "body": "saturn",
+      "id": "historical-1950:opposition:saturn:uranus:180",
+      "kind": "opposition",
+      "other": "uranus",
+      "window": "historical-1950"
+    },
+    {
+      "angle": 0,
+      "body": "saturn",
+      "id": "historical-1950:conjunction:saturn:neptune:0",
+      "kind": "conjunction",
+      "other": "neptune",
+      "window": "historical-1950"
+    },
+    {
+      "angle": 180,
+      "body": "saturn",
+      "id": "historical-1950:opposition:saturn:neptune:180",
+      "kind": "opposition",
+      "other": "neptune",
+      "window": "historical-1950"
+    },
+    {
+      "angle": 0,
+      "body": "saturn",
+      "id": "historical-1950:conjunction:saturn:pluto:0",
+      "kind": "conjunction",
+      "other": "pluto",
+      "window": "historical-1950"
+    },
+    {
+      "angle": 180,
+      "body": "saturn",
+      "id": "historical-1950:opposition:saturn:pluto:180",
+      "kind": "opposition",
+      "other": "pluto",
+      "window": "historical-1950"
+    },
+    {
+      "angle": 0,
+      "body": "uranus",
+      "id": "historical-1950:conjunction:uranus:neptune:0",
+      "kind": "conjunction",
+      "other": "neptune",
+      "window": "historical-1950"
+    },
+    {
+      "angle": 180,
+      "body": "uranus",
+      "id": "historical-1950:opposition:uranus:neptune:180",
+      "kind": "opposition",
+      "other": "neptune",
+      "window": "historical-1950"
+    },
+    {
+      "angle": 0,
+      "body": "uranus",
+      "id": "historical-1950:conjunction:uranus:pluto:0",
+      "kind": "conjunction",
+      "other": "pluto",
+      "window": "historical-1950"
+    },
+    {
+      "angle": 180,
+      "body": "uranus",
+      "id": "historical-1950:opposition:uranus:pluto:180",
+      "kind": "opposition",
+      "other": "pluto",
+      "window": "historical-1950"
+    },
+    {
+      "angle": 0,
+      "body": "neptune",
+      "id": "historical-1950:conjunction:neptune:pluto:0",
+      "kind": "conjunction",
+      "other": "pluto",
+      "window": "historical-1950"
+    },
+    {
+      "angle": 180,
+      "body": "neptune",
+      "id": "historical-1950:opposition:neptune:pluto:180",
+      "kind": "opposition",
+      "other": "pluto",
+      "window": "historical-1950"
+    },
+    {
+      "angle": 0,
+      "body": "mars",
+      "id": "historical-2000:station:mars:None:0",
+      "kind": "station",
+      "other": null,
+      "window": "historical-2000"
+    },
+    {
+      "angle": 0,
+      "body": "mars",
+      "id": "historical-2000:ingress:mars:None:0",
+      "kind": "ingress",
+      "other": null,
+      "window": "historical-2000"
+    },
+    {
+      "angle": 0,
+      "body": "jupiter",
+      "id": "historical-2000:station:jupiter:None:0",
+      "kind": "station",
+      "other": null,
+      "window": "historical-2000"
+    },
+    {
+      "angle": 0,
+      "body": "jupiter",
+      "id": "historical-2000:ingress:jupiter:None:0",
+      "kind": "ingress",
+      "other": null,
+      "window": "historical-2000"
+    },
+    {
+      "angle": 0,
+      "body": "saturn",
+      "id": "historical-2000:station:saturn:None:0",
+      "kind": "station",
+      "other": null,
+      "window": "historical-2000"
+    },
+    {
+      "angle": 0,
+      "body": "saturn",
+      "id": "historical-2000:ingress:saturn:None:0",
+      "kind": "ingress",
+      "other": null,
+      "window": "historical-2000"
+    },
+    {
+      "angle": 0,
+      "body": "uranus",
+      "id": "historical-2000:station:uranus:None:0",
+      "kind": "station",
+      "other": null,
+      "window": "historical-2000"
+    },
+    {
+      "angle": 0,
+      "body": "uranus",
+      "id": "historical-2000:ingress:uranus:None:0",
+      "kind": "ingress",
+      "other": null,
+      "window": "historical-2000"
+    },
+    {
+      "angle": 0,
+      "body": "neptune",
+      "id": "historical-2000:station:neptune:None:0",
+      "kind": "station",
+      "other": null,
+      "window": "historical-2000"
+    },
+    {
+      "angle": 0,
+      "body": "neptune",
+      "id": "historical-2000:ingress:neptune:None:0",
+      "kind": "ingress",
+      "other": null,
+      "window": "historical-2000"
+    },
+    {
+      "angle": 0,
+      "body": "pluto",
+      "id": "historical-2000:station:pluto:None:0",
+      "kind": "station",
+      "other": null,
+      "window": "historical-2000"
+    },
+    {
+      "angle": 0,
+      "body": "pluto",
+      "id": "historical-2000:ingress:pluto:None:0",
+      "kind": "ingress",
+      "other": null,
+      "window": "historical-2000"
+    },
+    {
+      "angle": 0,
+      "body": "mars",
+      "id": "historical-2000:conjunction:mars:jupiter:0",
+      "kind": "conjunction",
+      "other": "jupiter",
+      "window": "historical-2000"
+    },
+    {
+      "angle": 180,
+      "body": "mars",
+      "id": "historical-2000:opposition:mars:jupiter:180",
+      "kind": "opposition",
+      "other": "jupiter",
+      "window": "historical-2000"
+    },
+    {
+      "angle": 0,
+      "body": "mars",
+      "id": "historical-2000:conjunction:mars:saturn:0",
+      "kind": "conjunction",
+      "other": "saturn",
+      "window": "historical-2000"
+    },
+    {
+      "angle": 180,
+      "body": "mars",
+      "id": "historical-2000:opposition:mars:saturn:180",
+      "kind": "opposition",
+      "other": "saturn",
+      "window": "historical-2000"
+    },
+    {
+      "angle": 0,
+      "body": "mars",
+      "id": "historical-2000:conjunction:mars:uranus:0",
+      "kind": "conjunction",
+      "other": "uranus",
+      "window": "historical-2000"
+    },
+    {
+      "angle": 180,
+      "body": "mars",
+      "id": "historical-2000:opposition:mars:uranus:180",
+      "kind": "opposition",
+      "other": "uranus",
+      "window": "historical-2000"
+    },
+    {
+      "angle": 0,
+      "body": "mars",
+      "id": "historical-2000:conjunction:mars:neptune:0",
+      "kind": "conjunction",
+      "other": "neptune",
+      "window": "historical-2000"
+    },
+    {
+      "angle": 180,
+      "body": "mars",
+      "id": "historical-2000:opposition:mars:neptune:180",
+      "kind": "opposition",
+      "other": "neptune",
+      "window": "historical-2000"
+    },
+    {
+      "angle": 0,
+      "body": "mars",
+      "id": "historical-2000:conjunction:mars:pluto:0",
+      "kind": "conjunction",
+      "other": "pluto",
+      "window": "historical-2000"
+    },
+    {
+      "angle": 180,
+      "body": "mars",
+      "id": "historical-2000:opposition:mars:pluto:180",
+      "kind": "opposition",
+      "other": "pluto",
+      "window": "historical-2000"
+    },
+    {
+      "angle": 0,
+      "body": "jupiter",
+      "id": "historical-2000:conjunction:jupiter:saturn:0",
+      "kind": "conjunction",
+      "other": "saturn",
+      "window": "historical-2000"
+    },
+    {
+      "angle": 180,
+      "body": "jupiter",
+      "id": "historical-2000:opposition:jupiter:saturn:180",
+      "kind": "opposition",
+      "other": "saturn",
+      "window": "historical-2000"
+    },
+    {
+      "angle": 0,
+      "body": "jupiter",
+      "id": "historical-2000:conjunction:jupiter:uranus:0",
+      "kind": "conjunction",
+      "other": "uranus",
+      "window": "historical-2000"
+    },
+    {
+      "angle": 180,
+      "body": "jupiter",
+      "id": "historical-2000:opposition:jupiter:uranus:180",
+      "kind": "opposition",
+      "other": "uranus",
+      "window": "historical-2000"
+    },
+    {
+      "angle": 0,
+      "body": "jupiter",
+      "id": "historical-2000:conjunction:jupiter:neptune:0",
+      "kind": "conjunction",
+      "other": "neptune",
+      "window": "historical-2000"
+    },
+    {
+      "angle": 180,
+      "body": "jupiter",
+      "id": "historical-2000:opposition:jupiter:neptune:180",
+      "kind": "opposition",
+      "other": "neptune",
+      "window": "historical-2000"
+    },
+    {
+      "angle": 0,
+      "body": "jupiter",
+      "id": "historical-2000:conjunction:jupiter:pluto:0",
+      "kind": "conjunction",
+      "other": "pluto",
+      "window": "historical-2000"
+    },
+    {
+      "angle": 180,
+      "body": "jupiter",
+      "id": "historical-2000:opposition:jupiter:pluto:180",
+      "kind": "opposition",
+      "other": "pluto",
+      "window": "historical-2000"
+    },
+    {
+      "angle": 0,
+      "body": "saturn",
+      "id": "historical-2000:conjunction:saturn:uranus:0",
+      "kind": "conjunction",
+      "other": "uranus",
+      "window": "historical-2000"
+    },
+    {
+      "angle": 180,
+      "body": "saturn",
+      "id": "historical-2000:opposition:saturn:uranus:180",
+      "kind": "opposition",
+      "other": "uranus",
+      "window": "historical-2000"
+    },
+    {
+      "angle": 0,
+      "body": "saturn",
+      "id": "historical-2000:conjunction:saturn:neptune:0",
+      "kind": "conjunction",
+      "other": "neptune",
+      "window": "historical-2000"
+    },
+    {
+      "angle": 180,
+      "body": "saturn",
+      "id": "historical-2000:opposition:saturn:neptune:180",
+      "kind": "opposition",
+      "other": "neptune",
+      "window": "historical-2000"
+    },
+    {
+      "angle": 0,
+      "body": "saturn",
+      "id": "historical-2000:conjunction:saturn:pluto:0",
+      "kind": "conjunction",
+      "other": "pluto",
+      "window": "historical-2000"
+    },
+    {
+      "angle": 180,
+      "body": "saturn",
+      "id": "historical-2000:opposition:saturn:pluto:180",
+      "kind": "opposition",
+      "other": "pluto",
+      "window": "historical-2000"
+    },
+    {
+      "angle": 0,
+      "body": "uranus",
+      "id": "historical-2000:conjunction:uranus:neptune:0",
+      "kind": "conjunction",
+      "other": "neptune",
+      "window": "historical-2000"
+    },
+    {
+      "angle": 180,
+      "body": "uranus",
+      "id": "historical-2000:opposition:uranus:neptune:180",
+      "kind": "opposition",
+      "other": "neptune",
+      "window": "historical-2000"
+    },
+    {
+      "angle": 0,
+      "body": "uranus",
+      "id": "historical-2000:conjunction:uranus:pluto:0",
+      "kind": "conjunction",
+      "other": "pluto",
+      "window": "historical-2000"
+    },
+    {
+      "angle": 180,
+      "body": "uranus",
+      "id": "historical-2000:opposition:uranus:pluto:180",
+      "kind": "opposition",
+      "other": "pluto",
+      "window": "historical-2000"
+    },
+    {
+      "angle": 0,
+      "body": "neptune",
+      "id": "historical-2000:conjunction:neptune:pluto:0",
+      "kind": "conjunction",
+      "other": "pluto",
+      "window": "historical-2000"
+    },
+    {
+      "angle": 180,
+      "body": "neptune",
+      "id": "historical-2000:opposition:neptune:pluto:180",
+      "kind": "opposition",
+      "other": "pluto",
+      "window": "historical-2000"
+    },
+    {
+      "angle": 0,
+      "body": "mars",
+      "id": "historical-2099:station:mars:None:0",
+      "kind": "station",
+      "other": null,
+      "window": "historical-2099"
+    },
+    {
+      "angle": 0,
+      "body": "mars",
+      "id": "historical-2099:ingress:mars:None:0",
+      "kind": "ingress",
+      "other": null,
+      "window": "historical-2099"
+    },
+    {
+      "angle": 0,
+      "body": "jupiter",
+      "id": "historical-2099:station:jupiter:None:0",
+      "kind": "station",
+      "other": null,
+      "window": "historical-2099"
+    },
+    {
+      "angle": 0,
+      "body": "jupiter",
+      "id": "historical-2099:ingress:jupiter:None:0",
+      "kind": "ingress",
+      "other": null,
+      "window": "historical-2099"
+    },
+    {
+      "angle": 0,
+      "body": "saturn",
+      "id": "historical-2099:station:saturn:None:0",
+      "kind": "station",
+      "other": null,
+      "window": "historical-2099"
+    },
+    {
+      "angle": 0,
+      "body": "saturn",
+      "id": "historical-2099:ingress:saturn:None:0",
+      "kind": "ingress",
+      "other": null,
+      "window": "historical-2099"
+    },
+    {
+      "angle": 0,
+      "body": "uranus",
+      "id": "historical-2099:station:uranus:None:0",
+      "kind": "station",
+      "other": null,
+      "window": "historical-2099"
+    },
+    {
+      "angle": 0,
+      "body": "uranus",
+      "id": "historical-2099:ingress:uranus:None:0",
+      "kind": "ingress",
+      "other": null,
+      "window": "historical-2099"
+    },
+    {
+      "angle": 0,
+      "body": "neptune",
+      "id": "historical-2099:station:neptune:None:0",
+      "kind": "station",
+      "other": null,
+      "window": "historical-2099"
+    },
+    {
+      "angle": 0,
+      "body": "neptune",
+      "id": "historical-2099:ingress:neptune:None:0",
+      "kind": "ingress",
+      "other": null,
+      "window": "historical-2099"
+    },
+    {
+      "angle": 0,
+      "body": "pluto",
+      "id": "historical-2099:station:pluto:None:0",
+      "kind": "station",
+      "other": null,
+      "window": "historical-2099"
+    },
+    {
+      "angle": 0,
+      "body": "pluto",
+      "id": "historical-2099:ingress:pluto:None:0",
+      "kind": "ingress",
+      "other": null,
+      "window": "historical-2099"
+    },
+    {
+      "angle": 0,
+      "body": "mars",
+      "id": "historical-2099:conjunction:mars:jupiter:0",
+      "kind": "conjunction",
+      "other": "jupiter",
+      "window": "historical-2099"
+    },
+    {
+      "angle": 180,
+      "body": "mars",
+      "id": "historical-2099:opposition:mars:jupiter:180",
+      "kind": "opposition",
+      "other": "jupiter",
+      "window": "historical-2099"
+    },
+    {
+      "angle": 0,
+      "body": "mars",
+      "id": "historical-2099:conjunction:mars:saturn:0",
+      "kind": "conjunction",
+      "other": "saturn",
+      "window": "historical-2099"
+    },
+    {
+      "angle": 180,
+      "body": "mars",
+      "id": "historical-2099:opposition:mars:saturn:180",
+      "kind": "opposition",
+      "other": "saturn",
+      "window": "historical-2099"
+    },
+    {
+      "angle": 0,
+      "body": "mars",
+      "id": "historical-2099:conjunction:mars:uranus:0",
+      "kind": "conjunction",
+      "other": "uranus",
+      "window": "historical-2099"
+    },
+    {
+      "angle": 180,
+      "body": "mars",
+      "id": "historical-2099:opposition:mars:uranus:180",
+      "kind": "opposition",
+      "other": "uranus",
+      "window": "historical-2099"
+    },
+    {
+      "angle": 0,
+      "body": "mars",
+      "id": "historical-2099:conjunction:mars:neptune:0",
+      "kind": "conjunction",
+      "other": "neptune",
+      "window": "historical-2099"
+    },
+    {
+      "angle": 180,
+      "body": "mars",
+      "id": "historical-2099:opposition:mars:neptune:180",
+      "kind": "opposition",
+      "other": "neptune",
+      "window": "historical-2099"
+    },
+    {
+      "angle": 0,
+      "body": "mars",
+      "id": "historical-2099:conjunction:mars:pluto:0",
+      "kind": "conjunction",
+      "other": "pluto",
+      "window": "historical-2099"
+    },
+    {
+      "angle": 180,
+      "body": "mars",
+      "id": "historical-2099:opposition:mars:pluto:180",
+      "kind": "opposition",
+      "other": "pluto",
+      "window": "historical-2099"
+    },
+    {
+      "angle": 0,
+      "body": "jupiter",
+      "id": "historical-2099:conjunction:jupiter:saturn:0",
+      "kind": "conjunction",
+      "other": "saturn",
+      "window": "historical-2099"
+    },
+    {
+      "angle": 180,
+      "body": "jupiter",
+      "id": "historical-2099:opposition:jupiter:saturn:180",
+      "kind": "opposition",
+      "other": "saturn",
+      "window": "historical-2099"
+    },
+    {
+      "angle": 0,
+      "body": "jupiter",
+      "id": "historical-2099:conjunction:jupiter:uranus:0",
+      "kind": "conjunction",
+      "other": "uranus",
+      "window": "historical-2099"
+    },
+    {
+      "angle": 180,
+      "body": "jupiter",
+      "id": "historical-2099:opposition:jupiter:uranus:180",
+      "kind": "opposition",
+      "other": "uranus",
+      "window": "historical-2099"
+    },
+    {
+      "angle": 0,
+      "body": "jupiter",
+      "id": "historical-2099:conjunction:jupiter:neptune:0",
+      "kind": "conjunction",
+      "other": "neptune",
+      "window": "historical-2099"
+    },
+    {
+      "angle": 180,
+      "body": "jupiter",
+      "id": "historical-2099:opposition:jupiter:neptune:180",
+      "kind": "opposition",
+      "other": "neptune",
+      "window": "historical-2099"
+    },
+    {
+      "angle": 0,
+      "body": "jupiter",
+      "id": "historical-2099:conjunction:jupiter:pluto:0",
+      "kind": "conjunction",
+      "other": "pluto",
+      "window": "historical-2099"
+    },
+    {
+      "angle": 180,
+      "body": "jupiter",
+      "id": "historical-2099:opposition:jupiter:pluto:180",
+      "kind": "opposition",
+      "other": "pluto",
+      "window": "historical-2099"
+    },
+    {
+      "angle": 0,
+      "body": "saturn",
+      "id": "historical-2099:conjunction:saturn:uranus:0",
+      "kind": "conjunction",
+      "other": "uranus",
+      "window": "historical-2099"
+    },
+    {
+      "angle": 180,
+      "body": "saturn",
+      "id": "historical-2099:opposition:saturn:uranus:180",
+      "kind": "opposition",
+      "other": "uranus",
+      "window": "historical-2099"
+    },
+    {
+      "angle": 0,
+      "body": "saturn",
+      "id": "historical-2099:conjunction:saturn:neptune:0",
+      "kind": "conjunction",
+      "other": "neptune",
+      "window": "historical-2099"
+    },
+    {
+      "angle": 180,
+      "body": "saturn",
+      "id": "historical-2099:opposition:saturn:neptune:180",
+      "kind": "opposition",
+      "other": "neptune",
+      "window": "historical-2099"
+    },
+    {
+      "angle": 0,
+      "body": "saturn",
+      "id": "historical-2099:conjunction:saturn:pluto:0",
+      "kind": "conjunction",
+      "other": "pluto",
+      "window": "historical-2099"
+    },
+    {
+      "angle": 180,
+      "body": "saturn",
+      "id": "historical-2099:opposition:saturn:pluto:180",
+      "kind": "opposition",
+      "other": "pluto",
+      "window": "historical-2099"
+    },
+    {
+      "angle": 0,
+      "body": "uranus",
+      "id": "historical-2099:conjunction:uranus:neptune:0",
+      "kind": "conjunction",
+      "other": "neptune",
+      "window": "historical-2099"
+    },
+    {
+      "angle": 180,
+      "body": "uranus",
+      "id": "historical-2099:opposition:uranus:neptune:180",
+      "kind": "opposition",
+      "other": "neptune",
+      "window": "historical-2099"
+    },
+    {
+      "angle": 0,
+      "body": "uranus",
+      "id": "historical-2099:conjunction:uranus:pluto:0",
+      "kind": "conjunction",
+      "other": "pluto",
+      "window": "historical-2099"
+    },
+    {
+      "angle": 180,
+      "body": "uranus",
+      "id": "historical-2099:opposition:uranus:pluto:180",
+      "kind": "opposition",
+      "other": "pluto",
+      "window": "historical-2099"
+    },
+    {
+      "angle": 0,
+      "body": "neptune",
+      "id": "historical-2099:conjunction:neptune:pluto:0",
+      "kind": "conjunction",
+      "other": "pluto",
+      "window": "historical-2099"
+    },
+    {
+      "angle": 180,
+      "body": "neptune",
+      "id": "historical-2099:opposition:neptune:pluto:180",
+      "kind": "opposition",
+      "other": "pluto",
+      "window": "historical-2099"
+    },
+    {
+      "angle": 0,
+      "body": "mars",
+      "id": "seam-mars:station:mars:None:0",
+      "kind": "station",
+      "other": null,
+      "window": "seam-mars"
+    },
+    {
+      "angle": 0,
+      "body": "mars",
+      "id": "seam-mars:ingress:mars:None:0",
+      "kind": "ingress",
+      "other": null,
+      "window": "seam-mars"
+    },
+    {
+      "angle": 0,
+      "body": "jupiter",
+      "id": "seam-jupiter:station:jupiter:None:0",
+      "kind": "station",
+      "other": null,
+      "window": "seam-jupiter"
+    },
+    {
+      "angle": 0,
+      "body": "jupiter",
+      "id": "seam-jupiter:ingress:jupiter:None:0",
+      "kind": "ingress",
+      "other": null,
+      "window": "seam-jupiter"
+    },
+    {
+      "angle": 0,
+      "body": "saturn",
+      "id": "seam-saturn:station:saturn:None:0",
+      "kind": "station",
+      "other": null,
+      "window": "seam-saturn"
+    },
+    {
+      "angle": 0,
+      "body": "saturn",
+      "id": "seam-saturn:ingress:saturn:None:0",
+      "kind": "ingress",
+      "other": null,
+      "window": "seam-saturn"
+    },
+    {
+      "angle": 0,
+      "body": "uranus",
+      "id": "seam-uranus:station:uranus:None:0",
+      "kind": "station",
+      "other": null,
+      "window": "seam-uranus"
+    },
+    {
+      "angle": 0,
+      "body": "uranus",
+      "id": "seam-uranus:ingress:uranus:None:0",
+      "kind": "ingress",
+      "other": null,
+      "window": "seam-uranus"
+    },
+    {
+      "angle": 0,
+      "body": "neptune",
+      "id": "seam-neptune:station:neptune:None:0",
+      "kind": "station",
+      "other": null,
+      "window": "seam-neptune"
+    },
+    {
+      "angle": 0,
+      "body": "neptune",
+      "id": "seam-neptune:ingress:neptune:None:0",
+      "kind": "ingress",
+      "other": null,
+      "window": "seam-neptune"
+    },
+    {
+      "angle": 0,
+      "body": "pluto",
+      "id": "seam-pluto:station:pluto:None:0",
+      "kind": "station",
+      "other": null,
+      "window": "seam-pluto"
+    },
+    {
+      "angle": 0,
+      "body": "pluto",
+      "id": "seam-pluto:ingress:pluto:None:0",
+      "kind": "ingress",
+      "other": null,
+      "window": "seam-pluto"
+    }
+  ]
+}

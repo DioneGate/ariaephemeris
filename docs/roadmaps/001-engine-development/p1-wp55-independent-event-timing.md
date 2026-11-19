@@ -1,6 +1,6 @@
 # RM-001/008 — WP5.5 Independent Event Timing Qualification
 
-**Date:** 19 November 2026 · **Delivery:** [PR #13](https://github.com/DioneGate/ariaephemeris/pull/13), reviewable/unmerged · **Profile:** opt-in `planet-centres-v1` with SHA-pinned DE442s and six original satellite SPKs · **Time:** geocentric apparent **TT**, not civil UTC · **Scientific status:** **22 independent-source event-time comparisons measured and independently fine-bracketed; commercial release accuracy not certified**.
+**Date:** 19 November 2026 · **Delivery:** [PR #13](https://github.com/DioneGate/ariaephemeris/pull/13), merged at `b170f744` · **Profile:** opt-in `planet-centres-v1` with SHA-pinned DE442s and six original satellite SPKs · **Time:** geocentric apparent **TT**, not civil UTC · **Scientific status:** **22 independent-source event-time comparisons measured and independently fine-bracketed; commercial release accuracy not certified**.
 
 Primary evidence: [22 independent Horizons-vs-Aria event comparisons](../../validation/wp55-independent-event-roots.json), [504 original JPL event-grid rays](../../../data/fixtures/horizons/wp55-events/wp55-horizons-event-roots-v1.json), [224 additional fine-time JPL rays](../../../data/fixtures/horizons/wp55-root-refinement/wp55-jpl-fine-root-brackets-v1.json) and [22 fine-bracket verification records](../../validation/wp55-jpl-fine-root-brackets.json). Exact original raw Horizons responses are SHA-256 verified and archived with query parameters, source-model names and traceable request URLs.
 
@@ -71,4 +71,4 @@ The [initial real-source workflow #44534617647](https://github.com/DioneGate/ari
 
 **Still open:** independent event-discovery/completeness benchmarks, certified model-aware absolute time uncertainty, all 1900–2100 dates, additional planet pairs and event angles, grazing/double-root conditions, perturbations at satellite-kernel boundaries, Sun/Moon/inner planets, civil UTC/EOP and any commercial production acceptance. Parent RM-001 P3/P6 remains Planned.
 
-**Outcome:** reproducible **sampled JPL event-timing agreement plus independently observed 30-second crossing intervals for all 22 events**. **No source model/provider default change, no Aria Galaxy change, no package publication, no merge or deployment** was authorised by this request.
+**Outcome:** reproducible **sampled JPL event-timing agreement plus independently observed 30-second crossing intervals for all 22 events**. **No source model/provider default change, no Aria Galaxy change, no package publication, no deployment** was authorised by the original implementation request. Subsequent owner authority completed [PR #13](https://github.com/DioneGate/ariaephemeris/pull/13), merged at `b170f744`; bounded RM-001/008 is **Done**.

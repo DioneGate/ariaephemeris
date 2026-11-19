@@ -1,0 +1,36 @@
+{
+  "body": "pluto",
+  "parameters": {
+    "ANG_FORMAT": "DEG",
+    "APPARENT": "AIRLESS",
+    "CAL_FORMAT": "JD",
+    "CENTER": "'500@399'",
+    "COMMAND": "'999'",
+    "CSV_FORMAT": "YES",
+    "EPHEM_TYPE": "OBSERVER",
+    "EXTRA_PREC": "YES",
+    "MAKE_EPHEM": "YES",
+    "OBJ_DATA": "NO",
+    "QUANTITIES": "'45'",
+    "REF_SYSTEM": "'ICRF'",
+    "START_TIME": "'JD2456289.5000000'",
+    "STEP_SIZE": "'6 h'",
+    "STOP_TIME": "'JD2456297.5000000'",
+    "TIME_TYPE": "TT",
+    "format": "json"
+  },
+  "raw_file": "raw/seam-pluto-pluto.txt",
+  "raw_sha256": "33fdcce65b0123bf9ad91ce74e2038bf2f80143de2d872e3ab5e103371e4f4a5",
+  "response_signature": {
+    "source": "NASA/JPL Horizons API",
+    "version": "1.2"
+  },
+  "row_count": 33,
+  "source_header": {
+    "centre": "Center body name: Earth (399)                     {source: DE441}",
+    "source_solution_labels": "DE441, plu060_merged",
+    "target": "Target body name: Pluto (999)                     {source: plu060_merged}"
+  },
+  "source_url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=json&COMMAND=%27999%27&OBJ_DATA=NO&MAKE_EPHEM=YES&CENTER=%27500%40399%27&REF_SYSTEM=%27ICRF%27&CSV_FORMAT=YES&EPHEM_TYPE=OBSERVER&TIME_TYPE=TT&QUANTITIES=%2745%27&CAL_FORMAT=JD&ANG_FORMAT=DEG&EXTRA_PREC=YES&APPARENT=AIRLESS&START_TIME=%27JD2456289.5000000%27&STOP_TIME=%27JD2456297.5000000%27&STEP_SIZE=%276+h%27",
+  "window": "seam-pluto"
+}

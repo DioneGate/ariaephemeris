@@ -212,6 +212,20 @@ review/merge evidence, commands/results, remaining gaps and deployed-version
 status. Do not mark work Done until its merge and acceptance are verified.
 The roadmap README owns phase status; this log owns evidence.
 
+## PR #13 completion and RM-001/009–010, 2026-11-19
+
+Verified GitHub PR #13 merged at `b170f7443008f3b8e7b6fbcda656bdefa541e99f`
+on 19 November 2026. RM-001/008 is **Done for the 22-event conditional timing
+comparison**, with original-source and six-kernel replay #44536016732 and fast
+CI #44536016808 passing. Earlier In review/unmerged entries above are historical.
+This does not close independent discovery or physical model uncertainty.
+
+Owner authorised 009 implementation, tests and merge; 010 scope is Planned only.
+The 009 fixed-window specification must be committed before source acquisition.
+No Aria Galaxy change, package release or deployment is included.
+
 ## Next action
 
-Review [draft WP5.4 PR #12](https://github.com/DioneGate/ariaephemeris/pull/12), its [186-case measured tropical-coordinate report](p1-wp54-tropical-coordinate-qualification.md), [immutable source](../../../data/fixtures/horizons/wp54-tropical/wp54-horizons-tropical-stencils-v1.json) and PR-scoped JPL integrity/real-kernel replay checks. No merge is authorised in the current user instruction. WP5.5 should use separately calculated JPL/Horizons **independent event-root timing**, not merely stations/ingresses nominated by Aria; extend remaining four model source diagnoses and agree commercial engineering gates before P3/P6 scientific acceptance. No Aria Galaxy deployment.
+Complete RM-001/009 independent catalogues, compare every returned event, execute
+fast/source/real-kernel checks and merge only after their recorded gates pass.
+Then prepare RM-001/010 separately when requested. Parent P3/P6 remain Planned.

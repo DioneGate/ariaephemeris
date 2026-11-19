@@ -1,0 +1,102 @@
+name: RM-001-009 explicit blind-source acquisition and qualification
+on:
+  push:
+    branches: [feature/rm-001-009-independent-event-discovery]
+    paths: ['data/fixtures/horizons/wp56-discovery/acquisition-request.json']
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: wp56-explicit-acquisition
+  cancel-in-progress: false
+jobs:
+  capture-and-qualify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+          cache-dependency-path: requirements/development.lock
+      - run: |
+          python -m pip install -r requirements/development.lock
+          python -m pip install --no-deps -e .
+      - name: Require the pre-acquisition specification commit
+        run: |
+          git fetch origin 09593cf21efffa8c7c0079b9eeb4014f3cf49cdd
+          git show 09593cf21efffa8c7c0079b9eeb4014f3cf49cdd:data/fixtures/horizons/wp56-discovery/specification.json > /tmp/wp56-frozen-spec.json
+          cmp /tmp/wp56-frozen-spec.json data/fixtures/horizons/wp56-discovery/specification.json
+      - name: Pure independent discovery and full-list comparison tests
+        run: |
+          ruff check .
+          ruff format --check .
+          pytest -q tests/unit/test_wp56_discovery.py
+      - name: Explicit serial original Horizons source capture
+        run: |
+          if [ ! -f data/fixtures/horizons/wp56-discovery/source.json ]; then
+            python tools/datasets/acquire_wp56_discovery.py
+          fi
+          python tools/datasets/verify_wp56_discovery.py
+      - uses: actions/cache@v4
+        with:
+          path: |
+            .artifacts/de442s.bsp
+            .artifacts/planet-centres
+          key: wp56-six-original-spks-v1
+      - name: Acquire SHA-pinned base and original centre kernels
+        run: |
+          set -euo pipefail
+          ariaephemeris install-data .artifacts
+          mkdir -p .artifacts/planet-centres
+          python - <<'PY' > .artifacts/centres.tsv
+          from ariaephemeris.datasets import centres_manifest
+          for body, r in centres_manifest()["sources"].items():
+              print(body, r["filename"], r["source_url"], sep="\t")
+          PY
+          while IFS=$'\t' read -r body filename url; do
+            if [ ! -f ".artifacts/planet-centres/$filename" ]; then
+              curl --fail --location --show-error --silent --retry 4 --retry-delay 5 \
+                --connect-timeout 30 --max-time 1800 "$url" -o ".artifacts/planet-centres/$filename"
+            fi
+          done < .artifacts/centres.tsv
+          python - <<'PY'
+          from pathlib import Path
+          from ariaephemeris.datasets import centres_manifest, verify_centre_sources
+          assert len(verify_centre_sources({b: Path(".artifacts/planet-centres")/r["filename"] for b,r in centres_manifest()["sources"].items()})) == 6
+          PY
+      - name: Complete blind-source and real-Aria catalogue comparison
+        run: |
+          python tools/datasets/compare_wp56_discovery.py --base .artifacts/de442s.bsp --centres-dir .artifacts/planet-centres
+      - name: Real-kernel integration regressions
+        run: pytest -q
+        env:
+          ARIA_KERNEL: .artifacts/de442s.bsp
+      - name: Preserve independent source and diagnostic report even if comparison fails
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: wp56-original-source-and-catalogue-evidence
+          path: |
+            data/fixtures/horizons/wp56-discovery/
+            docs/validation/wp56-independent-event-discovery.json
+          retention-days: 60
+      - name: Commit captured source and report without changing implementation
+        if: always()
+        run: |
+          set -euo pipefail
+          if [ -f data/fixtures/horizons/wp56-discovery/source.json ]; then
+            git config user.name 'github-actions[bot]'
+            git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+            git add data/fixtures/horizons/wp56-discovery
+            if [ -f docs/validation/wp56-independent-event-discovery.json ]; then
+              git add docs/validation/wp56-independent-event-discovery.json
+            fi
+            if ! git diff --cached --quiet; then
+              git commit -m 'data(RM-001/009): freeze blind original JPL source and catalogue evidence'
+              git push origin HEAD:feature/rm-001-009-independent-event-discovery
+            fi
+          fi

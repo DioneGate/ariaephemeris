@@ -1,0 +1,36 @@
+{
+  "body": "neptune",
+  "parameters": {
+    "ANG_FORMAT": "DEG",
+    "APPARENT": "AIRLESS",
+    "CAL_FORMAT": "JD",
+    "CENTER": "'500@399'",
+    "COMMAND": "'899'",
+    "CSV_FORMAT": "YES",
+    "EPHEM_TYPE": "OBSERVER",
+    "EXTRA_PREC": "YES",
+    "MAKE_EPHEM": "YES",
+    "OBJ_DATA": "NO",
+    "QUANTITIES": "'45'",
+    "REF_SYSTEM": "'ICRF'",
+    "START_TIME": "'JD2487702.5000000'",
+    "STEP_SIZE": "'6 h'",
+    "STOP_TIME": "'JD2487720.5000000'",
+    "TIME_TYPE": "TT",
+    "format": "json"
+  },
+  "raw_file": "raw/historical-2099-neptune.txt",
+  "raw_sha256": "45632fb778e008e21ff1db4591ac7b459f65ae5cf9ba6a610c991ef93d24d477",
+  "response_signature": {
+    "source": "NASA/JPL Horizons API",
+    "version": "1.2"
+  },
+  "row_count": 73,
+  "source_header": {
+    "centre": "Center body name: Earth (399)                     {source: nep098_merged}",
+    "source_solution_labels": "DE441, nep098_merged",
+    "target": "Target body name: Neptune (899)                   {source: nep098_merged}"
+  },
+  "source_url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=json&COMMAND=%27899%27&OBJ_DATA=NO&MAKE_EPHEM=YES&CENTER=%27500%40399%27&REF_SYSTEM=%27ICRF%27&CSV_FORMAT=YES&EPHEM_TYPE=OBSERVER&TIME_TYPE=TT&QUANTITIES=%2745%27&CAL_FORMAT=JD&ANG_FORMAT=DEG&EXTRA_PREC=YES&APPARENT=AIRLESS&START_TIME=%27JD2487702.5000000%27&STOP_TIME=%27JD2487720.5000000%27&STEP_SIZE=%276+h%27",
+  "window": "historical-2099"
+}
