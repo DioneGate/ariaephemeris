@@ -27,6 +27,16 @@ Each planet's effective offset calculated from independent Horizons centre-versu
 
 **Interpretation of maxima:** maxima for different components can occur at *different epochs and in different directions*. They **must not** be added as scalar errors. The machine report retains each 3D Cartesian component and reconstructs the residual vector for **every one of 50 matched dates**, with a maximum closure residual below **0.5 millimetres** of position (and explicit velocity decompositions). The result is an algebraic source-model attribution, not a statistical physical uncertainty estimate.
 
+### Evolution across the operating period
+
+| Sampled TDB epoch | Jupiter total geocentric difference | Pluto total geocentric difference |
+| --- | ---: | ---: |
+| JD 2415021.5 (1900) | 8.866 km | 25.557 km |
+| JD 2451545.0 (J2000) | 3.396 km | 0.858 km |
+| JD 2488433.5 (end of 2100 operating interval) | 4.661 km | 40.913 km |
+
+The model differences are **time-dependent**, not fixed offsets. In particular, Pluto's model discrepancy is much larger towards the historical/future edges than at J2000. This reinforces the need for dense full-range tests and explicitly versioned source solutions; it does **not** imply that the larger-magnitude solution has been shown to be less accurate.
+
 ## Reconciliation method
 
 For a physical planet centre, define at the same Julian Date **TDB** and ICRF frame:
