@@ -20,7 +20,10 @@ from wp55_event_math import BODY_ORDER, GRID_STEP_DAYS, PAIRS, grid, station_ste
 
 
 def validate(root: Path, wp54_root: Path) -> dict[str, Any]:
-    if verify_wp54(wp54_root, wp54_root.parent)["verified_critical_and_baseline_chart_cases"] != 186:
+    if (
+        verify_wp54(wp54_root, wp54_root.parent)["verified_critical_and_baseline_chart_cases"]
+        != 186
+    ):
         raise ValueError("Upstream WP5.4 independent source not verified")
     data = json.loads((root / "wp55-horizons-event-roots-v1.json").read_text(encoding="utf-8"))
     if data.get("schema_version") != 1 or data.get("case_count") != 22:
@@ -102,9 +105,7 @@ def validate(root: Path, wp54_root: Path) -> dict[str, Any]:
     counts = Counter(row["kind"] for row in cases)
     if counts != {"station": 6, "ingress": 6, "conjunction": 5, "opposition": 5}:
         raise ValueError("Required 22 event kinds/physical centres are incomplete")
-    expected = {
-        (kind, body, None) for kind in ("station", "ingress") for body in BODY_ORDER
-    } | {
+    expected = {(kind, body, None) for kind in ("station", "ingress") for body in BODY_ORDER} | {
         (kind, first, second) for kind in ("conjunction", "opposition") for first, second in PAIRS
     }
     actual = {(row["kind"], row["body"], row["other_body"]) for row in cases}

@@ -27,7 +27,6 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 from compare_wp54_tropical import reference_rate, true_tropical_from_icrf
 from verify_wp55_events import validate as validate_wp55
 from wp55_event_math import (
-    BODY_ORDER,
     CANDIDATE_TIMING_SECONDS,
     SECONDS_PER_DAY,
     locate_reference_root,
@@ -62,9 +61,7 @@ def reference_function(
         kind = event["kind"]
         if kind == "station":
             stencil = event["reference_rate_stencils"][i]
-            reference_values = [
-                true_tropical_from_icrf(*sources[(body, t)], t) for t in stencil
-            ]
+            reference_values = [true_tropical_from_icrf(*sources[(body, t)], t) for t in stencil]
             rate = reference_rate(reference_values)
             value = rate
             memo = {
@@ -102,9 +99,7 @@ def reference_function(
     return values, records
 
 
-def compare(
-    engine: Ephemeris, originals: dict[str, Any], original_sha256: str
-) -> dict[str, Any]:
+def compare(engine: Ephemeris, originals: dict[str, Any], original_sha256: str) -> dict[str, Any]:
     source_map = {
         (row["body"], row["jd_tt"]): (
             row["inertial_apparent_ra_deg"],
@@ -159,8 +154,7 @@ def compare(
         # Diagnostic, NOT an error bound. 0.05 arcsec for angular events and
         # 0.0001 deg/day for a station are candidate comparative envelopes.
         product_error_proxy_s = (
-            (0.0001 if case["kind"] == "station" else 0.05 / 3600.0)
-            / slope * SECONDS_PER_DAY
+            (0.0001 if case["kind"] == "station" else 0.05 / 3600.0) / slope * SECONDS_PER_DAY
             if slope > 1e-12
             else None
         )
@@ -183,9 +177,7 @@ def compare(
                 "aria_nearest_event": candidate,
                 "aria_minus_independently_interpolated_jpl_seconds": residual_s,
                 "candidate_60_seconds_exceeded": (
-                    abs(residual_s) > CANDIDATE_TIMING_SECONDS
-                    if residual_s is not None
-                    else None
+                    abs(residual_s) > CANDIDATE_TIMING_SECONDS if residual_s is not None else None
                 ),
                 "conditioning": {
                     "jpl_equation_slope_abs_per_tt_day": slope,
@@ -272,8 +264,7 @@ def main() -> int:
     if originals["aria_base_sha256"] != manifest["base_sha256"]:
         raise ValueError("JPL source manifest version drift")
     kernels = {
-        body: args.centres_dir / info["filename"]
-        for body, info in manifest["sources"].items()
+        body: args.centres_dir / info["filename"] for body, info in manifest["sources"].items()
     }
     with Ephemeris(args.base, centre_kernels=kernels) as engine:
         report = compare(engine, originals, hashlib.sha256(raw_bytes).hexdigest())

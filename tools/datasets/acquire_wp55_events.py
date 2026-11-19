@@ -27,7 +27,6 @@ from verify_wp54_tropical import verify as verify_wp54
 from wp55_event_math import (
     BODY_ORDER,
     PAIRS,
-    SECONDS_PER_DAY,
     grid,
     signed_angle,
     stamp,
@@ -77,7 +76,10 @@ def _bisect_pair(engine: Ephemeris, other: str, kind: str, left: float, right: f
 
 def select_pair_events(engine: Ephemeris) -> list[dict[str, Any]]:
     """Use an Aria-only coarse phase scan to nominate, not validate, 10 windows."""
-    dates = [stamp(SCAN_START + i * SCAN_STEP) for i in range(int((SCAN_STOP - SCAN_START) / SCAN_STEP) + 1)]
+    dates = [
+        stamp(SCAN_START + i * SCAN_STEP)
+        for i in range(int((SCAN_STOP - SCAN_START) / SCAN_STEP) + 1)
+    ]
     request = PositionRequest(
         TimeInput(jd=(dates[0], 0.0), scale="TT"),
         bodies=BODY_ORDER,
@@ -98,11 +100,16 @@ def select_pair_events(engine: Ephemeris) -> list[dict[str, Any]]:
             pairs = []
             for i in range(len(dates) - 1):
                 va = signed_angle(
-                    signed_angle(observed[i].bodies[i1].longitude_deg, observed[i].bodies[i2].longitude_deg),
+                    signed_angle(
+                        observed[i].bodies[i1].longitude_deg, observed[i].bodies[i2].longitude_deg
+                    ),
                     target,
                 )
                 vb = signed_angle(
-                    signed_angle(observed[i + 1].bodies[i1].longitude_deg, observed[i + 1].bodies[i2].longitude_deg),
+                    signed_angle(
+                        observed[i + 1].bodies[i1].longitude_deg,
+                        observed[i + 1].bodies[i2].longitude_deg,
+                    ),
                     target,
                 )
                 if va * vb <= 0 and abs(va - vb) < 90:
@@ -133,9 +140,7 @@ def select_cases(engine: Ephemeris, wp54: dict[str, Any]) -> list[dict[str, Any]
     cases = []
     for body in BODY_ORDER:
         nominations = wp54["critical_candidates"][body]
-        if len(nominations) != 2 or {x["kind"] for x in nominations} != {
-            "station", "ingress"
-        }:
+        if len(nominations) != 2 or {x["kind"] for x in nominations} != {"station", "ingress"}:
             raise ValueError("Missing independently measured WP5.4 stress date anchors")
         for item in nominations:
             kind = item["kind"]
@@ -158,9 +163,7 @@ def select_cases(engine: Ephemeris, wp54: dict[str, Any]) -> list[dict[str, Any]
     for case in cases:
         case["jd_tt_grid"] = grid(case["nominated_jd_tt"])
         if case["kind"] == "station":
-            case["reference_rate_stencils"] = [
-                station_stencil(jd) for jd in case["jd_tt_grid"]
-            ]
+            case["reference_rate_stencils"] = [station_stencil(jd) for jd in case["jd_tt_grid"]]
         else:
             case["reference_rate_stencils"] = []
     return cases
@@ -170,7 +173,10 @@ def acquire(base: Path, centres: Path, wp54_root: Path, output: Path) -> dict[st
     file = output / "wp55-horizons-event-roots-v1.json"
     if file.exists():
         raise FileExistsError("Frozen WP5.5 original JPL event source must not be refreshed")
-    if verify_wp54(wp54_root, wp54_root.parent)["verified_critical_and_baseline_chart_cases"] != 186:
+    if (
+        verify_wp54(wp54_root, wp54_root.parent)["verified_critical_and_baseline_chart_cases"]
+        != 186
+    ):
         raise ValueError("Upstream independent JPL source WP5.4 integrity failed")
     wp54 = json.loads((wp54_root / "wp54-horizons-tropical-stencils-v1.json").read_text())
     manifest = centres_manifest()
@@ -218,10 +224,10 @@ def acquire(base: Path, centres: Path, wp54_root: Path, output: Path) -> dict[st
                     "row_count": len(parsed),
                 }
             )
-            rays.extend(
-                {"body": body, "raw_file": raw_file, **value} for value in parsed
+            rays.extend({"body": body, "raw_file": raw_file, **value} for value in parsed)
+            print(
+                f"Archived JPL {body} original raw response {part}: {len(parsed)} rows", flush=True
             )
-            print(f"Archived JPL {body} original raw response {part}: {len(parsed)} rows", flush=True)
             if body != BODY_ORDER[-1] or start + CHUNK < len(all_epochs):
                 time.sleep(3)
     count = sum(len(v) for v in wanted.values())

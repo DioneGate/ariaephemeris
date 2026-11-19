@@ -68,7 +68,9 @@ def locate_reference_root(times: list[float], values: list[float]) -> dict[str, 
         or any(b <= a for a, b in zip(times[:-1], times[1:], strict=True))
     ):
         raise ValueError("Nine complete, monotone finite independent Horizons samples required")
-    if any(abs((b - a) - GRID_STEP_DAYS) > 2e-7 for a, b in zip(times[:-1], times[1:], strict=True)):
+    if any(
+        abs((b - a) - GRID_STEP_DAYS) > 2e-7 for a, b in zip(times[:-1], times[1:], strict=True)
+    ):
         raise ValueError("Reference observation grid has missing or shifted TT samples")
     crossings = []
     for i in range(len(values) - 1):
@@ -78,7 +80,9 @@ def locate_reference_root(times: list[float], values: list[float]) -> dict[str, 
         if left == 0 or right == 0 or left * right < 0:
             crossings.append(i)
     if len(crossings) != 1:
-        raise ValueError(f"Expected exactly one independent JPL root bracket, found {len(crossings)}")
+        raise ValueError(
+            f"Expected exactly one independent JPL root bracket, found {len(crossings)}"
+        )
     idx = crossings[0]
     lo, hi = times[idx], times[idx + 1]
     y0, y1 = values[idx], values[idx + 1]

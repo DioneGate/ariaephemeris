@@ -43,7 +43,11 @@ def test_multiple_roots_and_wrapped_false_discontinuities_fail_closed():
 
 def test_station_tt_rate_stencil_does_not_confuse_scale_or_motion_sign():
     assert m.station_stencil(2451545.0) == [
-        2451544.975, 2451544.9875, 2451545.0, 2451545.0125, 2451545.025
+        2451544.975,
+        2451544.9875,
+        2451545.0,
+        2451545.0125,
+        2451545.025,
     ]
     assert m.signed_angle(359.999, 0.001) == pytest.approx(-0.002)
     assert m.signed_angle(180.001, 0.0) == pytest.approx(-179.999)
@@ -82,7 +86,9 @@ def test_horizons_root_equations_cover_station_ingress_conjunction_opposition():
     common = {"body": "mars", "jd_tt_grid": times, "reference_rate_stencils": []}
     case = {**common, "kind": "conjunction", "other_body": "jupiter", "goal_deg": goal}
     observed, _ = comparison.reference_function(case, rays)
-    assert m.locate_reference_root(times, observed)["jd_tt"] == pytest.approx(origin + 0.1, abs=1e-7)
+    assert m.locate_reference_root(times, observed)["jd_tt"] == pytest.approx(
+        origin + 0.1, abs=1e-7
+    )
     case = {**common, "kind": "opposition", "other_body": "jupiter", "goal_deg": 180}
     rays = {
         (body, jd): _as_icrf_ecliptic_lon(
@@ -93,14 +99,15 @@ def test_horizons_root_equations_cover_station_ingress_conjunction_opposition():
         for jd in times
     }
     observed, _ = comparison.reference_function(case, rays)
-    assert m.locate_reference_root(times, observed)["jd_tt"] == pytest.approx(origin + 0.1, abs=1e-7)
+    assert m.locate_reference_root(times, observed)["jd_tt"] == pytest.approx(
+        origin + 0.1, abs=1e-7
+    )
     case = {**common, "kind": "ingress", "other_body": None, "goal_deg": 30}
-    rays = {
-        ("mars", jd): _as_icrf_ecliptic_lon(30 + 2 * (jd - origin - 0.031), jd)
-        for jd in times
-    }
+    rays = {("mars", jd): _as_icrf_ecliptic_lon(30 + 2 * (jd - origin - 0.031), jd) for jd in times}
     observed, _ = comparison.reference_function(case, rays)
-    assert m.locate_reference_root(times, observed)["jd_tt"] == pytest.approx(origin + 0.031, abs=1e-7)
+    assert m.locate_reference_root(times, observed)["jd_tt"] == pytest.approx(
+        origin + 0.031, abs=1e-7
+    )
 
 
 def test_station_reference_uses_external_symmetric_direction_stencils():
@@ -116,9 +123,7 @@ def test_station_reference_uses_external_symmetric_direction_stencils():
     }
     # An exact quadratic longitude gives linear signed rate crossing at +0.02d.
     rays = {
-        ("mars", jd): _as_icrf_ecliptic_lon(
-            19 + 0.4 * (jd - origin - 0.02) ** 2, jd
-        )
+        ("mars", jd): _as_icrf_ecliptic_lon(19 + 0.4 * (jd - origin - 0.02) ** 2, jd)
         for stencil in case["reference_rate_stencils"]
         for jd in stencil
     }
