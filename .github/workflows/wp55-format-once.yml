@@ -1,4 +1,4 @@
-name: RM-001-008 One-shot pinned source formatter and synthetic event tests
+name: RM-001-008 One-shot pinned source formatter and synthetic event tests retry
 
 on:
   push:
