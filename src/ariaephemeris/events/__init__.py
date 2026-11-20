@@ -36,6 +36,8 @@ def find_events(
         raise AriaError("INVALID_REQUEST", "Event tolerances and budgets must be positive")
     if not 0 <= r.angle_deg <= 180:
         raise AriaError("INVALID_REQUEST", "Aspect angle must be in 0..180")
+    if r.start.time_accuracy != "specified" or r.end.time_accuracy != "specified":
+        raise AriaError("TIME_DATA_UNAVAILABLE", "Event boundaries require specified times")
     t0, t1 = resolve(r.start, r.strict), resolve(r.end, r.strict)
     engine._coverage([t0, t1])
     start, end = t0.tt1 + t0.tt2, t1.tt1 + t1.tt2

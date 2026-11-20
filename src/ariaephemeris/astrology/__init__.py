@@ -32,6 +32,8 @@ DEFAULT_ASPECTS = tuple(AspectRule(a) for a in (0, 60, 90, 120, 180))
 
 
 def angles(observer: Observer, t: ResolvedTime) -> dict[str, float]:
+    if t.quality.get("input_time_accuracy", "specified") != "specified":
+        raise AriaError("TIME_DATA_UNAVAILABLE", "Chart angles require a specified time")
     if t.ut11 is None:
         raise AriaError("TIME_DATA_UNAVAILABLE", "Chart angles require UT1")
     lat, lon = observer.latitude_deg, observer.longitude_deg

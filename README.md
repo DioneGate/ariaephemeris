@@ -34,7 +34,7 @@ with Ephemeris(".artifacts/de442s.bsp") as engine:
     print(chart.angles_deg)
 ```
 
-Time inputs accept explicit UTC, TT, TDB or UT1 and two-part Julian dates. Unresolved DST folds/gaps are rejected. Strict chart calculations require supplied DUT1 or delta-T; strict topocentric calculations also require polar motion. Pre-1972 civil UTC is rejected; use explicit TT or UT1. Future UTC beyond the pinned leap-table expiry is rejected in strict mode. Non-strict assumptions are reported in metadata. See [conventions](docs/conventions.md).
+Time inputs accept explicit UTC, TT, TDB or UT1 and two-part Julian dates. Unresolved DST folds/gaps are rejected. Strict chart calculations require supplied DUT1 or delta-T; strict topocentric calculations also require polar motion. Pre-1972 civil UTC is rejected by default; use explicit TT/UT1 or opt in to the versioned historical civil-to-UT1 approximation. IANA timezone rules use checksum-pinned tzdata 2026.6 (2026f), independently of the host database. Approximate/unknown times retain quality metadata and cannot produce precise houses/angles. See [civil-time policies](docs/time-policies.md). Future UTC beyond the pinned leap-table expiry is rejected in strict mode. Non-strict assumptions are reported in metadata. See [conventions](docs/conventions.md).
 
 ## Opt-in physical planet-centres (WP4 preview)
 

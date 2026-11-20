@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "recorded": "2026-11-20",
+  "baseline_commit": "e55c0ff68301c6ea0159258adf562ed7187bc398",
+  "scope": "RM-001/011 bounded explicit civil-time implementation; no physical clock/EOP uncertainty qualification",
+  "time_sources": {
+    "tzdata_package_version": "2026.6",
+    "iana_version": "2026f",
+    "tzif_count": 598,
+    "tzdata_manifest_sha256": "6f8ff5de220cf9c4753e2fc7b91ce4583dfa0197af0258b2c206245b8cab63dd",
+    "leap_table_sha256": "6cb6f5d4b819f2e568e25db4b0b26d89dedf031fdffb18bc94d40f4e94e268d7"
+  },
+  "tests": {
+    "non_kernel_passed": 159,
+    "kernel_enabled_passed": 179,
+    "kernel_enabled_skipped": 3,
+    "new_cases": 42
+  },
+  "numerical_baseline": {
+    "status": "passed",
+    "dataset_sha256": "54d97562a5b094d298b1b8eafa5a2e17e3e010ce85e1a366d07f003ad159323c",
+    "epoch_count": 4712,
+    "operating_interval_tt": [
+      2415020.5,
+      2488434.5
+    ],
+    "gates": {
+      "raw_position": true,
+      "raw_velocity": true,
+      "apparent_direction": true,
+      "longitude_rate": true,
+      "angles_houses": true,
+      "event_timing": true,
+      "event_completeness": true
+    },
+    "angles_max_arcsec": 0.00013343085356609663,
+    "limitations": [
+      "Empirical samples do not establish a continuous mathematical bound.",
+      "Absolute Earth rotation depends on supplied time inputs.",
+      "Planetary barycentres are explicitly exposed; minor bodies/compact packs are not implemented.",
+      "Event completeness qualified on reported year/type windows, not every possible interval.",
+      "Unmodified Skyfield has a different near-alignment deflection convention; those differences are recorded separately, not accepted as convention-matched error."
+    ]
+  },
+  "oppositions": {
+    "status": "passed",
+    "dataset_sha256": "54d97562a5b094d298b1b8eafa5a2e17e3e010ce85e1a366d07f003ad159323c",
+    "event_count": 3
+  },
+  "checks": {
+    "ruff": "passed",
+    "format": "passed",
+    "mypy": "passed",
+    "source_licence_audit": "passed",
+    "build": "passed",
+    "clean_wheel_sdist_smoke": "passed"
+  },
+  "physical_time_uncertainty_seconds": null,
+  "remaining": [
+    "controlled observed/predicted EOP ingestion and expiry policy",
+    "uncertainty interval propagation",
+    "D03/D04 commercial acceptance",
+    "application integration",
+    "merge/release/deployment"
+  ]
+}

@@ -42,14 +42,55 @@ class TimeInput:
     fold: int | None = None
     dut1_seconds: float | None = None
     delta_t_seconds: float | None = None
+    civil_policy: str = "strict"
+    time_accuracy: str = "specified"
+    uncertainty_seconds: float | None = None
 
     def __post_init__(self) -> None:
+        if not isinstance(self.scale, str):
+            raise AriaError("INVALID_REQUEST", "scale must be a string")
+        if self.value is not None and not isinstance(self.value, str):
+            raise AriaError("INVALID_REQUEST", "value must be an ISO string")
+        if self.civil_policy not in ("strict", "historical-ut1-v1"):
+            raise AriaError("INVALID_REQUEST", "Unknown civil_policy")
+        if self.time_accuracy not in ("specified", "approximate", "unknown"):
+            raise AriaError("INVALID_REQUEST", "Unknown time_accuracy")
+        if self.fold is not None and (type(self.fold) is not int or self.fold not in (0, 1)):
+            raise AriaError("INVALID_REQUEST", "fold must be 0 or 1")
+        if self.uncertainty_seconds is not None:
+            if (
+                isinstance(self.uncertainty_seconds, bool)
+                or not isinstance(self.uncertainty_seconds, (int, float))
+                or not math.isfinite(self.uncertainty_seconds)
+                or self.uncertainty_seconds <= 0
+                or self.time_accuracy != "approximate"
+            ):
+                raise AriaError(
+                    "INVALID_REQUEST", "Positive uncertainty_seconds requires approximate time"
+                )
+        if self.timezone is not None and (not isinstance(self.timezone, str) or not self.timezone):
+            raise AriaError("INVALID_REQUEST", "timezone must be a nonempty IANA key")
+        if self.jd is not None and (self.timezone is not None or self.fold is not None):
+            raise AriaError("INVALID_REQUEST", "Julian dates cannot have timezone or fold")
+        if self.civil_policy != "strict" and (self.jd is not None or self.scale.upper() != "UTC"):
+            raise AriaError(
+                "INVALID_REQUEST", "Historical civil policy requires a civil UTC-labelled value"
+            )
+        if self.dut1_seconds is not None and self.scale.upper() != "UTC":
+            raise AriaError("INVALID_REQUEST", "DUT1 requires UTC input")
         if self.jd is not None:
-            if len(self.jd) != 2 or not all(math.isfinite(float(x)) for x in self.jd):
+            if (
+                not isinstance(self.jd, (tuple, list))
+                or len(self.jd) != 2
+                or any(isinstance(x, bool) or not isinstance(x, (int, float)) for x in self.jd)
+                or not all(math.isfinite(x) for x in self.jd)
+            ):
                 raise AriaError("INVALID_REQUEST", "jd requires two finite components")
             object.__setattr__(self, "jd", tuple(float(x) for x in self.jd))
         for x in (self.dut1_seconds, self.delta_t_seconds):
-            if x is not None and not math.isfinite(x):
+            if x is not None and (
+                isinstance(x, bool) or not isinstance(x, (int, float)) or not math.isfinite(x)
+            ):
                 raise AriaError("INVALID_REQUEST", "Time offsets must be finite")
         if self.dut1_seconds is not None and self.delta_t_seconds is not None:
             raise AriaError("INVALID_REQUEST", "Supply DUT1 or delta-T, not both")
@@ -62,11 +103,10 @@ class TimeInput:
             return cls(value=value)
         if isinstance(value, dict):
             d = dict(value)
-            if d.get("jd") is not None:
-                if len(d["jd"]) != 2:
-                    raise AriaError("INVALID_REQUEST", "jd requires two components")
-                d["jd"] = tuple(d["jd"])
-            return cls(**d)
+            try:
+                return cls(**d)
+            except TypeError as e:
+                raise AriaError("INVALID_REQUEST", "Unknown or invalid time input field") from e
         raise AriaError("INVALID_REQUEST", "time must be a TimeInput, ISO string or mapping")
 
 

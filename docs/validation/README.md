@@ -57,3 +57,8 @@ separates query-chain cancellation, true direct-offset differences, interpolatio
 continuity and unknown physical bounds. The initial local-cubic failure is retained
 in [its diagnostic](wp57-initial-local-cubic-diagnostic.json). Final replay/merge
 status belongs in roadmap progress; this is not commercial-release certification.
+
+
+## RM-001/011 — explicit civil-time reliability
+
+[Bounded validation record](civil-time-011.json) and [policy](../time-policies.md): 159 non-kernel tests and 179 full-suite tests passed (3 physical-source integration tests skipped without their six optional kernels). All 598 pinned timezone resources verify, historical chart/CLI paths match their explicit UT1 equivalents, and unknown/approximate inputs cannot produce precise angles/houses. Existing DE442s qualification and supplementary oppositions pass; these measure implementation agreement, not historical clock accuracy. Ruff, format, mypy, licence/source audit, build and clean wheel/sdist smoke passed. PR validation is recorded separately in the roadmap progress log.

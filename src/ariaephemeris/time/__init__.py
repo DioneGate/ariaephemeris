@@ -9,13 +9,13 @@ from dataclasses import dataclass, replace
 from datetime import datetime, timezone
 from importlib.resources import files
 from typing import Any
-from zoneinfo import ZoneInfo, ZoneInfoNotFoundError
 
 import erfa
 import numpy as np
 
 from ..errors import AriaError
 from ..models import TimeInput
+from .zones import load_zone
 
 DAY = 86400.0
 _LEAP_TEXT = files("ariaephemeris.resources").joinpath("Leap_Second.dat").read_text()
@@ -110,7 +110,11 @@ def delta_t_model(year: float) -> float:
     return -20 + 32 * ((year - 1820) / 100) ** 2 - 0.5628 * (2150 - year)
 
 
-def _civil(value: str, ti: TimeInput) -> tuple[int, int, int, int, int, float]:
+def _civil(
+    value: str, ti: TimeInput, quality: dict[str, Any]
+) -> tuple[int, int, int, int, int, float]:
+    if not re.match(r"^\d{4}-\d{2}-\d{2}[T ]\d{2}:\d{2}", value):
+        raise AriaError("INVALID_REQUEST", "Supply a date and an explicit evaluation time")
     # Leap second notation is handled separately from datetime's 0..59 seconds.
     leap = bool(re.search(r":60(?:[.]\d+)?(?:Z|[+]00:00)$", value))
     if leap:
@@ -127,10 +131,8 @@ def _civil(value: str, ti: TimeInput) -> tuple[int, int, int, int, int, float]:
     elif dt.tzinfo is None:
         if not ti.timezone:
             raise AriaError("AMBIGUOUS_LOCAL_TIME", "Supply a timezone or UTC offset")
-        try:
-            zone = ZoneInfo(ti.timezone)
-        except ZoneInfoNotFoundError as e:
-            raise AriaError("INVALID_REQUEST", "Unknown IANA timezone") from e
+        zone, provenance = load_zone(ti.timezone)
+        quality["timezone"] = dict(provenance)
         candidates = []
         for fold in (0, 1):
             aware = dt.replace(tzinfo=zone, fold=fold)
@@ -146,7 +148,17 @@ def _civil(value: str, ti: TimeInput) -> tuple[int, int, int, int, int, float]:
         else:
             dt = candidates[0]
     if ti.scale.upper() == "UTC":
+        if ti.timezone and quality["timezone"] is None:
+            raise AriaError("INVALID_REQUEST", "Supply an explicit offset or timezone, not both")
+        if ti.fold is not None and quality["timezone"] is None:
+            raise AriaError("INVALID_REQUEST", "fold requires local IANA timezone input")
+        offset = dt.utcoffset()
+        assert offset is not None
+        quality["civil_offset_seconds"] = offset.total_seconds()
+        quality["fold"] = dt.fold if quality["timezone"] is not None else None
         dt = dt.astimezone(timezone.utc)
+    elif ti.fold is not None:
+        raise AriaError("INVALID_REQUEST", "fold requires local IANA timezone input")
     return (
         dt.year,
         dt.month,
@@ -159,6 +171,13 @@ def _civil(value: str, ti: TimeInput) -> tuple[int, int, int, int, int, float]:
 
 def resolve(ti: TimeInput, strict: bool = True, require_ut1: bool = False) -> ResolvedTime:
     ti = TimeInput.parse(ti)
+    if not isinstance(strict, bool) or not isinstance(require_ut1, bool):
+        raise AriaError("INVALID_REQUEST", "strict and require_ut1 must be boolean")
+    if require_ut1 and ti.time_accuracy != "specified":
+        raise AriaError(
+            "TIME_DATA_UNAVAILABLE",
+            "Angles, houses and topocentric positions require a specified time; uncertain input needs interval analysis",
+        )
     scale = ti.scale.upper()
     if scale not in ("UTC", "TT", "TDB", "UT1"):
         raise AriaError("INVALID_REQUEST", "Supported scales: UTC, TT, TDB, UT1")
@@ -169,15 +188,45 @@ def resolve(ti: TimeInput, strict: bool = True, require_ut1: bool = False) -> Re
         "leap_table_expires": _EXPIRY.date().isoformat(),
         "time_model": "ERFA-2.0.1.5",
         "input_scale": scale,
+        "effective_input_scale": scale,
+        "civil_policy": ti.civil_policy,
+        "calendar": "proleptic-gregorian",
+        "timezone": None,
+        "civil_offset_seconds": None,
+        "fold": None,
+        "input_time_accuracy": ti.time_accuracy,
+        "input_uncertainty_seconds": ti.uncertainty_seconds,
+        "earth_rotation_uncertainty_seconds": None,
+        "delta_t_status": "not-used",
+        "delta_t_seconds": None,
+        "dut1_seconds": None,
+        "ut1_status": "unavailable",
+        "utc_status": "not-applicable",
         "warnings": [],
     }
+    if ti.time_accuracy != "specified":
+        quality["warnings"].append(
+            "Representative evaluation time only; input uncertainty is not propagated into positions"
+        )
     if ti.jd is not None:
         j1, j2 = map(float, ti.jd)
         if not np.isfinite([j1, j2]).all():
             raise AriaError("INVALID_REQUEST", "Julian date must be finite")
     else:
         assert ti.value is not None
-        y, mo, d, h, mi, se = _civil(ti.value, ti)
+        y, mo, d, h, mi, se = _civil(ti.value, ti, quality)
+        if ti.civil_policy == "historical-ut1-v1":
+            if not 1900 <= y < 1972 or se >= 60 or ti.dut1_seconds is not None:
+                raise AriaError(
+                    "INVALID_REQUEST",
+                    "Historical policy requires 1900-1971 nominal UT1 and delta-T, never DUT1/leap seconds",
+                )
+            scale = "UT1"
+            quality["effective_input_scale"] = "UT1"
+            quality["civil_interpretation"] = "offset-adjusted historical clock approximates UT1"
+            quality["warnings"].append(
+                "Historical civil clock interpreted as UT1 by explicit policy, not recorded UTC; historical zone/clock accuracy is unbounded"
+            )
         with warnings.catch_warnings():
             warnings.simplefilter("ignore", erfa.ErfaWarning)
             j1, j2 = map(float, erfa.dtf2d(scale, y, mo, d, h, mi, se))
@@ -212,6 +261,7 @@ def resolve(ti: TimeInput, strict: bool = True, require_ut1: bool = False) -> Re
             if ti.dut1_seconds is not None:
                 u1, u2 = map(float, erfa.utcut1(j1, j2, ti.dut1_seconds))
                 quality["ut1_status"] = "user-supplied-DUT1"
+                quality["dut1_seconds"] = ti.dut1_seconds
         elif scale == "TT":
             t1, t2 = j1, j2
         elif scale == "TDB":
@@ -229,8 +279,11 @@ def resolve(ti: TimeInput, strict: bool = True, require_ut1: bool = False) -> Re
                 y, mo, _, _ = erfa.jd2cal(j1, j2)
                 dt = delta_t_model(float(y) + (float(mo) - 0.5) / 12)
                 quality["warnings"].append("TT derived from modelled delta-T")
+                quality["delta_t_status"] = "Espenak-Meeus-2006-polynomial"
             else:
                 dt = ti.delta_t_seconds
+                quality["delta_t_status"] = "user-supplied"
+            quality["delta_t_seconds"] = dt
             t1, t2 = j1, j2 + dt / DAY
             quality["ut1_status"] = "explicit-UT1"
         if require_ut1 and u1 is None:
@@ -243,12 +296,15 @@ def resolve(ti: TimeInput, strict: bool = True, require_ut1: bool = False) -> Re
                 y, mo, _, _ = erfa.jd2cal(t1, t2)
                 dt = delta_t_model(float(y) + (float(mo) - 0.5) / 12)
                 quality["ut1_status"] = "Espenak-Meeus-2006-polynomial"
+                quality["delta_t_status"] = "Espenak-Meeus-2006-polynomial"
                 quality["warnings"].append(
                     "UT1 modelled; absolute chart-angle accuracy is not guaranteed"
                 )
             else:
                 dt = dt_input
                 quality["ut1_status"] = "user-supplied-delta-T"
+                quality["delta_t_status"] = "user-supplied"
+            quality["delta_t_seconds"] = dt
             u1, u2 = t1, t2 - dt / DAY
         dtr = erfa.dtdb(t1, t2, 0, 0, 0, 0)
         b1, b2 = map(float, erfa.tttdb(t1, t2, dtr))

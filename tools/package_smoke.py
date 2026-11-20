@@ -23,6 +23,9 @@ with zipfile.ZipFile(wheel) as archive:
         "licenses/docs/licenses/dependencies/numpy/0-LICENSE.txt",
         "licenses/docs/licenses/dependencies/pyerfa/0-LICENSE.rst",
         "ariaephemeris/resources/Leap_Second.dat",
+        "ariaephemeris/resources/tzdata-v1.json",
+        "licenses/docs/licenses/dependencies/tzdata/0-LICENSE.txt",
+        "licenses/docs/licenses/dependencies/tzdata/1-LICENSE_APACHE.txt",
         "ariaephemeris/resources/de442s.json",
     ]:
         assert any(n.endswith(suffix) for n in names), suffix
@@ -56,6 +59,21 @@ for artifact in [wheel, next((root / "dist").glob("*.tar.gz"))]:
         assert (
             json.loads(info.stdout)["sha256"]
             == "54d97562a5b094d298b1b8eafa5a2e17e3e010ce85e1a366d07f003ad159323c"
+        )
+        subprocess.run(
+            [
+                str(python),
+                "-c",
+                (
+                    "from ariaephemeris import TimeInput; from ariaephemeris.time import resolve; "
+                    "t=resolve(TimeInput('1901-01-01T12:00:00',timezone='Europe/Paris',"
+                    "civil_policy='historical-ut1-v1',delta_t_seconds=0)); "
+                    "assert t.quality['timezone']['iana_version']=='2026f'; "
+                    "assert t.quality['civil_offset_seconds']==561; assert t.utc1 is None"
+                ),
+            ],
+            check=True,
+            cwd=temp,
         )
         kernel = os.environ.get("ARIA_KERNEL")
         if kernel:

@@ -437,6 +437,20 @@
     "role": "development/build"
   },
   {
+    "name": "tzdata",
+    "version": "2026.6",
+    "declared_license": "Apache-2.0",
+    "notices": [
+      "docs/licenses/dependencies/tzdata/0-LICENSE.txt",
+      "docs/licenses/dependencies/tzdata/1-LICENSE_APACHE.txt"
+    ],
+    "notice_sha256": {
+      "docs/licenses/dependencies/tzdata/0-LICENSE.txt": "df58f69ea88683035d720b5375bcef0cf5aeaa98a1d098d572e0992c378deb46",
+      "docs/licenses/dependencies/tzdata/1-LICENSE_APACHE.txt": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    "role": "runtime"
+  },
+  {
     "name": "wheel",
     "version": "0.48.0",
     "declared_license": "MIT",

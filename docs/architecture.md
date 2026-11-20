@@ -1,6 +1,6 @@
 # Architecture
 
-One Python distribution uses a src layout. `Ephemeris` owns a verified, read-only JPL handle and orchestrates request-local computations. `models` and `errors` define contracts; `datasets` owns acquisition/provenance; `sources` wraps jplephem centre chains and segment precedence. `time` resolves scales, `frames` wraps ERFA, `positions` applies Aria's correction pipeline, `astrology` calculates chart geometry, and `events` brackets roots. CLI calls the same API; no runtime downloads or chart logging occur.
+One Python distribution uses a src layout. `Ephemeris` owns a verified, read-only JPL handle and orchestrates request-local computations. `models` and `errors` define contracts; `datasets` owns acquisition/provenance; `sources` wraps jplephem centre chains and segment precedence. `time` resolves scales and explicit civil-time policies; its `zones` module verifies pinned tzdata TZif resources without host timezone lookup, `frames` wraps ERFA, `positions` applies Aria's correction pipeline, `astrology` calculates chart geometry, and `events` brackets roots. CLI calls the same API; no runtime downloads or chart logging occur.
 
 Polynomial evaluation is delegated to jplephem, not reimplemented. Standards routines are delegated to PyERFA. Skyfield and CSPICE are validation-only evaluators and do not generate Aria outputs. Source arrays are loaded before concurrent requests; caches and mutable search state are request-local. Do not close an engine while another thread is using it.
 

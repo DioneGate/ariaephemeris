@@ -11,7 +11,7 @@ requires-python = ">=3.12"
 license = "Apache-2.0"
 license-files = ["LICENSE", "NOTICE", "THIRD_PARTY_NOTICES", "docs/licenses/*.txt", "docs/licenses/*.html", "docs/licenses/dependencies/*/*"]
 authors = [{name = "Marek"}]
-dependencies = ["numpy==2.5.3", "pyerfa==2.0.1.5", "jplephem==2.24"]
+dependencies = ["numpy==2.5.3", "pyerfa==2.0.1.5", "jplephem==2.24", "tzdata==2026.6"]
 
 [project.optional-dependencies]
 dev = ["pytest==9.1.1", "ruff==0.17.0", "mypy==2.4.0", "build==1.6.1", "jsonschema==4.26.0"]
