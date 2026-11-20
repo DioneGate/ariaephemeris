@@ -174,7 +174,7 @@ A Rust/native/WASM evaluator is a later portability option, not a first-release 
 - Pre-UTC historical civil times require an explicit policy; never pretend modern UTC rules extend unchanged to 1900. RM-001/011 adds opt-in `historical-ut1-v1`, pinned timezone rules and uncertain-input guards; see [current policy](time-policies.md).
 - Future UTC and UT1 conversion must expose assumptions and uncertainty. Offer strict mode requiring supplied values where necessary.
 - House/angle calculations use Earth rotation based on UT1, not simply TT or TDB.
-- Return time-model identity, observed/predicted/modelled status and applicable warnings.
+- Return time-model identity, observed/predicted/modelled status and applicable warnings. RM-001/012 provides optional hash-pinned, explicitly installed Bulletin A DUT1/polar motion with leap-safe interpolation and bounded prediction permission; see [managed EOP](managed-eop.md).
 
 A small interpolation error does not imply equivalent absolute accuracy when the input birth time or historical Earth rotation is uncertain.
 

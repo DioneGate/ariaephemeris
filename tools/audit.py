@@ -31,6 +31,12 @@ for item in json.loads((root / "docs/licenses/dependency-inventory.json").read_t
             hashlib.sha256((root / notice).read_bytes()).hexdigest()
             == item["notice_sha256"][notice]
         )
+eop = json.loads((root / "src/ariaephemeris/resources/eop-v1.json").read_text())
+assert eop == json.loads((root / "data/manifests/eop-v1.json").read_text())
+assert (
+    hashlib.sha256((root / "docs/data/readme.finals2000A.txt").read_bytes()).hexdigest()
+    == eop["format_sha256"]
+)
 for path in (root / "src").rglob("*.py"):
     assert "SPDX-License-Identifier: Apache-2.0" in path.read_text(), path
 print("Licence text, notice inventory, SPDX and source-term hashes verified.")

@@ -14,6 +14,7 @@ from ..datasets import install
 from ..engine import Ephemeris
 from ..errors import AriaError
 from ..models import AspectRule, EventRequest, Observer
+from ..time import eop
 
 
 def main(argv: list[str] | None = None) -> int:
@@ -24,9 +25,18 @@ def main(argv: list[str] | None = None) -> int:
     acquire.add_argument(
         "--source", help="Install from an existing local kernel instead of downloading"
     )
+    orientation = sub.add_parser("install-eop")
+    orientation.add_argument("directory")
+    orientation.add_argument("--source", help="Install exact pinned finals2000A bytes locally")
     for name in ("dataset-info", "positions", "batch", "chart", "aspects", "events"):
         p = sub.add_parser(name)
         p.add_argument("--kernel", required=True)
+        p.add_argument("--eop", help="Explicit installed pinned Earth-orientation snapshot")
+        p.add_argument(
+            "--allow-predicted-eop",
+            action="store_true",
+            help="Explicitly allow bounded predictions in the selected EOP snapshot",
+        )
         p.add_argument(
             "--centre-kernel",
             action="append",
@@ -38,8 +48,10 @@ def main(argv: list[str] | None = None) -> int:
             p.add_argument("--request", required=True, help="JSON file path, or - for stdin")
     args = parser.parse_args(argv)
     try:
-        if args.command == "install-data":
-            output: Any = {"kernel": str(install(args.directory, args.source))}
+        if args.command == "install-eop":
+            output: Any = {"earth_orientation": str(eop.install(args.directory, args.source))}
+        elif args.command == "install-data":
+            output = {"kernel": str(install(args.directory, args.source))}
         else:
             request = {}
             if args.command != "dataset-info":
@@ -54,7 +66,12 @@ def main(argv: list[str] | None = None) -> int:
                 if not body or not name or body in centre_kernels:
                     raise AriaError("INVALID_REQUEST", "Invalid or repeated --centre-kernel")
                 centre_kernels[body] = Path(name)
-            with Ephemeris(args.kernel, centre_kernels=centre_kernels or None) as engine:
+            with Ephemeris(
+                args.kernel,
+                centre_kernels=centre_kernels or None,
+                eop_path=args.eop,
+                allow_predicted_eop=args.allow_predicted_eop,
+            ) as engine:
                 if args.command == "dataset-info":
                     output = engine.dataset_info()
                 elif args.command == "positions":

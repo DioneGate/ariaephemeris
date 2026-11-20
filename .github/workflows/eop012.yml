@@ -1,0 +1,71 @@
+name: RM-001-012 pinned Earth-orientation qualification
+on:
+  pull_request:
+    paths:
+      - '.github/workflows/eop012.yml'
+      - 'src/ariaephemeris/time/**'
+      - 'src/ariaephemeris/frames/**'
+      - 'src/ariaephemeris/engine.py'
+      - 'src/ariaephemeris/resources/eop-v1.json'
+      - 'data/manifests/eop-v1.json'
+      - 'data/fixtures/iers/**'
+      - 'tests/**/test*eop*'
+      - 'tools/datasets/qualify_eop.py'
+  workflow_dispatch:
+    inputs:
+      source_artifact_run_id:
+        description: 'Optional previous successful run containing eop-original-v1'
+        required: false
+        type: string
+permissions:
+  contents: read
+  actions: read
+jobs:
+  qualification:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: |
+          python -m pip install -r requirements/development.lock
+          python -m pip install --no-deps -e .
+      - uses: actions/cache@v4
+        with:
+          path: .artifacts/de442s.bsp
+          key: de442s-54d97562a5b094d298b1b8eafa5a2e17e3e010ce85e1a366d07f003ad159323c
+      - uses: actions/cache@v4
+        with:
+          path: .artifacts/eop
+          key: iers-finals2000a-9f01acb5a8b50465913ad423212d409f309e4a7b9401197a52fe258304417fb0
+      - if: ${{ inputs.source_artifact_run_id != '' }}
+        uses: actions/download-artifact@v4
+        with:
+          name: eop-original-v1
+          path: .artifacts/eop
+          github-token: ${{ github.token }}
+          run-id: ${{ inputs.source_artifact_run_id }}
+      - name: Explicitly install and verify pinned original sources
+        run: |
+          ariaephemeris install-data .artifacts
+          ariaephemeris install-eop .artifacts/eop
+      - name: Real-kernel managed input and independent reference checks
+        run: |
+          pytest tests/unit/test_managed_eop.py tests/integration/test_eop_engine.py
+          python tools/datasets/qualify_eop.py --kernel .artifacts/de442s.bsp --eop .artifacts/eop/iers-usno-finals2000a-20261120-v1.all --output .artifacts/eop-qualification.json
+        env:
+          ARIA_KERNEL: .artifacts/de442s.bsp
+      - uses: actions/upload-artifact@v4
+        with:
+          name: eop-original-v1
+          path: .artifacts/eop/iers-usno-finals2000a-20261120-v1.all
+          retention-days: 90
+          if-no-files-found: error
+      - if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: eop-qualification
+          path: .artifacts/eop-qualification.json
+          if-no-files-found: warn

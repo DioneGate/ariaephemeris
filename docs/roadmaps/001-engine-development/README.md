@@ -3,13 +3,13 @@
 | Field | Value |
 | --- | --- |
 | Product owner | Marek / DioneGate |
-| Last reviewed | 2026-11-18 (RM-001/001 prompt preparation; no phase implementation) |
-| Inspected implementation baseline | [`39b25ae`](https://github.com/DioneGate/ariaephemeris/commit/39b25aec9023bcc79172a0f0cf7aed373efafc89), package 0.1.0 |
+| Last reviewed | 2026-11-20 (011 merged; 012 implementation and qualification) |
+| Original inspected implementation baseline | [`39b25ae`](https://github.com/DioneGate/ariaephemeris/commit/39b25aec9023bcc79172a0f0cf7aed373efafc89), package 0.1.0 |
 | Progress and evidence | [progress.md](progress.md) |
 | Implementation prompts | [Prompt register](prompts/README.md) |
 | Framework | [Roadmap register and conventions](../README.md) |
 | Agent working rules | [Repository AGENTS.md](../../../AGENTS.md) |
-| Current main checked | [`36a9cec`](https://github.com/DioneGate/ariaephemeris/commit/36a9cec742e8248fdee599b7cf620b2b19d12cc7), 2026-11-18 (RM-001/001 execution baseline; app main `4ab5f99`) |
+| Current main checked | `633939aa6b776493e55fd5f01b8a309176ca9f69`, 2026-11-20 (PR #16 merged) |
 
 ## Outcome
 
@@ -105,17 +105,21 @@ Entry: 009 evidence available and exact source/convention identities retained. E
 
 **010 measured outcome:** [PR #15](https://github.com/DioneGate/ariaephemeris/pull/15) has 500 new original geometric vectors and 2,340 JPL station rays. [Scientific report](p1-wp57-model-uncertainty.md): all 100 remaining-body residuals reconstruct, direct queries isolate Uranus/Neptune chain cancellation, and a continuous reference resolves all 36 stations (maximum grid difference 5.25 s; Aria disagreement 3.57 s). Neptune's sampled direct-offset difference is about 325.5 m and 6.38 mm/s; absolute physical uncertainty remains unknown. Final original-source and pinned-kernel replay passed in [run #44608488208](https://github.com/DioneGate/ariaephemeris/actions/runs/44608488208); Owner merged PR #15 at `e55c0ff68301c6ea0159258adf562ed7187bc398` on 19 November 2026; final replay #44610710848 and real-kernel qualification #44610710138 passed. Bounded 010 is Done; absolute physical bounds remain unknown. P3/P6 stay Planned.
 
-## RM-001/011 — Reliable explicit civil-time input (In review)
+## RM-001/011 — Reliable explicit civil-time input (Done)
 
-Owner authorised 011 implementation. [Prompt](prompts/011-reliable-civil-time.md) and [current civil-time policy](../../time-policies.md): pin tzdata 2026.6 / IANA 2026f with 598 TZif hashes, bypass OS timezone rules, provide opt-in `historical-ut1-v1` for 1900–1971 clock interpretations, retain supplied/modelled rotation provenance and block precise houses/angles for approximate or unknown birth time. Existing strict defaults, kernels and astronomical conventions are preserved. Observed/predicted EOP ingestion, interval analysis and commercial D03/D04 acceptance remain open; P2 is In progress, not Done. Delivery evidence is in [progress](progress.md).
+Owner authorised 011 implementation. [Prompt](prompts/011-reliable-civil-time.md) and [current civil-time policy](../../time-policies.md): pin tzdata 2026.6 / IANA 2026f with 598 TZif hashes, bypass OS timezone rules, provide opt-in `historical-ut1-v1` for 1900–1971 clock interpretations, retain supplied/modelled rotation provenance and block precise houses/angles for approximate or unknown birth time. Existing strict defaults, kernels and astronomical conventions are preserved. PR #16 merged on 20 November 2026 at `633939a` after passing checks. Bounded 011 is Done. Managed EOP is delivered separately in 012; interval analysis and commercial D03/D04 acceptance remain open; P2 is In progress, not Done. Delivery evidence is in [progress](progress.md).
+
+## RM-001/012 — Managed Earth-orientation data (In review)
+
+[Prompt](prompts/012-managed-earth-orientation.md), [policy](../../managed-eop.md) and [independent measured qualification](../../validation/managed-eop-012.json). Explicitly installed, SHA-pinned original IERS/USNO Bulletin A data supplies missing DUT1 and polar motion for selected modern UTC requests. Linear continuous UT1−TAI/polar interpolation handles leaps; observed/predicted status and applied fields remain explicit. Predictions require opt-in and are limited to 30 days from first prediction. Source gaps, expiry and unavailable derivative stencils fail safely; supplied values win. Independent parsing covers 20,052 rows, with 82 off-grid instants and 246 observer cases; these are implementation checks, not absolute physical uncertainty. P2 remains In progress for interval analysis, historical/source coverage and commercial decisions. No application migration or release is implied.
 
 ## Delivery plan
 
 | Phase | Outcome | Depends on | Status | Next action |
 | --- | --- | --- | --- | --- |
-| RM-001-P1 | Scope, calculation contracts and reproducible baseline | Existing source | Planned | RM-001/001 docs merged via PR #3; RM-001/002 all six source/evaluator gates pass, WP3 merged by PR #5; WP4 runtime profile on draft PR #6; compact packaging and remaining decisions/qualification before phase acceptance |
-| RM-001-P2 | Reliable everyday date/time entry | P1 | In progress | 011 explicit civil-time policy and pinned timezone implementation In review; managed observed EOP, interval analysis and D03/D04 remain open |
-| RM-001-P3 | Launch calculation capabilities | P1; P2 for civil-time qualification | Planned | WP4 profile merged in PR #6; [WP5.1 Horizons reference data](p1-independent-horizons-fixtures.md) merged in PR #7; WP5.2 numerical comparator/report merged in PR #9; Jupiter/Pluto source attribution complete in merged PR #11; WP5.4 chart coordinate and signed-rate comparison on merged PR #12; independent event timing and wider model accuracy remain open; remaining capability decisions still open |
+| RM-001-P1 | Scope, calculation contracts and reproducible baseline | Existing source | Planned | Contracts/inventory and all-six source/evaluator evidence delivered; physical-centre runtime and bounded independent qualification merged through 010; launch decisions and final phase acceptance remain open |
+| RM-001-P2 | Reliable everyday date/time entry | P1 | In progress | 011 civil-time policy merged; 012 managed EOP In review; interval analysis, historical/source coverage and D03/D04 remain open |
+| RM-001-P3 | Launch calculation capabilities | P1; P2 for civil-time qualification | Planned | WP4 profile merged in PR #6; [WP5.1 Horizons reference data](p1-independent-horizons-fixtures.md) merged in PR #7; WP5.2 numerical comparator/report merged in PR #9; Jupiter/Pluto source attribution complete in merged PR #11; WP5.4 chart coordinate and signed-rate comparison on merged PR #12; bounded event timing, blind discovery evidence and source-model attribution delivered through 010; remaining feature decisions, physical uncertainty and commercial acceptance remain open |
 | RM-001-P4 | Integration with the Aria application | P1; applicable P2/P3 capabilities | Planned | Specify the persistent service and provider-neutral adapter contract |
 | RM-001-P5 | Interactive and batch performance | P4; profiling may start earlier | Planned | Approve workloads, deployment hardware and service-level targets |
 | RM-001-P6 | First production-qualified engine release | P2–P5 for agreed launch scope | Planned | Define exact-release qualification, packaging and deployment gates |

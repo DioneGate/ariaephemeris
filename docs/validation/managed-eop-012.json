@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "status": "passed",
+  "eop_sha256": "9f01acb5a8b50465913ad423212d409f309e4a7b9401197a52fe258304417fb0",
+  "dataset_sha256": "54d97562a5b094d298b1b8eafa5a2e17e3e010ce85e1a366d07f003ad159323c",
+  "independent_parser_records": 20052,
+  "independent_parser_exact_match": true,
+  "observed_off_grid_instants": 82,
+  "observer_cases": 246,
+  "maxima": {
+    "dut1_seconds": 1.2008172234345693e-12,
+    "polar_motion_arcsec": 1.3860440573054689e-12,
+    "angles_arcsec": 4.794362666871166e-05,
+    "observer_position_m": 0.00025961804449860324,
+    "observer_velocity_m_s": 0.0012756556193340958
+  },
+  "diagnostic_limits": {
+    "dut1_seconds": 1e-07,
+    "polar_motion_arcsec": 1e-08,
+    "angles_arcsec": 0.01,
+    "observer_position_m": 0.1,
+    "observer_velocity_m_s": 0.01
+  },
+  "gates": {
+    "dut1_seconds": true,
+    "polar_motion_arcsec": true,
+    "angles_arcsec": true,
+    "observer_position_m": true,
+    "observer_velocity_m_s": true
+  },
+  "reference": "Skyfield 1.55 independent finals parser, TT-based delta-T/polar interpolation, vector-plane chart angles and WGS84 observer state",
+  "limitations": [
+    "Shared original IERS source; finite sample, not absolute physical accuracy",
+    "Diagnostic limits measure implementation/convention agreement, not approved commercial tolerances",
+    "Skyfield observer velocity omits some small EOP derivative terms; residual retained",
+    "Rapid Bulletin A values are provisional; formal errors are not absolute bounds",
+    "Celestial pole dX/dY corrections are not applied in this stage",
+    "ASC/MC retain v1 GST/geodetic geometry without polar-motion corrections; reference matches that convention"
+  ]
+}

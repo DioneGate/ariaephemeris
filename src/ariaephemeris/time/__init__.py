@@ -5,7 +5,8 @@
 import hashlib
 import re
 import warnings
-from dataclasses import dataclass, replace
+from collections.abc import Callable
+from dataclasses import dataclass, field, replace
 from datetime import datetime, timezone
 from importlib.resources import files
 from typing import Any
@@ -53,13 +54,16 @@ class ResolvedTime:
     utc1: float | None
     utc2: float | None
     quality: dict[str, Any]
+    _eop_shift: Callable[["ResolvedTime"], "ResolvedTime"] | None = field(
+        default=None, repr=False, compare=False
+    )
 
-    def shift(self, days: float) -> "ResolvedTime":
+    def shift(self, days: float, *, earth_rotation: bool = True) -> "ResolvedTime":
         # A TT increment has no civil-day/leap ambiguity.
         tt2 = self.tt2 + days
         dtr = erfa.dtdb(self.tt1, tt2, 0, 0, 0, 0)
         a, b = erfa.tttdb(self.tt1, tt2, dtr)
-        return replace(
+        shifted = replace(
             self,
             tt2=tt2,
             tdb1=float(a),
@@ -68,6 +72,7 @@ class ResolvedTime:
             utc1=None,
             utc2=None,
         )
+        return self._eop_shift(shifted) if self._eop_shift and earth_rotation else shifted
 
     def metadata(self) -> dict[str, Any]:
         return {

@@ -1,3 +1,5 @@
 # Preserve original third-party/data notices byte for byte.
 docs/licenses/** whitespace=-blank-at-eol,-blank-at-eof
 src/ariaephemeris/resources/Leap_Second.dat whitespace=-blank-at-eol,-blank-at-eof
+data/fixtures/iers/finals2000A-excerpt.txt whitespace=-blank-at-eol,-blank-at-eof
+docs/data/readme.finals2000A.txt whitespace=-blank-at-eol,-blank-at-eof

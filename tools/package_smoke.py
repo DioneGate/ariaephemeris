@@ -24,6 +24,7 @@ with zipfile.ZipFile(wheel) as archive:
         "licenses/docs/licenses/dependencies/pyerfa/0-LICENSE.rst",
         "ariaephemeris/resources/Leap_Second.dat",
         "ariaephemeris/resources/tzdata-v1.json",
+        "ariaephemeris/resources/eop-v1.json",
         "licenses/docs/licenses/dependencies/tzdata/0-LICENSE.txt",
         "licenses/docs/licenses/dependencies/tzdata/1-LICENSE_APACHE.txt",
         "ariaephemeris/resources/de442s.json",
@@ -70,6 +71,19 @@ for artifact in [wheel, next((root / "dist").glob("*.tar.gz"))]:
                     "civil_policy='historical-ut1-v1',delta_t_seconds=0)); "
                     "assert t.quality['timezone']['iana_version']=='2026f'; "
                     "assert t.quality['civil_offset_seconds']==561; assert t.utc1 is None"
+                ),
+            ],
+            check=True,
+            cwd=temp,
+        )
+        subprocess.run(
+            [
+                str(python),
+                "-c",
+                (
+                    "from ariaephemeris.time.eop import manifest; "
+                    "m=manifest(); assert m['dataset_id']=='iers-usno-finals2000a-20261120-v1'; "
+                    "assert m['prediction_valid_until_mjd_utc']==61394"
                 ),
             ],
             check=True,

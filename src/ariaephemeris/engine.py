@@ -30,6 +30,7 @@ from .positions import coordinates
 from .sources import Kernel
 from .sources.centres import PhysicalCentreKernel
 from .time import ResolvedTime, resolve
+from .time.eop import EarthOrientation
 
 
 class Ephemeris:
@@ -38,7 +39,20 @@ class Ephemeris:
         kernel: str | Path,
         *,
         centre_kernels: Mapping[str, str | Path] | None = None,
+        eop_path: str | Path | None = None,
+        allow_predicted_eop: bool = False,
     ) -> None:
+        if not isinstance(allow_predicted_eop, bool):
+            raise AriaError("INVALID_REQUEST", "allow_predicted_eop must be boolean")
+        if allow_predicted_eop and eop_path is None:
+            raise AriaError(
+                "INVALID_REQUEST", "Prediction opt-in requires an explicit EOP snapshot"
+            )
+        self._eop = (
+            EarthOrientation(eop_path, allow_predictions=allow_predicted_eop)
+            if eop_path is not None
+            else None
+        )
         self._manifest = datasets.verify(kernel)
         self.kernel = Kernel(Path(kernel))
         self._centre_kernel: PhysicalCentreKernel | None = None
@@ -92,7 +106,45 @@ class Ephemeris:
             result["physical_centres"] = self._centre_kernel.provenance(
                 tuple(datasets.centres_manifest()["sources"])
             )
+        if self._eop is not None:
+            result["earth_orientation"] = self._eop.info()
         return result
+
+    def _resolve_time(
+        self,
+        ti: TimeInput,
+        strict: bool,
+        require_ut1: bool = False,
+        observer: Observer | None = None,
+        require_polar: bool = False,
+    ) -> ResolvedTime:
+        manual_rotation = ti.dut1_seconds is not None or ti.delta_t_seconds is not None
+        managed_rotation = (
+            require_ut1
+            and not manual_rotation
+            and self._eop is not None
+            and ti.scale.upper() == "UTC"
+            and ti.civil_policy == "strict"
+        )
+        managed_polar = (
+            require_polar
+            and self._eop is not None
+            and observer is not None
+            and (observer.xp_arcsec is None or observer.yp_arcsec is None)
+        )
+        # Preserve 011 guards even when managed UT1 is added after initial scale conversion.
+        if require_ut1 and ti.time_accuracy != "specified":
+            return resolve(ti, strict, True)
+        t = resolve(ti, strict, require_ut1 and not managed_rotation)
+        if not managed_rotation and not managed_polar:
+            return t
+        assert self._eop is not None
+        return self._eop.apply(
+            t,
+            dut1=managed_rotation,
+            xp=bool(managed_polar and observer is not None and observer.xp_arcsec is None),
+            yp=bool(managed_polar and observer is not None and observer.yp_arcsec is None),
+        )
 
     def _physical_provenance(self, bodies: tuple[str, ...]) -> dict[str, dict[str, Any]]:
         if self._centre_kernel is None:
@@ -190,7 +242,10 @@ class Ephemeris:
                     ll, *_ = coordinates(
                         active,
                         body,
-                        [t.shift(shift) for t in times],
+                        [
+                            t.shift(shift, earth_rotation=request.origin == "topocentric")
+                            for t in times
+                        ],
                         request.origin,
                         request.position_mode,
                         request.frame,
@@ -274,7 +329,9 @@ class Ephemeris:
 
     def positions(self, request: PositionRequest | dict[str, Any]) -> PositionsResult:
         r = PositionRequest.parse(request)
-        t = resolve(r.time, r.strict, r.origin == "topocentric")
+        t = self._resolve_time(
+            r.time, r.strict, r.origin == "topocentric", r.observer, r.origin == "topocentric"
+        )
         return self._positions(r, [t])[0]
 
     def positions_batch(
@@ -287,7 +344,16 @@ class Ephemeris:
             return ()
         if len(times) > 100000:
             raise AriaError("REQUEST_LIMIT", "At most 100,000 epochs per batch")
-        tt = [resolve(TimeInput.parse(t), r.strict, r.origin == "topocentric") for t in times]
+        tt = [
+            self._resolve_time(
+                TimeInput.parse(t),
+                r.strict,
+                r.origin == "topocentric",
+                r.observer,
+                r.origin == "topocentric",
+            )
+            for t in times
+        ]
         return self._positions(r, tt)
 
     def aspects(
@@ -303,7 +369,7 @@ class Ephemeris:
         aspect_rules: tuple[AspectRule, ...] = astrology.DEFAULT_ASPECTS,
     ) -> ChartResult:
         r = PositionRequest.parse(request)
-        t = resolve(r.time, r.strict, True)
+        t = self._resolve_time(r.time, r.strict, True, observer, r.origin == "topocentric")
         if r.origin not in ("geocentric", "topocentric"):
             raise AriaError("INVALID_REQUEST", "A natal chart requires a terrestrial observer")
         if r.origin == "topocentric":

@@ -36,6 +36,10 @@ with Ephemeris(".artifacts/de442s.bsp") as engine:
 
 Time inputs accept explicit UTC, TT, TDB or UT1 and two-part Julian dates. Unresolved DST folds/gaps are rejected. Strict chart calculations require supplied DUT1 or delta-T; strict topocentric calculations also require polar motion. Pre-1972 civil UTC is rejected by default; use explicit TT/UT1 or opt in to the versioned historical civil-to-UT1 approximation. IANA timezone rules use checksum-pinned tzdata 2026.6 (2026f), independently of the host database. Approximate/unknown times retain quality metadata and cannot produce precise houses/angles. See [civil-time policies](docs/time-policies.md). Future UTC beyond the pinned leap-table expiry is rejected in strict mode. Non-strict assumptions are reported in metadata. See [conventions](docs/conventions.md).
 
+## Optional managed Earth orientation
+
+Explicitly install a pinned IERS/USNO snapshot with `ariaephemeris install-eop .artifacts/eop`, then select it using `Ephemeris(..., eop_path=...)` or CLI `--eop`. This supplies missing DUT1/polar motion for supported modern UTC charts and topocentric calculations. Predictions require a separate opt-in, with a bounded validity window; gaps and expiry are errors. Existing caller-supplied values remain authoritative. See [managed EOP](docs/managed-eop.md) for installation, immutable source archives, coverage, precedence and qualification limits.
+
 ## Opt-in physical planet-centres (WP4 preview)
 
 The original `reference` calculation profile remains the **default**, including its explicitly identified Mars–Pluto **system barycentres**. The separate `planet-centres-v1` profile uses physical centres for Mars (499), Jupiter (599), Saturn (699), Uranus (799), Neptune (899) and Pluto (999). Its numerical source profile and observed dataset SHA-256 are recorded in every physical-profile response. **This profile has not been approved for commercial release.**

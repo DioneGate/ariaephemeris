@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "dataset_id": "iers-usno-finals2000a-20261120-v1",
+  "filename": "finals2000A.all",
+  "source_url": "https://maia.usno.navy.mil/ser7/finals2000A.all",
+  "format_url": "https://maia.usno.navy.mil/ser7/readme.finals2000A",
+  "acquired_utc": "2026-11-20",
+  "sha256": "9f01acb5a8b50465913ad423212d409f309e4a7b9401197a52fe258304417fb0",
+  "size_bytes": 3779176,
+  "series": "IERS Rapid Service/Prediction Centre Bulletin A; IAU2000A finals2000A",
+  "columns": "Bulletin A x/y and UT1-UTC only; Bulletin B and celestial pole offsets not applied",
+  "first_mjd_utc": 41684.0,
+  "last_mjd_utc": 61735.0,
+  "first_prediction_mjd_utc": 61364.0,
+  "prediction_valid_until_mjd_utc": 61394.0,
+  "prediction_policy": "Explicit opt-in, at most 30 nominal days after first prediction; validity applies to requested epoch, not host clock",
+  "leap_table_sha256": "6cb6f5d4b819f2e568e25db4b0b26d89dedf031fdffb18bc94d40f4e94e268d7",
+  "format_sha256": "3efb2c610012360391aed5c057489ff74539b78494a66b7f9b342d1843db9254"
+}
