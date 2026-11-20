@@ -52,14 +52,26 @@ def observer_state(o: Observer, t: ResolvedTime, strict: bool) -> tuple[Any, Any
     if not -90 <= o.latitude_deg <= 90 or not -180 <= o.longitude_deg <= 180:
         raise AriaError("INVALID_REQUEST", "Observer latitude/longitude out of range")
     notes = []
-    if o.xp_arcsec is None or o.yp_arcsec is None:
+    eop = t.quality.get("earth_orientation", {})
+    applied = eop.get("applied", {})
+    x = (
+        o.xp_arcsec
+        if o.xp_arcsec is not None
+        else (eop.get("xp_arcsec") if applied.get("xp") else None)
+    )
+    y = (
+        o.yp_arcsec
+        if o.yp_arcsec is not None
+        else (eop.get("yp_arcsec") if applied.get("yp") else None)
+    )
+    if x is None or y is None:
         if strict:
             raise AriaError(
                 "TIME_DATA_UNAVAILABLE", "Strict topocentric mode requires polar motion"
             )
         notes.append("Polar motion set to zero")
-    xp = (o.xp_arcsec or 0) * erfa.DAS2R
-    yp = (o.yp_arcsec or 0) * erfa.DAS2R
+    xp = (x or 0) * erfa.DAS2R
+    yp = (y or 0) * erfa.DAS2R
     fixed = (
         erfa.gd2gc(1, np.radians(o.longitude_deg), np.radians(o.latitude_deg), o.elevation_m) / 1000
     )
@@ -68,7 +80,13 @@ def observer_state(o: Observer, t: ResolvedTime, strict: bool) -> tuple[Any, Any
     ut12 = t.ut12
 
     def orientation(dt: float) -> Any:
-        return erfa.c2t06a(t.tt1, t.tt2 + dt, t.ut11, ut12 + dt, xp, yp).T
+        if t._eop_shift is None or dt == 0:
+            return erfa.c2t06a(t.tt1, t.tt2 + dt, t.ut11, ut12 + dt, xp, yp).T
+        shifted = t.shift(dt)
+        data = shifted.quality["earth_orientation"]
+        sx = data["xp_arcsec"] * erfa.DAS2R if applied.get("xp") else xp
+        sy = data["yp_arcsec"] * erfa.DAS2R if applied.get("yp") else yp
+        return erfa.c2t06a(shifted.tt1, shifted.tt2, shifted.ut11, shifted.ut12, sx, sy).T
 
     pos = orientation(0) @ fixed
     h = 0.5 / 86400

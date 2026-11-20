@@ -46,3 +46,11 @@ are docs/licenses/NAIF-rules.html. CSPICE toolkit redistribution has further ter
 Time: IERS Leap_Second.dat, Bulletin C 72, July 2026, expires 28 June 2027;
 retained source header and provenance in package resources. Earth orientation
 is user-supplied; historical/future delta-T is explicitly modelled when selected.
+
+Earth orientation (optional explicit dataset): IERS Rapid Service/Prediction
+Centre, U.S. Naval Observatory, original finals2000A.all Bulletin A snapshot
+obtained 20 November 2026. Source and column-format URLs, full SHA-256 and
+coverage are retained in resources/eop-v1.json and docs/managed-eop.md.
+The original column description is archived in docs/data/readme.finals2000A.txt;
+small unchanged qualification excerpts retain their source identity. This
+implementation does not alter the original file or imply IERS/USNO endorsement.

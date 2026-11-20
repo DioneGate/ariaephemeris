@@ -1,0 +1,7 @@
+{
+  "source_dataset_id": "iers-usno-finals2000a-20261120-v1",
+  "source_sha256": "9f01acb5a8b50465913ad423212d409f309e4a7b9401197a52fe258304417fb0",
+  "excerpt_sha256": "632bc3b9fa4c6416e86ffed9c6273e927702137e4c07b59a28f1749ba5bf6571",
+  "selection": "unchanged original lines at 1973 start, J2000, 2016 leap, first prediction and final node",
+  "redistributed_full_source": false
+}

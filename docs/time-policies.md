@@ -33,7 +33,7 @@ Strict historical input requires supplied `delta_t_seconds = TT−UT1`; with `st
 
 Strict charts require supplied DUT1 with modern UTC or delta-T with TT/TDB/UT1. Strict topocentric calculations also require supplied polar motion. Missing inputs fail. Non-strict mode retains labelled polynomial delta-T and zero-polar-motion warnings. Results record the used rotation offsets and distinguish caller values from the named model; **caller values are not certified observed or predicted EOP**. Earth-rotation uncertainty stays null, never an invented zero.
 
-Observed/predicted EOP ingestion, its source hashes/coverage/expiry and controlled refresh are still a separate P2 task. No new online EOP resolver is implied by 011. Leap and timezone data are versioned here; the current explicit Earth-rotation contract remains in force.
+RM-001/012 adds optional, explicitly installed [managed Earth orientation](managed-eop.md): pinned Bulletin A DUT1/polar motion, observed/predicted quality, leap-safe interpolation, prediction validity and immutable update policy. The supplied-value contract above remains valid and wins over managed fields. No runtime network resolver or automatic refresh is introduced. Historical coverage, uncertainty intervals and commercial acceptance remain separate.
 
 ## Unknown and approximate birth times
 
