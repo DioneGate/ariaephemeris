@@ -51,6 +51,28 @@
                 "number",
                 "null"
               ]
+            },
+            "civil_policy": {
+              "enum": [
+                "strict",
+                "historical-ut1-v1"
+              ],
+              "default": "strict"
+            },
+            "time_accuracy": {
+              "enum": [
+                "specified",
+                "approximate",
+                "unknown"
+              ],
+              "default": "specified"
+            },
+            "uncertainty_seconds": {
+              "type": [
+                "number",
+                "null"
+              ],
+              "exclusiveMinimum": 0
             }
           },
           "oneOf": [

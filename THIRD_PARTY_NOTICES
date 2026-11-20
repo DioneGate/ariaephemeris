@@ -4,6 +4,9 @@ Aria-owned implementation: Apache-2.0. Copyright 2026 DioneGate.
 Original project author: Marek. Earlier MIT material: docs/licenses/MIT-original.txt.
 
 Runtime software:
+* tzdata 2026.6: Apache-2.0; unmodified maintainer licence and Apache text
+  are retained in docs/licenses/dependencies/tzdata/. The IANA 2026f TZif
+  resources are loaded from this pinned dependency, not the host database.
 * NumPy 2.5.3: Copyright (c) 2005-2025, NumPy Developers; BSD-3-Clause.
   Its tested Linux wheel also includes OpenBLAS/LAPACK (BSD), GCC runtime
   (GPL with GCC Runtime Library Exception), libquadmath (LGPL-2.1-or-later)

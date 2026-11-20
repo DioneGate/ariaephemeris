@@ -27,5 +27,6 @@ setuptools==84.0.0
 sgp4==2.27
 skyfield==1.55
 spiceypy==8.2.0
+tzdata==2026.6
 typing_extensions==4.16.0
 wheel==0.48.0
