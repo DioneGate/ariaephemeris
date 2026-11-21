@@ -8,6 +8,7 @@ from dataclasses import asdict, replace
 from pathlib import Path
 from typing import Any
 
+import erfa
 import numpy as np
 
 from . import astrology, datasets
@@ -29,7 +30,7 @@ from .models import (
 from .positions import coordinates
 from .sources import Kernel
 from .sources.centres import PhysicalCentreKernel
-from .time import ResolvedTime, resolve
+from .time import DAY, LEAP_EXPIRY_JD, ResolvedTime, resolve
 from .time.eop import EarthOrientation
 
 
@@ -333,6 +334,86 @@ class Ephemeris:
             r.time, r.strict, r.origin == "topocentric", r.observer, r.origin == "topocentric"
         )
         return self._positions(r, [t])[0]
+
+    def birth_time_analysis(
+        self, request: PositionRequest | dict[str, Any], *, samples: int = 9
+    ) -> dict[str, Any]:
+        """Sample an explicit symmetric TT interval; never claim continuous bounds.
+
+        Civil input resolves once (including fold/offset); uncertainty describes
+        elapsed SI seconds about that instant, not ambiguous local clock labels.
+        """
+        r = PositionRequest.parse(request)
+        if type(samples) is not int or not 3 <= samples <= 1001 or samples % 2 != 1:
+            raise AriaError("REQUEST_LIMIT", "samples must be an odd integer from 3 to 1001")
+        ti = r.time
+        width = ti.uncertainty_seconds
+        if ti.time_accuracy != "approximate" or width is None:
+            raise AriaError(
+                "TIME_DATA_UNAVAILABLE", "Analysis requires an explicit approximate-time bound"
+            )
+        if width > DAY:
+            raise AriaError("REQUEST_LIMIT", "Maximum uncertainty is plus/minus 86400 SI seconds")
+        if r.origin != "geocentric" or r.observer is not None:
+            raise AriaError(
+                "INVALID_REQUEST", "V1 birth-time analysis supports geocentric positions only"
+            )
+        self._validate(r)
+        centre = resolve(ti, r.strict)
+        offsets = np.linspace(-width, width, samples)
+        times = [centre.shift(float(x) / DAY, earth_rotation=False) for x in offsets]
+        self._coverage(times)
+        # TT shifts must not bypass the civil policy's validity at either edge.
+        for t in (times[0], times[-1]):
+            if ti.civil_policy == "historical-ut1-v1":
+                assert t.ut11 is not None and t.ut12 is not None
+                if not 2415020.5 <= t.ut11 + t.ut12 < 2441317.5:
+                    raise AriaError(
+                        "TIME_DATA_UNAVAILABLE", "Interval crosses historical policy coverage"
+                    )
+            elif ti.scale.upper() == "UTC":
+                a, b = erfa.tttai(t.tt1, t.tt2)
+                u1, u2 = erfa.taiutc(a, b)
+                if u1 + u2 < 2441317.5 or (r.strict and u1 + u2 >= LEAP_EXPIRY_JD):
+                    raise AriaError("TIME_DATA_UNAVAILABLE", "Interval crosses strict UTC coverage")
+        rows = self._positions(r, times)
+        ranges = {}
+        for i, body in enumerate(r.bodies):
+            anchor = rows[samples // 2].bodies[i].longitude_deg
+            delta = [(row.bodies[i].longitude_deg - anchor + 180) % 360 - 180 for row in rows]
+            # A relative arc avoids a false 359-to-0 almost-full-circle range.
+            ranges[body] = {
+                "anchor_longitude_deg": anchor,
+                "sampled_offset_min_deg": min(delta),
+                "sampled_offset_max_deg": max(delta),
+                "sampled_rate_min_deg_day": min(
+                    row.bodies[i].longitude_rate_deg_day for row in rows
+                ),
+                "sampled_rate_max_deg_day": max(
+                    row.bodies[i].longitude_rate_deg_day for row in rows
+                ),
+            }
+        return {
+            "analysis": "birth-time-sampling-v1",
+            "coverage": "all-requested-samples-evaluated",
+            "interval_scale": "TT",
+            "uncertainty_seconds": width,
+            "input_time": centre.metadata(),
+            "sample_count": samples,
+            "step_seconds": 2 * width / (samples - 1),
+            "continuous_bounds": False,
+            "physical_uncertainty": None,
+            "warnings": [
+                "Sampled extrema only; between-sample extrema and sign changes may be missed",
+                "No houses, angles, aspects, probabilities or physical error bounds are inferred",
+                "Civil interval resolves once; supplied rotation values are not re-estimated",
+            ],
+            "ranges": ranges,
+            "samples": [
+                {"offset_seconds": float(offset), "positions": row.to_dict()}
+                for offset, row in zip(offsets, rows, strict=True)
+            ],
+        }
 
     def positions_batch(
         self,

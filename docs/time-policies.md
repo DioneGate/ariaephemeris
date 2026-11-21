@@ -39,7 +39,7 @@ RM-001/012 adds optional, explicitly installed [managed Earth orientation](manag
 
 `time_accuracy="specified"` is the backwards-compatible default: use the supplied instant. It does not establish the physical accuracy of a birth record. `approximate` accepts an optional positive finite caller-provided `uncertainty_seconds`; a missing bound means unknown, not zero. `unknown` has no numeric bound. Both still require an explicit representative timestamp for planetary evaluation.
 
-Geocentric/heliocentric positions at that representative instant retain the uncertainty and warn that it has not been propagated. They are not bounds for the whole possible interval. Angles, houses, topocentric positions and event-boundary requests reject uncertain times with a structured error. Interval calculations and application UX for unknown birth time remain future work; no precise house result is manufactured.
+Geocentric/heliocentric positions at that representative instant retain the uncertainty and warn that it has not been propagated. They are not bounds for the whole possible interval. Angles, houses, topocentric positions and event-boundary requests reject uncertain times with a structured error. Explicit bounded planetary sampling is available through [birth-time analysis](birth-time-analysis.md); continuous bounds, interval houses and application UX remain future work; no precise house result is manufactured.
 
 ## Qualification and source references
 

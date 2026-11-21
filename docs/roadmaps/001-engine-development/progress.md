@@ -356,3 +356,31 @@ Independent Skyfield 1.55 parsing agrees exactly on all **20,052** source record
 Executed locally: Ruff/format, mypy and source/licence audit **PASS**. Non-kernel pytest **178 passed / 28 deselected**; full DE442s pytest **203 passed / 3 skipped** (optional physical-centre SPKs missing; skips are not passes). `qualify_eop.py` on the complete pinned source **PASS**; existing no-EOP `qualify.py` all seven baseline gates **PASS**, 4,712 epochs/body. Build and clean wheel/sdist smoke **PASS**, including packaged EOP manifest. Supplementary oppositions also **PASS** (1900: 12 events; 2000: 12; 2099: 13). Final PR CI is recorded separately during delivery. All planetary source identities/defaults are preserved.
 
 012 is **In review**, unmerged; P2 remains **In progress** for interval propagation, historical/source coverage and D03/D04 commercial decisions. No Aria Galaxy modification, package publication or deployment was performed. Required CI includes full original-source independent EOP qualification plus existing baseline/physical-centre integration jobs; CI artefacts have finite retention, so controlled original archives remain necessary.
+
+## RM-001/012 merge and RM-001/013 implementation — 21 November 2026
+
+Verified PR #17 merged at `e52d11af6d5a7ac64ffc30c9ae387bb5140e8170`.
+012 is Done for its bounded managed-EOP scope. Earlier In review entries are
+historical. Owner explicitly authorised 013 implementation, tests and merge.
+Branch `feature/rm-001-013-birth-time-coverage` starts at that merge commit.
+
+[013 prompt](prompts/013-birth-time-uncertainty-and-civil-date-coverage.md) and
+[API/coverage contract](../../birth-time-analysis.md): additive Python/JSON CLI
+bounded planetary sampling over elapsed TT seconds, circular offset/rate sampled
+ranges, original civil provenance and per-sample source/profile metadata. Strict
+UTC/historical interval endpoints and kernel samples fail closed. Unknown/unbounded
+times, topocentric intervals and invalid budgets reject. No continuous enclosure,
+interval houses, physical uncertainty bound or commercial acceptance is inferred.
+D03/D04 proposals are documented; P2 remains In progress.
+
+Validation evidence and PR merge follow below. 013 is In review until verified
+merge. No application changes, publication or deployment are included.
+
+Local verification: Ruff check/format, mypy, source/legal audit PASS. Non-kernel
+suite: 179 passed, 48 deselected. Full DE442s suite: 224 passed, 3 optional
+physical-centre-source skips (not qualifications). New tests cover exact scalar
+sample agreement, wrap, leap SI spacing, bounded work, UTC/historical/kernel
+edges, DST gap/fold, local/offset equivalence and unchanged chart guards.
+Build and clean wheel/sdist smoke PASS. JSON CLI example executed successfully.
+Kernel remains SHA-256 54d97562a5b094d298b1b8eafa5a2e17e3e010ce85e1a366d07f003ad159323c.
+Baseline real-kernel numerical qualification and PR CI recorded separately below.
