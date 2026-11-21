@@ -113,7 +113,7 @@ Owner authorised 011 implementation. [Prompt](prompts/011-reliable-civil-time.md
 
 [Prompt](prompts/012-managed-earth-orientation.md), [policy](../../managed-eop.md) and [independent measured qualification](../../validation/managed-eop-012.json). Explicitly installed, SHA-pinned original IERS/USNO Bulletin A data supplies missing DUT1 and polar motion for selected modern UTC requests. Linear continuous UT1−TAI/polar interpolation handles leaps; observed/predicted status and applied fields remain explicit. Predictions require opt-in and are limited to 30 days from first prediction. Source gaps, expiry and unavailable derivative stencils fail safely; supplied values win. Independent parsing covers 20,052 rows, with 82 off-grid instants and 246 observer cases; these are implementation checks, not absolute physical uncertainty. P2 remains In progress for interval analysis, historical/source coverage and commercial decisions. No application migration or release is implied.
 
-## RM-001/013 — Birth-time uncertainty and civil-date coverage (In review)
+## RM-001/013 — Birth-time uncertainty and civil-date coverage (Done)
 
 [Prompt](prompts/013-birth-time-uncertainty-and-civil-date-coverage.md),
 [API and coverage matrix](../../birth-time-analysis.md). Bounded approximate-time
@@ -127,7 +127,7 @@ P2 stays In progress. Owner authorised implementation and merge on 21 November.
 | Phase | Outcome | Depends on | Status | Next action |
 | --- | --- | --- | --- | --- |
 | RM-001-P1 | Scope, calculation contracts and reproducible baseline | Existing source | Planned | Contracts/inventory and all-six source/evaluator evidence delivered; physical-centre runtime and bounded independent qualification merged through 010; launch decisions and final phase acceptance remain open |
-| RM-001-P2 | Reliable everyday date/time entry | P1 | In progress | 011 civil-time policy merged; 012 merged via PR #17; 013 bounded planetary sampling In review; historical/source coverage and D03/D04 acceptance remain open |
+| RM-001-P2 | Reliable everyday date/time entry | P1 | In progress | 011 civil-time policy merged; 012 merged via PR #17; 013 bounded planetary sampling merged via PR #18; historical/source coverage and D03/D04 acceptance remain open |
 | RM-001-P3 | Launch calculation capabilities | P1; P2 for civil-time qualification | Planned | WP4 profile merged in PR #6; [WP5.1 Horizons reference data](p1-independent-horizons-fixtures.md) merged in PR #7; WP5.2 numerical comparator/report merged in PR #9; Jupiter/Pluto source attribution complete in merged PR #11; WP5.4 chart coordinate and signed-rate comparison on merged PR #12; bounded event timing, blind discovery evidence and source-model attribution delivered through 010; remaining feature decisions, physical uncertainty and commercial acceptance remain open |
 | RM-001-P4 | Integration with the Aria application | P1; applicable P2/P3 capabilities | Planned | Specify the persistent service and provider-neutral adapter contract |
 | RM-001-P5 | Interactive and batch performance | P4; profiling may start earlier | Planned | Approve workloads, deployment hardware and service-level targets |

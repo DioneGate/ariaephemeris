@@ -384,3 +384,26 @@ edges, DST gap/fold, local/offset equivalence and unchanged chart guards.
 Build and clean wheel/sdist smoke PASS. JSON CLI example executed successfully.
 Kernel remains SHA-256 54d97562a5b094d298b1b8eafa5a2e17e3e010ce85e1a366d07f003ad159323c.
 Baseline real-kernel numerical qualification and PR CI recorded separately below.
+
+
+## RM-001/013 accepted and merged — 21 November 2026
+
+[PR #18](https://github.com/DioneGate/ariaephemeris/pull/18) merged at
+`e68d83503fb0f726539e2d41241f9e20769b98e8`, after all checks passed at head
+`449413b8f74d70d1e3ddc1df0d68dda779c31c29`. 013 is **Done for bounded geocentric planetary
+sampling and the engineering coverage matrix**. Earlier In review entries are
+historical. P2 remains In progress; D03/D04 commercial acceptance, broader
+historical/source qualification, continuous enclosures and interval houses are
+not delivered by this bounded prompt.
+
+Final CI: [baseline real-kernel qualification/oppositions #44876680741](https://github.com/DioneGate/ariaephemeris/actions/runs/44876680741),
+[managed-EOP qualification #44876680575](https://github.com/DioneGate/ariaephemeris/actions/runs/44876680575),
+[five-source checks #44876680711](https://github.com/DioneGate/ariaephemeris/actions/runs/44876680711),
+[six-source integration #44876680635](https://github.com/DioneGate/ariaephemeris/actions/runs/44876680635),
+[fast/distribution #44876680573](https://github.com/DioneGate/ariaephemeris/actions/runs/44876680573)
+and [push fast checks #44876677228](https://github.com/DioneGate/ariaephemeris/actions/runs/44876677228)
+all PASS. Local baseline: all seven numerical gates PASS, 4,712 sampled epochs per
+body, plus supplementary oppositions in 1900/2000/2099. Clean wheel/sdist smoke
+with the real kernel passed all CLI examples including birth-time-analysis.
+Physical uncertainty and continuous-between-sample extrema remain unqualified.
+No Aria Galaxy changes, package publication or deployment occurred.
