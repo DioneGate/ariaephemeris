@@ -92,7 +92,14 @@ for artifact in [wheel, next((root / "dist").glob("*.tar.gz"))]:
         kernel = os.environ.get("ARIA_KERNEL")
         if kernel:
             kernel = str(Path(kernel).resolve())
-            for command in ["positions", "batch", "chart", "aspects", "events"]:
+            for command in [
+                "positions",
+                "batch",
+                "chart",
+                "aspects",
+                "events",
+                "birth-time-analysis",
+            ]:
                 result = subprocess.run(
                     [
                         str(env / "bin/ariaephemeris"),

@@ -28,7 +28,15 @@ def main(argv: list[str] | None = None) -> int:
     orientation = sub.add_parser("install-eop")
     orientation.add_argument("directory")
     orientation.add_argument("--source", help="Install exact pinned finals2000A bytes locally")
-    for name in ("dataset-info", "positions", "batch", "chart", "aspects", "events"):
+    for name in (
+        "dataset-info",
+        "positions",
+        "birth-time-analysis",
+        "batch",
+        "chart",
+        "aspects",
+        "events",
+    ):
         p = sub.add_parser(name)
         p.add_argument("--kernel", required=True)
         p.add_argument("--eop", help="Explicit installed pinned Earth-orientation snapshot")
@@ -76,6 +84,9 @@ def main(argv: list[str] | None = None) -> int:
                     output = engine.dataset_info()
                 elif args.command == "positions":
                     output = engine.positions(request).to_dict()
+                elif args.command == "birth-time-analysis":
+                    samples = request.pop("samples", 9)
+                    output = engine.birth_time_analysis(request, samples=samples)
                 elif args.command == "batch":
                     times = request.pop("times")
                     output = [p.to_dict() for p in engine.positions_batch(request, times)]
