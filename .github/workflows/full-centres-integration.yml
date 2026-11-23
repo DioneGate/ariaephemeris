@@ -20,7 +20,7 @@ permissions:
 
 jobs:
   six-source-integration:
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, linux, x64, ci-workload]
     timeout-minutes: 45
     steps:
       - uses: actions/checkout@v4

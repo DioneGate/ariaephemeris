@@ -9,7 +9,7 @@ concurrency:
   cancel-in-progress: false
 jobs:
   source-and-uncertainty:
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, linux, x64, ci-workload]
     timeout-minutes: 60
     steps:
       - uses: actions/checkout@v4

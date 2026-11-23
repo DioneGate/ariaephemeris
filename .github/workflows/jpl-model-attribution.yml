@@ -18,7 +18,7 @@ permissions:
 
 jobs:
   genuine-source-attribution:
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, linux, x64, ci-workload]
     timeout-minutes: 35
     steps:
       - uses: actions/checkout@v4
