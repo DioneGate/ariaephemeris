@@ -22,7 +22,7 @@ permissions:
   actions: read
 jobs:
   qualification:
-    runs-on: [self-hosted, linux, x64, ci-workload]
+    runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4

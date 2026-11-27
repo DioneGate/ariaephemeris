@@ -9,7 +9,7 @@ permissions:
 
 jobs:
   frozen-horizons-chart-reference:
-    runs-on: [self-hosted, linux, x64, ci-workload]
+    runs-on: ubuntu-latest
     timeout-minutes: 80
     steps:
       - uses: actions/checkout@v4

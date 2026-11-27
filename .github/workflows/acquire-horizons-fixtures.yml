@@ -10,7 +10,7 @@ permissions:
 jobs:
   acquire-reference:
     if: github.ref == 'refs/heads/feature/rm-001-004-independent-horizons-fixtures-20261119'
-    runs-on: [self-hosted, linux, x64, ci-workload]
+    runs-on: ubuntu-latest
     timeout-minutes: 30
     steps:
       - uses: actions/checkout@v4

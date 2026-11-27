@@ -7,7 +7,7 @@ permissions:
   contents: read
 jobs:
   qualify:
-    runs-on: [self-hosted, linux, x64, ci-workload]
+    runs-on: ubuntu-latest
     timeout-minutes: 40
     steps:
       - uses: actions/checkout@v4

@@ -26,7 +26,7 @@ permissions:
 
 jobs:
   independently-verified-source:
-    runs-on: [self-hosted, linux, x64, ci-workload]
+    runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4
@@ -84,7 +84,7 @@ jobs:
 
   pinned-real-kernel-numerical-replay:
     needs: independently-verified-source
-    runs-on: [self-hosted, linux, x64, ci-workload]
+    runs-on: ubuntu-latest
     timeout-minutes: 50
     steps:
       - uses: actions/checkout@v4
