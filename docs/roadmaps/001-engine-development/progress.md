@@ -407,3 +407,10 @@ body, plus supplementary oppositions in 1900/2000/2099. Clean wheel/sdist smoke
 with the real kernel passed all CLI examples including birth-time-analysis.
 Physical uncertainty and continuous-between-sample extrema remain unqualified.
 No Aria Galaxy changes, package publication or deployment occurred.
+
+## RM-001/014 civil-time launch qualification — 23 November 2026
+
+The [D03/D04 launch policy and coverage evidence](p2-civil-time-launch-policy.md)
+defines supported behaviour by operation. The original-source replay passed
+37 focused tests with the pinned DE442 short kernel and Bulletin A snapshot.
+P2 remains In progress for broader qualification and commercial acceptance.
