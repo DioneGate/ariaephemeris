@@ -324,4 +324,6 @@ All proposals below remain open unless explicitly recorded as resolved by the ow
 
 ## Next planning action
 
+R1.0 sequencing (shortest path to replace Swiss Ephemeris in Aria Galaxy) and the community-release plan are recorded in [RM-002](../002-aria-r1-and-community/README.md). This adds no RM-001 phase status change.
+
 Review [PR #3](https://github.com/DioneGate/ariaephemeris/pull/3) and its [RM-001/001 source/evidence deliverables](p1-capability-matrix.md); seek owner decisions D01–D14 from the [scope/decision register](p1-launch-scope-and-decisions.md), and arrange a network-enabled pinned runner for the [real-kernel replay](p1-qualification-baseline.md). The execution PR is a documentation-only submission and **must not be merged without explicit authorisation**. RM-001-P1 stays Planned until its calculation-contract/baseline gate is accepted; P2–P8 remain Planned.
